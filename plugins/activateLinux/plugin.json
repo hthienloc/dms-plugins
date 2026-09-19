@@ -1,0 +1,19 @@
+{
+  "id": "activateLinux",
+  "name": "Activate Linux Watermark",
+  "description": "Adds a watermark to the bottom-right of the screen",
+  "version": "2.0.0",
+  "license": "MIT",
+  "author": "Loc Huynh",
+  "icon": "info",
+  "type": "desktop",
+  "capabilities": [
+    "desktop-widget"
+  ],
+  "component": "./ActivateLinuxWidget.qml",
+  "settings": "./ActivateLinuxSettings.qml",
+  "permissions": [
+    "settings_read",
+    "settings_write"
+  ]
+}

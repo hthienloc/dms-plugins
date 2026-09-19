@@ -1,0 +1,22 @@
+{
+  "Contributing": "Contribuer",
+  "Contributors": "Contributeurs",
+  "Directly paste the selected kaomoji into the active window.": "Collez directement le kaomoji sélectionné dans la fenêtre active.",
+  "Enable History": "Activer l'historique",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "Vous avez trouvé un bug, souhaitez traduire ou avez une demande de fonctionnalité ? Rejoignez-nous sur GitHub.",
+  "General": "Général",
+  "GitHub": "GitHub",
+  "Help us improve": "Aidez-nous à améliorer",
+  "History Size": "Taille de l'historique",
+  "Loading contributors...": "Chargement des contributeurs...",
+  "Maximum number of kaomoji to show in results.": "Nombre maximum de kaomoji à afficher dans les résultats.",
+  "Number of recently used items to keep.": "Nombre d'éléments récemment utilisés à conserver.",
+  "Paste on Select": "Coller sur Sélectionner",
+  "Pin Kaomoji": "Épingle Kaomoji",
+  "Remove from History": "Supprimer de l'historique",
+  "Result Limit": "Limite de résultat",
+  "Show recently used kaomoji when the search is empty.": "Afficher les kaomoji récemment utilisés lorsque la recherche est vide.",
+  "The keyword to trigger this launcher (e.g. kj)": "Le mot-clé pour déclencher ce lanceur (par exemple kj)",
+  "Trigger Key": "Clé de déclenchement",
+  "Unpin Kaomoji": "Détacher Kaomoji"
+}

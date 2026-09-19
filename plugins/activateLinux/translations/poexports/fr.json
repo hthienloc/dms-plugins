@@ -1,0 +1,20 @@
+{
+  "Activate Linux": "Activer Linux",
+  "Contributing": "Contribuer",
+  "Contributors": "Contributeurs",
+  "Customize Text": "Personnaliser le texte",
+  "Enable <b>Customize Text</b> to override the default message.": "Activez <b>Personnaliser le texte</b> pour remplacer le message par défaut.",
+  "Enable manual override for the watermark text.": "Activez le remplacement manuel du texte du filigrane.",
+  "First Line": "Première ligne",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "Vous avez trouvé un bug, souhaitez traduire ou avez une demande de fonctionnalité ? Rejoignez-nous sur GitHub.",
+  "GitHub": "GitHub",
+  "Go to Settings to activate Linux.": "Accédez à Paramètres pour activer Linux.",
+  "Help us improve": "Aidez-nous à améliorer",
+  "Loading contributors...": "Chargement des contributeurs...",
+  "Primary text displayed in the watermark.": "Texte principal affiché dans le filigrane.",
+  "Second Line": "Deuxième ligne",
+  "Subtext displayed in the watermark.": "Sous-texte affiché dans le filigrane.",
+  "This plugin displays a non-intrusive watermark on your desktop.": "Ce plugin affiche un filigrane non intrusif sur votre bureau.",
+  "Usage Guide": "Guide d'utilisation",
+  "Watermark Customization": "Personnalisation du filigrane"
+}

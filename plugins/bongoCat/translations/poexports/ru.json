@@ -1,0 +1,21 @@
+{
+  "Active": "Активный",
+  "Add to input group": "Добавить во входную группу",
+  "Add your user to the 'input' group to detect mouse/keyboard activity:": "Добавьте своего пользователя в группу «ввод», чтобы обнаружить активность мыши/клавиатуры:",
+  "After running the command, logout and login again for changes to take effect.": "После выполнения команды выйдите из системы и войдите снова, чтобы изменения вступили в силу.",
+  "Bongo Cat": "Бонго Кот",
+  "Click the cat to open settings.": "Нажмите на кота, чтобы открыть настройки.",
+  "Contributing": "Содействие",
+  "Contributors": "Авторы",
+  "Display helpful usage tips and shortcuts at the bottom of the popout.": "Отображайте полезные советы по использованию и ярлыки в нижней части всплывающего окна.",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "Нашли ошибку, хотите перевести или у вас есть запрос на добавление функции? Присоединяйтесь к нам на GitHub.",
+  "GitHub": "GitHub",
+  "Help us improve": "Помогите нам улучшить",
+  "Interface": "Интерфейс",
+  "Loading contributors...": "Загрузка участников...",
+  "Right-click to toggle sleep mode.": "Щелкните правой кнопкой мыши, чтобы переключить спящий режим.",
+  "Setup": "Настраивать",
+  "Show Hints": "Показать подсказки",
+  "Sleeping": "Спящий",
+  "Usage Guide": "Руководство по использованию"
+}

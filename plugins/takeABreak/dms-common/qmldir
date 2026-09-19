@@ -1,0 +1,12 @@
+module dms.common
+DankSliderPlus 1.0 DankSliderPlus.qml
+InfoTile 1.0 InfoTile.qml
+NumericText 1.0 NumericText.qml
+PluginAbout 1.0 PluginAbout.qml
+SectionTitle 1.0 SectionTitle.qml
+SelectionSettingPlus 1.0 SelectionSettingPlus.qml
+SettingsCard 1.0 SettingsCard.qml
+SettingsDivider 1.0 SettingsDivider.qml
+SliderSettingPlus 1.0 SliderSettingPlus.qml
+StatusDisplay 1.0 StatusDisplay.qml
+ToggleSettingPlus 1.0 ToggleSettingPlus.qml

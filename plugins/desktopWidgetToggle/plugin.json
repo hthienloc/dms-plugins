@@ -1,0 +1,25 @@
+{
+  "id": "desktopWidgetToggle",
+  "name": "Desktop Widget Toggle",
+  "description": "Toggle visibility of desktop widget groups as overlay.",
+  "version": "1.4.0",
+  "author": "Loc Huynh",
+  "icon": "widgets",
+  "type": "composite",
+  "capabilities": [
+    "daemon",
+    "dankbar-widget",
+    "ipc"
+  ],
+  "components": {
+    "daemon": "./DesktopWidgetToggleDaemon.qml",
+    "widget": "./DesktopWidgetToggleWidget.qml"
+  },
+  "settings": "./DesktopWidgetToggleSettings.qml",
+  "requires_dms": ">=1.5.0",
+  "permissions": [
+    "settings_read",
+    "settings_write",
+    "process"
+  ]
+}

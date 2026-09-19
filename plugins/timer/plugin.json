@@ -1,0 +1,21 @@
+{
+  "id": "timer",
+  "name": "Timer",
+  "description": "Countdown timer with presets and custom input",
+  "version": "3.0.3",
+  "license": "MIT",
+  "author": "Loc Huynh",
+  "icon": "timer",
+  "type": "widget",
+  "capabilities": [
+    "dankbar-widget",
+    "ipc"
+  ],
+  "component": "./TimerWidget.qml",
+  "settings": "./TimerSettings.qml",
+  "permissions": [
+    "settings_read",
+    "settings_write"
+  ],
+  "screenshot": "https://raw.githubusercontent.com/hthienloc/dms-timer/master/screenshot.png"
+}

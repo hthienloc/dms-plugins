@@ -1,0 +1,11 @@
+Emoji Picker includes a bundled emoji catalog derived from Emote:
+https://github.com/tom-james-watson/emote
+
+Emote is licensed under the GNU General Public License, version 3 or later.
+The bundled catalog is generated from Emote's static/emojis.csv.
+
+Emote credits OpenMoji as the source of its emoji data:
+https://openmoji.org/
+https://github.com/hfg-gmuend/openmoji
+
+The Emoji Picker plugin is distributed under GPL-3.0-or-later.

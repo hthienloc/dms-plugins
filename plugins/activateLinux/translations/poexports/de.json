@@ -1,0 +1,20 @@
+{
+  "Activate Linux": "Aktivieren Sie Linux",
+  "Contributing": "Mitwirken",
+  "Contributors": "Mitwirkende",
+  "Customize Text": "Text anpassen",
+  "Enable <b>Customize Text</b> to override the default message.": "Aktivieren Sie <b>Text anpassen</b>, um die Standardnachricht zu überschreiben.",
+  "Enable manual override for the watermark text.": "Aktivieren Sie die manuelle Überschreibung für den Wasserzeichentext.",
+  "First Line": "Erste Zeile",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "Haben Sie einen Fehler gefunden, möchten Sie übersetzen oder haben Sie eine Funktionsanfrage? Besuchen Sie uns auf GitHub.",
+  "GitHub": "GitHub",
+  "Go to Settings to activate Linux.": "Gehen Sie zu Einstellungen, um Linux zu aktivieren.",
+  "Help us improve": "Helfen Sie uns, uns zu verbessern",
+  "Loading contributors...": "Mitwirkende werden geladen...",
+  "Primary text displayed in the watermark.": "Im Wasserzeichen angezeigter Primärtext.",
+  "Second Line": "Zweite Zeile",
+  "Subtext displayed in the watermark.": "Im Wasserzeichen angezeigter Subtext.",
+  "This plugin displays a non-intrusive watermark on your desktop.": "Dieses Plugin zeigt ein unaufdringliches Wasserzeichen auf Ihrem Desktop an.",
+  "Usage Guide": "Nutzungsleitfaden",
+  "Watermark Customization": "Anpassung des Wasserzeichens"
+}

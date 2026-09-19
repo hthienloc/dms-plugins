@@ -1,0 +1,22 @@
+{
+  "Contributing": "Содействие",
+  "Contributors": "Авторы",
+  "Directly paste the selected kaomoji into the active window.": "Вставьте выбранный каомодзи непосредственно в активное окно.",
+  "Enable History": "Включить историю",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "Нашли ошибку, хотите перевести или у вас есть запрос на добавление функции? Присоединяйтесь к нам на GitHub.",
+  "General": "Общий",
+  "GitHub": "GitHub",
+  "Help us improve": "Помогите нам улучшить",
+  "History Size": "Размер истории",
+  "Loading contributors...": "Загрузка участников...",
+  "Maximum number of kaomoji to show in results.": "Максимальное количество каомодзи, отображаемое в результатах.",
+  "Number of recently used items to keep.": "Количество недавно использованных предметов, которые нужно сохранить.",
+  "Paste on Select": "Вставить на выбор",
+  "Pin Kaomoji": "Пин Каомодзи",
+  "Remove from History": "Удалить из истории",
+  "Result Limit": "Предел результата",
+  "Show recently used kaomoji when the search is empty.": "Показывать недавно использованные каомодзи, когда поиск пуст.",
+  "The keyword to trigger this launcher (e.g. kj)": "Ключевое слово для запуска этого лаунчера (например, kj)",
+  "Trigger Key": "Триггерный ключ",
+  "Unpin Kaomoji": "Открепить Каомодзи"
+}

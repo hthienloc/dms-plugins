@@ -1,0 +1,22 @@
+{
+  "Contributing": "기여",
+  "Contributors": "기여자",
+  "Directly paste the selected kaomoji into the active window.": "선택한 카오모지를 활성 창에 직접 붙여넣습니다.",
+  "Enable History": "기록 활성화",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "버그를 발견했거나 번역하고 싶거나 기능 요청이 있으십니까? GitHub에서 우리와 함께하세요.",
+  "General": "일반적인",
+  "GitHub": "GitHub",
+  "Help us improve": "개선할 수 있도록 도와주세요",
+  "History Size": "기록 크기",
+  "Loading contributors...": "기여자 로드 중...",
+  "Maximum number of kaomoji to show in results.": "결과에 표시할 최대 카오모지 수입니다.",
+  "Number of recently used items to keep.": "보관할 최근 사용 항목 수입니다.",
+  "Paste on Select": "선택 항목에 붙여넣기",
+  "Pin Kaomoji": "카오모지 핀",
+  "Remove from History": "기록에서 제거",
+  "Result Limit": "결과 제한",
+  "Show recently used kaomoji when the search is empty.": "검색어가 비어 있으면 최근에 사용한 카오모지를 표시합니다.",
+  "The keyword to trigger this launcher (e.g. kj)": "이 런처를 실행하는 키워드(예: kj)",
+  "Trigger Key": "트리거 키",
+  "Unpin Kaomoji": "카오모지 고정 해제"
+}

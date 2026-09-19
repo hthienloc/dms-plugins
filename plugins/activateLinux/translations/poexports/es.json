@@ -1,0 +1,20 @@
+{
+  "Activate Linux": "Activar Linux",
+  "Contributing": "Contribuyendo",
+  "Contributors": "Colaboradores",
+  "Customize Text": "Personalizar texto",
+  "Enable <b>Customize Text</b> to override the default message.": "Habilite <b>Personalizar texto</b> para anular el mensaje predeterminado.",
+  "Enable manual override for the watermark text.": "Habilite la anulación manual para el texto de la marca de agua.",
+  "First Line": "Primera línea",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "¿Encontró un error, desea traducir o tiene una solicitud de función? Únase a nosotros en GitHub.",
+  "GitHub": "GitHub",
+  "Go to Settings to activate Linux.": "Vaya a Configuración para activar Linux.",
+  "Help us improve": "Ayúdanos a mejorar",
+  "Loading contributors...": "Cargando colaboradores...",
+  "Primary text displayed in the watermark.": "Texto principal que se muestra en la marca de agua.",
+  "Second Line": "Segunda Línea",
+  "Subtext displayed in the watermark.": "Subtexto mostrado en la marca de agua.",
+  "This plugin displays a non-intrusive watermark on your desktop.": "Este complemento muestra una marca de agua no intrusiva en su escritorio.",
+  "Usage Guide": "Guía de uso",
+  "Watermark Customization": "Personalización de marcas de agua"
+}

@@ -1,0 +1,20 @@
+{
+  "Activate Linux": "Linuxをアクティブ化する",
+  "Contributing": "貢献する",
+  "Contributors": "貢献者",
+  "Customize Text": "テキストのカスタマイズ",
+  "Enable <b>Customize Text</b> to override the default message.": "<b>テキストのカスタマイズ</b> を有効にして、デフォルトのメッセージを上書きします。",
+  "Enable manual override for the watermark text.": "透かしテキストの手動オーバーライドを有効にします。",
+  "First Line": "最初の行",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "バグを見つけた場合、翻訳したい場合、または機能リクエストがありますか? GitHub に参加してください。",
+  "GitHub": "GitHub",
+  "Go to Settings to activate Linux.": "[設定] に移動して Linux をアクティブ化します。",
+  "Help us improve": "改善にご協力ください",
+  "Loading contributors...": "寄稿者を読み込んでいます...",
+  "Primary text displayed in the watermark.": "透かし内に表示される主要なテキスト。",
+  "Second Line": "2行目",
+  "Subtext displayed in the watermark.": "ウォーターマークに表示されるサブテキスト。",
+  "This plugin displays a non-intrusive watermark on your desktop.": "このプラグインは、デスクトップに邪魔にならないウォーターマークを表示します。",
+  "Usage Guide": "ご利用ガイド",
+  "Watermark Customization": "透かしのカスタマイズ"
+}

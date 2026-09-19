@@ -1,0 +1,24 @@
+{
+    "id": "screenkey",
+    "name": "Screenkey",
+    "icon": "keyboard",
+    "description": "Displays keystrokes on screen in a readable format for tutorials",
+    "version": "1.0.7",
+    "author": "Loc Huynh",
+    "type": "composite",
+    "capabilities": [
+        "daemon",
+        "control-center"
+    ],
+    "components": {
+        "daemon": "./ScreenkeyDaemon.qml",
+        "widget": "./ScreenkeyWidget.qml"
+    },
+    "settings": "./ScreenkeySettings.qml",
+    "requires_dms": ">=1.5.0",
+    "permissions": [
+        "settings_read",
+        "settings_write",
+        "shell_execute"
+    ]
+}

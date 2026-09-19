@@ -1,0 +1,25 @@
+{
+    "$schema": "https://github.com/AvengeMedia/DankMaterialShell/raw/refs/heads/master/PLUGINS/plugin-schema.json",
+    "id": "niriDS",
+    "name": "Niri Display Settings",
+    "description": "Quickly toggle and configure display outputs in the Niri Wayland compositor",
+    "version": "2.0.3",
+    "author": "Loc Huynh",
+    "icon": "computer",
+    "type": "composite",
+    "capabilities": [
+        "manage-displays",
+        "control-center"
+    ],
+    "components": {
+        "daemon": "./NiriDisplaySettingsDaemon.qml",
+        "widget": "./NiriDisplaySettingsWidget.qml"
+    },
+    "settings": "./NiriDisplaySettings.qml",
+    "requires_dms": ">=1.5.0",
+    "requires": [],
+    "permissions": [
+        "settings_read",
+        "settings_write"
+    ]
+}

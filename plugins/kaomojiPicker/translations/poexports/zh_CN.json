@@ -1,0 +1,22 @@
+{
+  "Contributing": "贡献",
+  "Contributors": "贡献者",
+  "Directly paste the selected kaomoji into the active window.": "直接将选定的颜文字粘贴到活动窗口中。",
+  "Enable History": "启用历史记录",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "发现错误、想要翻译或有功能请求？在 GitHub 上加入我们。",
+  "General": "一般的",
+  "GitHub": "GitHub",
+  "Help us improve": "帮助我们改进",
+  "History Size": "",
+  "Loading contributors...": "正在加载贡献者...",
+  "Maximum number of kaomoji to show in results.": "结果中显示的颜文字的最大数量。",
+  "Number of recently used items to keep.": "最近使用的要保留的项目数。",
+  "Paste on Select": "选择粘贴",
+  "Pin Kaomoji": "拼颜文字",
+  "Remove from History": "从历史记录中删除",
+  "Result Limit": "结果限制",
+  "Show recently used kaomoji when the search is empty.": "当搜索为空时显示最近使用的颜文字。",
+  "The keyword to trigger this launcher (e.g. kj)": "触发此启动器的关键字（例如 kj）",
+  "Trigger Key": "触发键",
+  "Unpin Kaomoji": "取消固定颜文字"
+}

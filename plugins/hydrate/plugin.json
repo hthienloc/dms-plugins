@@ -1,0 +1,18 @@
+{
+  "id": "hydrate",
+  "name": "Hydrate",
+  "description": "Drink water reminder widget with daily progress dashboard",
+  "version": "2.1.0",
+  "author": "Loc Huynh",
+  "icon": "water_drop",
+  "type": "widget",
+  "capabilities": [
+    "dankbar-widget"
+  ],
+  "component": "./HydrateWidget.qml",
+  "settings": "./HydrateSettings.qml",
+  "permissions": [
+    "settings_read",
+    "settings_write"
+  ]
+}

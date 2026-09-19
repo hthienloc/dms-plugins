@@ -1,0 +1,1142 @@
+{
+  "%1 Font": {
+    "%1 Font": ""
+  },
+  "%1 is not installed": {
+    "%1 is not installed": ""
+  },
+  "1 Connecting Line": {
+    "1 Connecting Line": "1 з'єднувальна лінія"
+  },
+  "2 Connecting Lines": {
+    "2 Connecting Lines": "2 з'єднувальні лінії"
+  },
+  "Action": {
+    "Action": "Дія"
+  },
+  "Action on %1": {
+    "Action on %1": ""
+  },
+  "Adaptive": {
+    "Adaptive": "Адаптивний"
+  },
+  "Add": {
+    "Add": "Додати"
+  },
+  "Add Text Note": {
+    "Add Text Note": "Додати текстову примітку"
+  },
+  "Alignment": {
+    "Alignment": ""
+  },
+  "All Outputs": {
+    "All Outputs": "Усі виводи"
+  },
+  "Annotating": {
+    "Annotating": "Анотування"
+  },
+  "Annotation Tools": {
+    "Annotation Tools": "Інструменти анотування"
+  },
+  "Anonymous Copy": {
+    "Anonymous Copy": ""
+  },
+  "Arrow": {
+    "Arrow": ""
+  },
+  "Aspect Ratio": {
+    "Aspect Ratio": ""
+  },
+  "Audio": {
+    "Audio": "Аудіо"
+  },
+  "Audio & Overlay": {
+    "Audio & Overlay": "Аудіо та оверлей"
+  },
+  "Audio Codec": {
+    "Audio Codec": "Аудіокодек"
+  },
+  "Audio recording is disabled when using the %1 backend.": {
+    "Audio recording is disabled when using the %1 backend.": ""
+  },
+  "Auto": {
+    "Auto": "Авто"
+  },
+  "Auto Balance": {
+    "Auto Balance": "Автобаланс"
+  },
+  "Auto-apply background defaults": {
+    "Auto-apply background defaults": "Автоматично застосовувати значення фону за замовчуванням"
+  },
+  "Auto-close the loop when ending near the start point.": {
+    "Auto-close the loop when ending near the start point.": "Автоматично закривати цикл при завершенні поблизу початкової точки"
+  },
+  "Auto-minimize": {
+    "Auto-minimize": "Автозгортання"
+  },
+  "Auto-select a tool preset on hover, without releasing the mouse.": {
+    "Auto-select a tool preset on hover, without releasing the mouse.": "Автоматично вибирати пресет інструменту при наведенні, не відпускаючи мишу"
+  },
+  "Auto-tiling": {
+    "Auto-tiling": "Автоплитка"
+  },
+  "Automatically minimize the float window after a delay": {
+    "Automatically minimize the float window after a delay": "Автоматично згортати плаваюче вікно з певною затримкою"
+  },
+  "Automatically stack windows to avoid overlap": {
+    "Automatically stack windows to avoid overlap": "Автоматично штабелювати вікна, щоб уникнути перекриття"
+  },
+  "Back to Annotation": {
+    "Back to Annotation": ""
+  },
+  "Background": {
+    "Background": "Фон"
+  },
+  "Background Defaults": {
+    "Background Defaults": "Значення фону за замовчуванням"
+  },
+  "Background Images": {
+    "Background Images": "Зображення фону"
+  },
+  "Background Mode": {
+    "Background Mode": ""
+  },
+  "Background Presets": {
+    "Background Presets": "Набори налаштувань фону"
+  },
+  "Background image": {
+    "Background image": "Зображення фону"
+  },
+  "Balanced": {
+    "Balanced": "Збалансований"
+  },
+  "Bar Interactions": {
+    "Bar Interactions": "Взаємодія з панеллю"
+  },
+  "Blink Recording Dot": {
+    "Blink Recording Dot": "Блимання індикатора запису"
+  },
+  "Blur Background Image": {
+    "Blur Background Image": "Розмиття фонового зображення"
+  },
+  "Bold": {
+    "Bold": "Жирний"
+  },
+  "Border Color": {
+    "Border Color": "Колір контуру"
+  },
+  "Border Width": {
+    "Border Width": "Ширина контуру"
+  },
+  "Both": {
+    "Both": "Обидва"
+  },
+  "Bottom": {
+    "Bottom": "Знизу"
+  },
+  "Bottom Center": {
+    "Bottom Center": "Нижній центр"
+  },
+  "Bottom Left": {
+    "Bottom Left": "Нижній лівий"
+  },
+  "Bottom Right": {
+    "Bottom Right": "Нижній правий"
+  },
+  "Callout": {
+    "Callout": "Виноска"
+  },
+  "Callout Zoom": {
+    "Callout Zoom": "Масштаб виноски"
+  },
+  "Cancel": {
+    "Cancel": "Скасувати"
+  },
+  "Capture": {
+    "Capture": "Захоплення"
+  },
+  "Capture Actions": {
+    "Capture Actions": "Дії захоплення"
+  },
+  "Capture Options": {
+    "Capture Options": "Параметри захоплення"
+  },
+  "Capturing...": {
+    "Capturing...": "Захоплення..."
+  },
+  "Center": {
+    "Center": "Центр"
+  },
+  "Choose Color": {
+    "Choose Color": "Вибрати колір"
+  },
+  "Choose notifications shown after copy or save.": {
+    "Choose notifications shown after copy or save.": "Виберіть сповіщення, що відображаються після копіювання або збереження"
+  },
+  "Choose the editor shape for portrait or landscape screens.": {
+    "Choose the editor shape for portrait or landscape screens.": "Виберіть форму редактора для портретного або альбомного екрана"
+  },
+  "Choose whether the editor opens as a modal overlay or a movable floating window.": {
+    "Choose whether the editor opens as a modal overlay or a movable floating window.": "Виберіть, чи відкривати редактор як модальне вікно чи як рухоме плаваюче вікно"
+  },
+  "Choose which monitor to capture during full screen recording.": {
+    "Choose which monitor to capture during full screen recording.": "Виберіть монітор для запису під час повноекранного запису"
+  },
+  "Clean Text Eraser": {
+    "Clean Text Eraser": "Очищення тексту"
+  },
+  "Clear saved region selection before each capture": {
+    "Clear saved region selection before each capture": "Очищати виділену область перед кожним захопленням"
+  },
+  "Clipboard": {
+    "Clipboard": "Буфер обміну"
+  },
+  "Close": {
+    "Close": "Закрити"
+  },
+  "Color": {
+    "Color": "Колір"
+  },
+  "Color %1 copied": {
+    "Color %1 copied": "Колір %1 скопійовано"
+  },
+  "Color Palette": {
+    "Color Palette": "Колірна палітра"
+  },
+  "Color Picker": {
+    "Color Picker": "Вибір кольору"
+  },
+  "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": {
+    "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": ""
+  },
+  "Conic Gradient": {
+    "Conic Gradient": "Конічний градієнт"
+  },
+  "Container Format": {
+    "Container Format": "Формат контейнера"
+  },
+  "Controls the preview pixel budget while editing. Lower it if you experience lag. Does not affect the final saved image quality.": {
+    "Controls the preview pixel budget while editing. Lower it if you experience lag. Does not affect the final saved image quality.": "Керує бюджетом пікселів попереднього перегляду під час редагування. Зменште значення, якщо помічаєте затримки. Не впливає на якість кінцевого зображення"
+  },
+  "Converting recording to GIF...": {
+    "Converting recording to GIF...": "Конвертація запису в GIF..."
+  },
+  "Copied Anonymously": {
+    "Copied Anonymously": "Скопійовано анонімно"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Скопійовано до буфера обміну"
+  },
+  "Copied!": {
+    "Copied!": "Скопійовано!"
+  },
+  "Copy": {
+    "Copy": "Копіювати"
+  },
+  "Copy & Save": {
+    "Copy & Save": "Копіювати та зберегти"
+  },
+  "Copy Color": {
+    "Copy Color": "Копіювати колір"
+  },
+  "Copy Current Palette": {
+    "Copy Current Palette": "Копіювати поточну палітру"
+  },
+  "Copy and customize this preset": {
+    "Copy and customize this preset": "Копіювати та налаштувати цей набір"
+  },
+  "Copy vector / Paste / Duplicate": {
+    "Copy vector / Paste / Duplicate": "Копіювати вектор / Вставити / Дублювати"
+  },
+  "Corner Radius": {
+    "Corner Radius": "Радіус кутів"
+  },
+  "Could not crop image": {
+    "Could not crop image": ""
+  },
+  "Crop / Resize": {
+    "Crop / Resize": "Обрізати / Змінити розмір"
+  },
+  "Custom": {
+    "Custom": "Власний"
+  },
+  "Dark": {
+    "Dark": "Темний"
+  },
+  "Darken the image to improve foreground contrast": {
+    "Darken the image to improve foreground contrast": "Затемнити зображення для покращення контрастності переднього плану"
+  },
+  "Dashed Line": {
+    "Dashed Line": "Штрихова лінія"
+  },
+  "Default Microphone": {
+    "Default Microphone": "Типовий мікрофон"
+  },
+  "Default Output": {
+    "Default Output": "Типовий вивід"
+  },
+  "Default Watermark": {
+    "Default Watermark": "Типовий водяний знак"
+  },
+  "Delete": {
+    "Delete": "Видалити"
+  },
+  "Dim Background Image": {
+    "Dim Background Image": "Приглушити фонове зображення"
+  },
+  "Dim Intensity": {
+    "Dim Intensity": "Інтенсивність приглушення"
+  },
+  "Discard & Close": {
+    "Discard & Close": "Відкинути та закрити"
+  },
+  "Display": {
+    "Display": "Дисплей"
+  },
+  "Display Mode": {
+    "Display Mode": ""
+  },
+  "Done": {
+    "Done": "Готово"
+  },
+  "Dotted Line": {
+    "Dotted Line": "Пунктирна лінія"
+  },
+  "Drag Image": {
+    "Drag Image": "Перетягнути зображення"
+  },
+  "Draw an outer ring using the stamp number color": {
+    "Draw an outer ring using the stamp number color": "Намалювати зовнішнє кільце, використовуючи колір штампа"
+  },
+  "Drop image onto bar icon to annotate it": {
+    "Drop image onto bar icon to annotate it": "Перетягніть зображення на іконку панелі, щоб анотувати його"
+  },
+  "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": {
+    "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": ""
+  },
+  "Edge Spacing": {
+    "Edge Spacing": "Відступи від країв"
+  },
+  "Edit": {
+    "Edit": "Редагувати"
+  },
+  "Edit Color Palette": {
+    "Edit Color Palette": "Редагувати колірну палітру"
+  },
+  "Edit Text Note": {
+    "Edit Text Note": "Редагувати текстову примітку"
+  },
+  "Editor": {
+    "Editor": "Редактор"
+  },
+  "Ellipse": {
+    "Ellipse": "Еліпс"
+  },
+  "Enable background automatically when opening the editor": {
+    "Enable background automatically when opening the editor": "Автоматично вмикати фон при відкритті редактора"
+  },
+  "Eraser": {
+    "Eraser": "Ластик"
+  },
+  "Failed to convert recording to GIF.": {
+    "Failed to convert recording to GIF.": "Не вдалося конвертувати запис у GIF"
+  },
+  "Failed to copy screenshot": {
+    "Failed to copy screenshot": ""
+  },
+  "Failed to create float window.": {
+    "Failed to create float window.": ""
+  },
+  "Failed to download image.": {
+    "Failed to download image.": ""
+  },
+  "Failed to generate blurred background image": {
+    "Failed to generate blurred background image": "Не вдалося створити розмите фонове зображення"
+  },
+  "Failed to load image: %1": {
+    "Failed to load image: %1": ""
+  },
+  "Failed to save screenshot": {
+    "Failed to save screenshot": "Не вдалося зберегти знімок екрану"
+  },
+  "File": {
+    "File": "Файл"
+  },
+  "Filename Pattern": {
+    "Filename Pattern": ""
+  },
+  "Flip Horizontal": {
+    "Flip Horizontal": ""
+  },
+  "Flip Vertical": {
+    "Flip Vertical": ""
+  },
+  "Float": {
+    "Float": "Плавання"
+  },
+  "Float Window": {
+    "Float Window": "Плаваюче вікно"
+  },
+  "Float service not available.": {
+    "Float service not available.": ""
+  },
+  "Floating": {
+    "Floating": "Плавучий"
+  },
+  "Focused Screen": {
+    "Focused Screen": "Фокусний екран"
+  },
+  "Font Size": {
+    "Font Size": "Розмір шрифту"
+  },
+  "Font family used for number stamp labels": {
+    "Font family used for number stamp labels": "Сімейство шрифтів для міток штампа"
+  },
+  "Format tokens: %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second), {zzz} (Ms)": {
+    "Format tokens: %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second), {zzz} (Ms)": "Токени формату: %Y (Рік), %y (рік з 2 цифр), %m (Місяць), %d (День), %H (Година), %M (Хвилина), %S (Секунда), {zzz} (Мс)"
+  },
+  "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
+    "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "Токени формату: {user} (Ім'я користувача), \\n (Новий рядок), %Y (Рік), %y (рік з 2 цифр), %m (Місяць), %d (День), %H (Година), %M (Хвилина), %S (Секунда)"
+  },
+  "Framerate": {
+    "Framerate": "Частота кадрів"
+  },
+  "Free": {
+    "Free": "Вільний"
+  },
+  "Fullscreen": {
+    "Fullscreen": "Повный екран"
+  },
+  "Fullscreen Target": {
+    "Fullscreen Target": ""
+  },
+  "GIF Framerate": {
+    "GIF Framerate": "Частота кадрів GIF"
+  },
+  "GPU encoder failed. Retrying with %1...": {
+    "GPU encoder failed. Retrying with %1...": ""
+  },
+  "General Shortcuts": {
+    "General Shortcuts": "Загальні гарячі клавіші"
+  },
+  "Gradient Angle": {
+    "Gradient Angle": ""
+  },
+  "Gradient End": {
+    "Gradient End": ""
+  },
+  "Gradient Start": {
+    "Gradient Start": ""
+  },
+  "Help": {
+    "Help": "Допомога"
+  },
+  "Hide Annotations": {
+    "Hide Annotations": ""
+  },
+  "Hide Control Center": {
+    "Hide Control Center": "Приховати центр керування"
+  },
+  "Hide Control Center by Default": {
+    "Hide Control Center by Default": "Приховувати центр керування за замовчуванням"
+  },
+  "High": {
+    "High": "Високий"
+  },
+  "Highlighter": {
+    "Highlighter": "Маркер"
+  },
+  "History": {
+    "History": "Історія"
+  },
+  "Hold %1 for Loupe": {
+    "Hold %1 for Loupe": ""
+  },
+  "Hover Trigger Delay": {
+    "Hover Trigger Delay": "Затримка спрацювання при наведенні"
+  },
+  "IPC Commands": {
+    "IPC Commands": "Команди IPC"
+  },
+  "Image": {
+    "Image": "Зображення"
+  },
+  "Image + Text": {
+    "Image + Text": "Зображення + Текст"
+  },
+  "Image Background": {
+    "Image Background": "Зображення фону"
+  },
+  "Image Error": {
+    "Image Error": "Помилка зображення"
+  },
+  "Image Folder": {
+    "Image Folder": ""
+  },
+  "Image Size": {
+    "Image Size": "Розмір зображення"
+  },
+  "Image is too small (%1×%2). Minimum: %3px": {
+    "Image is too small (%1×%2). Minimum: %3px": ""
+  },
+  "Image selected automatically when using Image Background mode": {
+    "Image selected automatically when using Image Background mode": "Зображення вибирається автоматично при використанні режиму фонового зображення"
+  },
+  "Include Cursor": {
+    "Include Cursor": "Додати курсор"
+  },
+  "Initial Width": {
+    "Initial Width": "Початкова ширина"
+  },
+  "Initial state for the Control Center toggle.": {
+    "Initial state for the Control Center toggle.": "Початковий стан перемикача центру керування"
+  },
+  "Inline": {
+    "Inline": ""
+  },
+  "Input Mode": {
+    "Input Mode": "Режим введення"
+  },
+  "Insert Image": {
+    "Insert Image": "Вставити зображення"
+  },
+  "Interaction / Result": {
+    "Interaction / Result": "Взаємодія / Результат"
+  },
+  "Invalid or corrupted image file.": {
+    "Invalid or corrupted image file.": ""
+  },
+  "Italic": {
+    "Italic": ""
+  },
+  "JPEG Quality": {
+    "JPEG Quality": "Якість JPEG"
+  },
+  "Key": {
+    "Key": "Клавіша"
+  },
+  "Landscape": {
+    "Landscape": "Альбомна"
+  },
+  "Last Region": {
+    "Last Region": "Остання область"
+  },
+  "Left": {
+    "Left": "Зліва"
+  },
+  "Left Center": {
+    "Left Center": "Зліва по центру"
+  },
+  "Left Click": {
+    "Left Click": "Лівий клік"
+  },
+  "Light": {
+    "Light": "Світлий"
+  },
+  "Line": {
+    "Line": "Лінія"
+  },
+  "Linear Gradient": {
+    "Linear Gradient": "Лінійний градієнт"
+  },
+  "Live Preview": {
+    "Live Preview": "Попередній перегляд у реальному часі"
+  },
+  "Low": {
+    "Low": "Низький"
+  },
+  "Magnifier Loupe": {
+    "Magnifier Loupe": "Лупа-збільшувач"
+  },
+  "Max Height (%1 = no limit)": {
+    "Max Height (%1 = no limit)": ""
+  },
+  "Medium": {
+    "Medium": "Середній"
+  },
+  "Menu Item Right Click": {
+    "Menu Item Right Click": "Правий клік по елементу меню"
+  },
+  "Merging audio tracks...": {
+    "Merging audio tracks...": "Об'єднання аудіодоріжок..."
+  },
+  "Microphone": {
+    "Microphone": "Мікрофон"
+  },
+  "Microphone Device": {
+    "Microphone Device": "Пристрій мікрофона"
+  },
+  "Middle Click": {
+    "Middle Click": "Середній клік"
+  },
+  "Middle Click Action": {
+    "Middle Click Action": "Дія середнього кліку"
+  },
+  "Minimize Delay": {
+    "Minimize Delay": "Затримка згортання"
+  },
+  "Modal": {
+    "Modal": "Модальне"
+  },
+  "More Tools": {
+    "More Tools": "Більше інструментів"
+  },
+  "Niri Binding Example": {
+    "Niri Binding Example": "Приклад прив'язки Niri"
+  },
+  "No Background": {
+    "No Background": "Без фону"
+  },
+  "No Image Specified": {
+    "No Image Specified": "Зображення не вказане"
+  },
+  "No QR code detected": {
+    "No QR code detected": ""
+  },
+  "No output available": {
+    "No output available": "Немає доступного виводу"
+  },
+  "No saved images yet": {
+    "No saved images yet": "Збережених зображень ще немає"
+  },
+  "No supported images found": {
+    "No supported images found": "Підтримуваних зображень не знайдено"
+  },
+  "No text detected": {
+    "No text detected": ""
+  },
+  "No valid image file or URL found in drop.": {
+    "No valid image file or URL found in drop.": ""
+  },
+  "No valid image, URL, or path in clipboard.": {
+    "No valid image, URL, or path in clipboard.": ""
+  },
+  "None": {
+    "None": "Немає"
+  },
+  "Note: Starting tool mode overrides tool thickness and color defaults if the starting tool matches it.": {
+    "Note: Starting tool mode overrides tool thickness and color defaults if the starting tool matches it.": "Примітка: режим інструменту перекриває типові значення товщини та кольору, якщо інструмент збігається з ним"
+  },
+  "Notification": {
+    "Notification": "Сповіщення"
+  },
+  "Notifications": {
+    "Notifications": "Сповіщення"
+  },
+  "OCR": {
+    "OCR": "ОРС"
+  },
+  "OCR Result": {
+    "OCR Result": "Результат ОРС"
+  },
+  "OCR failed": {
+    "OCR failed": ""
+  },
+  "Off": {
+    "Off": "ВИМК."
+  },
+  "Opacity": {
+    "Opacity": "Непрозорість"
+  },
+  "Open": {
+    "Open": "Відкрити"
+  },
+  "Open %1 menu (Popout)": {
+    "Open %1 menu (Popout)": ""
+  },
+  "Open Image": {
+    "Open Image": ""
+  },
+  "Open folder": {
+    "Open folder": "Відкрити папку"
+  },
+  "Outline Variant": {
+    "Outline Variant": "Варіант контуру"
+  },
+  "Output Format": {
+    "Output Format": "Формат виводу"
+  },
+  "Output format applies only to disk saves. Clipboard copies are always PNG.": {
+    "Output format applies only to disk saves. Clipboard copies are always PNG.": "Формат виводу застосовується лише до збереження на диск. Копії в буфері обміну завжди мають формат PNG"
+  },
+  "Overlay Opacity": {
+    "Overlay Opacity": "Непрозорість накладання"
+  },
+  "Padding": {
+    "Padding": "Внутрішній відступ"
+  },
+  "Palette Preset": {
+    "Palette Preset": "Набір налаштувань палітри"
+  },
+  "Pause": {
+    "Pause": "Призупинити"
+  },
+  "Pause / Resume": {
+    "Pause / Resume": "Пауза / Відновити"
+  },
+  "Paused": {
+    "Paused": "Призупинено"
+  },
+  "Pausing is not supported with %1.": {
+    "Pausing is not supported with %1.": ""
+  },
+  "Pen": {
+    "Pen": ""
+  },
+  "Pen Auto-Close": {
+    "Pen Auto-Close": "Автозакриття олівця"
+  },
+  "Pick Color": {
+    "Pick Color": "Вибрати колір"
+  },
+  "Pick a palette preset or customize individual color slots.": {
+    "Pick a palette preset or customize individual color slots.": "Виберіть набір налаштувань палітри або налаштуйте окремі кольори"
+  },
+  "Pixelate": {
+    "Pixelate": "Пікселізація"
+  },
+  "Pixelate Intensity": {
+    "Pixelate Intensity": "Інтенсивність пікселізації"
+  },
+  "Popup": {
+    "Popup": ""
+  },
+  "Portrait": {
+    "Portrait": "Портретна"
+  },
+  "Position": {
+    "Position": "Позиція"
+  },
+  "Post-Capture Notification": {
+    "Post-Capture Notification": "Сповіщення після захоплення"
+  },
+  "Preset": {
+    "Preset": ""
+  },
+  "Preset %1": {
+    "Preset %1": "Набір налаштувань %1"
+  },
+  "Presets": {
+    "Presets": ""
+  },
+  "Preview": {
+    "Preview": "Попередній перегляд"
+  },
+  "Preview Quality": {
+    "Preview Quality": ""
+  },
+  "Primary": {
+    "Primary": "Основний"
+  },
+  "Primary Screen": {
+    "Primary Screen": "Основний екран"
+  },
+  "QR Result": {
+    "QR Result": "Результат QR"
+  },
+  "QR scan failed": {
+    "QR scan failed": ""
+  },
+  "Quality": {
+    "Quality": "Якість"
+  },
+  "Quick Capture": {
+    "Quick Capture": "Швидке захоплення"
+  },
+  "Quick Capture Error": {
+    "Quick Capture Error": "Помилка швидкого захоплення"
+  },
+  "Radial Gradient": {
+    "Radial Gradient": "Радіальний градієнт"
+  },
+  "Radial Menu": {
+    "Radial Menu": "Радіальне меню"
+  },
+  "Ratio": {
+    "Ratio": "Співвідношення"
+  },
+  "Ready": {
+    "Ready": "Готово"
+  },
+  "Recent Edits": {
+    "Recent Edits": "Останні правки"
+  },
+  "Record Microphone": {
+    "Record Microphone": "Записувати мікрофон"
+  },
+  "Record System Audio": {
+    "Record System Audio": "Записувати системний звук"
+  },
+  "Recording": {
+    "Recording": "Запис"
+  },
+  "Recording Backend": {
+    "Recording Backend": ""
+  },
+  "Recording Folder": {
+    "Recording Folder": "Тека записів"
+  },
+  "Recording ended with error code %1.": {
+    "Recording ended with error code %1.": "Запис завершено з кодом помилки %1"
+  },
+  "Recording...": {
+    "Recording...": "Записування..."
+  },
+  "Rectangle": {
+    "Rectangle": "Прямокутник"
+  },
+  "Redact": {
+    "Redact": "Редагувати"
+  },
+  "Redo": {
+    "Redo": ""
+  },
+  "Refresh": {
+    "Refresh": "Оновити"
+  },
+  "Region": {
+    "Region": "Область"
+  },
+  "Reset": {
+    "Reset": "Скинути"
+  },
+  "Reset Last Region": {
+    "Reset Last Region": "Скинути останню область"
+  },
+  "Resume": {
+    "Resume": "Відновити"
+  },
+  "Right": {
+    "Right": "Праворуч"
+  },
+  "Right Center": {
+    "Right Center": "Справа по центру"
+  },
+  "Right Click": {
+    "Right Click": "Правий клік"
+  },
+  "Right Click Action": {
+    "Right Click Action": "Дія правого кліку"
+  },
+  "Rotate Left": {
+    "Rotate Left": ""
+  },
+  "Rotate Right": {
+    "Rotate Right": ""
+  },
+  "Round Highlighter Tips": {
+    "Round Highlighter Tips": "Закруглені кінчики маркера"
+  },
+  "Round Rectangle Corners": {
+    "Round Rectangle Corners": "Закруглені кути прямокутника"
+  },
+  "Rounded Rectangle": {
+    "Rounded Rectangle": "Закруглений прямокутник"
+  },
+  "Save": {
+    "Save": "Зберегти"
+  },
+  "Save As": {
+    "Save As": ""
+  },
+  "Save Screenshot As": {
+    "Save Screenshot As": "Зберегти знімок екрану як"
+  },
+  "Saved %1 (%2)": {
+    "Saved %1 (%2)": "Збережено %1 (%2)"
+  },
+  "Scale Editor to Screenshot Size": {
+    "Scale Editor to Screenshot Size": "Масштабувати редактор під розмір знімку екрану"
+  },
+  "Scan QR": {
+    "Scan QR": "Сканувати QR"
+  },
+  "Screen Recording": {
+    "Screen Recording": ""
+  },
+  "Screen Recording Error": {
+    "Screen Recording Error": "Помилка запису екрана"
+  },
+  "Screen Recording Saved": {
+    "Screen Recording Saved": "Запис екрана збережено"
+  },
+  "Screen recording timed out or was cancelled.": {
+    "Screen recording timed out or was cancelled.": "Час запису екрана вийшов або запис було скасовано"
+  },
+  "Screenshot": {
+    "Screenshot": ""
+  },
+  "Screenshot Copied": {
+    "Screenshot Copied": "Знімок екрану скопійовано"
+  },
+  "Screenshot Folder": {
+    "Screenshot Folder": "Тека знімків екрану"
+  },
+  "Screenshot Saved": {
+    "Screenshot Saved": "Знімок екрану збережено"
+  },
+  "Screenshot copied anonymously with randomized name and stripped metadata.": {
+    "Screenshot copied anonymously with randomized name and stripped metadata.": "Знімок екрану скопійовано анонімно з випадковим ім'ям і без метаданих"
+  },
+  "Screenshot copied to clipboard and saved to %1": {
+    "Screenshot copied to clipboard and saved to %1": "Знімок екрану скопійовано в буфер обміну та збережено у %1"
+  },
+  "Screenshot copied to clipboard but failed to save file: %1": {
+    "Screenshot copied to clipboard but failed to save file: %1": "Знімок екрану скопійовано в буфер обміну, але не вдалося зберегти файл: %1"
+  },
+  "Screenshot copied with randomized name.": {
+    "Screenshot copied with randomized name.": "Знімок екрану скопійовано з випадковим ім'ям"
+  },
+  "Screenshot failed (mode: %1).": {
+    "Screenshot failed (mode: %1).": "Знімок екрану не вдалося зробити (режим: %1)"
+  },
+  "Screenshot saved to %1": {
+    "Screenshot saved to %1": "Знімок екрану збережено у %1"
+  },
+  "Scroll Interval": {
+    "Scroll Interval": "Інтервал прокрутки"
+  },
+  "Scroll capture: select a region, scroll content, then press %1 to finish.": {
+    "Scroll capture: select a region, scroll content, then press %1 to finish.": ""
+  },
+  "Scrolling": {
+    "Scrolling": "Прокручування"
+  },
+  "Select": {
+    "Select": "Обрати"
+  },
+  "Select Color Slots %1": {
+    "Select Color Slots %1": ""
+  },
+  "Select Image to Annotate": {
+    "Select Image to Annotate": "Вибрати зображення для анотування"
+  },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": ""
+  },
+  "Selected Tool / Action": {
+    "Selected Tool / Action": "Вибраний інструмент / дія"
+  },
+  "Settings": {
+    "Settings": "Налаштування"
+  },
+  "Shadow Strength": {
+    "Shadow Strength": ""
+  },
+  "Shapes": {
+    "Shapes": "Форми"
+  },
+  "Shortcut Action": {
+    "Shortcut Action": "Дія гарячої клавіші"
+  },
+  "Show Annotations": {
+    "Show Annotations": ""
+  },
+  "Show Control Center": {
+    "Show Control Center": "Показати центр керування"
+  },
+  "Show Keyboard Shortcut Hints": {
+    "Show Keyboard Shortcut Hints": "Показати підказки щодо гарячих клавіш"
+  },
+  "Show Pill Border": {
+    "Show Pill Border": "Показати межу пігулки"
+  },
+  "Show Region Border": {
+    "Show Region Border": "Показати межу області"
+  },
+  "Show Screenshot Border": {
+    "Show Screenshot Border": "Показати межу скріншота"
+  },
+  "Show Toolbar": {
+    "Show Toolbar": "Показати панель інструментів"
+  },
+  "Show Toolbar Border": {
+    "Show Toolbar Border": "Показати межу панелі інструментів"
+  },
+  "Show only the image on a transparent background": {
+    "Show only the image on a transparent background": "Показати лише зображення на прозорому фоні"
+  },
+  "Skip confirmation": {
+    "Skip confirmation": "Пропустити підтвердження"
+  },
+  "Slot %1": {
+    "Slot %1": ""
+  },
+  "Soften image details so screenshot content stands out": {
+    "Soften image details so screenshot content stands out": "Пом'якшити деталі зображення, щоб вміст знімка екрану виділявся"
+  },
+  "Solid Color": {
+    "Solid Color": "Однотонний колір"
+  },
+  "Solid Fill": {
+    "Solid Fill": "Суцільна заливка"
+  },
+  "Solid Line": {
+    "Solid Line": "Суцільна лінія"
+  },
+  "Spawn Position": {
+    "Spawn Position": "Позиція появи"
+  },
+  "Specific Output": {
+    "Specific Output": "Специфічний вивід"
+  },
+  "Spotlight": {
+    "Spotlight": "Spotlight"
+  },
+  "Spotlight Opacity": {
+    "Spotlight Opacity": "Непрозорість прожектора"
+  },
+  "Stamp": {
+    "Stamp": ""
+  },
+  "Stamp Contrast Ring": {
+    "Stamp Contrast Ring": "Контрастне кільце штампа"
+  },
+  "Stamp Size": {
+    "Stamp Size": "Розмір штампа"
+  },
+  "Starting Preset": {
+    "Starting Preset": "Початковий набір налаштувань"
+  },
+  "Starting Tool": {
+    "Starting Tool": "Початковий інструмент"
+  },
+  "Starting Tool Mode": {
+    "Starting Tool Mode": "Режим початкового інструменту"
+  },
+  "Stop & Save": {
+    "Stop & Save": "Зупинити та зберегти"
+  },
+  "Surface Container Highest": {
+    "Surface Container Highest": "Найвищий поверхневий контейнер"
+  },
+  "Switch to your custom preset": {
+    "Switch to your custom preset": "Переключити на ваш власний набір налаштувань"
+  },
+  "System Audio Device": {
+    "System Audio Device": "Системний аудіопристрій"
+  },
+  "Target Output Name": {
+    "Target Output Name": "Назва цільового виводу"
+  },
+  "Text": {
+    "Text": "Текст"
+  },
+  "Text Background": {
+    "Text Background": ""
+  },
+  "Text Background Roundness": {
+    "Text Background Roundness": "Закруглення фону тексту"
+  },
+  "Text Size": {
+    "Text Size": "Розмір тексту"
+  },
+  "Thickness": {
+    "Thickness": "Товщина"
+  },
+  "This palette preset is read-only. Select one of the options below to switch to the Custom Palette and edit colors:": {
+    "This palette preset is read-only. Select one of the options below to switch to the Custom Palette and edit colors:": "Цей набір налаштувань палітри доступний лише для читання. Виберіть один із варіантів нижче, щоб перейти до власної палітри та відредагувати кольори:"
+  },
+  "Toast": {
+    "Toast": "Спливаюче повідомлення"
+  },
+  "Toggle Annotations": {
+    "Toggle Annotations": ""
+  },
+  "Toggle Start / Stop": {
+    "Toggle Start / Stop": "Перемикання Старт / Стоп"
+  },
+  "Toggle between %1 latest presets": {
+    "Toggle between %1 latest presets": ""
+  },
+  "Tool": {
+    "Tool": ""
+  },
+  "Tool Defaults": {
+    "Tool Defaults": "Значення інструментів за замовчуванням"
+  },
+  "Toolbar": {
+    "Toolbar": "Панель інструментів"
+  },
+  "Toolbar Palette": {
+    "Toolbar Palette": "Палітра панелі інструментів"
+  },
+  "Toolbar Position": {
+    "Toolbar Position": "Позиція панелі інструментів"
+  },
+  "Tools": {
+    "Tools": "Інструменти"
+  },
+  "Top": {
+    "Top": "Вгорі"
+  },
+  "Top Center": {
+    "Top Center": "Згори по центру"
+  },
+  "Top Left": {
+    "Top Left": "Зверху зліва"
+  },
+  "Top Right": {
+    "Top Right": "Згори справа"
+  },
+  "Transparent": {
+    "Transparent": "Прозорий"
+  },
+  "Transparent Background": {
+    "Transparent Background": "Прозорий фон"
+  },
+  "Trigger on Hover": {
+    "Trigger on Hover": "Спрацювання при наведенні"
+  },
+  "Type note...": {
+    "Type note...": "Введіть примітку..."
+  },
+  "Underline": {
+    "Underline": ""
+  },
+  "Undo": {
+    "Undo": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": "Посібник з використання"
+  },
+  "Use Existing Custom": {
+    "Use Existing Custom": "Використовувати існуючий власний"
+  },
+  "Use Floating Editor": {
+    "Use Floating Editor": "Використовувати плаваючий редактор"
+  },
+  "Use Modal Editor": {
+    "Use Modal Editor": "Використовувати модальний редактор"
+  },
+  "Variant": {
+    "Variant": ""
+  },
+  "Very High": {
+    "Very High": "Дуже високий"
+  },
+  "Video": {
+    "Video": ""
+  },
+  "Video Codec": {
+    "Video Codec": "Відеокодек"
+  },
+  "Watermark": {
+    "Watermark": "Водяний знак"
+  },
+  "Watermark Type": {
+    "Watermark Type": "Тип водяного знака"
+  },
+  "WebP Quality": {
+    "WebP Quality": "Якість WebP"
+  },
+  "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": {
+    "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": ""
+  },
+  "Window": {
+    "Window": "Вікно"
+  },
+  "Window / Portal": {
+    "Window / Portal": "Вікно / Портал"
+  }
+}

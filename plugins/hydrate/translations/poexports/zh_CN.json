@@ -1,0 +1,20 @@
+{
+  " cups": "杯子",
+  " mins": "分钟",
+  "Add Cup (+1)": "添加杯子 (+1)",
+  "Contributing": "贡献",
+  "Contributors": "贡献者",
+  "Daily Target (Cups)": "每日目标（杯数）",
+  "Display helpful mouse gesture guides inside the popout.": "在弹出窗口内显示有用的鼠标手势指南。",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "发现错误、想要翻译或有功能请求？在 GitHub 上加入我们。",
+  "General Options": "一般选项",
+  "GitHub": "GitHub",
+  "Help us improve": "帮助我们改进",
+  "Loading contributors...": "正在加载贡献者...",
+  "Reminder Interval": "提醒间隔",
+  "Reset Target": "重置目标",
+  "Right-click the bar icon to quickly log +1 cup.": "右键点击栏图标即可快速登录+1杯。",
+  "Set your daily target number of water cups.": "设定每日目标水杯数量。",
+  "Show Hints": "显示提示",
+  "Subtle icon shape shifting interval when hydration is needed.": "当需要水合作用时，图标形状会发生微妙的变化。"
+}

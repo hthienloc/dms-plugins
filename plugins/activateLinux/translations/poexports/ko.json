@@ -1,0 +1,20 @@
+{
+  "Activate Linux": "리눅스 활성화",
+  "Contributing": "기여",
+  "Contributors": "기여자",
+  "Customize Text": "텍스트 사용자 정의",
+  "Enable <b>Customize Text</b> to override the default message.": "기본 메시지를 무시하려면 <b>텍스트 사용자 정의</b>를 활성화하세요.",
+  "Enable manual override for the watermark text.": "워터마크 텍스트에 대한 수동 재정의를 활성화합니다.",
+  "First Line": "첫 번째 줄",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "버그를 발견했거나 번역하고 싶거나 기능 요청이 있으십니까? GitHub에서 우리와 함께하세요.",
+  "GitHub": "GitHub",
+  "Go to Settings to activate Linux.": "Linux를 활성화하려면 설정으로 이동하세요.",
+  "Help us improve": "개선할 수 있도록 도와주세요",
+  "Loading contributors...": "기여자 로드 중...",
+  "Primary text displayed in the watermark.": "워터마크에 표시되는 기본 텍스트입니다.",
+  "Second Line": "두 번째 라인",
+  "Subtext displayed in the watermark.": "워터마크에 표시되는 하위 텍스트입니다.",
+  "This plugin displays a non-intrusive watermark on your desktop.": "이 플러그인은 데스크탑에 방해가 되지 않는 워터마크를 표시합니다.",
+  "Usage Guide": "이용안내",
+  "Watermark Customization": "워터마크 사용자 정의"
+}

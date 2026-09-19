@@ -1,0 +1,20 @@
+{
+  "Activate Linux": "Активировать Linux",
+  "Contributing": "Содействие",
+  "Contributors": "Авторы",
+  "Customize Text": "Настроить текст",
+  "Enable <b>Customize Text</b> to override the default message.": "Включите <b>Настроить текст</b>, чтобы переопределить сообщение по умолчанию.",
+  "Enable manual override for the watermark text.": "Включите ручное переопределение текста водяного знака.",
+  "First Line": "Первая линия",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "Нашли ошибку, хотите перевести или у вас есть запрос на добавление функции? Присоединяйтесь к нам на GitHub.",
+  "GitHub": "GitHub",
+  "Go to Settings to activate Linux.": "Зайдите в настройки, чтобы активировать Linux.",
+  "Help us improve": "Помогите нам улучшить",
+  "Loading contributors...": "Загрузка участников...",
+  "Primary text displayed in the watermark.": "Основной текст, отображаемый в водяном знаке.",
+  "Second Line": "Вторая линия",
+  "Subtext displayed in the watermark.": "Подтекст отображается в водяном знаке.",
+  "This plugin displays a non-intrusive watermark on your desktop.": "Этот плагин отображает ненавязчивый водяной знак на вашем рабочем столе.",
+  "Usage Guide": "Руководство по использованию",
+  "Watermark Customization": "Настройка водяных знаков"
+}

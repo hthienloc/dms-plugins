@@ -1,0 +1,21 @@
+{
+  "id": "emojiPicker",
+  "name": "Emoji Picker",
+  "description": "Search, copy, and paste emoji",
+  "version": "0.2.0",
+  "author": "Loc Huynh",
+  "license": "GPL-3.0-or-later",
+  "icon": "emoji_emotions",
+  "type": "daemon",
+  "capabilities": [
+    "ipc",
+    "clipboard"
+  ],
+  "component": "./EmojiPicker.qml",
+  "settings": "./EmojiPickerSettings.qml",
+  "requires_dms": ">=1.5.0",
+  "permissions": [
+    "settings_read",
+    "settings_write"
+  ]
+}

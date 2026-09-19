@@ -1,0 +1,21 @@
+{
+  "Active": "Actif",
+  "Add to input group": "Ajouter au groupe d'entrée",
+  "Add your user to the 'input' group to detect mouse/keyboard activity:": "Ajoutez votre utilisateur au groupe « entrée » pour détecter l'activité de la souris/du clavier :",
+  "After running the command, logout and login again for changes to take effect.": "Après avoir exécuté la commande, déconnectez-vous et reconnectez-vous pour que les modifications prennent effet.",
+  "Bongo Cat": "Chat Bongo",
+  "Click the cat to open settings.": "Cliquez sur le chat pour ouvrir les paramètres.",
+  "Contributing": "Contribuer",
+  "Contributors": "Contributeurs",
+  "Display helpful usage tips and shortcuts at the bottom of the popout.": "Affichez des conseils d'utilisation et des raccourcis utiles au bas de la fenêtre contextuelle.",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "Vous avez trouvé un bug, souhaitez traduire ou avez une demande de fonctionnalité ? Rejoignez-nous sur GitHub.",
+  "GitHub": "GitHub",
+  "Help us improve": "Aidez-nous à améliorer",
+  "Interface": "Interface",
+  "Loading contributors...": "Chargement des contributeurs...",
+  "Right-click to toggle sleep mode.": "Cliquez avec le bouton droit pour basculer en mode veille.",
+  "Setup": "Installation",
+  "Show Hints": "Afficher les conseils",
+  "Sleeping": "Dormir",
+  "Usage Guide": "Guide d'utilisation"
+}

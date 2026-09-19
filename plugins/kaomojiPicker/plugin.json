@@ -1,0 +1,20 @@
+{
+  "id": "kaomojiPicker",
+  "name": "Kaomoji Picker",
+  "description": "Local kaomoji picker for DMS",
+  "version": "2.1.0",
+  "author": "Loc Huynh",
+  "icon": "pets",
+  "type": "launcher",
+  "capabilities": [
+    "launcher"
+  ],
+  "component": "./KaomojiPicker.qml",
+  "settings": "./KaomojiSettings.qml",
+  "trigger": "kj",
+  "permissions": [
+    "shell_execute",
+    "settings_read",
+    "settings_write"
+  ]
+}

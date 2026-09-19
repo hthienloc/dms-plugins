@@ -1,0 +1,20 @@
+{
+  " cups": "чашки",
+  " mins": "минут",
+  "Add Cup (+1)": "Добавить Кубок (+1)",
+  "Contributing": "Содействие",
+  "Contributors": "Авторы",
+  "Daily Target (Cups)": "Дневная цель (чашки)",
+  "Display helpful mouse gesture guides inside the popout.": "Отображение полезных подсказок по жестам мыши во всплывающем окне.",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "Нашли ошибку, хотите перевести или у вас есть запрос на добавление функции? Присоединяйтесь к нам на GitHub.",
+  "General Options": "Общие параметры",
+  "GitHub": "GitHub",
+  "Help us improve": "Помогите нам улучшить",
+  "Loading contributors...": "Загрузка участников...",
+  "Reminder Interval": "Интервал напоминания",
+  "Reset Target": "Сбросить цель",
+  "Right-click the bar icon to quickly log +1 cup.": "Щелкните правой кнопкой мыши значок панели, чтобы быстро записать +1 чашку.",
+  "Set your daily target number of water cups.": "Установите ежедневное целевое количество стаканов воды.",
+  "Show Hints": "Показать подсказки",
+  "Subtle icon shape shifting interval when hydration is needed.": "Тонкий интервал изменения формы значка, когда необходима гидратация."
+}

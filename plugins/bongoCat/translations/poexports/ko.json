@@ -1,0 +1,21 @@
+{
+  "Active": "활동적인",
+  "Add to input group": "입력 그룹에 추가",
+  "Add your user to the 'input' group to detect mouse/keyboard activity:": "마우스/키보드 활동을 감지하려면 사용자를 '입력' 그룹에 추가하세요.",
+  "After running the command, logout and login again for changes to take effect.": "명령을 실행한 후 로그아웃했다가 다시 로그인하면 변경 사항이 적용됩니다.",
+  "Bongo Cat": "봉고캣",
+  "Click the cat to open settings.": "고양이를 클릭하면 설정이 열립니다.",
+  "Contributing": "기여",
+  "Contributors": "기여자",
+  "Display helpful usage tips and shortcuts at the bottom of the popout.": "팝아웃 하단에 유용한 사용 팁과 바로가기를 표시합니다.",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "버그를 발견했거나 번역하고 싶거나 기능 요청이 있으십니까? GitHub에서 우리와 함께하세요.",
+  "GitHub": "GitHub",
+  "Help us improve": "개선할 수 있도록 도와주세요",
+  "Interface": "인터페이스",
+  "Loading contributors...": "기여자 로드 중...",
+  "Right-click to toggle sleep mode.": "절전 모드를 전환하려면 마우스 오른쪽 버튼을 클릭하세요.",
+  "Setup": "설정",
+  "Show Hints": "힌트 표시",
+  "Sleeping": "자고 있는",
+  "Usage Guide": "이용안내"
+}

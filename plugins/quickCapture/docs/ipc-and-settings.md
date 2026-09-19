@@ -1,0 +1,137 @@
+# IPC Interface & Configuration Schema
+
+This reference outlines the IPC interface, keyboard/mouse shortcut registries, and settings schemas of the Quick Capture plugin.
+
+---
+
+## 1. IPC (Inter-Process Communication) Interface
+
+You can interact with Quick Capture from external scripts, keyboard shortcut managers, or status bar launchers using the DMS IPC commands:
+
+```bash
+dms ipc call quickCapture <command> [arg] edit|float
+```
+
+### Supported Commands
+
+Commands that capture or open images accept an `action` parameter (`edit` / `float`):
+
+| Command | Arguments | Description |
+| :--- | :--- | :--- |
+| `screenshot` | `mode` (`region`, `full`, `all`, `output`, `window`, `last`, `scroll`) | Triggers a screenshot. |
+| `selectFile` | `action` | Opens file picker. |
+| `fromClipboard` | `action` | Imports image from clipboard. |
+| `openImage` | `path`, `action` | Opens a local image file. |
+| `close` | *(none)* | Closes the annotator. |
+| `showHistory` | *(none)* | Opens the Recent Edits history carousel. |
+| `recordStart` | `mode` (`screen`, `region`, `portal`) | Starts screen recording. |
+| `recordStop` | *(none)* | Stops screen recording. |
+| `recordPause` | *(none)* | Toggles pause/resume. |
+| `recordCancel` | *(none)* | Cancels screen recording. |
+| `recordToggle` | `mode` | Toggles screen recording. |
+| `recordStatus` | *(none)* | Returns recorder status. |
+
+```bash
+dms ipc call quickCapture screenshot region edit    # open editor
+dms ipc call quickCapture screenshot region float   # float directly
+dms ipc call quickCapture recordStart region        # record selected region
+dms ipc call quickCapture recordStop                # stop recording
+```
+
+### Integration Examples
+
+#### Hyprland Keybinds (`hyprland.conf`)
+```ini
+bind = , Print, exec, dms ipc call quickCapture screenshot region edit
+bind = Shift, Print, exec, dms ipc call quickCapture screenshot full edit
+bind = Control, Print, exec, dms ipc call quickCapture fromClipboard edit
+# Float without editor:
+# bind = , Print, exec, dms ipc call quickCapture screenshot region float
+```
+
+#### Niri Window Manager Config (`config.kdl`)
+```kdl
+binds {
+    Print { spawn "dms" "ipc" "call" "quickCapture" "screenshot" "region" "edit"; }
+    Meta+Print { spawn "dms" "ipc" "call" "quickCapture" "screenshot" "window" "edit"; }
+}
+```
+
+---
+
+## 2. Keyboard & Mouse Shortcut Registry
+
+To facilitate swift editing, Quick Capture implements a comprehensive hotkey mapping.
+
+### Drawing Tool Selection
+Pressing these keys changes the active tool:
+- `1`: Pen (Freehand drawing)
+- `2`: Line
+- `3`: Arrow
+- `4`: Rectangle
+- `S`: Highlighter (Alpha brush)
+- `Q`: Ellipse
+- `W`: Text Box
+- `E`: Pixelate (Redaction blur)
+- `R`: Redact (Solid block covering)
+- `A`: Stamp (Incremental counters)
+- `D`: Spotlight (Darken background outside selection)
+- `F`: Color Picker (Ink/Eyedropper)
+- `T`: Eraser (Individual vector click eraser)
+- `Z`: Area Zoom / Callout box
+- `V`: Select / Move tool
+- `B`: Background options
+- `O`: OCR Text Recognition
+- `G` (hold): Magnifier Lens (Cursor zoom)
+- `Tab`: Swap between the two most recently used tool presets.
+
+### Action Controls
+- `Enter`: Complete and save/copy (depends on preferences).
+- `Esc`: Cancel, discard changes, and close.
+- `Ctrl + Z` / **Mouse Back Button**: Undo the latest vector stroke.
+- `Ctrl + Y` / `Ctrl + Shift + Z` / **Mouse Forward Button**: Redo the latest undone vector stroke.
+- `Ctrl + C`: Copy the current canvas to the clipboard.
+- `Ctrl + Shift + C` / **Right-click Copy Button**: Copy canvas anonymously to clipboard (randomized filename & stripped metadata).
+- `Ctrl + S`: Save the canvas directly as a file.
+- `Ctrl + A`: Copy to clipboard and save as file simultaneously.
+- `Ctrl + F`: Float image to always-on-top window.
+- `Ctrl + X`: Interactive canvas crop.
+
+### Interactive Modifiers
+- **Mouse Scroll Wheel:** Increases/decreases brush stroke size or font size dynamically.
+- **Middle-Click on Vector:** Delete clicked vector object instantly.
+- **Right-Click on Canvas:** Displays the 8-preset Radial Menu for swift tool/color selection.
+- **Shift + Right-Click (Stamp active):** Changes counter format (Numbers, Alphabetical, Roman numerals).
+- **Shift + Right-Click (Text active):** Standard text decoration toggle (Bold, Italic, Underline, Background).
+- **Shift + Right-Click (Line active):** Changes line style (Solid, Dashed, Dotted).
+- **Shift + Right-Click (Arrow active):** Changes arrow line style (Solid, Dashed, Dotted) and head style (Single/Double, Filled/Outline).
+- **Shift + Right-Click (Redact active):** Changes redact mode (Solid Fill, Clean Text Eraser).
+
+---
+
+## 3. Configuration & State Schema (`plugin.json`)
+
+The following settings are registered inside DMS settings manager and stored in `~/.config/DankMaterialShell/settings/quickCapture.json`:
+
+```json
+{
+  "requires_dms": ">=1.5.0",
+  "permissions": [
+    "settings_read",
+    "settings_write",
+    "shell_execute"
+  ],
+  "settings": {
+    "exit_method": "confirm",
+    "screenshot_folder": "/home/user/Pictures/Screenshots",
+    "export_format": "png", // options: png, webp, jpg, pdf, ppm
+    "export_compress": true,
+    "delete_screenshots_on_close": false,
+    "image_padding": 40,
+    "image_corner_radius": 12,
+    "image_shadow_strength": 50,
+    "background_mode": "gradient"
+  }
+}
+```
+*(Values can be customized via the Quick Capture Settings tab in DMS panel settings).*

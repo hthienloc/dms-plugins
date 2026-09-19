@@ -1,0 +1,1142 @@
+{
+  "%1 Font": {
+    "%1 Font": ""
+  },
+  "%1 is not installed": {
+    "%1 is not installed": ""
+  },
+  "1 Connecting Line": {
+    "1 Connecting Line": ""
+  },
+  "2 Connecting Lines": {
+    "2 Connecting Lines": ""
+  },
+  "Action": {
+    "Action": "Thao tác"
+  },
+  "Action on %1": {
+    "Action on %1": "Hành động khi %1"
+  },
+  "Adaptive": {
+    "Adaptive": "Thích ứng"
+  },
+  "Add": {
+    "Add": "Thêm"
+  },
+  "Add Text Note": {
+    "Add Text Note": ""
+  },
+  "Alignment": {
+    "Alignment": ""
+  },
+  "All Outputs": {
+    "All Outputs": ""
+  },
+  "Annotating": {
+    "Annotating": ""
+  },
+  "Annotation Tools": {
+    "Annotation Tools": ""
+  },
+  "Anonymous Copy": {
+    "Anonymous Copy": ""
+  },
+  "Arrow": {
+    "Arrow": "Mũi Tên Vector"
+  },
+  "Aspect Ratio": {
+    "Aspect Ratio": ""
+  },
+  "Audio": {
+    "Audio": "Âm thanh"
+  },
+  "Audio & Overlay": {
+    "Audio & Overlay": ""
+  },
+  "Audio Codec": {
+    "Audio Codec": "Codec âm thanh"
+  },
+  "Audio recording is disabled when using the %1 backend.": {
+    "Audio recording is disabled when using the %1 backend.": ""
+  },
+  "Auto": {
+    "Auto": "Tự động"
+  },
+  "Auto Balance": {
+    "Auto Balance": ""
+  },
+  "Auto-apply background defaults": {
+    "Auto-apply background defaults": ""
+  },
+  "Auto-close the loop when ending near the start point.": {
+    "Auto-close the loop when ending near the start point.": ""
+  },
+  "Auto-minimize": {
+    "Auto-minimize": ""
+  },
+  "Auto-select a tool preset on hover, without releasing the mouse.": {
+    "Auto-select a tool preset on hover, without releasing the mouse.": ""
+  },
+  "Auto-tiling": {
+    "Auto-tiling": ""
+  },
+  "Automatically minimize the float window after a delay": {
+    "Automatically minimize the float window after a delay": ""
+  },
+  "Automatically stack windows to avoid overlap": {
+    "Automatically stack windows to avoid overlap": ""
+  },
+  "Back to Annotation": {
+    "Back to Annotation": ""
+  },
+  "Background": {
+    "Background": "Nền"
+  },
+  "Background Defaults": {
+    "Background Defaults": ""
+  },
+  "Background Images": {
+    "Background Images": ""
+  },
+  "Background Mode": {
+    "Background Mode": ""
+  },
+  "Background Presets": {
+    "Background Presets": ""
+  },
+  "Background image": {
+    "Background image": "Hình nền"
+  },
+  "Balanced": {
+    "Balanced": "Cân bằng"
+  },
+  "Bar Interactions": {
+    "Bar Interactions": ""
+  },
+  "Blink Recording Dot": {
+    "Blink Recording Dot": ""
+  },
+  "Blur Background Image": {
+    "Blur Background Image": ""
+  },
+  "Bold": {
+    "Bold": "Đậm"
+  },
+  "Border Color": {
+    "Border Color": "Màu viền"
+  },
+  "Border Width": {
+    "Border Width": "Độ rộng viền"
+  },
+  "Both": {
+    "Both": ""
+  },
+  "Bottom": {
+    "Bottom": "Nút"
+  },
+  "Bottom Center": {
+    "Bottom Center": "Dưới cùng giữa"
+  },
+  "Bottom Left": {
+    "Bottom Left": "Dưới cùng bên trái"
+  },
+  "Bottom Right": {
+    "Bottom Right": "Dưới cùng bên phải"
+  },
+  "Callout": {
+    "Callout": ""
+  },
+  "Callout Zoom": {
+    "Callout Zoom": ""
+  },
+  "Cancel": {
+    "Cancel": "Hủy"
+  },
+  "Capture": {
+    "Capture": ""
+  },
+  "Capture Actions": {
+    "Capture Actions": ""
+  },
+  "Capture Options": {
+    "Capture Options": ""
+  },
+  "Capturing...": {
+    "Capturing...": ""
+  },
+  "Center": {
+    "Center": ""
+  },
+  "Choose Color": {
+    "Choose Color": "Chọn màu"
+  },
+  "Choose notifications shown after copy or save.": {
+    "Choose notifications shown after copy or save.": ""
+  },
+  "Choose the editor shape for portrait or landscape screens.": {
+    "Choose the editor shape for portrait or landscape screens.": ""
+  },
+  "Choose whether the editor opens as a modal overlay or a movable floating window.": {
+    "Choose whether the editor opens as a modal overlay or a movable floating window.": ""
+  },
+  "Choose which monitor to capture during full screen recording.": {
+    "Choose which monitor to capture during full screen recording.": ""
+  },
+  "Clean Text Eraser": {
+    "Clean Text Eraser": ""
+  },
+  "Clear saved region selection before each capture": {
+    "Clear saved region selection before each capture": ""
+  },
+  "Clipboard": {
+    "Clipboard": "Bảng nhớ tạm"
+  },
+  "Close": {
+    "Close": "Đóng"
+  },
+  "Color": {
+    "Color": "Màu sắc"
+  },
+  "Color %1 copied": {
+    "Color %1 copied": "Đã sao chép màu %1"
+  },
+  "Color Palette": {
+    "Color Palette": ""
+  },
+  "Color Picker": {
+    "Color Picker": "Bộ chọn màu"
+  },
+  "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": {
+    "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": ""
+  },
+  "Conic Gradient": {
+    "Conic Gradient": ""
+  },
+  "Container Format": {
+    "Container Format": ""
+  },
+  "Controls the preview pixel budget while editing. Lower it if you experience lag. Does not affect the final saved image quality.": {
+    "Controls the preview pixel budget while editing. Lower it if you experience lag. Does not affect the final saved image quality.": ""
+  },
+  "Converting recording to GIF...": {
+    "Converting recording to GIF...": ""
+  },
+  "Copied Anonymously": {
+    "Copied Anonymously": ""
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "Đã sao chép vào bảng nhớ tạm"
+  },
+  "Copied!": {
+    "Copied!": "Đã sao chép!"
+  },
+  "Copy": {
+    "Copy": "Sao chép"
+  },
+  "Copy & Save": {
+    "Copy & Save": ""
+  },
+  "Copy Color": {
+    "Copy Color": ""
+  },
+  "Copy Current Palette": {
+    "Copy Current Palette": ""
+  },
+  "Copy and customize this preset": {
+    "Copy and customize this preset": ""
+  },
+  "Copy vector / Paste / Duplicate": {
+    "Copy vector / Paste / Duplicate": ""
+  },
+  "Corner Radius": {
+    "Corner Radius": "Bán kính góc"
+  },
+  "Could not crop image": {
+    "Could not crop image": ""
+  },
+  "Crop / Resize": {
+    "Crop / Resize": "Cắt / Thay đổi kích thước"
+  },
+  "Custom": {
+    "Custom": "Tuỳ chỉnh"
+  },
+  "Dark": {
+    "Dark": ""
+  },
+  "Darken the image to improve foreground contrast": {
+    "Darken the image to improve foreground contrast": ""
+  },
+  "Dashed Line": {
+    "Dashed Line": ""
+  },
+  "Default Microphone": {
+    "Default Microphone": ""
+  },
+  "Default Output": {
+    "Default Output": ""
+  },
+  "Default Watermark": {
+    "Default Watermark": ""
+  },
+  "Delete": {
+    "Delete": "Xóa"
+  },
+  "Dim Background Image": {
+    "Dim Background Image": ""
+  },
+  "Dim Intensity": {
+    "Dim Intensity": ""
+  },
+  "Discard & Close": {
+    "Discard & Close": ""
+  },
+  "Display": {
+    "Display": "Hiển thị"
+  },
+  "Display Mode": {
+    "Display Mode": ""
+  },
+  "Done": {
+    "Done": ""
+  },
+  "Dotted Line": {
+    "Dotted Line": ""
+  },
+  "Drag Image": {
+    "Drag Image": ""
+  },
+  "Draw an outer ring using the stamp number color": {
+    "Draw an outer ring using the stamp number color": ""
+  },
+  "Drop image onto bar icon to annotate it": {
+    "Drop image onto bar icon to annotate it": ""
+  },
+  "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": {
+    "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": ""
+  },
+  "Edge Spacing": {
+    "Edge Spacing": "Khoảng cách cạnh"
+  },
+  "Edit": {
+    "Edit": "Chỉnh sửa"
+  },
+  "Edit Color Palette": {
+    "Edit Color Palette": ""
+  },
+  "Edit Text Note": {
+    "Edit Text Note": ""
+  },
+  "Editor": {
+    "Editor": ""
+  },
+  "Ellipse": {
+    "Ellipse": "Hình elip / hình tròn"
+  },
+  "Enable background automatically when opening the editor": {
+    "Enable background automatically when opening the editor": ""
+  },
+  "Eraser": {
+    "Eraser": "Cục tẩy"
+  },
+  "Failed to convert recording to GIF.": {
+    "Failed to convert recording to GIF.": ""
+  },
+  "Failed to copy screenshot": {
+    "Failed to copy screenshot": ""
+  },
+  "Failed to create float window.": {
+    "Failed to create float window.": ""
+  },
+  "Failed to download image.": {
+    "Failed to download image.": ""
+  },
+  "Failed to generate blurred background image": {
+    "Failed to generate blurred background image": ""
+  },
+  "Failed to load image: %1": {
+    "Failed to load image: %1": ""
+  },
+  "Failed to save screenshot": {
+    "Failed to save screenshot": ""
+  },
+  "File": {
+    "File": "Tệp"
+  },
+  "Filename Pattern": {
+    "Filename Pattern": ""
+  },
+  "Flip Horizontal": {
+    "Flip Horizontal": ""
+  },
+  "Flip Vertical": {
+    "Flip Vertical": ""
+  },
+  "Float": {
+    "Float": "Nổi"
+  },
+  "Float Window": {
+    "Float Window": ""
+  },
+  "Float service not available.": {
+    "Float service not available.": ""
+  },
+  "Floating": {
+    "Floating": "Nổi"
+  },
+  "Focused Screen": {
+    "Focused Screen": ""
+  },
+  "Font Size": {
+    "Font Size": "Kích thước phông chữ"
+  },
+  "Font family used for number stamp labels": {
+    "Font family used for number stamp labels": ""
+  },
+  "Format tokens: %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second), {zzz} (Ms)": {
+    "Format tokens: %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second), {zzz} (Ms)": ""
+  },
+  "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
+    "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": ""
+  },
+  "Framerate": {
+    "Framerate": ""
+  },
+  "Free": {
+    "Free": ""
+  },
+  "Fullscreen": {
+    "Fullscreen": "Toàn màn hình"
+  },
+  "Fullscreen Target": {
+    "Fullscreen Target": ""
+  },
+  "GIF Framerate": {
+    "GIF Framerate": ""
+  },
+  "GPU encoder failed. Retrying with %1...": {
+    "GPU encoder failed. Retrying with %1...": ""
+  },
+  "General Shortcuts": {
+    "General Shortcuts": ""
+  },
+  "Gradient Angle": {
+    "Gradient Angle": ""
+  },
+  "Gradient End": {
+    "Gradient End": ""
+  },
+  "Gradient Start": {
+    "Gradient Start": ""
+  },
+  "Help": {
+    "Help": "Trợ giúp"
+  },
+  "Hide Annotations": {
+    "Hide Annotations": ""
+  },
+  "Hide Control Center": {
+    "Hide Control Center": ""
+  },
+  "Hide Control Center by Default": {
+    "Hide Control Center by Default": ""
+  },
+  "High": {
+    "High": "Cao"
+  },
+  "Highlighter": {
+    "Highlighter": "Bút đánh dấu"
+  },
+  "History": {
+    "History": "Lịch sử"
+  },
+  "Hold %1 for Loupe": {
+    "Hold %1 for Loupe": ""
+  },
+  "Hover Trigger Delay": {
+    "Hover Trigger Delay": ""
+  },
+  "IPC Commands": {
+    "IPC Commands": ""
+  },
+  "Image": {
+    "Image": "Hình ảnh"
+  },
+  "Image + Text": {
+    "Image + Text": ""
+  },
+  "Image Background": {
+    "Image Background": ""
+  },
+  "Image Error": {
+    "Image Error": ""
+  },
+  "Image Folder": {
+    "Image Folder": ""
+  },
+  "Image Size": {
+    "Image Size": ""
+  },
+  "Image is too small (%1×%2). Minimum: %3px": {
+    "Image is too small (%1×%2). Minimum: %3px": ""
+  },
+  "Image selected automatically when using Image Background mode": {
+    "Image selected automatically when using Image Background mode": ""
+  },
+  "Include Cursor": {
+    "Include Cursor": ""
+  },
+  "Initial Width": {
+    "Initial Width": ""
+  },
+  "Initial state for the Control Center toggle.": {
+    "Initial state for the Control Center toggle.": ""
+  },
+  "Inline": {
+    "Inline": ""
+  },
+  "Input Mode": {
+    "Input Mode": ""
+  },
+  "Insert Image": {
+    "Insert Image": ""
+  },
+  "Interaction / Result": {
+    "Interaction / Result": ""
+  },
+  "Invalid or corrupted image file.": {
+    "Invalid or corrupted image file.": ""
+  },
+  "Italic": {
+    "Italic": ""
+  },
+  "JPEG Quality": {
+    "JPEG Quality": ""
+  },
+  "Key": {
+    "Key": "Phím"
+  },
+  "Landscape": {
+    "Landscape": ""
+  },
+  "Last Region": {
+    "Last Region": ""
+  },
+  "Left": {
+    "Left": "Trái"
+  },
+  "Left Center": {
+    "Left Center": "Trái giữa"
+  },
+  "Left Click": {
+    "Left Click": ""
+  },
+  "Light": {
+    "Light": "Nhẹ / Sáng"
+  },
+  "Line": {
+    "Line": "Dòng"
+  },
+  "Linear Gradient": {
+    "Linear Gradient": ""
+  },
+  "Live Preview": {
+    "Live Preview": ""
+  },
+  "Low": {
+    "Low": "Thấp"
+  },
+  "Magnifier Loupe": {
+    "Magnifier Loupe": ""
+  },
+  "Max Height (%1 = no limit)": {
+    "Max Height (%1 = no limit)": ""
+  },
+  "Medium": {
+    "Medium": "Trung bình"
+  },
+  "Menu Item Right Click": {
+    "Menu Item Right Click": ""
+  },
+  "Merging audio tracks...": {
+    "Merging audio tracks...": ""
+  },
+  "Microphone": {
+    "Microphone": "Micro"
+  },
+  "Microphone Device": {
+    "Microphone Device": ""
+  },
+  "Middle Click": {
+    "Middle Click": ""
+  },
+  "Middle Click Action": {
+    "Middle Click Action": ""
+  },
+  "Minimize Delay": {
+    "Minimize Delay": ""
+  },
+  "Modal": {
+    "Modal": ""
+  },
+  "More Tools": {
+    "More Tools": ""
+  },
+  "Niri Binding Example": {
+    "Niri Binding Example": ""
+  },
+  "No Background": {
+    "No Background": "Không có ảnh nền"
+  },
+  "No Image Specified": {
+    "No Image Specified": ""
+  },
+  "No QR code detected": {
+    "No QR code detected": ""
+  },
+  "No output available": {
+    "No output available": ""
+  },
+  "No saved images yet": {
+    "No saved images yet": ""
+  },
+  "No supported images found": {
+    "No supported images found": ""
+  },
+  "No text detected": {
+    "No text detected": ""
+  },
+  "No valid image file or URL found in drop.": {
+    "No valid image file or URL found in drop.": ""
+  },
+  "No valid image, URL, or path in clipboard.": {
+    "No valid image, URL, or path in clipboard.": ""
+  },
+  "None": {
+    "None": "Không"
+  },
+  "Note: Starting tool mode overrides tool thickness and color defaults if the starting tool matches it.": {
+    "Note: Starting tool mode overrides tool thickness and color defaults if the starting tool matches it.": ""
+  },
+  "Notification": {
+    "Notification": "Thông báo"
+  },
+  "Notifications": {
+    "Notifications": "Thông báo"
+  },
+  "OCR": {
+    "OCR": ""
+  },
+  "OCR Result": {
+    "OCR Result": ""
+  },
+  "OCR failed": {
+    "OCR failed": ""
+  },
+  "Off": {
+    "Off": "Tắt"
+  },
+  "Opacity": {
+    "Opacity": "Độ mờ"
+  },
+  "Open": {
+    "Open": "Mở"
+  },
+  "Open %1 menu (Popout)": {
+    "Open %1 menu (Popout)": ""
+  },
+  "Open Image": {
+    "Open Image": ""
+  },
+  "Open folder": {
+    "Open folder": "Mở thư mục"
+  },
+  "Outline Variant": {
+    "Outline Variant": ""
+  },
+  "Output Format": {
+    "Output Format": ""
+  },
+  "Output format applies only to disk saves. Clipboard copies are always PNG.": {
+    "Output format applies only to disk saves. Clipboard copies are always PNG.": ""
+  },
+  "Overlay Opacity": {
+    "Overlay Opacity": ""
+  },
+  "Padding": {
+    "Padding": "Lề trong"
+  },
+  "Palette Preset": {
+    "Palette Preset": ""
+  },
+  "Pause": {
+    "Pause": "Tạm dừng"
+  },
+  "Pause / Resume": {
+    "Pause / Resume": ""
+  },
+  "Paused": {
+    "Paused": "Đã tạm dừng"
+  },
+  "Pausing is not supported with %1.": {
+    "Pausing is not supported with %1.": ""
+  },
+  "Pen": {
+    "Pen": "Bút tự do"
+  },
+  "Pen Auto-Close": {
+    "Pen Auto-Close": ""
+  },
+  "Pick Color": {
+    "Pick Color": ""
+  },
+  "Pick a palette preset or customize individual color slots.": {
+    "Pick a palette preset or customize individual color slots.": ""
+  },
+  "Pixelate": {
+    "Pixelate": "Làm mờ điểm ảnh (Pixelate)"
+  },
+  "Pixelate Intensity": {
+    "Pixelate Intensity": ""
+  },
+  "Popup": {
+    "Popup": ""
+  },
+  "Portrait": {
+    "Portrait": ""
+  },
+  "Position": {
+    "Position": "Vị trí"
+  },
+  "Post-Capture Notification": {
+    "Post-Capture Notification": ""
+  },
+  "Preset": {
+    "Preset": ""
+  },
+  "Preset %1": {
+    "Preset %1": ""
+  },
+  "Presets": {
+    "Presets": ""
+  },
+  "Preview": {
+    "Preview": "Xem trước"
+  },
+  "Preview Quality": {
+    "Preview Quality": ""
+  },
+  "Primary": {
+    "Primary": "Chính"
+  },
+  "Primary Screen": {
+    "Primary Screen": ""
+  },
+  "QR Result": {
+    "QR Result": ""
+  },
+  "QR scan failed": {
+    "QR scan failed": ""
+  },
+  "Quality": {
+    "Quality": "Chất lượng"
+  },
+  "Quick Capture": {
+    "Quick Capture": ""
+  },
+  "Quick Capture Error": {
+    "Quick Capture Error": ""
+  },
+  "Radial Gradient": {
+    "Radial Gradient": ""
+  },
+  "Radial Menu": {
+    "Radial Menu": ""
+  },
+  "Ratio": {
+    "Ratio": ""
+  },
+  "Ready": {
+    "Ready": "Sẵn sàng"
+  },
+  "Recent Edits": {
+    "Recent Edits": ""
+  },
+  "Record Microphone": {
+    "Record Microphone": ""
+  },
+  "Record System Audio": {
+    "Record System Audio": ""
+  },
+  "Recording": {
+    "Recording": ""
+  },
+  "Recording Backend": {
+    "Recording Backend": ""
+  },
+  "Recording Folder": {
+    "Recording Folder": ""
+  },
+  "Recording ended with error code %1.": {
+    "Recording ended with error code %1.": ""
+  },
+  "Recording...": {
+    "Recording...": ""
+  },
+  "Rectangle": {
+    "Rectangle": "Đường viền hình chữ nhật"
+  },
+  "Redact": {
+    "Redact": ""
+  },
+  "Redo": {
+    "Redo": ""
+  },
+  "Refresh": {
+    "Refresh": "Làm mới"
+  },
+  "Region": {
+    "Region": ""
+  },
+  "Reset": {
+    "Reset": "Đặt lại"
+  },
+  "Reset Last Region": {
+    "Reset Last Region": ""
+  },
+  "Resume": {
+    "Resume": "Tiếp tục"
+  },
+  "Right": {
+    "Right": "Phải"
+  },
+  "Right Center": {
+    "Right Center": "Phải giữa"
+  },
+  "Right Click": {
+    "Right Click": ""
+  },
+  "Right Click Action": {
+    "Right Click Action": ""
+  },
+  "Rotate Left": {
+    "Rotate Left": ""
+  },
+  "Rotate Right": {
+    "Rotate Right": ""
+  },
+  "Round Highlighter Tips": {
+    "Round Highlighter Tips": ""
+  },
+  "Round Rectangle Corners": {
+    "Round Rectangle Corners": ""
+  },
+  "Rounded Rectangle": {
+    "Rounded Rectangle": ""
+  },
+  "Save": {
+    "Save": "Lưu"
+  },
+  "Save As": {
+    "Save As": ""
+  },
+  "Save Screenshot As": {
+    "Save Screenshot As": ""
+  },
+  "Saved %1 (%2)": {
+    "Saved %1 (%2)": ""
+  },
+  "Scale Editor to Screenshot Size": {
+    "Scale Editor to Screenshot Size": ""
+  },
+  "Scan QR": {
+    "Scan QR": ""
+  },
+  "Screen Recording": {
+    "Screen Recording": ""
+  },
+  "Screen Recording Error": {
+    "Screen Recording Error": ""
+  },
+  "Screen Recording Saved": {
+    "Screen Recording Saved": ""
+  },
+  "Screen recording timed out or was cancelled.": {
+    "Screen recording timed out or was cancelled.": ""
+  },
+  "Screenshot": {
+    "Screenshot": ""
+  },
+  "Screenshot Copied": {
+    "Screenshot Copied": ""
+  },
+  "Screenshot Folder": {
+    "Screenshot Folder": "Lưu thư mục"
+  },
+  "Screenshot Saved": {
+    "Screenshot Saved": ""
+  },
+  "Screenshot copied anonymously with randomized name and stripped metadata.": {
+    "Screenshot copied anonymously with randomized name and stripped metadata.": ""
+  },
+  "Screenshot copied to clipboard and saved to %1": {
+    "Screenshot copied to clipboard and saved to %1": ""
+  },
+  "Screenshot copied to clipboard but failed to save file: %1": {
+    "Screenshot copied to clipboard but failed to save file: %1": ""
+  },
+  "Screenshot copied with randomized name.": {
+    "Screenshot copied with randomized name.": ""
+  },
+  "Screenshot failed (mode: %1).": {
+    "Screenshot failed (mode: %1).": ""
+  },
+  "Screenshot saved to %1": {
+    "Screenshot saved to %1": ""
+  },
+  "Scroll Interval": {
+    "Scroll Interval": ""
+  },
+  "Scroll capture: select a region, scroll content, then press %1 to finish.": {
+    "Scroll capture: select a region, scroll content, then press %1 to finish.": ""
+  },
+  "Scrolling": {
+    "Scrolling": "Cuộn"
+  },
+  "Select": {
+    "Select": "Chọn"
+  },
+  "Select Color Slots %1": {
+    "Select Color Slots %1": ""
+  },
+  "Select Image to Annotate": {
+    "Select Image to Annotate": ""
+  },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": ""
+  },
+  "Selected Tool / Action": {
+    "Selected Tool / Action": ""
+  },
+  "Settings": {
+    "Settings": "Cài đặt"
+  },
+  "Shadow Strength": {
+    "Shadow Strength": ""
+  },
+  "Shapes": {
+    "Shapes": ""
+  },
+  "Shortcut Action": {
+    "Shortcut Action": ""
+  },
+  "Show Annotations": {
+    "Show Annotations": ""
+  },
+  "Show Control Center": {
+    "Show Control Center": ""
+  },
+  "Show Keyboard Shortcut Hints": {
+    "Show Keyboard Shortcut Hints": ""
+  },
+  "Show Pill Border": {
+    "Show Pill Border": ""
+  },
+  "Show Region Border": {
+    "Show Region Border": ""
+  },
+  "Show Screenshot Border": {
+    "Show Screenshot Border": ""
+  },
+  "Show Toolbar": {
+    "Show Toolbar": ""
+  },
+  "Show Toolbar Border": {
+    "Show Toolbar Border": ""
+  },
+  "Show only the image on a transparent background": {
+    "Show only the image on a transparent background": ""
+  },
+  "Skip confirmation": {
+    "Skip confirmation": "Bỏ qua xác nhận"
+  },
+  "Slot %1": {
+    "Slot %1": ""
+  },
+  "Soften image details so screenshot content stands out": {
+    "Soften image details so screenshot content stands out": ""
+  },
+  "Solid Color": {
+    "Solid Color": ""
+  },
+  "Solid Fill": {
+    "Solid Fill": ""
+  },
+  "Solid Line": {
+    "Solid Line": ""
+  },
+  "Spawn Position": {
+    "Spawn Position": ""
+  },
+  "Specific Output": {
+    "Specific Output": ""
+  },
+  "Spotlight": {
+    "Spotlight": "Tìm kiếm nhanh"
+  },
+  "Spotlight Opacity": {
+    "Spotlight Opacity": ""
+  },
+  "Stamp": {
+    "Stamp": "Tem số"
+  },
+  "Stamp Contrast Ring": {
+    "Stamp Contrast Ring": ""
+  },
+  "Stamp Size": {
+    "Stamp Size": ""
+  },
+  "Starting Preset": {
+    "Starting Preset": ""
+  },
+  "Starting Tool": {
+    "Starting Tool": "Công cụ khởi động"
+  },
+  "Starting Tool Mode": {
+    "Starting Tool Mode": ""
+  },
+  "Stop & Save": {
+    "Stop & Save": ""
+  },
+  "Surface Container Highest": {
+    "Surface Container Highest": ""
+  },
+  "Switch to your custom preset": {
+    "Switch to your custom preset": ""
+  },
+  "System Audio Device": {
+    "System Audio Device": ""
+  },
+  "Target Output Name": {
+    "Target Output Name": ""
+  },
+  "Text": {
+    "Text": "Văn bản"
+  },
+  "Text Background": {
+    "Text Background": ""
+  },
+  "Text Background Roundness": {
+    "Text Background Roundness": ""
+  },
+  "Text Size": {
+    "Text Size": ""
+  },
+  "Thickness": {
+    "Thickness": "Độ dày"
+  },
+  "This palette preset is read-only. Select one of the options below to switch to the Custom Palette and edit colors:": {
+    "This palette preset is read-only. Select one of the options below to switch to the Custom Palette and edit colors:": ""
+  },
+  "Toast": {
+    "Toast": "Thông báo nhỏ"
+  },
+  "Toggle Annotations": {
+    "Toggle Annotations": ""
+  },
+  "Toggle Start / Stop": {
+    "Toggle Start / Stop": ""
+  },
+  "Toggle between %1 latest presets": {
+    "Toggle between %1 latest presets": ""
+  },
+  "Tool": {
+    "Tool": ""
+  },
+  "Tool Defaults": {
+    "Tool Defaults": ""
+  },
+  "Toolbar": {
+    "Toolbar": ""
+  },
+  "Toolbar Palette": {
+    "Toolbar Palette": ""
+  },
+  "Toolbar Position": {
+    "Toolbar Position": ""
+  },
+  "Tools": {
+    "Tools": "Công cụ"
+  },
+  "Top": {
+    "Top": "Trên"
+  },
+  "Top Center": {
+    "Top Center": "Trên cùng giữa"
+  },
+  "Top Left": {
+    "Top Left": "Trên cùng bên trái"
+  },
+  "Top Right": {
+    "Top Right": "Trên cùng bên phải"
+  },
+  "Transparent": {
+    "Transparent": ""
+  },
+  "Transparent Background": {
+    "Transparent Background": ""
+  },
+  "Trigger on Hover": {
+    "Trigger on Hover": ""
+  },
+  "Type note...": {
+    "Type note...": ""
+  },
+  "Underline": {
+    "Underline": ""
+  },
+  "Undo": {
+    "Undo": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use Existing Custom": {
+    "Use Existing Custom": ""
+  },
+  "Use Floating Editor": {
+    "Use Floating Editor": ""
+  },
+  "Use Modal Editor": {
+    "Use Modal Editor": ""
+  },
+  "Variant": {
+    "Variant": ""
+  },
+  "Very High": {
+    "Very High": "Rất cao"
+  },
+  "Video": {
+    "Video": ""
+  },
+  "Video Codec": {
+    "Video Codec": ""
+  },
+  "Watermark": {
+    "Watermark": ""
+  },
+  "Watermark Type": {
+    "Watermark Type": ""
+  },
+  "WebP Quality": {
+    "WebP Quality": ""
+  },
+  "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": {
+    "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": ""
+  },
+  "Window": {
+    "Window": ""
+  },
+  "Window / Portal": {
+    "Window / Portal": ""
+  }
+}

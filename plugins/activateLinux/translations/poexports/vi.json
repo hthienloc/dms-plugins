@@ -1,0 +1,20 @@
+{
+  "Activate Linux": "Kích hoạt Linux",
+  "Contributing": "Đóng góp",
+  "Contributors": "Người đóng góp",
+  "Customize Text": "Tùy chỉnh văn bản",
+  "Enable <b>Customize Text</b> to override the default message.": "Bật <b>Tùy chỉnh văn bản</b> để ghi đè tin nhắn mặc định.",
+  "Enable manual override for the watermark text.": "Bật ghi đè thủ công cho văn bản hình mờ.",
+  "First Line": "Dòng đầu tiên",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "Tìm thấy lỗi, muốn dịch hoặc có yêu cầu về tính năng? Tham gia với chúng tôi trên GitHub.",
+  "GitHub": "GitHub",
+  "Go to Settings to activate Linux.": "Đi tới Cài đặt để kích hoạt Linux.",
+  "Help us improve": "Hãy giúp chúng tôi cải thiện",
+  "Loading contributors...": "Đang tải người đóng góp...",
+  "Primary text displayed in the watermark.": "Văn bản chính được hiển thị trong hình mờ.",
+  "Second Line": "Dòng thứ hai",
+  "Subtext displayed in the watermark.": "Văn bản phụ được hiển thị trong hình mờ.",
+  "This plugin displays a non-intrusive watermark on your desktop.": "Plugin này hiển thị hình mờ không xâm phạm trên màn hình của bạn.",
+  "Usage Guide": "Hướng dẫn sử dụng",
+  "Watermark Customization": "Tùy chỉnh hình mờ"
+}

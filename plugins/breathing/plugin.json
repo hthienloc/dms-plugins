@@ -1,0 +1,19 @@
+{
+  "id": "breathing",
+  "name": "Breathing Exercise",
+  "description": "Breathing exercises for relaxation and focus",
+  "version": "2.0.0",
+  "license": "GPL-3.0",
+  "author": "Loc Huynh",
+  "icon": "air",
+  "type": "widget",
+  "capabilities": [
+    "dankbar-widget"
+  ],
+  "component": "./BreathingWidget.qml",
+  "settings": "./BreathingSettings.qml",
+  "permissions": [
+    "settings_read",
+    "settings_write"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  " cups": "컵",
+  " mins": "분",
+  "Add Cup (+1)": "컵 추가 (+1)",
+  "Contributing": "기여",
+  "Contributors": "기여자",
+  "Daily Target (Cups)": "일일 목표(컵)",
+  "Display helpful mouse gesture guides inside the popout.": "팝아웃 내부에 유용한 마우스 제스처 가이드를 표시합니다.",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "버그를 발견했거나 번역하고 싶거나 기능 요청이 있으십니까? GitHub에서 우리와 함께하세요.",
+  "General Options": "일반 옵션",
+  "GitHub": "GitHub",
+  "Help us improve": "개선할 수 있도록 도와주세요",
+  "Loading contributors...": "기여자 로드 중...",
+  "Reminder Interval": "알림 간격",
+  "Reset Target": "대상 재설정",
+  "Right-click the bar icon to quickly log +1 cup.": "+1컵을 빠르게 기록하려면 막대 아이콘을 마우스 오른쪽 버튼으로 클릭하세요.",
+  "Set your daily target number of water cups.": "일일 목표 물컵 수를 설정하세요.",
+  "Show Hints": "힌트 표시",
+  "Subtle icon shape shifting interval when hydration is needed.": "수분 공급이 필요할 때 미묘한 아이콘 모양 변화 간격."
+}

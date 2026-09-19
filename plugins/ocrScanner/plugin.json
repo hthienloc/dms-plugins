@@ -1,0 +1,20 @@
+{
+  "id": "ocrScanner",
+  "name": "OCR Scanner",
+  "description": "Extract text from images in clipboard or files using Tesseract OCR",
+  "version": "2.0.0",
+  "license": "GPL-3.0",
+  "author": "Loc Huynh",
+  "icon": "document_scanner",
+  "type": "widget",
+  "capabilities": [
+    "dankbar-widget"
+  ],
+  "component": "./OCRWidget.qml",
+  "settings": "./OCRSettings.qml",
+  "permissions": [
+    "settings_read",
+    "settings_write",
+    "clipboard_read"
+  ]
+}

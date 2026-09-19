@@ -1,0 +1,21 @@
+{
+  "Active": "アクティブ",
+  "Add to input group": "入力グループに追加",
+  "Add your user to the 'input' group to detect mouse/keyboard activity:": "マウス/キーボードのアクティビティを検出するには、ユーザーを「入力」グループに追加します。",
+  "After running the command, logout and login again for changes to take effect.": "コマンドを実行した後、変更を有効にするには、ログアウトして再度ログインします。",
+  "Bongo Cat": "ボンゴキャット",
+  "Click the cat to open settings.": "猫をクリックして設定を開きます。",
+  "Contributing": "貢献する",
+  "Contributors": "貢献者",
+  "Display helpful usage tips and shortcuts at the bottom of the popout.": "ポップアウトの下部に、役立つ使用上のヒントとショートカットが表示されます。",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "バグを見つけた場合、翻訳したい場合、または機能リクエストがありますか? GitHub に参加してください。",
+  "GitHub": "GitHub",
+  "Help us improve": "改善にご協力ください",
+  "Interface": "インタフェース",
+  "Loading contributors...": "寄稿者を読み込んでいます...",
+  "Right-click to toggle sleep mode.": "右クリックしてスリープ モードを切り替えます。",
+  "Setup": "設定",
+  "Show Hints": "ヒントを表示する",
+  "Sleeping": "眠っている",
+  "Usage Guide": "ご利用ガイド"
+}

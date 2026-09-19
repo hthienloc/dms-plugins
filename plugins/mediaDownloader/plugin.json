@@ -1,0 +1,20 @@
+{
+    "id": "mediaDownloader",
+    "name": "Media Downloader",
+    "description": "Download audio and video from web links using yt-dlp",
+    "version": "1.0.1",
+    "author": "Loc Huynh",
+    "icon": "download",
+    "type": "widget",
+    "capabilities": [
+        "dankbar-widget",
+        "ipc"
+    ],
+    "component": "./MediaDownloader.qml",
+    "settings": "./MediaDownloaderSettings.qml",
+    "permissions": [
+        "settings_read",
+        "settings_write",
+        "process"
+    ]
+}

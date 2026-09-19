@@ -1,0 +1,18 @@
+{
+  "id": "hiddenBar",
+  "name": "Hidden Bar",
+  "description": "Hide and expand bar widgets with hover and click support.",
+  "version": "2.5.0",
+  "author": "Loc Huynh",
+  "icon": "unfold_more",
+  "type": "widget",
+  "capabilities": [
+    "dankbar-widget"
+  ],
+  "component": "./HiddenBarWidget.qml",
+  "settings": "./HiddenBarSettings.qml",
+  "permissions": [
+    "settings_read",
+    "settings_write"
+  ]
+}

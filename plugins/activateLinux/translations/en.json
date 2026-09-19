@@ -1,0 +1,20 @@
+{
+  "Activate Linux": "Activate Linux",
+  "Contributing": "Contributing",
+  "Contributors": "Contributors",
+  "Customize Text": "Customize Text",
+  "Enable <b>Customize Text</b> to override the default message.": "Enable <b>Customize Text</b> to override the default message.",
+  "Enable manual override for the watermark text.": "Enable manual override for the watermark text.",
+  "First Line": "First Line",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "Found a bug, want to translate, or have a feature request? Join us on GitHub.",
+  "GitHub": "GitHub",
+  "Go to Settings to activate Linux.": "Go to Settings to activate Linux.",
+  "Help us improve": "Help us improve",
+  "Loading contributors...": "Loading contributors...",
+  "Primary text displayed in the watermark.": "Primary text displayed in the watermark.",
+  "Second Line": "Second Line",
+  "Subtext displayed in the watermark.": "Subtext displayed in the watermark.",
+  "This plugin displays a non-intrusive watermark on your desktop.": "This plugin displays a non-intrusive watermark on your desktop.",
+  "Usage Guide": "Usage Guide",
+  "Watermark Customization": "Watermark Customization"
+}

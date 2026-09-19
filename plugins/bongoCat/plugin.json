@@ -1,0 +1,20 @@
+{
+  "id": "bongoCat",
+  "name": "Bongo Cat",
+  "description": "A reactive Bongo Cat that taps along with your typing",
+  "version": "2.3.0",
+  "license": "MIT",
+  "author": "Loc Huynh",
+  "icon": "pets",
+  "type": "widget",
+  "capabilities": [
+    "dankbar-widget"
+  ],
+  "component": "./BongoWidget.qml",
+  "settings": "./BongoSettings.qml",
+  "permissions": [
+    "settings_read",
+    "settings_write",
+    "process"
+  ]
+}

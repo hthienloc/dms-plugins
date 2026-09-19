@@ -1,0 +1,20 @@
+{
+  "id": "lutrisLauncher",
+  "name": "Lutris Launcher",
+  "description": "Launch your Lutris games directly from the shell",
+  "version": "2.0.0",
+  "license": "GPL-3.0",
+  "author": "Loc Huynh",
+  "icon": "sports_esports",
+  "type": "widget",
+  "capabilities": [
+    "dankbar-widget"
+  ],
+  "component": "./LutrisWidget.qml",
+  "settings": "./LutrisSettings.qml",
+  "permissions": [
+    "settings_read",
+    "settings_write"
+  ],
+  "screenshot": ""
+}

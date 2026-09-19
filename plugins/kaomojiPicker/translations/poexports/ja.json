@@ -1,0 +1,22 @@
+{
+  "Contributing": "貢献する",
+  "Contributors": "貢献者",
+  "Directly paste the selected kaomoji into the active window.": "選択した顔文字をアクティブなウィンドウに直接貼り付けます。",
+  "Enable History": "履歴を有効にする",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "バグを見つけた場合、翻訳したい場合、または機能リクエストがありますか? GitHub に参加してください。",
+  "General": "一般的な",
+  "GitHub": "GitHub",
+  "Help us improve": "改善にご協力ください",
+  "History Size": "履歴サイズ",
+  "Loading contributors...": "寄稿者を読み込んでいます...",
+  "Maximum number of kaomoji to show in results.": "結果に表示する顔文字の最大数。",
+  "Number of recently used items to keep.": "保持する最近使用したアイテムの数。",
+  "Paste on Select": "選択して貼り付け",
+  "Pin Kaomoji": "ピン顔文字",
+  "Remove from History": "履歴から削除",
+  "Result Limit": "結果の制限",
+  "Show recently used kaomoji when the search is empty.": "検索が空の場合、最近使用した顔文字を表示します。",
+  "The keyword to trigger this launcher (e.g. kj)": "このランチャーをトリガーするキーワード (例: kj)",
+  "Trigger Key": "トリガーキー",
+  "Unpin Kaomoji": "雲ピン顔文字"
+}

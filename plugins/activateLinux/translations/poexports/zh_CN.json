@@ -1,0 +1,20 @@
+{
+  "Activate Linux": "激活Linux",
+  "Contributing": "贡献",
+  "Contributors": "贡献者",
+  "Customize Text": "自定义文本",
+  "Enable <b>Customize Text</b> to override the default message.": "启用<b>自定义文本</b>以覆盖默认消息。",
+  "Enable manual override for the watermark text.": "启用水印文本的手动覆盖。",
+  "First Line": "第一线",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "发现错误、想要翻译或有功能请求？在 GitHub 上加入我们。",
+  "GitHub": "GitHub",
+  "Go to Settings to activate Linux.": "转至“设置”以激活 Linux。",
+  "Help us improve": "帮助我们改进",
+  "Loading contributors...": "正在加载贡献者...",
+  "Primary text displayed in the watermark.": "水印中显示的主要文本。",
+  "Second Line": "二线",
+  "Subtext displayed in the watermark.": "水印中显示的潜文本。",
+  "This plugin displays a non-intrusive watermark on your desktop.": "该插件在您的桌面上显示非侵入式水印。",
+  "Usage Guide": "使用指南",
+  "Watermark Customization": "水印定制"
+}

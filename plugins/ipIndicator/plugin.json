@@ -1,0 +1,22 @@
+{
+  "id": "ipIndicator",
+  "name": "IP Indicator",
+  "description": "Display public IP address, ISP, and location with a privacy-focused toggle.",
+  "version": "2.1.0",
+  "license": "GPL-3.0",
+  "author": "Loc Huynh",
+  "icon": "public",
+  "type": "widget",
+  "dependencies": [
+    "curl"
+  ],
+  "capabilities": [
+    "dankbar-widget"
+  ],
+  "component": "./IPIndicatorWidget.qml",
+  "settings": "./IPIndicatorSettings.qml",
+  "permissions": [
+    "settings_read",
+    "settings_write"
+  ]
+}

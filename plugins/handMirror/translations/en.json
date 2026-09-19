@@ -1,0 +1,13 @@
+{
+  "Discard": "Discard",
+  "Copy to Clipboard": "Copy to Clipboard",
+  "Save Image": "Save Image",
+  "Snapshot saved": "Snapshot saved",
+  "Snapshot copied to clipboard.": "Snapshot copied to clipboard.",
+  "Error": "Error",
+  "Could not create snaps directory.": "Could not create snaps directory.",
+  "Failed to save snapshot to directory.": "Failed to save snapshot to directory.",
+  "Copied": "Copied",
+  "Copy Failed": "Copy Failed",
+  "Drop to copy here": "Drop to copy here"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "caffeine",
+  "name": "Caffeine",
+  "description": "Keep your screen awake and prevent idle sleep with a single click.",
+  "version": "2.2.2",
+  "author": "Loc Huynh",
+  "type": "widget",
+  "icon": "local_cafe",
+  "capabilities": [
+    "control-center"
+  ],
+  "component": "./CaffeineWidget.qml",
+  "settings": "./CaffeineSettings.qml",
+  "permissions": [
+    "settings_read",
+    "settings_write"
+  ]
+}

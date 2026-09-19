@@ -1,0 +1,4 @@
+*.qmlc
+*~
+*.swp
+.directory

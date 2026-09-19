@@ -1,0 +1,563 @@
+import QtQuick
+import qs.Common
+import qs.Services
+import qs.Widgets
+import "../core/Defaults.js" as Defaults
+
+Item {
+    id: root
+
+    property var daemon: null
+    property var entries: []
+    property int previewIndex: -1
+
+    signal closeRequested
+
+    readonly property var previewEntry: previewIndex >= 0 && previewIndex < entries.length ? entries[previewIndex] : null
+    readonly property real heightFraction: previewIndex >= 0 ? 0.7 : 0.45
+    property int currentPage: 0
+
+    readonly property int itemsPerPage: 4
+    readonly property int totalPages: Math.max(1, Math.ceil(entries.length / itemsPerPage))
+
+    function clampPage() {
+        if (currentPage >= totalPages)
+            currentPage = totalPages - 1;
+        if (currentPage < 0)
+            currentPage = 0;
+    }
+
+    onEntriesChanged: clampPage()
+
+    readonly property string saveDirectory: Defaults.get(root.daemon?.pluginData, "saveDirectory")
+
+    function refresh() {
+        if (!root.daemon)
+            return;
+        var dir = Paths.expandTilde(String(root.saveDirectory));
+        var exts = ["png", "jpg", "jpeg", "webp"];
+        var cmd = "d=\"$1\"; shift; for e in \"$@\"; do for f in \"$d\"/*.\"$e\"; do [ -f \"$f\" ] && echo \"$(stat -c '%Y' \"$f\" 2>/dev/null)|$f\"; done; done | sort -rn | head -50";
+        Proc.runCommand("scan-history", ["sh", "-c", cmd, "sh", dir].concat(exts), function (stdout) {
+            var list = [];
+            var lines = stdout.trim().split("\n");
+            for (var i = 0; i < lines.length; i++) {
+                var line = lines[i].trim();
+                if (!line)
+                    continue;
+                var sep = line.indexOf("|");
+                if (sep < 0)
+                    continue;
+                var ts = parseInt(line.substring(0, sep)) * 1000;
+                var path = line.substring(sep + 1);
+                if (path)
+                    list.push({
+                        timestamp: ts,
+                        savedPath: path,
+                        _glIdx: list.length
+                    });
+            }
+            root.entries = list;
+        });
+    }
+
+    onDaemonChanged: {
+        if (root.daemon)
+            refresh();
+    }
+
+    function removeEntry(path) {
+        var filtered = root.entries.filter(function (e) {
+            return e.savedPath !== path;
+        });
+        for (var i = 0; i < filtered.length; i++) {
+            filtered[i]._glIdx = i;
+        }
+        root.entries = filtered;
+        if (root.previewIndex >= root.entries.length)
+            root.previewIndex = root.entries.length - 1;
+    }
+
+    function goPrevious() {
+        if (root.previewIndex >= 0)
+            root.previewIndex = Math.max(0, root.previewIndex - 1);
+        else
+            root.currentPage = Math.max(0, root.currentPage - 1);
+    }
+
+    function goNext() {
+        if (root.previewIndex >= 0)
+            root.previewIndex = Math.min(root.entries.length - 1, root.previewIndex + 1);
+        else
+            root.currentPage = Math.min(root.totalPages - 1, root.currentPage + 1);
+    }
+
+    function formatTimeElapsed(timestamp) {
+        if (!timestamp)
+            return "";
+        var now = Date.now();
+        var diff = now - timestamp;
+        if (diff < 0)
+            diff = 0;
+
+        var secs = Math.floor(diff / 1000);
+        var mins = Math.floor(secs / 60);
+        var hours = Math.floor(mins / 60);
+        var days = Math.floor(hours / 24);
+
+        if (days > 0) {
+            var remHours = hours % 24;
+            return remHours > 0 ? (days + "d" + remHours + "h") : (days + "d");
+        }
+        if (hours > 0) {
+            var remMins = mins % 60;
+            return remMins > 0 ? (hours + "h" + remMins + "m") : (hours + "h");
+        }
+        if (mins > 0) {
+            var remSecs = secs % 60;
+            return remSecs > 0 ? (mins + "m" + remSecs + "s") : (mins + "m");
+        }
+        return secs + "s";
+    }
+
+    Column {
+        anchors.fill: parent
+        spacing: 0
+
+        Item {
+            width: parent.width
+            height: 44
+
+            DankActionButton {
+                anchors.left: parent.left
+                anchors.leftMargin: 4
+                anchors.verticalCenter: parent.verticalCenter
+                iconName: "arrow_back"
+                iconSize: 16
+                buttonSize: 32
+                backgroundColor: "transparent"
+                iconColor: Theme.surfaceText
+                visible: root.previewIndex >= 0
+                onClicked: root.previewIndex = -1
+            }
+
+            StyledText {
+                anchors.centerIn: parent
+                text: root.previewIndex >= 0 ? I18n.trFor("quickCapture", "Preview") : root.saveDirectory
+                font.pixelSize: Theme.fontSizeMedium
+                font.bold: true
+                color: Theme.surfaceText
+            }
+        }
+
+        StyledText {
+            width: parent.width
+            height: parent.height - 44
+            visible: root.entries.length === 0
+            text: I18n.trFor("quickCapture", "No saved images yet")
+            font.pixelSize: Theme.fontSizeMedium
+            color: Theme.surfaceVariantText
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+        }
+
+        Item {
+            id: carouselView
+            width: parent.width
+            height: parent.height - 44
+            visible: root.entries.length > 0 && root.previewIndex < 0
+
+            readonly property real cardW: Math.max(60, (width - 46) / 4)
+
+            Column {
+                anchors.fill: parent
+                spacing: 4
+
+                Item {
+                    width: parent.width
+                    height: parent.height - 40
+                    clip: true
+
+                    Row {
+                        spacing: 10
+                        height: parent.height
+                        x: -root.currentPage * root.itemsPerPage * (carouselView.cardW + 10)
+
+                        Behavior on x {
+                            NumberAnimation {
+                                duration: 150
+                                easing.type: Easing.OutCubic
+                            }
+                        }
+
+                        Repeater {
+                            model: root.entries
+
+                            delegate: Item {
+                                required property var modelData
+
+                                width: carouselView.cardW
+                                height: parent.height
+
+                                Rectangle {
+                                    id: cardBackground
+                                    anchors.top: parent.top
+                                    anchors.left: parent.left
+                                    anchors.right: parent.right
+                                    anchors.bottom: timeLabel.top
+                                    anchors.bottomMargin: 4
+                                    radius: Theme.cornerRadius
+                                    color: Theme.surfaceContainerLow
+                                    border.color: cardHover.hovered ? Theme.primary : "transparent"
+                                    border.width: cardHover.hovered ? 2 : 0
+                                    clip: true
+
+                                    Behavior on border.color {
+                                        ColorAnimation {
+                                            duration: Theme.shorterDuration
+                                        }
+                                    }
+                                    Behavior on border.width {
+                                        NumberAnimation {
+                                            duration: Theme.shorterDuration
+                                        }
+                                    }
+
+                                    Image {
+                                        id: previewImage
+                                        anchors.fill: parent
+                                        anchors.margins: 4
+                                        source: "file://" + modelData.savedPath
+                                        sourceSize.width: 400
+                                        fillMode: Image.PreserveAspectFit
+                                        asynchronous: true
+
+                                        scale: cardHover.hovered ? 1.0 : 0.94
+                                        Behavior on scale {
+                                            NumberAnimation {
+                                                duration: 150
+                                                easing.type: Easing.OutCubic
+                                            }
+                                        }
+                                    }
+                                }
+
+                                StyledText {
+                                    id: timeLabel
+                                    anchors.bottom: parent.bottom
+                                    anchors.bottomMargin: 2
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    text: root.formatTimeElapsed(modelData.timestamp)
+                                    font.pixelSize: Theme.fontSizeSmall - 1
+                                    color: cardHover.hovered ? Theme.primary : Theme.surfaceVariantText
+                                    Behavior on color {
+                                        ColorAnimation {
+                                            duration: Theme.shorterDuration
+                                        }
+                                    }
+                                }
+
+                                HoverHandler {
+                                    id: cardHover
+                                }
+
+                                MouseArea {
+                                    anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                    onClicked: root.previewIndex = modelData._glIdx
+                                }
+
+                                property bool _copied: false
+
+                                Timer {
+                                    interval: 1500
+                                    repeat: false
+                                    running: parent._copied
+                                    onTriggered: parent._copied = false
+                                }
+
+                                DankActionButton {
+                                    anchors.top: cardBackground.top
+                                    anchors.right: cardBackground.right
+                                    anchors.margins: 6
+                                    z: 1
+                                    iconName: "open_in_new"
+                                    iconSize: 18
+                                    buttonSize: 36
+                                    radius: height / 2
+                                    opacity: cardHover.hovered ? 1 : 0
+                                    enabled: cardHover.hovered
+                                    tooltipText: I18n.trFor("quickCapture", "Open")
+                                    onClicked: Proc.runCommand("open-card", ["xdg-open", modelData.savedPath])
+
+                                    property bool _ovHovered: false
+                                    backgroundColor: Qt.rgba(0, 0, 0, _ovHovered ? 0.8 : 0.55)
+                                    iconColor: Theme.onPrimary
+                                    scale: _ovHovered ? 1.15 : 1.0
+                                    onEntered: _ovHovered = true
+                                    onExited: _ovHovered = false
+                                    Behavior on backgroundColor {
+                                        ColorAnimation {
+                                            duration: Theme.shorterDuration
+                                        }
+                                    }
+                                    Behavior on scale {
+                                        NumberAnimation {
+                                            duration: Theme.shorterDuration
+                                        }
+                                    }
+                                    Behavior on opacity {
+                                        NumberAnimation {
+                                            duration: Theme.shorterDuration
+                                        }
+                                    }
+                                }
+
+                                DankActionButton {
+                                    anchors.bottom: cardBackground.bottom
+                                    anchors.right: cardBackground.right
+                                    anchors.margins: 6
+                                    z: 1
+                                    iconName: parent._copied ? "check" : "content_copy"
+                                    iconSize: 18
+                                    buttonSize: 36
+                                    radius: height / 2
+                                    opacity: cardHover.hovered ? 1 : 0
+                                    enabled: cardHover.hovered
+                                    tooltipText: parent._copied ? I18n.trFor("quickCapture", "Copied!") : I18n.trFor("quickCapture", "Copy")
+                                    onClicked: {
+                                        parent._copied = true;
+                                        DMSService.sendRequest("clipboard.copyFile", {
+                                            "filePath": modelData.savedPath
+                                        });
+                                        ToastService.showInfo(I18n.trFor("quickCapture", "Copied to clipboard"));
+                                    }
+
+                                    property bool _ovHovered: false
+                                    backgroundColor: Qt.rgba(0, 0, 0, _ovHovered ? 0.8 : 0.55)
+                                    iconColor: parent._copied ? Theme.success : Theme.onPrimary
+                                    scale: _ovHovered ? 1.15 : 1.0
+                                    onEntered: _ovHovered = true
+                                    onExited: _ovHovered = false
+                                    Behavior on backgroundColor {
+                                        ColorAnimation {
+                                            duration: Theme.shorterDuration
+                                        }
+                                    }
+                                    Behavior on scale {
+                                        NumberAnimation {
+                                            duration: Theme.shorterDuration
+                                        }
+                                    }
+                                    Behavior on opacity {
+                                        NumberAnimation {
+                                            duration: Theme.shorterDuration
+                                        }
+                                    }
+                                }
+
+                                DankActionButton {
+                                    anchors.top: cardBackground.top
+                                    anchors.left: cardBackground.left
+                                    anchors.margins: 6
+                                    z: 1
+                                    iconName: "delete"
+                                    iconSize: 16
+                                    buttonSize: 28
+                                    radius: height / 2
+                                    opacity: cardHover.hovered ? 1 : 0
+                                    enabled: cardHover.hovered
+                                    tooltipText: I18n.trFor("quickCapture", "Delete")
+                                    backgroundColor: Theme.withAlpha(Theme.error, 0.25)
+                                    iconColor: Theme.error
+                                    onClicked: {
+                                        if (root.previewIndex === modelData._glIdx)
+                                            root.previewIndex = -1;
+                                        var delPath = modelData.savedPath;
+                                        root.removeEntry(delPath);
+                                        Proc.runCommand("delete-card", ["rm", "-f", "--", delPath], function () {
+                                            root.refresh();
+                                        });
+                                    }
+
+                                    Behavior on opacity {
+                                        NumberAnimation {
+                                            duration: Theme.shorterDuration
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                Item {
+                    width: parent.width
+                    height: 36
+
+                    DankButtonGroup {
+                        anchors.centerIn: parent
+                        visible: root.totalPages > 1
+                        model: {
+                            var pages = [];
+                            for (var i = 0; i < root.totalPages; i++)
+                                pages.push(String(i + 1));
+                            return pages;
+                        }
+                        currentIndex: root.currentPage
+                        size: "small"
+                        buttonHeight: 28
+                        minButtonWidth: 36
+                        onSelectionChanged: (index, selected) => {
+                            if (selected)
+                                root.currentPage = index;
+                        }
+                    }
+                }
+            }
+        }
+
+        Item {
+            id: previewArea
+            width: parent.width
+            height: parent.height - 44
+            visible: root.previewEntry
+
+            onVisibleChanged: {
+                if (!visible)
+                    previewArea._previewCopied = false;
+            }
+
+            Image {
+                anchors.fill: parent
+                anchors.margins: 8
+                anchors.bottomMargin: 56
+                source: root.previewEntry ? "file://" + root.previewEntry.savedPath : ""
+                fillMode: Image.PreserveAspectFit
+                asynchronous: true
+                sourceSize.width: 1920
+            }
+
+            DankActionButton {
+                anchors.left: parent.left
+                anchors.leftMargin: 4
+                anchors.verticalCenter: parent.verticalCenter
+                iconName: "chevron_left"
+                iconSize: 24
+                buttonSize: 40
+                backgroundColor: Theme.withAlpha(Theme.surfaceContainerHigh, 0.7)
+                iconColor: Theme.surfaceText
+                visible: root.previewIndex > 0
+                onClicked: root.previewIndex--
+            }
+
+            DankActionButton {
+                anchors.right: parent.right
+                anchors.rightMargin: 4
+                anchors.verticalCenter: parent.verticalCenter
+                iconName: "chevron_right"
+                iconSize: 24
+                buttonSize: 40
+                backgroundColor: Theme.withAlpha(Theme.surfaceContainerHigh, 0.7)
+                iconColor: Theme.surfaceText
+                visible: root.previewIndex < root.entries.length - 1
+                onClicked: root.previewIndex++
+            }
+
+            property bool _previewCopied: false
+
+            Timer {
+                interval: 1500
+                repeat: false
+                running: previewArea._previewCopied
+                onTriggered: previewArea._previewCopied = false
+            }
+
+            Row {
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 12
+                spacing: 8
+
+                DankButton {
+                    iconName: "open_in_new"
+                    text: I18n.trFor("quickCapture", "Open")
+                    buttonHeight: 36
+                    horizontalPadding: 16
+                    backgroundColor: Theme.withAlpha(Theme.surfaceContainerHigh, 0.9)
+                    textColor: Theme.surfaceText
+                    onClicked: {
+                        if (root.previewEntry)
+                            Proc.runCommand("open-preview", ["xdg-open", root.previewEntry.savedPath]);
+                    }
+                }
+
+                DankButton {
+                    iconName: previewArea._previewCopied ? "check" : "content_copy"
+                    text: previewArea._previewCopied ? I18n.trFor("quickCapture", "Copied!") : I18n.trFor("quickCapture", "Copy")
+                    buttonHeight: 36
+                    horizontalPadding: 16
+                    backgroundColor: Theme.withAlpha(previewArea._previewCopied ? Theme.success : Theme.primary, 0.9)
+                    textColor: Theme.onPrimary
+                    onClicked: {
+                        if (root.previewEntry) {
+                            previewArea._previewCopied = true;
+                            DMSService.sendRequest("clipboard.copyFile", {
+                                "filePath": root.previewEntry.savedPath
+                            });
+                            ToastService.showInfo(I18n.trFor("quickCapture", "Copied to clipboard"));
+                        }
+                    }
+                }
+            }
+
+            DankActionButton {
+                anchors.top: parent.top
+                anchors.right: parent.right
+                anchors.margins: 8
+                iconName: "delete"
+                iconSize: 18
+                buttonSize: 32
+                radius: height / 2
+                backgroundColor: Theme.withAlpha(Theme.error, 0.25)
+                iconColor: Theme.error
+                tooltipText: I18n.trFor("quickCapture", "Delete")
+                onClicked: {
+                    if (root.previewEntry) {
+                        var delPath = root.previewEntry.savedPath;
+                        root.previewIndex = -1;
+                        root.removeEntry(delPath);
+                        Proc.runCommand("delete-preview", ["rm", "-f", "--", delPath], function () {
+                            root.refresh();
+                        });
+                    }
+                }
+            }
+        }
+    }
+
+    Shortcut {
+        sequence: "Left"
+        enabled: root.visible && root.entries.length > 0
+        onActivated: root.goPrevious()
+    }
+    Shortcut {
+        sequence: "A"
+        enabled: root.visible && root.entries.length > 0
+        onActivated: root.goPrevious()
+    }
+    Shortcut {
+        sequence: "Right"
+        enabled: root.visible && root.entries.length > 0
+        onActivated: root.goNext()
+    }
+    Shortcut {
+        sequence: "D"
+        enabled: root.visible && root.entries.length > 0
+        onActivated: root.goNext()
+    }
+    Shortcut {
+        sequence: "Escape"
+        enabled: root.visible
+        onActivated: root.closeRequested()
+    }
+}

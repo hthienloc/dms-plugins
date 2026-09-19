@@ -1,0 +1,20 @@
+{
+  " cups": "カップ",
+  " mins": "分",
+  "Add Cup (+1)": "カップを追加 (+1)",
+  "Contributing": "貢献する",
+  "Contributors": "貢献者",
+  "Daily Target (Cups)": "1日の目標（カップ）",
+  "Display helpful mouse gesture guides inside the popout.": "ポップアウト内に役立つマウス ジェスチャ ガイドを表示します。",
+  "Found a bug, want to translate, or have a feature request? Join us on GitHub.": "バグを見つけた場合、翻訳したい場合、または機能リクエストがありますか? GitHub に参加してください。",
+  "General Options": "一般的なオプション",
+  "GitHub": "GitHub",
+  "Help us improve": "改善にご協力ください",
+  "Loading contributors...": "寄稿者を読み込んでいます...",
+  "Reminder Interval": "リマインダー間隔",
+  "Reset Target": "ターゲットをリセット",
+  "Right-click the bar icon to quickly log +1 cup.": "バーアイコンを右クリックすると、+1 カップをすぐに記録できます。",
+  "Set your daily target number of water cups.": "毎日のウォーターカップの目標数を設定します。",
+  "Show Hints": "ヒントを表示する",
+  "Subtle icon shape shifting interval when hydration is needed.": "水分補給が必要なときに微妙にアイコンの形状が変化する間隔。"
+}

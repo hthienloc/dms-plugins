@@ -1,0 +1,11 @@
+module dms.common
+CopyBox 1.0 CopyBox.qml
+HintItem 1.0 HintItem.qml
+HintSection 1.0 HintSection.qml
+InfoText 1.0 InfoText.qml
+PluginAbout 1.0 PluginAbout.qml
+SectionTitle 1.0 SectionTitle.qml
+Separator 1.0 Separator.qml
+SettingsCard 1.0 SettingsCard.qml
+ToggleSettingPlus 1.0 ToggleSettingPlus.qml
+UsageGuide 1.0 UsageGuide.qml

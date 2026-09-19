@@ -1,0 +1,1142 @@
+{
+  "%1 Font": {
+    "%1 Font": "خط النص"
+  },
+  "%1 is not installed": {
+    "%1 is not installed": ""
+  },
+  "1 Connecting Line": {
+    "1 Connecting Line": "خط اتصال واحد"
+  },
+  "2 Connecting Lines": {
+    "2 Connecting Lines": "خطا اتصال"
+  },
+  "Action": {
+    "Action": "إجراء"
+  },
+  "Action on %1": {
+    "Action on %1": "الإجراء عند الضغط على %1"
+  },
+  "Adaptive": {
+    "Adaptive": "تكيفي"
+  },
+  "Add": {
+    "Add": "إضافة"
+  },
+  "Add Text Note": {
+    "Add Text Note": "إضافة ملاحظة نصية"
+  },
+  "Alignment": {
+    "Alignment": "المحاذاة الافتراضية"
+  },
+  "All Outputs": {
+    "All Outputs": "جميع المخرجات"
+  },
+  "Annotating": {
+    "Annotating": "التعليق التوضيحي"
+  },
+  "Annotation Tools": {
+    "Annotation Tools": "أدوات التعليق التوضيحي"
+  },
+  "Anonymous Copy": {
+    "Anonymous Copy": ""
+  },
+  "Arrow": {
+    "Arrow": "سهم متجه"
+  },
+  "Aspect Ratio": {
+    "Aspect Ratio": "نسبة عرض المحرر"
+  },
+  "Audio": {
+    "Audio": "الصوت"
+  },
+  "Audio & Overlay": {
+    "Audio & Overlay": "الصوت والتراكب"
+  },
+  "Audio Codec": {
+    "Audio Codec": "برنامج ترميز الصوت"
+  },
+  "Audio recording is disabled when using the %1 backend.": {
+    "Audio recording is disabled when using the %1 backend.": ""
+  },
+  "Auto": {
+    "Auto": "تلقائي"
+  },
+  "Auto Balance": {
+    "Auto Balance": "موازنة تلقائية"
+  },
+  "Auto-apply background defaults": {
+    "Auto-apply background defaults": "تطبيق إعدادات الخلفية الافتراضية تلقائياً"
+  },
+  "Auto-close the loop when ending near the start point.": {
+    "Auto-close the loop when ending near the start point.": "إغلاق الحلقة تلقائياً عند الانتهاء بالقرب من نقطة البداية."
+  },
+  "Auto-minimize": {
+    "Auto-minimize": "تصغير تلقائي"
+  },
+  "Auto-select a tool preset on hover, without releasing the mouse.": {
+    "Auto-select a tool preset on hover, without releasing the mouse.": "تحديد مسبق للأداة تلقائياً عند التمرير، دون تحرير الماوس."
+  },
+  "Auto-tiling": {
+    "Auto-tiling": "تجانب تلقائي"
+  },
+  "Automatically minimize the float window after a delay": {
+    "Automatically minimize the float window after a delay": "تصغير النافذة العائمة تلقائياً بعد تأخير"
+  },
+  "Automatically stack windows to avoid overlap": {
+    "Automatically stack windows to avoid overlap": "ترتيب النوافذ تلقائياً لتجنب التداخل"
+  },
+  "Back to Annotation": {
+    "Back to Annotation": "العودة إلى التعليق التوضيحي"
+  },
+  "Background": {
+    "Background": "الخلفية"
+  },
+  "Background Defaults": {
+    "Background Defaults": "إعدادات الخلفية الافتراضية"
+  },
+  "Background Images": {
+    "Background Images": "صور الخلفية"
+  },
+  "Background Mode": {
+    "Background Mode": "وضع الخلفية الافتراضي"
+  },
+  "Background Presets": {
+    "Background Presets": "إعدادات الخلفية المسبقة"
+  },
+  "Background image": {
+    "Background image": "صورة الخلفية"
+  },
+  "Balanced": {
+    "Balanced": "متوازن"
+  },
+  "Bar Interactions": {
+    "Bar Interactions": "تفاعلات الشريط"
+  },
+  "Blink Recording Dot": {
+    "Blink Recording Dot": "وميض نقطة التسجيل"
+  },
+  "Blur Background Image": {
+    "Blur Background Image": "تمويه صورة الخلفية"
+  },
+  "Bold": {
+    "Bold": "عريض"
+  },
+  "Border Color": {
+    "Border Color": "لون الحد"
+  },
+  "Border Width": {
+    "Border Width": "عرض الحدود"
+  },
+  "Both": {
+    "Both": "كلاهما"
+  },
+  "Bottom": {
+    "Bottom": "أسفل"
+  },
+  "Bottom Center": {
+    "Bottom Center": "أسفل المنتصف"
+  },
+  "Bottom Left": {
+    "Bottom Left": "أسفل اليسار"
+  },
+  "Bottom Right": {
+    "Bottom Right": "أسفل اليمين"
+  },
+  "Callout": {
+    "Callout": "وسيلة إيضاح"
+  },
+  "Callout Zoom": {
+    "Callout Zoom": "تكبير وسيلة الإيضاح"
+  },
+  "Cancel": {
+    "Cancel": "إلغاء"
+  },
+  "Capture": {
+    "Capture": "التقاط"
+  },
+  "Capture Actions": {
+    "Capture Actions": "إجراءات الالتقاط"
+  },
+  "Capture Options": {
+    "Capture Options": "خيارات الالتقاط"
+  },
+  "Capturing...": {
+    "Capturing...": "جاري الالتقاط..."
+  },
+  "Center": {
+    "Center": "المنتصف"
+  },
+  "Choose Color": {
+    "Choose Color": "اختيار اللون"
+  },
+  "Choose notifications shown after copy or save.": {
+    "Choose notifications shown after copy or save.": "اختر الإشعارات التي تظهر بعد النسخ أو الحفظ."
+  },
+  "Choose the editor shape for portrait or landscape screens.": {
+    "Choose the editor shape for portrait or landscape screens.": "اختر شكل المحرر للشاشات العمودية أو الأفقية."
+  },
+  "Choose whether the editor opens as a modal overlay or a movable floating window.": {
+    "Choose whether the editor opens as a modal overlay or a movable floating window.": "اختر ما إذا كان المحرر يفتح كطبقة تراكب مشروطة أو نافذة عائمة قابلة للتحريك."
+  },
+  "Choose which monitor to capture during full screen recording.": {
+    "Choose which monitor to capture during full screen recording.": "اختر الشاشة المراد التقاطها أثناء تسجيل ملء الشاشة."
+  },
+  "Clean Text Eraser": {
+    "Clean Text Eraser": "ممساحة النصوص النظيفة"
+  },
+  "Clear saved region selection before each capture": {
+    "Clear saved region selection before each capture": "مسح تحديد المنطقة المحفوظة قبل كل التقاط"
+  },
+  "Clipboard": {
+    "Clipboard": "الحافظة"
+  },
+  "Close": {
+    "Close": "اغلاق"
+  },
+  "Color": {
+    "Color": "اللون"
+  },
+  "Color %1 copied": {
+    "Color %1 copied": "تم نسخ اللون %1"
+  },
+  "Color Palette": {
+    "Color Palette": "لوحة الألوان"
+  },
+  "Color Picker": {
+    "Color Picker": "اداة اختيار الالوان"
+  },
+  "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": {
+    "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": "قم بتهيئة ما يصل إلى %1 إعدادات مسبقة لأدوات الوصول السريع. انقر بزر الماوس الأيمن أثناء الالتقاط لفتح القائمة الشعاعية."
+  },
+  "Conic Gradient": {
+    "Conic Gradient": "تدرج مخروطي"
+  },
+  "Container Format": {
+    "Container Format": "تنسيق الحاوية"
+  },
+  "Controls the preview pixel budget while editing. Lower it if you experience lag. Does not affect the final saved image quality.": {
+    "Controls the preview pixel budget while editing. Lower it if you experience lag. Does not affect the final saved image quality.": "يتحكم في ميزانية بكسل المعاينة أثناء التحرير. قللها إذا واجهت بطئًا. لا يؤثر ذلك على جودة الصورة النهائية المحفوظة."
+  },
+  "Converting recording to GIF...": {
+    "Converting recording to GIF...": "جاري تحويل التسجيل إلى GIF..."
+  },
+  "Copied Anonymously": {
+    "Copied Anonymously": "تم النسخ بشكل مجهول"
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": "تم النسخ إلى الحافظة"
+  },
+  "Copied!": {
+    "Copied!": "تم النسخ!"
+  },
+  "Copy": {
+    "Copy": "نسخ"
+  },
+  "Copy & Save": {
+    "Copy & Save": "نسخ وحفظ"
+  },
+  "Copy Color": {
+    "Copy Color": "نسخ اللون"
+  },
+  "Copy Current Palette": {
+    "Copy Current Palette": "نسخ اللوحة الحالية"
+  },
+  "Copy and customize this preset": {
+    "Copy and customize this preset": "نسخ وتخصيص هذا الإعداد المسبق"
+  },
+  "Copy vector / Paste / Duplicate": {
+    "Copy vector / Paste / Duplicate": "نسخ المتجه / لصق / تكرار"
+  },
+  "Corner Radius": {
+    "Corner Radius": "نصف قطر الزاوية"
+  },
+  "Could not crop image": {
+    "Could not crop image": ""
+  },
+  "Crop / Resize": {
+    "Crop / Resize": "قص / تغيير الحجم"
+  },
+  "Custom": {
+    "Custom": "خيار مخصص"
+  },
+  "Dark": {
+    "Dark": "داكن"
+  },
+  "Darken the image to improve foreground contrast": {
+    "Darken the image to improve foreground contrast": "تغميق الصورة لتحسين تباين المقدمة"
+  },
+  "Dashed Line": {
+    "Dashed Line": "خط متقطع"
+  },
+  "Default Microphone": {
+    "Default Microphone": "الميكروفون الافتراضي"
+  },
+  "Default Output": {
+    "Default Output": "المخرج الافتراضي"
+  },
+  "Default Watermark": {
+    "Default Watermark": "العلامة المائية الافتراضية"
+  },
+  "Delete": {
+    "Delete": "حذف"
+  },
+  "Dim Background Image": {
+    "Dim Background Image": "تعتيم صورة الخلفية"
+  },
+  "Dim Intensity": {
+    "Dim Intensity": "شدة التعتيم"
+  },
+  "Discard & Close": {
+    "Discard & Close": "تجاهل وإغلاق"
+  },
+  "Display": {
+    "Display": "العرض"
+  },
+  "Display Mode": {
+    "Display Mode": "وضع عرض المحرر"
+  },
+  "Done": {
+    "Done": "تم"
+  },
+  "Dotted Line": {
+    "Dotted Line": "خط منقط"
+  },
+  "Drag Image": {
+    "Drag Image": "سحب الصورة"
+  },
+  "Draw an outer ring using the stamp number color": {
+    "Draw an outer ring using the stamp number color": "ارسم حلقة خارجية باستخدام لون رقم الطابع"
+  },
+  "Drop image onto bar icon to annotate it": {
+    "Drop image onto bar icon to annotate it": "أفلت الصورة على أيقونة الشريط للتعليق عليها"
+  },
+  "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": {
+    "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": "يقبل كل أمر إجراء: %1 (فتح المحرر) أو %2 (نافذة تبقى في المقدمة دائماً)."
+  },
+  "Edge Spacing": {
+    "Edge Spacing": "تباعد الحواف"
+  },
+  "Edit": {
+    "Edit": "تعديل"
+  },
+  "Edit Color Palette": {
+    "Edit Color Palette": "تعديل لوحة الألوان"
+  },
+  "Edit Text Note": {
+    "Edit Text Note": "تعديل ملاحظة نصية"
+  },
+  "Editor": {
+    "Editor": "المحرر"
+  },
+  "Ellipse": {
+    "Ellipse": "شكل بيضاوي"
+  },
+  "Enable background automatically when opening the editor": {
+    "Enable background automatically when opening the editor": "تمكين الخلفية تلقائياً عند فتح المحرر"
+  },
+  "Eraser": {
+    "Eraser": "الممحاة"
+  },
+  "Failed to convert recording to GIF.": {
+    "Failed to convert recording to GIF.": "فشل تحويل التسجيل إلى GIF."
+  },
+  "Failed to copy screenshot": {
+    "Failed to copy screenshot": ""
+  },
+  "Failed to create float window.": {
+    "Failed to create float window.": ""
+  },
+  "Failed to download image.": {
+    "Failed to download image.": ""
+  },
+  "Failed to generate blurred background image": {
+    "Failed to generate blurred background image": "فشل توليد صورة الخلفية الضبابية"
+  },
+  "Failed to load image: %1": {
+    "Failed to load image: %1": ""
+  },
+  "Failed to save screenshot": {
+    "Failed to save screenshot": "فشل حفظ لقطة الشاشة"
+  },
+  "File": {
+    "File": "ملف"
+  },
+  "Filename Pattern": {
+    "Filename Pattern": ""
+  },
+  "Flip Horizontal": {
+    "Flip Horizontal": "انعكاس أفقي"
+  },
+  "Flip Vertical": {
+    "Flip Vertical": "انعكاس عمودي"
+  },
+  "Float": {
+    "Float": "عائم"
+  },
+  "Float Window": {
+    "Float Window": "نافذة عائمة"
+  },
+  "Float service not available.": {
+    "Float service not available.": ""
+  },
+  "Floating": {
+    "Floating": "عائم"
+  },
+  "Focused Screen": {
+    "Focused Screen": "الشاشة المركزة"
+  },
+  "Font Size": {
+    "Font Size": "حجم الخط"
+  },
+  "Font family used for number stamp labels": {
+    "Font family used for number stamp labels": "عائلة الخط المستخدمة لملصقات أرقام الطوابع"
+  },
+  "Format tokens: %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second), {zzz} (Ms)": {
+    "Format tokens: %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second), {zzz} (Ms)": "رموز التنسيق: %Y (السنة)، %y (السنة برقمين)، %m (الشهر)، %d (اليوم)، %H (الساعة)، %M (الدقيقة)، %S (الثانية)، {zzz} (جزء من الثانية)"
+  },
+  "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
+    "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "رموز التنسيق: {user} (اسم المستخدم)، \\n (سطر جديد)، %Y (السنة)، %y (السنة برقمين)، %m (الشهر)، %d (اليوم)، %H (الساعة)، %M (الدقيقة)، %S (الثانية)"
+  },
+  "Framerate": {
+    "Framerate": "معدل الإطارات"
+  },
+  "Free": {
+    "Free": "حر"
+  },
+  "Fullscreen": {
+    "Fullscreen": "ملء الشاشة"
+  },
+  "Fullscreen Target": {
+    "Fullscreen Target": "هدف ملء الشاشة"
+  },
+  "GIF Framerate": {
+    "GIF Framerate": "معدل إطارات GIF"
+  },
+  "GPU encoder failed. Retrying with %1...": {
+    "GPU encoder failed. Retrying with %1...": ""
+  },
+  "General Shortcuts": {
+    "General Shortcuts": "اختصارات عامة"
+  },
+  "Gradient Angle": {
+    "Gradient Angle": "زاوية التدرج الافتراضية"
+  },
+  "Gradient End": {
+    "Gradient End": "نهاية التدرج الافتراضية"
+  },
+  "Gradient Start": {
+    "Gradient Start": "بداية التدرج الافتراضية"
+  },
+  "Help": {
+    "Help": "مساعدة"
+  },
+  "Hide Annotations": {
+    "Hide Annotations": ""
+  },
+  "Hide Control Center": {
+    "Hide Control Center": "إخفاء مركز التحكم"
+  },
+  "Hide Control Center by Default": {
+    "Hide Control Center by Default": "إخفاء مركز التحكم افتراضياً"
+  },
+  "High": {
+    "High": "عالي"
+  },
+  "Highlighter": {
+    "Highlighter": "أداة التمييز"
+  },
+  "History": {
+    "History": "السجل"
+  },
+  "Hold %1 for Loupe": {
+    "Hold %1 for Loupe": ""
+  },
+  "Hover Trigger Delay": {
+    "Hover Trigger Delay": "تأخير تفعيل التحويم"
+  },
+  "IPC Commands": {
+    "IPC Commands": "أوامر IPC"
+  },
+  "Image": {
+    "Image": "صورة"
+  },
+  "Image + Text": {
+    "Image + Text": "صورة + نص"
+  },
+  "Image Background": {
+    "Image Background": "خلفية الصورة"
+  },
+  "Image Error": {
+    "Image Error": "خطأ في الصورة"
+  },
+  "Image Folder": {
+    "Image Folder": "مجلد صور الخلفية"
+  },
+  "Image Size": {
+    "Image Size": "حجم الصورة"
+  },
+  "Image is too small (%1×%2). Minimum: %3px": {
+    "Image is too small (%1×%2). Minimum: %3px": ""
+  },
+  "Image selected automatically when using Image Background mode": {
+    "Image selected automatically when using Image Background mode": "يتم اختيار الصورة تلقائياً عند استخدام وضع خلفية الصورة"
+  },
+  "Include Cursor": {
+    "Include Cursor": "تضمين المؤشر"
+  },
+  "Initial Width": {
+    "Initial Width": "العرض الأولي"
+  },
+  "Initial state for the Control Center toggle.": {
+    "Initial state for the Control Center toggle.": "الحالة الأولية لتبديل مركز التحكم."
+  },
+  "Inline": {
+    "Inline": ""
+  },
+  "Input Mode": {
+    "Input Mode": "وضع الإدخال"
+  },
+  "Insert Image": {
+    "Insert Image": "إدراج صورة"
+  },
+  "Interaction / Result": {
+    "Interaction / Result": "التفاعل / النتيجة"
+  },
+  "Invalid or corrupted image file.": {
+    "Invalid or corrupted image file.": ""
+  },
+  "Italic": {
+    "Italic": ""
+  },
+  "JPEG Quality": {
+    "JPEG Quality": "جودة JPEG"
+  },
+  "Key": {
+    "Key": "مفتاح"
+  },
+  "Landscape": {
+    "Landscape": "أفقي (عرضي)"
+  },
+  "Last Region": {
+    "Last Region": "آخر منطقة"
+  },
+  "Left": {
+    "Left": "اليسار"
+  },
+  "Left Center": {
+    "Left Center": "يسار المنتصف"
+  },
+  "Left Click": {
+    "Left Click": "النقر الأيسر"
+  },
+  "Light": {
+    "Light": "خفيف"
+  },
+  "Line": {
+    "Line": "خط"
+  },
+  "Linear Gradient": {
+    "Linear Gradient": "تدرج خطي"
+  },
+  "Live Preview": {
+    "Live Preview": "معاينة مباشرة"
+  },
+  "Low": {
+    "Low": "منخفض"
+  },
+  "Magnifier Loupe": {
+    "Magnifier Loupe": "عدسة مكبرة"
+  },
+  "Max Height (%1 = no limit)": {
+    "Max Height (%1 = no limit)": "الحد الأقصى للارتفاع (%1 = بلا حد)"
+  },
+  "Medium": {
+    "Medium": "متوسط"
+  },
+  "Menu Item Right Click": {
+    "Menu Item Right Click": "النقر بزر الفأرة الأيمن على عنصر القائمة"
+  },
+  "Merging audio tracks...": {
+    "Merging audio tracks...": "جاري دمج المسارات الصوتية..."
+  },
+  "Microphone": {
+    "Microphone": "الميكروفون"
+  },
+  "Microphone Device": {
+    "Microphone Device": "جهاز الميكروفون"
+  },
+  "Middle Click": {
+    "Middle Click": "النقر بزر الفأرة الأوسط"
+  },
+  "Middle Click Action": {
+    "Middle Click Action": "إجراء النقر بزر الفأرة الأوسط"
+  },
+  "Minimize Delay": {
+    "Minimize Delay": "تقليل التأخير"
+  },
+  "Modal": {
+    "Modal": "مشروط (Modal)"
+  },
+  "More Tools": {
+    "More Tools": "المزيد من الأدوات"
+  },
+  "Niri Binding Example": {
+    "Niri Binding Example": "مثال ربط Niri"
+  },
+  "No Background": {
+    "No Background": "إخفاء خلفية الشريط"
+  },
+  "No Image Specified": {
+    "No Image Specified": "لم يتم تحديد صورة"
+  },
+  "No QR code detected": {
+    "No QR code detected": ""
+  },
+  "No output available": {
+    "No output available": "لا يوجد مخرج متاح"
+  },
+  "No saved images yet": {
+    "No saved images yet": "لا توجد صور محفوظة بعد"
+  },
+  "No supported images found": {
+    "No supported images found": "لم يتم العثور على صور مدعومة"
+  },
+  "No text detected": {
+    "No text detected": ""
+  },
+  "No valid image file or URL found in drop.": {
+    "No valid image file or URL found in drop.": ""
+  },
+  "No valid image, URL, or path in clipboard.": {
+    "No valid image, URL, or path in clipboard.": ""
+  },
+  "None": {
+    "None": "لا شيء"
+  },
+  "Note: Starting tool mode overrides tool thickness and color defaults if the starting tool matches it.": {
+    "Note: Starting tool mode overrides tool thickness and color defaults if the starting tool matches it.": "ملاحظة: يؤدي بدء وضع الأداة إلى تجاوز إعدادات سمك الأداة واللون الافتراضية إذا كانت الأداة الأولية تطابقها."
+  },
+  "Notification": {
+    "Notification": "إشعار"
+  },
+  "Notifications": {
+    "Notifications": "الإشعارات"
+  },
+  "OCR": {
+    "OCR": "التعرف الضوئي على الحروف (OCR)"
+  },
+  "OCR Result": {
+    "OCR Result": "نتيجة التعرف الضوئي على الحروف"
+  },
+  "OCR failed": {
+    "OCR failed": ""
+  },
+  "Off": {
+    "Off": "إيقاف"
+  },
+  "Opacity": {
+    "Opacity": "الشفافية"
+  },
+  "Open": {
+    "Open": "فتح"
+  },
+  "Open %1 menu (Popout)": {
+    "Open %1 menu (Popout)": ""
+  },
+  "Open Image": {
+    "Open Image": ""
+  },
+  "Open folder": {
+    "Open folder": "فتح المجلد"
+  },
+  "Outline Variant": {
+    "Outline Variant": "تباين المخطط التفصيلي"
+  },
+  "Output Format": {
+    "Output Format": "تنسيق الإخراج"
+  },
+  "Output format applies only to disk saves. Clipboard copies are always PNG.": {
+    "Output format applies only to disk saves. Clipboard copies are always PNG.": "ينطبق تنسيق الإخراج على الحفظ على القرص فقط. نسخ الحافظة تكون دائماً بتنسيق PNG."
+  },
+  "Overlay Opacity": {
+    "Overlay Opacity": "عتامة التراكب"
+  },
+  "Padding": {
+    "Padding": "الهوامش"
+  },
+  "Palette Preset": {
+    "Palette Preset": "إعدادات اللوحة المسبقة"
+  },
+  "Pause": {
+    "Pause": "إيقاف مؤقت"
+  },
+  "Pause / Resume": {
+    "Pause / Resume": "إيقاف مؤقت / استئناف"
+  },
+  "Paused": {
+    "Paused": "متوقف"
+  },
+  "Pausing is not supported with %1.": {
+    "Pausing is not supported with %1.": ""
+  },
+  "Pen": {
+    "Pen": "قلم رسم حر"
+  },
+  "Pen Auto-Close": {
+    "Pen Auto-Close": "إغلاق القلم تلقائياً"
+  },
+  "Pick Color": {
+    "Pick Color": "اختيار اللون"
+  },
+  "Pick a palette preset or customize individual color slots.": {
+    "Pick a palette preset or customize individual color slots.": "اختر إعداداً مسبقاً للوحة أو قم بتخصيص فتحات الألوان الفردية."
+  },
+  "Pixelate": {
+    "Pixelate": "بكسلة"
+  },
+  "Pixelate Intensity": {
+    "Pixelate Intensity": "كثافة التنميط"
+  },
+  "Popup": {
+    "Popup": ""
+  },
+  "Portrait": {
+    "Portrait": "عمودي"
+  },
+  "Position": {
+    "Position": "الموقع"
+  },
+  "Post-Capture Notification": {
+    "Post-Capture Notification": "إشعار ما بعد الالتقاط"
+  },
+  "Preset": {
+    "Preset": ""
+  },
+  "Preset %1": {
+    "Preset %1": "إعداد مسبق %1"
+  },
+  "Presets": {
+    "Presets": ""
+  },
+  "Preview": {
+    "Preview": "معاينة"
+  },
+  "Preview Quality": {
+    "Preview Quality": ""
+  },
+  "Primary": {
+    "Primary": "رئيسي"
+  },
+  "Primary Screen": {
+    "Primary Screen": "الشاشة الأساسية"
+  },
+  "QR Result": {
+    "QR Result": "نتيجة رمز الاستجابة السريعة (QR)"
+  },
+  "QR scan failed": {
+    "QR scan failed": ""
+  },
+  "Quality": {
+    "Quality": "الجودة"
+  },
+  "Quick Capture": {
+    "Quick Capture": "التقاط سريع"
+  },
+  "Quick Capture Error": {
+    "Quick Capture Error": "خطأ في الالتقاط السريع"
+  },
+  "Radial Gradient": {
+    "Radial Gradient": "تدرج شعاعي"
+  },
+  "Radial Menu": {
+    "Radial Menu": "قائمة شعاعية"
+  },
+  "Ratio": {
+    "Ratio": "نسبة"
+  },
+  "Ready": {
+    "Ready": "مستعد"
+  },
+  "Recent Edits": {
+    "Recent Edits": "التعديلات الأخيرة"
+  },
+  "Record Microphone": {
+    "Record Microphone": "تسجيل الميكروفون"
+  },
+  "Record System Audio": {
+    "Record System Audio": "تسجيل صوت النظام"
+  },
+  "Recording": {
+    "Recording": "تسجيل"
+  },
+  "Recording Backend": {
+    "Recording Backend": ""
+  },
+  "Recording Folder": {
+    "Recording Folder": "مجلد التسجيل"
+  },
+  "Recording ended with error code %1.": {
+    "Recording ended with error code %1.": "انتهى التسجيل برمز خطأ %1."
+  },
+  "Recording...": {
+    "Recording...": "جارٍ التسجيل..."
+  },
+  "Rectangle": {
+    "Rectangle": "مستطيل"
+  },
+  "Redact": {
+    "Redact": "تنقيح"
+  },
+  "Redo": {
+    "Redo": "إعادة آخر إجراء تم التراجع عنه"
+  },
+  "Refresh": {
+    "Refresh": "إعادة تحميل"
+  },
+  "Region": {
+    "Region": "منطقة"
+  },
+  "Reset": {
+    "Reset": "إعادة تعيين"
+  },
+  "Reset Last Region": {
+    "Reset Last Region": "إعادة ضبط آخر منطقة"
+  },
+  "Resume": {
+    "Resume": "استئناف"
+  },
+  "Right": {
+    "Right": "يمين"
+  },
+  "Right Center": {
+    "Right Center": "يمين المنتصف"
+  },
+  "Right Click": {
+    "Right Click": "نقرة يمين"
+  },
+  "Right Click Action": {
+    "Right Click Action": "إجراء النقر بالزر الأيمن"
+  },
+  "Rotate Left": {
+    "Rotate Left": "تدوير لليسار"
+  },
+  "Rotate Right": {
+    "Rotate Right": "تدوير لليمين"
+  },
+  "Round Highlighter Tips": {
+    "Round Highlighter Tips": "رؤوس تمييز مستديرة"
+  },
+  "Round Rectangle Corners": {
+    "Round Rectangle Corners": "زوايا مستطيل مستديرة"
+  },
+  "Rounded Rectangle": {
+    "Rounded Rectangle": "مستطيل مستدير الزوايا"
+  },
+  "Save": {
+    "Save": "حفظ"
+  },
+  "Save As": {
+    "Save As": ""
+  },
+  "Save Screenshot As": {
+    "Save Screenshot As": "حفظ لقطة الشاشة باسم"
+  },
+  "Saved %1 (%2)": {
+    "Saved %1 (%2)": "تم الحفظ %1 (%2)"
+  },
+  "Scale Editor to Screenshot Size": {
+    "Scale Editor to Screenshot Size": "ملاءمة المحرر لحجم لقطة الشاشة"
+  },
+  "Scan QR": {
+    "Scan QR": "مسح رمز الاستجابة السريعة"
+  },
+  "Screen Recording": {
+    "Screen Recording": "مسجل الشاشة"
+  },
+  "Screen Recording Error": {
+    "Screen Recording Error": "خطأ في تسجيل الشاشة"
+  },
+  "Screen Recording Saved": {
+    "Screen Recording Saved": "تم حفظ تسجيل الشاشة"
+  },
+  "Screen recording timed out or was cancelled.": {
+    "Screen recording timed out or was cancelled.": "انتهت مهلة تسجيل الشاشة أو تم إلغاؤه."
+  },
+  "Screenshot": {
+    "Screenshot": ""
+  },
+  "Screenshot Copied": {
+    "Screenshot Copied": "تم نسخ لقطة الشاشة"
+  },
+  "Screenshot Folder": {
+    "Screenshot Folder": "مجلد لقطات الشاشة"
+  },
+  "Screenshot Saved": {
+    "Screenshot Saved": "تم حفظ لقطة الشاشة"
+  },
+  "Screenshot copied anonymously with randomized name and stripped metadata.": {
+    "Screenshot copied anonymously with randomized name and stripped metadata.": "تم نسخ لقطة الشاشة بشكل مجهول مع اسم عشوائي وإزالة البيانات الوصفية."
+  },
+  "Screenshot copied to clipboard and saved to %1": {
+    "Screenshot copied to clipboard and saved to %1": "تم نسخ لقطة الشاشة إلى الحافظة وحفظها في %1"
+  },
+  "Screenshot copied to clipboard but failed to save file: %1": {
+    "Screenshot copied to clipboard but failed to save file: %1": "تم نسخ لقطة الشاشة إلى الحافظة ولكن فشل حفظ الملف: %1"
+  },
+  "Screenshot copied with randomized name.": {
+    "Screenshot copied with randomized name.": "تم نسخ لقطة الشاشة باسم عشوائي."
+  },
+  "Screenshot failed (mode: %1).": {
+    "Screenshot failed (mode: %1).": "فشلت لقطة الشاشة (الوضع: %1)."
+  },
+  "Screenshot saved to %1": {
+    "Screenshot saved to %1": "تم حفظ لقطة الشاشة في %1"
+  },
+  "Scroll Interval": {
+    "Scroll Interval": "فاصل التمرير"
+  },
+  "Scroll capture: select a region, scroll content, then press %1 to finish.": {
+    "Scroll capture: select a region, scroll content, then press %1 to finish.": "التقاط التمرير: حدد منطقة، وقم بتمرير المحتوى، ثم اضغط %1 للإنهاء."
+  },
+  "Scrolling": {
+    "Scrolling": "شريطي"
+  },
+  "Select": {
+    "Select": "تحديد"
+  },
+  "Select Color Slots %1": {
+    "Select Color Slots %1": ""
+  },
+  "Select Image to Annotate": {
+    "Select Image to Annotate": "تحديد صورة للتعليق عليها"
+  },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": ""
+  },
+  "Selected Tool / Action": {
+    "Selected Tool / Action": "الأداة / الإجراء المحدد"
+  },
+  "Settings": {
+    "Settings": "الإعدادات"
+  },
+  "Shadow Strength": {
+    "Shadow Strength": "قوة الظل الافتراضية"
+  },
+  "Shapes": {
+    "Shapes": "الأشكال"
+  },
+  "Shortcut Action": {
+    "Shortcut Action": "إجراء الاختصار"
+  },
+  "Show Annotations": {
+    "Show Annotations": ""
+  },
+  "Show Control Center": {
+    "Show Control Center": "إظهار مركز التحكم"
+  },
+  "Show Keyboard Shortcut Hints": {
+    "Show Keyboard Shortcut Hints": "إظهار تلميحات اختصارات لوحة المفاتيح"
+  },
+  "Show Pill Border": {
+    "Show Pill Border": "إظهار حدود الحبة"
+  },
+  "Show Region Border": {
+    "Show Region Border": "إظهار حدود المنطقة"
+  },
+  "Show Screenshot Border": {
+    "Show Screenshot Border": "إظهار حدود لقطة الشاشة"
+  },
+  "Show Toolbar": {
+    "Show Toolbar": "إظهار شريط الأدوات"
+  },
+  "Show Toolbar Border": {
+    "Show Toolbar Border": "إظهار حدود شريط الأدوات"
+  },
+  "Show only the image on a transparent background": {
+    "Show only the image on a transparent background": "إظهار الصورة فقط على خلفية شفافة"
+  },
+  "Skip confirmation": {
+    "Skip confirmation": "تخطي التأكيد"
+  },
+  "Slot %1": {
+    "Slot %1": "الخانة %1"
+  },
+  "Soften image details so screenshot content stands out": {
+    "Soften image details so screenshot content stands out": "تنعيم تفاصيل الصورة ليبرز محتوى لقطة الشاشة"
+  },
+  "Solid Color": {
+    "Solid Color": "لون مصمت"
+  },
+  "Solid Fill": {
+    "Solid Fill": "تعبئة مصمتة"
+  },
+  "Solid Line": {
+    "Solid Line": "خط مستقيم"
+  },
+  "Spawn Position": {
+    "Spawn Position": "موقع الظهور"
+  },
+  "Specific Output": {
+    "Specific Output": "مخرج محدد"
+  },
+  "Spotlight": {
+    "Spotlight": "Spotlight"
+  },
+  "Spotlight Opacity": {
+    "Spotlight Opacity": "عتامة تسليط الضوء"
+  },
+  "Stamp": {
+    "Stamp": "ختم رقمي"
+  },
+  "Stamp Contrast Ring": {
+    "Stamp Contrast Ring": "حلقة تباين الختم"
+  },
+  "Stamp Size": {
+    "Stamp Size": "حجم الختم"
+  },
+  "Starting Preset": {
+    "Starting Preset": "الإعداد المسبق للبدء"
+  },
+  "Starting Tool": {
+    "Starting Tool": "أداة البدء"
+  },
+  "Starting Tool Mode": {
+    "Starting Tool Mode": "وضع أداة البدء"
+  },
+  "Stop & Save": {
+    "Stop & Save": "إيقاف وحفظ"
+  },
+  "Surface Container Highest": {
+    "Surface Container Highest": "حاوية السطح الأعلى"
+  },
+  "Switch to your custom preset": {
+    "Switch to your custom preset": "التبديل إلى إعدادك المسبق المخصص"
+  },
+  "System Audio Device": {
+    "System Audio Device": "جهاز صوت النظام"
+  },
+  "Target Output Name": {
+    "Target Output Name": "اسم المخرج المستهدف"
+  },
+  "Text": {
+    "Text": "نص"
+  },
+  "Text Background": {
+    "Text Background": "خلفية النص الافتراضية"
+  },
+  "Text Background Roundness": {
+    "Text Background Roundness": "استدارة خلفية النص"
+  },
+  "Text Size": {
+    "Text Size": "حجم النص"
+  },
+  "Thickness": {
+    "Thickness": "السُمك"
+  },
+  "This palette preset is read-only. Select one of the options below to switch to the Custom Palette and edit colors:": {
+    "This palette preset is read-only. Select one of the options below to switch to the Custom Palette and edit colors:": "إعداد اللوحة المسبق هذا للقراءة فقط. اختر أحد الخيارات أدناه للتبديل إلى اللوحة المخصصة وتحرير الألوان:"
+  },
+  "Toast": {
+    "Toast": "تنبيه منبثق"
+  },
+  "Toggle Annotations": {
+    "Toggle Annotations": ""
+  },
+  "Toggle Start / Stop": {
+    "Toggle Start / Stop": "تبديل البدء / الإيقاف"
+  },
+  "Toggle between %1 latest presets": {
+    "Toggle between %1 latest presets": ""
+  },
+  "Tool": {
+    "Tool": "أداة الإعداد المسبق"
+  },
+  "Tool Defaults": {
+    "Tool Defaults": "إعدادات الأداة الافتراضية"
+  },
+  "Toolbar": {
+    "Toolbar": "شريط الأدوات"
+  },
+  "Toolbar Palette": {
+    "Toolbar Palette": "لوحة شريط الأدوات"
+  },
+  "Toolbar Position": {
+    "Toolbar Position": "موقع شريط الأدوات"
+  },
+  "Tools": {
+    "Tools": "الأدوات"
+  },
+  "Top": {
+    "Top": "أعلى"
+  },
+  "Top Center": {
+    "Top Center": "أعلى المنتصف"
+  },
+  "Top Left": {
+    "Top Left": "أعلى اليسار"
+  },
+  "Top Right": {
+    "Top Right": "أعلى اليمين"
+  },
+  "Transparent": {
+    "Transparent": "شفاف"
+  },
+  "Transparent Background": {
+    "Transparent Background": "خلفية شفافة"
+  },
+  "Trigger on Hover": {
+    "Trigger on Hover": "التشغيل عند التحويم"
+  },
+  "Type note...": {
+    "Type note...": "اكتب ملاحظة..."
+  },
+  "Underline": {
+    "Underline": ""
+  },
+  "Undo": {
+    "Undo": "تراجع"
+  },
+  "Usage Guide": {
+    "Usage Guide": "دليل الاستخدام"
+  },
+  "Use Existing Custom": {
+    "Use Existing Custom": "استخدم مخصص موجود"
+  },
+  "Use Floating Editor": {
+    "Use Floating Editor": "استخدام المحرر العائم"
+  },
+  "Use Modal Editor": {
+    "Use Modal Editor": "استخدام المحرر النمطي"
+  },
+  "Variant": {
+    "Variant": ""
+  },
+  "Very High": {
+    "Very High": "عالية جداً"
+  },
+  "Video": {
+    "Video": ""
+  },
+  "Video Codec": {
+    "Video Codec": "ترميز الفيديو"
+  },
+  "Watermark": {
+    "Watermark": "علامة مائية"
+  },
+  "Watermark Type": {
+    "Watermark Type": "نوع العلامة المائية"
+  },
+  "WebP Quality": {
+    "WebP Quality": "جودة WebP"
+  },
+  "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": {
+    "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": "عند التفعيل، يتقلص المحرر ليتناسب مع المنطقة الملتقطة بدلاً من ملء %1% من الشاشة."
+  },
+  "Window": {
+    "Window": "نافذة"
+  },
+  "Window / Portal": {
+    "Window / Portal": "نافذة / بوابة"
+  }
+}
