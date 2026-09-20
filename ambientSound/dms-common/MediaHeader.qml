@@ -35,6 +35,7 @@ Row {
         id: volumeSlider
         value: root.volume * 100
         width: parent.width - 80
+        anchors.verticalCenter: parent.verticalCenter
         minimum: 0
         maximum: 100
         centerMinimum: false
