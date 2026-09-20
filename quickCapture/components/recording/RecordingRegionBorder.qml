@@ -15,7 +15,7 @@ Variants {
         screen: modelData
 
         visible: root.recordingController
-                 && root.recordingController.isRecording
+                 && (root.recordingController.isRecording || root.recordingController.recordingState === "starting")
                  && root.recordingController.showRegionBorder
                  && root.recordingController.activeRecordingMode === "region"
                  && root.recordingController.regionW > 0
@@ -36,15 +36,8 @@ Variants {
             bottom: true
         }
 
-        readonly property var screenLayout: {
-            if (root.recordingController && root.recordingController.screenLayouts) {
-                const s = root.recordingController.screenLayouts[modelData.name];
-                if (s) return s;
-            }
-            return { x: 0, y: 0 };
-        }
-        readonly property real screenOriginX: screenLayout.x || 0
-        readonly property real screenOriginY: screenLayout.y || 0
+        readonly property real screenOriginX: modelData?.x ?? modelData?.geometry?.x ?? 0
+        readonly property real screenOriginY: modelData?.y ?? modelData?.geometry?.y ?? 0
 
         Rectangle {
             id: borderRect
