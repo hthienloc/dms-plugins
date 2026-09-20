@@ -1,0 +1,41 @@
+name: Periodic Plugin Version Bump
+
+on:
+  schedule:
+    # Run at 00:00 UTC every Sunday
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bump versions
+        id: run_bump
+        run: |
+          python3 .github/bump_plugins.py
+          if [ -f .bump-summary.txt ]; then
+            echo "updated=true" >> $GITHUB_OUTPUT
+            echo "summary=$(cat .bump-summary.txt)" >> $GITHUB_OUTPUT
+            rm .bump-summary.txt
+          else
+            echo "updated=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and Push
+        if: steps.run_bump.outputs.updated == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -am "chore(release): bump plugin versions [${{ steps.run_bump.outputs.summary }}]"
+          git pull --rebase origin main
+          git push origin main
