@@ -51,6 +51,34 @@ PluginSettings {
             leftLabel: "5"
             rightLabel: "100"
         }
+
+        Separator {}
+
+        Item {
+            width: parent.width
+            height: 36
+
+            StyledText {
+                text: I18n.tr("Recent History")
+                color: Theme.surfaceText
+                font.pixelSize: Theme.fontSizeMedium
+                anchors.left: parent.left
+                anchors.verticalCenter: parent.verticalCenter
+            }
+
+            DankButton {
+                anchors.right: parent.right
+                anchors.verticalCenter: parent.verticalCenter
+                text: I18n.tr("Clear History")
+                iconName: "delete_sweep"
+                textColor: Theme.error
+                backgroundColor: Theme.withAlpha(Theme.error, 0.12)
+                onClicked: {
+                    PluginService.savePluginState(root.pluginId, "recent", []);
+                    ToastService.showInfo(I18n.tr("Recent emoji history cleared"));
+                }
+            }
+        }
     }
 
     SettingsCard {
@@ -142,6 +170,11 @@ PluginSettings {
             CopyBox {
                 label: I18n.tr("Close Picker")
                 text: "dms ipc call emojiPicker close"
+            }
+
+            CopyBox {
+                label: I18n.tr("Clear Recent History")
+                text: "dms ipc call emojiPicker clearRecent"
             }
         }
     }

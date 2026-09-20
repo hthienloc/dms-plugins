@@ -96,6 +96,7 @@ PluginComponent {
         const screen = CompositorService.getFocusedScreen();
         if (!screen)
             return "No active screen";
+        root.loadData();
         root.clearQueue();
         pickerModal.targetScreen = screen;
         root.query = "";
@@ -119,6 +120,12 @@ PluginComponent {
         next = next.slice(0, root.recentLimit);
         root.recentEmojis = next;
         PluginService.savePluginState(root.pluginId, "recent", next);
+    }
+
+    function clearRecentHistory() {
+        root.recentEmojis = [];
+        PluginService.savePluginState(root.pluginId, "recent", []);
+        root.selectedIndex = 0;
     }
 
     function clearQueue() {
@@ -218,6 +225,7 @@ PluginComponent {
 
         function open(): string { return root.openPicker(); }
         function close(): string { root.closePicker(); return "closed"; }
+        function clearRecent(): string { root.clearRecentHistory(); return "cleared"; }
         function toggle(): string {
             if (pickerModal.shouldBeVisible) {
                 root.closePicker();
@@ -393,11 +401,29 @@ PluginComponent {
                     }
                 }
 
-                StyledText {
+                RowLayout {
                     Layout.fillWidth: true
-                    text: root.visibleEntries.length > 0 ? (root.query ? I18n.tr("Search results") : (root.categoryNames[root.selectedCategory] || "")) : I18n.tr("No emoji found")
-                    color: Theme.surfaceVariantText
-                    font.pixelSize: Theme.fontSizeSmall
+                    Layout.preferredHeight: 26
+                    spacing: Theme.spacingS
+
+                    StyledText {
+                        Layout.fillWidth: true
+                        text: root.visibleEntries.length > 0 ? (root.query ? I18n.tr("Search results") : (root.categoryNames[root.selectedCategory] || "")) : I18n.tr("No emoji found")
+                        color: Theme.surfaceVariantText
+                        font.pixelSize: Theme.fontSizeSmall
+                        verticalAlignment: Text.AlignVCenter
+                    }
+
+                    DankButton {
+                        visible: !root.query && root.selectedCategory === "recent" && root.recentEmojis.length > 0
+                        text: I18n.tr("Clear All")
+                        iconName: "delete_sweep"
+                        buttonHeight: 26
+                        textColor: Theme.error
+                        backgroundColor: Theme.withAlpha(Theme.error, 0.12)
+                        tooltipText: I18n.tr("Clear Recent History")
+                        onClicked: root.clearRecentHistory()
+                    }
                 }
 
                 GridView {
