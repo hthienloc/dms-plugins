@@ -17,7 +17,8 @@ PluginComponent {
     pillRightClickAction: () => root.toggleMute()
 
     // Layout constants
-    readonly property real cellWidth: (root.popoutWidth - (root.gridSpacing * 3) - 16) / 4
+    // Popout container provides popoutWidth - PopoutMetrics.contentPadding * 2 (Theme.spacingL = 16px * 2 = 32px)
+    readonly property real cellWidth: Math.floor((root.popoutWidth - 32 - (root.gridSpacing * 3)) / 4)
     readonly property real cellHeight: 80
     readonly property real iconSize: 24
     readonly property real fontSize: 13
