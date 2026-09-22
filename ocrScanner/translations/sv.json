@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "<b>Vänsterklicka</b> på p-piller för att starta en ny skärmsökning."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "<b>Högerklicka</b> på p-piller för att göra en snabbskanning eller öppna resultat."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "Autokopiera till Urklipp"
+  },
+  "Behavior": {
+    "Behavior": "Beteende"
+  },
+  "Copy Text": {
+    "Copy Text": "Kopiera text"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "Släpp en bild eller webbadress på pillerikonen för att skanna den direkt"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "Om du släpper en <b>bild</b> på p-piller skannas den efter text."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "Installera de nödvändiga paketen:"
+  },
+  "Installation": {
+    "Installation": "Installation"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "Behåll resultatet när det är stängt"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "Ingen bild har skannats ännu"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "Erkännande språk"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "Högerklicka för att skanna urklipp, mittenklicka för att skanna skärmdump"
+  },
+  "Save Text": {
+    "Save Text": "Spara text"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "Skanna Urklipp"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "Skannad text kopieras automatiskt till <b>urklipp</b>."
+  },
+  "Select File": {
+    "Select File": "Välj Arkiv"
+  },
+  "Show Hints": {
+    "Show Hints": "Visa tips"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "Visa popout vid högerklick"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "Text kommer att dyka upp här..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Användningsguide"
+  }
+}

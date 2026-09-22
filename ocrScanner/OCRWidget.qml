@@ -363,11 +363,11 @@ PluginComponent {
 
                         HintItem {
                             icon: "file_download"
-                            text: I18n.tr("Drop an image or URL onto the pill icon to scan it instantly")
+                            text: I18n.trFor("ocrScanner", "Drop an image or URL onto the pill icon to scan it instantly")
                         }
                         HintItem {
                             icon: "mouse"
-                            text: I18n.tr("Right-click to scan clipboard, Middle-click to scan screenshot")
+                            text: I18n.trFor("ocrScanner", "Right-click to scan clipboard, Middle-click to scan screenshot")
                         }
                     }
 
@@ -398,7 +398,7 @@ PluginComponent {
 
                                     StyledText {
                                         anchors.centerIn: parent
-                                        text: I18n.tr("No image scanned yet")
+                                        text: I18n.trFor("ocrScanner", "No image scanned yet")
                                         color: Theme.outlineVariant
                                         visible: sourceImg.status !== Image.Ready && !pluginRoot.isScanning
                                         font.pixelSize: Theme.fontSizeMedium
@@ -427,7 +427,7 @@ PluginComponent {
                                 spacing: Theme.spacingS
 
                                 DankButton {
-                                    text: I18n.tr("Scan Clipboard")
+                                    text: I18n.trFor("ocrScanner", "Scan Clipboard")
                                     width: (parent.width - Theme.spacingS) / 2
                                     iconName: "content_paste"
                                     onClicked: pluginRoot.scanFromClipboard()
@@ -437,7 +437,7 @@ PluginComponent {
                                 }
 
                                 DankButton {
-                                    text: I18n.tr("Select File")
+                                    text: I18n.trFor("ocrScanner", "Select File")
                                     width: (parent.width - Theme.spacingS) / 2
                                     iconName: "image"
                                     onClicked: pluginRoot.selectFileAndScan()
@@ -478,7 +478,7 @@ PluginComponent {
                                         onTextChanged: pluginRoot.resultText = text
 
                                         Text {
-                                            text: I18n.tr("Text will appear here...")
+                                            text: I18n.trFor("ocrScanner", "Text will appear here...")
                                             color: Theme.outlineVariant
                                             visible: resultArea.text === ""
                                             font: resultArea.font
@@ -492,7 +492,7 @@ PluginComponent {
                                 spacing: Theme.spacingS
 
                                 DankButton {
-                                    text: I18n.tr("Copy Text")
+                                    text: I18n.trFor("ocrScanner", "Copy Text")
                                     width: (parent.width - Theme.spacingS) / 2
                                     iconName: "content_copy"
                                     onClicked: pluginRoot.copyToClipboard(pluginRoot.resultText)
@@ -502,7 +502,7 @@ PluginComponent {
                                 }
 
                                 DankButton {
-                                    text: I18n.tr("Save Text")
+                                    text: I18n.trFor("ocrScanner", "Save Text")
                                     width: (parent.width - Theme.spacingS) / 2
                                     iconName: "save"
                                     onClicked: pluginRoot.saveResultToFile()

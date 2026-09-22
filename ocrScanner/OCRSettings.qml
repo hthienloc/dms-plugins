@@ -75,7 +75,7 @@ PluginSettings {
     onPluginServiceChanged: loadSettings()
 
     SettingsCard {
-        SectionTitle { text: I18n.tr("Recognition Languages"); icon: "language" }
+        SectionTitle { text: I18n.trFor("ocrScanner", "Recognition Languages"); icon: "language" }
 
         Flow {
             id: langFlow
@@ -118,7 +118,7 @@ PluginSettings {
 
     SettingsCard {
         SectionTitle { 
-            text: I18n.tr("Behavior")
+            text: I18n.trFor("ocrScanner", "Behavior")
             icon: "settings" 
             showReset: autoCopy.isDirty || keepResults.isDirty || showPopout.isDirty || showHints.isDirty
             onResetClicked: {
@@ -132,7 +132,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: autoCopy
             settingKey: "autoCopy"
-            label: I18n.tr("Auto-copy to Clipboard")
+            label: I18n.trFor("ocrScanner", "Auto-copy to Clipboard")
             defaultValue: true
         }
 
@@ -141,7 +141,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: keepResults
             settingKey: "keepResults"
-            label: I18n.tr("Keep results when closed")
+            label: I18n.trFor("ocrScanner", "Keep results when closed")
             defaultValue: true
         }
 
@@ -150,7 +150,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showPopout
             settingKey: "showPopoutOnRightClick"
-            label: I18n.tr("Show popout on right-click")
+            label: I18n.trFor("ocrScanner", "Show popout on right-click")
             defaultValue: true
         }
 
@@ -159,16 +159,16 @@ PluginSettings {
         ToggleSettingPlus {
             id: showHints
             settingKey: "showHints"
-            label: I18n.tr("Show Hints")
+            label: I18n.trFor("ocrScanner", "Show Hints")
             defaultValue: true
         }
     }
 
     SettingsCard {
-        SectionTitle { text: I18n.tr("Installation"); icon: "download" }
+        SectionTitle { text: I18n.trFor("ocrScanner", "Installation"); icon: "download" }
 
         InfoText {
-            text: I18n.tr("Install the required packages:")
+            text: I18n.trFor("ocrScanner", "Install the required packages:")
         }
 
         Column {
@@ -194,7 +194,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle { 
             id: usageTitle
-            text: I18n.tr("Usage Guide")
+            text: I18n.trFor("ocrScanner", "Usage Guide")
             icon: "menu_book" 
             collapsible: true
             settingKey: "usageGuideExpanded"
@@ -203,10 +203,10 @@ PluginSettings {
         UsageGuide {
             expanded: usageTitle.isExpanded
             items: [
-                I18n.tr("<b>Left-click</b> the pill to start a new screen scan."),
-                I18n.tr("<b>Right-click</b> the pill to perform a quick scan or open results."),
-                I18n.tr("Dropping an <b>image</b> onto the pill will scan it for text."),
-                I18n.tr("Scanned text is automatically copied to the <b>clipboard</b>.")
+                I18n.trFor("ocrScanner", "<b>Left-click</b> the pill to start a new screen scan."),
+                I18n.trFor("ocrScanner", "<b>Right-click</b> the pill to perform a quick scan or open results."),
+                I18n.trFor("ocrScanner", "Dropping an <b>image</b> onto the pill will scan it for text."),
+                I18n.trFor("ocrScanner", "Scanned text is automatically copied to the <b>clipboard</b>.")
             ]
         }
     }

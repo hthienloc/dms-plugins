@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "<b>Maldekstre alklaku</b> la pilolon por komenci novan ekranan skanadon."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "<b>Dekstre alklaku</b> la pilolon por fari rapidan skanadon aŭ malfermi rezultojn."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "Aŭtome kopiu al Tondujo"
+  },
+  "Behavior": {
+    "Behavior": "Konduto"
+  },
+  "Copy Text": {
+    "Copy Text": "Kopiu Teksto"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "Faligi bildon aŭ URL sur la pilolan ikonon por skani ĝin tuj"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "Faligi <b>bildon</b> sur la pilolo skanos ĝin por teksto."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "Instalu la postulatajn pakaĵojn:"
+  },
+  "Installation": {
+    "Installation": "Instalado"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "Konservu rezultojn kiam fermite"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "Ankoraŭ neniu bildo skanita"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "Rekonaj Lingvoj"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "Dekstre alklaku por skani tondujo, Mezklaku por skani ekrankopion"
+  },
+  "Save Text": {
+    "Save Text": "Konservu Tekston"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "Skanu Clipboard"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "Skanita teksto estas aŭtomate kopiita al la <b>tondujo</b>."
+  },
+  "Select File": {
+    "Select File": "Elektu Dosiero"
+  },
+  "Show Hints": {
+    "Show Hints": "Montru Sugestojn"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "Montru ŝprucfenestron ĉe dekstra klako"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "Teksto aperos ĉi tie..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Gvidilo pri Uzado"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "<b>انقر بزر الماوس الأيسر</b> على القرص لبدء فحص جديد للشاشة."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "<b>انقر بزر الماوس الأيمن</b> على القرص لإجراء فحص سريع أو فتح النتائج."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "النسخ التلقائي إلى الحافظة"
+  },
+  "Behavior": {
+    "Behavior": "سلوك"
+  },
+  "Copy Text": {
+    "Copy Text": "نسخ النص"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "قم بإسقاط صورة أو عنوان URL على أيقونة الجهاز اللوحي لمسحها ضوئيًا على الفور"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "سيؤدي إسقاط <b>صورة</b> على الجهاز اللوحي إلى مسحها ضوئيًا بحثًا عن نص."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "تثبيت الحزم المطلوبة:"
+  },
+  "Installation": {
+    "Installation": "تثبيت"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "الاحتفاظ بالنتائج عند إغلاقها"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "لم يتم مسح أي صورة حتى الآن"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "لغات الاعتراف"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "انقر بزر الماوس الأيمن لمسح الحافظة، وانقر بزر الماوس الأوسط لمسح لقطة الشاشة"
+  },
+  "Save Text": {
+    "Save Text": "حفظ النص"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "مسح الحافظة"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "يتم نسخ النص الممسوح ضوئيًا تلقائيًا إلى <b>الحافظة</b>."
+  },
+  "Select File": {
+    "Select File": "حدد ملف"
+  },
+  "Show Hints": {
+    "Show Hints": "إظهار التلميحات"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "إظهار النافذة المنبثقة عند النقر بزر الماوس الأيمن"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "سيظهر النص هنا..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "دليل الاستخدام"
+  }
+}

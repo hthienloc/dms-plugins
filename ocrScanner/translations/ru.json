@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "<b>Щелкните левой кнопкой мыши</b> таблетку, чтобы начать новое сканирование экрана."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "<b>Нажмите правой кнопкой мыши</b> таблетку, чтобы выполнить быстрое сканирование или открыть результаты."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "Автоматическое копирование в буфер обмена"
+  },
+  "Behavior": {
+    "Behavior": "Поведение"
+  },
+  "Copy Text": {
+    "Copy Text": "Копировать текст"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "Перетащите изображение или URL-адрес на значок таблетки, чтобы мгновенно отсканировать его."
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "Поместив <b>изображение</b> на планшет, вы просканируете его на наличие текста."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "Установите необходимые пакеты:"
+  },
+  "Installation": {
+    "Installation": "Установка"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "Сохранять результаты при закрытии"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "Ни одно изображение еще не отсканировано"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "Языки распознавания"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "Щелкните правой кнопкой мыши, чтобы отсканировать буфер обмена, щелкните средней кнопкой мыши, чтобы отсканировать снимок экрана."
+  },
+  "Save Text": {
+    "Save Text": "Сохранить текст"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "Сканировать буфер обмена"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "Отсканированный текст автоматически копируется в <b>буфер обмена</b>."
+  },
+  "Select File": {
+    "Select File": "Выберите файл"
+  },
+  "Show Hints": {
+    "Show Hints": "Показать подсказки"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "Показывать всплывающее окно при щелчке правой кнопкой мыши"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "Здесь появится текст..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Руководство по использованию"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "برای شروع یک اسکن صفحه جدید، روی قرص <b>کلیک چپ</b> کنید."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "برای انجام اسکن سریع یا باز کردن نتایج، روی قرص <b>راست کلیک کنید</b>."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "کپی خودکار در کلیپ بورد"
+  },
+  "Behavior": {
+    "Behavior": "رفتار"
+  },
+  "Copy Text": {
+    "Copy Text": "متن را کپی کنید"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "یک تصویر یا URL را روی نماد قرص رها کنید تا فوراً آن را اسکن کنید"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "انداختن یک <b>تصویر</b> روی قرص، آن را برای متن اسکن می کند."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "بسته های مورد نیاز را نصب کنید:"
+  },
+  "Installation": {
+    "Installation": "نصب و راه اندازی"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "نتایج را در صورت بسته نگه دارید"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "هنوز تصویری اسکن نشده است"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "زبان های تشخیص"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "برای اسکن کلیپ بورد کلیک راست کنید، برای اسکن اسکرین شات، وسط کلیک کنید"
+  },
+  "Save Text": {
+    "Save Text": "ذخیره متن"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "اسکن کلیپ بورد"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "متن اسکن شده به طور خودکار در <b>بریده‌دان</b> کپی می‌شود."
+  },
+  "Select File": {
+    "Select File": "فایل را انتخاب کنید"
+  },
+  "Show Hints": {
+    "Show Hints": "نمایش نکات"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "نمایش پنجره بازشو با کلیک راست"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "متن در اینجا ظاهر می شود ..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "راهنمای استفاده"
+  }
+}

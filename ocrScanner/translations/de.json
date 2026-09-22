@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "<b>Klicken Sie mit der linken Maustaste</b> auf das Tablet, um einen neuen Bildschirmscan zu starten."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "<b>Klicken Sie mit der rechten Maustaste</b> auf die Pille, um einen Schnellscan durchzuführen oder Ergebnisse zu öffnen."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "Automatisch in die Zwischenablage kopieren"
+  },
+  "Behavior": {
+    "Behavior": "Verhalten"
+  },
+  "Copy Text": {
+    "Copy Text": "Text kopieren"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "Legen Sie ein Bild oder eine URL auf das Pillensymbol, um es sofort zu scannen"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "Wenn Sie ein <b>Bild</b> auf das Tablet legen, wird es nach Text durchsucht."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "Installieren Sie die erforderlichen Pakete:"
+  },
+  "Installation": {
+    "Installation": "Installation"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "Behalten Sie die Ergebnisse im geschlossenen Zustand bei"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "Noch kein Bild gescannt"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "Erkennungssprachen"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "Klicken Sie mit der rechten Maustaste, um die Zwischenablage zu scannen, und klicken Sie mit der mittleren Maustaste, um den Screenshot zu scannen"
+  },
+  "Save Text": {
+    "Save Text": "Text speichern"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "Zwischenablage scannen"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "Gescannter Text wird automatisch in die <b>Zwischenablage</b> kopiert."
+  },
+  "Select File": {
+    "Select File": "Wählen Sie Datei"
+  },
+  "Show Hints": {
+    "Show Hints": "Hinweise anzeigen"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "Popout bei Rechtsklick anzeigen"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "Hier erscheint Text..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Nutzungsleitfaden"
+  }
+}

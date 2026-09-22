@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "<b>Kattintson a bal gombbal</b> a tablettára az új képernyő-ellenőrzés elindításához."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "<b>Kattintson a jobb gombbal</b> a tablettára a gyors vizsgálat végrehajtásához vagy az eredmények megnyitásához."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "Automatikus másolás a vágólapra"
+  },
+  "Behavior": {
+    "Behavior": "Viselkedés"
+  },
+  "Copy Text": {
+    "Copy Text": "Szöveg másolása"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "Azonnali beolvasáshoz húzzon egy képet vagy URL-t a pirula ikonra"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "Ha egy <b>képet</b> a tablettára ejt, a rendszer beolvassa a szöveget."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "Telepítse a szükséges csomagokat:"
+  },
+  "Installation": {
+    "Installation": "Telepítés"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "Zárva tartsa meg az eredményeket"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "Még nincs beolvasott kép"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "Felismerési nyelvek"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "Kattintson a jobb gombbal a vágólap beolvasásához, a középső gombbal pedig a képernyőkép beolvasásához"
+  },
+  "Save Text": {
+    "Save Text": "Szöveg mentése"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "Vágólap beolvasása"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "A beolvasott szöveg automatikusan a <b>vágólapra</b> másolódik."
+  },
+  "Select File": {
+    "Select File": "Válassza a Fájl lehetőséget"
+  },
+  "Show Hints": {
+    "Show Hints": "Tippek megjelenítése"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "Előugró ablak megjelenítése jobb gombbal"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "A szöveg itt fog megjelenni..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Használati útmutató"
+  }
+}

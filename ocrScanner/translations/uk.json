@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "<b>Клацніть лівою кнопкою миші</b> таблетку, щоб почати нове сканування екрана."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "<b>Натисніть правою кнопкою миші</b> таблетку, щоб виконати швидке сканування або відкрити результати."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "Автоматичне копіювання в буфер обміну"
+  },
+  "Behavior": {
+    "Behavior": "Поведінка"
+  },
+  "Copy Text": {
+    "Copy Text": "Копіювати текст"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "Перемістіть зображення або URL-адресу на значок таблетки, щоб миттєво відсканувати його"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "Якщо опустити <b>зображення</b> на таблетку, її буде скановано на наявність тексту."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "Встановіть необхідні пакети:"
+  },
+  "Installation": {
+    "Installation": "монтаж"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "Зберігати результати в закритому стані"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "Зображення ще не відскановано"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "Мови розпізнавання"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "Клацніть правою кнопкою миші, щоб сканувати буфер обміну, клацніть середньою кнопкою миші, щоб сканувати знімок екрана"
+  },
+  "Save Text": {
+    "Save Text": "Зберегти текст"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "Сканувати буфер обміну"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "Відсканований текст автоматично копіюється в <b>буфер обміну</b>."
+  },
+  "Select File": {
+    "Select File": "Виберіть Файл"
+  },
+  "Show Hints": {
+    "Show Hints": "Показати підказки"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "Показувати спливаюче вікно при натисканні правою кнопкою миші"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "Тут з'явиться текст..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Інструкція з використання"
+  }
+}

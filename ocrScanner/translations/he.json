@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "<b>לחץ לחיצה ימנית</b> על הגלולה כדי להתחיל סריקת מסך חדשה."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "<b>לחץ לחיצה ימנית</b> על הגלולה כדי לבצע סריקה מהירה או לפתוח תוצאות."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "העתק אוטומטי ללוח"
+  },
+  "Behavior": {
+    "Behavior": "הִתְנַהֲגוּת"
+  },
+  "Copy Text": {
+    "Copy Text": "העתק טקסט"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "שחרר תמונה או כתובת אתר על סמל הגלולה כדי לסרוק אותה באופן מיידי"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "הטלת <b>תמונה</b> על הגלולה תסרוק אותה לאיתור טקסט."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "התקן את החבילות הנדרשות:"
+  },
+  "Installation": {
+    "Installation": "הַתקָנָה"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "שמור את התוצאות כשהן סגורות"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "עדיין לא נסרקה תמונה"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "שפות זיהוי"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "לחץ לחיצה ימנית כדי לסרוק את הלוח, לחץ לחיצה אמצעית כדי לסרוק צילום מסך"
+  },
+  "Save Text": {
+    "Save Text": "שמור טקסט"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "סרוק לוח"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "טקסט סרוק מועתק אוטומטית ל<b>לוח</b>."
+  },
+  "Select File": {
+    "Select File": "בחר קובץ"
+  },
+  "Show Hints": {
+    "Show Hints": "הצג רמזים"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "הצג חלון קופץ בלחיצה ימנית"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "טקסט יופיע כאן..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "מדריך שימוש"
+  }
+}

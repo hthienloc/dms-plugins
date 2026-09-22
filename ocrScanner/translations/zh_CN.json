@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "<b>左键单击</b>药丸开始新的屏幕扫描。"
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "<b>右键单击</b>药丸以执行快速扫描或打开结果。"
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "自动复制到剪贴板"
+  },
+  "Behavior": {
+    "Behavior": "行为"
+  },
+  "Copy Text": {
+    "Copy Text": "复制文本"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "将图像或 URL 拖放到药丸图标上即可立即扫描"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "将<b>图像</b>放到药丸上即可扫描其中的文本。"
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "安装所需的软件包："
+  },
+  "Installation": {
+    "Installation": "安装"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "关闭时保留结果"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "尚未扫描图像"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "识别语言"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "右键扫描剪贴板，中键扫描截图"
+  },
+  "Save Text": {
+    "Save Text": "保存文本"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "扫描剪贴板"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "扫描的文本会自动复制到<b>剪贴板</b>。"
+  },
+  "Select File": {
+    "Select File": "选择文件"
+  },
+  "Show Hints": {
+    "Show Hints": "显示提示"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "右键单击时显示弹出窗口"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "文字将出现在此处..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "使用指南"
+  }
+}

@@ -52,3 +52,33 @@ GPL-3.0
 - [ ] **Batch Processing**: Support selecting multiple images for sequential OCR with a merged text output.
 - [ ] **Advanced Tesseract Options**: Expose Page Segmentation Method (PSM) and OCR Engine Mode (OEM) settings in the UI for specialized documents.
 - [ ] **Image Preprocessing**: Improve recognition accuracy by using ImageMagick to upscale small text, normalize contrast, and reduce noise before scanning.
+
+
+## Translations
+
+<!-- TRANSLATIONS_TABLE_START -->
+| Language | Locale | Progress | Coverage | Status |
+| :--- | :--- | :---: | :---: | :---: |
+| Arabic | `ar` | 21/21 | 100.0% | 🟢 Complete |
+| Bulgarian | `bg` | 21/21 | 100.0% | 🟢 Complete |
+| German | `de` | 21/21 | 100.0% | 🟢 Complete |
+| Esperanto | `eo` | 21/21 | 100.0% | 🟢 Complete |
+| Spanish | `es` | 21/21 | 100.0% | 🟢 Complete |
+| Persian | `fa` | 21/21 | 100.0% | 🟢 Complete |
+| French | `fr` | 21/21 | 100.0% | 🟢 Complete |
+| Hebrew | `he` | 21/21 | 100.0% | 🟢 Complete |
+| Hungarian | `hu` | 21/21 | 100.0% | 🟢 Complete |
+| Italian | `it` | 21/21 | 100.0% | 🟢 Complete |
+| Japanese | `ja` | 21/21 | 100.0% | 🟢 Complete |
+| Korean | `ko` | 21/21 | 100.0% | 🟢 Complete |
+| Dutch | `nl` | 21/21 | 100.0% | 🟢 Complete |
+| Polish | `pl` | 21/21 | 100.0% | 🟢 Complete |
+| Portuguese | `pt` | 21/21 | 100.0% | 🟢 Complete |
+| Russian | `ru` | 21/21 | 100.0% | 🟢 Complete |
+| Swedish | `sv` | 21/21 | 100.0% | 🟢 Complete |
+| Turkish | `tr` | 21/21 | 100.0% | 🟢 Complete |
+| Ukrainian | `uk` | 21/21 | 100.0% | 🟢 Complete |
+| Vietnamese | `vi` | 21/21 | 100.0% | 🟢 Complete |
+| Chinese (Simplified) | `zh_CN` | 21/21 | 100.0% | 🟢 Complete |
+| Chinese (Traditional) | `zh_TW` | 21/21 | 100.0% | 🟢 Complete |
+<!-- TRANSLATIONS_TABLE_END -->

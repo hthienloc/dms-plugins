@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "<b>Klik met de linkermuisknop</b> op de pil om een ​​nieuwe schermscan te starten."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "<b>Klik met de rechtermuisknop</b> op de pil om een ​​snelle scan uit te voeren of de resultaten te openen."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "Automatisch kopiëren naar klembord"
+  },
+  "Behavior": {
+    "Behavior": "Gedrag"
+  },
+  "Copy Text": {
+    "Copy Text": "Kopieer tekst"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "Plaats een afbeelding of URL op het pilpictogram om deze direct te scannen"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "Als u een <b>afbeelding</b> op de pil plaatst, wordt deze gescand op tekst."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "Installeer de vereiste pakketten:"
+  },
+  "Installation": {
+    "Installation": "Installatie"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "Resultaten behouden wanneer gesloten"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "Nog geen afbeelding gescand"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "Herkenning Talen"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "Klik met de rechtermuisknop om het klembord te scannen, klik met de middelste muisknop om de schermafbeelding te scannen"
+  },
+  "Save Text": {
+    "Save Text": "Tekst opslaan"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "Klembord scannen"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "Gescande tekst wordt automatisch gekopieerd naar het <b>klembord</b>."
+  },
+  "Select File": {
+    "Select File": "Selecteer Bestand"
+  },
+  "Show Hints": {
+    "Show Hints": "Toon tips"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "Pop-out weergeven bij rechtermuisknop"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "Hier verschijnt de tekst..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Gebruiksgids"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "<b>Щракнете с левия бутон</b> върху хапчето, за да започнете ново сканиране на екрана."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "<b>Щракнете с десния бутон</b> върху хапчето, за да извършите бързо сканиране или да отворите резултатите."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "Автоматично копиране в клипборда"
+  },
+  "Behavior": {
+    "Behavior": "Поведение"
+  },
+  "Copy Text": {
+    "Copy Text": "Копиране на текст"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "Пуснете изображение или URL върху иконата на хапче, за да го сканирате незабавно"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "Пускането на <b>изображение</b> върху хапчето ще го сканира за текст."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "Инсталирайте необходимите пакети:"
+  },
+  "Installation": {
+    "Installation": "Монтаж"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "Запазете резултатите, когато са затворени"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "Все още няма сканирано изображение"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "Езици за разпознаване"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "Щракнете с десния бутон, за да сканирате клипборда, щракнете със средния бутон, за да сканирате екранна снимка"
+  },
+  "Save Text": {
+    "Save Text": "Запазване на текст"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "Сканиране на клипборда"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "Сканираният текст автоматично се копира в <b>клипборда</b>."
+  },
+  "Select File": {
+    "Select File": "Изберете Файл"
+  },
+  "Show Hints": {
+    "Show Hints": "Показване на съвети"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "Показване на изскачащ прозорец при щракване с десен бутон"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "Тук ще се появи текст..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Ръководство за употреба"
+  }
+}

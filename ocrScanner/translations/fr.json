@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "<b>Cliquez avec le bouton gauche</b> sur la pilule pour lancer une nouvelle analyse d'écran."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "<b>Cliquez avec le bouton droit</b> sur la pilule pour effectuer une analyse rapide ou ouvrir les résultats."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "Copie automatique dans le Presse-papiers"
+  },
+  "Behavior": {
+    "Behavior": "Comportement"
+  },
+  "Copy Text": {
+    "Copy Text": "Copier le texte"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "Déposez une image ou une URL sur l'icône de la pilule pour la scanner instantanément"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "Déposer une <b>image</b> sur la pilule la scannera à la recherche de texte."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "Installez les packages requis :"
+  },
+  "Installation": {
+    "Installation": "Installation"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "Conserver les résultats une fois fermé"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "Aucune image numérisée pour l'instant"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "Langues de reconnaissance"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "Cliquez avec le bouton droit pour analyser le presse-papiers, cliquez avec le bouton central pour analyser la capture d'écran."
+  },
+  "Save Text": {
+    "Save Text": "Enregistrer le texte"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "Scanner le Presse-papiers"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "Le texte numérisé est automatiquement copié dans le <b>presse-papiers</b>."
+  },
+  "Select File": {
+    "Select File": "Sélectionnez un fichier"
+  },
+  "Show Hints": {
+    "Show Hints": "Afficher les conseils"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "Afficher la fenêtre contextuelle lors d'un clic droit"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "Le texte apparaîtra ici..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Guide d'utilisation"
+  }
+}

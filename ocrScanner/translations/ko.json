@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "새로운 화면 스캔을 시작하려면 알약을 <b>왼쪽 클릭</b>하세요."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "빠른 검사를 수행하거나 결과를 열려면 알약을 <b>마우스 오른쪽 버튼으로 클릭</b>하세요."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "클립보드에 자동 복사"
+  },
+  "Behavior": {
+    "Behavior": "행동"
+  },
+  "Copy Text": {
+    "Copy Text": "텍스트 복사"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "이미지나 URL을 알약 아이콘에 놓아 즉시 스캔하세요."
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "알약에 <b>이미지</b>를 놓으면 텍스트가 검색됩니다."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "필수 패키지를 설치합니다:"
+  },
+  "Installation": {
+    "Installation": "설치"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "종료 시 결과 유지"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "아직 스캔한 이미지가 없습니다."
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "인식 언어"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "클립보드를 스캔하려면 마우스 오른쪽 버튼을 클릭하고, 스크린샷을 스캔하려면 가운데 버튼을 클릭하세요."
+  },
+  "Save Text": {
+    "Save Text": "텍스트 저장"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "클립보드 스캔"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "스캔한 텍스트는 <b>클립보드</b>에 자동으로 복사됩니다."
+  },
+  "Select File": {
+    "Select File": "파일 선택"
+  },
+  "Show Hints": {
+    "Show Hints": "힌트 표시"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "마우스 오른쪽 버튼 클릭 시 팝아웃 표시"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "여기에 텍스트가 표시됩니다..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "이용안내"
+  }
+}

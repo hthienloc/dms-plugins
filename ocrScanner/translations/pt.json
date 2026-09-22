@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "<b>Clique com o botão esquerdo</b> na pílula para iniciar uma nova varredura de tela."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "<b>Clique com o botão direito</b> na pílula para realizar uma verificação rápida ou abrir os resultados."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "Copiar automaticamente para a área de transferência"
+  },
+  "Behavior": {
+    "Behavior": "Comportamento"
+  },
+  "Copy Text": {
+    "Copy Text": "Copiar texto"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "Solte uma imagem ou URL no ícone da pílula para digitalizá-la instantaneamente"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "Soltar uma <b>imagem</b> na pílula irá digitalizá-la em busca de texto."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "Instale os pacotes necessários:"
+  },
+  "Installation": {
+    "Installation": "Instalação"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "Manter os resultados quando fechado"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "Nenhuma imagem digitalizada ainda"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "Idiomas de reconhecimento"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "Clique com o botão direito para digitalizar a área de transferência, clique com o botão do meio para digitalizar a captura de tela"
+  },
+  "Save Text": {
+    "Save Text": "Salvar texto"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "Digitalizar área de transferência"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "O texto digitalizado é copiado automaticamente para a <b>área de transferência</b>."
+  },
+  "Select File": {
+    "Select File": "Selecione o arquivo"
+  },
+  "Show Hints": {
+    "Show Hints": "Mostrar dicas"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "Mostrar pop-out ao clicar com o botão direito"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "O texto aparecerá aqui..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Guia de uso"
+  }
+}

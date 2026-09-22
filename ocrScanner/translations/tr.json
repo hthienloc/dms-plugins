@@ -1,0 +1,65 @@
+{
+  "<b>Left-click</b> the pill to start a new screen scan.": {
+    "<b>Left-click</b> the pill to start a new screen scan.": "Yeni bir ekran taraması başlatmak için hapa <b>sol tıklayın</b>."
+  },
+  "<b>Right-click</b> the pill to perform a quick scan or open results.": {
+    "<b>Right-click</b> the pill to perform a quick scan or open results.": "Hızlı bir tarama gerçekleştirmek veya sonuçları açmak için hapa <b>sağ tıklayın</b>."
+  },
+  "Auto-copy to Clipboard": {
+    "Auto-copy to Clipboard": "Panoya otomatik kopyala"
+  },
+  "Behavior": {
+    "Behavior": "Davranış"
+  },
+  "Copy Text": {
+    "Copy Text": "Metni Kopyala"
+  },
+  "Drop an image or URL onto the pill icon to scan it instantly": {
+    "Drop an image or URL onto the pill icon to scan it instantly": "Anında taramak için hap simgesinin üzerine bir resim veya URL bırakın"
+  },
+  "Dropping an <b>image</b> onto the pill will scan it for text.": {
+    "Dropping an <b>image</b> onto the pill will scan it for text.": "Hapın üzerine bir <b>görüntü</b> bırakmak, onu metin açısından tarayacaktır."
+  },
+  "Install the required packages:": {
+    "Install the required packages:": "Gerekli paketleri yükleyin:"
+  },
+  "Installation": {
+    "Installation": "Kurulum"
+  },
+  "Keep results when closed": {
+    "Keep results when closed": "Sonuçları kapalıyken tut"
+  },
+  "No image scanned yet": {
+    "No image scanned yet": "Henüz taranan resim yok"
+  },
+  "Recognition Languages": {
+    "Recognition Languages": "Tanıma Dilleri"
+  },
+  "Right-click to scan clipboard, Middle-click to scan screenshot": {
+    "Right-click to scan clipboard, Middle-click to scan screenshot": "Panoyu taramak için sağ tıklayın, ekran görüntüsünü taramak için orta tıklayın"
+  },
+  "Save Text": {
+    "Save Text": "Metni Kaydet"
+  },
+  "Scan Clipboard": {
+    "Scan Clipboard": "Panoyu Tara"
+  },
+  "Scanned text is automatically copied to the <b>clipboard</b>.": {
+    "Scanned text is automatically copied to the <b>clipboard</b>.": "Taranan metin otomatik olarak <b>panoya</b> kopyalanır."
+  },
+  "Select File": {
+    "Select File": "Dosya Seç"
+  },
+  "Show Hints": {
+    "Show Hints": "İpuçlarını Göster"
+  },
+  "Show popout on right-click": {
+    "Show popout on right-click": "Sağ tıklamayla açılan pencereyi göster"
+  },
+  "Text will appear here...": {
+    "Text will appear here...": "Metin burada görünecek..."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Kullanım Kılavuzu"
+  }
+}
