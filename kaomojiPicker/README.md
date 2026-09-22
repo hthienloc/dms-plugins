@@ -44,3 +44,32 @@ MIT
 - [ ] **Binary Storage/Indexing:** Migrate from large JSON to a faster indexed format (SQLite or similar) for near-instant search response.
 - [x] **Favorites & Pinning:** Support for permanent favorites that stay at the top regardless of usage frequency.
 - [x] **Direct Injection:** Option to paste the selected kaomoji directly into the active window (utilizes `wtype` / `ydotool` / `xdotool`).
+
+## Translations
+
+<!-- TRANSLATIONS_TABLE_START -->
+| Language | Locale | Progress | Coverage | Status |
+| :--- | :--- | :---: | :---: | :---: |
+| Arabic | `ar` | 19/19 | 100.0% | 🟢 Complete |
+| Bulgarian | `bg` | 19/19 | 100.0% | 🟢 Complete |
+| German | `de` | 19/19 | 100.0% | 🟢 Complete |
+| Esperanto | `eo` | 19/19 | 100.0% | 🟢 Complete |
+| Spanish | `es` | 19/19 | 100.0% | 🟢 Complete |
+| Persian | `fa` | 19/19 | 100.0% | 🟢 Complete |
+| French | `fr` | 19/19 | 100.0% | 🟢 Complete |
+| Hebrew | `he` | 19/19 | 100.0% | 🟢 Complete |
+| Hungarian | `hu` | 19/19 | 100.0% | 🟢 Complete |
+| Italian | `it` | 19/19 | 100.0% | 🟢 Complete |
+| Japanese | `ja` | 19/19 | 100.0% | 🟢 Complete |
+| Korean | `ko` | 19/19 | 100.0% | 🟢 Complete |
+| Dutch | `nl` | 19/19 | 100.0% | 🟢 Complete |
+| Polish | `pl` | 19/19 | 100.0% | 🟢 Complete |
+| Portuguese | `pt` | 19/19 | 100.0% | 🟢 Complete |
+| Russian | `ru` | 19/19 | 100.0% | 🟢 Complete |
+| Swedish | `sv` | 19/19 | 100.0% | 🟢 Complete |
+| Turkish | `tr` | 19/19 | 100.0% | 🟢 Complete |
+| Ukrainian | `uk` | 19/19 | 100.0% | 🟢 Complete |
+| Vietnamese | `vi` | 19/19 | 100.0% | 🟢 Complete |
+| Chinese (Simplified) | `zh_CN` | 19/19 | 100.0% | 🟢 Complete |
+| Chinese (Traditional) | `zh_TW` | 19/19 | 100.0% | 🟢 Complete |
+<!-- TRANSLATIONS_TABLE_END -->

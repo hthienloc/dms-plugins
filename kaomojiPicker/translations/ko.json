@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "카오모지를 <b>왼쪽 클릭</b>하여 즉시 복사하거나 붙여넣으세요."
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "항목을 <b>마우스 오른쪽 버튼으로 클릭</b>하여 <b>고정/고정 해제</b>하거나 <b>기록</b>에서 제거하세요."
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "선택한 카오모지를 활성 창에 직접 붙여넣습니다(붙여넣으려면 Enter, 복사하려면 Shift + Enter)."
+  },
+  "Enable History": {
+    "Enable History": "기록 활성화"
+  },
+  "General Settings": {
+    "General Settings": "일반 설정"
+  },
+  "History Size": {
+    "History Size": "기록 크기"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "런처 트리거"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "검색 결과에 표시할 최대 카오모지 수입니다."
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "보관할 최근 사용 항목 수입니다."
+  },
+  "Paste on Select": {
+    "Paste on Select": "선택 항목에 붙여넣기"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "카오모지 핀"
+  },
+  "Remove from History": {
+    "Remove from History": "기록에서 제거"
+  },
+  "Result Limit": {
+    "Result Limit": "결과 제한"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "카테고리나 키워드로 검색하세요(예: <code>kj cat</code>)."
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "검색어가 비어 있으면 최근에 사용한 카오모지를 표시합니다."
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "검색창에 이 런처를 실행하는 키워드입니다."
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "DMS 검색창에 <b>트리거 키</b>(기본값: <code>kj</code>)를 입력하세요."
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "카오모지 고정 해제"
+  },
+  "Usage Guide": {
+    "Usage Guide": "이용안내"
+  }
+}

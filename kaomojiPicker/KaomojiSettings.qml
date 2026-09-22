@@ -11,7 +11,7 @@ PluginSettings {
     SettingsCard {
         id: generalSection
         SectionTitle { 
-            text: I18n.tr("General Settings")
+            text: I18n.trFor("kaomojiPicker", "General Settings")
             icon: "settings" 
             showReset: triggerKey.isDirty || resultLimit.isDirty || pasteOnSelect.isDirty || enableHistory.isDirty || historyLimit.isDirty
             onResetClicked: {
@@ -26,8 +26,8 @@ PluginSettings {
         StringSettingPlus {
             id: triggerKey
             settingKey: "trigger"
-            label: I18n.tr("Launcher Trigger")
-            description: I18n.tr("The keyword to trigger this launcher in the search bar.")
+            label: I18n.trFor("kaomojiPicker", "Launcher Trigger")
+            description: I18n.trFor("kaomojiPicker", "The keyword to trigger this launcher in the search bar.")
             placeholder: "kj"
             defaultValue: "kj"
         }
@@ -37,8 +37,8 @@ PluginSettings {
         SliderSettingPlus {
             id: resultLimit
             settingKey: "resultLimit"
-            label: I18n.tr("Result Limit")
-            description: I18n.tr("Maximum number of kaomoji to show in search results.")
+            label: I18n.trFor("kaomojiPicker", "Result Limit")
+            description: I18n.trFor("kaomojiPicker", "Maximum number of kaomoji to show in search results.")
             minimum: 10
             maximum: 200
             defaultValue: 50
@@ -51,12 +51,12 @@ PluginSettings {
         ToggleSettingPlus {
             id: pasteOnSelect
             settingKey: "pasteOnSelect"
-            label: I18n.tr("Paste on Select")
+            label: I18n.trFor("kaomojiPicker", "Paste on Select")
             defaultValue: true
         }
 
         InfoText {
-            text: I18n.tr("Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).")
+            text: I18n.trFor("kaomojiPicker", "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).")
         }
 
         Separator {}
@@ -64,8 +64,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: enableHistory
             settingKey: "enableHistory"
-            label: I18n.tr("Enable History")
-            description: I18n.tr("Show recently used kaomoji when the search is empty.")
+            label: I18n.trFor("kaomojiPicker", "Enable History")
+            description: I18n.trFor("kaomojiPicker", "Show recently used kaomoji when the search is empty.")
             defaultValue: true
         }
 
@@ -74,8 +74,8 @@ PluginSettings {
         SliderSettingPlus {
             id: historyLimit
             settingKey: "historyLimit"
-            label: I18n.tr("History Size")
-            description: I18n.tr("Number of recently used items to keep.")
+            label: I18n.trFor("kaomojiPicker", "History Size")
+            description: I18n.trFor("kaomojiPicker", "Number of recently used items to keep.")
             minimum: 5
             maximum: 50
             defaultValue: 15
@@ -88,7 +88,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle { 
             id: usageTitle
-            text: I18n.tr("Usage Guide")
+            text: I18n.trFor("kaomojiPicker", "Usage Guide")
             icon: "menu_book" 
             collapsible: true
             settingKey: "usageGuideExpanded"
@@ -97,10 +97,10 @@ PluginSettings {
         UsageGuide {
             expanded: usageTitle.isExpanded
             items: [
-                I18n.tr("Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar."),
-                I18n.tr("Search by category or keyword (e.g., <code>kj cat</code>)."),
-                I18n.tr("<b>Left-click</b> a kaomoji to copy or paste it instantly."),
-                I18n.tr("<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.")
+                I18n.trFor("kaomojiPicker", "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar."),
+                I18n.trFor("kaomojiPicker", "Search by category or keyword (e.g., <code>kj cat</code>)."),
+                I18n.trFor("kaomojiPicker", "<b>Left-click</b> a kaomoji to copy or paste it instantly."),
+                I18n.trFor("kaomojiPicker", "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.")
             ]
         }
     }

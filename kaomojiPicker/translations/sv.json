@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "<b>Vänsterklicka</b> på en kaomoji för att kopiera eller klistra in den direkt."
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "<b>Högerklicka</b> på en post för att <b>fästa/lossa</b> den eller ta bort den från <b>Historik</b>."
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "Klistra in den valda kaomoji direkt i det aktiva fönstret (Enter för att klistra in, Shift + Enter för att kopiera)."
+  },
+  "Enable History": {
+    "Enable History": "Aktivera historik"
+  },
+  "General Settings": {
+    "General Settings": "Allmänna inställningar"
+  },
+  "History Size": {
+    "History Size": "Historik storlek"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "Launcher Trigger"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "Maximalt antal kaomoji att visa i sökresultat."
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "Antal nyligen använda föremål att behålla."
+  },
+  "Paste on Select": {
+    "Paste on Select": "Klistra in på Välj"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "Pin Kaomoji"
+  },
+  "Remove from History": {
+    "Remove from History": "Ta bort från historiken"
+  },
+  "Result Limit": {
+    "Result Limit": "Resultatgräns"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "Sök efter kategori eller nyckelord (t.ex. <code>kj cat</code>)."
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "Visa nyligen använda kaomoji när sökningen är tom."
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "Nyckelordet för att aktivera startprogrammet i sökfältet."
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "Skriv <b>Trigger Key</b> (standard: <code>kj</code>) i DMS-sökfältet."
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "Lossa Kaomoji"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Användningsguide"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "A kaomojira <b>kattintson a bal gombbal</b> az azonnali másolásához vagy beillesztéséhez."
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "<b>Kattintson jobb gombbal</b> egy bejegyzésre a <b>rögzítéshez/feloldáshoz</b>, vagy távolítsa el az <b>Előzményekből</b>."
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "Illessze be közvetlenül a kiválasztott kaomojit az aktív ablakba (beillesztéshez Enter, másoláshoz Shift + Enter)."
+  },
+  "Enable History": {
+    "Enable History": "Előzmények engedélyezése"
+  },
+  "General Settings": {
+    "General Settings": "Általános beállítások"
+  },
+  "History Size": {
+    "History Size": "Történelem méret"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "Launcher Trigger"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "A keresési eredmények között megjeleníthető kaomoji maximális száma."
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "A közelmúltban használt, megtartandó tárgyak száma."
+  },
+  "Paste on Select": {
+    "Paste on Select": "Beillesztés a Select-re"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "Pin Kaomoji"
+  },
+  "Remove from History": {
+    "Remove from History": "Eltávolítás az előzmények közül"
+  },
+  "Result Limit": {
+    "Result Limit": "Eredménykorlát"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "Keresés kategória vagy kulcsszó szerint (pl. <code>kj cat</code>)."
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "A legutóbb használt kaomoji megjelenítése, ha a keresés üres."
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "A kulcsszó, amely elindítja ezt az indítót a keresősávban."
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "Írja be a <b>trigger kulcsot</b> (alapértelmezett: <code>kj</code>) a DMS keresősávjába."
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "Oldja fel a Kaomojit"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Használati útmutató"
+  }
+}

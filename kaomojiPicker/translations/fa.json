@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "یک کائوموجی <b>کلیک چپ کنید</b> تا فوراً آن را کپی یا جای‌گذاری کنید."
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "روی یک ورودی <b>راست کلیک کنید</b> تا آن را <b>پین/لغو پین کنید</b> یا آن را از <b>History</b> حذف کنید."
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "کائوموجی انتخاب شده را مستقیماً در پنجره فعال قرار دهید (Enter برای چسباندن، Shift + Enter برای کپی)."
+  },
+  "Enable History": {
+    "Enable History": "تاریخچه را فعال کنید"
+  },
+  "General Settings": {
+    "General Settings": "تنظیمات عمومی"
+  },
+  "History Size": {
+    "History Size": "اندازه تاریخچه"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "لانچر ماشه"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "حداکثر تعداد کائوموجی برای نمایش در نتایج جستجو."
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "تعداد مواردی که اخیراً برای نگهداری استفاده شده است."
+  },
+  "Paste on Select": {
+    "Paste on Select": "چسباندن در انتخاب"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "پین کائوموجی"
+  },
+  "Remove from History": {
+    "Remove from History": "حذف از تاریخچه"
+  },
+  "Result Limit": {
+    "Result Limit": "حد نتیجه"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "جستجو بر اساس دسته یا کلمه کلیدی (به عنوان مثال، <code>kj cat</code>)."
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "زمانی که جستجو خالی است، کائوموجی اخیراً استفاده شده را نشان دهید."
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "کلمه کلیدی برای فعال کردن این راه‌انداز در نوار جستجو."
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "<b>کلید ماشه</b> (پیش‌فرض: <code>kj</code>) را در نوار جستجوی DMS تایپ کنید."
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "پین Kaomoji را بردارید"
+  },
+  "Usage Guide": {
+    "Usage Guide": "راهنمای استفاده"
+  }
+}

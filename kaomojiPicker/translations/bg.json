@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "<b>Щракнете с левия бутон</b> върху каомоджи, за да го копирате или поставите незабавно."
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "<b>Щракнете с десния бутон</b> върху запис, за да го <b>Закачите/Откачите</b> или да го премахнете от <b>История</b>."
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "Директно поставете избраните каомоджи в активния прозорец (Enter за поставяне, Shift + Enter за копиране)."
+  },
+  "Enable History": {
+    "Enable History": "Активиране на историята"
+  },
+  "General Settings": {
+    "General Settings": "Общи настройки"
+  },
+  "History Size": {
+    "History Size": "Размер на историята"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "Стартов тригер"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "Максимален брой каомоджи за показване в резултатите от търсенето."
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "Брой наскоро използвани артикули за запазване."
+  },
+  "Paste on Select": {
+    "Paste on Select": "Поставете върху Select"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "Закачете Kaomoji"
+  },
+  "Remove from History": {
+    "Remove from History": "Премахване от историята"
+  },
+  "Result Limit": {
+    "Result Limit": "Ограничение на резултата"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "Търсете по категория или ключова дума (напр. <code>kj cat</code>)."
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "Показване на наскоро използвани каомоджи, когато търсенето е празно."
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "Ключовата дума за задействане на този стартер в лентата за търсене."
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "Въведете <b>Ключ за задействане</b> (по подразбиране: <code>kj</code>) в лентата за търсене на DMS."
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "Откачете Kaomoji"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Ръководство за употреба"
+  }
+}

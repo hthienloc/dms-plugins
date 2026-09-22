@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "<b>Klik met de linkermuisknop</b> op een kaomoji om deze direct te kopiëren of plakken."
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "<b>Klik met de rechtermuisknop</b> op een item om het <b>vast te zetten/los te maken</b> of te verwijderen uit de <b>Geschiedenis</b>."
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "Plak de geselecteerde kaomoji rechtstreeks in het actieve venster (Enter om te plakken, Shift + Enter om te kopiëren)."
+  },
+  "Enable History": {
+    "Enable History": "Geschiedenis inschakelen"
+  },
+  "General Settings": {
+    "General Settings": "Algemene instellingen"
+  },
+  "History Size": {
+    "History Size": "Geschiedenis Grootte"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "Launcher-trigger"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "Maximaal aantal kaomoji dat in zoekresultaten moet worden weergegeven."
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "Aantal recent gebruikte items om te bewaren."
+  },
+  "Paste on Select": {
+    "Paste on Select": "Plakken op Selecteren"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "Pin Kaomoji"
+  },
+  "Remove from History": {
+    "Remove from History": "Verwijderen uit de geschiedenis"
+  },
+  "Result Limit": {
+    "Result Limit": "Resultaatlimiet"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "Zoek op categorie of trefwoord (bijvoorbeeld <code>kj cat</code>)."
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "Toon recent gebruikte kaomoji wanneer de zoekopdracht leeg is."
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "Het trefwoord om dit opstartprogramma in de zoekbalk te activeren."
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "Typ de <b>Trigger Key</b> (standaard: <code>kj</code>) in de DMS-zoekbalk."
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "Maak Kaomoji los"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Gebruiksgids"
+  }
+}

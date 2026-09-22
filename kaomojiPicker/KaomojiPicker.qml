@@ -161,7 +161,7 @@ QtObject {
         const actions = [
             {
                 icon: isPinned ? "keep_off" : "push_pin",
-                text: isPinned ? I18n.tr("Unpin Kaomoji") : I18n.tr("Pin Kaomoji"),
+                text: isPinned ? I18n.trFor("kaomojiPicker", "Unpin Kaomoji") : I18n.trFor("kaomojiPicker", "Pin Kaomoji"),
                 action: function() { togglePin(kaomoji); },
                 closeLauncher: false
             }
@@ -170,7 +170,7 @@ QtObject {
         if (isInHistory) {
             actions.push({
                 icon: "delete",
-                text: I18n.tr("Remove from History"),
+                text: I18n.trFor("kaomojiPicker", "Remove from History"),
                 action: function() { removeFromHistory(kaomoji); },
                 closeLauncher: false
             });

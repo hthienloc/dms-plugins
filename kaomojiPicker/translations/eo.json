@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "<b>Maldekstre alklaku</b> kaomoji por kopii aŭ alglui ĝin tuj."
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "<b>Dekstre alklaku</b> enskribon por <b>Alpingli/Malpingli</b> ĝin aŭ forigi ĝin de <b>Historio</b>."
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "Rekte algluu la elektitan kaomoji en la aktivan fenestron (Enigu por alglui, Maj + Enigu por kopii)."
+  },
+  "Enable History": {
+    "Enable History": "Ebligu Historion"
+  },
+  "General Settings": {
+    "General Settings": "Ĝeneralaj Agordoj"
+  },
+  "History Size": {
+    "History Size": "Historio Grandeco"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "Lanĉilo Trigger"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "Maksimuma nombro da kaomoji por montri en serĉrezultoj."
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "Nombro de lastatempe uzataj aĵoj por konservi."
+  },
+  "Paste on Select": {
+    "Paste on Select": "Algluu sur Elektu"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "Pin Kaomoji"
+  },
+  "Remove from History": {
+    "Remove from History": "Forigi el Historio"
+  },
+  "Result Limit": {
+    "Result Limit": "Rezulta Limo"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "Serĉu laŭ kategorio aŭ ŝlosilvorto (ekz. <code>kj kato</code>)."
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "Montru lastatempe uzatan kaomoji kiam la serĉo estas malplena."
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "La ŝlosilvorto por ekigi ĉi tiun lanĉilon en la serĉbreto."
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "Tajpu la <b>Trigger Key</b> (defaŭlte: <code>kj</code>) en la serĉbreto de DMS."
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "Malpinu Kaomoji"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Gvidilo pri Uzado"
+  }
+}

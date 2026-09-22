@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "<b>Fai clic con il pulsante sinistro del mouse</b> su un kaomoji per copiarlo o incollarlo immediatamente."
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "<b>Fai clic con il pulsante destro del mouse</b> su una voce per <b>Fissarla/Sbloccarla</b> o rimuoverla dalla <b>Cronologia</b>."
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "Incolla direttamente il kaomoji selezionato nella finestra attiva (Invio per incollare, Maiusc + Invio per copiare)."
+  },
+  "Enable History": {
+    "Enable History": "Abilita cronologia"
+  },
+  "General Settings": {
+    "General Settings": "Impostazioni generali"
+  },
+  "History Size": {
+    "History Size": "Dimensione della storia"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "Trigger del programma di avvio"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "Numero massimo di kaomoji da mostrare nei risultati di ricerca."
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "Numero di elementi utilizzati di recente da conservare."
+  },
+  "Paste on Select": {
+    "Paste on Select": "Incolla su Seleziona"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "Pin Kaomoji"
+  },
+  "Remove from History": {
+    "Remove from History": "Rimuovi dalla cronologia"
+  },
+  "Result Limit": {
+    "Result Limit": "Limite dei risultati"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "Cerca per categoria o parola chiave (ad esempio, <code>kj cat</code>)."
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "Mostra il kaomoji utilizzato di recente quando la ricerca è vuota."
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "La parola chiave per attivare questo launcher nella barra di ricerca."
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "Digita il <b>Trigger Key</b> (predefinito: <code>kj</code>) nella barra di ricerca DMS."
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "Sblocca Kaomoji"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Guida all'uso"
+  }
+}

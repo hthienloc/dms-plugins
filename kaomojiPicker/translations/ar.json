@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "<b>انقر بزر الماوس الأيسر</b> على kaomoji لنسخه أو لصقه على الفور."
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "<b>انقر بزر الماوس الأيمن</b> على أحد الإدخالات <b>لتثبيته/إلغاء تثبيته</b> أو إزالته من <b>السجل</b>."
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "قم بلصق kaomoji المحدد مباشرة في النافذة النشطة (Enter للصق، Shift + Enter للنسخ)."
+  },
+  "Enable History": {
+    "Enable History": "تمكين التاريخ"
+  },
+  "General Settings": {
+    "General Settings": "الإعدادات العامة"
+  },
+  "History Size": {
+    "History Size": "حجم التاريخ"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "قاذفة الزناد"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "الحد الأقصى لعدد kaomoji الذي سيتم عرضه في نتائج البحث."
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "عدد العناصر المستخدمة مؤخرًا للاحتفاظ بها."
+  },
+  "Paste on Select": {
+    "Paste on Select": "لصق على تحديد"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "دبوس كاوموجي"
+  },
+  "Remove from History": {
+    "Remove from History": "إزالة من التاريخ"
+  },
+  "Result Limit": {
+    "Result Limit": "حد النتيجة"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "ابحث حسب الفئة أو الكلمة الرئيسية (على سبيل المثال، <code>kj cat</code>)."
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "إظهار kaomoji المستخدم مؤخرًا عندما يكون البحث فارغًا."
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "الكلمة الأساسية لتشغيل هذا المشغل في شريط البحث."
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "اكتب <b>مفتاح التشغيل</b> (الافتراضي: <code>kj</code>) في شريط بحث DMS."
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "قم بإلغاء تثبيت Kaomoji"
+  },
+  "Usage Guide": {
+    "Usage Guide": "دليل الاستخدام"
+  }
+}

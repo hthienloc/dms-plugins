@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "<b>左键单击</b>颜文字即可立即复制或粘贴。"
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "<b>右键单击</b>条目可以<b>固定/取消固定</b>它或将其从<b>历史记录</b>中删除。"
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "直接将选定的颜文字粘贴到活动窗口中（Enter 进行粘贴，Shift + Enter 进行复制）。"
+  },
+  "Enable History": {
+    "Enable History": "启用历史记录"
+  },
+  "General Settings": {
+    "General Settings": "常规设置"
+  },
+  "History Size": {
+    "History Size": "历史规模"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "发射器触发器"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "搜索结果中显示的颜文字的最大数量。"
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "最近使用的要保留的项目数。"
+  },
+  "Paste on Select": {
+    "Paste on Select": "选择粘贴"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "拼颜文字"
+  },
+  "Remove from History": {
+    "Remove from History": "从历史记录中删除"
+  },
+  "Result Limit": {
+    "Result Limit": "结果限制"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "按类别或关键字搜索（例如，<code>kj cat</code>）。"
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "当搜索为空时显示最近使用的颜文字。"
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "在搜索栏中触发此启动器的关键字。"
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "在 DMS 搜索栏中键入<b>触发键</b>（默认值：<code>kj</code>）。"
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "取消固定颜文字"
+  },
+  "Usage Guide": {
+    "Usage Guide": "使用指南"
+  }
+}

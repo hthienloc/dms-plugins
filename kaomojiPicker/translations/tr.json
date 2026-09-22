@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "Anında kopyalamak veya yapıştırmak için bir kaomojiyi <b>sol tıklayın</b>."
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "Bir girişi <b>Sabitlemek/Sabitlemeyi Kaldırmak</b> için <b>sağ tıklayın</b> veya <b>Geçmiş</b>'ten kaldırın."
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "Seçilen kaomojiyi doğrudan etkin pencereye yapıştırın (Yapıştırmak için Enter, kopyalamak için Shift + Enter)."
+  },
+  "Enable History": {
+    "Enable History": "Geçmişi Etkinleştir"
+  },
+  "General Settings": {
+    "General Settings": "Genel Ayarlar"
+  },
+  "History Size": {
+    "History Size": "Geçmiş Boyutu"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "Başlatıcı Tetikleyici"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "Arama sonuçlarında gösterilecek maksimum kaomoji sayısı."
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "Saklanacak son kullanılan öğelerin sayısı."
+  },
+  "Paste on Select": {
+    "Paste on Select": "Seçime Yapıştır"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "Kaomoji'yi sabitle"
+  },
+  "Remove from History": {
+    "Remove from History": "Geçmişten Kaldır"
+  },
+  "Result Limit": {
+    "Result Limit": "Sonuç Sınırı"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "Kategoriye veya anahtar kelimeye göre arama yapın (ör. <code>kj cat</code>)."
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "Arama boş olduğunda son kullanılan kaomojiyi göster."
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "Arama çubuğunda bu başlatıcıyı tetikleyecek anahtar kelime."
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "DMS arama çubuğuna <b>Tetikleme Anahtarını</b> (varsayılan: <code>kj</code>) yazın."
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "Kaomoji'nin sabitlemesini kaldır"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Kullanım Kılavuzu"
+  }
+}

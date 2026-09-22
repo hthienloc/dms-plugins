@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "顔文字を<b>左クリック</b>すると、すぐにコピーまたはペーストできます。"
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "エントリを<b>右クリック</b>して<b>固定/固定解除</b>したり、<b>履歴</b>から削除したりできます。"
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "選択した顔文字をアクティブなウィンドウに直接貼り付けます (貼り付ける場合は Enter、コピーする場合は Shift + Enter)。"
+  },
+  "Enable History": {
+    "Enable History": "履歴を有効にする"
+  },
+  "General Settings": {
+    "General Settings": "一般設定"
+  },
+  "History Size": {
+    "History Size": "履歴サイズ"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "ランチャートリガー"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "検索結果に表示する顔文字の最大数。"
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "保持する最近使用したアイテムの数。"
+  },
+  "Paste on Select": {
+    "Paste on Select": "選択して貼り付け"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "ピン顔文字"
+  },
+  "Remove from History": {
+    "Remove from History": "履歴から削除"
+  },
+  "Result Limit": {
+    "Result Limit": "結果の制限"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "カテゴリまたはキーワードで検索します (例: <code>kj cat</code>)。"
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "検索が空の場合、最近使用した顔文字を表示します。"
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "検索バーでこのランチャーをトリガーするキーワード。"
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "DMS 検索バーに<b>トリガー キー</b> (デフォルト: <code>kj</code>) を入力します。"
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "雲ピン顔文字"
+  },
+  "Usage Guide": {
+    "Usage Guide": "ご利用ガイド"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "<b>Nhấp chuột trái</b> vào một kaomoji để sao chép hoặc dán ngay."
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "<b>Nhấp chuột phải</b> vào mục để <b>Ghim/Bỏ ghim</b> hoặc xóa khỏi <b>Lịch sử</b>."
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "Dán trực tiếp kaomoji đã chọn vào cửa sổ đang hoạt động (Enter để dán, Shift + Enter để sao chép)."
+  },
+  "Enable History": {
+    "Enable History": "Bật lịch sử"
+  },
+  "General Settings": {
+    "General Settings": "Cài đặt chung"
+  },
+  "History Size": {
+    "History Size": "Kích thước lịch sử"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "Phím kích hoạt Launcher"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "Số lượng kaomoji tối đa hiển thị trong kết quả tìm kiếm."
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "Số lượng mục gần đây cần lưu trữ."
+  },
+  "Paste on Select": {
+    "Paste on Select": "Dán ngay khi chọn"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "Ghim Kaomoji"
+  },
+  "Remove from History": {
+    "Remove from History": "Xóa khỏi Lịch sử"
+  },
+  "Result Limit": {
+    "Result Limit": "Giới hạn kết quả"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "Tìm kiếm theo danh mục hoặc từ khóa (ví dụ: <code>kj cat</code>)."
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "Hiển thị kaomoji được sử dụng gần đây khi ô tìm kiếm trống."
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "Từ khóa để kích hoạt launcher này trong thanh tìm kiếm."
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "Nhập <b>Phím kích hoạt</b> (mặc định: <code>kj</code>) vào thanh tìm kiếm DMS."
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "Bỏ ghim Kaomoji"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Hướng dẫn sử dụng"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "<b>Left-click</b> a kaomoji to copy or paste it instantly.": {
+    "<b>Left-click</b> a kaomoji to copy or paste it instantly.": "<b>לחץ לחיצה ימנית</b> על kaomoji כדי להעתיק או להדביק אותו באופן מיידי."
+  },
+  "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": {
+    "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.": "<b>לחץ באמצעות לחצן העכבר הימני</b> על ערך כדי <b>להצמיד/לבטל</b> אותו או להסיר אותו מ<b>היסטוריה</b>."
+  },
+  "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": {
+    "Directly paste the selected kaomoji into the active window (Enter to paste, Shift + Enter to copy).": "הדבק ישירות את הקאומוג'י שנבחר בחלון הפעיל (Enter כדי להדביק, Shift + Enter כדי להעתיק)."
+  },
+  "Enable History": {
+    "Enable History": "אפשר היסטוריה"
+  },
+  "General Settings": {
+    "General Settings": "הגדרות כלליות"
+  },
+  "History Size": {
+    "History Size": "גודל היסטוריה"
+  },
+  "Launcher Trigger": {
+    "Launcher Trigger": "טריגר של משגר"
+  },
+  "Maximum number of kaomoji to show in search results.": {
+    "Maximum number of kaomoji to show in search results.": "מספר מקסימלי של kaomoji להצגה בתוצאות החיפוש."
+  },
+  "Number of recently used items to keep.": {
+    "Number of recently used items to keep.": "מספר הפריטים ששימשו לאחרונה לשמירה."
+  },
+  "Paste on Select": {
+    "Paste on Select": "הדבק ב-Select"
+  },
+  "Pin Kaomoji": {
+    "Pin Kaomoji": "Pin Kaomoji"
+  },
+  "Remove from History": {
+    "Remove from History": "הסר מההיסטוריה"
+  },
+  "Result Limit": {
+    "Result Limit": "מגבלת תוצאות"
+  },
+  "Search by category or keyword (e.g., <code>kj cat</code>).": {
+    "Search by category or keyword (e.g., <code>kj cat</code>).": "חפש לפי קטגוריה או מילת מפתח (למשל, <code>kj cat</code>)."
+  },
+  "Show recently used kaomoji when the search is empty.": {
+    "Show recently used kaomoji when the search is empty.": "הצג kaomoji בשימוש לאחרונה כאשר החיפוש ריק."
+  },
+  "The keyword to trigger this launcher in the search bar.": {
+    "The keyword to trigger this launcher in the search bar.": "מילת המפתח להפעלת מפעיל זה בסרגל החיפוש."
+  },
+  "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": {
+    "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar.": "הקלד את <b>מפתח ההפעלה</b> (ברירת מחדל: <code>kj</code>) בשורת החיפוש של DMS."
+  },
+  "Unpin Kaomoji": {
+    "Unpin Kaomoji": "בטל את ההצמדה של Kaomoji"
+  },
+  "Usage Guide": {
+    "Usage Guide": "מדריך שימוש"
+  }
+}
