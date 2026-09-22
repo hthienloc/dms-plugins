@@ -1,0 +1,146 @@
+{
+  "Activities": {
+    "Activities": "活動"
+  },
+  "Animals & Nature": {
+    "Animals & Nature": "動物與自然"
+  },
+  "Appearance": {
+    "Appearance": "外貌"
+  },
+  "Auto": {
+    "Auto": "汽車"
+  },
+  "Choose the modal size that best fits your display.": {
+    "Choose the modal size that best fits your display.": "選擇最適合您的顯示器的模態尺寸。"
+  },
+  "Clear All": {
+    "Clear All": "全部清除"
+  },
+  "Clear History": {
+    "Clear History": "清除歷史記錄"
+  },
+  "Clear Recent History": {
+    "Clear Recent History": "清除最近的歷史記錄"
+  },
+  "Close": {
+    "Close": "關閉"
+  },
+  "Close Picker": {
+    "Close Picker": "關閉選擇器"
+  },
+  "Comfortable (560 px)": {
+    "Comfortable (560 px)": "舒適（560 像素）"
+  },
+  "Compact (500 px)": {
+    "Compact (500 px)": "緊湊（500 像素）"
+  },
+  "Copied %1 to clipboard": {
+    "Copied %1 to clipboard": "已將 %1 複製到剪貼簿"
+  },
+  "Copy": {
+    "Copy": "複製"
+  },
+  "Copy Confirmation": {
+    "Copy Confirmation": "複製確認"
+  },
+  "Default Category": {
+    "Default Category": "預設類別"
+  },
+  "Emoji Picker": {
+    "Emoji Picker": "表情符號選擇器"
+  },
+  "Failed to copy emoji": {
+    "Failed to copy emoji": "複製表情符號失敗"
+  },
+  "Feedback": {
+    "Feedback": "回饋"
+  },
+  "Flags": {
+    "Flags": "旗幟"
+  },
+  "Food & Drink": {
+    "Food & Drink": "食品和飲料"
+  },
+  "General": {
+    "General": "一般的"
+  },
+  "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": {
+    "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": "按住 <b>Shift</b> 的同時左鍵或按下 <b>Enter</b> 可將表情符號新增至佇列。"
+  },
+  "IPC Commands": {
+    "IPC Commands": "工控機命令"
+  },
+  "Large (620 px)": {
+    "Large (620 px)": "大（620 像素）"
+  },
+  "No emoji found": {
+    "No emoji found": "沒有找到表情符號"
+  },
+  "Objects": {
+    "Objects": "物件"
+  },
+  "Open Picker": {
+    "Open Picker": "打開選擇器"
+  },
+  "Paste": {
+    "Paste": "貼上"
+  },
+  "Picker Size": {
+    "Picker Size": "拾取器尺寸"
+  },
+  "Press <b>Backspace</b> to remove the last queued emoji.": {
+    "Press <b>Backspace</b> to remove the last queued emoji.": "按<b>退格鍵</b>刪除最後一個排隊的表情符號。"
+  },
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "按<b>向下</b>或<b>Tab</b>從搜尋移動到表情符號網格。"
+  },
+  "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
+    "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "按<b>Escape</b> 放棄佇列，或在佇列為空時關閉選取器。"
+  },
+  "Recent History": {
+    "Recent History": "近代歷史"
+  },
+  "Recent History Size": {
+    "Recent History Size": "最近歷史規模"
+  },
+  "Recent emoji history cleared": {
+    "Recent emoji history cleared": "最近的表情符號歷史記錄已清除"
+  },
+  "Recently Used": {
+    "Recently Used": "最近使用過"
+  },
+  "Search emoji": {
+    "Search emoji": "搜尋表情符號"
+  },
+  "Search results": {
+    "Search results": "搜尋結果"
+  },
+  "Show a toast containing the emoji after copying it.": {
+    "Show a toast containing the emoji after copying it.": "複製後顯示包含表情符號的吐司。"
+  },
+  "Smileys & People": {
+    "Smileys & People": "表情符號與人物"
+  },
+  "Symbols": {
+    "Symbols": "符號"
+  },
+  "Toggle Picker": {
+    "Toggle Picker": "切換選擇器"
+  },
+  "Travel & Places": {
+    "Travel & Places": "旅行與地點"
+  },
+  "Usage Guide": {
+    "Usage Guide": "使用指南"
+  },
+  "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": {
+    "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": "對於空隊列，<b>左鍵點選</b>或<b>Enter</b>複製選取的表情符號。"
+  },
+  "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": {
+    "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": "對於空隊列，<b>右鍵單擊</b>或<b>Ctrl+Enter</b>複製並貼上選取的表情符號。"
+  },
+  "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
+    "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "當表情符號排隊時，<b>Enter</b> 複製序列並 <b>Ctrl+Enter</b> 貼上它。"
+  }
+}

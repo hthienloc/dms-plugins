@@ -1,0 +1,146 @@
+{
+  "Activities": {
+    "Activities": "Faaliyetler"
+  },
+  "Animals & Nature": {
+    "Animals & Nature": "Hayvanlar ve Doğa"
+  },
+  "Appearance": {
+    "Appearance": "Dış görünüş"
+  },
+  "Auto": {
+    "Auto": "Otomatik"
+  },
+  "Choose the modal size that best fits your display.": {
+    "Choose the modal size that best fits your display.": "Ekranınıza en uygun modal boyutu seçin."
+  },
+  "Clear All": {
+    "Clear All": "Tümünü Temizle"
+  },
+  "Clear History": {
+    "Clear History": "Geçmişi Temizle"
+  },
+  "Clear Recent History": {
+    "Clear Recent History": "Yakın Geçmişi Temizle"
+  },
+  "Close": {
+    "Close": "Kapalı"
+  },
+  "Close Picker": {
+    "Close Picker": "Seçiciyi Kapat"
+  },
+  "Comfortable (560 px)": {
+    "Comfortable (560 px)": "Rahat (560 piksel)"
+  },
+  "Compact (500 px)": {
+    "Compact (500 px)": "Kompakt (500 piksel)"
+  },
+  "Copied %1 to clipboard": {
+    "Copied %1 to clipboard": "%1 panoya kopyalandı"
+  },
+  "Copy": {
+    "Copy": "Kopyala"
+  },
+  "Copy Confirmation": {
+    "Copy Confirmation": "Onayı Kopyala"
+  },
+  "Default Category": {
+    "Default Category": "Varsayılan Kategori"
+  },
+  "Emoji Picker": {
+    "Emoji Picker": "Emoji Seçici"
+  },
+  "Failed to copy emoji": {
+    "Failed to copy emoji": "Emoji kopyalanamadı"
+  },
+  "Feedback": {
+    "Feedback": "Geri bildirim"
+  },
+  "Flags": {
+    "Flags": "Bayraklar"
+  },
+  "Food & Drink": {
+    "Food & Drink": "Yiyecek ve İçecek"
+  },
+  "General": {
+    "General": "Genel"
+  },
+  "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": {
+    "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": "Sıraya emoji eklemek için sol tıklarken veya <b>Enter</b> tuşuna basarken <b>Shift</b> tuşunu basılı tutun."
+  },
+  "IPC Commands": {
+    "IPC Commands": "IPC Komutları"
+  },
+  "Large (620 px)": {
+    "Large (620 px)": "Büyük (620 piksel)"
+  },
+  "No emoji found": {
+    "No emoji found": "Emoji bulunamadı"
+  },
+  "Objects": {
+    "Objects": "Nesneler"
+  },
+  "Open Picker": {
+    "Open Picker": "Seçiciyi Aç"
+  },
+  "Paste": {
+    "Paste": "Yapıştır"
+  },
+  "Picker Size": {
+    "Picker Size": "Seçici Boyutu"
+  },
+  "Press <b>Backspace</b> to remove the last queued emoji.": {
+    "Press <b>Backspace</b> to remove the last queued emoji.": "Sıraya alınan son emojiyi kaldırmak için <b>Geri tuşuna</b> basın."
+  },
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "Aramadan emoji tablosuna geçmek için <b>Aşağı</b> veya <b>Sekme</b> tuşuna basın."
+  },
+  "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
+    "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "Kuyruğu atmak için <b>Escape</b> tuşuna basın veya kuyruk boş olduğunda seçiciyi kapatın."
+  },
+  "Recent History": {
+    "Recent History": "Yakın Tarih"
+  },
+  "Recent History Size": {
+    "Recent History Size": "Yakın Geçmiş Boyutu"
+  },
+  "Recent emoji history cleared": {
+    "Recent emoji history cleared": "Son emoji geçmişi temizlendi"
+  },
+  "Recently Used": {
+    "Recently Used": "Son Kullanılanlar"
+  },
+  "Search emoji": {
+    "Search emoji": "Emoji ara"
+  },
+  "Search results": {
+    "Search results": "Arama sonuçları"
+  },
+  "Show a toast containing the emoji after copying it.": {
+    "Show a toast containing the emoji after copying it.": "Kopyaladıktan sonra emojiyi içeren bir tostu gösterin."
+  },
+  "Smileys & People": {
+    "Smileys & People": "Suratlar ve İnsanlar"
+  },
+  "Symbols": {
+    "Symbols": "Semboller"
+  },
+  "Toggle Picker": {
+    "Toggle Picker": "Seçiciyi Değiştir"
+  },
+  "Travel & Places": {
+    "Travel & Places": "Seyahat ve Yerler"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Kullanım Kılavuzu"
+  },
+  "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": {
+    "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": "Sıra boşken <b>sol tıklama</b> veya <b>Enter</b> seçilen emojiyi kopyalar."
+  },
+  "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": {
+    "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": "Sıra boşken <b>sağ tıklayın</b> veya <b>Ctrl+Enter</b> seçilen emojiyi kopyalayıp yapıştırın."
+  },
+  "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
+    "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "Emojiler sıraya alındığında, <b>Enter</b> diziyi kopyalar ve <b>Ctrl+Enter</b> yapıştırır."
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "Activities": {
+    "Activities": "Aktiviteter"
+  },
+  "Animals & Nature": {
+    "Animals & Nature": "Djur & Natur"
+  },
+  "Appearance": {
+    "Appearance": "Utseende"
+  },
+  "Auto": {
+    "Auto": "Bil"
+  },
+  "Choose the modal size that best fits your display.": {
+    "Choose the modal size that best fits your display.": "Välj den modala storlek som bäst passar din skärm."
+  },
+  "Clear All": {
+    "Clear All": "Rensa alla"
+  },
+  "Clear History": {
+    "Clear History": "Rensa historik"
+  },
+  "Clear Recent History": {
+    "Clear Recent History": "Rensa senaste historik"
+  },
+  "Close": {
+    "Close": "Nära"
+  },
+  "Close Picker": {
+    "Close Picker": "Stäng väljaren"
+  },
+  "Comfortable (560 px)": {
+    "Comfortable (560 px)": "Bekväm (560 px)"
+  },
+  "Compact (500 px)": {
+    "Compact (500 px)": "Kompakt (500 px)"
+  },
+  "Copied %1 to clipboard": {
+    "Copied %1 to clipboard": "Kopierade %1 till urklipp"
+  },
+  "Copy": {
+    "Copy": "Kopiera"
+  },
+  "Copy Confirmation": {
+    "Copy Confirmation": "Kopiera bekräftelse"
+  },
+  "Default Category": {
+    "Default Category": "Standardkategori"
+  },
+  "Emoji Picker": {
+    "Emoji Picker": "Emoji-väljare"
+  },
+  "Failed to copy emoji": {
+    "Failed to copy emoji": "Det gick inte att kopiera emoji"
+  },
+  "Feedback": {
+    "Feedback": "Feed-back"
+  },
+  "Flags": {
+    "Flags": "Flaggor"
+  },
+  "Food & Drink": {
+    "Food & Drink": "Mat & Dryck"
+  },
+  "General": {
+    "General": "Allmän"
+  },
+  "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": {
+    "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": "Håll ned <b>Skift</b> medan du vänsterklickar eller trycker på <b>Retur</b> för att lägga till emojis i en kö."
+  },
+  "IPC Commands": {
+    "IPC Commands": "IPC-kommandon"
+  },
+  "Large (620 px)": {
+    "Large (620 px)": "Large (620 px)"
+  },
+  "No emoji found": {
+    "No emoji found": "Ingen emoji hittades"
+  },
+  "Objects": {
+    "Objects": "Objekt"
+  },
+  "Open Picker": {
+    "Open Picker": "Öppna Väljaren"
+  },
+  "Paste": {
+    "Paste": "Klistra"
+  },
+  "Picker Size": {
+    "Picker Size": "Väljarens storlek"
+  },
+  "Press <b>Backspace</b> to remove the last queued emoji.": {
+    "Press <b>Backspace</b> to remove the last queued emoji.": "Tryck på <b>Backsteg</b> för att ta bort den senast köade emojin."
+  },
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "Tryck på <b>Ned</b> eller <b>Tabb</b> för att gå från sökning till emoji-rutnätet."
+  },
+  "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
+    "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "Tryck på <b>Escape</b> för att ta bort kön, eller stäng väljaren när kön är tom."
+  },
+  "Recent History": {
+    "Recent History": "Senaste historien"
+  },
+  "Recent History Size": {
+    "Recent History Size": "Senaste historia Storlek"
+  },
+  "Recent emoji history cleared": {
+    "Recent emoji history cleared": "Den senaste emoji-historiken har rensats"
+  },
+  "Recently Used": {
+    "Recently Used": "Nyligen använd"
+  },
+  "Search emoji": {
+    "Search emoji": "Sök emoji"
+  },
+  "Search results": {
+    "Search results": "Sökresultat"
+  },
+  "Show a toast containing the emoji after copying it.": {
+    "Show a toast containing the emoji after copying it.": "Visa en skål som innehåller emojin efter att ha kopierat den."
+  },
+  "Smileys & People": {
+    "Smileys & People": "Smileys och människor"
+  },
+  "Symbols": {
+    "Symbols": "Symboler"
+  },
+  "Toggle Picker": {
+    "Toggle Picker": "Växla Väljare"
+  },
+  "Travel & Places": {
+    "Travel & Places": "Resor & platser"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Användningsguide"
+  },
+  "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": {
+    "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": "Med en tom kö, <b>vänsterklicka</b> eller <b>Enter</b> kopierar den valda emojin."
+  },
+  "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": {
+    "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": "Med en tom kö, <b>högerklicka</b> eller <b>Ctrl+Enter</b> kopierar och klistrar in den valda emojin."
+  },
+  "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
+    "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "Med emojis i kö kopierar <b>Enter</b> sekvensen och <b>Ctrl+Enter</b> klistrar in den."
+  }
+}

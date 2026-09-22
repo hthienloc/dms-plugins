@@ -1,0 +1,146 @@
+{
+  "Activities": {
+    "Activities": "Деятельность"
+  },
+  "Animals & Nature": {
+    "Animals & Nature": "Животные и природа"
+  },
+  "Appearance": {
+    "Appearance": "Появление"
+  },
+  "Auto": {
+    "Auto": "Авто"
+  },
+  "Choose the modal size that best fits your display.": {
+    "Choose the modal size that best fits your display.": "Выберите размер модального окна, который лучше всего подходит для вашего дисплея."
+  },
+  "Clear All": {
+    "Clear All": "Очистить все"
+  },
+  "Clear History": {
+    "Clear History": "Очистить историю"
+  },
+  "Clear Recent History": {
+    "Clear Recent History": "Очистить недавнюю историю"
+  },
+  "Close": {
+    "Close": "Закрывать"
+  },
+  "Close Picker": {
+    "Close Picker": "Закрыть выбор"
+  },
+  "Comfortable (560 px)": {
+    "Comfortable (560 px)": "Удобный (560 пикселей)"
+  },
+  "Compact (500 px)": {
+    "Compact (500 px)": "Компактный (500 пикселей)"
+  },
+  "Copied %1 to clipboard": {
+    "Copied %1 to clipboard": "Скопировано %1 в буфер обмена."
+  },
+  "Copy": {
+    "Copy": "Копировать"
+  },
+  "Copy Confirmation": {
+    "Copy Confirmation": "Копирование подтверждения"
+  },
+  "Default Category": {
+    "Default Category": "Категория по умолчанию"
+  },
+  "Emoji Picker": {
+    "Emoji Picker": "Выбор эмодзи"
+  },
+  "Failed to copy emoji": {
+    "Failed to copy emoji": "Не удалось скопировать эмодзи."
+  },
+  "Feedback": {
+    "Feedback": "Обратная связь"
+  },
+  "Flags": {
+    "Flags": "Флаги"
+  },
+  "Food & Drink": {
+    "Food & Drink": "Еда и напитки"
+  },
+  "General": {
+    "General": "Общий"
+  },
+  "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": {
+    "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": "Удерживайте <b>Shift</b>, щелкнув левой кнопкой мыши или нажав <b>Enter</b>, чтобы добавить смайлы в очередь."
+  },
+  "IPC Commands": {
+    "IPC Commands": "Команды IPC"
+  },
+  "Large (620 px)": {
+    "Large (620 px)": "Большой (620 пикселей)"
+  },
+  "No emoji found": {
+    "No emoji found": "Эмодзи не найдено"
+  },
+  "Objects": {
+    "Objects": "Объекты"
+  },
+  "Open Picker": {
+    "Open Picker": "Открыть выборщик"
+  },
+  "Paste": {
+    "Paste": "Вставить"
+  },
+  "Picker Size": {
+    "Picker Size": "Размер выбора"
+  },
+  "Press <b>Backspace</b> to remove the last queued emoji.": {
+    "Press <b>Backspace</b> to remove the last queued emoji.": "Нажмите <b>Backspace</b>, чтобы удалить последний смайлик в очереди."
+  },
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "Нажмите <b>Вниз</b> или <b>Tab</b>, чтобы перейти от поиска к сетке смайлов."
+  },
+  "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
+    "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "Нажмите <b>Escape</b>, чтобы удалить очередь, или закройте средство выбора, когда очередь пуста."
+  },
+  "Recent History": {
+    "Recent History": "Новейшая история"
+  },
+  "Recent History Size": {
+    "Recent History Size": "Размер недавней истории"
+  },
+  "Recent emoji history cleared": {
+    "Recent emoji history cleared": "Недавняя история смайлов удалена."
+  },
+  "Recently Used": {
+    "Recently Used": "Недавно использованный"
+  },
+  "Search emoji": {
+    "Search emoji": "Поиск смайликов"
+  },
+  "Search results": {
+    "Search results": "Результаты поиска"
+  },
+  "Show a toast containing the emoji after copying it.": {
+    "Show a toast containing the emoji after copying it.": "Покажите тост, содержащий смайлик, после его копирования."
+  },
+  "Smileys & People": {
+    "Smileys & People": "Смайлики и люди"
+  },
+  "Symbols": {
+    "Symbols": "Символы"
+  },
+  "Toggle Picker": {
+    "Toggle Picker": "Переключить выбор"
+  },
+  "Travel & Places": {
+    "Travel & Places": "Путешествия и места"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Руководство по использованию"
+  },
+  "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": {
+    "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": "Если очередь пуста, <b>щелкните левой кнопкой мыши</b> или <b>Введите</b>, чтобы скопировать выбранный смайлик."
+  },
+  "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": {
+    "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": "Если очередь пуста, <b>щелкните правой кнопкой мыши</b> или <b>Ctrl+Enter</b> скопируйте и вставьте выбранный смайлик."
+  },
+  "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
+    "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "Когда смайлы поставлены в очередь, <b>Enter</b> копирует последовательность, а <b>Ctrl+Enter</b> вставляет ее."
+  }
+}

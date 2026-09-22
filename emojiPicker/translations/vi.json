@@ -1,0 +1,146 @@
+{
+  "Activities": {
+    "Activities": "Hoạt động"
+  },
+  "Animals & Nature": {
+    "Animals & Nature": "Động vật & Thiên nhiên"
+  },
+  "Appearance": {
+    "Appearance": "Giao diện"
+  },
+  "Auto": {
+    "Auto": "Tự động"
+  },
+  "Choose the modal size that best fits your display.": {
+    "Choose the modal size that best fits your display.": "Chọn kích thước cửa sổ phù hợp nhất với màn hình của bạn."
+  },
+  "Clear All": {
+    "Clear All": "Xóa tất cả"
+  },
+  "Clear History": {
+    "Clear History": "Xóa lịch sử"
+  },
+  "Clear Recent History": {
+    "Clear Recent History": "Xóa lịch sử gần đây"
+  },
+  "Close": {
+    "Close": "Đóng"
+  },
+  "Close Picker": {
+    "Close Picker": "Đóng bảng chọn"
+  },
+  "Comfortable (560 px)": {
+    "Comfortable (560 px)": "Vừa vặn (560 px)"
+  },
+  "Compact (500 px)": {
+    "Compact (500 px)": "Nhỏ gọn (500 px)"
+  },
+  "Copied %1 to clipboard": {
+    "Copied %1 to clipboard": "Đã sao chép %1 vào khay nhớ tạm"
+  },
+  "Copy": {
+    "Copy": "Sao chép"
+  },
+  "Copy Confirmation": {
+    "Copy Confirmation": "Xác nhận sao chép"
+  },
+  "Default Category": {
+    "Default Category": "Danh mục mặc định"
+  },
+  "Emoji Picker": {
+    "Emoji Picker": "Bộ chọn Emoji"
+  },
+  "Failed to copy emoji": {
+    "Failed to copy emoji": "Không thể sao chép emoji"
+  },
+  "Feedback": {
+    "Feedback": "Phản hồi"
+  },
+  "Flags": {
+    "Flags": "Cờ"
+  },
+  "Food & Drink": {
+    "Food & Drink": "Đồ ăn & Thức uống"
+  },
+  "General": {
+    "General": "Cài đặt chung"
+  },
+  "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": {
+    "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": "Giữ <b>Shift</b> khi nhấp chuột trái hoặc nhấn <b>Enter</b> để thêm emoji vào hàng chờ."
+  },
+  "IPC Commands": {
+    "IPC Commands": "Lệnh IPC"
+  },
+  "Large (620 px)": {
+    "Large (620 px)": "Lớn (620 px)"
+  },
+  "No emoji found": {
+    "No emoji found": "Không tìm thấy emoji"
+  },
+  "Objects": {
+    "Objects": "Đồ vật"
+  },
+  "Open Picker": {
+    "Open Picker": "Mở bảng chọn"
+  },
+  "Paste": {
+    "Paste": "Dán"
+  },
+  "Picker Size": {
+    "Picker Size": "Kích thước bảng chọn"
+  },
+  "Press <b>Backspace</b> to remove the last queued emoji.": {
+    "Press <b>Backspace</b> to remove the last queued emoji.": "Nhấn <b>Backspace</b> để xóa emoji cuối cùng khỏi hàng chờ."
+  },
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "Nhấn <b>Xuống</b> hoặc <b>Tab</b> để di chuyển từ ô tìm kiếm sang lưới emoji."
+  },
+  "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
+    "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "Nhấn <b>Escape</b> để hủy hàng chờ, hoặc đóng bảng chọn khi hàng chờ trống."
+  },
+  "Recent History": {
+    "Recent History": "Lịch sử gần đây"
+  },
+  "Recent History Size": {
+    "Recent History Size": "Số lượng emoji gần đây"
+  },
+  "Recent emoji history cleared": {
+    "Recent emoji history cleared": "Đã xóa lịch sử emoji gần đây"
+  },
+  "Recently Used": {
+    "Recently Used": "Dùng gần đây"
+  },
+  "Search emoji": {
+    "Search emoji": "Tìm kiếm emoji"
+  },
+  "Search results": {
+    "Search results": "Kết quả tìm kiếm"
+  },
+  "Show a toast containing the emoji after copying it.": {
+    "Show a toast containing the emoji after copying it.": "Hiển thị thông báo chứa emoji sau khi sao chép."
+  },
+  "Smileys & People": {
+    "Smileys & People": "Mặt cười & Con người"
+  },
+  "Symbols": {
+    "Symbols": "Ký hiệu"
+  },
+  "Toggle Picker": {
+    "Toggle Picker": "Bật/tắt bảng chọn"
+  },
+  "Travel & Places": {
+    "Travel & Places": "Du lịch & Địa điểm"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Hướng dẫn sử dụng"
+  },
+  "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": {
+    "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": "Khi hàng chờ trống, <b>nhấp chuột trái</b> hoặc nhấn <b>Enter</b> để sao chép emoji đã chọn."
+  },
+  "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": {
+    "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": "Khi hàng chờ trống, <b>nhấp chuột phải</b> hoặc nhấn <b>Ctrl+Enter</b> để sao chép và dán emoji đã chọn."
+  },
+  "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
+    "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "Khi có emoji trong hàng chờ, <b>Enter</b> sẽ sao chép chuỗi và <b>Ctrl+Enter</b> sẽ dán chuỗi."
+  }
+}

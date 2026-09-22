@@ -50,6 +50,7 @@ StyledRect {
             iconName: "content_copy"
             iconSize: Theme.iconSize - 6
             iconColor: Theme.surfaceText
+            tooltipText: I18n.trFor("emojiPicker", "Copy")
             onClicked: root.copyRequested()
         }
 
@@ -57,6 +58,7 @@ StyledRect {
             iconName: "content_paste"
             iconSize: Theme.iconSize - 6
             iconColor: Theme.surfaceText
+            tooltipText: I18n.trFor("emojiPicker", "Paste")
             onClicked: root.pasteRequested()
         }
     }

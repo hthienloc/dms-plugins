@@ -156,17 +156,17 @@ PluginComponent {
         if (!text)
             return;
         if (!DMSService.isConnected) {
-            ToastService.showError(I18n.tr("Failed to copy emoji"));
+            ToastService.showError(I18n.trFor("emojiPicker", "Failed to copy emoji"));
             return;
         }
 
         DMSService.sendRequest("clipboard.copy", { "text": text }, response => {
             if (response.error) {
-                ToastService.showError(I18n.tr("Failed to copy emoji"));
+                ToastService.showError(I18n.trFor("emojiPicker", "Failed to copy emoji"));
                 return;
             }
             if (!paste && root.showCopyToast)
-                ToastService.showInfo(I18n.tr("Copied %1 to clipboard").arg(text));
+                ToastService.showInfo(I18n.trFor("emojiPicker", "Copied %1 to clipboard").arg(text));
             root.saveRecentSequence(emojis);
             root.closePicker();
             if (paste)
@@ -332,7 +332,7 @@ PluginComponent {
                     Layout.fillWidth: true
 
                     StyledText {
-                        text: I18n.tr("Emoji Picker")
+                        text: I18n.trFor("emojiPicker", "Emoji Picker")
                         color: Theme.surfaceText
                         font.pixelSize: Theme.fontSizeLarge
                         font.weight: Font.Medium
@@ -344,7 +344,7 @@ PluginComponent {
                         buttonSize: 30
                         iconSize: 18
                         iconColor: Theme.surfaceVariantText
-                        tooltipText: I18n.tr("Close")
+                        tooltipText: I18n.trFor("emojiPicker", "Close")
                         onClicked: root.closePicker()
                     }
                 }
@@ -352,7 +352,7 @@ PluginComponent {
                 DankTextField {
                     id: searchField
                     Layout.fillWidth: true
-                    placeholderText: I18n.tr("Search emoji")
+                    placeholderText: I18n.trFor("emojiPicker", "Search emoji")
                     text: root.query
                     onTextChanged: {
                         root.query = text;
@@ -392,6 +392,7 @@ PluginComponent {
                                 required property string modelData
                                 iconName: root.categoryIcons[modelData] || "category"
                                 iconSize: 22
+                                tooltipText: I18n.tr(root.categoryNames[modelData] || "")
                                 buttonSize: (categoryRow.width - (root.categoryOrder.length - 1) * categoryRow.spacing) / root.categoryOrder.length
                                 backgroundColor: root.selectedCategory === modelData ? Theme.primary : Theme.surfaceContainerHigh
                                 iconColor: root.selectedCategory === modelData ? Theme.onPrimary : Theme.surfaceText
@@ -408,7 +409,7 @@ PluginComponent {
 
                     StyledText {
                         Layout.fillWidth: true
-                        text: root.visibleEntries.length > 0 ? (root.query ? I18n.tr("Search results") : (root.categoryNames[root.selectedCategory] || "")) : I18n.tr("No emoji found")
+                        text: root.visibleEntries.length > 0 ? (root.query ? I18n.trFor("emojiPicker", "Search results") : (I18n.tr(root.categoryNames[root.selectedCategory] || ""))) : I18n.trFor("emojiPicker", "No emoji found")
                         color: Theme.surfaceVariantText
                         font.pixelSize: Theme.fontSizeSmall
                         verticalAlignment: Text.AlignVCenter
@@ -416,12 +417,12 @@ PluginComponent {
 
                     DankButton {
                         visible: !root.query && root.selectedCategory === "recent" && root.recentEmojis.length > 0
-                        text: I18n.tr("Clear All")
+                        text: I18n.trFor("emojiPicker", "Clear All")
                         iconName: "delete_sweep"
                         buttonHeight: 26
                         textColor: Theme.error
                         backgroundColor: Theme.withAlpha(Theme.error, 0.12)
-                        tooltipText: I18n.tr("Clear Recent History")
+                        tooltipText: I18n.trFor("emojiPicker", "Clear Recent History")
                         onClicked: root.clearRecentHistory()
                     }
                 }

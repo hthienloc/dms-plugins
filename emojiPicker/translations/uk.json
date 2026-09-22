@@ -1,0 +1,146 @@
+{
+  "Activities": {
+    "Activities": "Діяльність"
+  },
+  "Animals & Nature": {
+    "Animals & Nature": "Тварини та природа"
+  },
+  "Appearance": {
+    "Appearance": "Зовнішній вигляд"
+  },
+  "Auto": {
+    "Auto": "Авто"
+  },
+  "Choose the modal size that best fits your display.": {
+    "Choose the modal size that best fits your display.": "Виберіть модальний розмір, який найкраще підходить для вашого дисплея."
+  },
+  "Clear All": {
+    "Clear All": "Очистити все"
+  },
+  "Clear History": {
+    "Clear History": "Очистити історію"
+  },
+  "Clear Recent History": {
+    "Clear Recent History": "Очистити недавню історію"
+  },
+  "Close": {
+    "Close": "Закрити"
+  },
+  "Close Picker": {
+    "Close Picker": "Закрити засіб вибору"
+  },
+  "Comfortable (560 px)": {
+    "Comfortable (560 px)": "Зручний (560 пікселів)"
+  },
+  "Compact (500 px)": {
+    "Compact (500 px)": "Компактний (500 пікселів)"
+  },
+  "Copied %1 to clipboard": {
+    "Copied %1 to clipboard": "Скопійовано %1 у буфер обміну"
+  },
+  "Copy": {
+    "Copy": "Копія"
+  },
+  "Copy Confirmation": {
+    "Copy Confirmation": "Підтвердження копіювання"
+  },
+  "Default Category": {
+    "Default Category": "Категорія за замовчуванням"
+  },
+  "Emoji Picker": {
+    "Emoji Picker": "Вибір емодзі"
+  },
+  "Failed to copy emoji": {
+    "Failed to copy emoji": "Не вдалося скопіювати емодзі"
+  },
+  "Feedback": {
+    "Feedback": "Зворотній зв'язок"
+  },
+  "Flags": {
+    "Flags": "Прапори"
+  },
+  "Food & Drink": {
+    "Food & Drink": "Їжа та напої"
+  },
+  "General": {
+    "General": "Загальний"
+  },
+  "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": {
+    "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": "Утримуйте <b>Shift</b>, клацаючи лівою кнопкою миші або натискаючи <b>Enter</b>, щоб додати емодзі до черги."
+  },
+  "IPC Commands": {
+    "IPC Commands": "Команди IPC"
+  },
+  "Large (620 px)": {
+    "Large (620 px)": "Великий (620 пікселів)"
+  },
+  "No emoji found": {
+    "No emoji found": "Емодзі не знайдено"
+  },
+  "Objects": {
+    "Objects": "Об'єкти"
+  },
+  "Open Picker": {
+    "Open Picker": "Відкрити засіб вибору"
+  },
+  "Paste": {
+    "Paste": "Вставити"
+  },
+  "Picker Size": {
+    "Picker Size": "Розмір вибору"
+  },
+  "Press <b>Backspace</b> to remove the last queued emoji.": {
+    "Press <b>Backspace</b> to remove the last queued emoji.": "Натисніть <b>Backspace</b>, щоб видалити останній смайл із черги."
+  },
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "Натисніть <b>Вниз</b> або <b>Tab</b>, щоб перейти від пошуку до сітки емодзі."
+  },
+  "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
+    "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "Натисніть <b>Esc</b>, щоб скасувати чергу, або закрийте засіб вибору, коли черга порожня."
+  },
+  "Recent History": {
+    "Recent History": "Новітня історія"
+  },
+  "Recent History Size": {
+    "Recent History Size": "Розмір нещодавньої історії"
+  },
+  "Recent emoji history cleared": {
+    "Recent emoji history cleared": "Останню історію емодзі очищено"
+  },
+  "Recently Used": {
+    "Recently Used": "Нещодавно використаний"
+  },
+  "Search emoji": {
+    "Search emoji": "Пошук емодзі"
+  },
+  "Search results": {
+    "Search results": "Результати пошуку"
+  },
+  "Show a toast containing the emoji after copying it.": {
+    "Show a toast containing the emoji after copying it.": "Покажіть тост, що містить емодзі, після його копіювання."
+  },
+  "Smileys & People": {
+    "Smileys & People": "Смайлики та люди"
+  },
+  "Symbols": {
+    "Symbols": "Символи"
+  },
+  "Toggle Picker": {
+    "Toggle Picker": "Перемкнути засіб вибору"
+  },
+  "Travel & Places": {
+    "Travel & Places": "Подорожі та місця"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Інструкція з використання"
+  },
+  "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": {
+    "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": "У порожній черзі <b>клацніть лівою кнопкою миші</b> або <b>Enter</b> копіює вибрані смайли."
+  },
+  "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": {
+    "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": "У порожній черзі <b>клацніть правою кнопкою миші</b> або <b>Ctrl+Enter</b> копіює та вставляє вибрані смайли."
+  },
+  "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
+    "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "Коли емодзі в черзі, <b>Enter</b> копіює послідовність і <b>Ctrl+Enter</b> вставляє її."
+  }
+}

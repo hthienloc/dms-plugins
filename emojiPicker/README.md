@@ -71,3 +71,33 @@ See [ATTRIBUTION.txt](ATTRIBUTION.txt) and [LICENSE-EMOTE.md](LICENSE-EMOTE.md) 
 ## License
 
 GPL-3.0-or-later.
+
+
+## Translations
+
+<!-- TRANSLATIONS_TABLE_START -->
+| Language | Locale | Progress | Coverage | Status |
+| :--- | :--- | :---: | :---: | :---: |
+| Arabic | `ar` | 48/48 | 100.0% | 🟢 Complete |
+| Bulgarian | `bg` | 48/48 | 100.0% | 🟢 Complete |
+| German | `de` | 48/48 | 100.0% | 🟢 Complete |
+| Esperanto | `eo` | 48/48 | 100.0% | 🟢 Complete |
+| Spanish | `es` | 48/48 | 100.0% | 🟢 Complete |
+| Persian | `fa` | 48/48 | 100.0% | 🟢 Complete |
+| French | `fr` | 48/48 | 100.0% | 🟢 Complete |
+| Hebrew | `he` | 48/48 | 100.0% | 🟢 Complete |
+| Hungarian | `hu` | 48/48 | 100.0% | 🟢 Complete |
+| Italian | `it` | 48/48 | 100.0% | 🟢 Complete |
+| Japanese | `ja` | 48/48 | 100.0% | 🟢 Complete |
+| Korean | `ko` | 48/48 | 100.0% | 🟢 Complete |
+| Dutch | `nl` | 48/48 | 100.0% | 🟢 Complete |
+| Polish | `pl` | 48/48 | 100.0% | 🟢 Complete |
+| Portuguese | `pt` | 48/48 | 100.0% | 🟢 Complete |
+| Russian | `ru` | 48/48 | 100.0% | 🟢 Complete |
+| Swedish | `sv` | 48/48 | 100.0% | 🟢 Complete |
+| Turkish | `tr` | 48/48 | 100.0% | 🟢 Complete |
+| Ukrainian | `uk` | 48/48 | 100.0% | 🟢 Complete |
+| Vietnamese | `vi` | 48/48 | 100.0% | 🟢 Complete |
+| Chinese (Simplified) | `zh_CN` | 48/48 | 100.0% | 🟢 Complete |
+| Chinese (Traditional) | `zh_TW` | 48/48 | 100.0% | 🟢 Complete |
+<!-- TRANSLATIONS_TABLE_END -->

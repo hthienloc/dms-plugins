@@ -1,0 +1,146 @@
+{
+  "Activities": {
+    "Activities": "活動内容"
+  },
+  "Animals & Nature": {
+    "Animals & Nature": "動物と自然"
+  },
+  "Appearance": {
+    "Appearance": "外観"
+  },
+  "Auto": {
+    "Auto": "自動"
+  },
+  "Choose the modal size that best fits your display.": {
+    "Choose the modal size that best fits your display.": "ディスプレイに最適なモーダル サイズを選択してください。"
+  },
+  "Clear All": {
+    "Clear All": "すべてクリア"
+  },
+  "Clear History": {
+    "Clear History": "履歴をクリアする"
+  },
+  "Clear Recent History": {
+    "Clear Recent History": "最近の履歴を消去"
+  },
+  "Close": {
+    "Close": "近い"
+  },
+  "Close Picker": {
+    "Close Picker": "ピッカーを閉じる"
+  },
+  "Comfortable (560 px)": {
+    "Comfortable (560 px)": "快適 (560 ピクセル)"
+  },
+  "Compact (500 px)": {
+    "Compact (500 px)": "コンパクト（500ピクセル）"
+  },
+  "Copied %1 to clipboard": {
+    "Copied %1 to clipboard": "%1 をクリップボードにコピーしました"
+  },
+  "Copy": {
+    "Copy": "コピー"
+  },
+  "Copy Confirmation": {
+    "Copy Confirmation": "コピーの確認"
+  },
+  "Default Category": {
+    "Default Category": "デフォルトのカテゴリ"
+  },
+  "Emoji Picker": {
+    "Emoji Picker": "絵文字ピッカー"
+  },
+  "Failed to copy emoji": {
+    "Failed to copy emoji": "絵文字のコピーに失敗しました"
+  },
+  "Feedback": {
+    "Feedback": "フィードバック"
+  },
+  "Flags": {
+    "Flags": "フラグ"
+  },
+  "Food & Drink": {
+    "Food & Drink": "食べ物と飲み物"
+  },
+  "General": {
+    "General": "一般的な"
+  },
+  "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": {
+    "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": "<b>Shift</b> を押しながら左クリックするか、<b>Enter</b> を押して絵文字をキューに追加します。"
+  },
+  "IPC Commands": {
+    "IPC Commands": "IPCコマンド"
+  },
+  "Large (620 px)": {
+    "Large (620 px)": "大 (620 ピクセル)"
+  },
+  "No emoji found": {
+    "No emoji found": "絵文字が見つかりませんでした"
+  },
+  "Objects": {
+    "Objects": "オブジェクト"
+  },
+  "Open Picker": {
+    "Open Picker": "ピッカーを開く"
+  },
+  "Paste": {
+    "Paste": "ペースト"
+  },
+  "Picker Size": {
+    "Picker Size": "ピッカーのサイズ"
+  },
+  "Press <b>Backspace</b> to remove the last queued emoji.": {
+    "Press <b>Backspace</b> to remove the last queued emoji.": "<b>Backspace</b> キーを押して、最後にキューに入れられた絵文字を削除します。"
+  },
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "<b>下</b> または <b>Tab</b> を押して、検索から絵文字グリッドに移動します。"
+  },
+  "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
+    "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "<b>Escape</b> キーを押すとキューを破棄します。キューが空の場合はピッカーを閉じます。"
+  },
+  "Recent History": {
+    "Recent History": "最近の履歴"
+  },
+  "Recent History Size": {
+    "Recent History Size": "最近の履歴のサイズ"
+  },
+  "Recent emoji history cleared": {
+    "Recent emoji history cleared": "最近の絵文字履歴が消去されました"
+  },
+  "Recently Used": {
+    "Recently Used": "最近使用した"
+  },
+  "Search emoji": {
+    "Search emoji": "絵文字を検索"
+  },
+  "Search results": {
+    "Search results": "検索結果"
+  },
+  "Show a toast containing the emoji after copying it.": {
+    "Show a toast containing the emoji after copying it.": "絵文字をコピーした後、その絵文字を含むトーストを表示します。"
+  },
+  "Smileys & People": {
+    "Smileys & People": "スマイリーと人々"
+  },
+  "Symbols": {
+    "Symbols": "記号"
+  },
+  "Toggle Picker": {
+    "Toggle Picker": "ピッカーの切り替え"
+  },
+  "Travel & Places": {
+    "Travel & Places": "旅行と場所"
+  },
+  "Usage Guide": {
+    "Usage Guide": "ご利用ガイド"
+  },
+  "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": {
+    "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": "キューが空の場合は、 選択した絵文字を<b>左クリック</b> または<b>Enter</b> してコピーします。"
+  },
+  "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": {
+    "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": "キューが空の場合、 選択した絵文字を<b>右クリック</b> または <b>Ctrl+Enter</b> でコピーして貼り付けます。"
+  },
+  "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
+    "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "絵文字をキューに入れて、<b>Enter</b> キーでシーケンスをコピーし、<b>Ctrl+Enter</b> キーで貼り付けます。"
+  }
+}

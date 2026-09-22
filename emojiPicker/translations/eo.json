@@ -1,0 +1,146 @@
+{
+  "Activities": {
+    "Activities": "Aktivecoj"
+  },
+  "Animals & Nature": {
+    "Animals & Nature": "Bestoj kaj Naturo"
+  },
+  "Appearance": {
+    "Appearance": "Aspekto"
+  },
+  "Auto": {
+    "Auto": "Aŭtomate"
+  },
+  "Choose the modal size that best fits your display.": {
+    "Choose the modal size that best fits your display.": "Elektu la modalan grandecon, kiu plej taŭgas por via ekrano."
+  },
+  "Clear All": {
+    "Clear All": "Forigi Ĉion"
+  },
+  "Clear History": {
+    "Clear History": "Klara Historio"
+  },
+  "Clear Recent History": {
+    "Clear Recent History": "Klarigi Lastatempan Historion"
+  },
+  "Close": {
+    "Close": "Fermu"
+  },
+  "Close Picker": {
+    "Close Picker": "Fermu Elektilon"
+  },
+  "Comfortable (560 px)": {
+    "Comfortable (560 px)": "Komforta (560 px)"
+  },
+  "Compact (500 px)": {
+    "Compact (500 px)": "Kompakta (500 px)"
+  },
+  "Copied %1 to clipboard": {
+    "Copied %1 to clipboard": "Kopiita % 1 al tondujo"
+  },
+  "Copy": {
+    "Copy": "Kopiu"
+  },
+  "Copy Confirmation": {
+    "Copy Confirmation": "Kopiu Konfirmon"
+  },
+  "Default Category": {
+    "Default Category": "Defaŭlta Kategorio"
+  },
+  "Emoji Picker": {
+    "Emoji Picker": "Emoji Picker"
+  },
+  "Failed to copy emoji": {
+    "Failed to copy emoji": "Malsukcesis kopii emoji"
+  },
+  "Feedback": {
+    "Feedback": "Reago"
+  },
+  "Flags": {
+    "Flags": "Flagoj"
+  },
+  "Food & Drink": {
+    "Food & Drink": "Manĝaĵo & Trinkaĵo"
+  },
+  "General": {
+    "General": "Generalo"
+  },
+  "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": {
+    "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": "Tenu <b>Shift</b> dum maldekstra klako aŭ premo <b>Enter</b> por aldoni emojis al vico."
+  },
+  "IPC Commands": {
+    "IPC Commands": "IPC-Komandoj"
+  },
+  "Large (620 px)": {
+    "Large (620 px)": "Granda (620 px)"
+  },
+  "No emoji found": {
+    "No emoji found": "Neniu emoji trovita"
+  },
+  "Objects": {
+    "Objects": "Objektoj"
+  },
+  "Open Picker": {
+    "Open Picker": "Malfermu Elektilon"
+  },
+  "Paste": {
+    "Paste": "Alglui"
+  },
+  "Picker Size": {
+    "Picker Size": "Picker Grandeco"
+  },
+  "Press <b>Backspace</b> to remove the last queued emoji.": {
+    "Press <b>Backspace</b> to remove the last queued emoji.": "Premu <b>Retrofeno</b> por forigi la lastan vica emoji."
+  },
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "Premu <b>Malsupren</b> aŭ <b>Tab</b> por movi de serĉo al la emoji-krado."
+  },
+  "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
+    "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "Premu <b>Escape</b> por forĵeti la atendovicon, aŭ fermi la elektilon kiam la atendovico estas malplena."
+  },
+  "Recent History": {
+    "Recent History": "Lastatempa Historio"
+  },
+  "Recent History Size": {
+    "Recent History Size": "Lastatempa Historio Grandeco"
+  },
+  "Recent emoji history cleared": {
+    "Recent emoji history cleared": "La lastatempa historio de emoji malbariĝis"
+  },
+  "Recently Used": {
+    "Recently Used": "Lastatempe Uzita"
+  },
+  "Search emoji": {
+    "Search emoji": "Serĉu emoji"
+  },
+  "Search results": {
+    "Search results": "Serĉrezultoj"
+  },
+  "Show a toast containing the emoji after copying it.": {
+    "Show a toast containing the emoji after copying it.": "Montru rostpanon enhavantan la emoji post kopii ĝin."
+  },
+  "Smileys & People": {
+    "Smileys & People": "Ridetonoj & Homoj"
+  },
+  "Symbols": {
+    "Symbols": "Simboloj"
+  },
+  "Toggle Picker": {
+    "Toggle Picker": "Baskuligi elektilon"
+  },
+  "Travel & Places": {
+    "Travel & Places": "Vojaĝoj & Lokoj"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Gvidilo pri Uzado"
+  },
+  "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": {
+    "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": "Kun malplena vico, <b>maldekstre alklaku</b> aŭ <b>Enigu</b> kopias la elektitan emoji."
+  },
+  "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": {
+    "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": "Kun malplena vico, <b>dekstre alklaku</b> aŭ <b>Ctrl+Enter</b> kopias kaj algluas la elektitan emoji."
+  },
+  "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
+    "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "Kun emojis envicigitaj, <b>Enter</b> kopias la sekvencon kaj <b>Ctrl+Enter</b> algluas ĝin."
+  }
+}

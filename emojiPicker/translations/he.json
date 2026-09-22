@@ -1,0 +1,146 @@
+{
+  "Activities": {
+    "Activities": "פעילויות"
+  },
+  "Animals & Nature": {
+    "Animals & Nature": "בעלי חיים וטבע"
+  },
+  "Appearance": {
+    "Appearance": "הוֹפָעָה"
+  },
+  "Auto": {
+    "Auto": "אוטומטי"
+  },
+  "Choose the modal size that best fits your display.": {
+    "Choose the modal size that best fits your display.": "בחר את הגודל המודאלי המתאים ביותר לתצוגה שלך."
+  },
+  "Clear All": {
+    "Clear All": "נקה הכל"
+  },
+  "Clear History": {
+    "Clear History": "נקה היסטוריה"
+  },
+  "Clear Recent History": {
+    "Clear Recent History": "נקה היסטוריה אחרונה"
+  },
+  "Close": {
+    "Close": "לִסְגוֹר"
+  },
+  "Close Picker": {
+    "Close Picker": "סגור את הבורר"
+  },
+  "Comfortable (560 px)": {
+    "Comfortable (560 px)": "נוח (560 פיקסלים)"
+  },
+  "Compact (500 px)": {
+    "Compact (500 px)": "קומפקטי (500 פיקסלים)"
+  },
+  "Copied %1 to clipboard": {
+    "Copied %1 to clipboard": "הועתק% 1 ללוח"
+  },
+  "Copy": {
+    "Copy": "לְהַעְתִיק"
+  },
+  "Copy Confirmation": {
+    "Copy Confirmation": "העתק אישור"
+  },
+  "Default Category": {
+    "Default Category": "קטגוריית ברירת מחדל"
+  },
+  "Emoji Picker": {
+    "Emoji Picker": "בוחר אימוג'י"
+  },
+  "Failed to copy emoji": {
+    "Failed to copy emoji": "ההעתקה של האמוג'י נכשלה"
+  },
+  "Feedback": {
+    "Feedback": "מָשׁוֹב"
+  },
+  "Flags": {
+    "Flags": "דגלים"
+  },
+  "Food & Drink": {
+    "Food & Drink": "אוכל ושתייה"
+  },
+  "General": {
+    "General": "כְּלָלִי"
+  },
+  "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": {
+    "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": "החזק את <b>Shift</b> תוך כדי לחיצה שמאלית או הקשה על <b>Enter</b> כדי להוסיף אמוג'י לתור."
+  },
+  "IPC Commands": {
+    "IPC Commands": "פקודות IPC"
+  },
+  "Large (620 px)": {
+    "Large (620 px)": "גדול (620 פיקסלים)"
+  },
+  "No emoji found": {
+    "No emoji found": "לא נמצא אמוג'י"
+  },
+  "Objects": {
+    "Objects": "חפצים"
+  },
+  "Open Picker": {
+    "Open Picker": "פתח את Picker"
+  },
+  "Paste": {
+    "Paste": "לְהַדבִּיק"
+  },
+  "Picker Size": {
+    "Picker Size": "גודל בוחר"
+  },
+  "Press <b>Backspace</b> to remove the last queued emoji.": {
+    "Press <b>Backspace</b> to remove the last queued emoji.": "הקש על <b>Backspace</b> כדי להסיר את האמוג'י האחרון בתור."
+  },
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "לחץ על <b>למטה</b> או על <b>Tab</b> כדי לעבור מחיפוש לרשת האמוג'י."
+  },
+  "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
+    "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "לחץ על <b>Escape</b> כדי למחוק את התור, או סגור את הבורר כשהתור ריק."
+  },
+  "Recent History": {
+    "Recent History": "היסטוריה אחרונה"
+  },
+  "Recent History Size": {
+    "Recent History Size": "גודל היסטוריה אחרונה"
+  },
+  "Recent emoji history cleared": {
+    "Recent emoji history cleared": "היסטוריית האמוג'י האחרונה נוקתה"
+  },
+  "Recently Used": {
+    "Recently Used": "בשימוש לאחרונה"
+  },
+  "Search emoji": {
+    "Search emoji": "חפש אימוג'י"
+  },
+  "Search results": {
+    "Search results": "תוצאות חיפוש"
+  },
+  "Show a toast containing the emoji after copying it.": {
+    "Show a toast containing the emoji after copying it.": "הצג טוסט המכיל את האימוג'י לאחר העתקתו."
+  },
+  "Smileys & People": {
+    "Smileys & People": "סמיילי ואנשים"
+  },
+  "Symbols": {
+    "Symbols": "סמלים"
+  },
+  "Toggle Picker": {
+    "Toggle Picker": "החלף את הבורר"
+  },
+  "Travel & Places": {
+    "Travel & Places": "נסיעות ומקומות"
+  },
+  "Usage Guide": {
+    "Usage Guide": "מדריך שימוש"
+  },
+  "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": {
+    "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": "עם תור ריק, <b>לחץ לחיצה ימנית</b> או <b>Enter</b> מעתיק את האימוג'י שנבחר."
+  },
+  "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": {
+    "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": "עם תור ריק, <b>לחץ לחיצה ימנית</b> או <b>Ctrl+Enter</b> מעתיק ומדביק את האימוג'י שנבחר."
+  },
+  "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
+    "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "כשאימוג'י תור, <b>Enter</b> מעתיק את הרצף ו<b>Ctrl+Enter</b> מדביק אותו."
+  }
+}

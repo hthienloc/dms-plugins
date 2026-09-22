@@ -1,0 +1,146 @@
+{
+  "Activities": {
+    "Activities": "活动"
+  },
+  "Animals & Nature": {
+    "Animals & Nature": "动物与自然"
+  },
+  "Appearance": {
+    "Appearance": "外貌"
+  },
+  "Auto": {
+    "Auto": "汽车"
+  },
+  "Choose the modal size that best fits your display.": {
+    "Choose the modal size that best fits your display.": "选择最适合您的显示器的模态尺寸。"
+  },
+  "Clear All": {
+    "Clear All": "全部清除"
+  },
+  "Clear History": {
+    "Clear History": "清除历史记录"
+  },
+  "Clear Recent History": {
+    "Clear Recent History": "清除最近的历史记录"
+  },
+  "Close": {
+    "Close": "关闭"
+  },
+  "Close Picker": {
+    "Close Picker": "关闭选择器"
+  },
+  "Comfortable (560 px)": {
+    "Comfortable (560 px)": "舒适（560 像素）"
+  },
+  "Compact (500 px)": {
+    "Compact (500 px)": "紧凑（500 像素）"
+  },
+  "Copied %1 to clipboard": {
+    "Copied %1 to clipboard": "已将 %1 复制到剪贴板"
+  },
+  "Copy": {
+    "Copy": "复制"
+  },
+  "Copy Confirmation": {
+    "Copy Confirmation": "复制确认"
+  },
+  "Default Category": {
+    "Default Category": "默认类别"
+  },
+  "Emoji Picker": {
+    "Emoji Picker": "表情符号选择器"
+  },
+  "Failed to copy emoji": {
+    "Failed to copy emoji": "复制表情符号失败"
+  },
+  "Feedback": {
+    "Feedback": "反馈"
+  },
+  "Flags": {
+    "Flags": "旗帜"
+  },
+  "Food & Drink": {
+    "Food & Drink": "食品和饮料"
+  },
+  "General": {
+    "General": "一般的"
+  },
+  "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": {
+    "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": "按住 <b>Shift</b> 的同时左键单击或按 <b>Enter</b> 可将表情符号添加到队列中。"
+  },
+  "IPC Commands": {
+    "IPC Commands": "工控机命令"
+  },
+  "Large (620 px)": {
+    "Large (620 px)": "大（620 像素）"
+  },
+  "No emoji found": {
+    "No emoji found": "没有找到表情符号"
+  },
+  "Objects": {
+    "Objects": "对象"
+  },
+  "Open Picker": {
+    "Open Picker": "打开选择器"
+  },
+  "Paste": {
+    "Paste": "粘贴"
+  },
+  "Picker Size": {
+    "Picker Size": "拾取器尺寸"
+  },
+  "Press <b>Backspace</b> to remove the last queued emoji.": {
+    "Press <b>Backspace</b> to remove the last queued emoji.": "按<b>退格键</b>删除最后一个排队的表情符号。"
+  },
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "按<b>向下</b>或<b>Tab</b>从搜索移动到表情符号网格。"
+  },
+  "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
+    "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "按<b>Escape</b> 放弃队列，或在队列为空时关闭选取器。"
+  },
+  "Recent History": {
+    "Recent History": "近代历史"
+  },
+  "Recent History Size": {
+    "Recent History Size": "最近历史规模"
+  },
+  "Recent emoji history cleared": {
+    "Recent emoji history cleared": "最近的表情符号历史记录已清除"
+  },
+  "Recently Used": {
+    "Recently Used": "最近使用过"
+  },
+  "Search emoji": {
+    "Search emoji": "搜索表情符号"
+  },
+  "Search results": {
+    "Search results": "搜索结果"
+  },
+  "Show a toast containing the emoji after copying it.": {
+    "Show a toast containing the emoji after copying it.": "复制后显示包含表情符号的吐司。"
+  },
+  "Smileys & People": {
+    "Smileys & People": "表情符号与人物"
+  },
+  "Symbols": {
+    "Symbols": "符号"
+  },
+  "Toggle Picker": {
+    "Toggle Picker": "切换选择器"
+  },
+  "Travel & Places": {
+    "Travel & Places": "旅行与地点"
+  },
+  "Usage Guide": {
+    "Usage Guide": "使用指南"
+  },
+  "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": {
+    "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": "对于空队列，<b>左键单击</b>或<b>Enter</b>复制选定的表情符号。"
+  },
+  "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": {
+    "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": "对于空队列，<b>右键单击</b>或<b>Ctrl+Enter</b>复制并粘贴选定的表情符号。"
+  },
+  "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
+    "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "当表情符号排队时，<b>Enter</b> 复制序列并 <b>Ctrl+Enter</b> 粘贴它。"
+  }
+}

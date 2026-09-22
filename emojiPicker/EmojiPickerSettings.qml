@@ -11,7 +11,7 @@ PluginSettings {
 
     SettingsCard {
         SectionTitle {
-            text: I18n.tr("General")
+            text: I18n.trFor("emojiPicker", "General")
             icon: "settings"
             showReset: defaultCategory.isDirty || recentLimit.isDirty
             onResetClicked: {
@@ -23,19 +23,19 @@ PluginSettings {
         SelectionSettingPlus {
             id: defaultCategory
             settingKey: "defaultCategory"
-            label: I18n.tr("Default Category")
+            label: I18n.trFor("emojiPicker", "Default Category")
             defaultValue: "auto"
             options: [
-                { label: I18n.tr("Auto"), value: "auto" },
-                { label: I18n.tr("Recently Used"), value: "recent" },
-                { label: I18n.tr("Smileys & People"), value: "smileys-people" },
-                { label: I18n.tr("Animals & Nature"), value: "animals-nature" },
-                { label: I18n.tr("Food & Drink"), value: "food-drink" },
-                { label: I18n.tr("Activities"), value: "activities" },
-                { label: I18n.tr("Travel & Places"), value: "travel-places" },
-                { label: I18n.tr("Objects"), value: "objects" },
-                { label: I18n.tr("Symbols"), value: "symbols" },
-                { label: I18n.tr("Flags"), value: "flags" }
+                { label: I18n.trFor("emojiPicker", "Auto"), value: "auto" },
+                { label: I18n.trFor("emojiPicker", "Recently Used"), value: "recent" },
+                { label: I18n.trFor("emojiPicker", "Smileys & People"), value: "smileys-people" },
+                { label: I18n.trFor("emojiPicker", "Animals & Nature"), value: "animals-nature" },
+                { label: I18n.trFor("emojiPicker", "Food & Drink"), value: "food-drink" },
+                { label: I18n.trFor("emojiPicker", "Activities"), value: "activities" },
+                { label: I18n.trFor("emojiPicker", "Travel & Places"), value: "travel-places" },
+                { label: I18n.trFor("emojiPicker", "Objects"), value: "objects" },
+                { label: I18n.trFor("emojiPicker", "Symbols"), value: "symbols" },
+                { label: I18n.trFor("emojiPicker", "Flags"), value: "flags" }
             ]
         }
 
@@ -44,7 +44,7 @@ PluginSettings {
         SliderSettingPlus {
             id: recentLimit
             settingKey: "recentLimit"
-            label: I18n.tr("Recent History Size")
+            label: I18n.trFor("emojiPicker", "Recent History Size")
             minimum: 5
             maximum: 100
             defaultValue: 30
@@ -59,7 +59,7 @@ PluginSettings {
             height: 36
 
             StyledText {
-                text: I18n.tr("Recent History")
+                text: I18n.trFor("emojiPicker", "Recent History")
                 color: Theme.surfaceText
                 font.pixelSize: Theme.fontSizeMedium
                 anchors.left: parent.left
@@ -69,13 +69,13 @@ PluginSettings {
             DankButton {
                 anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
-                text: I18n.tr("Clear History")
+                text: I18n.trFor("emojiPicker", "Clear History")
                 iconName: "delete_sweep"
                 textColor: Theme.error
                 backgroundColor: Theme.withAlpha(Theme.error, 0.12)
                 onClicked: {
                     PluginService.savePluginState(root.pluginId, "recent", []);
-                    ToastService.showInfo(I18n.tr("Recent emoji history cleared"));
+                    ToastService.showInfo(I18n.trFor("emojiPicker", "Recent emoji history cleared"));
                 }
             }
         }
@@ -83,7 +83,7 @@ PluginSettings {
 
     SettingsCard {
         SectionTitle {
-            text: I18n.tr("Appearance")
+            text: I18n.trFor("emojiPicker", "Appearance")
             icon: "palette"
             showReset: pickerSize.isDirty
             onResetClicked: pickerSize.resetToDefault()
@@ -92,20 +92,20 @@ PluginSettings {
         SelectionSettingPlus {
             id: pickerSize
             settingKey: "pickerSize"
-            label: I18n.tr("Picker Size")
-            description: I18n.tr("Choose the modal size that best fits your display.")
+            label: I18n.trFor("emojiPicker", "Picker Size")
+            description: I18n.trFor("emojiPicker", "Choose the modal size that best fits your display.")
             defaultValue: "560"
             options: [
-                { label: I18n.tr("Compact (500 px)"), value: "500" },
-                { label: I18n.tr("Comfortable (560 px)"), value: "560" },
-                { label: I18n.tr("Large (620 px)"), value: "620" }
+                { label: I18n.trFor("emojiPicker", "Compact (500 px)"), value: "500" },
+                { label: I18n.trFor("emojiPicker", "Comfortable (560 px)"), value: "560" },
+                { label: I18n.trFor("emojiPicker", "Large (620 px)"), value: "620" }
             ]
         }
     }
 
     SettingsCard {
         SectionTitle {
-            text: I18n.tr("Feedback")
+            text: I18n.trFor("emojiPicker", "Feedback")
             icon: "notifications"
             showReset: showCopyToast.isDirty
             onResetClicked: showCopyToast.resetToDefault()
@@ -114,8 +114,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: showCopyToast
             settingKey: "showCopyToast"
-            label: I18n.tr("Copy Confirmation")
-            description: I18n.tr("Show a toast containing the emoji after copying it.")
+            label: I18n.trFor("emojiPicker", "Copy Confirmation")
+            description: I18n.trFor("emojiPicker", "Show a toast containing the emoji after copying it.")
             defaultValue: true
         }
     }
@@ -123,7 +123,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle {
             id: usageTitle
-            text: I18n.tr("Usage Guide")
+            text: I18n.trFor("emojiPicker", "Usage Guide")
             icon: "menu_book"
             collapsible: true
             settingKey: "usageGuideExpanded"
@@ -132,13 +132,13 @@ PluginSettings {
         UsageGuide {
             expanded: usageTitle.isExpanded
             items: [
-                I18n.tr("With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji."),
-                I18n.tr("With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji."),
-                I18n.tr("Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue."),
-                I18n.tr("With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it."),
-                I18n.tr("Press <b>Backspace</b> to remove the last queued emoji."),
-                I18n.tr("Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid."),
-                I18n.tr("Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.")
+                I18n.trFor("emojiPicker", "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji."),
+                I18n.trFor("emojiPicker", "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji."),
+                I18n.trFor("emojiPicker", "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue."),
+                I18n.trFor("emojiPicker", "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it."),
+                I18n.trFor("emojiPicker", "Press <b>Backspace</b> to remove the last queued emoji."),
+                I18n.trFor("emojiPicker", "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid."),
+                I18n.trFor("emojiPicker", "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.")
             ]
         }
     }
@@ -146,7 +146,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle {
             id: ipcTitle
-            text: I18n.tr("IPC Commands")
+            text: I18n.trFor("emojiPicker", "IPC Commands")
             icon: "terminal"
             collapsible: true
             settingKey: "ipcCommandsExpanded"
@@ -158,22 +158,22 @@ PluginSettings {
             visible: ipcTitle.isExpanded
 
             CopyBox {
-                label: I18n.tr("Toggle Picker")
+                label: I18n.trFor("emojiPicker", "Toggle Picker")
                 text: "dms ipc call emojiPicker toggle"
             }
 
             CopyBox {
-                label: I18n.tr("Open Picker")
+                label: I18n.trFor("emojiPicker", "Open Picker")
                 text: "dms ipc call emojiPicker open"
             }
 
             CopyBox {
-                label: I18n.tr("Close Picker")
+                label: I18n.trFor("emojiPicker", "Close Picker")
                 text: "dms ipc call emojiPicker close"
             }
 
             CopyBox {
-                label: I18n.tr("Clear Recent History")
+                label: I18n.trFor("emojiPicker", "Clear Recent History")
                 text: "dms ipc call emojiPicker clearRecent"
             }
         }

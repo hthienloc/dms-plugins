@@ -1,0 +1,146 @@
+{
+  "Activities": {
+    "Activities": "дейности"
+  },
+  "Animals & Nature": {
+    "Animals & Nature": "Животни и природа"
+  },
+  "Appearance": {
+    "Appearance": "Външен вид"
+  },
+  "Auto": {
+    "Auto": "Авто"
+  },
+  "Choose the modal size that best fits your display.": {
+    "Choose the modal size that best fits your display.": "Изберете модалния размер, който най-добре пасва на вашия дисплей."
+  },
+  "Clear All": {
+    "Clear All": "Изчистване на всички"
+  },
+  "Clear History": {
+    "Clear History": "Изчистване на историята"
+  },
+  "Clear Recent History": {
+    "Clear Recent History": "Изчистване на скорошната история"
+  },
+  "Close": {
+    "Close": "затвори"
+  },
+  "Close Picker": {
+    "Close Picker": "Затворете инструмента за избор"
+  },
+  "Comfortable (560 px)": {
+    "Comfortable (560 px)": "Удобен (560 px)"
+  },
+  "Compact (500 px)": {
+    "Compact (500 px)": "Компактен (500 px)"
+  },
+  "Copied %1 to clipboard": {
+    "Copied %1 to clipboard": "Копиран %1 в клипборда"
+  },
+  "Copy": {
+    "Copy": "копие"
+  },
+  "Copy Confirmation": {
+    "Copy Confirmation": "Потвърждение за копиране"
+  },
+  "Default Category": {
+    "Default Category": "Категория по подразбиране"
+  },
+  "Emoji Picker": {
+    "Emoji Picker": "Избор на емотикони"
+  },
+  "Failed to copy emoji": {
+    "Failed to copy emoji": "Неуспешно копиране на емотикони"
+  },
+  "Feedback": {
+    "Feedback": "Обратна връзка"
+  },
+  "Flags": {
+    "Flags": "Знамена"
+  },
+  "Food & Drink": {
+    "Food & Drink": "Храна и напитки"
+  },
+  "General": {
+    "General": "генерал"
+  },
+  "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": {
+    "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": "Задръжте <b>Shift</b>, докато щраквате с левия бутон или натискате <b>Enter</b>, за да добавите емотикони към опашка."
+  },
+  "IPC Commands": {
+    "IPC Commands": "IPC команди"
+  },
+  "Large (620 px)": {
+    "Large (620 px)": "Голям (620 px)"
+  },
+  "No emoji found": {
+    "No emoji found": "Няма намерени емотикони"
+  },
+  "Objects": {
+    "Objects": "Обекти"
+  },
+  "Open Picker": {
+    "Open Picker": "Отворете инструмента за избор"
+  },
+  "Paste": {
+    "Paste": "Залепете"
+  },
+  "Picker Size": {
+    "Picker Size": "Размер на инструмента за избор"
+  },
+  "Press <b>Backspace</b> to remove the last queued emoji.": {
+    "Press <b>Backspace</b> to remove the last queued emoji.": "Натиснете <b>Backspace</b>, за да премахнете последното емоджи в опашката."
+  },
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "Натиснете <b>Надолу</b> или <b>Tab</b>, за да преминете от търсене към мрежата с емотикони."
+  },
+  "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
+    "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "Натиснете <b>Escape</b>, за да отхвърлите опашката, или затворете инструмента за избор, когато опашката е празна."
+  },
+  "Recent History": {
+    "Recent History": "Скорошна история"
+  },
+  "Recent History Size": {
+    "Recent History Size": "Размер на скорошната история"
+  },
+  "Recent emoji history cleared": {
+    "Recent emoji history cleared": "Скорошната история на емотикони е изчистена"
+  },
+  "Recently Used": {
+    "Recently Used": "Наскоро използван"
+  },
+  "Search emoji": {
+    "Search emoji": "Търсене на емотикони"
+  },
+  "Search results": {
+    "Search results": "Резултати от търсенето"
+  },
+  "Show a toast containing the emoji after copying it.": {
+    "Show a toast containing the emoji after copying it.": "Покажете тост, съдържащ емоджито, след като го копирате."
+  },
+  "Smileys & People": {
+    "Smileys & People": "Усмивки и хора"
+  },
+  "Symbols": {
+    "Symbols": "Символи"
+  },
+  "Toggle Picker": {
+    "Toggle Picker": "Превключване на инструмента за избор"
+  },
+  "Travel & Places": {
+    "Travel & Places": "Пътуване и места"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Ръководство за употреба"
+  },
+  "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": {
+    "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": "При празна опашка, <b>щракване с ляв бутон</b> или <b>Enter</b> копира избраното емоджи."
+  },
+  "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": {
+    "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": "При празна опашка, <b>щракване с десен бутон</b> или <b>Ctrl+Enter</b> копира и поставя избраните емотикони."
+  },
+  "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
+    "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "Когато емотикони са на опашка, <b>Enter</b> копира последователността и <b>Ctrl+Enter</b> я поставя."
+  }
+}

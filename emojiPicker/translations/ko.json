@@ -1,0 +1,146 @@
+{
+  "Activities": {
+    "Activities": "활동"
+  },
+  "Animals & Nature": {
+    "Animals & Nature": "동물과 자연"
+  },
+  "Appearance": {
+    "Appearance": "모습"
+  },
+  "Auto": {
+    "Auto": "자동"
+  },
+  "Choose the modal size that best fits your display.": {
+    "Choose the modal size that best fits your display.": "디스플레이에 가장 적합한 모달 크기를 선택하세요."
+  },
+  "Clear All": {
+    "Clear All": "모두 지우기"
+  },
+  "Clear History": {
+    "Clear History": "기록 지우기"
+  },
+  "Clear Recent History": {
+    "Clear Recent History": "최근 기록 지우기"
+  },
+  "Close": {
+    "Close": "닫다"
+  },
+  "Close Picker": {
+    "Close Picker": "선택도구 닫기"
+  },
+  "Comfortable (560 px)": {
+    "Comfortable (560 px)": "편안함(560px)"
+  },
+  "Compact (500 px)": {
+    "Compact (500 px)": "컴팩트(500px)"
+  },
+  "Copied %1 to clipboard": {
+    "Copied %1 to clipboard": "%1을(를)클립보드에 복사했습니다"
+  },
+  "Copy": {
+    "Copy": "복사"
+  },
+  "Copy Confirmation": {
+    "Copy Confirmation": "복사 확인"
+  },
+  "Default Category": {
+    "Default Category": "기본 카테고리"
+  },
+  "Emoji Picker": {
+    "Emoji Picker": "이모티콘 선택기"
+  },
+  "Failed to copy emoji": {
+    "Failed to copy emoji": "이모티콘을 복사하지 못했습니다."
+  },
+  "Feedback": {
+    "Feedback": "피드백"
+  },
+  "Flags": {
+    "Flags": "플래그"
+  },
+  "Food & Drink": {
+    "Food & Drink": "음식 및 음료"
+  },
+  "General": {
+    "General": "일반적인"
+  },
+  "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": {
+    "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": "대기열에 이모티콘을 추가하려면 <b>Shift</b>를 누른 채 마우스 왼쪽 버튼을 클릭하거나 <b>Enter</b>를 누르세요."
+  },
+  "IPC Commands": {
+    "IPC Commands": "IPC 명령"
+  },
+  "Large (620 px)": {
+    "Large (620 px)": "대형(620px)"
+  },
+  "No emoji found": {
+    "No emoji found": "이모티콘을 찾을 수 없습니다."
+  },
+  "Objects": {
+    "Objects": "사물"
+  },
+  "Open Picker": {
+    "Open Picker": "선택기 열기"
+  },
+  "Paste": {
+    "Paste": "반죽"
+  },
+  "Picker Size": {
+    "Picker Size": "피커 크기"
+  },
+  "Press <b>Backspace</b> to remove the last queued emoji.": {
+    "Press <b>Backspace</b> to remove the last queued emoji.": "마지막으로 대기 중인 이모티콘을 제거하려면 <b>백스페이스</b>를 누르세요."
+  },
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "검색에서 그림 이모티콘 그리드로 이동하려면 <b>아래쪽</b> 또는 <b>Tab</b>을 누르세요."
+  },
+  "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
+    "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "대기열을 삭제하려면 <b>Escape</b>를 누르거나 대기열이 비어 있으면 선택기를 닫으세요."
+  },
+  "Recent History": {
+    "Recent History": "최근 역사"
+  },
+  "Recent History Size": {
+    "Recent History Size": "최근 기록 크기"
+  },
+  "Recent emoji history cleared": {
+    "Recent emoji history cleared": "최근 이모티콘 기록이 삭제되었습니다."
+  },
+  "Recently Used": {
+    "Recently Used": "최근 사용됨"
+  },
+  "Search emoji": {
+    "Search emoji": "이모티콘 검색"
+  },
+  "Search results": {
+    "Search results": "검색결과"
+  },
+  "Show a toast containing the emoji after copying it.": {
+    "Show a toast containing the emoji after copying it.": "복사한 후 이모티콘이 포함된 토스트를 표시합니다."
+  },
+  "Smileys & People": {
+    "Smileys & People": "스마일리와 사람"
+  },
+  "Symbols": {
+    "Symbols": "기호"
+  },
+  "Toggle Picker": {
+    "Toggle Picker": "토글 선택기"
+  },
+  "Travel & Places": {
+    "Travel & Places": "여행 및 장소"
+  },
+  "Usage Guide": {
+    "Usage Guide": "이용안내"
+  },
+  "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": {
+    "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": "대기열이 비어 있는 경우 <b>왼쪽 클릭</b> 또는 <b>Enter</b>를 누르면 선택한 이모티콘이 복사됩니다."
+  },
+  "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": {
+    "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": "대기열이 비어 있는 경우 <b>마우스 오른쪽 버튼을 클릭</b>하거나 <b>Ctrl+Enter</b>를 누르면 선택한 이모티콘이 복사되어 붙여넣어집니다."
+  },
+  "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
+    "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "이모티콘이 대기열에 있는 경우 <b>Enter</b>를 누르면 시퀀스가 ​​복사되고 <b>Ctrl+Enter</b>를 붙여넣습니다."
+  }
+}

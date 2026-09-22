@@ -1,0 +1,146 @@
+{
+  "Activities": {
+    "Activities": "Tevékenységek"
+  },
+  "Animals & Nature": {
+    "Animals & Nature": "Állatok és természet"
+  },
+  "Appearance": {
+    "Appearance": "Megjelenés"
+  },
+  "Auto": {
+    "Auto": "Auto"
+  },
+  "Choose the modal size that best fits your display.": {
+    "Choose the modal size that best fits your display.": "Válassza ki a kijelzőjéhez legjobban illeszkedő modális méretet."
+  },
+  "Clear All": {
+    "Clear All": "Összes törlése"
+  },
+  "Clear History": {
+    "Clear History": "Törölje az előzményeket"
+  },
+  "Clear Recent History": {
+    "Clear Recent History": "Legutóbbi előzmények törlése"
+  },
+  "Close": {
+    "Close": "Közeli"
+  },
+  "Close Picker": {
+    "Close Picker": "Zárja be a Pickert"
+  },
+  "Comfortable (560 px)": {
+    "Comfortable (560 px)": "Kényelmes (560 px)"
+  },
+  "Compact (500 px)": {
+    "Compact (500 px)": "Kompakt (500 px)"
+  },
+  "Copied %1 to clipboard": {
+    "Copied %1 to clipboard": "%1 a vágólapra másolva"
+  },
+  "Copy": {
+    "Copy": "Másolat"
+  },
+  "Copy Confirmation": {
+    "Copy Confirmation": "Megerősítés másolása"
+  },
+  "Default Category": {
+    "Default Category": "Alapértelmezett kategória"
+  },
+  "Emoji Picker": {
+    "Emoji Picker": "Hangulatjelválasztó"
+  },
+  "Failed to copy emoji": {
+    "Failed to copy emoji": "Nem sikerült a hangulatjel másolása"
+  },
+  "Feedback": {
+    "Feedback": "Visszacsatolás"
+  },
+  "Flags": {
+    "Flags": "Zászlók"
+  },
+  "Food & Drink": {
+    "Food & Drink": "Étel és ital"
+  },
+  "General": {
+    "General": "Általános"
+  },
+  "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": {
+    "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue.": "Tartsa lenyomva a <b>Shift</b> billentyűt, miközben bal egérgombbal kattint, vagy nyomja meg az <b>Enter</b> billentyűt, ha hangulatjeleket szeretne hozzáadni a sorhoz."
+  },
+  "IPC Commands": {
+    "IPC Commands": "IPC parancsok"
+  },
+  "Large (620 px)": {
+    "Large (620 px)": "Nagy (620 px)"
+  },
+  "No emoji found": {
+    "No emoji found": "Nem található hangulatjel"
+  },
+  "Objects": {
+    "Objects": "Objektumok"
+  },
+  "Open Picker": {
+    "Open Picker": "Nyissa meg a Pickert"
+  },
+  "Paste": {
+    "Paste": "Paszta"
+  },
+  "Picker Size": {
+    "Picker Size": "Kiválasztó mérete"
+  },
+  "Press <b>Backspace</b> to remove the last queued emoji.": {
+    "Press <b>Backspace</b> to remove the last queued emoji.": "Nyomja meg a <b>Backspace</b> billentyűt az utolsó sorba állított hangulatjel eltávolításához."
+  },
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "Nyomja meg a <b>Le</b> vagy a <b>Tab</b> billentyűt, hogy a keresésről a hangulatjel-rácsra lépjen."
+  },
+  "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
+    "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "Nyomja meg az <b>Escape</b> billentyűt a sor elvetéséhez, vagy zárja be a kiválasztót, ha a sor üres."
+  },
+  "Recent History": {
+    "Recent History": "Legújabb történelem"
+  },
+  "Recent History Size": {
+    "Recent History Size": "Legutóbbi történelem mérete"
+  },
+  "Recent emoji history cleared": {
+    "Recent emoji history cleared": "A legutóbbi hangulatjel-előzmények törölve"
+  },
+  "Recently Used": {
+    "Recently Used": "Nemrég használt"
+  },
+  "Search emoji": {
+    "Search emoji": "Emoji keresése"
+  },
+  "Search results": {
+    "Search results": "Keresési eredmények"
+  },
+  "Show a toast containing the emoji after copying it.": {
+    "Show a toast containing the emoji after copying it.": "A hangulatjelet tartalmazó pirítós megjelenítése a másolás után."
+  },
+  "Smileys & People": {
+    "Smileys & People": "Smileys & People"
+  },
+  "Symbols": {
+    "Symbols": "Szimbólumok"
+  },
+  "Toggle Picker": {
+    "Toggle Picker": "Kapcsolja be a Pickert"
+  },
+  "Travel & Places": {
+    "Travel & Places": "Utazás és helyek"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Használati útmutató"
+  },
+  "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": {
+    "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji.": "Üres sor esetén a <b>bal gombbal</b> vagy az <b>Enter</b> lenyomásával átmásolja a kiválasztott hangulatjelet."
+  },
+  "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": {
+    "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji.": "Üres várólista esetén a <b>jobb gombbal kattintva</b> vagy a <b>Ctrl+Enter</b> lenyomásával kimásolja és beilleszti a kiválasztott hangulatjelet."
+  },
+  "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
+    "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "Amikor a hangulatjelek sorba állnak, az <b>Enter</b> lemásolja a sorozatot, a <b>Ctrl+Enter</b> pedig beilleszti."
+  }
+}
