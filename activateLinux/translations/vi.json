@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "Kích hoạt Linux"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "Điều chỉnh độ trong suốt của hình mờ."
+  },
+  "Appearance": {
+    "Appearance": "Giao diện"
+  },
+  "Customization": {
+    "Customization": "Tùy biến"
+  },
+  "Customize Text": {
+    "Customize Text": "Tùy chỉnh văn bản"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "Bật <b>Tùy chỉnh văn bản</b> để ghi đè thông báo mặc định."
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "Bật ghi đè thủ công cho văn bản hình mờ."
+  },
+  "First Line": {
+    "First Line": "Dòng đầu tiên"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "Cỡ chữ dòng đầu"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "Đi tới Cài đặt để kích hoạt Linux."
+  },
+  "Opacity": {
+    "Opacity": "Độ mờ"
+  },
+  "Second Line": {
+    "Second Line": "Dòng thứ hai"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "Cỡ chữ dòng thứ hai"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "Plugin này hiển thị hình mờ không xâm phạm trên màn hình của bạn."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Hướng dẫn sử dụng"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "Bạn có thể điều chỉnh <b>cỡ chữ</b> và <b>độ mờ</b> cho phù hợp với hình nền."
+  }
+}

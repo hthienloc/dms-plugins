@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "فعال‌سازی لینوکس"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "تنظیم شفافیت واترمارک."
+  },
+  "Appearance": {
+    "Appearance": "ظاهر"
+  },
+  "Customization": {
+    "Customization": "شخصی‌سازی"
+  },
+  "Customize Text": {
+    "Customize Text": "شخصی‌سازی متن"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "برای تغییر پیام پیش‌فرض، <b>شخصی‌سازی متن</b> را فعال کنید."
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "فعال‌سازی بازنویسی دستی متن واترمارک."
+  },
+  "First Line": {
+    "First Line": "سطر اول"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "اندازه قلم سطر اول"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "برای فعال‌سازی لینوکس به تنظیمات بروید."
+  },
+  "Opacity": {
+    "Opacity": "کدری"
+  },
+  "Second Line": {
+    "Second Line": "سطر دوم"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "اندازه قلم سطر دوم"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "این افزونه یک واترمارک غیرمزاحم را روی دسکتاپ شما نمایش می‌دهد."
+  },
+  "Usage Guide": {
+    "Usage Guide": "راهنمای استفاده"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "می‌توانید <b>اندازه قلم‌ها</b> و <b>کدری</b> را متناسب با پس‌زمینه خود تنظیم کنید."
+  }
+}

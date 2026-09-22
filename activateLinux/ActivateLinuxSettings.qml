@@ -10,7 +10,7 @@ PluginSettings {
     SettingsCard {
         id: appearanceSection
         SectionTitle { 
-            text: I18n.tr("Appearance")
+            text: I18n.trFor("activateLinux", "Appearance")
             icon: "palette" 
             showReset: watermarkOpacity.isDirty || firstLineSize.isDirty || secondLineSize.isDirty
             onResetClicked: {
@@ -23,8 +23,8 @@ PluginSettings {
         SliderSettingPlus {
             id: watermarkOpacity
             settingKey: "watermarkOpacity"
-            label: I18n.tr("Opacity")
-            description: I18n.tr("Adjust the transparency of the watermark.")
+            label: I18n.trFor("activateLinux", "Opacity")
+            description: I18n.trFor("activateLinux", "Adjust the transparency of the watermark.")
             defaultValue: 40
             minimum: 0
             maximum: 100
@@ -38,7 +38,7 @@ PluginSettings {
         SliderSettingPlus {
             id: firstLineSize
             settingKey: "firstLineSize"
-            label: I18n.tr("First Line Font Size")
+            label: I18n.trFor("activateLinux", "First Line Font Size")
             defaultValue: 22
             minimum: 8
             maximum: 72
@@ -51,7 +51,7 @@ PluginSettings {
         SliderSettingPlus {
             id: secondLineSize
             settingKey: "secondLineSize"
-            label: I18n.tr("Second Line Font Size")
+            label: I18n.trFor("activateLinux", "Second Line Font Size")
             defaultValue: 14
             minimum: 8
             maximum: 48
@@ -63,7 +63,7 @@ PluginSettings {
     SettingsCard {
         id: customizationSection
         SectionTitle { 
-            text: I18n.tr("Customization")
+            text: I18n.trFor("activateLinux", "Customization")
             icon: "edit" 
             showReset: customizeText.isDirty || firstLine.isDirty || secondLine.isDirty
             onResetClicked: {
@@ -76,8 +76,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: customizeText
             settingKey: "customizeText"
-            label: I18n.tr("Customize Text")
-            description: I18n.tr("Enable manual override for the watermark text.")
+            label: I18n.trFor("activateLinux", "Customize Text")
+            description: I18n.trFor("activateLinux", "Enable manual override for the watermark text.")
             defaultValue: false
         }
 
@@ -86,7 +86,7 @@ PluginSettings {
         StringSettingPlus {
             id: firstLine
             settingKey: "firstLine"
-            label: I18n.tr("First Line")
+            label: I18n.trFor("activateLinux", "First Line")
             defaultValue: "Activate Linux"
             visible: customizeText.value
         }
@@ -96,7 +96,7 @@ PluginSettings {
         StringSettingPlus {
             id: secondLine
             settingKey: "secondLine"
-            label: I18n.tr("Second Line")
+            label: I18n.trFor("activateLinux", "Second Line")
             defaultValue: "Go to Settings to activate Linux."
             visible: customizeText.value
         }
@@ -105,7 +105,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle { 
             id: usageTitle
-            text: I18n.tr("Usage Guide")
+            text: I18n.trFor("activateLinux", "Usage Guide")
             icon: "menu_book" 
             collapsible: true
             settingKey: "usageGuideExpanded"
@@ -114,9 +114,9 @@ PluginSettings {
         UsageGuide {
             expanded: usageTitle.isExpanded
             items: [
-                I18n.tr("This plugin displays a non-intrusive watermark on your desktop."),
-                I18n.tr("Enable <b>Customize Text</b> to override the default message."),
-                I18n.tr("You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.")
+                I18n.trFor("activateLinux", "This plugin displays a non-intrusive watermark on your desktop."),
+                I18n.trFor("activateLinux", "Enable <b>Customize Text</b> to override the default message."),
+                I18n.trFor("activateLinux", "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.")
             ]
         }
     }

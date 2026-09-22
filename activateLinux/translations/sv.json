@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "Aktivera Linux"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "Justera vattenstämpelns genomskinlighet."
+  },
+  "Appearance": {
+    "Appearance": "Utseende"
+  },
+  "Customization": {
+    "Customization": "Anpassning"
+  },
+  "Customize Text": {
+    "Customize Text": "Anpassa text"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "Aktivera <b>Anpassa text</b> för att åsidosätta standardmeddelandet."
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "Aktivera manuell åsidosättning av vattenstämpeltexten."
+  },
+  "First Line": {
+    "First Line": "Första raden"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "Teckenstorlek första raden"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "Gå till Inställningar för att aktivera Linux."
+  },
+  "Opacity": {
+    "Opacity": "Opacitet"
+  },
+  "Second Line": {
+    "Second Line": "Andra raden"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "Teckenstorlek andra raden"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "Detta tillägg visar en diskret vattenstämpel på skrivbordet."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Användarguide"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "Du kan justera <b>teckenstorlekar</b> och <b>opacitet</b> för att matcha bakgrunden."
+  }
+}

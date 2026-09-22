@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "Linux'u Etkinleştir"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "Filigranın şeffaflığını ayarlayın."
+  },
+  "Appearance": {
+    "Appearance": "Görünüm"
+  },
+  "Customization": {
+    "Customization": "Özelleştirme"
+  },
+  "Customize Text": {
+    "Customize Text": "Metni Özelleştir"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "Varsayılan mesajı geçersiz kılmak için <b>Metni Özelleştir</b>'i etkinleştirin."
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "Filigran metni için manuel geçersiz kılmayı etkinleştirin."
+  },
+  "First Line": {
+    "First Line": "Birinci Satır"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "Birinci Satır Yazı Tipi Boyutu"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "Linux'u etkinleştirmek için Ayarlar'a gidin."
+  },
+  "Opacity": {
+    "Opacity": "Opaklık"
+  },
+  "Second Line": {
+    "Second Line": "İkinci Satır"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "İkinci Satır Yazı Tipi Boyutu"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "Bu eklenti, masaüstünüzde göze çarpmayan bir filigran görüntüler."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Kullanım Kılavuzu"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "Arka planınıza uyacak şekilde <b>yazı tipi boyutlarını</b> ve <b>opaklığı</b> ayarlayabilirsiniz."
+  }
+}

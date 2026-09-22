@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "Linux activeren"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "Pas de transparantie van het watermerk aan."
+  },
+  "Appearance": {
+    "Appearance": "Uiterlijk"
+  },
+  "Customization": {
+    "Customization": "Aanpassing"
+  },
+  "Customize Text": {
+    "Customize Text": "Tekst aanpassen"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "Schakel <b>Tekst aanpassen</b> in om het standaardbericht te overschrijven."
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "Handmatige overschrijving voor de watermerktekst inschakelen."
+  },
+  "First Line": {
+    "First Line": "Eerste regel"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "Lettergrootte eerste regel"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "Ga naar Instellingen om Linux te activeren."
+  },
+  "Opacity": {
+    "Opacity": "Dekking"
+  },
+  "Second Line": {
+    "Second Line": "Tweede regel"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "Lettergrootte tweede regel"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "Deze plug-in toont een subtiel watermerk op uw bureaublad."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Gebruikershandleiding"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "U kunt de <b>lettergroottes</b> en <b>dekking</b> aanpassen aan uw achtergrond."
+  }
+}

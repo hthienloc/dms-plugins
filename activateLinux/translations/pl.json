@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "Aktywuj system Linux"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "Dostosuj przezroczystość znaku wodnego."
+  },
+  "Appearance": {
+    "Appearance": "Wygląd"
+  },
+  "Customization": {
+    "Customization": "Personalizacja"
+  },
+  "Customize Text": {
+    "Customize Text": "Dostosuj tekst"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "Włącz <b>Dostosuj tekst</b>, aby zastąpić domyślną wiadomość."
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "Włącz ręczne zastępowanie tekstu znaku wodnego."
+  },
+  "First Line": {
+    "First Line": "Pierwsza linia"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "Rozmiar czcionki pierwszej linii"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "Przejdź do Ustawień, aby aktywować system Linux."
+  },
+  "Opacity": {
+    "Opacity": "Przezroczystość"
+  },
+  "Second Line": {
+    "Second Line": "Druga linia"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "Rozmiar czcionki drugiej linii"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "Ta wtyczka wyświetla nieinwazyjny znak wodny na pulpicie."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Instrukcja obsługi"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "Możesz dostosować <b>rozmiar czcionki</b> i <b>przezroczystość</b> do swojego tła."
+  }
+}

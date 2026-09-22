@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "تنشيط Linux"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "ضبط شفافية العلامة المائية."
+  },
+  "Appearance": {
+    "Appearance": "المظهر"
+  },
+  "Customization": {
+    "Customization": "التخصيص"
+  },
+  "Customize Text": {
+    "Customize Text": "تخصيص النص"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "مكّن <b>تخصيص النص</b> لتجاوز الرسالة الافتراضية."
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "تمكين التجاوز اليدوي لنص العلامة المائية."
+  },
+  "First Line": {
+    "First Line": "السطر الأول"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "حجم خط السطر الأول"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "انتقل إلى الإعدادات لتنشيط Linux."
+  },
+  "Opacity": {
+    "Opacity": "التعتيم"
+  },
+  "Second Line": {
+    "Second Line": "السطر الثاني"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "حجم خط السطر الثاني"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "تعرض هذه الإضافة علامة مائية غير مزعجة على سطح المكتب."
+  },
+  "Usage Guide": {
+    "Usage Guide": "دليل الاستخدام"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "يمكنك ضبط <b>أحجام الخطوط</b> و<b>التعتيم</b> لتتناسب مع خلفيتك."
+  }
+}

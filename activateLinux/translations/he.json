@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "הפעל את Linux"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "התאם את שקיפות סימן המים."
+  },
+  "Appearance": {
+    "Appearance": "מראה"
+  },
+  "Customization": {
+    "Customization": "התאמה אישית"
+  },
+  "Customize Text": {
+    "Customize Text": "התאמת טקסט"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "הפעל את <b>התאמת טקסט</b> כדי להחליף את הודעת ברירת המחדל."
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "אפשר החלפה ידנית של טקסט סימן המים."
+  },
+  "First Line": {
+    "First Line": "שורה ראשונה"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "גודל גופן שורה ראשונה"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "עבור להגדרות כדי להפעיל את Linux."
+  },
+  "Opacity": {
+    "Opacity": "אטימות"
+  },
+  "Second Line": {
+    "Second Line": "שורה שנייה"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "גודל גופן שורה שנייה"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "תוסף זה מציג סימן מים עדין בשולחן העבודה שלך."
+  },
+  "Usage Guide": {
+    "Usage Guide": "מדריך שימוש"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "באפשרותך להתאים את <b>גדלי הגופנים</b> ואת ה<b>אטימות</b> כך שיתאימו לרקע שלך."
+  }
+}

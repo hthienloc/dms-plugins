@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "啟用 Linux"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "調整浮水印的透明度。"
+  },
+  "Appearance": {
+    "Appearance": "外觀"
+  },
+  "Customization": {
+    "Customization": "自訂"
+  },
+  "Customize Text": {
+    "Customize Text": "自訂文字"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "啟用<b>自訂文字</b>以覆蓋預設訊息。"
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "啟用手動覆蓋浮水印文字。"
+  },
+  "First Line": {
+    "First Line": "第一行"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "第一行字體大小"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "前往「設定」以啟用 Linux。"
+  },
+  "Opacity": {
+    "Opacity": "不透明度"
+  },
+  "Second Line": {
+    "Second Line": "第二行"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "第二行字體大小"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "此外掛在桌面上顯示不突兀的浮水印。"
+  },
+  "Usage Guide": {
+    "Usage Guide": "使用指南"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "您可以調整<b>字體大小</b>和<b>不透明度</b>以配合桌面背景。"
+  }
+}

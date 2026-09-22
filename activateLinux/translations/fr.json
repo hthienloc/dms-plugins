@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "Activer Linux"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "Ajustez la transparence du filigrane."
+  },
+  "Appearance": {
+    "Appearance": "Apparence"
+  },
+  "Customization": {
+    "Customization": "Personnalisation"
+  },
+  "Customize Text": {
+    "Customize Text": "Personnaliser le texte"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "Activez <b>Personnaliser le texte</b> pour remplacer le message par défaut."
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "Activer le remplacement manuel du texte du filigrane."
+  },
+  "First Line": {
+    "First Line": "Première ligne"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "Taille de police de la première ligne"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "Accédez aux Paramètres pour activer Linux."
+  },
+  "Opacity": {
+    "Opacity": "Opacité"
+  },
+  "Second Line": {
+    "Second Line": "Deuxième ligne"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "Taille de police de la deuxième ligne"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "Ce greffon affiche un filigrane discret sur votre bureau."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Guide d'utilisation"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "Vous pouvez ajuster les <b>tailles de police</b> et l'<b>opacité</b> en fonction de votre arrière-plan."
+  }
+}

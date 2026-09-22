@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "Активирайте Linux"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "Регулирайте прозрачността на водния знак."
+  },
+  "Appearance": {
+    "Appearance": "Външен вид"
+  },
+  "Customization": {
+    "Customization": "Персонализиране"
+  },
+  "Customize Text": {
+    "Customize Text": "Персонализиране на текста"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "Активирайте <b>Персонализиране на текста</b>, за да замените съобщението по подразбиране."
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "Разрешете ръчна промяна на текста на водния знак."
+  },
+  "First Line": {
+    "First Line": "Първи ред"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "Размер на шрифта на първия ред"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "Отидете в Настройки, за да активирате Linux."
+  },
+  "Opacity": {
+    "Opacity": "Непрозрачност"
+  },
+  "Second Line": {
+    "Second Line": "Втори ред"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "Размер на шрифта на втория ред"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "Тази приставка показва ненатрапчив воден знак на вашия работен плот."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Ръководство за употреба"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "Можете да регулирате <b>размера на шрифта</b> и <b>непрозрачността</b> спрямо вашия тапет."
+  }
+}

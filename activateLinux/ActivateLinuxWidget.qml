@@ -12,12 +12,12 @@ DesktopPluginComponent {
 
     readonly property bool customizeText: pluginData.customizeText ?? false
     readonly property string firstLine: customizeText
-        ? (pluginData.firstLine || I18n.tr("Activate Linux"))
-        : I18n.tr("Activate Linux")
+        ? (pluginData.firstLine || I18n.trFor("activateLinux", "Activate Linux"))
+        : I18n.trFor("activateLinux", "Activate Linux")
 
     readonly property string secondLine: customizeText
-        ? (pluginData.secondLine || I18n.tr("Go to Settings to activate Linux."))
-        : I18n.tr("Go to Settings to activate Linux.")
+        ? (pluginData.secondLine || I18n.trFor("activateLinux", "Go to Settings to activate Linux."))
+        : I18n.trFor("activateLinux", "Go to Settings to activate Linux.")
 
     readonly property real watermarkOpacity: (pluginData.watermarkOpacity ?? 40) / 100.0
     readonly property int firstLineSize: pluginData.firstLineSize ?? 22

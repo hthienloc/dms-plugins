@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "Activar Linux"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "Ajusta la transparencia de la marca de agua."
+  },
+  "Appearance": {
+    "Appearance": "Apariencia"
+  },
+  "Customization": {
+    "Customization": "Personalización"
+  },
+  "Customize Text": {
+    "Customize Text": "Personalizar texto"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "Habilite <b>Personalizar texto</b> para reemplazar el mensaje predeterminado."
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "Habilitar anulación manual del texto de la marca de agua."
+  },
+  "First Line": {
+    "First Line": "Primera línea"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "Tamaño de fuente de la primera línea"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "Vaya a Configuración para activar Linux."
+  },
+  "Opacity": {
+    "Opacity": "Opacidad"
+  },
+  "Second Line": {
+    "Second Line": "Segunda línea"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "Tamaño de fuente de la segunda línea"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "Este complemento muestra una marca de agua no intrusiva en su escritorio."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Guía de uso"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "Puede ajustar los <b>tamaños de fuente</b> y la <b>opacidad</b> para que coincidan con su fondo."
+  }
+}

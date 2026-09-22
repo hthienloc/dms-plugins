@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "Aktivigi Linukson"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "Alĝustigu la travideblecon de la akvomarko."
+  },
+  "Appearance": {
+    "Appearance": "Aspekto"
+  },
+  "Customization": {
+    "Customization": "Agordado"
+  },
+  "Customize Text": {
+    "Customize Text": "Agordi tekston"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "Ŝaltu <b>Agordi tekston</b> por anstataŭigi la defaŭltan mesaĝon."
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "Ebligi manan anstataŭigon de la akvomarka teksto."
+  },
+  "First Line": {
+    "First Line": "Unua linio"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "Tipargrando de la unua linio"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "Iru al Agordoj por aktivigi Linukson."
+  },
+  "Opacity": {
+    "Opacity": "Maldáfano"
+  },
+  "Second Line": {
+    "Second Line": "Dua linio"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "Tipargrando de la dua linio"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "Ĉi tiu kromaĵo montras diskretan akvomarkon sur via labortablo."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Uzogvidilo"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "Vi povas alĝustigi <b>tipargrandojn</b> kaj <b>maldiafanecon</b> laŭ via fono."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "Activate Linux": {
+    "Activate Linux": "Linux のライセンス認証"
+  },
+  "Adjust the transparency of the watermark.": {
+    "Adjust the transparency of the watermark.": "透かしの透明度を調整します。"
+  },
+  "Appearance": {
+    "Appearance": "外観"
+  },
+  "Customization": {
+    "Customization": "カスタマイズ"
+  },
+  "Customize Text": {
+    "Customize Text": "テキストのカスタマイズ"
+  },
+  "Enable <b>Customize Text</b> to override the default message.": {
+    "Enable <b>Customize Text</b> to override the default message.": "デフォルトのメッセージを上書きするには、<b>テキストのカスタマイズ</b>を有効にします。"
+  },
+  "Enable manual override for the watermark text.": {
+    "Enable manual override for the watermark text.": "透かしテキストの手動上書きを有効にします。"
+  },
+  "First Line": {
+    "First Line": "1 行目"
+  },
+  "First Line Font Size": {
+    "First Line Font Size": "1 行目のフォントサイズ"
+  },
+  "Go to Settings to activate Linux.": {
+    "Go to Settings to activate Linux.": "設定を開いて Linux のライセンス認証を行ってください。"
+  },
+  "Opacity": {
+    "Opacity": "不透明度"
+  },
+  "Second Line": {
+    "Second Line": "2 行目"
+  },
+  "Second Line Font Size": {
+    "Second Line Font Size": "2 行目のフォントサイズ"
+  },
+  "This plugin displays a non-intrusive watermark on your desktop.": {
+    "This plugin displays a non-intrusive watermark on your desktop.": "このプラグインはデスクトップ上に邪魔にならない透かしを表示します。"
+  },
+  "Usage Guide": {
+    "Usage Guide": "使用ガイド"
+  },
+  "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": {
+    "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.": "壁紙に合わせて<b>フォントサイズ</b>や<b>不透明度</b>を調整できます。"
+  }
+}
