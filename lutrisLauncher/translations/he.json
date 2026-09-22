@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "<b>לחץ לחיצה ימנית</b> על אריח משחק כדי להפעיל אותו באופן מיידי."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "<b>לחץ לחיצה ימנית</b> על אריח כדי להציג נתונים סטטיסטיים ולנהל את הנראות."
+  },
+  "Behavior": {
+    "Behavior": "הִתְנַהֲגוּת"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "לא יכול להסתיר מועדפים"
+  },
+  "Clear Filters": {
+    "Clear Filters": "נקה מסננים"
+  },
+  "Close": {
+    "Close": "לִסְגוֹר"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "DD / MM / YYYY"
+  },
+  "Display Options": {
+    "Display Options": "אפשרויות תצוגה"
+  },
+  "Hide": {
+    "Hide": "לְהַסתִיר"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "הסתר משחקים שאתה לא משחק לעתים קרובות כדי לשמור על הרשימה שלך נקייה"
+  },
+  "Last Played Format": {
+    "Last Played Format": "פורמט שהושמע לאחרונה"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "לחץ שמאל כדי להפעיל משחק, לחץ לחיצה ימנית לאפשרויות נוספות"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "MM / DD / YYYY"
+  },
+  "No matches for '": {
+    "No matches for '": "אין התאמות ל'"
+  },
+  "Plays:": {
+    "Plays:": "מחזות:"
+  },
+  "Relative time": {
+    "Relative time": "זמן יחסי"
+  },
+  "Show Hints": {
+    "Show Hints": "הצג רמזים"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "מסתנכרן עם לוטריס..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "החלף את מצב <b>רשימה שחורה</b> בחלון הקופץ כדי לנהל משחקים מוסתרים."
+  },
+  "Unhide": {
+    "Unhide": "הצג"
+  },
+  "Usage Guide": {
+    "Usage Guide": "מדריך שימוש"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "השתמש בסמל הכוכב למשחקים מועדפים לגישה מהירה"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "YYYY - MM - DD"
+  },
+  "Your library is empty": {
+    "Your library is empty": "הספרייה שלך ריקה"
+  }
+}

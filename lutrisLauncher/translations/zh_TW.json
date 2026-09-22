@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "<b>左鍵點擊</b>遊戲圖塊即可立即啟動它。"
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "<b>右鍵單擊</b>圖塊以查看統計資料並管理可見性。"
+  },
+  "Behavior": {
+    "Behavior": "行為"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "無法隱藏收藏夾"
+  },
+  "Clear Filters": {
+    "Clear Filters": "清除過濾器"
+  },
+  "Close": {
+    "Close": "關閉"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "日/月/年"
+  },
+  "Display Options": {
+    "Display Options": "顯示選項"
+  },
+  "Hide": {
+    "Hide": "隱藏"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "隱藏您不常玩的遊戲以保持清單整潔"
+  },
+  "Last Played Format": {
+    "Last Played Format": "最後播放格式"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "左鍵啟動遊戲，右鍵查看更多選項"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "月/日/年"
+  },
+  "No matches for '": {
+    "No matches for '": "沒有符合項目 '"
+  },
+  "Plays:": {
+    "Plays:": "播放："
+  },
+  "Relative time": {
+    "Relative time": "相對時間"
+  },
+  "Show Hints": {
+    "Show Hints": "顯示提示"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "正在與 Lutris 同步..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "在彈出視窗中切換<b>黑名單</b>模式以管理隱藏的遊戲。"
+  },
+  "Unhide": {
+    "Unhide": "取消隱藏"
+  },
+  "Usage Guide": {
+    "Usage Guide": "使用指南"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "使用星形圖示來快速存取最喜歡的遊戲"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "年 - 月 - 日"
+  },
+  "Your library is empty": {
+    "Your library is empty": "你的圖書館是空的"
+  }
+}

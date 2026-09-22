@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "<b>左键单击</b>游戏图块即可立即启动它。"
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "<b>右键单击</b>图块可查看统计信息并管理可见性。"
+  },
+  "Behavior": {
+    "Behavior": "行为"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "无法隐藏收藏夹"
+  },
+  "Clear Filters": {
+    "Clear Filters": "清除过滤器"
+  },
+  "Close": {
+    "Close": "关闭"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "日/月/年"
+  },
+  "Display Options": {
+    "Display Options": "显示选项"
+  },
+  "Hide": {
+    "Hide": "隐藏"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "隐藏您不常玩的游戏以保持列表整洁"
+  },
+  "Last Played Format": {
+    "Last Played Format": "最后播放格式"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "左键单击启动游戏，右键单击查看更多选项"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "月/日/年"
+  },
+  "No matches for '": {
+    "No matches for '": "没有匹配项 '"
+  },
+  "Plays:": {
+    "Plays:": "播放："
+  },
+  "Relative time": {
+    "Relative time": "相对时间"
+  },
+  "Show Hints": {
+    "Show Hints": "显示提示"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "正在与 Lutris 同步..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "在弹出窗口中切换<b>黑名单</b>模式以管理隐藏的游戏。"
+  },
+  "Unhide": {
+    "Unhide": "取消隐藏"
+  },
+  "Usage Guide": {
+    "Usage Guide": "使用指南"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "使用星形图标来快速访问最喜欢的游戏"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "年 - 月 - 日"
+  },
+  "Your library is empty": {
+    "Your library is empty": "你的图书馆是空的"
+  }
+}

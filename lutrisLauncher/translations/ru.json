@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "<b>Нажмите левой кнопкой мыши</b> на плитке игры, чтобы запустить ее мгновенно."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "<b>Нажмите правой кнопкой мыши</b> плитку, чтобы просмотреть статистику и управлять видимостью."
+  },
+  "Behavior": {
+    "Behavior": "Поведение"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "Не могу скрыть избранное"
+  },
+  "Clear Filters": {
+    "Clear Filters": "Очистить фильтры"
+  },
+  "Close": {
+    "Close": "Закрывать"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "ДД/ММ/ГГГГ"
+  },
+  "Display Options": {
+    "Display Options": "Параметры отображения"
+  },
+  "Hide": {
+    "Hide": "Скрывать"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "Скрывайте игры, в которые вы не часто играете, чтобы сохранить список в чистоте."
+  },
+  "Last Played Format": {
+    "Last Played Format": "Последний воспроизведенный формат"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "Щелкните левой кнопкой мыши, чтобы запустить игру, щелкните правой кнопкой мыши, чтобы увидеть дополнительные параметры."
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "ММ/ДД/ГГГГ"
+  },
+  "No matches for '": {
+    "No matches for '": "Нет совпадений для '"
+  },
+  "Plays:": {
+    "Plays:": "Играет:"
+  },
+  "Relative time": {
+    "Relative time": "Относительное время"
+  },
+  "Show Hints": {
+    "Show Hints": "Показать подсказки"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "Синхронизация с Лутрисом..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "Переключите режим <b>Черный список</b> во всплывающем окне, чтобы управлять скрытыми играми."
+  },
+  "Unhide": {
+    "Unhide": "Показать"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Руководство по использованию"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "Используйте значок звездочки для избранных игр для быстрого доступа."
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "ГГГГ – ММ – ДД"
+  },
+  "Your library is empty": {
+    "Your library is empty": "Ваша библиотека пуста"
+  }
+}

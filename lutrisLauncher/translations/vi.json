@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "<b>Nhấp chuột trái</b> vào ô trò chơi để khởi chạy ngay."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "<b>Nhấp chuột phải</b> vào ô để xem số liệu thống kê và quản lý hiển thị."
+  },
+  "Behavior": {
+    "Behavior": "Hành vi"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "Không thể ẩn mục yêu thích"
+  },
+  "Clear Filters": {
+    "Clear Filters": "Xóa bộ lọc"
+  },
+  "Close": {
+    "Close": "Đóng"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "DD / MM / YYYY"
+  },
+  "Display Options": {
+    "Display Options": "Tùy chọn hiển thị"
+  },
+  "Hide": {
+    "Hide": "Ẩn"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "Ẩn các trò chơi bạn không chơi thường xuyên để giữ cho danh sách luôn gọn gàng"
+  },
+  "Last Played Format": {
+    "Last Played Format": "Định dạng thời gian chơi gần nhất"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "Nhấp chuột trái để khởi chạy trò chơi, Nhấp chuột phải để có thêm tùy chọn"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "MM / DD / YYYY"
+  },
+  "No matches for '": {
+    "No matches for '": "Không có kết quả phù hợp cho '"
+  },
+  "Plays:": {
+    "Plays:": "Lượt chơi:"
+  },
+  "Relative time": {
+    "Relative time": "Thời gian tương đối"
+  },
+  "Show Hints": {
+    "Show Hints": "Hiển thị gợi ý"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "Đang đồng bộ hóa với Lutris..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "Bật chế độ <b>Danh sách đen</b> trong popout để quản lý trò chơi bị ẩn."
+  },
+  "Unhide": {
+    "Unhide": "Bỏ ẩn"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Hướng dẫn sử dụng"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "Dùng biểu tượng ngôi sao để đánh dấu yêu thích và truy cập nhanh"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "YYYY - MM - DD"
+  },
+  "Your library is empty": {
+    "Your library is empty": "Thư viện của bạn trống"
+  }
+}

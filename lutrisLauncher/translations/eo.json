@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "<b>Maldekstre alklaku</b> ludkahelon por lanĉi ĝin tuj."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "<b>Dekstre alklaku</b> kahelon por vidi statistikojn kaj administri videblecon."
+  },
+  "Behavior": {
+    "Behavior": "Konduto"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "Ne povas kaŝi plej ŝatatajn"
+  },
+  "Clear Filters": {
+    "Clear Filters": "Forigi Filtrilojn"
+  },
+  "Close": {
+    "Close": "Fermu"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "ĴJ / MM / YYYY"
+  },
+  "Display Options": {
+    "Display Options": "Montraj Opcioj"
+  },
+  "Hide": {
+    "Hide": "Kaŝi"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "Kaŝu ludojn, kiujn vi ne ofte ludas, por konservi vian liston pura"
+  },
+  "Last Played Format": {
+    "Last Played Format": "Laste Ludita Formato"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "Maldekstre Klaku por lanĉi ludon, Dekstre Klaku por pliaj opcioj"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "MM / ĴJ / YYYY"
+  },
+  "No matches for '": {
+    "No matches for '": "Neniuj kongruoj por '"
+  },
+  "Plays:": {
+    "Plays:": "Ludoj:"
+  },
+  "Relative time": {
+    "Relative time": "Relativa tempo"
+  },
+  "Show Hints": {
+    "Show Hints": "Montru Sugestojn"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "Sinkronigante kun Lutris..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "Ŝaltigu la reĝimon <b>Nigralisto</b> en la ŝprucfenestro por administri kaŝitajn ludojn."
+  },
+  "Unhide": {
+    "Unhide": "Malkaŝi"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Gvidilo pri Uzado"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "Uzu la stelan ikonon al plej ŝatataj ludoj por rapida aliro"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "YYYY - MM - JJ"
+  },
+  "Your library is empty": {
+    "Your library is empty": "Via biblioteko estas malplena"
+  }
+}

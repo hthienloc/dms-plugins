@@ -12,7 +12,7 @@ PluginSettings {
     SettingsCard {
         id: displaySection
         SectionTitle { 
-            text: I18n.tr("Display Options")
+            text: I18n.trFor("lutrisLauncher", "Display Options")
             icon: "visibility" 
             showReset: dateFormat.isDirty
             onResetClicked: {
@@ -23,12 +23,12 @@ PluginSettings {
         SelectionSettingPlus {
             id: dateFormat
             settingKey: "dateFormat"
-            label: I18n.tr("Last Played Format")
+            label: I18n.trFor("lutrisLauncher", "Last Played Format")
             options: [
-                { label: I18n.tr("YYYY - MM - DD"), value: "YYYY - MM - DD" },
-                { label: I18n.tr("DD / MM / YYYY"), value: "DD / MM / YYYY" },
-                { label: I18n.tr("MM / DD / YYYY"), value: "MM / DD / YYYY" },
-                { label: I18n.tr("Relative time"), value: "relative" }
+                { label: I18n.trFor("lutrisLauncher", "YYYY - MM - DD"), value: "YYYY - MM - DD" },
+                { label: I18n.trFor("lutrisLauncher", "DD / MM / YYYY"), value: "DD / MM / YYYY" },
+                { label: I18n.trFor("lutrisLauncher", "MM / DD / YYYY"), value: "MM / DD / YYYY" },
+                { label: I18n.trFor("lutrisLauncher", "Relative time"), value: "relative" }
             ]
             defaultValue: "YYYY - MM - DD"
         }
@@ -37,7 +37,7 @@ PluginSettings {
     SettingsCard {
         id: behaviorSection
         SectionTitle { 
-            text: I18n.tr("Behavior")
+            text: I18n.trFor("lutrisLauncher", "Behavior")
             icon: "settings" 
             showReset: showHints.isDirty
             onResetClicked: {
@@ -48,7 +48,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showHints
             settingKey: "showHints"
-            label: I18n.tr("Show Hints")
+            label: I18n.trFor("lutrisLauncher", "Show Hints")
             defaultValue: true
         }
     }
@@ -56,7 +56,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle { 
             id: usageTitle
-            text: I18n.tr("Usage Guide")
+            text: I18n.trFor("lutrisLauncher", "Usage Guide")
             icon: "menu_book" 
             collapsible: true
             settingKey: "usageGuideExpanded"
@@ -65,9 +65,9 @@ PluginSettings {
         UsageGuide {
             expanded: usageTitle.isExpanded
             items: [
-                I18n.tr("<b>Left-click</b> a game tile to launch it instantly."),
-                I18n.tr("<b>Right-click</b> a tile to view stats and manage visibility."),
-                I18n.tr("Toggle <b>Blacklist</b> mode in the popout to manage hidden games.")
+                I18n.trFor("lutrisLauncher", "<b>Left-click</b> a game tile to launch it instantly."),
+                I18n.trFor("lutrisLauncher", "<b>Right-click</b> a tile to view stats and manage visibility."),
+                I18n.trFor("lutrisLauncher", "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.")
             ]
         }
     }

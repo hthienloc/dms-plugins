@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "Anında başlatmak için bir oyun döşemesine <b>sol tıklayın</b>."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "İstatistikleri görüntülemek ve görünürlüğü yönetmek için bir kutucuğa <b>sağ tıklayın</b>."
+  },
+  "Behavior": {
+    "Behavior": "Davranış"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "Favoriler gizlenemiyor"
+  },
+  "Clear Filters": {
+    "Clear Filters": "Filtreleri Temizle"
+  },
+  "Close": {
+    "Close": "Kapalı"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "GG / AA / YYYY"
+  },
+  "Display Options": {
+    "Display Options": "Ekran Seçenekleri"
+  },
+  "Hide": {
+    "Hide": "Saklamak"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "Listenizi temiz tutmak için sık oynamadığınız oyunları gizleyin"
+  },
+  "Last Played Format": {
+    "Last Played Format": "Son Oynatılan Format"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "Bir oyunu başlatmak için Sol Tıklayın, daha fazla seçenek için Sağ Tıklayın"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "AA / GG / YYYY"
+  },
+  "No matches for '": {
+    "No matches for '": "' için eşleşme yok"
+  },
+  "Plays:": {
+    "Plays:": "Oynatma:"
+  },
+  "Relative time": {
+    "Relative time": "Göreceli zaman"
+  },
+  "Show Hints": {
+    "Show Hints": "İpuçlarını Göster"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "Lutris'le senkronize ediliyor..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "Gizli oyunları yönetmek için açılır pencerede <b>Kara liste</b> moduna geçin."
+  },
+  "Unhide": {
+    "Unhide": "Göster"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Kullanım Kılavuzu"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "Hızlı erişim için favori oyunlara yıldız simgesini kullanın"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "YYYY - AA - GG"
+  },
+  "Your library is empty": {
+    "Your library is empty": "Kitaplığınız boş"
+  }
+}

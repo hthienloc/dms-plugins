@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "<b>Клацніть лівою кнопкою миші</b> плитку гри, щоб миттєво запустити її."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "<b>Клацніть правою кнопкою миші</b> плитку, щоб переглянути статистику та керувати видимістю."
+  },
+  "Behavior": {
+    "Behavior": "Поведінка"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "Неможливо приховати вибране"
+  },
+  "Clear Filters": {
+    "Clear Filters": "Очистити фільтри"
+  },
+  "Close": {
+    "Close": "Закрити"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "ДД / ММ / РРРР"
+  },
+  "Display Options": {
+    "Display Options": "Параметри відображення"
+  },
+  "Hide": {
+    "Hide": "Сховати"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "Сховайте ігри, у які ви рідко граєте, щоб зберегти свій список чистим"
+  },
+  "Last Played Format": {
+    "Last Played Format": "Формат останнього відтворення"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "Клацніть лівою кнопкою миші, щоб запустити гру, клацніть правою кнопкою миші, щоб отримати додаткові параметри"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "ММ/ДД/РРРР"
+  },
+  "No matches for '": {
+    "No matches for '": "Немає збігів для \""
+  },
+  "Plays:": {
+    "Plays:": "П'єси:"
+  },
+  "Relative time": {
+    "Relative time": "Відносний час"
+  },
+  "Show Hints": {
+    "Show Hints": "Показати підказки"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "Синхронізація з Lutris..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "Перемкніть режим <b>Чорний список</b> у спливаючому вікні, щоб керувати прихованими іграми."
+  },
+  "Unhide": {
+    "Unhide": "Показати"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Інструкція з використання"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "Для швидкого доступу до улюблених ігор використовуйте значок зірочки"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "РРРР - ММ - ДД"
+  },
+  "Your library is empty": {
+    "Your library is empty": "Ваша бібліотека порожня"
+  }
+}

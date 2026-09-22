@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "게임 타일을 <b>왼쪽 클릭</b>하여 즉시 실행하세요."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "통계를 보고 공개 상태를 관리하려면 타일을 <b>마우스 오른쪽 버튼으로 클릭</b>하세요."
+  },
+  "Behavior": {
+    "Behavior": "행동"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "즐겨찾기를 숨길 수 없습니다"
+  },
+  "Clear Filters": {
+    "Clear Filters": "필터 지우기"
+  },
+  "Close": {
+    "Close": "닫다"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "DD / MM / YYYY"
+  },
+  "Display Options": {
+    "Display Options": "표시 옵션"
+  },
+  "Hide": {
+    "Hide": "숨다"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "자주 플레이하지 않는 게임을 숨겨 목록을 깔끔하게 유지하세요"
+  },
+  "Last Played Format": {
+    "Last Played Format": "마지막으로 재생된 형식"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "게임을 시작하려면 왼쪽 클릭하고, 더 많은 옵션을 보려면 오른쪽 클릭하세요."
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "월/일/년"
+  },
+  "No matches for '": {
+    "No matches for '": "'와 일치하는 항목이 없습니다."
+  },
+  "Plays:": {
+    "Plays:": "재생:"
+  },
+  "Relative time": {
+    "Relative time": "상대 시간"
+  },
+  "Show Hints": {
+    "Show Hints": "힌트 표시"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "루트리스와 동기화 중..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "숨겨진 게임을 관리하려면 팝아웃에서 <b>블랙리스트</b> 모드를 전환하세요."
+  },
+  "Unhide": {
+    "Unhide": "숨기기 해제"
+  },
+  "Usage Guide": {
+    "Usage Guide": "이용안내"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "빠른 액세스를 위해 즐겨찾는 게임에 별표 아이콘을 사용하세요."
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "YYYY - MM - DD"
+  },
+  "Your library is empty": {
+    "Your library is empty": "라이브러리가 비어 있습니다."
+  }
+}

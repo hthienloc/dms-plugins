@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "ゲーム タイルを<b>左クリック</b>すると、即座に起動します。"
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "タイルを<b>右クリック</b>すると、統計情報を表示し、表示設定を管理できます。"
+  },
+  "Behavior": {
+    "Behavior": "行動"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "お気に入りを非表示にできない"
+  },
+  "Clear Filters": {
+    "Clear Filters": "フィルターをクリアする"
+  },
+  "Close": {
+    "Close": "近い"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "DD / MM / YYYY"
+  },
+  "Display Options": {
+    "Display Options": "表示オプション"
+  },
+  "Hide": {
+    "Hide": "隠れる"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "頻繁にプレイしないゲームを非表示にして、リストをきれいに保ちます"
+  },
+  "Last Played Format": {
+    "Last Played Format": "最後にプレイしたフォーマット"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "左クリックしてゲームを起動し、右クリックしてその他のオプションを表示します"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "YYYY/MM/DD"
+  },
+  "No matches for '": {
+    "No matches for '": "「」に一致するものはありません"
+  },
+  "Plays:": {
+    "Plays:": "プレイ:"
+  },
+  "Relative time": {
+    "Relative time": "相対時間"
+  },
+  "Show Hints": {
+    "Show Hints": "ヒントを表示する"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "ルトリスと同期…"
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "ポップアウトで<b>ブラックリスト</b> モードを切り替えて、非表示のゲームを管理します。"
+  },
+  "Unhide": {
+    "Unhide": "再表示"
+  },
+  "Usage Guide": {
+    "Usage Guide": "ご利用ガイド"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "スターアイコンを使用してお気に入りのゲームにすばやくアクセス"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "YYYY - MM - DD"
+  },
+  "Your library is empty": {
+    "Your library is empty": "あなたのライブラリは空です"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "روی یک کاشی بازی <b>کلیک چپ کنید</b> تا فوراً آن را اجرا کنید."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "برای مشاهده آمار و مدیریت قابلیت مشاهده روی یک کاشی <b>راست کلیک کنید</b>."
+  },
+  "Behavior": {
+    "Behavior": "رفتار"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "نمی توان موارد دلخواه را پنهان کرد"
+  },
+  "Clear Filters": {
+    "Clear Filters": "پاک کردن فیلترها"
+  },
+  "Close": {
+    "Close": "بستن"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "DD / MM / YYYY"
+  },
+  "Display Options": {
+    "Display Options": "گزینه های نمایش"
+  },
+  "Hide": {
+    "Hide": "پنهان کردن"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "بازی هایی را که اغلب بازی نمی کنید پنهان کنید تا لیست خود را تمیز نگه دارید"
+  },
+  "Last Played Format": {
+    "Last Played Format": "آخرین فرمت پخش شده"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "برای راه اندازی یک بازی چپ کلیک کنید، برای گزینه های بیشتر کلیک راست کنید"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "MM / DD / YYYY"
+  },
+  "No matches for '": {
+    "No matches for '": "هیچ منطبقی برای '"
+  },
+  "Plays:": {
+    "Plays:": "نمایشنامه ها:"
+  },
+  "Relative time": {
+    "Relative time": "زمان نسبی"
+  },
+  "Show Hints": {
+    "Show Hints": "نمایش نکات"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "همگام سازی با لوتریس..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "برای مدیریت بازی‌های پنهان، حالت <b>لیست سیاه</b> را در پنجره بازشو تغییر دهید."
+  },
+  "Unhide": {
+    "Unhide": "پنهان کردن"
+  },
+  "Usage Guide": {
+    "Usage Guide": "راهنمای استفاده"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "برای دسترسی سریع، از نماد ستاره برای بازی های مورد علاقه استفاده کنید"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "YYYY - MM - DD"
+  },
+  "Your library is empty": {
+    "Your library is empty": "کتابخانه شما خالی است"
+  }
+}

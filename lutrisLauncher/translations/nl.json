@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "<b>Klik met de linkermuisknop</b> op een gametegel om deze onmiddellijk te starten."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "<b>Klik met de rechtermuisknop</b> op een tegel om statistieken te bekijken en de zichtbaarheid te beheren."
+  },
+  "Behavior": {
+    "Behavior": "Gedrag"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "Kan favorieten niet verbergen"
+  },
+  "Clear Filters": {
+    "Clear Filters": "Filters wissen"
+  },
+  "Close": {
+    "Close": "Dichtbij"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "DD / MM / JJJJ"
+  },
+  "Display Options": {
+    "Display Options": "Weergaveopties"
+  },
+  "Hide": {
+    "Hide": "Verbergen"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "Verberg games die je niet vaak speelt om je lijst overzichtelijk te houden"
+  },
+  "Last Played Format": {
+    "Last Played Format": "Laatst gespeeld formaat"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "Klik met de linkermuisknop om een ​​spel te starten, klik met de rechtermuisknop voor meer opties"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "MM / DD / JJJJ"
+  },
+  "No matches for '": {
+    "No matches for '": "Geen overeenkomsten voor '"
+  },
+  "Plays:": {
+    "Plays:": "Speelt:"
+  },
+  "Relative time": {
+    "Relative time": "Relatieve tijd"
+  },
+  "Show Hints": {
+    "Show Hints": "Toon tips"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "Synchroniseren met Lutris..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "Schakel de <b>Blacklist</b>-modus in de pop-out in om verborgen games te beheren."
+  },
+  "Unhide": {
+    "Unhide": "Zichtbaar maken"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Gebruiksgids"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "Gebruik het sterpictogram om favoriete games te bekijken voor snelle toegang"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "JJJJ - MM - DD"
+  },
+  "Your library is empty": {
+    "Your library is empty": "Je bibliotheek is leeg"
+  }
+}

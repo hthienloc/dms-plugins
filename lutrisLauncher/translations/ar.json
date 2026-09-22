@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "<b>انقر بزر الماوس الأيسر</b> على مربع اللعبة لتشغيله على الفور."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "<b>انقر بزر الماوس الأيمن</b> على أحد المربعات لعرض الإحصائيات وإدارة الرؤية."
+  },
+  "Behavior": {
+    "Behavior": "سلوك"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "لا يمكن إخفاء المفضلة"
+  },
+  "Clear Filters": {
+    "Clear Filters": "مسح المرشحات"
+  },
+  "Close": {
+    "Close": "يغلق"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "يوم / ش ش / سنة"
+  },
+  "Display Options": {
+    "Display Options": "خيارات العرض"
+  },
+  "Hide": {
+    "Hide": "يخفي"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "قم بإخفاء الألعاب التي لا تلعبها كثيرًا للحفاظ على قائمتك نظيفة"
+  },
+  "Last Played Format": {
+    "Last Played Format": "آخر تنسيق تم تشغيله"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "انقر بزر الماوس الأيسر لبدء اللعبة، وانقر بزر الماوس الأيمن لمزيد من الخيارات"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "ش ش / ي د / س س س س"
+  },
+  "No matches for '": {
+    "No matches for '": "لا توجد تطابقات لـ \""
+  },
+  "Plays:": {
+    "Plays:": "المسرحيات:"
+  },
+  "Relative time": {
+    "Relative time": "الوقت النسبي"
+  },
+  "Show Hints": {
+    "Show Hints": "إظهار التلميحات"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "المزامنة مع Lutris..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "قم بتبديل وضع <b>القائمة السوداء</b> في النافذة المنبثقة لإدارة الألعاب المخفية."
+  },
+  "Unhide": {
+    "Unhide": "إظهار"
+  },
+  "Usage Guide": {
+    "Usage Guide": "دليل الاستخدام"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "استخدم أيقونة النجمة للألعاب المفضلة للوصول السريع"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "YYYY - ش ش - يوم"
+  },
+  "Your library is empty": {
+    "Your library is empty": "مكتبتك فارغة"
+  }
+}

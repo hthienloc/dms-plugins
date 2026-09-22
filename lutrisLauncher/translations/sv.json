@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "<b>Vänsterklicka</b> på en spelbricka för att starta den direkt."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "<b>Högerklicka</b> på en ruta för att se statistik och hantera synlighet."
+  },
+  "Behavior": {
+    "Behavior": "Beteende"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "Kan inte dölja favoriter"
+  },
+  "Clear Filters": {
+    "Clear Filters": "Rensa filter"
+  },
+  "Close": {
+    "Close": "Nära"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "DD / MM / ÅÅÅÅ"
+  },
+  "Display Options": {
+    "Display Options": "Visningsalternativ"
+  },
+  "Hide": {
+    "Hide": "Dölja"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "Göm spel du inte spelar ofta för att hålla din lista ren"
+  },
+  "Last Played Format": {
+    "Last Played Format": "Senast spelade format"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "Vänsterklicka för att starta ett spel, högerklicka för fler alternativ"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "MM / DD / ÅÅÅÅ"
+  },
+  "No matches for '": {
+    "No matches for '": "Inga matchningar för '"
+  },
+  "Plays:": {
+    "Plays:": "Spelar:"
+  },
+  "Relative time": {
+    "Relative time": "Relativ tid"
+  },
+  "Show Hints": {
+    "Show Hints": "Visa tips"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "Synkroniserar med Lutris..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "Växla <b>Svartlista</b>-läget i popout-fönstret för att hantera dolda spel."
+  },
+  "Unhide": {
+    "Unhide": "Visa upp"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Användningsguide"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "Använd stjärnikonen för att favoritspel för snabb åtkomst"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "ÅÅÅÅ - MM - DD"
+  },
+  "Your library is empty": {
+    "Your library is empty": "Ditt bibliotek är tomt"
+  }
+}

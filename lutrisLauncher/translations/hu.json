@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "<b>Kattintson a bal gombbal</b> egy játéklapkára az azonnali elindításhoz."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "<b>Kattintson jobb gombbal</b> egy csempére a statisztikák megtekintéséhez és a láthatóság kezeléséhez."
+  },
+  "Behavior": {
+    "Behavior": "Viselkedés"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "A kedvenceket nem lehet elrejteni"
+  },
+  "Clear Filters": {
+    "Clear Filters": "Szűrők törlése"
+  },
+  "Close": {
+    "Close": "Közeli"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "NN / HH / ÉÉÉÉ"
+  },
+  "Display Options": {
+    "Display Options": "Megjelenítési beállítások"
+  },
+  "Hide": {
+    "Hide": "Elrejt"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "Rejtse el azokat a játékokat, amelyekkel ritkán játszik, hogy tisztán tartsa a listát"
+  },
+  "Last Played Format": {
+    "Last Played Format": "Utoljára játszott formátum"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "A bal egérgombbal játék indításához, jobb gombbal pedig további lehetőségekért"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "HH/NN/ÉÉÉÉ"
+  },
+  "No matches for '": {
+    "No matches for '": "Nincs találat a következőre"
+  },
+  "Plays:": {
+    "Plays:": "Lejátszások:"
+  },
+  "Relative time": {
+    "Relative time": "Relatív idő"
+  },
+  "Show Hints": {
+    "Show Hints": "Tippek megjelenítése"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "Szinkronizálás a Lutris-szal..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "A rejtett játékok kezeléséhez kapcsolja be a <b>Feketelista</b> módot az előugró ablakban."
+  },
+  "Unhide": {
+    "Unhide": "Felfed"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Használati útmutató"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "A gyors hozzáférés érdekében használja a csillag ikont kedvenc játékokhoz"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "ÉÉÉÉ – HH – NN"
+  },
+  "Your library is empty": {
+    "Your library is empty": "A könyvtára üres"
+  }
+}

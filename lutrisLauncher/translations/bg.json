@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "<b>Щракнете с левия бутон</b> върху плочка на играта, за да я стартирате незабавно."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "<b>Щракнете с десния бутон</b> върху плочка, за да видите статистика и да управлявате видимостта."
+  },
+  "Behavior": {
+    "Behavior": "Поведение"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "Не могат да се скрият любими"
+  },
+  "Clear Filters": {
+    "Clear Filters": "Изчистване на филтри"
+  },
+  "Close": {
+    "Close": "затвори"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "ДД / ММ / ГГГГ"
+  },
+  "Display Options": {
+    "Display Options": "Опции на дисплея"
+  },
+  "Hide": {
+    "Hide": "Скрий се"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "Скрийте игрите, които не играете често, за да поддържате списъка си чист"
+  },
+  "Last Played Format": {
+    "Last Played Format": "Последно възпроизвеждан формат"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "Щракнете с левия бутон, за да стартирате игра, щракнете с десния бутон за повече опции"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "ММ / ДД / ГГГГ"
+  },
+  "No matches for '": {
+    "No matches for '": "Няма съвпадения за „"
+  },
+  "Plays:": {
+    "Plays:": "Пиеси:"
+  },
+  "Relative time": {
+    "Relative time": "Относително време"
+  },
+  "Show Hints": {
+    "Show Hints": "Показване на съвети"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "Синхронизиране с Lutris..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "Превключете режима <b>Черен списък</b> в изскачащия прозорец, за да управлявате скритите игри."
+  },
+  "Unhide": {
+    "Unhide": "Показване"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Ръководство за употреба"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "Използвайте иконата на звезда към любимите игри за бърз достъп"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "ГГГГ - ММ - ДД"
+  },
+  "Your library is empty": {
+    "Your library is empty": "Вашата библиотека е празна"
+  }
+}

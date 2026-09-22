@@ -1,0 +1,74 @@
+{
+  "<b>Left-click</b> a game tile to launch it instantly.": {
+    "<b>Left-click</b> a game tile to launch it instantly.": "<b>Klicken Sie mit der linken Maustaste</b> auf eine Spielkachel, um sie sofort zu starten."
+  },
+  "<b>Right-click</b> a tile to view stats and manage visibility.": {
+    "<b>Right-click</b> a tile to view stats and manage visibility.": "<b>Klicken Sie mit der rechten Maustaste</b> auf eine Kachel, um Statistiken anzuzeigen und die Sichtbarkeit zu verwalten."
+  },
+  "Behavior": {
+    "Behavior": "Verhalten"
+  },
+  "Can't hide favorites": {
+    "Can't hide favorites": "Favoriten können nicht ausgeblendet werden"
+  },
+  "Clear Filters": {
+    "Clear Filters": "Filter löschen"
+  },
+  "Close": {
+    "Close": "Schließen"
+  },
+  "DD / MM / YYYY": {
+    "DD / MM / YYYY": "TT/MM/JJJJ"
+  },
+  "Display Options": {
+    "Display Options": "Anzeigeoptionen"
+  },
+  "Hide": {
+    "Hide": "Verstecken"
+  },
+  "Hide games you don't play often to keep your list clean": {
+    "Hide games you don't play often to keep your list clean": "Verstecken Sie Spiele, die Sie nicht oft spielen, um Ihre Liste übersichtlich zu halten"
+  },
+  "Last Played Format": {
+    "Last Played Format": "Zuletzt gespieltes Format"
+  },
+  "Left Click to launch a game, Right Click for more options": {
+    "Left Click to launch a game, Right Click for more options": "Klicken Sie mit der linken Maustaste, um ein Spiel zu starten, und klicken Sie mit der rechten Maustaste, um weitere Optionen anzuzeigen"
+  },
+  "MM / DD / YYYY": {
+    "MM / DD / YYYY": "MM / TT / JJJJ"
+  },
+  "No matches for '": {
+    "No matches for '": "Keine Übereinstimmungen für '"
+  },
+  "Plays:": {
+    "Plays:": "Spielt:"
+  },
+  "Relative time": {
+    "Relative time": "Relative Zeit"
+  },
+  "Show Hints": {
+    "Show Hints": "Hinweise anzeigen"
+  },
+  "Synchronizing with Lutris...": {
+    "Synchronizing with Lutris...": "Synchronisierung mit Lutris..."
+  },
+  "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": {
+    "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.": "Schalten Sie im Popout den <b>Blacklist</b>-Modus um, um versteckte Spiele zu verwalten."
+  },
+  "Unhide": {
+    "Unhide": "Einblenden"
+  },
+  "Usage Guide": {
+    "Usage Guide": "Nutzungsleitfaden"
+  },
+  "Use the star icon to favorite games for quick access": {
+    "Use the star icon to favorite games for quick access": "Verwenden Sie das Sternsymbol, um schnell auf Lieblingsspiele zuzugreifen"
+  },
+  "YYYY - MM - DD": {
+    "YYYY - MM - DD": "JJJJ - MM - TT"
+  },
+  "Your library is empty": {
+    "Your library is empty": "Ihre Bibliothek ist leer"
+  }
+}
