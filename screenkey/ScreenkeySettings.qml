@@ -90,7 +90,7 @@ print(json.dumps(devs))
 
         ToggleSettingPlus {
             id: enabledSetting
-            settingKey: "enabled"
+            settingKey: "visualizerEnabled"
             label: I18n.tr("Enable Visualizer")
             defaultValue: true
         }

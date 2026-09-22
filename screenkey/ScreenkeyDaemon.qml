@@ -18,23 +18,25 @@ PluginComponent {
         enabled: true
 
         function toggle(): string {
-            root.saveSetting("enabled", !root.enabled);
-            return "SUCCESS";
+            const newState = !root.visualizerEnabled;
+            root.saveSetting("visualizerEnabled", newState);
+            return newState ? "Screenkey enabled" : "Screenkey disabled";
         }
 
         function enable(): string {
-            root.saveSetting("enabled", true);
+            root.saveSetting("visualizerEnabled", true);
             return "SUCCESS";
         }
 
         function disable(): string {
-            root.saveSetting("enabled", false);
+            root.saveSetting("visualizerEnabled", false);
             return "SUCCESS";
         }
     }
 
-    // Configurable settings
-    readonly property bool enabled: root.pluginData.enabled ?? true
+    // Feature toggle (separate from DMS lifecycle "enabled" setting)
+    readonly property bool visualizerEnabled: root.pluginData.visualizerEnabled ?? root.pluginData.enabled ?? true
+    readonly property bool enabled: visualizerEnabled
     readonly property int fadeTimeout: root.pluginData.fadeTimeout ?? 1500
     readonly property bool showNormalKeys: root.pluginData.showNormalKeys ?? false
     readonly property int fontSize: root.pluginData.fontSize ?? 24
@@ -78,6 +80,11 @@ PluginComponent {
     readonly property string requiredTool: selectedDevicePath === "all" ? "libinput" : "evtest"
 
     Component.onCompleted: {
+        if (root.pluginData.enabled === false) {
+            root.saveSetting("enabled", true);
+            if (root.pluginData.visualizerEnabled === undefined)
+                root.saveSetting("visualizerEnabled", false);
+        }
         if (!pluginService.pluginInstances[pluginId]) {
             const newInstances = Object.assign({}, pluginService.pluginInstances);
             newInstances[pluginId] = root;

@@ -83,13 +83,13 @@ print(json.dumps(devs))
 
     ccWidgetIcon: "keyboard"
     ccWidgetPrimaryText: I18n.tr("Screenkey")
-    ccWidgetSecondaryText: daemon && daemon.enabled ? I18n.tr("Active") : I18n.tr("Disabled")
-    ccWidgetIsActive: daemon ? daemon.enabled : false
+    ccWidgetSecondaryText: daemon && daemon.visualizerEnabled ? I18n.tr("Active") : I18n.tr("Disabled")
+    ccWidgetIsActive: daemon ? daemon.visualizerEnabled : false
     ccDetailHeight: 360
 
     onCcWidgetToggled: {
         if (daemon) {
-            daemon.saveSetting("enabled", !daemon.enabled);
+            daemon.saveSetting("visualizerEnabled", !daemon.visualizerEnabled);
         }
     }
 
@@ -138,15 +138,16 @@ print(json.dumps(devs))
                     }
 
                     DankActionButton {
-                        iconName: root.daemon?.enabled ? "visibility" : "visibility_off"
-                        iconColor: root.daemon?.enabled ? Theme.primary : Theme.surfaceVariantText
+                        readonly property bool isActive: !!(root.daemon && root.daemon.visualizerEnabled)
+                        iconName: isActive ? "visibility" : "visibility_off"
+                        iconColor: isActive ? Theme.primary : Theme.surfaceVariantText
                         buttonSize: 28
                         iconSize: 16
-                        tooltipText: root.daemon?.enabled ? I18n.tr("Disable") : I18n.tr("Enable")
+                        tooltipText: isActive ? I18n.tr("Disable") : I18n.tr("Enable")
                         tooltipSide: "bottom"
                         onClicked: {
                             if (root.daemon)
-                                root.daemon.saveSetting("enabled", !root.daemon.enabled);
+                                root.daemon.saveSetting("visualizerEnabled", !isActive);
                         }
                     }
                 }
