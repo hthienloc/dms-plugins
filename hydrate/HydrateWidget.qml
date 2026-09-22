@@ -430,7 +430,7 @@ PluginComponent {
                 // Reset progress button
                 DankButton {
                     width: parent.width
-                    text: I18n.tr("Reset Progress")
+                    text: I18n.trFor("hydrate", "Reset Progress")
                     backgroundColor: Theme.surfaceContainerHighest
                     textColor: Theme.surfaceText
                     onClicked: resetToday()
@@ -443,7 +443,7 @@ PluginComponent {
 
                     HintItem {
                         icon: "info"
-                        text: I18n.tr("Right-click the bar icon to quickly log +250ml.")
+                        text: I18n.trFor("hydrate", "Right-click the bar icon to quickly log +250ml.")
                     }
                 }
             }

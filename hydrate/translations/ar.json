@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "<b>انقر بزر الماوس الأيسر</b> على الحبة لفتح لوحة معلومات الترطيب."
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "<b>انقر بزر الماوس الأيمن</b> على الحبة لتسجيل <b>+1 كوب</b> على الفور."
+  },
+  "Behavior": {
+    "Behavior": "سلوك"
+  },
+  "Daily Target": {
+    "Daily Target": "الهدف اليومي"
+  },
+  "Display Mode": {
+    "Display Mode": "وضع العرض"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "كامل (تسجيل / هدف)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "عدد المرات التي يتغير فيها الرمز لتذكيرك بالشرب."
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "كيف يظهر التقدم على الشريط."
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "أهداف الترطيب"
+  },
+  "Icon Only": {
+    "Icon Only": "أيقونة فقط"
+  },
+  "Logged Only": {
+    "Logged Only": "مسجل فقط"
+  },
+  "Percentage": {
+    "Percentage": "نسبة مئوية"
+  },
+  "Progress Bar": {
+    "Progress Bar": "شريط التقدم"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "الفاصل الزمني للتذكير"
+  },
+  "Reset Progress": {
+    "Reset Progress": "إعادة تعيين التقدم"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "انقر بزر الماوس الأيمن على أيقونة الشريط لتسجيل +250 مل بسرعة."
+  },
+  "Show Hints": {
+    "Show Hints": "إظهار التلميحات"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "الهدف كمية المياه يوميا."
+  },
+  "Text + Bar": {
+    "Text + Bar": "نص + شريط"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "سوف <b>ينبض الرمز أو يتغير شكله</b> عندما يحين وقت الشرب."
+  },
+  "Usage Guide": {
+    "Usage Guide": "دليل الاستخدام"
+  },
+  "min": {
+    "min": "دقيقة"
+  },
+  "ml": {
+    "ml": "مل"
+  }
+}

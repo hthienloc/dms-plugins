@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "<b>Нажмите левой кнопкой мыши</b> на таблетке, чтобы открыть панель управления гидратацией."
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "<b>Нажмите правой кнопкой мыши</b> на таблетке, чтобы мгновенно записать <b>+1 чашку</b>."
+  },
+  "Behavior": {
+    "Behavior": "Поведение"
+  },
+  "Daily Target": {
+    "Daily Target": "Ежедневная цель"
+  },
+  "Display Mode": {
+    "Display Mode": "Режим отображения"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "Полный (Записано/Цель)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "Как часто значок смещается, чтобы напомнить вам о необходимости выпить."
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "Как прогресс отображается на панели."
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "Цели гидратации"
+  },
+  "Icon Only": {
+    "Icon Only": "Только значок"
+  },
+  "Logged Only": {
+    "Logged Only": "Только зарегистрированные"
+  },
+  "Percentage": {
+    "Percentage": "Процент"
+  },
+  "Progress Bar": {
+    "Progress Bar": "Индикатор выполнения"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "Интервал напоминания"
+  },
+  "Reset Progress": {
+    "Reset Progress": "Сбросить прогресс"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "Щелкните правой кнопкой мыши значок панели, чтобы быстро записать +250 мл."
+  },
+  "Show Hints": {
+    "Show Hints": "Показать подсказки"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "Целевое потребление воды в день."
+  },
+  "Text + Bar": {
+    "Text + Bar": "Текст + Панель"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "Значок будет <b>пульсировать или менять форму</b>, когда придет время пить."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Руководство по использованию"
+  },
+  "min": {
+    "min": "мин"
+  },
+  "ml": {
+    "ml": "мл"
+  }
+}

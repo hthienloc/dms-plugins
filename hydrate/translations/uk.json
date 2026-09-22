@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "<b>Натисніть лівою кнопкою миші</b> таблетку, щоб відкрити інформаційну панель гідратації."
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "<b>Натисніть правою кнопкою миші</b> таблетку, щоб миттєво зареєструвати <b>+1 чашку</b>."
+  },
+  "Behavior": {
+    "Behavior": "Поведінка"
+  },
+  "Daily Target": {
+    "Daily Target": "Щоденна мета"
+  },
+  "Display Mode": {
+    "Display Mode": "Режим відображення"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "Повний (зареєстровано / ціль)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "Як часто піктограма зміщується, щоб нагадати вам випити."
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "Як прогрес відображається на панелі."
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "Цілі гідратації"
+  },
+  "Icon Only": {
+    "Icon Only": "Лише значок"
+  },
+  "Logged Only": {
+    "Logged Only": "Лише зареєстровані"
+  },
+  "Percentage": {
+    "Percentage": "Відсоток"
+  },
+  "Progress Bar": {
+    "Progress Bar": "Індикатор прогресу"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "Інтервал нагадування"
+  },
+  "Reset Progress": {
+    "Reset Progress": "Скинути прогрес"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "Клацніть правою кнопкою миші значок панелі, щоб швидко зареєструвати +250 мл."
+  },
+  "Show Hints": {
+    "Show Hints": "Показати підказки"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "Цільове споживання води на добу."
+  },
+  "Text + Bar": {
+    "Text + Bar": "Текст + панель"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "Піктограма <b>пульсує або змінює форму</b>, коли настане час пити."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Інструкція з використання"
+  },
+  "min": {
+    "min": "хв"
+  },
+  "ml": {
+    "ml": "мл"
+  }
+}

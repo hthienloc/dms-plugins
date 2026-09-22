@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "알약을 <b>왼쪽 클릭</b>하여 수분 공급 대시보드를 엽니다."
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "<b>+1컵</b>을 즉시 기록하려면 알약을 <b>마우스 오른쪽 버튼으로 클릭</b>하세요."
+  },
+  "Behavior": {
+    "Behavior": "행동"
+  },
+  "Daily Target": {
+    "Daily Target": "일일 목표"
+  },
+  "Display Mode": {
+    "Display Mode": "디스플레이 모드"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "전체(기록됨/목표)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "술을 마시라고 상기시키기 위해 아이콘이 얼마나 자주 이동하는지입니다."
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "막대에 진행 상황이 표시되는 방식입니다."
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "수분 공급 목표"
+  },
+  "Icon Only": {
+    "Icon Only": "아이콘만"
+  },
+  "Logged Only": {
+    "Logged Only": "기록된 것만"
+  },
+  "Percentage": {
+    "Percentage": "백분율"
+  },
+  "Progress Bar": {
+    "Progress Bar": "진행률 표시줄"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "알림 간격"
+  },
+  "Reset Progress": {
+    "Reset Progress": "진행 상황 재설정"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "+250ml를 빠르게 기록하려면 막대 아이콘을 마우스 오른쪽 버튼으로 클릭하세요."
+  },
+  "Show Hints": {
+    "Show Hints": "힌트 표시"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "하루 물 섭취량 목표."
+  },
+  "Text + Bar": {
+    "Text + Bar": "텍스트 + 바"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "마실 시간이 되면 아이콘이 <b>깜박거리거나 모양이 변합니다</b>."
+  },
+  "Usage Guide": {
+    "Usage Guide": "이용안내"
+  },
+  "min": {
+    "min": "분"
+  },
+  "ml": {
+    "ml": "밀리리터"
+  }
+}

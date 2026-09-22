@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "錠剤を<b>左クリック</b>して、水分補給ダッシュボードを開きます。"
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "錠剤を<b>右クリック</b>すると、<b>+1 カップ</b> がすぐに記録されます。"
+  },
+  "Behavior": {
+    "Behavior": "行動"
+  },
+  "Daily Target": {
+    "Daily Target": "毎日の目標"
+  },
+  "Display Mode": {
+    "Display Mode": "表示モード"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "フル (記録/目標)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "アイコンが変化して飲酒を促す頻度。"
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "進行状況がバーにどのように表示されるか。"
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "水分補給の目標"
+  },
+  "Icon Only": {
+    "Icon Only": "アイコンのみ"
+  },
+  "Logged Only": {
+    "Logged Only": "ログのみ"
+  },
+  "Percentage": {
+    "Percentage": "パーセンテージ"
+  },
+  "Progress Bar": {
+    "Progress Bar": "プログレスバー"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "リマインダー間隔"
+  },
+  "Reset Progress": {
+    "Reset Progress": "進行状況をリセットする"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "バーのアイコンを右クリックすると、+250ml をすぐに記録できます。"
+  },
+  "Show Hints": {
+    "Show Hints": "ヒントを表示する"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "1日あたりの目標水分摂取量。"
+  },
+  "Text + Bar": {
+    "Text + Bar": "テキスト + バー"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "飲むタイミングになると、 アイコンが<b>点滅したり、 形が変わったり</b>します。"
+  },
+  "Usage Guide": {
+    "Usage Guide": "ご利用ガイド"
+  },
+  "min": {
+    "min": "分"
+  },
+  "ml": {
+    "ml": "ミリリットル"
+  }
+}

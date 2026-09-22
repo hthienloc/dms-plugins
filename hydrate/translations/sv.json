@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "<b>Vänsterklicka</b> på pillret för att öppna vätskeinstrumentpanelen."
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "<b>Högerklicka</b> på pillret för att omedelbart logga <b>+1 kopp</b>."
+  },
+  "Behavior": {
+    "Behavior": "Beteende"
+  },
+  "Daily Target": {
+    "Daily Target": "Dagligt mål"
+  },
+  "Display Mode": {
+    "Display Mode": "Visningsläge"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "Fullständig (loggad / mål)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "Hur ofta ikonen ändras för att påminna dig om att dricka."
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "Hur framsteg visas i fältet."
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "Hydrationsmål"
+  },
+  "Icon Only": {
+    "Icon Only": "Endast ikon"
+  },
+  "Logged Only": {
+    "Logged Only": "Endast loggade"
+  },
+  "Percentage": {
+    "Percentage": "Procentsats"
+  },
+  "Progress Bar": {
+    "Progress Bar": "Framstegsindikator"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "Påminnelseintervall"
+  },
+  "Reset Progress": {
+    "Reset Progress": "Återställ förlopp"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "Högerklicka på barikonen för att snabbt logga +250ml."
+  },
+  "Show Hints": {
+    "Show Hints": "Visa tips"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "Målvattenintag per dag."
+  },
+  "Text + Bar": {
+    "Text + Bar": "Text + Bar"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "Ikonen <b>pulserar eller ändrar form</b> när det är dags att dricka."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Användningsguide"
+  },
+  "min": {
+    "min": "min"
+  },
+  "ml": {
+    "ml": "ml"
+  }
+}

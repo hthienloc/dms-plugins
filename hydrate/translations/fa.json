@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "روی قرص <b>کلیک چپ</b> کنید تا داشبورد هیدراتاسیون باز شود."
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "روی قرص <b>راست کلیک کنید</b> تا فوراً <b>+1 فنجان</b> را وارد کنید."
+  },
+  "Behavior": {
+    "Behavior": "رفتار"
+  },
+  "Daily Target": {
+    "Daily Target": "هدف روزانه"
+  },
+  "Display Mode": {
+    "Display Mode": "حالت نمایش"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "کامل (ثبت شده / هدف)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "هر چند وقت یکبار نماد تغییر می کند تا نوشیدنی را به شما یادآوری کند."
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "نحوه پیشرفت در نوار نشان داده شده است."
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "اهداف هیدراتاسیون"
+  },
+  "Icon Only": {
+    "Icon Only": "فقط نماد"
+  },
+  "Logged Only": {
+    "Logged Only": "فقط وارد شده است"
+  },
+  "Percentage": {
+    "Percentage": "درصد"
+  },
+  "Progress Bar": {
+    "Progress Bar": "نوار پیشرفت"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "فاصله یادآوری"
+  },
+  "Reset Progress": {
+    "Reset Progress": "بازنشانی پیشرفت"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "روی نماد نوار کلیک راست کنید تا به سرعت +250ml ثبت شود."
+  },
+  "Show Hints": {
+    "Show Hints": "نمایش نکات"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "مصرف آب هدفمند در روز"
+  },
+  "Text + Bar": {
+    "Text + Bar": "متن + نوار"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "هنگامی که زمان نوشیدن فرا می رسد، نماد <b>نبض می زند یا شکل آن تغییر می کند</b>."
+  },
+  "Usage Guide": {
+    "Usage Guide": "راهنمای استفاده"
+  },
+  "min": {
+    "min": "دقیقه"
+  },
+  "ml": {
+    "ml": "میلی لیتر"
+  }
+}

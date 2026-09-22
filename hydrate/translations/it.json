@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "<b>Fai clic con il pulsante sinistro del mouse</b> sulla pillola per aprire il pannello di idratazione."
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "<b>Fai clic con il pulsante destro del mouse</b> sulla pillola per registrare immediatamente <b>+1 tazza</b>."
+  },
+  "Behavior": {
+    "Behavior": "Comportamento"
+  },
+  "Daily Target": {
+    "Daily Target": "Obiettivo giornaliero"
+  },
+  "Display Mode": {
+    "Display Mode": "Modalità di visualizzazione"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "Completo (registrato/obiettivo)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "La frequenza con cui l'icona si sposta per ricordarti di bere."
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "Come viene mostrato il progresso sulla barra."
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "Obiettivi di idratazione"
+  },
+  "Icon Only": {
+    "Icon Only": "Solo icona"
+  },
+  "Logged Only": {
+    "Logged Only": "Solo registrato"
+  },
+  "Percentage": {
+    "Percentage": "Percentuale"
+  },
+  "Progress Bar": {
+    "Progress Bar": "Barra di avanzamento"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "Intervallo di promemoria"
+  },
+  "Reset Progress": {
+    "Reset Progress": "Reimposta avanzamento"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "Fare clic con il pulsante destro del mouse sull'icona della barra per registrare rapidamente +250 ml."
+  },
+  "Show Hints": {
+    "Show Hints": "Mostra suggerimenti"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "Obiettivo dell'assunzione di acqua al giorno."
+  },
+  "Text + Bar": {
+    "Text + Bar": "Testo + Barra"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "L'icona <b>lampeggia o cambia forma</b> quando è il momento di bere."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Guida all'uso"
+  },
+  "min": {
+    "min": "min"
+  },
+  "ml": {
+    "ml": "ml"
+  }
+}

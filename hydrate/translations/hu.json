@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "<b>Kattintson a bal gombbal</b> a tablettára a hidratálási irányítópult megnyitásához."
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "<b>Kattintson a jobb gombbal</b> a tablettára a <b>+1 csésze</b> azonnali naplózásához."
+  },
+  "Behavior": {
+    "Behavior": "Viselkedés"
+  },
+  "Daily Target": {
+    "Daily Target": "Napi cél"
+  },
+  "Display Mode": {
+    "Display Mode": "Kijelző mód"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "Teljes (naplózott / cél)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "Milyen gyakran vált az ikon, hogy igyon emlékeztessen."
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "Hogyan jelenik meg a haladás a sávon."
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "Hidratációs célok"
+  },
+  "Icon Only": {
+    "Icon Only": "Csak ikon"
+  },
+  "Logged Only": {
+    "Logged Only": "Csak naplózva"
+  },
+  "Percentage": {
+    "Percentage": "Százalék"
+  },
+  "Progress Bar": {
+    "Progress Bar": "Haladás sáv"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "Emlékeztető intervallum"
+  },
+  "Reset Progress": {
+    "Reset Progress": "Állítsa vissza a folyamatot"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "Kattintson a jobb gombbal a sáv ikonjára a +250 ml gyors naplózásához."
+  },
+  "Show Hints": {
+    "Show Hints": "Tippek megjelenítése"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "Napi cél vízbevitel."
+  },
+  "Text + Bar": {
+    "Text + Bar": "Szöveg + Bar"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "Az ikon <b>pulzál vagy alakot vált</b>, amikor eljön az ivás ideje."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Használati útmutató"
+  },
+  "min": {
+    "min": "min"
+  },
+  "ml": {
+    "ml": "ml"
+  }
+}

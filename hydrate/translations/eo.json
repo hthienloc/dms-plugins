@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "<b>Maldekstre alklaku</b> la pilolon por malfermi la hidratigpanelon."
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "<b>Dekstre alklaku</b> la pilolon por tuj ensaluti <b>+1 tason</b>."
+  },
+  "Behavior": {
+    "Behavior": "Konduto"
+  },
+  "Daily Target": {
+    "Daily Target": "Ĉiutaga Celo"
+  },
+  "Display Mode": {
+    "Display Mode": "Montra Reĝimo"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "Plena (Ensalutita/Celo)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "Kiom ofte la ikono ŝanĝiĝas por memorigi vin trinki."
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "Kiel progreso estas montrita sur la stango."
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "Hidraciaj Celoj"
+  },
+  "Icon Only": {
+    "Icon Only": "Ikono Nur"
+  },
+  "Logged Only": {
+    "Logged Only": "Nur ensalutinta"
+  },
+  "Percentage": {
+    "Percentage": "Procento"
+  },
+  "Progress Bar": {
+    "Progress Bar": "Progresa Trinkejo"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "Rememoriga Intervalo"
+  },
+  "Reset Progress": {
+    "Reset Progress": "Restarigi Progreson"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "Dekstre alklaku la stango-ikonon por rapide ensaluti +250ml."
+  },
+  "Show Hints": {
+    "Show Hints": "Montru Sugestojn"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "Celita akvokonsumo tage."
+  },
+  "Text + Bar": {
+    "Text + Bar": "Teksto + Trinkejo"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "La ikono <b>pulsos aŭ ŝanĝos formon</b> kiam estas tempo por trinki."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Gvidilo pri Uzado"
+  },
+  "min": {
+    "min": "min"
+  },
+  "ml": {
+    "ml": "ml"
+  }
+}

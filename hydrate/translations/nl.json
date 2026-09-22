@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "<b>Klik met de linkermuisknop</b> op de pil om het hydratatiedashboard te openen."
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "<b>Klik met de rechtermuisknop</b> op de pil om direct <b>+1 kopje</b> te loggen."
+  },
+  "Behavior": {
+    "Behavior": "Gedrag"
+  },
+  "Daily Target": {
+    "Daily Target": "Dagelijks doel"
+  },
+  "Display Mode": {
+    "Display Mode": "Weergavemodus"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "Volledig (gelogd / doel)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "Hoe vaak het pictogram verschuift om u eraan te herinneren dat u moet drinken."
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "Hoe de voortgang wordt weergegeven op de balk."
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "Hydratatiedoelen"
+  },
+  "Icon Only": {
+    "Icon Only": "Alleen pictogram"
+  },
+  "Logged Only": {
+    "Logged Only": "Alleen ingelogd"
+  },
+  "Percentage": {
+    "Percentage": "Percentage"
+  },
+  "Progress Bar": {
+    "Progress Bar": "Voortgangsbalk"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "Herinneringsinterval"
+  },
+  "Reset Progress": {
+    "Reset Progress": "Voortgang resetten"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "Klik met de rechtermuisknop op het balkpictogram om snel +250 ml te registreren."
+  },
+  "Show Hints": {
+    "Show Hints": "Toon tips"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "Streef naar waterinname per dag."
+  },
+  "Text + Bar": {
+    "Text + Bar": "Tekst + Balk"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "Het pictogram <b>pulseert of verandert van vorm</b> wanneer het tijd is om te drinken."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Gebruiksgids"
+  },
+  "min": {
+    "min": "min"
+  },
+  "ml": {
+    "ml": "ml"
+  }
+}

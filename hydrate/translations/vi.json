@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "<b>Nhấp chuột trái</b> vào biểu tượng pill để mở bảng điều khiển uống nước."
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "<b>Nhấp chuột phải</b> vào biểu tượng pill để ghi nhận nhanh <b>+1 cốc</b>."
+  },
+  "Behavior": {
+    "Behavior": "Hành vi"
+  },
+  "Daily Target": {
+    "Daily Target": "Mục tiêu hàng ngày"
+  },
+  "Display Mode": {
+    "Display Mode": "Chế độ hiển thị"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "Đầy đủ (Đã uống / Mục tiêu)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "Tần suất biểu tượng thay đổi để nhắc bạn uống nước."
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "Cách tiến trình hiển thị trên thanh bar."
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "Mục tiêu uống nước"
+  },
+  "Icon Only": {
+    "Icon Only": "Chỉ biểu tượng"
+  },
+  "Logged Only": {
+    "Logged Only": "Chỉ lượng đã uống"
+  },
+  "Percentage": {
+    "Percentage": "Phần trăm"
+  },
+  "Progress Bar": {
+    "Progress Bar": "Thanh tiến trình"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "Khoảng thời gian nhắc nhở"
+  },
+  "Reset Progress": {
+    "Reset Progress": "Đặt lại tiến trình"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "Nhấp chuột phải vào biểu tượng thanh bar để ghi nhanh +250ml."
+  },
+  "Show Hints": {
+    "Show Hints": "Hiển thị gợi ý"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "Lượng nước mục tiêu mỗi ngày."
+  },
+  "Text + Bar": {
+    "Text + Bar": "Văn bản + Thanh tiến trình"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "Biểu tượng sẽ <b>nhấp nháy hoặc biến đổi hình dạng</b> khi đến giờ uống nước."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Hướng dẫn sử dụng"
+  },
+  "min": {
+    "min": "phút"
+  },
+  "ml": {
+    "ml": "ml"
+  }
+}

@@ -42,3 +42,33 @@ GPL-3.0
 - [ ] **Sound Alerts Toggle**: Optional subtle water droplet audio chime toggles for optional notification.
 - [ ] **DND Integration**: Automatically silence bar reminders during full-screen apps or focus mode.
 - [ ] **Data Export/Import**: Backup logged hydration history stats to CSV or JSON formats.
+
+
+## Translations
+
+<!-- TRANSLATIONS_TABLE_START -->
+| Language | Locale | Progress | Coverage | Status |
+| :--- | :--- | :---: | :---: | :---: |
+| Arabic | `ar` | 23/23 | 100.0% | 🟢 Complete |
+| Bulgarian | `bg` | 23/23 | 100.0% | 🟢 Complete |
+| German | `de` | 23/23 | 100.0% | 🟢 Complete |
+| Esperanto | `eo` | 23/23 | 100.0% | 🟢 Complete |
+| Spanish | `es` | 23/23 | 100.0% | 🟢 Complete |
+| Persian | `fa` | 23/23 | 100.0% | 🟢 Complete |
+| French | `fr` | 23/23 | 100.0% | 🟢 Complete |
+| Hebrew | `he` | 23/23 | 100.0% | 🟢 Complete |
+| Hungarian | `hu` | 23/23 | 100.0% | 🟢 Complete |
+| Italian | `it` | 23/23 | 100.0% | 🟢 Complete |
+| Japanese | `ja` | 23/23 | 100.0% | 🟢 Complete |
+| Korean | `ko` | 23/23 | 100.0% | 🟢 Complete |
+| Dutch | `nl` | 23/23 | 100.0% | 🟢 Complete |
+| Polish | `pl` | 23/23 | 100.0% | 🟢 Complete |
+| Portuguese | `pt` | 23/23 | 100.0% | 🟢 Complete |
+| Russian | `ru` | 23/23 | 100.0% | 🟢 Complete |
+| Swedish | `sv` | 23/23 | 100.0% | 🟢 Complete |
+| Turkish | `tr` | 23/23 | 100.0% | 🟢 Complete |
+| Ukrainian | `uk` | 23/23 | 100.0% | 🟢 Complete |
+| Vietnamese | `vi` | 23/23 | 100.0% | 🟢 Complete |
+| Chinese (Simplified) | `zh_CN` | 23/23 | 100.0% | 🟢 Complete |
+| Chinese (Traditional) | `zh_TW` | 23/23 | 100.0% | 🟢 Complete |
+<!-- TRANSLATIONS_TABLE_END -->

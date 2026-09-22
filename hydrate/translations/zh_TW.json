@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "<b>左鍵點選</b>藥丸以開啟水合儀表板。"
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "<b>右鍵點選</b>藥丸即可立即記錄<b>+1杯</b>。"
+  },
+  "Behavior": {
+    "Behavior": "行為"
+  },
+  "Daily Target": {
+    "Daily Target": "每日目標"
+  },
+  "Display Mode": {
+    "Display Mode": "顯示模式"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "已滿（記錄/目標）"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "圖示提醒您喝酒的頻率。"
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "進度在狀態列上的顯示方式。"
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "補水目標"
+  },
+  "Icon Only": {
+    "Icon Only": "僅圖示"
+  },
+  "Logged Only": {
+    "Logged Only": "僅記錄"
+  },
+  "Percentage": {
+    "Percentage": "百分比"
+  },
+  "Progress Bar": {
+    "Progress Bar": "進度條"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "提醒間隔"
+  },
+  "Reset Progress": {
+    "Reset Progress": "重設進度"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "右鍵點擊狀態列圖示以快速記錄 +250ml。"
+  },
+  "Show Hints": {
+    "Show Hints": "顯示提示"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "每天目標飲水量。"
+  },
+  "Text + Bar": {
+    "Text + Bar": "文字+欄"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "當到了喝水的時間時，圖示會<b>跳動或改變形狀</b>。"
+  },
+  "Usage Guide": {
+    "Usage Guide": "使用指南"
+  },
+  "min": {
+    "min": "分分鐘"
+  },
+  "ml": {
+    "ml": "毫升"
+  }
+}

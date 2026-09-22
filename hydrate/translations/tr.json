@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "Sıvı alımı kontrol panelini açmak için hapa <b>sol tıklayın</b>."
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "Anında <b>+1 fincan</b> kaydetmek için hapa <b>sağ tıklayın</b>."
+  },
+  "Behavior": {
+    "Behavior": "Davranış"
+  },
+  "Daily Target": {
+    "Daily Target": "Günlük Hedef"
+  },
+  "Display Mode": {
+    "Display Mode": "Ekran Modu"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "Tam (Kayıtlı / Hedef)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "Simgenin size içmenizi hatırlatmak için ne sıklıkta değiştiği."
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "Çubukta ilerleme nasıl gösterilir?"
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "Hidrasyon Hedefleri"
+  },
+  "Icon Only": {
+    "Icon Only": "Yalnızca Simge"
+  },
+  "Logged Only": {
+    "Logged Only": "Yalnızca Günlüğe Kaydedildi"
+  },
+  "Percentage": {
+    "Percentage": "Yüzde"
+  },
+  "Progress Bar": {
+    "Progress Bar": "İlerleme Çubuğu"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "Hatırlatma Aralığı"
+  },
+  "Reset Progress": {
+    "Reset Progress": "İlerlemeyi Sıfırla"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "+250 ml'yi hızlıca kaydetmek için çubuk simgesine sağ tıklayın."
+  },
+  "Show Hints": {
+    "Show Hints": "İpuçlarını Göster"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "Günlük su alımını hedefleyin."
+  },
+  "Text + Bar": {
+    "Text + Bar": "Metin + Çubuk"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "İçme zamanı geldiğinde simge <b>atım yapacak veya şeklini değiştirecektir</b>."
+  },
+  "Usage Guide": {
+    "Usage Guide": "Kullanım Kılavuzu"
+  },
+  "min": {
+    "min": "dk."
+  },
+  "ml": {
+    "ml": "ml"
+  }
+}

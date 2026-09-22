@@ -1,0 +1,71 @@
+{
+  "<b>Left-click</b> the pill to open the hydration dashboard.": {
+    "<b>Left-click</b> the pill to open the hydration dashboard.": "<b>לחץ באמצעות לחצן העכבר השמאלי</b> על הגלולה כדי לפתוח את לוח המחוונים של הידרציה."
+  },
+  "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": {
+    "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>.": "<b>לחץ באמצעות לחצן העכבר הימני</b> על הגלולה כדי לרשום מיידית <b>+1 כוס</b>."
+  },
+  "Behavior": {
+    "Behavior": "הִתְנַהֲגוּת"
+  },
+  "Daily Target": {
+    "Daily Target": "יעד יומי"
+  },
+  "Display Mode": {
+    "Display Mode": "מצב תצוגה"
+  },
+  "Full (Logged / Goal)": {
+    "Full (Logged / Goal)": "מלא (נרשם / יעד)"
+  },
+  "How often the icon shifts to remind you to drink.": {
+    "How often the icon shifts to remind you to drink.": "באיזו תדירות הסמל עובר כדי להזכיר לך לשתות."
+  },
+  "How progress is shown on the bar.": {
+    "How progress is shown on the bar.": "כיצד מוצגת ההתקדמות בסרגל."
+  },
+  "Hydration Goals": {
+    "Hydration Goals": "יעדי הידרציה"
+  },
+  "Icon Only": {
+    "Icon Only": "סמל בלבד"
+  },
+  "Logged Only": {
+    "Logged Only": "נרשם בלבד"
+  },
+  "Percentage": {
+    "Percentage": "אֲחוּזִים"
+  },
+  "Progress Bar": {
+    "Progress Bar": "סרגל התקדמות"
+  },
+  "Reminder Interval": {
+    "Reminder Interval": "מרווח תזכורות"
+  },
+  "Reset Progress": {
+    "Reset Progress": "אפס התקדמות"
+  },
+  "Right-click the bar icon to quickly log +250ml.": {
+    "Right-click the bar icon to quickly log +250ml.": "לחץ לחיצה ימנית על סמל הסרגל כדי לרשום במהירות +250 מ\"ל."
+  },
+  "Show Hints": {
+    "Show Hints": "הצג רמזים"
+  },
+  "Target water intake per day.": {
+    "Target water intake per day.": "צריכת מים יעד ליום."
+  },
+  "Text + Bar": {
+    "Text + Bar": "טקסט + סרגל"
+  },
+  "The icon will <b>pulse or shift shape</b> when it's time to drink.": {
+    "The icon will <b>pulse or shift shape</b> when it's time to drink.": "הסמל <b>ידפק או ישתנה צורה</b> כשיגיע הזמן לשתות."
+  },
+  "Usage Guide": {
+    "Usage Guide": "מדריך שימוש"
+  },
+  "min": {
+    "min": "דקה"
+  },
+  "ml": {
+    "ml": "ml"
+  }
+}
