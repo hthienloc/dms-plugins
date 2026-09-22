@@ -7,6 +7,7 @@
   "type": "widget",
   "icon": "local_cafe",
   "capabilities": [
+    "dankbar-widget",
     "control-center"
   ],
   "component": "./CaffeineWidget.qml",
