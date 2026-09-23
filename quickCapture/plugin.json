@@ -18,7 +18,15 @@
     },
     "settings": "./QuickCaptureSettings.qml",
     "requires_dms": ">=1.6.0",
-    "requires": [],
+    "dependencies": [
+        "gpu-screen-recorder",
+        "wf-recorder",
+        "ffmpeg",
+        "magick",
+        "img2pdf",
+        "tesseract",
+        "zbarimg"
+    ],
     "permissions": [
         "settings_read",
         "settings_write",

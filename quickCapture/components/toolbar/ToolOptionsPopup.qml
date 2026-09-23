@@ -1,7 +1,6 @@
 import QtQuick
 import qs.Common
 import qs.Widgets
-import "../popovers"
 import "../core/Constants.js" as Constants
 import "../core/Helpers.js" as Helpers
 
@@ -33,8 +32,8 @@ Item {
         }
     ]
 
-    readonly property var groups: {
-        switch (root.tool) {
+    function getGroups(toolName) {
+        switch (toolName) {
         case "line":
             return [
                 {
@@ -186,22 +185,42 @@ Item {
         }
     }
 
+    readonly property var groups: getGroups(root.tool)
+
     z: 2000
     anchors.fill: parent
-    visible: panel.visible
+    visible: opacity > 0
+    opacity: 0
+
+    states: [
+        State {
+            name: "visible"
+            when: root.opened
+            PropertyChanges { target: root; opacity: 1.0 }
+            PropertyChanges { target: panel; scale: 1.0 }
+        }
+    ]
+
+    transitions: [
+        Transition {
+            NumberAnimation { target: root; property: "opacity"; duration: 120; easing.type: Easing.OutQuad }
+            NumberAnimation { target: panel; property: "scale"; duration: 120; easing.type: Easing.OutQuad }
+        }
+    ]
 
     function openFor(tool, x, y) {
-        root.tool = tool;
-        if (root.groups.length === 0)
+        const toolGroups = getGroups(tool);
+        if (toolGroups.length === 0)
             return false;
+        root.tool = tool;
         root.menuX = x;
         root.menuY = y;
-        panel.open();
+        root.opened = true;
         return true;
     }
 
     function close() {
-        panel.close();
+        root.opened = false;
     }
 
     function isActive(group, option) {
@@ -228,16 +247,25 @@ Item {
         }
     }
 
-    PopoverSurface {
+    Rectangle {
         id: panel
-        closedScale: 0.95
-        width: content.implicitWidth + Theme.spacingM * 2
-        height: content.implicitHeight + Theme.spacingM * 2
+        color: Theme.surfaceContainer
+        border.color: Theme.withAlpha(Theme.outline, 0.15)
+        border.width: 1
+        radius: Theme.cornerRadius
+        scale: 0.95
+
+        width: popupContent.implicitWidth + Theme.spacingM * 2
+        height: popupContent.implicitHeight + Theme.spacingM * 2
         x: Helpers.popoverX(root.width, width, root.menuX)
         y: Helpers.popoverY(root.height, height, root.menuY, root.toolbarPosition)
 
+        MouseArea {
+            anchors.fill: parent
+        }
+
         Column {
-            id: content
+            id: popupContent
             anchors.centerIn: parent
             spacing: Theme.spacingS
 
