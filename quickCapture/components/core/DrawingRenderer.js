@@ -524,6 +524,44 @@ function drawHandlePoints(ctx, points, hh, hs, Theme) {
 }
 
 /**
+ * Draws a filled arrowhead triangle with all 3 corners smoothly rounded.
+ * @param {object} ctx - The Canvas 2D context.
+ * @param {number} tipX - Apex X coordinate.
+ * @param {number} tipY - Apex Y coordinate.
+ * @param {number} angle - Arrow direction angle in radians.
+ * @param {number} headLength - Total length of the arrowhead.
+ * @param {number} spreadAngle - Half-angle spread of the arrowhead in radians.
+ * @param {number} strokeWidth - Stroke thickness.
+ */
+function drawRoundedArrowHead(ctx, tipX, tipY, angle, headLength, spreadAngle, strokeWidth) {
+    const tipRadius = Math.max(1.5, Math.min(strokeWidth * 0.5, headLength * 0.15));
+    const baseRadius = Math.max(1.2, Math.min(strokeWidth * 0.4, headLength * 0.12));
+
+    const sinHalf = Math.sin(spreadAngle);
+    const tipApexInset = tipRadius * (1 / sinHalf - 1);
+    const effectiveTipX = tipX + tipApexInset * Math.cos(angle);
+    const effectiveTipY = tipY + tipApexInset * Math.sin(angle);
+
+    const v1x = effectiveTipX;
+    const v1y = effectiveTipY;
+    const v2x = tipX - headLength * Math.cos(angle - spreadAngle);
+    const v2y = tipY - headLength * Math.sin(angle - spreadAngle);
+    const v3x = tipX - headLength * Math.cos(angle + spreadAngle);
+    const v3y = tipY - headLength * Math.sin(angle + spreadAngle);
+
+    const startX = (v3x + v1x) / 2;
+    const startY = (v3y + v1y) / 2;
+
+    ctx.beginPath();
+    ctx.moveTo(startX, startY);
+    ctx.arcTo(v1x, v1y, v2x, v2y, tipRadius);
+    ctx.arcTo(v2x, v2y, v3x, v3y, baseRadius);
+    ctx.arcTo(v3x, v3y, v1x, v1y, baseRadius);
+    ctx.closePath();
+    ctx.fill();
+}
+
+/**
  * Draws a single stroke (annotation) onto the provided context.
  * @param {object} ctx - The Canvas 2D context.
  * @param {object} stroke - The stroke data object.
@@ -585,7 +623,7 @@ function drawStroke(ctx, stroke, Helpers, Qt, Theme, config) {
         if (stroke.lineStyle === "dashed") {
             ctx.setLineDash([stroke.width * Constants.lineDashMultiplier, stroke.width * Constants.lineGapMultiplier]);
         } else if (stroke.lineStyle === "dotted") {
-            ctx.setLineDash([0.01, stroke.width * Constants.dottedGapMultiplier]);
+            ctx.setLineDash([stroke.width * Constants.lineDashMultiplier, stroke.width * Constants.dottedGapMultiplier, 0.01, stroke.width * Constants.dottedGapMultiplier]);
         } else {
             ctx.setLineDash([]);
         }
@@ -675,13 +713,7 @@ function drawStroke(ctx, stroke, Helpers, Qt, Theme, config) {
             const SPREAD_ANGLE = Math.PI / 7;
             const MIN_HEAD_LENGTH = 15;
             const HEAD_LENGTH_MULTIPLIER = 4;
-            const BASE_FACTOR = Math.cos(SPREAD_ANGLE); // ~0.9009, matching base of the arrowhead triangle
-
-            const DASH_LENGTH_RATIO = 2.5;
-            const DASH_GAP_RATIO = 1.5;
-            const DOTTED_SEGMENT_LENGTH = 0.01;
-            const DOTTED_GAP_RATIO = 2;
-
+            const BASE_FACTOR = Math.cos(SPREAD_ANGLE);
             const angle = Math.atan2(dy, dx);
             const headLength = Math.max(MIN_HEAD_LENGTH, stroke.width * HEAD_LENGTH_MULTIPLIER);
             
@@ -700,9 +732,9 @@ function drawStroke(ctx, stroke, Helpers, Qt, Theme, config) {
             // Draw arrow shaft
             ctx.save();
             if (stroke.arrowLineStyle === "dashed") {
-                ctx.setLineDash([stroke.width * DASH_LENGTH_RATIO, stroke.width * DASH_GAP_RATIO]);
+                ctx.setLineDash([stroke.width * Constants.lineDashMultiplier, stroke.width * Constants.lineGapMultiplier]);
             } else if (stroke.arrowLineStyle === "dotted") {
-                ctx.setLineDash([DOTTED_SEGMENT_LENGTH, stroke.width * DOTTED_GAP_RATIO]);
+                ctx.setLineDash([stroke.width * Constants.lineDashMultiplier, stroke.width * Constants.dottedGapMultiplier, 0.01, stroke.width * Constants.dottedGapMultiplier]);
             } else {
                 ctx.setLineDash([]);
             }
@@ -721,23 +753,13 @@ function drawStroke(ctx, stroke, Helpers, Qt, Theme, config) {
                 ctx.lineTo(p1.x - headLength * Math.cos(angle + SPREAD_ANGLE), p1.y - headLength * Math.sin(angle + SPREAD_ANGLE));
                 ctx.stroke();
             } else {
-                ctx.beginPath();
-                ctx.moveTo(p1.x, p1.y);
-                ctx.lineTo(p1.x - headLength * Math.cos(angle - SPREAD_ANGLE), p1.y - headLength * Math.sin(angle - SPREAD_ANGLE));
-                ctx.lineTo(p1.x - headLength * Math.cos(angle + SPREAD_ANGLE), p1.y - headLength * Math.sin(angle + SPREAD_ANGLE));
-                ctx.closePath();
-                ctx.fill();
+                drawRoundedArrowHead(ctx, p1.x, p1.y, angle, headLength, SPREAD_ANGLE, stroke.width);
             }
 
             // Draw secondary head (at p0) if double-headed
             if (isDoubleHead) {
                 const oppositeAngle = angle + Math.PI;
-                ctx.beginPath();
-                ctx.moveTo(p0.x, p0.y);
-                ctx.lineTo(p0.x - headLength * Math.cos(oppositeAngle - SPREAD_ANGLE), p0.y - headLength * Math.sin(oppositeAngle - SPREAD_ANGLE));
-                ctx.lineTo(p0.x - headLength * Math.cos(oppositeAngle + SPREAD_ANGLE), p0.y - headLength * Math.sin(oppositeAngle + SPREAD_ANGLE));
-                ctx.closePath();
-                ctx.fill();
+                drawRoundedArrowHead(ctx, p0.x, p0.y, oppositeAngle, headLength, SPREAD_ANGLE, stroke.width);
             }
         }
 

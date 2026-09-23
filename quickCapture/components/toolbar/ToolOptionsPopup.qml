@@ -26,7 +26,7 @@ Item {
             tooltip: I18n.trFor("quickCapture", "Dashed Line")
         },
         {
-            icon: "more_horiz",
+            icon: "linear_scale",
             value: "dotted",
             tooltip: I18n.trFor("quickCapture", "Dotted Line")
         }

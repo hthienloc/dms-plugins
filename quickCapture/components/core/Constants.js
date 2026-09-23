@@ -18,9 +18,9 @@ const rectSelectionPadding = 5;
 const calloutSelectionPadding = 5;
 
 // Tool multipliers and scales
-const lineDashMultiplier = 2.5;
-const lineGapMultiplier = 1.5;
-const dottedGapMultiplier = 2.0;
+const lineDashMultiplier = 2.0;
+const lineGapMultiplier = 1.2;
+const dottedGapMultiplier = 1.4;
 const highlighterScale = 4.0;
 const stampRadiusMultiplier = 5.0;
 const stampTextFontSizeMultiplier = 1.2;
