@@ -46,7 +46,7 @@ SettingsGroup {
             id: recordingBackend
             settingKey: "recordingBackend"
             label: I18n.trFor("quickCapture", "Recording Backend")
-            description: I18n.trFor("quickCapture", "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).").arg("wf-recorder")
+            description: I18n.trFor("quickCapture", "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.").arg("wf-recorder")
             options: [
                 {
                     label: I18n.trFor("quickCapture", "Auto"),
@@ -57,7 +57,7 @@ SettingsGroup {
                     value: "gpu-screen-recorder"
                 },
                 {
-                    label: "wf-recorder (CPU libx264)",
+                    label: "wf-recorder (CPU libx264 - no pause)",
                     value: "wf-recorder"
                 }
             ]

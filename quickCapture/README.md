@@ -29,7 +29,7 @@ Screenshot annotation and screen recording plugin for DankMaterialShell.
 | **zbar** (`zbarimg`)                 | QR scanner                                         |
 
 > [!NOTE]
-> At least one recording backend (`gpu-screen-recorder` or `wf-recorder`) is required for video capture. `gpu-screen-recorder` is recommended for optimal performance and audio support; `wf-recorder` serves as a lightweight CPU-based alternative (video only).
+> At least one recording backend (`gpu-screen-recorder` or `wf-recorder`) is required for video capture. `gpu-screen-recorder` is recommended for optimal performance, pause/resume support, and audio; `wf-recorder` serves as a lightweight CPU-based alternative (video only, pause/resume not supported).
 
 ## Install
 

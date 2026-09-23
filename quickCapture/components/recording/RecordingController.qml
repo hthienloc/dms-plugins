@@ -447,29 +447,26 @@ Item {
     }
 
     function sendNotification(message, isError, iconPath, videoPath) {
-        const title = isError ? I18n.trFor("quickCapture", "Screen Recording Error") : I18n.trFor("quickCapture", "Screen Recording Saved");
-        if (isError || !videoPath) {
-            const args = ["notify-send", "-a", "Quick Capture", "-i", iconPath || (isError ? "error" : "video-x-generic"), title, message];
-            if (isError)
-                args.push("-u", "critical");
-            Proc.runCommand("quickCapture.recordingNotify", args);
+        const mode = setting("postNotification");
+        if (!message)
             return;
+        if (mode === "none")
+            return;
+        if (isError) {
+            ToastService.showError(message);
+        } else if (mode === "toast" || mode === "both") {
+            ToastService.showInfo(message);
         }
+        if (mode !== "notification" && mode !== "both" && !isError)
+            return;
 
-        const args = ["notify-send", "-a", "Quick Capture", "-i", iconPath || "video-x-generic"];
-        if (iconPath && iconPath.startsWith("/"))
-            args.push("-h", "string:image-path:file://" + iconPath);
-        args.push("-A", "open=" + I18n.trFor("quickCapture", "Open"), "-A", "folder=" + I18n.trFor("quickCapture", "Open folder"), "-t", "5000", title, message);
-
-        Proc.runCommand("quickCapture.recordingNotify", args, stdout => {
-            const action = (stdout || "").trim();
-            if (action === "open") {
-                Proc.runCommand("quickCapture.openRecording", ["xdg-open", videoPath]);
-                return;
-            }
-            if (action === "folder")
-                Proc.runCommand("quickCapture.openRecordingFolder", ["xdg-open", videoPath.substring(0, videoPath.lastIndexOf("/")) || "."]);
-        });
+        const title = isError ? I18n.trFor("quickCapture", "Screen Recording Error") : I18n.trFor("quickCapture", "Screen Recording Saved");
+        const icon = iconPath || (isError ? "error" : "video-x-generic");
+        const args = [Proc.dmsBin, "notify", "--app", "Quick Capture", "--icon", icon];
+        if (!isError && videoPath)
+            args.push("--file", videoPath);
+        args.push("--timeout", "5000", title, message);
+        Proc.runCommand("quickCapture.recordingNotify", args);
     }
 
     function parseAudioDevices(stdout) {
