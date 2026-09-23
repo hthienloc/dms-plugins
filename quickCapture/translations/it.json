@@ -3,7 +3,7 @@
     "%1 Font": "Font del testo"
   },
   "%1 is not installed": {
-    "%1 is not installed": ""
+    "%1 is not installed": "%1 non è installato"
   },
   "1 Connecting Line": {
     "1 Connecting Line": "1 linea di collegamento"
@@ -15,7 +15,7 @@
     "Action": "Azione"
   },
   "Action on %1": {
-    "Action on %1": ""
+    "Action on %1": "Azione su %1"
   },
   "Adaptive": {
     "Adaptive": "Adattivo"
@@ -39,7 +39,7 @@
     "Annotation Tools": "Strumenti di annotazione"
   },
   "Anonymous Copy": {
-    "Anonymous Copy": ""
+    "Anonymous Copy": "Copia anonima"
   },
   "Arrow": {
     "Arrow": "Vettore della freccia"
@@ -57,10 +57,13 @@
     "Audio Codec": "Codec audio"
   },
   "Audio recording is disabled when using the %1 backend.": {
-    "Audio recording is disabled when using the %1 backend.": ""
+    "Audio recording is disabled when using the %1 backend.": "La registrazione audio è disattivata quando si usa il backend %1."
   },
   "Auto": {
     "Auto": "Automatico"
+  },
+  "Auto (Screen Scale)": {
+    "Auto (Screen Scale)": ""
   },
   "Auto Balance": {
     "Auto Balance": "Bilanciamento automatico"
@@ -252,7 +255,7 @@
     "Corner Radius": "Raggio degli angoli"
   },
   "Could not crop image": {
-    "Could not crop image": ""
+    "Could not crop image": "Impossibile ritagliare l'immagine"
   },
   "Crop / Resize": {
     "Crop / Resize": "Ritaglia / Ridimensiona"
@@ -342,19 +345,19 @@
     "Failed to convert recording to GIF.": "Impossibile convertire la registrazione in GIF."
   },
   "Failed to copy screenshot": {
-    "Failed to copy screenshot": ""
+    "Failed to copy screenshot": "Impossibile copiare lo screenshot"
   },
   "Failed to create float window.": {
-    "Failed to create float window.": ""
+    "Failed to create float window.": "Impossibile creare la finestra fluttuante."
   },
   "Failed to download image.": {
-    "Failed to download image.": ""
+    "Failed to download image.": "Impossibile scaricare l'immagine."
   },
   "Failed to generate blurred background image": {
     "Failed to generate blurred background image": "Impossibile generare l'immagine di sfondo sfocata"
   },
   "Failed to load image: %1": {
-    "Failed to load image: %1": ""
+    "Failed to load image: %1": "Impossibile caricare l'immagine: %1"
   },
   "Failed to save screenshot": {
     "Failed to save screenshot": "Impossibile salvare lo screenshot"
@@ -363,7 +366,7 @@
     "File": "File"
   },
   "Filename Pattern": {
-    "Filename Pattern": ""
+    "Filename Pattern": "Modello del nome file"
   },
   "Flip Horizontal": {
     "Flip Horizontal": "Rifletti orizz"
@@ -378,7 +381,7 @@
     "Float Window": "Finestra fluttuante"
   },
   "Float service not available.": {
-    "Float service not available.": ""
+    "Float service not available.": "Servizio fluttuante non disponibile."
   },
   "Floating": {
     "Floating": "Fluttuante"
@@ -414,7 +417,7 @@
     "GIF Framerate": "Frequenza fotogrammi della GIF"
   },
   "GPU encoder failed. Retrying with %1...": {
-    "GPU encoder failed. Retrying with %1...": ""
+    "GPU encoder failed. Retrying with %1...": "Codificatore GPU non riuscito. Nuovo tentativo con %1..."
   },
   "General Shortcuts": {
     "General Shortcuts": "Scorciatoie generali"
@@ -432,7 +435,7 @@
     "Help": "Guida"
   },
   "Hide Annotations": {
-    "Hide Annotations": ""
+    "Hide Annotations": "Nascondi annotazioni"
   },
   "Hide Control Center": {
     "Hide Control Center": "Nascondi il centro di controllo"
@@ -450,7 +453,7 @@
     "History": "Cronologia"
   },
   "Hold %1 for Loupe": {
-    "Hold %1 for Loupe": ""
+    "Hold %1 for Loupe": "Tieni premuto %1 per la lente d'ingrandimento"
   },
   "Hover Trigger Delay": {
     "Hover Trigger Delay": "Ritardo di attivazione al passaggio del mouse"
@@ -477,7 +480,7 @@
     "Image Size": "Dimensione dell'immagine"
   },
   "Image is too small (%1×%2). Minimum: %3px": {
-    "Image is too small (%1×%2). Minimum: %3px": ""
+    "Image is too small (%1×%2). Minimum: %3px": "L'immagine è troppo piccola (%1×%2). Minimo: %3px"
   },
   "Image selected automatically when using Image Background mode": {
     "Image selected automatically when using Image Background mode": "Immagine selezionata automaticamente quando si usa la modalità Sfondo immagine"
@@ -492,7 +495,7 @@
     "Initial state for the Control Center toggle.": "Stato iniziale dell'interruttore del centro di controllo."
   },
   "Inline": {
-    "Inline": ""
+    "Inline": "In linea"
   },
   "Input Mode": {
     "Input Mode": "Modalità di input"
@@ -504,16 +507,19 @@
     "Interaction / Result": "Interazione / Risultato"
   },
   "Invalid or corrupted image file.": {
-    "Invalid or corrupted image file.": ""
+    "Invalid or corrupted image file.": "File immagine non valido o danneggiato."
   },
   "Italic": {
-    "Italic": ""
+    "Italic": "Corsivo"
   },
   "JPEG Quality": {
     "JPEG Quality": "Qualità JPEG"
   },
   "Key": {
     "Key": "Tasto"
+  },
+  "Keybinding overlay size in interactive region selector.": {
+    "Keybinding overlay size in interactive region selector.": ""
   },
   "Landscape": {
     "Landscape": "Orizzontale"
@@ -591,7 +597,7 @@
     "No Image Specified": "Nessuna immagine specificata"
   },
   "No QR code detected": {
-    "No QR code detected": ""
+    "No QR code detected": "Nessun codice QR rilevato"
   },
   "No output available": {
     "No output available": "Nessuna uscita disponibile"
@@ -603,13 +609,13 @@
     "No supported images found": "Nessuna immagine supportata trovata"
   },
   "No text detected": {
-    "No text detected": ""
+    "No text detected": "Nessun testo rilevato"
   },
   "No valid image file or URL found in drop.": {
-    "No valid image file or URL found in drop.": ""
+    "No valid image file or URL found in drop.": "Nessun file immagine o URL valido trovato nel rilascio."
   },
   "No valid image, URL, or path in clipboard.": {
-    "No valid image, URL, or path in clipboard.": ""
+    "No valid image, URL, or path in clipboard.": "Nessuna immagine, URL o percorso valido negli appunti."
   },
   "None": {
     "None": "Nessuna"
@@ -630,10 +636,13 @@
     "OCR Result": "Risultato dell'OCR"
   },
   "OCR failed": {
-    "OCR failed": ""
+    "OCR failed": "OCR non riuscito"
   },
   "Off": {
     "Off": "Disattivato"
+  },
+  "Off (Hidden)": {
+    "Off (Hidden)": ""
   },
   "Opacity": {
     "Opacity": "Opacità"
@@ -642,10 +651,10 @@
     "Open": "Apri"
   },
   "Open %1 menu (Popout)": {
-    "Open %1 menu (Popout)": ""
+    "Open %1 menu (Popout)": "Apri il menu %1 (Pannello a comparsa)"
   },
   "Open Image": {
-    "Open Image": ""
+    "Open Image": "Apri immagine"
   },
   "Open folder": {
     "Open folder": "Apri cartella"
@@ -678,7 +687,7 @@
     "Paused": "In Pausa"
   },
   "Pausing is not supported with %1.": {
-    "Pausing is not supported with %1.": ""
+    "Pausing is not supported with %1.": "La pausa non è supportata con %1."
   },
   "Pen": {
     "Pen": "Penna a mano libera"
@@ -699,7 +708,7 @@
     "Pixelate Intensity": "Intensità del pixela"
   },
   "Popup": {
-    "Popup": ""
+    "Popup": "Popup"
   },
   "Portrait": {
     "Portrait": "Verticale"
@@ -711,19 +720,19 @@
     "Post-Capture Notification": "Notifica dopo la cattura"
   },
   "Preset": {
-    "Preset": ""
+    "Preset": "Preset"
   },
   "Preset %1": {
     "Preset %1": "Preset %1"
   },
   "Presets": {
-    "Presets": ""
+    "Presets": "Preset"
   },
   "Preview": {
     "Preview": "Anteprima"
   },
   "Preview Quality": {
-    "Preview Quality": ""
+    "Preview Quality": "Qualità dell'anteprima"
   },
   "Primary": {
     "Primary": "Primario"
@@ -735,7 +744,7 @@
     "QR Result": "Risultato QR"
   },
   "QR scan failed": {
-    "QR scan failed": ""
+    "QR scan failed": "Scansione QR non riuscita"
   },
   "Quality": {
     "Quality": "Qualità"
@@ -771,7 +780,7 @@
     "Recording": "Registrazione"
   },
   "Recording Backend": {
-    "Recording Backend": ""
+    "Recording Backend": "Backend di registrazione"
   },
   "Recording Folder": {
     "Recording Folder": "Cartella delle registrazioni"
@@ -796,6 +805,9 @@
   },
   "Region": {
     "Region": "Regione"
+  },
+  "Region HUD Scale": {
+    "Region HUD Scale": ""
   },
   "Reset": {
     "Reset": "Reimposta"
@@ -837,7 +849,7 @@
     "Save": "Salva"
   },
   "Save As": {
-    "Save As": ""
+    "Save As": "Salva con nome"
   },
   "Save Screenshot As": {
     "Save Screenshot As": "Salva screenshot con nome"
@@ -864,7 +876,7 @@
     "Screen recording timed out or was cancelled.": "La registrazione dello schermo è scaduta o è stata annullata."
   },
   "Screenshot": {
-    "Screenshot": ""
+    "Screenshot": "Screenshot"
   },
   "Screenshot Copied": {
     "Screenshot Copied": "Screenshot copiato"
@@ -897,7 +909,7 @@
     "Scroll Interval": "Intervallo di scorrimento"
   },
   "Scroll capture: select a region, scroll content, then press %1 to finish.": {
-    "Scroll capture: select a region, scroll content, then press %1 to finish.": ""
+    "Scroll capture: select a region, scroll content, then press %1 to finish.": "Cattura con scorrimento: seleziona una regione, scorri il contenuto, poi premi %1 per terminare."
   },
   "Scrolling": {
     "Scrolling": "Scorrimento"
@@ -906,13 +918,16 @@
     "Select": "Seleziona"
   },
   "Select Color Slots %1": {
-    "Select Color Slots %1": ""
+    "Select Color Slots %1": "Seleziona slot colore %1"
   },
   "Select Image to Annotate": {
     "Select Image to Annotate": "Seleziona immagine da annotare"
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": ""
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Seleziona il backend di registrazione dello schermo. Automatico prova prima la GPU e ripiega sulla CPU (%1)."
+  },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "Strumento / Azione selezionati"
@@ -930,7 +945,7 @@
     "Shortcut Action": "Azione della scorciatoia"
   },
   "Show Annotations": {
-    "Show Annotations": ""
+    "Show Annotations": "Mostra annotazioni"
   },
   "Show Control Center": {
     "Show Control Center": "Mostra il centro di controllo"
@@ -1041,7 +1056,7 @@
     "Toast": "Toast"
   },
   "Toggle Annotations": {
-    "Toggle Annotations": ""
+    "Toggle Annotations": "Attiva/disattiva annotazioni"
   },
   "Toggle Start / Stop": {
     "Toggle Start / Stop": "Attiva/disattiva Avvio/Arresto"
@@ -1092,7 +1107,7 @@
     "Type note...": "Scrivi una nota..."
   },
   "Underline": {
-    "Underline": ""
+    "Underline": "Sottolineato"
   },
   "Undo": {
     "Undo": "Annulla"
@@ -1110,13 +1125,13 @@
     "Use Modal Editor": "Usa l'editor a finestra modale"
   },
   "Variant": {
-    "Variant": ""
+    "Variant": "Variante"
   },
   "Very High": {
     "Very High": "Molto alta"
   },
   "Video": {
-    "Video": ""
+    "Video": "Video"
   },
   "Video Codec": {
     "Video Codec": "Codec video"

@@ -1,9 +1,9 @@
 {
   "%1 Font": {
-    "%1 Font": ""
+    "%1 Font": "%1 Schriftart"
   },
   "%1 is not installed": {
-    "%1 is not installed": ""
+    "%1 is not installed": "%1 ist nicht installiert"
   },
   "1 Connecting Line": {
     "1 Connecting Line": "1 Verbindungslinie"
@@ -15,7 +15,7 @@
     "Action": "Aktion"
   },
   "Action on %1": {
-    "Action on %1": ""
+    "Action on %1": "Aktion auf %1"
   },
   "Adaptive": {
     "Adaptive": "Adaptiv"
@@ -27,7 +27,7 @@
     "Add Text Note": "Textnotiz hinzufügen"
   },
   "Alignment": {
-    "Alignment": ""
+    "Alignment": "Ausrichtung"
   },
   "All Outputs": {
     "All Outputs": "Alle Ausgaben"
@@ -39,13 +39,13 @@
     "Annotation Tools": "Anmerkungswerkzeuge"
   },
   "Anonymous Copy": {
-    "Anonymous Copy": ""
+    "Anonymous Copy": "Anonyme Kopie"
   },
   "Arrow": {
     "Arrow": "Pfeil-Vektor"
   },
   "Aspect Ratio": {
-    "Aspect Ratio": ""
+    "Aspect Ratio": "Seitenverhältnis"
   },
   "Audio": {
     "Audio": "Audio"
@@ -57,10 +57,13 @@
     "Audio Codec": "Audio Codec"
   },
   "Audio recording is disabled when using the %1 backend.": {
-    "Audio recording is disabled when using the %1 backend.": ""
+    "Audio recording is disabled when using the %1 backend.": "Audioaufnahme ist bei Verwendung des %1-Backends deaktiviert."
   },
   "Auto": {
     "Auto": "Auto"
+  },
+  "Auto (Screen Scale)": {
+    "Auto (Screen Scale)": ""
   },
   "Auto Balance": {
     "Auto Balance": "Auto-Balance"
@@ -87,7 +90,7 @@
     "Automatically stack windows to avoid overlap": "Fenster automatisch stapeln, um Überlappungen zu vermeiden"
   },
   "Back to Annotation": {
-    "Back to Annotation": ""
+    "Back to Annotation": "Zurück zur Annotation"
   },
   "Background": {
     "Background": "Hintergrund"
@@ -99,7 +102,7 @@
     "Background Images": "Hintergrundbilder"
   },
   "Background Mode": {
-    "Background Mode": ""
+    "Background Mode": "Hintergrundmodus"
   },
   "Background Presets": {
     "Background Presets": "Hintergrund-Voreinstellungen"
@@ -168,7 +171,7 @@
     "Center": "Mitte"
   },
   "Choose Color": {
-    "Choose Color": "Farbe"
+    "Choose Color": "Farbe wählen"
   },
   "Choose notifications shown after copy or save.": {
     "Choose notifications shown after copy or save.": "Wählen Sie die Benachrichtigungen aus, die nach dem Kopieren oder Speichern angezeigt werden."
@@ -207,7 +210,7 @@
     "Color Picker": "Farbwähler"
   },
   "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": {
-    "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": ""
+    "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": "Konfigurieren Sie bis zu %1 Schnellzugriff-Werkzeug-Presets. Rechtsklick während der Aufnahme, um das Radialmenü zu öffnen."
   },
   "Conic Gradient": {
     "Conic Gradient": "Konischer Verlauf"
@@ -252,7 +255,7 @@
     "Corner Radius": "Abrundungsradius"
   },
   "Could not crop image": {
-    "Could not crop image": ""
+    "Could not crop image": "Bild konnte nicht zugeschnitten werden"
   },
   "Crop / Resize": {
     "Crop / Resize": "Zuschneiden / Größe ändern"
@@ -294,7 +297,7 @@
     "Display": "Anzeige"
   },
   "Display Mode": {
-    "Display Mode": ""
+    "Display Mode": "Anzeigemodus"
   },
   "Done": {
     "Done": "Fertig"
@@ -312,7 +315,7 @@
     "Drop image onto bar icon to annotate it": "Bild auf das Leistensymbol ziehen, um es zu annotieren"
   },
   "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": {
-    "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": ""
+    "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": "Jeder Befehl akzeptiert die Aktion: %1 (Editor öffnen) oder %2 (Immer-im-Vordergrund-Fenster)."
   },
   "Edge Spacing": {
     "Edge Spacing": "Randabstand"
@@ -342,19 +345,19 @@
     "Failed to convert recording to GIF.": "Konvertierung der Aufnahme in GIF fehlgeschlagen."
   },
   "Failed to copy screenshot": {
-    "Failed to copy screenshot": ""
+    "Failed to copy screenshot": "Screenshot konnte nicht kopiert werden"
   },
   "Failed to create float window.": {
-    "Failed to create float window.": ""
+    "Failed to create float window.": "Schwebendes Fenster konnte nicht erstellt werden."
   },
   "Failed to download image.": {
-    "Failed to download image.": ""
+    "Failed to download image.": "Bild konnte nicht heruntergeladen werden."
   },
   "Failed to generate blurred background image": {
     "Failed to generate blurred background image": "Fehler beim Erzeugen des unscharfen Hintergrundbildes"
   },
   "Failed to load image: %1": {
-    "Failed to load image: %1": ""
+    "Failed to load image: %1": "Bild konnte nicht geladen werden: %1"
   },
   "Failed to save screenshot": {
     "Failed to save screenshot": "Screenshot konnte nicht gespeichert werden"
@@ -363,13 +366,13 @@
     "File": "Datei"
   },
   "Filename Pattern": {
-    "Filename Pattern": ""
+    "Filename Pattern": "Dateinamen-Muster"
   },
   "Flip Horizontal": {
-    "Flip Horizontal": ""
+    "Flip Horizontal": "Horizontal spiegeln"
   },
   "Flip Vertical": {
-    "Flip Vertical": ""
+    "Flip Vertical": "Vertikal spiegeln"
   },
   "Float": {
     "Float": "Schwebend"
@@ -378,7 +381,7 @@
     "Float Window": "Fenster schweben lassen"
   },
   "Float service not available.": {
-    "Float service not available.": ""
+    "Float service not available.": "Schwebender Dienst nicht verfügbar."
   },
   "Floating": {
     "Floating": "Schwebend"
@@ -408,31 +411,31 @@
     "Fullscreen": "Vollbild"
   },
   "Fullscreen Target": {
-    "Fullscreen Target": ""
+    "Fullscreen Target": "Vollbild-Ziel"
   },
   "GIF Framerate": {
     "GIF Framerate": "GIF-Bildrate"
   },
   "GPU encoder failed. Retrying with %1...": {
-    "GPU encoder failed. Retrying with %1...": ""
+    "GPU encoder failed. Retrying with %1...": "GPU-Encoder fehlgeschlagen. Versuch mit %1..."
   },
   "General Shortcuts": {
     "General Shortcuts": "Allgemeine Tastenkürzel"
   },
   "Gradient Angle": {
-    "Gradient Angle": ""
+    "Gradient Angle": "Verlaufswinkel"
   },
   "Gradient End": {
-    "Gradient End": ""
+    "Gradient End": "Verlaufsende"
   },
   "Gradient Start": {
-    "Gradient Start": ""
+    "Gradient Start": "Verlaufsanfang"
   },
   "Help": {
     "Help": "Hilfe"
   },
   "Hide Annotations": {
-    "Hide Annotations": ""
+    "Hide Annotations": "Annotationen ausblenden"
   },
   "Hide Control Center": {
     "Hide Control Center": "Control Center ausblenden"
@@ -450,7 +453,7 @@
     "History": "Verlauf"
   },
   "Hold %1 for Loupe": {
-    "Hold %1 for Loupe": ""
+    "Hold %1 for Loupe": "%1 für Lupe gedrückt halten"
   },
   "Hover Trigger Delay": {
     "Hover Trigger Delay": "Verzögerung beim Hover-Trigger"
@@ -471,13 +474,13 @@
     "Image Error": "Bildfehler"
   },
   "Image Folder": {
-    "Image Folder": ""
+    "Image Folder": "Bildordner"
   },
   "Image Size": {
     "Image Size": "Bildgröße"
   },
   "Image is too small (%1×%2). Minimum: %3px": {
-    "Image is too small (%1×%2). Minimum: %3px": ""
+    "Image is too small (%1×%2). Minimum: %3px": "Bild ist zu klein (%1×%2). Minimum: %3px"
   },
   "Image selected automatically when using Image Background mode": {
     "Image selected automatically when using Image Background mode": "Bild wird automatisch ausgewählt, wenn der Modus Bildhintergrund verwendet wird"
@@ -492,7 +495,7 @@
     "Initial state for the Control Center toggle.": "Anfangszustand für den Control-Center-Umschalter."
   },
   "Inline": {
-    "Inline": ""
+    "Inline": "Inline"
   },
   "Input Mode": {
     "Input Mode": "Eingabemodus"
@@ -504,16 +507,19 @@
     "Interaction / Result": "Interaktion / Ergebnis"
   },
   "Invalid or corrupted image file.": {
-    "Invalid or corrupted image file.": ""
+    "Invalid or corrupted image file.": "Ungültige oder beschädigte Bilddatei."
   },
   "Italic": {
-    "Italic": ""
+    "Italic": "Kursiv"
   },
   "JPEG Quality": {
     "JPEG Quality": "JPEG-Qualität"
   },
   "Key": {
     "Key": "Taste"
+  },
+  "Keybinding overlay size in interactive region selector.": {
+    "Keybinding overlay size in interactive region selector.": ""
   },
   "Landscape": {
     "Landscape": "Querformat"
@@ -549,7 +555,7 @@
     "Magnifier Loupe": "Lupenglas"
   },
   "Max Height (%1 = no limit)": {
-    "Max Height (%1 = no limit)": ""
+    "Max Height (%1 = no limit)": "Max. Höhe (%1 = kein Limit)"
   },
   "Medium": {
     "Medium": "Mittel"
@@ -591,7 +597,7 @@
     "No Image Specified": "Kein Bild angegeben"
   },
   "No QR code detected": {
-    "No QR code detected": ""
+    "No QR code detected": "Kein QR-Code erkannt"
   },
   "No output available": {
     "No output available": "Keine Ausgabe verfügbar"
@@ -603,13 +609,13 @@
     "No supported images found": "Keine unterstützten Bilder gefunden"
   },
   "No text detected": {
-    "No text detected": ""
+    "No text detected": "Kein Text erkannt"
   },
   "No valid image file or URL found in drop.": {
-    "No valid image file or URL found in drop.": ""
+    "No valid image file or URL found in drop.": "Keine gültige Bilddatei oder URL beim Ablegen gefunden."
   },
   "No valid image, URL, or path in clipboard.": {
-    "No valid image, URL, or path in clipboard.": ""
+    "No valid image, URL, or path in clipboard.": "Kein gültiges Bild, keine URL oder kein Pfad in der Zwischenablage."
   },
   "None": {
     "None": "Nichts"
@@ -630,10 +636,13 @@
     "OCR Result": "OCR-Ergebnis"
   },
   "OCR failed": {
-    "OCR failed": ""
+    "OCR failed": "OCR fehlgeschlagen"
   },
   "Off": {
     "Off": "Aus"
+  },
+  "Off (Hidden)": {
+    "Off (Hidden)": ""
   },
   "Opacity": {
     "Opacity": "Deckkraft"
@@ -642,10 +651,10 @@
     "Open": "Öffnen"
   },
   "Open %1 menu (Popout)": {
-    "Open %1 menu (Popout)": ""
+    "Open %1 menu (Popout)": "%1 Menü öffnen (Popout)"
   },
   "Open Image": {
-    "Open Image": ""
+    "Open Image": "Bild öffnen"
   },
   "Open folder": {
     "Open folder": "Ordner öffnen"
@@ -657,7 +666,7 @@
     "Output Format": "Ausgabeformat"
   },
   "Output format applies only to disk saves. Clipboard copies are always PNG.": {
-    "Output format applies only to disk saves. Clipboard copies are always PNG.": "Das Ausgabeformat gilt nur für Speicherungen auf der Festplatte. Kopien in die Zwischenablage sind immer PNG."
+    "Output format applies only to disk saves. Clipboard copies are always PNG.": "Das Ausgabeformat gilt nur für das Speichern auf der Festplatte. Kopien in die Zwischenablage sind immer PNG."
   },
   "Overlay Opacity": {
     "Overlay Opacity": "Overlay-Deckkraft"
@@ -678,7 +687,7 @@
     "Paused": "Pausiert"
   },
   "Pausing is not supported with %1.": {
-    "Pausing is not supported with %1.": ""
+    "Pausing is not supported with %1.": "Pausieren wird von %1 nicht unterstützt."
   },
   "Pen": {
     "Pen": "Freihandstift"
@@ -699,7 +708,7 @@
     "Pixelate Intensity": "Pixelierungsintensität"
   },
   "Popup": {
-    "Popup": ""
+    "Popup": "Popup"
   },
   "Portrait": {
     "Portrait": "Porträt"
@@ -711,19 +720,19 @@
     "Post-Capture Notification": "Benachrichtigung nach Aufnahme"
   },
   "Preset": {
-    "Preset": ""
+    "Preset": "Preset"
   },
   "Preset %1": {
     "Preset %1": "Voreinstellung %1"
   },
   "Presets": {
-    "Presets": ""
+    "Presets": "Presets"
   },
   "Preview": {
     "Preview": "Vorschau"
   },
   "Preview Quality": {
-    "Preview Quality": ""
+    "Preview Quality": "Vorschauqualität"
   },
   "Primary": {
     "Primary": "Primär"
@@ -735,7 +744,7 @@
     "QR Result": "QR-Ergebnis"
   },
   "QR scan failed": {
-    "QR scan failed": ""
+    "QR scan failed": "QR-Scan fehlgeschlagen"
   },
   "Quality": {
     "Quality": "Qualität"
@@ -771,7 +780,7 @@
     "Recording": "Aufnahme"
   },
   "Recording Backend": {
-    "Recording Backend": ""
+    "Recording Backend": "Aufnahme-Backend"
   },
   "Recording Folder": {
     "Recording Folder": "Aufnahmeordner"
@@ -789,13 +798,16 @@
     "Redact": "Zensieren"
   },
   "Redo": {
-    "Redo": ""
+    "Redo": "Wiederholen"
   },
   "Refresh": {
     "Refresh": "Aktualisieren"
   },
   "Region": {
     "Region": "Region"
+  },
+  "Region HUD Scale": {
+    "Region HUD Scale": ""
   },
   "Reset": {
     "Reset": "Zurücksetzen"
@@ -819,10 +831,10 @@
     "Right Click Action": "Rechtsklick-Aktion"
   },
   "Rotate Left": {
-    "Rotate Left": ""
+    "Rotate Left": "Nach links drehen"
   },
   "Rotate Right": {
-    "Rotate Right": ""
+    "Rotate Right": "Nach rechts drehen"
   },
   "Round Highlighter Tips": {
     "Round Highlighter Tips": "Runde Textmarker-Spitzen"
@@ -837,7 +849,7 @@
     "Save": "Speichern"
   },
   "Save As": {
-    "Save As": ""
+    "Save As": "Speichern unter"
   },
   "Save Screenshot As": {
     "Save Screenshot As": "Screenshot speichern unter"
@@ -852,7 +864,7 @@
     "Scan QR": "QR scannen"
   },
   "Screen Recording": {
-    "Screen Recording": ""
+    "Screen Recording": "Bildschirmaufnahme"
   },
   "Screen Recording Error": {
     "Screen Recording Error": "Fehler bei Bildschirmaufnahme"
@@ -864,7 +876,7 @@
     "Screen recording timed out or was cancelled.": "Bildschirmaufnahme zeitlich abgelaufen oder abgebrochen."
   },
   "Screenshot": {
-    "Screenshot": ""
+    "Screenshot": "Screenshot"
   },
   "Screenshot Copied": {
     "Screenshot Copied": "Screenshot kopiert"
@@ -897,7 +909,7 @@
     "Scroll Interval": "Scroll-Intervall"
   },
   "Scroll capture: select a region, scroll content, then press %1 to finish.": {
-    "Scroll capture: select a region, scroll content, then press %1 to finish.": ""
+    "Scroll capture: select a region, scroll content, then press %1 to finish.": "Scroll-Aufnahme: Region auswählen, Inhalt scrollen, dann %1 zum Beenden drücken."
   },
   "Scrolling": {
     "Scrolling": "Scrollen"
@@ -906,13 +918,16 @@
     "Select": "Auswählen"
   },
   "Select Color Slots %1": {
-    "Select Color Slots %1": ""
+    "Select Color Slots %1": "Farbslots %1 auswählen"
   },
   "Select Image to Annotate": {
     "Select Image to Annotate": "Bild zum Annotieren auswählen"
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": ""
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Bildschirmaufnahme-Backend auswählen. Auto versucht zuerst GPU und fällt auf CPU (%1) zurück."
+  },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "Ausgewähltes Werkzeug / Aktion"
@@ -921,7 +936,7 @@
     "Settings": "Einstellungen"
   },
   "Shadow Strength": {
-    "Shadow Strength": ""
+    "Shadow Strength": "Schattenstärke"
   },
   "Shapes": {
     "Shapes": "Formen"
@@ -930,7 +945,7 @@
     "Shortcut Action": "Shortcut-Aktion"
   },
   "Show Annotations": {
-    "Show Annotations": ""
+    "Show Annotations": "Annotationen anzeigen"
   },
   "Show Control Center": {
     "Show Control Center": "Kontrollzentrum anzeigen"
@@ -960,7 +975,7 @@
     "Skip confirmation": "Bestätigung überspringen"
   },
   "Slot %1": {
-    "Slot %1": ""
+    "Slot %1": "Slot %1"
   },
   "Soften image details so screenshot content stands out": {
     "Soften image details so screenshot content stands out": "Bilddetails weichzeichnen, damit Screenshot-Inhalt hervorsticht"
@@ -1023,7 +1038,7 @@
     "Text": "Text"
   },
   "Text Background": {
-    "Text Background": ""
+    "Text Background": "Texthintergrund"
   },
   "Text Background Roundness": {
     "Text Background Roundness": "Rundung des Texthintergrunds"
@@ -1041,16 +1056,16 @@
     "Toast": "Toast-Benachrichtigung"
   },
   "Toggle Annotations": {
-    "Toggle Annotations": ""
+    "Toggle Annotations": "Annotationen umschalten"
   },
   "Toggle Start / Stop": {
     "Toggle Start / Stop": "Start / Stopp umschalten"
   },
   "Toggle between %1 latest presets": {
-    "Toggle between %1 latest presets": ""
+    "Toggle between %1 latest presets": "Zwischen den %1 neuesten Presets umschalten"
   },
   "Tool": {
-    "Tool": ""
+    "Tool": "Werkzeug"
   },
   "Tool Defaults": {
     "Tool Defaults": "Werkzeug-Standardwerte"
@@ -1092,10 +1107,10 @@
     "Type note...": "Notiz eingeben..."
   },
   "Underline": {
-    "Underline": ""
+    "Underline": "Unterstrichen"
   },
   "Undo": {
-    "Undo": ""
+    "Undo": "Rückgängig"
   },
   "Usage Guide": {
     "Usage Guide": "Bedienungsanleitung"
@@ -1110,13 +1125,13 @@
     "Use Modal Editor": "Modalen Editor verwenden"
   },
   "Variant": {
-    "Variant": ""
+    "Variant": "Variante"
   },
   "Very High": {
     "Very High": "Sehr hoch"
   },
   "Video": {
-    "Video": ""
+    "Video": "Video"
   },
   "Video Codec": {
     "Video Codec": "Video-Codec"
@@ -1131,7 +1146,7 @@
     "WebP Quality": "WebP-Qualität"
   },
   "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": {
-    "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": ""
+    "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": "Wenn aktiviert, verkleinert sich der Editor auf die aufgenommene Region, anstatt %1% des Bildschirms auszufüllen."
   },
   "Window": {
     "Window": "Fenster"
