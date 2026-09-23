@@ -3738,27 +3738,9 @@ Item {
         }
 
         if (window.currentTool === "select") {
-            window.currentTool = window.lastActiveTool;
-        } else if (window.currentTool === window.lastActiveTool) {
-            window.currentTool = "select";
-        } else if (window.presetHistory.length >= 2) {
-            const current = {
-                tool: window.currentTool,
-                color: window.currentColor.toString(),
-                thickness: window.strokeWidth
-            };
-            const p0 = window.presetHistory[0];
-            const p1 = window.presetHistory[1];
-
-            const isP0 = current.tool === p0.tool && current.color.toString() === p0.color.toString() && current.thickness === p0.thickness;
-
-            const target = isP0 ? p1 : p0;
-            window.currentTool = target.tool;
-            window.currentColor = target.color;
-            window.applyToolIntensity(target.tool, target.thickness);
-            window.updateSessionToolIntensity(target.tool, target.thickness);
-            window.recordPresetUsage(target);
+            window.currentTool = (window.lastActiveTool && window.lastActiveTool !== "select") ? window.lastActiveTool : "pen";
         } else {
+            window.lastActiveTool = window.currentTool;
             window.currentTool = "select";
         }
 
