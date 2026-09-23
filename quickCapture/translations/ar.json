@@ -3,7 +3,7 @@
     "%1 Font": "خط النص"
   },
   "%1 is not installed": {
-    "%1 is not installed": ""
+    "%1 is not installed": "%1 غير مثبت"
   },
   "1 Connecting Line": {
     "1 Connecting Line": "خط اتصال واحد"
@@ -39,7 +39,7 @@
     "Annotation Tools": "أدوات التعليق التوضيحي"
   },
   "Anonymous Copy": {
-    "Anonymous Copy": ""
+    "Anonymous Copy": "نسخة مجهولة"
   },
   "Arrow": {
     "Arrow": "سهم متجه"
@@ -57,10 +57,13 @@
     "Audio Codec": "برنامج ترميز الصوت"
   },
   "Audio recording is disabled when using the %1 backend.": {
-    "Audio recording is disabled when using the %1 backend.": ""
+    "Audio recording is disabled when using the %1 backend.": "تم تعطيل تسجيل الصوت عند استخدام الخلفية %1."
   },
   "Auto": {
     "Auto": "تلقائي"
+  },
+  "Auto (Screen Scale)": {
+    "Auto (Screen Scale)": ""
   },
   "Auto Balance": {
     "Auto Balance": "موازنة تلقائية"
@@ -117,7 +120,7 @@
     "Blink Recording Dot": "وميض نقطة التسجيل"
   },
   "Blur Background Image": {
-    "Blur Background Image": "تمويه صورة الخلفية"
+    "Blur Background Image": "تخبيش صورة الخلفية"
   },
   "Bold": {
     "Bold": "عريض"
@@ -252,7 +255,7 @@
     "Corner Radius": "نصف قطر الزاوية"
   },
   "Could not crop image": {
-    "Could not crop image": ""
+    "Could not crop image": "تعذر اقتصاص الصورة"
   },
   "Crop / Resize": {
     "Crop / Resize": "قص / تغيير الحجم"
@@ -342,19 +345,19 @@
     "Failed to convert recording to GIF.": "فشل تحويل التسجيل إلى GIF."
   },
   "Failed to copy screenshot": {
-    "Failed to copy screenshot": ""
+    "Failed to copy screenshot": "فشل في نسخ لقطة الشاشة"
   },
   "Failed to create float window.": {
-    "Failed to create float window.": ""
+    "Failed to create float window.": "فشل في إنشاء نافذة عائمة."
   },
   "Failed to download image.": {
-    "Failed to download image.": ""
+    "Failed to download image.": "فشل في تنزيل الصورة."
   },
   "Failed to generate blurred background image": {
     "Failed to generate blurred background image": "فشل توليد صورة الخلفية الضبابية"
   },
   "Failed to load image: %1": {
-    "Failed to load image: %1": ""
+    "Failed to load image: %1": "فشل في تحميل الصورة: %1"
   },
   "Failed to save screenshot": {
     "Failed to save screenshot": "فشل حفظ لقطة الشاشة"
@@ -363,7 +366,7 @@
     "File": "ملف"
   },
   "Filename Pattern": {
-    "Filename Pattern": ""
+    "Filename Pattern": "نمط اسم الملف"
   },
   "Flip Horizontal": {
     "Flip Horizontal": "انعكاس أفقي"
@@ -378,7 +381,7 @@
     "Float Window": "نافذة عائمة"
   },
   "Float service not available.": {
-    "Float service not available.": ""
+    "Float service not available.": "خدمة النافذة العائمة غير متوفرة."
   },
   "Floating": {
     "Floating": "عائم"
@@ -414,7 +417,7 @@
     "GIF Framerate": "معدل إطارات GIF"
   },
   "GPU encoder failed. Retrying with %1...": {
-    "GPU encoder failed. Retrying with %1...": ""
+    "GPU encoder failed. Retrying with %1...": "فشل مشفر وحدة معالجة الرسومات. إعادة المحاولة باستخدام %1..."
   },
   "General Shortcuts": {
     "General Shortcuts": "اختصارات عامة"
@@ -432,7 +435,7 @@
     "Help": "مساعدة"
   },
   "Hide Annotations": {
-    "Hide Annotations": ""
+    "Hide Annotations": "إخفاء التعليقات التوضيحية"
   },
   "Hide Control Center": {
     "Hide Control Center": "إخفاء مركز التحكم"
@@ -450,7 +453,7 @@
     "History": "السجل"
   },
   "Hold %1 for Loupe": {
-    "Hold %1 for Loupe": ""
+    "Hold %1 for Loupe": "اضغط مع الاستمرار على %1 للعدسة المكبرة"
   },
   "Hover Trigger Delay": {
     "Hover Trigger Delay": "تأخير تفعيل التحويم"
@@ -477,7 +480,7 @@
     "Image Size": "حجم الصورة"
   },
   "Image is too small (%1×%2). Minimum: %3px": {
-    "Image is too small (%1×%2). Minimum: %3px": ""
+    "Image is too small (%1×%2). Minimum: %3px": "الصورة صغيرة جدًا (%1×%2). الحد الأدنى: %3 بكسل"
   },
   "Image selected automatically when using Image Background mode": {
     "Image selected automatically when using Image Background mode": "يتم اختيار الصورة تلقائياً عند استخدام وضع خلفية الصورة"
@@ -492,7 +495,7 @@
     "Initial state for the Control Center toggle.": "الحالة الأولية لتبديل مركز التحكم."
   },
   "Inline": {
-    "Inline": ""
+    "Inline": "مضمن"
   },
   "Input Mode": {
     "Input Mode": "وضع الإدخال"
@@ -504,16 +507,19 @@
     "Interaction / Result": "التفاعل / النتيجة"
   },
   "Invalid or corrupted image file.": {
-    "Invalid or corrupted image file.": ""
+    "Invalid or corrupted image file.": "ملف الصورة غير صالح أو تالف."
   },
   "Italic": {
-    "Italic": ""
+    "Italic": "مائل"
   },
   "JPEG Quality": {
     "JPEG Quality": "جودة JPEG"
   },
   "Key": {
     "Key": "مفتاح"
+  },
+  "Keybinding overlay size in interactive region selector.": {
+    "Keybinding overlay size in interactive region selector.": ""
   },
   "Landscape": {
     "Landscape": "أفقي (عرضي)"
@@ -591,7 +597,7 @@
     "No Image Specified": "لم يتم تحديد صورة"
   },
   "No QR code detected": {
-    "No QR code detected": ""
+    "No QR code detected": "لم يتم اكتشاف رمز QR"
   },
   "No output available": {
     "No output available": "لا يوجد مخرج متاح"
@@ -603,13 +609,13 @@
     "No supported images found": "لم يتم العثور على صور مدعومة"
   },
   "No text detected": {
-    "No text detected": ""
+    "No text detected": "لم يتم اكتشاف أي نص"
   },
   "No valid image file or URL found in drop.": {
-    "No valid image file or URL found in drop.": ""
+    "No valid image file or URL found in drop.": "لم يتم العثور على ملف صورة أو رابط صالح في الإسقاط."
   },
   "No valid image, URL, or path in clipboard.": {
-    "No valid image, URL, or path in clipboard.": ""
+    "No valid image, URL, or path in clipboard.": "لا توجد صورة أو رابط أو مسار صالح في الحافظة."
   },
   "None": {
     "None": "لا شيء"
@@ -630,10 +636,13 @@
     "OCR Result": "نتيجة التعرف الضوئي على الحروف"
   },
   "OCR failed": {
-    "OCR failed": ""
+    "OCR failed": "فشل التعرف الضوئي على الحروف (OCR)"
   },
   "Off": {
     "Off": "إيقاف"
+  },
+  "Off (Hidden)": {
+    "Off (Hidden)": ""
   },
   "Opacity": {
     "Opacity": "الشفافية"
@@ -642,10 +651,10 @@
     "Open": "فتح"
   },
   "Open %1 menu (Popout)": {
-    "Open %1 menu (Popout)": ""
+    "Open %1 menu (Popout)": "فتح قائمة %1 (نافذة منبثقة)"
   },
   "Open Image": {
-    "Open Image": ""
+    "Open Image": "فتح الصورة"
   },
   "Open folder": {
     "Open folder": "فتح المجلد"
@@ -678,7 +687,7 @@
     "Paused": "متوقف"
   },
   "Pausing is not supported with %1.": {
-    "Pausing is not supported with %1.": ""
+    "Pausing is not supported with %1.": "الإيقاف المؤقت غير مدعوم مع %1."
   },
   "Pen": {
     "Pen": "قلم رسم حر"
@@ -699,7 +708,7 @@
     "Pixelate Intensity": "كثافة التنميط"
   },
   "Popup": {
-    "Popup": ""
+    "Popup": "نافذة منبثقة"
   },
   "Portrait": {
     "Portrait": "عمودي"
@@ -711,19 +720,19 @@
     "Post-Capture Notification": "إشعار ما بعد الالتقاط"
   },
   "Preset": {
-    "Preset": ""
+    "Preset": "إعداد مسبق"
   },
   "Preset %1": {
     "Preset %1": "إعداد مسبق %1"
   },
   "Presets": {
-    "Presets": ""
+    "Presets": "الإعدادات المسبقة"
   },
   "Preview": {
     "Preview": "معاينة"
   },
   "Preview Quality": {
-    "Preview Quality": ""
+    "Preview Quality": "جودة المعاينة"
   },
   "Primary": {
     "Primary": "رئيسي"
@@ -735,7 +744,7 @@
     "QR Result": "نتيجة رمز الاستجابة السريعة (QR)"
   },
   "QR scan failed": {
-    "QR scan failed": ""
+    "QR scan failed": "فشل مسح رمز QR"
   },
   "Quality": {
     "Quality": "الجودة"
@@ -771,7 +780,7 @@
     "Recording": "تسجيل"
   },
   "Recording Backend": {
-    "Recording Backend": ""
+    "Recording Backend": "خلفية التسجيل"
   },
   "Recording Folder": {
     "Recording Folder": "مجلد التسجيل"
@@ -796,6 +805,9 @@
   },
   "Region": {
     "Region": "منطقة"
+  },
+  "Region HUD Scale": {
+    "Region HUD Scale": ""
   },
   "Reset": {
     "Reset": "إعادة تعيين"
@@ -837,7 +849,7 @@
     "Save": "حفظ"
   },
   "Save As": {
-    "Save As": ""
+    "Save As": "حفظ باسم"
   },
   "Save Screenshot As": {
     "Save Screenshot As": "حفظ لقطة الشاشة باسم"
@@ -864,7 +876,7 @@
     "Screen recording timed out or was cancelled.": "انتهت مهلة تسجيل الشاشة أو تم إلغاؤه."
   },
   "Screenshot": {
-    "Screenshot": ""
+    "Screenshot": "لقطة شاشة"
   },
   "Screenshot Copied": {
     "Screenshot Copied": "تم نسخ لقطة الشاشة"
@@ -906,13 +918,16 @@
     "Select": "تحديد"
   },
   "Select Color Slots %1": {
-    "Select Color Slots %1": ""
+    "Select Color Slots %1": "حدد فتحات الألوان %1"
   },
   "Select Image to Annotate": {
     "Select Image to Annotate": "تحديد صورة للتعليق عليها"
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": ""
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "حدد خلفية تسجيل الشاشة. يحاول الوضع التلقائي استخدام وحدة معالجة الرسومات (GPU) أولاً، ثم يعود إلى وحدة المعالجة المركزية (CPU) (%1)."
+  },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "الأداة / الإجراء المحدد"
@@ -930,7 +945,7 @@
     "Shortcut Action": "إجراء الاختصار"
   },
   "Show Annotations": {
-    "Show Annotations": ""
+    "Show Annotations": "إظهار التعليقات التوضيحية"
   },
   "Show Control Center": {
     "Show Control Center": "إظهار مركز التحكم"
@@ -1041,13 +1056,13 @@
     "Toast": "تنبيه منبثق"
   },
   "Toggle Annotations": {
-    "Toggle Annotations": ""
+    "Toggle Annotations": "تبديل التعليقات التوضيحية"
   },
   "Toggle Start / Stop": {
     "Toggle Start / Stop": "تبديل البدء / الإيقاف"
   },
   "Toggle between %1 latest presets": {
-    "Toggle between %1 latest presets": ""
+    "Toggle between %1 latest presets": "التبديل بين %1 من أحدث الإعدادات المسبقة"
   },
   "Tool": {
     "Tool": "أداة الإعداد المسبق"
@@ -1092,7 +1107,7 @@
     "Type note...": "اكتب ملاحظة..."
   },
   "Underline": {
-    "Underline": ""
+    "Underline": "تسطير"
   },
   "Undo": {
     "Undo": "تراجع"
@@ -1110,13 +1125,13 @@
     "Use Modal Editor": "استخدام المحرر النمطي"
   },
   "Variant": {
-    "Variant": ""
+    "Variant": "متغير"
   },
   "Very High": {
     "Very High": "عالية جداً"
   },
   "Video": {
-    "Video": ""
+    "Video": "فيديو"
   },
   "Video Codec": {
     "Video Codec": "ترميز الفيديو"

@@ -62,6 +62,9 @@
   "Auto": {
     "Auto": "Automatikus"
   },
+  "Auto (Screen Scale)": {
+    "Auto (Screen Scale)": ""
+  },
   "Auto Balance": {
     "Auto Balance": "Automatikus egyensúly"
   },
@@ -515,6 +518,9 @@
   "Key": {
     "Key": "Billentyű"
   },
+  "Keybinding overlay size in interactive region selector.": {
+    "Keybinding overlay size in interactive region selector.": ""
+  },
   "Landscape": {
     "Landscape": "Fekvő"
   },
@@ -634,6 +640,9 @@
   },
   "Off": {
     "Off": "Kikapcsolva"
+  },
+  "Off (Hidden)": {
+    "Off (Hidden)": ""
   },
   "Opacity": {
     "Opacity": "Átlátszatlanság"
@@ -797,6 +806,9 @@
   "Region": {
     "Region": "Terület"
   },
+  "Region HUD Scale": {
+    "Region HUD Scale": ""
+  },
   "Reset": {
     "Reset": "Visszaállítás"
   },
@@ -913,6 +925,9 @@
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": ""
+  },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "Kiválasztott eszköz / művelet"

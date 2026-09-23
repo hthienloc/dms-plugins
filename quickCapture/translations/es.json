@@ -62,6 +62,9 @@
   "Auto": {
     "Auto": "Auto"
   },
+  "Auto (Screen Scale)": {
+    "Auto (Screen Scale)": ""
+  },
   "Auto Balance": {
     "Auto Balance": ""
   },
@@ -515,6 +518,9 @@
   "Key": {
     "Key": "Tecla"
   },
+  "Keybinding overlay size in interactive region selector.": {
+    "Keybinding overlay size in interactive region selector.": ""
+  },
   "Landscape": {
     "Landscape": ""
   },
@@ -634,6 +640,9 @@
   },
   "Off": {
     "Off": "Apagado"
+  },
+  "Off (Hidden)": {
+    "Off (Hidden)": ""
   },
   "Opacity": {
     "Opacity": "Opacidad"
@@ -797,6 +806,9 @@
   "Region": {
     "Region": ""
   },
+  "Region HUD Scale": {
+    "Region HUD Scale": ""
+  },
   "Reset": {
     "Reset": "Reiniciar"
   },
@@ -913,6 +925,9 @@
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": ""
+  },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": ""
