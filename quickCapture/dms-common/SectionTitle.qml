@@ -27,7 +27,7 @@ Item {
     function _loadPersistence() {
         if (settingKey === "") return;
         const settings = _findSettings();
-        if (settings && settings.pluginService) {
+        if (settings) {
             isExpanded = settings.loadValue(settingKey, true);
             _isInitialized = true;
         }

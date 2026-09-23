@@ -42,7 +42,7 @@ Item {
 
     function loadValue() {
         const settings = findSettings();
-        if (settings && settings.pluginService) {
+        if (settings) {
             const loadedValue = settings.loadValue(settingKey, defaultValue);
             if (textField.activeFocus && isInitialized) return;
             value = loadedValue;

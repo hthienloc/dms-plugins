@@ -37,16 +37,9 @@ Item {
     function loadValue() {
         const settings = findSettings();
         if (settings) {
-            const pluginId = settings.pluginId;
-            if (pluginId && typeof SettingsData !== "undefined") {
-                const loadedValue = SettingsData.getPluginSetting(pluginId, settingKey, defaultValue);
-                value = loadedValue;
-                isInitialized = true;
-            } else if (settings.pluginService) {
-                const loadedValue = settings.loadValue(settingKey, defaultValue);
-                value = loadedValue;
-                isInitialized = true;
-            }
+            const loadedValue = settings.loadValue(settingKey, defaultValue);
+            value = loadedValue;
+            isInitialized = true;
         }
     }
 

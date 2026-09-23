@@ -44,7 +44,7 @@ Item {
 
     function loadValue() {
         const settings = findSettings();
-        if (settings && settings.pluginService) {
+        if (settings) {
             const val = settings.loadValue(settingKey, defaultValue);
             value = val;
             dankSlider.value = val;

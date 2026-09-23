@@ -30,8 +30,10 @@ Item {
 
     function loadValue() {
         const settings = findSettings();
-        if (settings && settings.pluginService) {
-            value = settings.loadValue(settingKey, defaultValue);
+        if (settings) {
+            const loaded = settings.loadValue(settingKey, defaultValue);
+            if (loaded !== undefined)
+                value = loaded;
             isInitialized = true;
         }
     }
@@ -67,17 +69,21 @@ Item {
     }
 
     onValueChanged: {
-        const settings = findSettings()
-        if (settings) settings.saveValue(settingKey, value)
+        if (!isInitialized)
+            return;
+        const settings = findSettings();
+        if (settings)
+            settings.saveValue(settingKey, value);
     }
 
     function findSettings() {
-        let item = parent
+        let item = parent;
         while (item) {
-            if (item.saveValue !== undefined && item.loadValue !== undefined) return item
-            item = item.parent
+            if (item.saveValue !== undefined && item.loadValue !== undefined)
+                return item;
+            item = item.parent;
         }
-        return null
+        return null;
     }
 
     HoverHandler {

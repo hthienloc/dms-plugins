@@ -30,7 +30,7 @@ Item {
 
     function loadValue() {
         const settings = findSettings()
-        if (settings && settings.pluginService) {
+        if (settings) {
             value = settings.loadValue(settingKey, defaultValue)
             isInitialized = true
         }
