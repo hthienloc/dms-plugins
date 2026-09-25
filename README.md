@@ -28,4 +28,24 @@ A collection of plugins for [DankMaterialShell](https://github.com/AvengeMedia/D
 | [Timer](timer) | DankBar Widget / Popout | Countdown timer with presets, notifications, and timeout actions. |
 | [Typing Sounds](typingSounds) | Composite (Daemon / Control Center) | Play mechanical keyboard sounds globally as you type with Control Center toggle. |
 
+## Contributors
+
+Special thanks to all contributors who have helped develop and improve these plugins:
+
+- [@adschem](https://github.com/adschem)
+- [@arqueon](https://github.com/arqueon)
+- [@bbedward](https://github.com/bbedward)
+- [@corrm](https://github.com/corrm)
+- [@DaniCatGames](https://github.com/DaniCatGames)
+- [@jw2122-kiwi](https://github.com/jw2122-kiwi)
+- [@kanghengliu](https://github.com/kanghengliu)
+- [@korbash](https://github.com/korbash)
+- [@Lemon-mon-254](https://github.com/Lemon-mon-254)
+- [@MrZ626](https://github.com/MrZ626)
+- [@Rocho-EL-Locho](https://github.com/Rocho-EL-Locho)
+- [@sitolam](https://github.com/sitolam)
+- [@wongcallum](https://github.com/wongcallum)
+
+## License
+
 MIT License - see [LICENSE](LICENSE) for details.
