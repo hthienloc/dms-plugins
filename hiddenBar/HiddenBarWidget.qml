@@ -386,7 +386,21 @@ PluginComponent {
     }
     popoutHeight: pluginRoot.popoutLayout === "row" ? (pluginRoot.barThickness + Theme.spacingS * 2) : Math.ceil(hiddenPluginIds.length / 4) * (Theme.iconSizeSmall + Theme.spacingM) + Theme.spacingM * 2
 
-    popoutContent: Component {
+    popoutContent: pluginRoot.usePopout ? popoutComponentDef : null
+
+    function triggerHoverPopout(widgetHostId) {
+        if (!pluginRoot.usePopout || !pluginRoot.autoExpand)
+            return;
+        if (!hasPopout || !positionPopout())
+            return;
+        const pill = isVertical ? verticalPill : horizontalPill;
+        const target = pill ? pill.popoutTarget : null;
+        if (target)
+            PopoutManager.requestHoverPopout(target, undefined, widgetHostId || pluginId);
+    }
+
+    Component {
+        id: popoutComponentDef
         PopoutComponent {
             headerText: ""
             showCloseButton: false
