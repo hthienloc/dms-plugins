@@ -372,19 +372,23 @@ PluginComponent {
         running: isActiveInstance && !pluginRoot.isBreakActive && !pluginRoot.isPaused
         onTriggered: {
             pluginRoot.timeToNextBreak -= 1;
-            
-            if (pluginRoot.timeToNextBreak == pluginRoot.preWarningTime && !pluginRoot.isPreWarning) {
-                // Show pre-warning X seconds before
+
+            if (pluginRoot.timeToNextBreak <= pluginRoot.preWarningTime) {
                 if (shouldSuppress()) {
-                    // Snooze for 5 minutes
-                    pluginRoot.timeToNextBreak += 300;
+                    pluginRoot.snoozeBreak();
                     return;
                 }
-                pluginRoot.isPreWarning = true;
-                showPreWarning();
+                if (pluginRoot.preWarningTime > 0 && !pluginRoot.isPreWarning && pluginRoot.timeToNextBreak > 0) {
+                    pluginRoot.isPreWarning = true;
+                    showPreWarning();
+                }
             }
 
             if (pluginRoot.timeToNextBreak <= 0) {
+                if (shouldSuppress()) {
+                    pluginRoot.snoozeBreak();
+                    return;
+                }
                 pluginRoot.isPreWarning = false;
                 startBreak();
             }
@@ -406,15 +410,29 @@ PluginComponent {
 
     function shouldSuppress() {
         if (pluginRoot.suppressFullscreen) {
-            const screens = Quickshell.screens || [];
-            for (let i = 0; i < screens.length; i++) {
-                if (CompositorService.hasFullscreenToplevelOnScreen(screens[i].name)) {
-                    return true;
+            if (typeof CompositorService !== "undefined" && CompositorService && typeof CompositorService.fullscreenToplevelOnScreen === "function") {
+                const screens = Quickshell.screens || [];
+                for (let i = 0; i < screens.length; i++) {
+                    const scr = screens[i];
+                    const scrName = scr ? (scr.name || scr) : "";
+                    if (scrName && CompositorService.fullscreenToplevelOnScreen(scrName)) {
+                        return true;
+                    }
+                }
+            }
+
+            if (typeof ToplevelManager !== "undefined" && ToplevelManager && ToplevelManager.toplevels && ToplevelManager.toplevels.values) {
+                const toplevels = ToplevelManager.toplevels.values;
+                for (let i = 0; i < toplevels.length; i++) {
+                    const tl = toplevels[i];
+                    if (tl && tl.fullscreen && tl.activated) {
+                        return true;
+                    }
                 }
             }
         }
 
-        if (pluginRoot.suppressMeetings && PrivacyService.microphoneActive) {
+        if (pluginRoot.suppressMeetings && typeof PrivacyService !== "undefined" && PrivacyService && PrivacyService.microphoneActive) {
             return true;
         }
 
@@ -422,9 +440,20 @@ PluginComponent {
     }
 
     Connections {
-        target: PrivacyService
+        target: (typeof CompositorService !== "undefined") ? CompositorService : null
+        function onToplevelsChanged() {
+            if (pluginRoot.suppressFullscreen && shouldSuppress()) {
+                if (pluginRoot.isPreWarning || pluginRoot.isBreakActive) {
+                    pluginRoot.snoozeBreak();
+                }
+            }
+        }
+    }
+
+    Connections {
+        target: (typeof PrivacyService !== "undefined") ? PrivacyService : null
         function onMicrophoneActiveChanged() {
-            if (PrivacyService.microphoneActive && pluginRoot.suppressMeetings) {
+            if (PrivacyService && PrivacyService.microphoneActive && pluginRoot.suppressMeetings) {
                 if (pluginRoot.isPreWarning || pluginRoot.isBreakActive) {
                     pluginRoot.snoozeBreak();
                 }
@@ -465,6 +494,10 @@ PluginComponent {
     }
 
     function startBreak() {
+        if (shouldSuppress()) {
+            snoozeBreak();
+            return;
+        }
         pluginRoot.isBreakActive = true;
         if (pluginRoot.nextBreakType === 1) {
             pluginRoot.breakTimeRemaining = pluginRoot.shortBreakDuration;
