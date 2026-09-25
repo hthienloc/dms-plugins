@@ -113,6 +113,19 @@ Hold <kbd>Shift</kbd> while drawing to constrain shapes: Pen draws straight line
 | <kbd>Ctrl</kbd> + <kbd>1</kbd> to <kbd>4</kbd> | Select color slots 1 to 4 |
 | <kbd>Ctrl</kbd> + <kbd>Q</kbd> to <kbd>R</kbd> | Select color slots 5 to 8 |
 
+## Screen Recording
+
+Quick Capture supports screen recording via GPU hardware acceleration or CPU fallback.
+
+### Recording Backends
+- **Auto (Default)**: Automatically detects available recorders. Prefers native `gpu-screen-recorder`, then Flatpak `gpu-screen-recorder`, and falls back to CPU `wf-recorder` if no GPU recorder is found.
+- **GPU Screen Recorder (NVENC / VA-API)**: Hardware-accelerated recording with pause/resume support and multi-track audio capture. Works with native system packages or Flatpak (`com.dec05eba.gpu_screen_recorder`).
+- **GPU Screen Recorder (Flatpak)**: Explicitly forces the use of Flathub Flatpak package. System-wide installation is recommended for proper KMS/DRI screen capture permissions:
+  ```bash
+  flatpak install --system com.dec05eba.gpu_screen_recorder
+  ```
+- **wf-recorder**: Lightweight CPU libx264 backend (fallback; pause/resume and internal audio mixing are not supported).
+
 ## Pin to Desktop
 
 - Press <kbd>Ctrl</kbd> + <kbd>F</kbd> to export and float the image.

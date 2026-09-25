@@ -57,6 +57,10 @@ SettingsGroup {
                     value: "gpu-screen-recorder"
                 },
                 {
+                    label: "GPU Screen Recorder (Flatpak)",
+                    value: "gpu-screen-recorder-flatpak"
+                },
+                {
                     label: "wf-recorder (CPU libx264 - no pause)",
                     value: "wf-recorder"
                 }

@@ -20,7 +20,7 @@ Screenshot annotation and screen recording plugin for DankMaterialShell.
 | Dependency                           | Purpose                                            |
 | ------------------------------------ | -------------------------------------------------- |
 | DankMaterialShell >= **1.6.0**       | Required for floating window and scrolling capture |
-| **gpu-screen-recorder**              | Screen recording backend (Hardware NVENC / VA-API) |
+| **gpu-screen-recorder**              | Screen recording backend (Hardware NVENC / VA-API; native or Flatpak `com.dec05eba.gpu_screen_recorder`) |
 | **wf-recorder**                      | Alternative CPU screen recording backend (Software libx264, fallback when GPU encoder is unavailable) |
 | **ffmpeg**                           | Video thumbnail generation                         |
 | **ImageMagick** (`magick`/`mogrify`) | WebP/JPEG exports and OCR/QR crop                  |
@@ -29,7 +29,12 @@ Screenshot annotation and screen recording plugin for DankMaterialShell.
 | **zbar** (`zbarimg`)                 | QR scanner                                         |
 
 > [!NOTE]
-> At least one recording backend (`gpu-screen-recorder` or `wf-recorder`) is required for video capture. `gpu-screen-recorder` is recommended for optimal performance, pause/resume support, and audio; `wf-recorder` serves as a lightweight CPU-based alternative (video only, pause/resume not supported).
+> At least one recording backend (`gpu-screen-recorder` or `wf-recorder`) is required for video capture. `gpu-screen-recorder` is recommended for optimal performance, pause/resume support, and audio (supports both native package and Flatpak `com.dec05eba.gpu_screen_recorder`); `wf-recorder` serves as a lightweight CPU-based alternative (video only, pause/resume not supported).
+>
+> If using Flatpak GPU Screen Recorder, system installation is recommended for proper KMS/DRI screen capture permissions:
+> ```bash
+> flatpak install --system com.dec05eba.gpu_screen_recorder
+> ```
 
 ## Install
 

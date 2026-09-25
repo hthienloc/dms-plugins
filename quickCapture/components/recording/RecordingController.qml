@@ -31,7 +31,9 @@ Item {
     readonly property bool isPauseSupported: activeRecorderBin !== "wf-recorder"
     property bool binariesProbed: false
     property bool hasGsr: false
+    property bool hasGsrFlatpak: false
     property bool hasWfRecorder: false
+    property bool isFlatpakActive: false
 
     property var audioInputsList: [
         {
@@ -96,23 +98,36 @@ Item {
             callback();
             return;
         }
-        Proc.runCommand("quickCapture.probeRecorders", ["sh", "-c", "command -v gpu-screen-recorder >/dev/null 2>&1 && echo gsr; command -v wf-recorder >/dev/null 2>&1 && echo wf"], stdout => {
-            const out = stdout || "";
-            root.hasGsr = out.includes("gsr");
-            root.hasWfRecorder = out.includes("wf");
+        Proc.runCommand("quickCapture.probeRecorders", ["sh", "-c", "command -v gpu-screen-recorder >/dev/null 2>&1 && echo gsr; flatpak info com.dec05eba.gpu_screen_recorder >/dev/null 2>&1 && echo gsr-flatpak; command -v wf-recorder >/dev/null 2>&1 && echo wf"], stdout => {
+            const lines = (stdout || "").trim().split("\n");
+            root.hasGsr = lines.includes("gsr");
+            root.hasGsrFlatpak = lines.includes("gsr-flatpak");
+            root.hasWfRecorder = lines.includes("wf");
             root.binariesProbed = true;
             callback();
         });
     }
 
+    function determineFlatpakActive() {
+        if (root.recordingBackend === "gpu-screen-recorder-flatpak")
+            return root.hasGsrFlatpak;
+        if (root.recordingBackend === "gpu-screen-recorder")
+            return !root.hasGsr && root.hasGsrFlatpak;
+        return !root.hasGsr && root.hasGsrFlatpak;
+    }
+
     function resolveRecorderBin() {
         switch (root.recordingBackend) {
         case "gpu-screen-recorder":
-            return root.hasGsr ? "gpu-screen-recorder" : "";
+            if (root.hasGsr || root.hasGsrFlatpak)
+                return "gpu-screen-recorder";
+            return "";
+        case "gpu-screen-recorder-flatpak":
+            return root.hasGsrFlatpak ? "gpu-screen-recorder" : "";
         case "wf-recorder":
             return root.hasWfRecorder ? "wf-recorder" : "";
         default:
-            if (root.hasGsr)
+            if (root.hasGsr || root.hasGsrFlatpak)
                 return "gpu-screen-recorder";
             return root.hasWfRecorder ? "wf-recorder" : "";
         }
@@ -122,6 +137,8 @@ Item {
         switch (root.recordingBackend) {
         case "gpu-screen-recorder":
             return "gpu-screen-recorder";
+        case "gpu-screen-recorder-flatpak":
+            return "gpu-screen-recorder (Flatpak)";
         case "wf-recorder":
             return "wf-recorder";
         default:
@@ -211,6 +228,7 @@ Item {
             if (wasStarting && prevBin === "gpu-screen-recorder" && root.recordingBackend === "auto" && root.hasWfRecorder) {
                 root.sendNotification(I18n.trFor("quickCapture", "GPU encoder failed. Retrying with %1...").arg("wf-recorder (CPU)"), false);
                 root.activeRecorderBin = "wf-recorder";
+                root.isFlatpakActive = false;
                 root.executeRecordingProcess(prevMode, prevGeom);
                 return;
             }
@@ -232,6 +250,7 @@ Item {
                 return;
             }
             root.activeRecorderBin = bin;
+            root.isFlatpakActive = (bin === "gpu-screen-recorder") && determineFlatpakActive();
             const targetMode = mode || "screen";
 
             if (targetMode !== "region") {
@@ -287,7 +306,11 @@ Item {
         else if (activeMode === "screen")
             source = screenSource() || "screen";
 
-        const args = ["gpu-screen-recorder", "-w", source];
+        const prefix = root.isFlatpakActive
+            ? ["flatpak", "run", "--filesystem=host", "--filesystem=/tmp", "--command=gpu-screen-recorder", "com.dec05eba.gpu_screen_recorder"]
+            : ["gpu-screen-recorder"];
+
+        const args = [...prefix, "-w", source];
         if (activeMode === "region" && geom)
             args.push("-region", geom);
         args.push("-f", fps.toString(), "-o", root.outputPath, "-cursor", setting("recordCursor") ? "yes" : "no");
@@ -500,14 +523,24 @@ Item {
     }
 
     function refreshAudioDevices() {
+        const queryFlatpak = () => {
+            Proc.runCommand("quickCapture.listAudioDevicesFlatpak", ["flatpak", "run", "--command=gpu-screen-recorder", "com.dec05eba.gpu_screen_recorder", "--list-audio-devices"], (fpOut, fpExit) => {
+                if (fpExit === 0 && fpOut?.trim()) {
+                    parseAudioDevices(fpOut);
+                    return;
+                }
+                Proc.runCommand("quickCapture.listAudioDevicesPactl", ["sh", "-c", "pactl list sources 2>/dev/null | awk '/Name: /{name=$2} /Description: /{desc=substr($0, index($0,$2)); print name \"|\" desc}'"], (pactlOut, pactlExit) => {
+                    parseAudioDevices(pactlExit === 0 ? pactlOut : "");
+                });
+            });
+        };
+
         Proc.runCommand("quickCapture.listAudioDevices", ["gpu-screen-recorder", "--list-audio-devices"], (stdout, exitCode) => {
             if (exitCode === 0 && stdout?.trim()) {
                 parseAudioDevices(stdout);
                 return;
             }
-            Proc.runCommand("quickCapture.listAudioDevicesPactl", ["sh", "-c", "pactl list sources 2>/dev/null | awk '/Name: /{name=$2} /Description: /{desc=substr($0, index($0,$2)); print name \"|\" desc}'"], (pactlOut, pactlExit) => {
-                parseAudioDevices(pactlExit === 0 ? pactlOut : "");
-            });
+            queryFlatpak();
         });
     }
 }
