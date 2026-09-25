@@ -11,6 +11,8 @@ Item {
     readonly property bool isPaused: widget.isPaused
     property bool draggingOver: false
 
+    width: implicitWidth
+    height: implicitHeight
     implicitWidth: vertical ? Math.max(Theme.iconSizeSmall, layout.implicitWidth) : (isRecording ? layout.implicitWidth : Theme.iconSizeSmall)
     implicitHeight: vertical ? layout.implicitHeight : Theme.iconSize
     anchors.verticalCenter: vertical ? undefined : parent.verticalCenter
@@ -27,7 +29,7 @@ Item {
     Grid {
         id: layout
         anchors.centerIn: parent
-        columns: root.vertical ? 1 : 10
+        columns: root.vertical ? 1 : (root.isRecording ? 3 : 1)
         spacing: root.isRecording ? (root.vertical ? Theme.spacingXS : Theme.spacingS) : 0
         horizontalItemAlignment: Grid.AlignHCenter
         verticalItemAlignment: Grid.AlignVCenter
@@ -41,6 +43,8 @@ Item {
 
         DankIcon {
             visible: !root.isRecording
+            width: visible ? Theme.iconSizeSmall : 0
+            implicitWidth: visible ? Theme.iconSizeSmall : 0
             name: root.widget.isDownloading ? "download" : (root.widget.widgetMode === "video" ? "videocam" : "screenshot_region")
             size: Theme.iconSizeSmall
             color: root.draggingOver || root.widget.isActive || root.widget.isDownloading ? Theme.primary : Theme.surfaceText

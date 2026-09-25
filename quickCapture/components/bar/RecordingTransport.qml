@@ -15,13 +15,18 @@ Grid {
 
     signal actionTriggered(string action)
 
-    columns: vertical ? 1 : 3
+    readonly property bool pauseSupported: (root.recorder && root.recorder.isPauseSupported !== undefined) ? root.recorder.isPauseSupported : true
+    readonly property int visibleButtonCount: Math.max(1, (pauseSupported ? 1 : 0) + 1 + (showCancel ? 1 : 0))
+
+    columns: vertical ? 1 : visibleButtonCount
     spacing: filled ? Theme.spacingXS : Theme.spacingM
     horizontalItemAlignment: Grid.AlignHCenter
     verticalItemAlignment: Grid.AlignVCenter
 
     DankActionButton {
-        visible: root.recorder?.isPauseSupported ?? true
+        visible: root.pauseSupported
+        width: visible ? root.buttonSize : 0
+        implicitWidth: visible ? root.buttonSize : 0
         iconName: root.paused ? "play_arrow" : "pause"
         buttonSize: root.buttonSize
         iconSize: root.iconSize
@@ -49,6 +54,8 @@ Grid {
 
     DankActionButton {
         visible: root.showCancel
+        width: visible ? root.buttonSize : 0
+        implicitWidth: visible ? root.buttonSize : 0
         iconName: "close"
         buttonSize: root.buttonSize
         iconSize: root.iconSize
