@@ -358,6 +358,7 @@ PluginComponent {
             ColumnLayout {
                 anchors.fill: parent
                 anchors.margins: Theme.spacingM
+                anchors.bottomMargin: footerBar.height + Theme.spacingXS
                 spacing: Theme.spacingS
 
                 RowLayout {
@@ -574,6 +575,68 @@ PluginComponent {
                     sequence: root.queuedText
                     onCopyRequested: root.commitCurrent(false)
                     onPasteRequested: root.commitCurrent(true)
+                }
+            }
+
+            // Keyboard hints strip, styled after the DMS launcher footer.
+            Item {
+                id: footerBar
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.bottom: parent.bottom
+                height: 36
+                clip: true
+
+                Rectangle {
+                    anchors.fill: parent
+                    anchors.topMargin: -Theme.cornerRadius
+                    visible: !Theme.blurLayersActive
+                    color: Theme.withAlpha(Theme.surfaceContainerHigh, Theme.popupTransparency)
+                    radius: Theme.cornerRadius
+                }
+
+                Row {
+                    anchors.right: parent.right
+                    anchors.rightMargin: Theme.spacingM
+                    anchors.verticalCenter: parent.verticalCenter
+                    layoutDirection: I18n.isRtl ? Qt.RightToLeft : Qt.LeftToRight
+                    spacing: Theme.spacingL
+
+                    Repeater {
+                        model: [
+                            { keys: "↑ ↓", label: I18n.trFor("emojiPicker", "nav"), shown: true },
+                            { keys: "↵", label: root.pasteByDefault ? I18n.trFor("emojiPicker", "Paste") : I18n.trFor("emojiPicker", "Copy"), shown: true },
+                            { keys: "Ctrl ↵", label: root.pasteByDefault ? I18n.trFor("emojiPicker", "Copy") : I18n.trFor("emojiPicker", "Paste"), shown: true },
+                            { keys: "Shift ↵", label: I18n.trFor("emojiPicker", "Queue"), shown: true },
+                            { keys: "⌫", label: I18n.trFor("emojiPicker", "Remove"), shown: root.queuedEmojis.length > 0 },
+                            { keys: "Esc", label: root.queuedEmojis.length > 0 ? I18n.trFor("emojiPicker", "Clear") : I18n.trFor("emojiPicker", "Close"), shown: true }
+                        ]
+
+                        // Keys in bold primary text, label dimmed, so each combination reads as one unit.
+                        Row {
+                            required property var modelData
+                            visible: modelData.shown
+                            anchors.verticalCenter: parent.verticalCenter
+                            spacing: Theme.spacingXS
+
+                            StyledText {
+                                id: hintKeys
+                                anchors.verticalCenter: parent.verticalCenter
+                                text: parent.modelData.keys
+                                font.pixelSize: Theme.fontSizeSmall
+                                font.weight: Font.Bold
+                                color: Theme.surfaceText
+                            }
+
+                            // Baseline-aligned: the arrow/return glyphs come from a fallback font with other metrics.
+                            StyledText {
+                                anchors.baseline: hintKeys.baseline
+                                text: parent.modelData.label.toLocaleLowerCase()
+                                font.pixelSize: Theme.fontSizeSmall - 1
+                                color: Theme.surfaceVariantText
+                            }
+                        }
+                    }
                 }
             }
         }
