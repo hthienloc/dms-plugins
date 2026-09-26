@@ -4836,7 +4836,7 @@ Item {
                         cursorShape: (window.lastPanMouse.x !== 0 || window.lastPanMouse.y !== 0) ? Qt.ClosedHandCursor : Qt.ArrowCursor
 
                         onPositionChanged: mouse => {
-                            if (pressed && (mouse.buttons & Qt.LeftButton) && (mouse.modifiers & Qt.ControlModifier) && (mouse.modifiers & Qt.ShiftModifier)) {
+                            if (window.currentTool === "select" && pressed && (mouse.buttons & Qt.LeftButton) && (mouse.modifiers & Qt.ControlModifier) && (mouse.modifiers & Qt.ShiftModifier)) {
                                 const currentPt = Qt.point(mouse.x, mouse.y);
                                 if (window.lastPanMouse.x === 0 && window.lastPanMouse.y === 0) {
                                     window.lastPanMouse = currentPt;
@@ -4850,7 +4850,7 @@ Item {
                         }
 
                         onPressed: mouse => {
-                            if ((mouse.button === Qt.LeftButton) && (mouse.modifiers & Qt.ControlModifier) && (mouse.modifiers & Qt.ShiftModifier)) {
+                            if (window.currentTool === "select" && (mouse.button === Qt.LeftButton) && (mouse.modifiers & Qt.ControlModifier) && (mouse.modifiers & Qt.ShiftModifier)) {
                                 window.lastPanMouse = Qt.point(mouse.x, mouse.y);
                             }
                         }
@@ -4868,26 +4868,28 @@ Item {
                                 return;
                             }
 
-                            if (wheel.modifiers & Qt.ControlModifier) {
-                                const scrollDelta = wheel.angleDelta.y !== 0 ? wheel.angleDelta.y : wheel.angleDelta.x;
-                                const panStep = scrollDelta > 0 ? 40 : -40;
-                                window.updatePanOffset(window.userPanX, window.userPanY + panStep);
-                                wheel.accepted = true;
-                                return;
-                            }
+                            if (window.currentTool === "select") {
+                                if (wheel.modifiers & Qt.ControlModifier) {
+                                    const scrollDelta = wheel.angleDelta.y !== 0 ? wheel.angleDelta.y : wheel.angleDelta.x;
+                                    const panStep = scrollDelta > 0 ? 40 : -40;
+                                    window.updatePanOffset(window.userPanX, window.userPanY + panStep);
+                                    wheel.accepted = true;
+                                    return;
+                                }
 
-                            if (wheel.modifiers & Qt.ShiftModifier) {
-                                const scrollDelta = wheel.angleDelta.y !== 0 ? wheel.angleDelta.y : wheel.angleDelta.x;
-                                const panStep = scrollDelta > 0 ? 40 : -40;
-                                window.updatePanOffset(window.userPanX + panStep, window.userPanY);
-                                wheel.accepted = true;
-                                return;
-                            }
+                                if (wheel.modifiers & Qt.ShiftModifier) {
+                                    const scrollDelta = wheel.angleDelta.y !== 0 ? wheel.angleDelta.y : wheel.angleDelta.x;
+                                    const panStep = scrollDelta > 0 ? 40 : -40;
+                                    window.updatePanOffset(window.userPanX + panStep, window.userPanY);
+                                    wheel.accepted = true;
+                                    return;
+                                }
 
-                            const normalScrollDelta = wheel.angleDelta.y !== 0 ? wheel.angleDelta.y : wheel.angleDelta.x;
-                            const normalPanStep = normalScrollDelta > 0 ? 40 : -40;
-                            window.updatePanOffset(window.userPanX, window.userPanY + normalPanStep);
-                            wheel.accepted = true;
+                                const normalScrollDelta = wheel.angleDelta.y !== 0 ? wheel.angleDelta.y : wheel.angleDelta.x;
+                                const normalPanStep = normalScrollDelta > 0 ? 40 : -40;
+                                window.updatePanOffset(window.userPanX, window.userPanY + normalPanStep);
+                                wheel.accepted = true;
+                            }
                         }
                     }
 

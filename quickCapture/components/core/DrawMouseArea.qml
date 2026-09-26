@@ -477,16 +477,15 @@ MouseArea {
             return;
         }
 
-        if (pressed && (mouse.buttons & Qt.LeftButton) && (mouse.modifiers & Qt.ControlModifier) && (mouse.modifiers & Qt.ShiftModifier)) {
+        const isDraggingStroke = !!window.currentStroke || (window.activeHandle !== "none") || (window.originalPoints && window.originalPoints.length > 0);
+        const canPan = window.currentTool === "select" && !isDraggingStroke && (window.lastPanMouse.x !== 0 || window.lastPanMouse.y !== 0);
+
+        if (pressed && (mouse.buttons & Qt.LeftButton) && (mouse.modifiers & Qt.ControlModifier) && (mouse.modifiers & Qt.ShiftModifier) && canPan) {
             const currentPt = drawMouseArea.mapToItem(window.boardContainerItem, mouse.x, mouse.y);
-            if (window.lastPanMouse.x === 0 && window.lastPanMouse.y === 0) {
-                window.lastPanMouse = currentPt;
-            } else {
-                const dx = currentPt.x - window.lastPanMouse.x;
-                const dy = currentPt.y - window.lastPanMouse.y;
-                window.updatePanOffset(window.userPanX + dx, window.userPanY + dy);
-                window.lastPanMouse = currentPt;
-            }
+            const dx = currentPt.x - window.lastPanMouse.x;
+            const dy = currentPt.y - window.lastPanMouse.y;
+            window.updatePanOffset(window.userPanX + dx, window.userPanY + dy);
+            window.lastPanMouse = currentPt;
             return;
         }
 
@@ -573,9 +572,15 @@ MouseArea {
             window.modalFocusScope.forceActiveFocus();
         }
 
-        if ((mouse.button === Qt.LeftButton) && (mouse.modifiers & Qt.ControlModifier) && (mouse.modifiers & Qt.ShiftModifier)) {
-            window.lastPanMouse = drawMouseArea.mapToItem(window.boardContainerItem, mouse.x, mouse.y);
-            return;
+        const isPanModifier = (mouse.button === Qt.LeftButton) && (mouse.modifiers & Qt.ControlModifier) && (mouse.modifiers & Qt.ShiftModifier);
+        if (isPanModifier && window.currentTool === "select") {
+            const absPt = getAbsolutePoint(mouse.x, mouse.y);
+            const handle = window.selectedStroke ? window.getSelectedStrokeHandleAt(absPt.x, absPt.y) : "none";
+            const hitStrokeIdx = window.findStrokeAt(absPt.x, absPt.y);
+            if (handle === "none" && hitStrokeIdx === -1) {
+                window.lastPanMouse = drawMouseArea.mapToItem(window.boardContainerItem, mouse.x, mouse.y);
+                return;
+            }
         }
 
         if (moreToolsMenu.opened) {
@@ -970,20 +975,22 @@ MouseArea {
             return;
         }
 
-        if (wheel.modifiers & Qt.ControlModifier) {
-            const scrollDelta = wheel.angleDelta.y !== 0 ? wheel.angleDelta.y : wheel.angleDelta.x;
-            const panStep = scrollDelta > 0 ? 40 : -40;
-            window.updatePanOffset(window.userPanX, window.userPanY + panStep);
-            wheel.accepted = true;
-            return;
-        }
+        if (window.currentTool === "select") {
+            if (wheel.modifiers & Qt.ControlModifier) {
+                const scrollDelta = wheel.angleDelta.y !== 0 ? wheel.angleDelta.y : wheel.angleDelta.x;
+                const panStep = scrollDelta > 0 ? 40 : -40;
+                window.updatePanOffset(window.userPanX, window.userPanY + panStep);
+                wheel.accepted = true;
+                return;
+            }
 
-        if (wheel.modifiers & Qt.ShiftModifier) {
-            const scrollDelta = wheel.angleDelta.y !== 0 ? wheel.angleDelta.y : wheel.angleDelta.x;
-            const panStep = scrollDelta > 0 ? 40 : -40;
-            window.updatePanOffset(window.userPanX + panStep, window.userPanY);
-            wheel.accepted = true;
-            return;
+            if (wheel.modifiers & Qt.ShiftModifier) {
+                const scrollDelta = wheel.angleDelta.y !== 0 ? wheel.angleDelta.y : wheel.angleDelta.x;
+                const panStep = scrollDelta > 0 ? 40 : -40;
+                window.updatePanOffset(window.userPanX + panStep, window.userPanY);
+                wheel.accepted = true;
+                return;
+            }
         }
 
         const step = wheel.angleDelta.y > 0 ? 1 : -1;
