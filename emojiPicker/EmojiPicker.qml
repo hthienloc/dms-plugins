@@ -27,6 +27,7 @@ PluginComponent {
         const configured = Number(root.pluginData?.recentLimit ?? 30);
         return Number.isFinite(configured) ? Math.max(5, Math.min(100, configured)) : 30;
     }
+    readonly property bool pasteByDefault: (root.pluginData?.defaultAction ?? "copy") === "paste"
     readonly property bool showCopyToast: root.pluginData?.showCopyToast ?? true
 
     property var allEntries: []
@@ -202,7 +203,7 @@ PluginComponent {
         if (event.modifiers & Qt.ShiftModifier)
             root.appendCurrent();
         else
-            root.commitCurrent((event.modifiers & Qt.ControlModifier) !== 0);
+            root.commitCurrent(((event.modifiers & Qt.ControlModifier) !== 0) !== root.pasteByDefault);
         event.accepted = true;
         return true;
     }
@@ -547,7 +548,7 @@ PluginComponent {
                                         root.appendEmoji(modelData.emoji);
                                         return;
                                     }
-                                    root.commitSingleEmoji(modelData.emoji, mouse.button === Qt.RightButton);
+                                    root.commitSingleEmoji(modelData.emoji, (mouse.button === Qt.RightButton) !== root.pasteByDefault);
                                 }
                             }
                         }

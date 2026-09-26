@@ -13,12 +13,27 @@ PluginSettings {
         SectionTitle {
             text: I18n.trFor("emojiPicker", "General")
             icon: "settings"
-            showReset: defaultCategory.isDirty || recentLimit.isDirty
+            showReset: defaultAction.isDirty || defaultCategory.isDirty || recentLimit.isDirty
             onResetClicked: {
+                defaultAction.resetToDefault();
                 defaultCategory.resetToDefault();
                 recentLimit.resetToDefault();
             }
         }
+
+        SelectionSettingPlus {
+            id: defaultAction
+            settingKey: "defaultAction"
+            label: I18n.trFor("emojiPicker", "Default Action")
+            description: I18n.trFor("emojiPicker", "Left click and Enter use this action; right click and Ctrl+Enter use the other one.")
+            defaultValue: "copy"
+            options: [
+                { label: I18n.trFor("emojiPicker", "Copy to clipboard"), value: "copy" },
+                { label: I18n.trFor("emojiPicker", "Paste at cursor"), value: "paste" }
+            ]
+        }
+
+        Separator {}
 
         SelectionSettingPlus {
             id: defaultCategory
