@@ -422,7 +422,6 @@ PluginComponent {
                         buttonHeight: 26
                         textColor: Theme.error
                         backgroundColor: Theme.withAlpha(Theme.error, 0.12)
-                        tooltipText: I18n.trFor("emojiPicker", "Clear Recent History")
                         onClicked: root.clearRecentHistory()
                     }
                 }
