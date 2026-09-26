@@ -364,13 +364,17 @@ PluginComponent {
                         root.query = text;
                         root.selectedIndex = 0;
                     }
+                    ignoreUpDownKeys: true
+                    keyForwardTargets: [searchField]
                     Keys.onPressed: event => {
+                        if (event.key === Qt.Key_Down) {
+                            pickerView.focusFirstEmoji();
+                            event.accepted = true;
+                            return;
+                        }
                         if (root.handleEnter(event))
                             return;
                         root.handleQueueBackspace(event, searchField.text.length === 0);
-                    }
-                    Keys.onDownPressed: {
-                        pickerView.focusFirstEmoji();
                     }
                     Keys.onTabPressed: {
                         pickerView.focusFirstEmoji();
