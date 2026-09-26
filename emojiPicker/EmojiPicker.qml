@@ -394,7 +394,7 @@ PluginComponent {
                         root.handleQueueBackspace(event, searchField.text.length === 0);
                     }
                     Keys.onTabPressed: {
-                        pickerView.focusFirstEmoji();
+                        pickerView.focusSelectedCategory();
                     }
                 }
 
