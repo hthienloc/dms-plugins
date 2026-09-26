@@ -27,6 +27,7 @@ PluginComponent {
         const configured = Number(root.pluginData?.recentLimit ?? 30);
         return Number.isFinite(configured) ? Math.max(5, Math.min(100, configured)) : 30;
     }
+    readonly property bool pasteByDefault: (root.pluginData?.defaultAction ?? "copy") === "paste"
     readonly property bool showCopyToast: root.pluginData?.showCopyToast ?? true
 
     property var allEntries: []
@@ -77,6 +78,12 @@ PluginComponent {
         interval: 150
         repeat: false
         onTriggered: ClipboardService.sendPasteKeystroke()
+    }
+
+    // Noto Color Emoji ligates ZWJ sequences without U+FE0F, but Qt's shaper doesn't
+    // skip the selector, so they render split. Display-only; the copied value is unchanged.
+    function displayEmoji(emoji) {
+        return emoji.indexOf("\u200D") >= 0 ? emoji.replace(/\uFE0F/g, "") : emoji;
     }
 
     function loadData() {
@@ -196,7 +203,7 @@ PluginComponent {
         if (event.modifiers & Qt.ShiftModifier)
             root.appendCurrent();
         else
-            root.commitCurrent((event.modifiers & Qt.ControlModifier) !== 0);
+            root.commitCurrent(((event.modifiers & Qt.ControlModifier) !== 0) !== root.pasteByDefault);
         event.accepted = true;
         return true;
     }
@@ -261,6 +268,16 @@ PluginComponent {
             height: pickerModal.modalHeight
             focus: true
 
+            function focusCategory(index) {
+                const button = categoryRepeater.itemAt(index);
+                if (button)
+                    button.forceActiveFocus(Qt.TabFocusReason);
+            }
+
+            function focusSelectedCategory() {
+                pickerView.focusCategory(root.categoryOrder.indexOf(root.selectedCategory));
+            }
+
             function focusFirstEmoji() {
                 if (root.visibleEntries.length === 0)
                     return;
@@ -307,6 +324,21 @@ PluginComponent {
                 if (category) {
                     pickerView.selectCategory(category);
                     event.accepted = true;
+                    return;
+                }
+                // Down from the header (close button) goes to the search field; the other rows handle their own arrows.
+                if (event.key === Qt.Key_Down && !emojiGrid.activeFocus) {
+                    searchField.forceActiveFocus();
+                    event.accepted = true;
+                    return;
+                }
+                // Typing while the grid or a category button has focus goes to the search field.
+                if (!searchField.getActiveFocus() && event.text.length > 0 && event.text.trim().length > 0
+                        && !(event.modifiers & (Qt.ControlModifier | Qt.AltModifier | Qt.MetaModifier))) {
+                    searchField.forceActiveFocus();
+                    searchField.cursorPosition = searchField.text.length;
+                    searchField.insertText(event.text);
+                    event.accepted = true;
                 }
             }
             Keys.onEscapePressed: event => {
@@ -326,6 +358,7 @@ PluginComponent {
             ColumnLayout {
                 anchors.fill: parent
                 anchors.margins: Theme.spacingM
+                anchors.bottomMargin: footerBar.height + Theme.spacingXS
                 spacing: Theme.spacingS
 
                 RowLayout {
@@ -352,44 +385,55 @@ PluginComponent {
                 DankTextField {
                     id: searchField
                     Layout.fillWidth: true
-                    placeholderText: I18n.trFor("emojiPicker", "Search emoji")
+                    placeholderText: root.selectedCategory === "recent" || !root.categoryNames[root.selectedCategory]
+                        ? I18n.trFor("emojiPicker", "Search emoji")
+                        : I18n.trFor("emojiPicker", "Search in %1").arg(I18n.tr(root.categoryNames[root.selectedCategory]))
                     text: root.query
                     onTextChanged: {
                         root.query = text;
                         root.selectedIndex = 0;
                     }
+                    ignoreUpDownKeys: true
+                    keyForwardTargets: [searchField]
                     Keys.onPressed: event => {
+                        if (event.key === Qt.Key_Down) {
+                            pickerView.focusSelectedCategory();
+                            event.accepted = true;
+                            return;
+                        }
                         if (root.handleEnter(event))
                             return;
                         root.handleQueueBackspace(event, searchField.text.length === 0);
                     }
-                    Keys.onDownPressed: {
-                        pickerView.focusFirstEmoji();
-                    }
                     Keys.onTabPressed: {
-                        pickerView.focusFirstEmoji();
+                        pickerView.focusSelectedCategory();
                     }
                 }
 
                 Flickable {
                     id: categoryScroller
                     Layout.fillWidth: true
-                    Layout.preferredHeight: 56
-                    contentWidth: categoryRow.width
+                    readonly property int ringInset: 4
+                    Layout.preferredHeight: 56 + ringInset * 2
+                    contentWidth: categoryRow.width + ringInset * 2
                     clip: true
                     boundsBehavior: Flickable.StopAtBounds
 
                     Row {
                         id: categoryRow
-                        width: categoryScroller.width
-                        height: categoryScroller.height
+                        x: categoryScroller.ringInset
+                        y: categoryScroller.ringInset
+                        width: categoryScroller.width - categoryScroller.ringInset * 2
+                        height: categoryScroller.height - categoryScroller.ringInset * 2
                         spacing: Theme.spacingXS
 
                         Repeater {
+                            id: categoryRepeater
                             model: root.categoryOrder
 
                             DankActionButton {
                                 required property string modelData
+                                required property int index
                                 iconName: root.categoryIcons[modelData] || "category"
                                 iconSize: 22
                                 tooltipText: I18n.tr(root.categoryNames[modelData] || "")
@@ -397,6 +441,10 @@ PluginComponent {
                                 backgroundColor: root.selectedCategory === modelData ? Theme.primary : Theme.surfaceContainerHigh
                                 iconColor: root.selectedCategory === modelData ? Theme.onPrimary : Theme.surfaceText
                                 onClicked: pickerView.selectCategory(modelData)
+                                Keys.onLeftPressed: pickerView.focusCategory(Math.max(0, index - 1))
+                                Keys.onRightPressed: pickerView.focusCategory(Math.min(root.categoryOrder.length - 1, index + 1))
+                                Keys.onUpPressed: searchField.forceActiveFocus()
+                                Keys.onDownPressed: pickerView.focusFirstEmoji()
                             }
                         }
                     }
@@ -408,10 +456,20 @@ PluginComponent {
                     spacing: Theme.spacingS
 
                     StyledText {
-                        Layout.fillWidth: true
                         text: root.visibleEntries.length > 0 ? (root.query ? I18n.trFor("emojiPicker", "Search results") : (I18n.tr(root.categoryNames[root.selectedCategory] || ""))) : I18n.trFor("emojiPicker", "No emoji found")
                         color: Theme.surfaceVariantText
                         font.pixelSize: Theme.fontSizeSmall
+                        verticalAlignment: Text.AlignVCenter
+                    }
+
+                    StyledText {
+                        readonly property var highlightedEntry: emojiGrid.hoveredIndex >= 0 ? root.visibleEntries[emojiGrid.hoveredIndex] : (emojiGrid.activeFocus ? root.visibleEntries[root.selectedIndex] : null)
+                        Layout.fillWidth: true
+                        text: highlightedEntry ? "·  " + highlightedEntry.name : ""
+                        color: Theme.surfaceText
+                        font.pixelSize: Theme.fontSizeSmall
+                        font.weight: Font.Medium
+                        elide: Text.ElideRight
                         verticalAlignment: Text.AlignVCenter
                     }
 
@@ -422,12 +480,11 @@ PluginComponent {
                         buttonHeight: 26
                         textColor: Theme.error
                         backgroundColor: Theme.withAlpha(Theme.error, 0.12)
-                        tooltipText: I18n.trFor("emojiPicker", "Clear Recent History")
                         onClicked: root.clearRecentHistory()
                     }
                 }
 
-                GridView {
+                DankGridView {
                     id: emojiGrid
                     Layout.fillWidth: true
                     Layout.fillHeight: true
@@ -443,11 +500,15 @@ PluginComponent {
                     highlightMoveDuration: 0
                     highlight: null
 
+                    property int hoveredIndex: -1
+
                     onCurrentIndexChanged: root.selectedIndex = currentIndex
+                    onModelChanged: hoveredIndex = -1
 
                     delegate: Item {
                         id: delegateItem
                         required property var modelData
+                        required property int index
                         readonly property bool isCurrent: GridView.isCurrentItem
                         width: emojiGrid.cellWidth
                         height: emojiGrid.cellHeight
@@ -462,7 +523,8 @@ PluginComponent {
 
                             StyledText {
                                 anchors.centerIn: parent
-                                text: modelData.emoji
+                                text: root.displayEmoji(modelData.emoji)
+                                font.family: "Noto Color Emoji"
                                 font.pixelSize: 32
                                 color: Theme.surfaceText
                             }
@@ -474,14 +536,20 @@ PluginComponent {
                                 cursorShape: Qt.PointingHandCursor
                                 acceptedButtons: Qt.LeftButton | Qt.RightButton
                                 onEntered: {
-                                    emojiGrid.currentIndex = index;
+                                    emojiGrid.currentIndex = delegateItem.index;
+                                }
+                                onContainsMouseChanged: {
+                                    if (containsMouse)
+                                        emojiGrid.hoveredIndex = delegateItem.index;
+                                    else if (emojiGrid.hoveredIndex === delegateItem.index)
+                                        emojiGrid.hoveredIndex = -1;
                                 }
                                 onClicked: mouse => {
                                     if (mouse.button === Qt.LeftButton && (mouse.modifiers & Qt.ShiftModifier)) {
                                         root.appendEmoji(modelData.emoji);
                                         return;
                                     }
-                                    root.commitSingleEmoji(modelData.emoji, mouse.button === Qt.RightButton);
+                                    root.commitSingleEmoji(modelData.emoji, (mouse.button === Qt.RightButton) !== root.pasteByDefault);
                                 }
                             }
                         }
@@ -494,7 +562,7 @@ PluginComponent {
                             return;
                         if (event.key === Qt.Key_Up) {
                             if (emojiGrid.currentIndex < emojiGrid.columnCount) {
-                                searchField.forceActiveFocus();
+                                pickerView.focusSelectedCategory();
                                 event.accepted = true;
                             }
                         }
@@ -507,6 +575,68 @@ PluginComponent {
                     sequence: root.queuedText
                     onCopyRequested: root.commitCurrent(false)
                     onPasteRequested: root.commitCurrent(true)
+                }
+            }
+
+            // Keyboard hints strip, styled after the DMS launcher footer.
+            Item {
+                id: footerBar
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.bottom: parent.bottom
+                height: 36
+                clip: true
+
+                Rectangle {
+                    anchors.fill: parent
+                    anchors.topMargin: -Theme.cornerRadius
+                    visible: !Theme.blurLayersActive
+                    color: Theme.withAlpha(Theme.surfaceContainerHigh, Theme.popupTransparency)
+                    radius: Theme.cornerRadius
+                }
+
+                Row {
+                    anchors.right: parent.right
+                    anchors.rightMargin: Theme.spacingM
+                    anchors.verticalCenter: parent.verticalCenter
+                    layoutDirection: I18n.isRtl ? Qt.RightToLeft : Qt.LeftToRight
+                    spacing: Theme.spacingL
+
+                    Repeater {
+                        model: [
+                            { keys: "↑ ↓", label: I18n.trFor("emojiPicker", "nav"), shown: true },
+                            { keys: "↵", label: root.pasteByDefault ? I18n.trFor("emojiPicker", "Paste") : I18n.trFor("emojiPicker", "Copy"), shown: true },
+                            { keys: "Ctrl ↵", label: root.pasteByDefault ? I18n.trFor("emojiPicker", "Copy") : I18n.trFor("emojiPicker", "Paste"), shown: true },
+                            { keys: "Shift ↵", label: I18n.trFor("emojiPicker", "Queue"), shown: true },
+                            { keys: "⌫", label: I18n.trFor("emojiPicker", "Remove"), shown: root.queuedEmojis.length > 0 },
+                            { keys: "Esc", label: root.queuedEmojis.length > 0 ? I18n.trFor("emojiPicker", "Clear") : I18n.trFor("emojiPicker", "Close"), shown: true }
+                        ]
+
+                        // Keys in bold primary text, label dimmed, so each combination reads as one unit.
+                        Row {
+                            required property var modelData
+                            visible: modelData.shown
+                            anchors.verticalCenter: parent.verticalCenter
+                            spacing: Theme.spacingXS
+
+                            StyledText {
+                                id: hintKeys
+                                anchors.verticalCenter: parent.verticalCenter
+                                text: parent.modelData.keys
+                                font.pixelSize: Theme.fontSizeSmall
+                                font.weight: Font.Bold
+                                color: Theme.surfaceText
+                            }
+
+                            // Baseline-aligned: the arrow/return glyphs come from a fallback font with other metrics.
+                            StyledText {
+                                anchors.baseline: hintKeys.baseline
+                                text: parent.modelData.label.toLocaleLowerCase()
+                                font.pixelSize: Theme.fontSizeSmall - 1
+                                color: Theme.surfaceVariantText
+                            }
+                        }
+                    }
                 }
             }
         }

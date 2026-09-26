@@ -33,9 +33,12 @@ dms ipc call emojiPicker close
 | Enter | Copy queued emojis, or the selected emoji when the queue is empty |
 | Ctrl+Enter | Copy and paste queued emojis, or the selected emoji when the queue is empty |
 | Backspace | Remove the last queued emoji when the grid is focused or search is empty |
-| Down / Tab from search | Focus the first emoji |
+| Typing anywhere | Focus search and type into it |
+| Down / Tab from search | Focus the selected category |
+| Left / Right on categories | Move between categories |
+| Down from categories | Focus the first emoji |
 | Arrow keys | Navigate the emoji grid |
-| Up from the first row | Return to search |
+| Up from the first row | Return to the categories, then to search |
 | Escape | Discard a non-empty queue; close the picker when the queue is empty |
 
 ### Categories
@@ -60,6 +63,9 @@ Open DMS Settings → Plugins → Emoji Picker to change:
 - Picker size
 - Recent history size
 - Copy confirmation toast
+- Default action
+
+Set **Default Action** to *Paste at cursor* to make left click and Enter paste, and right click and Ctrl+Enter copy only.
 
 ## Credits
 
@@ -71,7 +77,6 @@ See [ATTRIBUTION.txt](ATTRIBUTION.txt) and [LICENSE-EMOTE.md](LICENSE-EMOTE.md) 
 ## License
 
 GPL-3.0-or-later.
-
 
 ## Translations
 
