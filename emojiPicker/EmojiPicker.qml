@@ -435,7 +435,7 @@ PluginComponent {
                     }
                 }
 
-                GridView {
+                DankGridView {
                     id: emojiGrid
                     Layout.fillWidth: true
                     Layout.fillHeight: true
