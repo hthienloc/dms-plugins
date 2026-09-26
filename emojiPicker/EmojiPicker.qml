@@ -374,15 +374,18 @@ PluginComponent {
                 Flickable {
                     id: categoryScroller
                     Layout.fillWidth: true
-                    Layout.preferredHeight: 56
-                    contentWidth: categoryRow.width
+                    readonly property int ringInset: 4
+                    Layout.preferredHeight: 56 + ringInset * 2
+                    contentWidth: categoryRow.width + ringInset * 2
                     clip: true
                     boundsBehavior: Flickable.StopAtBounds
 
                     Row {
                         id: categoryRow
-                        width: categoryScroller.width
-                        height: categoryScroller.height
+                        x: categoryScroller.ringInset
+                        y: categoryScroller.ringInset
+                        width: categoryScroller.width - categoryScroller.ringInset * 2
+                        height: categoryScroller.height - categoryScroller.ringInset * 2
                         spacing: Theme.spacingXS
 
                         Repeater {
