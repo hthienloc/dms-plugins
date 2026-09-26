@@ -383,7 +383,9 @@ PluginComponent {
                 DankTextField {
                     id: searchField
                     Layout.fillWidth: true
-                    placeholderText: I18n.trFor("emojiPicker", "Search emoji")
+                    placeholderText: root.selectedCategory === "recent" || !root.categoryNames[root.selectedCategory]
+                        ? I18n.trFor("emojiPicker", "Search emoji")
+                        : I18n.trFor("emojiPicker", "Search in %1").arg(I18n.tr(root.categoryNames[root.selectedCategory]))
                     text: root.query
                     onTextChanged: {
                         root.query = text;
