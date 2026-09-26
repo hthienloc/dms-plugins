@@ -454,10 +454,20 @@ PluginComponent {
                     spacing: Theme.spacingS
 
                     StyledText {
-                        Layout.fillWidth: true
                         text: root.visibleEntries.length > 0 ? (root.query ? I18n.trFor("emojiPicker", "Search results") : (I18n.tr(root.categoryNames[root.selectedCategory] || ""))) : I18n.trFor("emojiPicker", "No emoji found")
                         color: Theme.surfaceVariantText
                         font.pixelSize: Theme.fontSizeSmall
+                        verticalAlignment: Text.AlignVCenter
+                    }
+
+                    StyledText {
+                        readonly property var highlightedEntry: emojiGrid.hoveredIndex >= 0 ? root.visibleEntries[emojiGrid.hoveredIndex] : (emojiGrid.activeFocus ? root.visibleEntries[root.selectedIndex] : null)
+                        Layout.fillWidth: true
+                        text: highlightedEntry ? "·  " + highlightedEntry.name : ""
+                        color: Theme.surfaceText
+                        font.pixelSize: Theme.fontSizeSmall
+                        font.weight: Font.Medium
+                        elide: Text.ElideRight
                         verticalAlignment: Text.AlignVCenter
                     }
 
@@ -488,11 +498,15 @@ PluginComponent {
                     highlightMoveDuration: 0
                     highlight: null
 
+                    property int hoveredIndex: -1
+
                     onCurrentIndexChanged: root.selectedIndex = currentIndex
+                    onModelChanged: hoveredIndex = -1
 
                     delegate: Item {
                         id: delegateItem
                         required property var modelData
+                        required property int index
                         readonly property bool isCurrent: GridView.isCurrentItem
                         width: emojiGrid.cellWidth
                         height: emojiGrid.cellHeight
@@ -520,7 +534,13 @@ PluginComponent {
                                 cursorShape: Qt.PointingHandCursor
                                 acceptedButtons: Qt.LeftButton | Qt.RightButton
                                 onEntered: {
-                                    emojiGrid.currentIndex = index;
+                                    emojiGrid.currentIndex = delegateItem.index;
+                                }
+                                onContainsMouseChanged: {
+                                    if (containsMouse)
+                                        emojiGrid.hoveredIndex = delegateItem.index;
+                                    else if (emojiGrid.hoveredIndex === delegateItem.index)
+                                        emojiGrid.hoveredIndex = -1;
                                 }
                                 onClicked: mouse => {
                                     if (mouse.button === Qt.LeftButton && (mouse.modifiers & Qt.ShiftModifier)) {
