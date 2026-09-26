@@ -331,6 +331,14 @@ PluginComponent {
                     event.accepted = true;
                     return;
                 }
+                // Typing while the grid or a category button has focus goes to the search field.
+                if (!searchField.getActiveFocus() && event.text.length > 0 && event.text.trim().length > 0
+                        && !(event.modifiers & (Qt.ControlModifier | Qt.AltModifier | Qt.MetaModifier))) {
+                    searchField.forceActiveFocus();
+                    searchField.cursorPosition = searchField.text.length;
+                    searchField.insertText(event.text);
+                    event.accepted = true;
+                }
             }
             Keys.onEscapePressed: event => {
                 root.handleEscape(event);
