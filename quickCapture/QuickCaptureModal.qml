@@ -327,6 +327,7 @@ Item {
         window.originalRotation = 0;
         window.activeHandle = "none";
         window.calloutDestDragging = false;
+        window.showSizePreview = false;
         if (restoreStyle) {
             window.restorePreGrabState();
         }
@@ -1854,7 +1855,10 @@ Item {
     property var exportCanvasItem: null
     property var offscreenSamplerItem: null
 
-    onSelectedStrokeChanged: window.requestAnnotationPaintAll()
+    onSelectedStrokeChanged: {
+        window.showSizePreview = false;
+        window.requestAnnotationPaintAll();
+    }
     onEffectiveBackgroundModeChanged: window.requestPaintAll()
     onBackgroundSolidColorChanged: window.requestPaintAll()
     onBackgroundGradientStartChanged: window.requestPaintAll()

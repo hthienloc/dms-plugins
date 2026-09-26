@@ -567,6 +567,7 @@ MouseArea {
     }
 
     onPressed: mouse => {
+        window.showSizePreview = false;
         shiftLockAxis = "none";
         if (window.modalFocusScope) {
             window.modalFocusScope.forceActiveFocus();
