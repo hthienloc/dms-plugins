@@ -267,6 +267,16 @@ PluginComponent {
             height: pickerModal.modalHeight
             focus: true
 
+            function focusCategory(index) {
+                const button = categoryRepeater.itemAt(index);
+                if (button)
+                    button.forceActiveFocus(Qt.TabFocusReason);
+            }
+
+            function focusSelectedCategory() {
+                pickerView.focusCategory(root.categoryOrder.indexOf(root.selectedCategory));
+            }
+
             function focusFirstEmoji() {
                 if (root.visibleEntries.length === 0)
                     return;
@@ -313,6 +323,13 @@ PluginComponent {
                 if (category) {
                     pickerView.selectCategory(category);
                     event.accepted = true;
+                    return;
+                }
+                // Down from the header (close button) goes to the search field; the other rows handle their own arrows.
+                if (event.key === Qt.Key_Down && !emojiGrid.activeFocus) {
+                    searchField.forceActiveFocus();
+                    event.accepted = true;
+                    return;
                 }
             }
             Keys.onEscapePressed: event => {
@@ -368,7 +385,7 @@ PluginComponent {
                     keyForwardTargets: [searchField]
                     Keys.onPressed: event => {
                         if (event.key === Qt.Key_Down) {
-                            pickerView.focusFirstEmoji();
+                            pickerView.focusSelectedCategory();
                             event.accepted = true;
                             return;
                         }
@@ -399,10 +416,12 @@ PluginComponent {
                         spacing: Theme.spacingXS
 
                         Repeater {
+                            id: categoryRepeater
                             model: root.categoryOrder
 
                             DankActionButton {
                                 required property string modelData
+                                required property int index
                                 iconName: root.categoryIcons[modelData] || "category"
                                 iconSize: 22
                                 tooltipText: I18n.tr(root.categoryNames[modelData] || "")
@@ -410,6 +429,10 @@ PluginComponent {
                                 backgroundColor: root.selectedCategory === modelData ? Theme.primary : Theme.surfaceContainerHigh
                                 iconColor: root.selectedCategory === modelData ? Theme.onPrimary : Theme.surfaceText
                                 onClicked: pickerView.selectCategory(modelData)
+                                Keys.onLeftPressed: pickerView.focusCategory(Math.max(0, index - 1))
+                                Keys.onRightPressed: pickerView.focusCategory(Math.min(root.categoryOrder.length - 1, index + 1))
+                                Keys.onUpPressed: searchField.forceActiveFocus()
+                                Keys.onDownPressed: pickerView.focusFirstEmoji()
                             }
                         }
                     }
@@ -507,7 +530,7 @@ PluginComponent {
                             return;
                         if (event.key === Qt.Key_Up) {
                             if (emojiGrid.currentIndex < emojiGrid.columnCount) {
-                                searchField.forceActiveFocus();
+                                pickerView.focusSelectedCategory();
                                 event.accepted = true;
                             }
                         }
