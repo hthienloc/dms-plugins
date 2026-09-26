@@ -79,6 +79,12 @@ PluginComponent {
         onTriggered: ClipboardService.sendPasteKeystroke()
     }
 
+    // Noto Color Emoji ligates ZWJ sequences without U+FE0F, but Qt's shaper doesn't
+    // skip the selector, so they render split. Display-only; the copied value is unchanged.
+    function displayEmoji(emoji) {
+        return emoji.indexOf("\u200D") >= 0 ? emoji.replace(/\uFE0F/g, "") : emoji;
+    }
+
     function loadData() {
         root.allEntries = EmojiData.getEntries();
         const saved = PluginService.loadPluginState(root.pluginId, "recent", []);
@@ -464,7 +470,8 @@ PluginComponent {
 
                             StyledText {
                                 anchors.centerIn: parent
-                                text: modelData.emoji
+                                text: root.displayEmoji(modelData.emoji)
+                                font.family: "Noto Color Emoji"
                                 font.pixelSize: 32
                                 color: Theme.surfaceText
                             }
