@@ -214,11 +214,24 @@ PluginComponent {
     property bool isPlayerRunning: false
     property bool isTestingSound: false
     property int soundVolume: pluginData.defaultSoundVolume !== undefined ? pluginData.defaultSoundVolume : 80
+    property bool isMuted: false
+
+    readonly property int effectiveVolume: isMuted ? 0 : soundVolume
+
+    function toggleMute() {
+        isMuted = !isMuted;
+        if (isPlayerRunning || isTestingSound) {
+            sendIpcCommand({ "command": ["set_property", "volume", root.effectiveVolume] });
+        }
+    }
 
     onSoundVolumeChanged: {
         pluginData.defaultSoundVolume = soundVolume;
+        if (soundVolume > 0 && isMuted) {
+            isMuted = false;
+        }
         if (isPlayerRunning || isTestingSound) {
-            sendIpcCommand({ "command": ["set_property", "volume", soundVolume] });
+            sendIpcCommand({ "command": ["set_property", "volume", root.effectiveVolume] });
         }
     }
 
@@ -274,7 +287,7 @@ PluginComponent {
                 "--no-config",
                 "--loop=inf",
                 "--audio-pitch-correction=no",
-                "--volume=" + root.soundVolume,
+                "--volume=" + root.effectiveVolume,
                 "--audio-samplerate=48000",
                 "--speed=1.0",
                 "--input-ipc-server=" + root.socketPath,
@@ -329,7 +342,7 @@ PluginComponent {
         if (isPlayerRunning) {
             var cmds = [
                 JSON.stringify({ "command": ["set_property", "speed", speed] }),
-                JSON.stringify({ "command": ["set_property", "volume", root.soundVolume] }),
+                JSON.stringify({ "command": ["set_property", "volume", root.effectiveVolume] }),
                 JSON.stringify({ "command": ["set_property", "pause", false] })
             ];
             if (shouldStrike) {
@@ -351,7 +364,7 @@ PluginComponent {
                     "--no-config",
                     "--loop=inf",
                     "--audio-pitch-correction=no",
-                    "--volume=" + root.soundVolume,
+                    "--volume=" + root.effectiveVolume,
                     "--audio-samplerate=48000",
                     "--input-ipc-server=" + root.socketPath,
                     soundFile
@@ -937,28 +950,48 @@ PluginComponent {
                         }
                     }
 
-                    DankButton {
+                    // Volume slider with mute toggle on the left and test sound on the right
+                    Row {
                         visible: !root.isRunning
-                        text: root.isTestingSound ? I18n.tr("Stop Test") : I18n.tr("Test Sound")
                         width: parent.width
-                        height: 40
-                        backgroundColor: root.isTestingSound ? Qt.rgba(Theme.error.r, Theme.error.g, Theme.error.b, 0.15) : Theme.surfaceContainerHigh
-                        textColor: root.isTestingSound ? Theme.error : Theme.surfaceVariantText
-                        iconName: root.isTestingSound ? "volume_off" : "volume_up"
-                        onClicked: root.toggleTestSound()
-                    }
+                        spacing: Theme.spacingS
 
-                    // Volume slider
-                    DankSlider {
-                        visible: !root.isRunning
-                        width: parent.width
-                        leftIcon: "volume_down"
-                        rightIcon: "volume_up"
-                        minimum: 0
-                        maximum: 100
-                        value: root.soundVolume
-                        unit: "%"
-                        onSliderValueChanged: root.soundVolume = newValue
+                        DankActionButton {
+                            buttonSize: Theme.buttonHeightXS
+                            circular: true
+                            anchors.verticalCenter: parent.verticalCenter
+                            backgroundColor: Theme.surfaceContainerHigh
+                            iconName: root.isMuted ? "volume_off" : (root.soundVolume > 50 ? "volume_up" : (root.soundVolume > 0 ? "volume_down" : "volume_mute"))
+                            iconSize: Theme.iconSizeSmall
+                            iconColor: root.isMuted ? Theme.error : Theme.surfaceText
+                            tooltipText: root.isMuted ? I18n.tr("Unmute") : I18n.tr("Mute")
+                            onClicked: root.toggleMute()
+                        }
+
+                        DankSlider {
+                            anchors.verticalCenter: parent.verticalCenter
+                            width: parent.width - (Theme.buttonHeightXS * 2) - (Theme.spacingS * 2)
+                            minimum: 0
+                            maximum: 100
+                            value: root.soundVolume
+                            unit: "%"
+                            showValue: true
+                            onSliderValueChanged: (newValue) => {
+                                root.soundVolume = newValue;
+                            }
+                        }
+
+                        DankActionButton {
+                            buttonSize: Theme.buttonHeightXS
+                            circular: true
+                            anchors.verticalCenter: parent.verticalCenter
+                            backgroundColor: root.isTestingSound ? Theme.withAlpha(Theme.primary, 0.18) : Theme.surfaceContainerHigh
+                            iconName: root.isTestingSound ? "stop" : "play_arrow"
+                            iconSize: Theme.iconSizeSmall
+                            iconColor: root.isTestingSound ? Theme.primary : Theme.surfaceText
+                            tooltipText: root.isTestingSound ? I18n.tr("Stop Test") : I18n.tr("Test Sound")
+                            onClicked: root.toggleTestSound()
+                        }
                     }
                 }
                 HintSection {
