@@ -153,6 +153,14 @@ PluginComponent {
     property var soundVolumes: pluginData.soundVolumes || ({})
     property int masterVolume: pluginData.defaultVolume !== undefined ? parseInt(pluginData.defaultVolume) : 100
     property bool isMuted: false
+    property bool showVolumeIndicator: false
+
+    Timer {
+        id: volumeIndicatorTimer
+        interval: 1200
+        repeat: false
+        onTriggered: root.showVolumeIndicator = false
+    }
 
     function getEffectiveVolume(sound) {
         var individual = soundVolumes[sound] !== undefined ? soundVolumes[sound] : 100;
@@ -473,6 +481,8 @@ PluginComponent {
     }
 
     function adjustVolume(delta) {
+        root.showVolumeIndicator = true;
+        volumeIndicatorTimer.restart();
         var newVol = Math.min(100, Math.max(0, root.masterVolume + delta));
         if (newVol !== root.masterVolume) {
             root.masterVolume = newVol;
@@ -606,11 +616,52 @@ PluginComponent {
                 anchors.centerIn: parent
                 spacing: Theme.spacingXS
 
-                DankIcon {
-                    name: root.isMuted ? "volume_off" : (root.playingSounds.length > 0 ? "equalizer" : "music_note")
-                    size: Theme.chipIconSize
-                    color: root.isMuted ? Theme.error : (root.playingSounds.length > 0 ? Theme.primary : Theme.surfaceVariantText)
+                Item {
+                    id: iconOrVolumeContainer
+                    implicitWidth: root.showVolumeIndicator ? volumeText.reservedWidth : dankIcon.implicitWidth
+                    implicitHeight: Math.max(dankIcon.implicitHeight, volumeText.implicitHeight)
                     anchors.verticalCenter: parent.verticalCenter
+                    clip: true
+
+                    Behavior on implicitWidth {
+                        NumberAnimation { duration: Theme.shortDuration; easing.type: Easing.OutCubic }
+                    }
+
+                    DankIcon {
+                        id: dankIcon
+                        anchors.centerIn: parent
+                        opacity: root.showVolumeIndicator ? 0.0 : 1.0
+                        scale: root.showVolumeIndicator ? 0.8 : 1.0
+                        name: root.isMuted ? "volume_off" : (root.playingSounds.length > 0 ? "equalizer" : "music_note")
+                        size: Theme.chipIconSize
+                        color: root.isMuted ? Theme.error : (root.playingSounds.length > 0 ? Theme.primary : Theme.surfaceVariantText)
+
+                        Behavior on opacity {
+                            NumberAnimation { duration: Theme.shortDuration; easing.type: Easing.OutCubic }
+                        }
+                        Behavior on scale {
+                            NumberAnimation { duration: Theme.shortDuration; easing.type: Easing.OutCubic }
+                        }
+                    }
+
+                    NumericText {
+                        id: volumeText
+                        anchors.centerIn: parent
+                        opacity: root.showVolumeIndicator ? 1.0 : 0.0
+                        scale: root.showVolumeIndicator ? 1.0 : 0.8
+                        text: root.masterVolume + "%"
+                        reserveText: "100%"
+                        font.pixelSize: Theme.fontSizeSmall
+                        font.weight: Font.DemiBold
+                        color: root.isMuted ? Theme.error : Theme.primary
+
+                        Behavior on opacity {
+                            NumberAnimation { duration: Theme.shortDuration; easing.type: Easing.OutCubic }
+                        }
+                        Behavior on scale {
+                            NumberAnimation { duration: Theme.shortDuration; easing.type: Easing.OutCubic }
+                        }
+                    }
                 }
             }
         }
