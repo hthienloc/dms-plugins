@@ -57,13 +57,13 @@
     "Audio Codec": "קודק אודיו"
   },
   "Audio recording is disabled when using the %1 backend.": {
-    "Audio recording is disabled when using the %1 backend.": "הקלטת שמע מושבתת בעת שימוש ב-Backend מסוג %1."
+    "Audio recording is disabled when using the %1 backend.": "הקלטת שמע מושבתת בעת שימוש בBackend מסוג %1."
   },
   "Auto": {
     "Auto": "אוטומטי"
   },
   "Auto (Screen Scale)": {
-    "Auto (Screen Scale)": ""
+    "Auto (Screen Scale)": "אוטומטי (מתאים את קנה המידה למסך)"
   },
   "Auto Balance": {
     "Auto Balance": "איזון אוטומטי"
@@ -449,6 +449,9 @@
   "Hide Control Center": {
     "Hide Control Center": "הסתרת מרכז הבקרה"
   },
+  "Hide Control Center by Default": {
+    "Hide Control Center by Default": "הסתרת מרכז הבקרה כברירת מחדל"
+  },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": ""
   },
@@ -500,6 +503,9 @@
   "Initial Width": {
     "Initial Width": "רוחב התחלתי"
   },
+  "Initial state for the Control Center toggle.": {
+    "Initial state for the Control Center toggle.": "מצב התחלתי עבור מתג מרכז הבקרה."
+  },
   "Inline": {
     "Inline": "מוטמע"
   },
@@ -525,7 +531,7 @@
     "Key": "מקש"
   },
   "Keybinding overlay size in interactive region selector.": {
-    "Keybinding overlay size in interactive region selector.": ""
+    "Keybinding overlay size in interactive region selector.": "גודל שכבת קיצורי המקשים בבורר האזור האינטראקטיבי."
   },
   "Landscape": {
     "Landscape": "לרוחב"
@@ -648,7 +654,7 @@
     "Off": "כבוי"
   },
   "Off (Hidden)": {
-    "Off (Hidden)": ""
+    "Off (Hidden)": "כבוי (מוסתר)"
   },
   "Opacity": {
     "Opacity": "שקיפות"
@@ -661,6 +667,9 @@
   },
   "Open Image": {
     "Open Image": "פתיחת תמונה"
+  },
+  "Open folder": {
+    "Open folder": "פתח/י תיקייה"
   },
   "Outline Variant": {
     "Outline Variant": "גרסת קו מתאר"
@@ -813,7 +822,7 @@
     "Region": "אזור"
   },
   "Region HUD Scale": {
-    "Region HUD Scale": ""
+    "Region HUD Scale": "התאמת קנה מידה לHUD של האזור"
   },
   "Reset": {
     "Reset": "איפוס"
@@ -929,8 +938,11 @@
   "Select Image to Annotate": {
     "Select Image to Annotate": "בחירת תמונה לעריכת הערות"
   },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "בחר/י Backend להקלטת מסך. מצב אוטומטי מנסה תחילה את המעבד הגרפי (GPU) ועובר למעבד (CPU) (%1) במקרה הצורך."
+  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "בחר/י Backend להקלטת מסך. מצב אוטומטי מנסה תחילה GPU ועובר לCPU (%1) במקרה הצורך. הערה: השהיה אינה נתמכת עם %1."
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "כלי / פעולה שנבחרו"

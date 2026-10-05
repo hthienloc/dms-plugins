@@ -449,6 +449,9 @@
   "Hide Control Center": {
     "Hide Control Center": "隐藏控制中心"
   },
+  "Hide Control Center by Default": {
+    "Hide Control Center by Default": "默认隐藏控制中心"
+  },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": ""
   },
@@ -499,6 +502,9 @@
   },
   "Initial Width": {
     "Initial Width": "初始宽度"
+  },
+  "Initial state for the Control Center toggle.": {
+    "Initial state for the Control Center toggle.": "控制中心开关的初始状态。"
   },
   "Inline": {
     "Inline": ""
@@ -661,6 +667,9 @@
   },
   "Open Image": {
     "Open Image": ""
+  },
+  "Open folder": {
+    "Open folder": "打开文件夹"
   },
   "Outline Variant": {
     "Outline Variant": "边框变体"
@@ -928,6 +937,9 @@
   },
   "Select Image to Annotate": {
     "Select Image to Annotate": "选择要标注的图像"
+  },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "选择屏幕录制后端。自动模式优先尝试 GPU，失败时回退至 CPU (%1)。"
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""

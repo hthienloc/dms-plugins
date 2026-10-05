@@ -63,7 +63,7 @@
     "Auto": "تلقائي"
   },
   "Auto (Screen Scale)": {
-    "Auto (Screen Scale)": ""
+    "Auto (Screen Scale)": "تلقائي (مقياس الشاشة)"
   },
   "Auto Balance": {
     "Auto Balance": "موازنة تلقائية"
@@ -449,6 +449,9 @@
   "Hide Control Center": {
     "Hide Control Center": "إخفاء مركز التحكم"
   },
+  "Hide Control Center by Default": {
+    "Hide Control Center by Default": "إخفاء مركز التحكم افتراضياً"
+  },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": ""
   },
@@ -500,6 +503,9 @@
   "Initial Width": {
     "Initial Width": "العرض الأولي"
   },
+  "Initial state for the Control Center toggle.": {
+    "Initial state for the Control Center toggle.": "الحالة الأولية لتبديل مركز التحكم."
+  },
   "Inline": {
     "Inline": "مضمن"
   },
@@ -525,7 +531,7 @@
     "Key": "مفتاح"
   },
   "Keybinding overlay size in interactive region selector.": {
-    "Keybinding overlay size in interactive region selector.": ""
+    "Keybinding overlay size in interactive region selector.": "حجم تراكب اختصارات المفاتيح في محدد المنطقة التفاعلي."
   },
   "Landscape": {
     "Landscape": "أفقي (عرضي)"
@@ -648,7 +654,7 @@
     "Off": "إيقاف"
   },
   "Off (Hidden)": {
-    "Off (Hidden)": ""
+    "Off (Hidden)": "إيقاف (مخفي)"
   },
   "Opacity": {
     "Opacity": "الشفافية"
@@ -661,6 +667,9 @@
   },
   "Open Image": {
     "Open Image": "فتح الصورة"
+  },
+  "Open folder": {
+    "Open folder": "فتح المجلد"
   },
   "Outline Variant": {
     "Outline Variant": "تباين المخطط التفصيلي"
@@ -813,7 +822,7 @@
     "Region": "منطقة"
   },
   "Region HUD Scale": {
-    "Region HUD Scale": ""
+    "Region HUD Scale": "مقياس شاشة العرض (HUD) للمنطقة"
   },
   "Reset": {
     "Reset": "إعادة تعيين"
@@ -929,8 +938,11 @@
   "Select Image to Annotate": {
     "Select Image to Annotate": "تحديد صورة للتعليق عليها"
   },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "حدد خلفية تسجيل الشاشة. يحاول الوضع التلقائي استخدام وحدة معالجة الرسومات (GPU) أولاً، ثم يعود إلى وحدة المعالجة المركزية (CPU) (%1)."
+  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "حدد نظام تسجيل الشاشة. يحاول الوضع التلقائي استخدام وحدة معالجة الرسومات أولاً ثم ينتقل إلى وحدة المعالجة المركزية (%1). ملاحظة: %1 لا يدعم الإيقاف المؤقت."
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "الأداة / الإجراء المحدد"

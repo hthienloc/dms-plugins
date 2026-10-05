@@ -1,9 +1,9 @@
 {
   "%1 Font": {
-    "%1 Font": ""
+    "%1 Font": "%1 betűtípus"
   },
   "%1 is not installed": {
-    "%1 is not installed": ""
+    "%1 is not installed": "A(z) %1 nincs telepítve"
   },
   "1 Connecting Line": {
     "1 Connecting Line": "1 összekötő vonal"
@@ -15,7 +15,7 @@
     "Action": "Művelet"
   },
   "Action on %1": {
-    "Action on %1": ""
+    "Action on %1": "Művelet ezen: %1"
   },
   "Adaptive": {
     "Adaptive": "Adaptív"
@@ -27,7 +27,7 @@
     "Add Text Note": "Szöveges jegyzet hozzáadása"
   },
   "Alignment": {
-    "Alignment": ""
+    "Alignment": "Igazítás"
   },
   "All Outputs": {
     "All Outputs": "Minden kimenet"
@@ -39,13 +39,13 @@
     "Annotation Tools": "Jegyzetelő eszközök"
   },
   "Anonymous Copy": {
-    "Anonymous Copy": ""
+    "Anonymous Copy": "Névtelen másolat"
   },
   "Arrow": {
-    "Arrow": ""
+    "Arrow": "Nyíl"
   },
   "Aspect Ratio": {
-    "Aspect Ratio": ""
+    "Aspect Ratio": "Képarány"
   },
   "Audio": {
     "Audio": "Hang"
@@ -57,13 +57,13 @@
     "Audio Codec": "Hangkodek"
   },
   "Audio recording is disabled when using the %1 backend.": {
-    "Audio recording is disabled when using the %1 backend.": ""
+    "Audio recording is disabled when using the %1 backend.": "A(z) %1 háttérprogram használata esetén a hangfelvétel le van tiltva."
   },
   "Auto": {
     "Auto": "Automatikus"
   },
   "Auto (Screen Scale)": {
-    "Auto (Screen Scale)": ""
+    "Auto (Screen Scale)": "Automatikus (képernyő méretezése)"
   },
   "Auto Balance": {
     "Auto Balance": "Automatikus egyensúly"
@@ -90,7 +90,7 @@
     "Automatically stack windows to avoid overlap": "Ablakok automatikus egymásra helyezése az átfedések elkerülése érdekében"
   },
   "Back to Annotation": {
-    "Back to Annotation": ""
+    "Back to Annotation": "Vissza a jegyzethez"
   },
   "Background": {
     "Background": "Háttér"
@@ -102,7 +102,7 @@
     "Background Images": "Háttérképek"
   },
   "Background Mode": {
-    "Background Mode": ""
+    "Background Mode": "Háttérüzemmód"
   },
   "Background Presets": {
     "Background Presets": "Háttér előbeállításai"
@@ -213,7 +213,7 @@
     "Color Picker": "Színválasztó"
   },
   "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": {
-    "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": ""
+    "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": "Legfeljebb %1 gyorshozzáférésű eszközbeállítás konfigurálható. A rögzítés közben kattints jobb gombbal a körmenü megnyitásához."
   },
   "Conic Gradient": {
     "Conic Gradient": "Kúpos színátmenet"
@@ -258,7 +258,7 @@
     "Corner Radius": "Sarokkerekítés"
   },
   "Could not crop image": {
-    "Could not crop image": ""
+    "Could not crop image": "A kép kivágása nem sikerült"
   },
   "Crop / Resize": {
     "Crop / Resize": "Körbevágás / Átméretezés"
@@ -300,7 +300,7 @@
     "Display": "Kijelző"
   },
   "Display Mode": {
-    "Display Mode": ""
+    "Display Mode": "Kijelző mód"
   },
   "Done": {
     "Done": "Kész"
@@ -318,7 +318,7 @@
     "Drop image onto bar icon to annotate it": "Húzd a képet a tálcaikonra a jegyzetek készítéséhez"
   },
   "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": {
-    "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": ""
+    "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": "Minden parancs a következő műveleteket fogadja el: %1 (szerkesztő megnyitása) vagy %2 (mindig elöl lévő ablak)."
   },
   "Edge Spacing": {
     "Edge Spacing": "Élek távolsága"
@@ -348,19 +348,19 @@
     "Failed to convert recording to GIF.": "A felvétel GIF-fé alakítása sikertelen."
   },
   "Failed to copy screenshot": {
-    "Failed to copy screenshot": ""
+    "Failed to copy screenshot": "A képernyőkép másolása nem sikerült"
   },
   "Failed to create float window.": {
-    "Failed to create float window.": ""
+    "Failed to create float window.": "Nem sikerült létrehozni az úszó ablakot."
   },
   "Failed to download image.": {
-    "Failed to download image.": ""
+    "Failed to download image.": "A kép letöltése nem sikerült."
   },
   "Failed to generate blurred background image": {
     "Failed to generate blurred background image": "Nem sikerült létrehozni a homályos háttérképet"
   },
   "Failed to load image: %1": {
-    "Failed to load image: %1": ""
+    "Failed to load image: %1": "A kép betöltése nem sikerült: %1"
   },
   "Failed to save screenshot": {
     "Failed to save screenshot": "A képernyőkép mentése sikertelen"
@@ -369,13 +369,13 @@
     "File": "Fájl"
   },
   "Filename Pattern": {
-    "Filename Pattern": ""
+    "Filename Pattern": "Fájlnévminta"
   },
   "Flip Horizontal": {
-    "Flip Horizontal": ""
+    "Flip Horizontal": "Vízszintes tükrözés"
   },
   "Flip Vertical": {
-    "Flip Vertical": ""
+    "Flip Vertical": "Függőleges tükrözés"
   },
   "Float": {
     "Float": "Lebegő"
@@ -384,7 +384,7 @@
     "Float Window": "Ablak lebegtetése"
   },
   "Float service not available.": {
-    "Float service not available.": ""
+    "Float service not available.": "A „Float” szolgáltatás nem elérhető."
   },
   "Floating": {
     "Floating": "Lebegő"
@@ -420,34 +420,37 @@
     "Fullscreen": "Teljes képernyő"
   },
   "Fullscreen Target": {
-    "Fullscreen Target": ""
+    "Fullscreen Target": "Teljes képernyős cél"
   },
   "GIF Framerate": {
     "GIF Framerate": "GIF-képkockasebesség"
   },
   "GPU encoder failed. Retrying with %1...": {
-    "GPU encoder failed. Retrying with %1...": ""
+    "GPU encoder failed. Retrying with %1...": "A GPU-kódoló meghibásodott. Újrapróbálom %1-gyel..."
   },
   "General Shortcuts": {
     "General Shortcuts": "Általános gyorsbillentyűk"
   },
   "Gradient Angle": {
-    "Gradient Angle": ""
+    "Gradient Angle": "A gradiens szöge"
   },
   "Gradient End": {
-    "Gradient End": ""
+    "Gradient End": "A gradiens vége"
   },
   "Gradient Start": {
-    "Gradient Start": ""
+    "Gradient Start": "Gradiens kezdete"
   },
   "Help": {
     "Help": "Súgó"
   },
   "Hide Annotations": {
-    "Hide Annotations": ""
+    "Hide Annotations": "Megjegyzések elrejtése"
   },
   "Hide Control Center": {
     "Hide Control Center": "Vezérlőközpont elrejtése"
+  },
+  "Hide Control Center by Default": {
+    "Hide Control Center by Default": "Vezérlőközpont elrejtése alapértelmezés szerint"
   },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": ""
@@ -462,7 +465,7 @@
     "History": "Előzmények"
   },
   "Hold %1 for Loupe": {
-    "Hold %1 for Loupe": ""
+    "Hold %1 for Loupe": "Tartsd lenyomva a(z) %1 gombot a nagyító használatához"
   },
   "Hover Trigger Delay": {
     "Hover Trigger Delay": "Rámutatási kioldási késleltetés"
@@ -483,13 +486,13 @@
     "Image Error": "Képhiba"
   },
   "Image Folder": {
-    "Image Folder": ""
+    "Image Folder": "Képek mappa"
   },
   "Image Size": {
     "Image Size": "Képméret"
   },
   "Image is too small (%1×%2). Minimum: %3px": {
-    "Image is too small (%1×%2). Minimum: %3px": ""
+    "Image is too small (%1×%2). Minimum: %3px": "A kép túl kicsi (%1×%2). Minimális méret: %3px"
   },
   "Image selected automatically when using Image Background mode": {
     "Image selected automatically when using Image Background mode": "Automatikus képkiválasztás Képháttér mód használatakor"
@@ -500,8 +503,11 @@
   "Initial Width": {
     "Initial Width": "Kezdeti szélesség"
   },
+  "Initial state for the Control Center toggle.": {
+    "Initial state for the Control Center toggle.": "A Vezérlőközpont kapcsolójának kezdőállapota."
+  },
   "Inline": {
-    "Inline": ""
+    "Inline": "Soron belül"
   },
   "Input Mode": {
     "Input Mode": "Bemeneti mód"
@@ -513,10 +519,10 @@
     "Interaction / Result": "Interakció / Eredmény"
   },
   "Invalid or corrupted image file.": {
-    "Invalid or corrupted image file.": ""
+    "Invalid or corrupted image file.": "Érvénytelen vagy sérült képfájl."
   },
   "Italic": {
-    "Italic": ""
+    "Italic": "Dőlt betű"
   },
   "JPEG Quality": {
     "JPEG Quality": "JPEG-minőség"
@@ -525,7 +531,7 @@
     "Key": "Billentyű"
   },
   "Keybinding overlay size in interactive region selector.": {
-    "Keybinding overlay size in interactive region selector.": ""
+    "Keybinding overlay size in interactive region selector.": "A billentyűkombinációk felületének mérete az interaktív területválasztóban."
   },
   "Landscape": {
     "Landscape": "Fekvő"
@@ -561,7 +567,7 @@
     "Magnifier Loupe": "Nagyító"
   },
   "Max Height (%1 = no limit)": {
-    "Max Height (%1 = no limit)": ""
+    "Max Height (%1 = no limit)": "Maximális magasság (1% = nincs korlátozás)"
   },
   "Medium": {
     "Medium": "Közepes"
@@ -603,7 +609,7 @@
     "No Image Specified": "Nincs kép megadva"
   },
   "No QR code detected": {
-    "No QR code detected": ""
+    "No QR code detected": "Nem található QR-kód"
   },
   "No output available": {
     "No output available": "Nincs elérhető kimenet"
@@ -615,13 +621,13 @@
     "No supported images found": "Nem találhatók támogatott képek"
   },
   "No text detected": {
-    "No text detected": ""
+    "No text detected": "Nem található szöveg"
   },
   "No valid image file or URL found in drop.": {
-    "No valid image file or URL found in drop.": ""
+    "No valid image file or URL found in drop.": "A letöltési mezőben nem található érvényes képfájl vagy URL-cím."
   },
   "No valid image, URL, or path in clipboard.": {
-    "No valid image, URL, or path in clipboard.": ""
+    "No valid image, URL, or path in clipboard.": "A vágólapon nincs érvényes kép, URL-cím vagy elérési út."
   },
   "None": {
     "None": "Nincs"
@@ -642,13 +648,13 @@
     "OCR Result": "OCR eredménye"
   },
   "OCR failed": {
-    "OCR failed": ""
+    "OCR failed": "Az OCR nem sikerült"
   },
   "Off": {
     "Off": "Kikapcsolva"
   },
   "Off (Hidden)": {
-    "Off (Hidden)": ""
+    "Off (Hidden)": "Ki (rejtett)"
   },
   "Opacity": {
     "Opacity": "Átlátszatlanság"
@@ -657,10 +663,13 @@
     "Open": "Megnyitás"
   },
   "Open %1 menu (Popout)": {
-    "Open %1 menu (Popout)": ""
+    "Open %1 menu (Popout)": "%1 menü megnyitása (felugró ablak)"
   },
   "Open Image": {
-    "Open Image": ""
+    "Open Image": "Kép megnyitása"
+  },
+  "Open folder": {
+    "Open folder": "Mappa megnyitása"
   },
   "Outline Variant": {
     "Outline Variant": "Körvonal változata"
@@ -690,10 +699,10 @@
     "Paused": "Szüneteltetve"
   },
   "Pausing is not supported with %1.": {
-    "Pausing is not supported with %1.": ""
+    "Pausing is not supported with %1.": "A %1 esetében a szüneteltetés nem támogatott."
   },
   "Pen": {
-    "Pen": ""
+    "Pen": "Toll"
   },
   "Pen Auto-Close": {
     "Pen Auto-Close": "Toll automatikus bezárása"
@@ -711,7 +720,7 @@
     "Pixelate Intensity": "Pixelezés intenzitása"
   },
   "Popup": {
-    "Popup": ""
+    "Popup": "Felugró ablak"
   },
   "Portrait": {
     "Portrait": "Portré"
@@ -723,19 +732,19 @@
     "Post-Capture Notification": "Rögzítés utáni értesítés"
   },
   "Preset": {
-    "Preset": ""
+    "Preset": "Előre beállított"
   },
   "Preset %1": {
     "Preset %1": "Előbeállítás %1"
   },
   "Presets": {
-    "Presets": ""
+    "Presets": "Előre beállított értékek"
   },
   "Preview": {
     "Preview": "Előnézet"
   },
   "Preview Quality": {
-    "Preview Quality": ""
+    "Preview Quality": "Előnézeti minőség"
   },
   "Primary": {
     "Primary": "Elsődleges"
@@ -747,7 +756,7 @@
     "QR Result": "QR-kód eredménye"
   },
   "QR scan failed": {
-    "QR scan failed": ""
+    "QR scan failed": "A QR-kód beolvasása sikertelen volt"
   },
   "Quality": {
     "Quality": "Minőség"
@@ -783,7 +792,7 @@
     "Recording": "Felvétel"
   },
   "Recording Backend": {
-    "Recording Backend": ""
+    "Recording Backend": "Felvételi háttérrendszer"
   },
   "Recording Folder": {
     "Recording Folder": "Rögzítési mappa"
@@ -804,7 +813,7 @@
     "Redact": "Kiszürkítés/Kipixelezés"
   },
   "Redo": {
-    "Redo": ""
+    "Redo": "Újra"
   },
   "Refresh": {
     "Refresh": "Újratöltés"
@@ -813,7 +822,7 @@
     "Region": "Terület"
   },
   "Region HUD Scale": {
-    "Region HUD Scale": ""
+    "Region HUD Scale": "Régió HUD-skála"
   },
   "Reset": {
     "Reset": "Visszaállítás"
@@ -837,10 +846,10 @@
     "Right Click Action": "Jobbklikk-művelet"
   },
   "Rotate Left": {
-    "Rotate Left": ""
+    "Rotate Left": "Forgatás balra"
   },
   "Rotate Right": {
-    "Rotate Right": ""
+    "Rotate Right": "Jobb irányba forgatás"
   },
   "Round Highlighter Tips": {
     "Round Highlighter Tips": "Kerekített kiemelő hegyek"
@@ -855,7 +864,7 @@
     "Save": "Mentés"
   },
   "Save As": {
-    "Save As": ""
+    "Save As": "Mentés más néven"
   },
   "Save Screenshot As": {
     "Save Screenshot As": "Képernyőkép mentése másként"
@@ -870,7 +879,7 @@
     "Scan QR": "QR-kód beolvasása"
   },
   "Screen Recording": {
-    "Screen Recording": ""
+    "Screen Recording": "Képernyőfelvétel"
   },
   "Screen Recording Error": {
     "Screen Recording Error": "Képernyőfelvételi hiba"
@@ -882,7 +891,7 @@
     "Screen recording timed out or was cancelled.": "A képernyőfelvétel időtúllépés miatt megszakadt vagy törölve lett."
   },
   "Screenshot": {
-    "Screenshot": ""
+    "Screenshot": "Képernyőkép"
   },
   "Screenshot Copied": {
     "Screenshot Copied": "Képernyőkép másolva"
@@ -915,7 +924,7 @@
     "Scroll Interval": "Görgetési időköz"
   },
   "Scroll capture: select a region, scroll content, then press %1 to finish.": {
-    "Scroll capture: select a region, scroll content, then press %1 to finish.": ""
+    "Scroll capture: select a region, scroll content, then press %1 to finish.": "Görgetéses képernyőmentés: jelölj ki egy területet, görgess a tartalomban, majd nyomd meg a %1 gombot a művelet befejezéséhez."
   },
   "Scrolling": {
     "Scrolling": "Görgetés"
@@ -924,13 +933,16 @@
     "Select": "Kiválasztás"
   },
   "Select Color Slots %1": {
-    "Select Color Slots %1": ""
+    "Select Color Slots %1": "Színhelyek kiválasztása %1"
   },
   "Select Image to Annotate": {
     "Select Image to Annotate": "Válaszd ki a jegyzetekkel ellátandó képet"
   },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Válaszd ki a képernyőfelvétel háttérprogramját. Az „Automatikus” beállítás először a GPU-t próbálja meg, majd CPU-ra vált (%1)."
+  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "Válaszd ki a képernyőfelvétel háttérprogramját. Az „Automatikus” beállítás először a GPU-t próbálja meg, majd CPU-ra vált (%1). Megjegyzés: A(z) %1 nem támogatja a szüneteltetést."
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "Kiválasztott eszköz / művelet"
@@ -939,7 +951,7 @@
     "Settings": "Beállítások"
   },
   "Shadow Strength": {
-    "Shadow Strength": ""
+    "Shadow Strength": "Árnyékereje"
   },
   "Shapes": {
     "Shapes": "Alakzatok"
@@ -948,7 +960,7 @@
     "Shortcut Action": "Gyorsbillentyű művelete"
   },
   "Show Annotations": {
-    "Show Annotations": ""
+    "Show Annotations": "Megjegyzések megjelenítése"
   },
   "Show Control Center": {
     "Show Control Center": "Vezérlőközpont megjelenítése"
@@ -978,7 +990,7 @@
     "Skip confirmation": "Megerősítés kihagyása"
   },
   "Slot %1": {
-    "Slot %1": ""
+    "Slot %1": "%1. hely"
   },
   "Soften image details so screenshot content stands out": {
     "Soften image details so screenshot content stands out": "Lágyítja a kép részleteit, hogy a képernyőkép tartalma kiemelkedjen"
@@ -1005,7 +1017,7 @@
     "Spotlight Opacity": "Kiemelés átlátszatlansága"
   },
   "Stamp": {
-    "Stamp": ""
+    "Stamp": "Bélyeg"
   },
   "Stamp Contrast Ring": {
     "Stamp Contrast Ring": "Bélyegző kontrasztgyűrűje"
@@ -1041,7 +1053,7 @@
     "Text": "Szöveg"
   },
   "Text Background": {
-    "Text Background": ""
+    "Text Background": "A szöveg háttérszíne"
   },
   "Text Background Roundness": {
     "Text Background Roundness": "Szövegháttér lekerekítése"
@@ -1059,16 +1071,16 @@
     "Toast": "Felugró értesítés"
   },
   "Toggle Annotations": {
-    "Toggle Annotations": ""
+    "Toggle Annotations": "Megjegyzések megjelenítése/elrejtése"
   },
   "Toggle Start / Stop": {
     "Toggle Start / Stop": "Indítás / Leállítás váltása"
   },
   "Toggle between %1 latest presets": {
-    "Toggle between %1 latest presets": ""
+    "Toggle between %1 latest presets": "Váltás a %1 legújabb előre beállított profil között"
   },
   "Tool": {
-    "Tool": ""
+    "Tool": "Eszköz"
   },
   "Tool Defaults": {
     "Tool Defaults": "Eszköz alapértelmezései"
@@ -1110,10 +1122,10 @@
     "Type note...": "Jegyzet írása..."
   },
   "Underline": {
-    "Underline": ""
+    "Underline": "Aláhúzás"
   },
   "Undo": {
-    "Undo": ""
+    "Undo": "Visszavonás"
   },
   "Usage Guide": {
     "Usage Guide": "Használati útmutató"
@@ -1128,13 +1140,13 @@
     "Use Modal Editor": "Modális szerkesztő használata"
   },
   "Variant": {
-    "Variant": ""
+    "Variant": "Változat"
   },
   "Very High": {
     "Very High": "Nagyon magas"
   },
   "Video": {
-    "Video": ""
+    "Video": "Videó"
   },
   "Video Codec": {
     "Video Codec": "Videókodek"
@@ -1149,7 +1161,7 @@
     "WebP Quality": "WebP-minőség"
   },
   "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": {
-    "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": ""
+    "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": "Ha ez az opció engedélyezve van, a szerkesztő nem a képernyő %1%-át tölti ki, hanem a kijelölt terület méretére zsugorodik."
   },
   "Window": {
     "Window": "Ablak"

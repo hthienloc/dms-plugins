@@ -63,7 +63,7 @@
     "Auto": "Auto"
   },
   "Auto (Screen Scale)": {
-    "Auto (Screen Scale)": ""
+    "Auto (Screen Scale)": "Automatisch (Bildschirmskalierung)"
   },
   "Auto Balance": {
     "Auto Balance": "Auto-Balance"
@@ -449,6 +449,9 @@
   "Hide Control Center": {
     "Hide Control Center": "Control Center ausblenden"
   },
+  "Hide Control Center by Default": {
+    "Hide Control Center by Default": "Control Center standardmäßig ausblenden"
+  },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": ""
   },
@@ -500,6 +503,9 @@
   "Initial Width": {
     "Initial Width": "Anfangsbreite"
   },
+  "Initial state for the Control Center toggle.": {
+    "Initial state for the Control Center toggle.": "Anfangszustand für den Control-Center-Umschalter."
+  },
   "Inline": {
     "Inline": "Inline"
   },
@@ -525,7 +531,7 @@
     "Key": "Taste"
   },
   "Keybinding overlay size in interactive region selector.": {
-    "Keybinding overlay size in interactive region selector.": ""
+    "Keybinding overlay size in interactive region selector.": "Größe der Tastenbelegungs-Einblendung in der interaktiven Bereichsauswahl."
   },
   "Landscape": {
     "Landscape": "Querformat"
@@ -648,7 +654,7 @@
     "Off": "Aus"
   },
   "Off (Hidden)": {
-    "Off (Hidden)": ""
+    "Off (Hidden)": "Aus (Ausgeblendet)"
   },
   "Opacity": {
     "Opacity": "Deckkraft"
@@ -661,6 +667,9 @@
   },
   "Open Image": {
     "Open Image": "Bild öffnen"
+  },
+  "Open folder": {
+    "Open folder": "Ordner öffnen"
   },
   "Outline Variant": {
     "Outline Variant": "Umrissvariante"
@@ -813,7 +822,7 @@
     "Region": "Region"
   },
   "Region HUD Scale": {
-    "Region HUD Scale": ""
+    "Region HUD Scale": "Bereichs-HUD-Skalierung"
   },
   "Reset": {
     "Reset": "Zurücksetzen"
@@ -929,8 +938,11 @@
   "Select Image to Annotate": {
     "Select Image to Annotate": "Bild zum Annotieren auswählen"
   },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Bildschirmaufnahme-Backend auswählen. Auto versucht zuerst GPU und fällt auf CPU (%1) zurück."
+  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "Wählen Sie das Backend für die Bildschirmaufnahme. 'Automatisch' versucht zuerst die GPU und weicht auf die CPU (%1) aus. Hinweis: %1 unterstützt kein Pausieren."
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "Ausgewähltes Werkzeug / Aktion"
