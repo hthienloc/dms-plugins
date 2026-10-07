@@ -79,6 +79,8 @@ PluginComponent {
     }
     property var _sizeCache: ({
     }) // Cache for widget sizes
+    property var _managedNaturalSize: ({
+    }) // Last reliable natural size of managed items before shrinking
     property bool anyHovered: false
     property bool isMouseInGlobalZone: false
 
@@ -150,72 +152,66 @@ PluginComponent {
         return (id in pluginRoot._posCache) ? pluginRoot._posCache[id] : live;
     }
 
-    // Override a widget's layout slot so its size follows collapseProgress and it
-    // reveals from the pill side. clip hides the overflow while the slot shrinks.
-    // All size bindings read the WidgetHost Loader's LIVE item (loader.item),
-    // mirroring DMS' own `widgetLoader.item ? widgetLoader.item.width : 0` — so a
-    // widget whose Loader reactivates (music player on/off, dgop toggle) tracks the
-    // fresh item instead of clinging to a captured, now-destroyed reference.
-    function _applyManaged(slot, item) {
-        if (!slot || !item)
-            return ;
-        let loader = item.parent; // the WidgetHost Loader hosting this widget
-        if (!loader)
-            return ;
-        slot.clip = true;
-        loader.visible = true;
-        if (pluginRoot.isVertical) {
-            slot.height = Qt.binding(function() {
-                return loader.item ? Math.round((loader.item.implicitHeight || loader.item.height || 0) * pluginRoot.collapseProgress) : 0;
-            });
-            // Vertical right section: widgets sit above the pill, so reveal from the
-            // bottom (pill) edge. Left/center reveal from the top edge.
-            if (pluginRoot.section === "right")
-                loader.y = Qt.binding(function() {
-                    return slot.height - (loader.implicitHeight || loader.height || 0);
-                });
-            else
-                loader.y = 0;
-        } else {
-            slot.width = Qt.binding(function() {
-                return loader.item ? Math.round((loader.item.implicitWidth || loader.item.width || 0) * pluginRoot.collapseProgress) : 0;
-            });
-            // Right section: widgets sit left of the pill, so reveal from the right
-            // (pill) edge. Left/center reveal from the left edge.
-            if (pluginRoot.section === "right")
-                loader.x = Qt.binding(function() {
-                    return slot.width - (loader.implicitWidth || loader.width || 0);
-                });
-            else
-                loader.x = 0;
-        }
-        slot.visible = Qt.binding(function() {
-            return pluginRoot.collapseProgress > 0.001;
-        });
+    function _entryFor(widget) {
+        if (!widget || !widget.parent || !widget.parent.parent || !widget.parent.parent.parent)
+            return null;
+        return widget.parent.parent.parent;
     }
 
-    // Hand a slot back to its default DMS layout (full size, visible, no clip).
-    // Re-bind to the live loader.item, matching DMS' own delegate binding, so the
-    // slot keeps tracking the widget across Loader reloads after we let go of it.
-    function _restoreSlot(slot, item) {
-        if (!slot)
+    // Shrink the widget item itself and clip it, while putting the same
+    // collapseProgress-driven size on the owning SectionEntry. DMS lays out
+    // widgets from SectionEntry.primarySize -> widgetLoader.item.width/height,
+    // so mutating the widget item's width/height reflows the bar.
+    function _applyManaged(entry, item, id) {
+        if (!entry || !item)
             return ;
-        slot.clip = false;
-        slot.visible = true;
-        let loader = item ? item.parent : null;
+        let loader = item.parent; // the SectionWidget Loader hosting this widget
+        if (!loader)
+            return ;
+        loader.visible = true;
+        let natural = (id !== undefined && pluginRoot._managedNaturalSize[id] !== undefined) ? pluginRoot._managedNaturalSize[id] : 0;
+        if (!natural || natural <= 0) {
+            natural = pluginRoot.isVertical ? (item.height || 0) : (item.width || 0);
+            if (natural <= 0)
+                natural = pluginRoot.isVertical ? (entry.height || 0) : (entry.width || 0);
+            if (natural > 0 && id !== undefined)
+                pluginRoot._managedNaturalSize[id] = natural;
+        }
+        if (natural > 0) {
+            item.clip = true;
+            if (pluginRoot.isVertical) {
+                item.height = Qt.binding(function() {
+                    return Math.round(natural * pluginRoot.collapseProgress);
+                });
+            } else {
+                item.width = Qt.binding(function() {
+                    return Math.round(natural * pluginRoot.collapseProgress);
+                });
+            }
+        }
+    }
+
+    // Restore the managed widget item to its original visual geometry and
+    // let the loader participate again.
+    function _restoreSlot(entry, item, id) {
+        if (!entry || !item)
+            return ;
+        let loader = item.parent;
         if (loader) {
             loader.visible = true;
             loader.x = 0;
             loader.y = 0;
         }
-        if (pluginRoot.isVertical)
-            slot.height = Qt.binding(function() {
-                return (loader && loader.item) ? (loader.item.implicitHeight || loader.item.height || 0) : 0;
-            });
-        else
-            slot.width = Qt.binding(function() {
-                return (loader && loader.item) ? (loader.item.implicitWidth || loader.item.width || 0) : 0;
-            });
+        let natural = (id !== undefined && pluginRoot._managedNaturalSize[id] !== undefined) ? pluginRoot._managedNaturalSize[id] : 0;
+        if (natural > 0) {
+            if (pluginRoot.isVertical)
+                item.height = natural;
+            else
+                item.width = natural;
+        }
+        item.clip = false;
+        if ("visible" in item)
+            item.visible = true;
     }
 
     function updateWidgets() {
@@ -224,10 +220,14 @@ PluginComponent {
 
         let myScreen = pluginRoot.parentScreen.name;
         let mySection = pluginRoot.section;
-        if (!pluginRoot.parent || !pluginRoot.parent.parent)
+        if (!pluginRoot.parent || !pluginRoot.parent.parent || !pluginRoot.parent.parent.parent)
             return ;
 
-        let myPos = pluginRoot.isVertical ? pluginRoot.parent.parent.y : pluginRoot.parent.parent.x;
+        let myEntry = _entryFor(pluginRoot);
+        if (!myEntry)
+            return ;
+
+        let myPos = pluginRoot.isVertical ? myEntry.y : myEntry.x;
         let allIds = BarWidgetService.getRegisteredWidgetIds();
         let candidates = [];
         for (let i = 0; i < allIds.length; i++) {
@@ -247,8 +247,9 @@ PluginComponent {
             }
 
             let widget = BarWidgetService.getWidget(id, myScreen);
-            if (widget && widget.section === mySection && widget.parent && widget.parent.parent) {
-                let widgetPos = pluginRoot._resolvePos(id, widget.parent.parent);
+            let entry = widget ? _entryFor(widget) : null;
+            if (widget && widget.section === mySection && entry) {
+                let widgetPos = pluginRoot._resolvePos(id, entry);
                 let shouldManage = false;
                 if (mySection === "right")
                     shouldManage = (widgetPos < myPos);
@@ -286,7 +287,7 @@ PluginComponent {
         let newManaged = [];
         for (let j = 0; j < candidates.length; j++) {
             let c = candidates[j];
-            let slot = c.widget.parent ? c.widget.parent.parent : null;
+            let slot = pluginRoot._entryFor(c.widget);
             let shouldBeHidden = newHiddenIds.indexOf(c.id) !== -1;
             if (shouldBeHidden) {
                 let currentSize = pluginRoot.isVertical ? (c.widget.implicitHeight || c.widget.height || 0) : (c.widget.implicitWidth || c.widget.width || 0);
@@ -298,14 +299,15 @@ PluginComponent {
                     totalSize += size;
 
                 if (slot) {
-                    pluginRoot._applyManaged(slot, c.widget);
+                    pluginRoot._applyManaged(slot, c.widget, c.id);
                     newManaged.push({
                         "slot": slot,
-                        "item": c.widget
+                        "item": c.widget,
+                        "id": c.id
                     });
                 }
             } else if (slot) {
-                pluginRoot._restoreSlot(slot, c.widget);
+                pluginRoot._restoreSlot(slot, c.widget, c.id);
             }
         }
 
@@ -321,7 +323,7 @@ PluginComponent {
                 }
             }
             if (!stillManaged)
-                pluginRoot._restoreSlot(pair.slot, pair.item);
+                pluginRoot._restoreSlot(pair.slot, pair.item, pair.id);
         }
         pluginRoot._managedSlots = newManaged;
         pluginRoot.hiddenPluginIds = newHiddenIds;
@@ -357,7 +359,7 @@ PluginComponent {
         // Hand every overridden slot back to its default DMS layout so we never
         // leave a foreign widget bound to this (now destroyed) component.
         for (let i = 0; i < pluginRoot._managedSlots.length; i++) {
-            pluginRoot._restoreSlot(pluginRoot._managedSlots[i].slot, pluginRoot._managedSlots[i].item);
+            pluginRoot._restoreSlot(pluginRoot._managedSlots[i].slot, pluginRoot._managedSlots[i].item, pluginRoot._managedSlots[i].id);
         }
         pluginRoot._managedSlots = [];
     }
