@@ -59,7 +59,9 @@ Item {
         command: ["quickshell", "-p", root._path(root.helperDir)]
         environment: ({
                 "DMS_SFX_SOCKET": root.socketPath,
-                "QT_QPA_PLATFORM": "offscreen"
+                "QT_QPA_PLATFORM": "offscreen",
+                "PIPEWIRE_LATENCY": "1024/48000",
+                "PIPEWIRE_PROPS": "{ node.latency = 1024/48000 }"
             })
         onExited: (exitCode, exitStatus) => {
             root._failures += 1;
