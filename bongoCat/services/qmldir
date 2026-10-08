@@ -1,1 +1,2 @@
 singleton BongoSoundService 1.0 BongoSoundService.qml
+SfxClient 1.0 SfxClient.qml
