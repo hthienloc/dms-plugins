@@ -66,8 +66,10 @@ dms ipc screenkey disable
 
 ## Credits & Acknowledgements
 
-- Keycap styles (Laptop, Low Profile, PBT, Minimal) ported in collaboration with [@Tz-slayer](https://github.com/Tz-slayer) from [keystrokes](https://github.com/Tz-slayer/keystrokes).
+- Keycap styles (Laptop, Low Profile, PBT, Minimal) and icon system ported in collaboration with [@Tz-slayer](https://github.com/Tz-slayer) from [keystrokes](https://github.com/Tz-slayer/keystrokes).
+- Original visual design and keycap styling inspired by [@mulaRahul](https://github.com/mulaRahul)'s [keyviz](https://github.com/mulaRahul/keyviz).
 
 ## License
 
 MIT
+

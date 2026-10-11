@@ -461,4 +461,22 @@ print(json.dumps(devs))
             ]
         }
     }
+
+    SettingsCard {
+        SectionTitle {
+            id: creditsTitle
+            text: I18n.tr("Credits & Acknowledgements")
+            icon: "favorite"
+            collapsible: true
+            settingKey: "creditsExpanded"
+        }
+
+        UsageGuide {
+            expanded: creditsTitle.isExpanded
+            items: [
+                I18n.tr("Keycap styles (Laptop, Low Profile, PBT, Minimal) and icon system ported in collaboration with <b>@Tz-slayer</b> (<a href='https://github.com/Tz-slayer/keystrokes'>keystrokes</a>)."),
+                I18n.tr("Original visual design and keycap styling inspired by <b>@mulaRahul</b> (<a href='https://github.com/mulaRahul/keyviz'>keyviz</a>).")
+            ]
+        }
+    }
 }
