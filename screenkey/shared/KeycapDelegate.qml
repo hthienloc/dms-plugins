@@ -66,11 +66,11 @@ Item {
     }
 
     readonly property real capW: isMinimal
-        ? contentW + fs * 0.2
+        ? minRow.implicitWidth
         : Math.max(minW, faceInset * 2 + Math.max(isPbt ? fs * 2 : 0, contentW + padInline * 2 + contentBorder * 2))
 
-    width: capW
-    height: bodyH
+    width: isMinimal ? minRow.implicitWidth : capW
+    height: isMinimal ? Math.max(fs, minRow.implicitHeight) : bodyH
 
     Text {
         id: measureSmall
@@ -194,34 +194,27 @@ Item {
     }
 
     // ── Minimal Mode: Inline icon & label without cap body ──
-    Item {
-        id: minimalContent
+    Row {
+        id: minRow
         visible: keycap.isMinimal
+        spacing: keycap.fs * 0.15
         anchors.centerIn: parent
-        implicitWidth: minRow.implicitWidth
-        implicitHeight: minRow.implicitHeight
 
-        Row {
-            id: minRow
-            spacing: keycap.fs * 0.15
-            anchors.centerIn: parent
+        KeyIcon {
+            visible: keycap.hasIcon
+            name: keycap.kd.icon || ""
+            color: keycap.labelColor
+            size: keycap.fs * 0.8
+            anchors.verticalCenter: parent.verticalCenter
+        }
 
-            KeyIcon {
-                visible: keycap.hasIcon
-                name: keycap.kd.icon || ""
-                color: keycap.labelColor
-                size: keycap.fs * 0.8
-                anchors.verticalCenter: parent.verticalCenter
-            }
-
-            Text {
-                visible: !keycap.iconOnly
-                anchors.verticalCenter: parent.verticalCenter
-                font.pixelSize: keycap.fs
-                font.bold: true
-                color: keycap.labelColor
-                text: keycap.kd.label
-            }
+        Text {
+            visible: !keycap.iconOnly
+            anchors.verticalCenter: parent.verticalCenter
+            font.pixelSize: keycap.fs
+            font.bold: true
+            color: keycap.labelColor
+            text: keycap.kd.label
         }
     }
 }
