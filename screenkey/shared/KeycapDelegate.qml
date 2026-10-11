@@ -1,5 +1,6 @@
 import QtQuick
 import qs.Common
+import qs.Widgets
 import "./KeyIcons.js" as KeyIcons
 import "./keycapColors.js" as KeycapColors
 
@@ -170,7 +171,7 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
             }
 
-            StyledText {
+            Text {
                 visible: keycap.iconLayout
                 anchors.bottom: parent.bottom
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -181,7 +182,7 @@ Item {
             }
 
             // Plain text (letters, numbers)
-            StyledText {
+            Text {
                 visible: !keycap.iconOnly && !keycap.iconLayout
                 anchors.centerIn: parent
                 font.pixelSize: keycap.fs
@@ -213,7 +214,7 @@ Item {
                 anchors.verticalCenter: parent.verticalCenter
             }
 
-            StyledText {
+            Text {
                 visible: !keycap.iconOnly
                 anchors.verticalCenter: parent.verticalCenter
                 font.pixelSize: keycap.fs
