@@ -12,3 +12,5 @@ ToggleSettingPlus 1.0 ToggleSettingPlus.qml
 UsageGuide 1.0 UsageGuide.qml
 KeycapSurface 1.0 KeycapSurface.qml
 ColorSettingPlus 1.0 ColorSettingPlus.qml
+KeyIcon 1.0 KeyIcon.qml
+KeycapDelegate 1.0 KeycapDelegate.qml
