@@ -60,8 +60,13 @@ dms ipc screenkey disable
 - [x] **Vector Mouse Indicators** - Custom QML-drawn mouse with highlighted left, middle, and right buttons.
 - [x] **Multi-line History** - Display a history of the last few shortcuts on screen.
 - [x] **Custom Styling** - Custom colors, border radius, custom connector separator, and macOS symbols.
+- [x] **Keycap Styles** - Multiple aesthetic styles (Default, Laptop, Low Profile, PBT, Minimal).
 - [x] **Held Modifiers Status Bar** - Displays held modifier keys in real-time.
 - [ ] **Click Ripple Animation** - Render a visual wave/ripple effect at the cursor coordinates.
+
+## Credits & Acknowledgements
+
+- Keycap styles (Laptop, Low Profile, PBT, Minimal) ported in collaboration with [@Tz-slayer](https://github.com/Tz-slayer) from [keystrokes](https://github.com/Tz-slayer/keystrokes).
 
 ## License
 

@@ -4,11 +4,13 @@ import Quickshell.Wayland
 import qs.Common
 import qs.Widgets
 import "./shared"
+import "./shared/keycapColors.js" as KeycapColors
 
 PanelWindow {
     id: overlayWindow
 
     property var daemon: null
+    readonly property string keycapStyle: daemon ? daemon.keycapStyle : "default"
     readonly property bool isCentered: daemon ? (daemon.position === "bottom_center" || daemon.position === "top_center") : false
     readonly property bool isMouseClick: daemon ? (daemon.displayText === "LMB Click" || daemon.displayText === "RMB Click" || daemon.displayText === "MMB Click") : false
     readonly property bool isOverlayVisible: daemon && (daemon.displayText !== "" || (daemon.showModifierStatus && (daemon.ctrlActive || daemon.altActive || daemon.shiftActive || daemon.superActive)))
@@ -161,14 +163,92 @@ PanelWindow {
                             spacing: (daemon && daemon.macSymbols) ? Theme.spacingXS : Theme.spacingS
                             anchors.verticalCenter: parent.verticalCenter
 
-                            StyledRect {
+                            Item {
+                                id: keycapItem
                                 anchors.verticalCenter: parent.verticalCenter
-                                width: keycapText.implicitWidth + Theme.spacingM * 2
+                                readonly property real fs: daemon ? daemon.fontSize : 24
+                                readonly property string style: overlayWindow.keycapStyle
+                                readonly property bool isMinimal: style === "minimal"
+                                readonly property bool isLaptop: style === "laptop"
+                                readonly property bool isLowProfile: style === "lowprofile"
+                                readonly property bool isPbt: style === "pbt"
+                                readonly property bool isDefault: style === "default" || (!isMinimal && !isLaptop && !isLowProfile && !isPbt)
+
+                                readonly property real capRadius: overlayWindow.roundedKeycaps
+                                    ? (isDefault ? Theme.cornerRadius / 2 : Math.max(4, fs * 0.3))
+                                    : 0
+                                readonly property real padHoriz: isMinimal ? Theme.spacingXS : Theme.spacingM
+                                readonly property real faceHeight: isMinimal ? overlayWindow.unifiedHeight : (isLowProfile ? overlayWindow.unifiedHeight - 4 : overlayWindow.unifiedHeight)
+
+                                width: isMinimal
+                                    ? keycapText.implicitWidth + padHoriz * 2
+                                    : Math.max(fs * 1.8, keycapText.implicitWidth + padHoriz * 2)
                                 height: overlayWindow.unifiedHeight
-                                radius: overlayWindow.roundedKeycaps ? Theme.cornerRadius / 2 : 0
-                                color: Theme.surfaceContainerHighest
-                                border.color: Theme.withAlpha(Theme.outline, 0.25)
-                                border.width: 1
+
+                                // 1. Default Style: clean DMS surface container
+                                StyledRect {
+                                    visible: keycapItem.isDefault
+                                    anchors.fill: parent
+                                    radius: keycapItem.capRadius
+                                    color: Theme.surfaceContainerHighest
+                                    border.color: Theme.withAlpha(Theme.outline, 0.25)
+                                    border.width: 1
+                                }
+
+                                // 2. Low Profile Base Wall (Socket)
+                                Rectangle {
+                                    visible: keycapItem.isLowProfile
+                                    anchors.left: parent.left
+                                    anchors.right: parent.right
+                                    anchors.bottom: parent.bottom
+                                    height: keycapItem.faceHeight
+                                    radius: keycapItem.capRadius
+                                    color: Theme.surfaceContainerHighest
+                                    border.width: 1
+                                    border.color: Theme.withAlpha(Theme.outline, 0.35)
+                                }
+
+                                // 3. PBT Outer Shell with diagonal gradient
+                                KeycapSurface {
+                                    visible: keycapItem.isPbt
+                                    anchors.fill: parent
+                                    radius: keycapItem.capRadius
+                                    baseColor: Theme.surfaceContainerHighest
+                                    endColor: KeycapColors.shiftLightness(Theme.surfaceContainerHighest, -0.15)
+                                    gradientEnabled: true
+                                    diagonal: true
+                                    ringWidth: 1
+                                    ringColor: Theme.withAlpha(Theme.outline, 0.35)
+                                }
+
+                                // 4. Laptop / Low Profile / PBT Surface Face
+                                KeycapSurface {
+                                    visible: keycapItem.isLaptop || keycapItem.isLowProfile || keycapItem.isPbt
+                                    anchors.left: parent.left
+                                    anchors.right: parent.right
+                                    anchors.top: parent.top
+                                    anchors.leftMargin: keycapItem.isPbt ? 3 : 0
+                                    anchors.rightMargin: keycapItem.isPbt ? 3 : 0
+                                    height: keycapItem.faceHeight
+                                    radius: keycapItem.capRadius
+                                    baseColor: keycapItem.isPbt
+                                        ? KeycapColors.shiftLightness(Theme.surfaceContainerHigh, 0.05)
+                                        : (keycapItem.isLaptop
+                                            ? KeycapColors.shiftLightness(Theme.surfaceContainerHighest, 0.08)
+                                            : Theme.surfaceContainerHighest)
+                                    endColor: Theme.surfaceContainerHigh
+                                    gradientEnabled: keycapItem.isLaptop || keycapItem.isPbt
+                                    solidColor: Theme.surfaceContainerHighest
+                                    ringWidth: keycapItem.isLowProfile ? 0 : 1
+                                    ringColor: Theme.withAlpha(Theme.outline, 0.25)
+                                    dropShadow: keycapItem.isLaptop
+                                    shadowSize: fs * 0.08
+                                    insetHighlight: keycapItem.isLaptop
+                                    highlightColor: KeycapColors.shiftLightness(Theme.surfaceContainerHighest, 0.2)
+                                    highlightDepth: fs * 0.1
+                                    bottomBorderWidth: keycapItem.isPbt ? Math.max(2, fs * 0.08) : 0
+                                    bottomBorderColor: Theme.surfaceContainerHighest
+                                }
 
                                 StyledText {
                                     id: keycapText

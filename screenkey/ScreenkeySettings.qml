@@ -139,10 +139,11 @@ print(json.dumps(devs))
         SectionTitle {
             text: I18n.tr("Layout & Animations")
             icon: "display_settings"
-            showReset: positionSetting.isDirty || animationTypeSetting.isDirty || roundedKeycapsSetting.isDirty || overlayOpacitySetting.isDirty || marginSizeSetting.isDirty || charLimitSetting.isDirty || textColorSetting.isDirty || keycapTextColorSetting.isDirty || historyLimitSetting.isDirty || bgColorSetting.isDirty || customSeparatorSetting.isDirty
+            showReset: positionSetting.isDirty || animationTypeSetting.isDirty || keycapStyleSetting.isDirty || roundedKeycapsSetting.isDirty || overlayOpacitySetting.isDirty || marginSizeSetting.isDirty || charLimitSetting.isDirty || textColorSetting.isDirty || keycapTextColorSetting.isDirty || historyLimitSetting.isDirty || bgColorSetting.isDirty || customSeparatorSetting.isDirty
             onResetClicked: {
                 positionSetting.resetToDefault();
                 animationTypeSetting.resetToDefault();
+                keycapStyleSetting.resetToDefault();
                 roundedKeycapsSetting.resetToDefault();
                 overlayOpacitySetting.resetToDefault();
                 marginSizeSetting.resetToDefault();
@@ -183,6 +184,21 @@ print(json.dumps(devs))
                 { label: I18n.tr("None"), value: "none" }
             ]
             defaultValue: "none"
+        }
+
+        SelectionSettingPlus {
+            id: keycapStyleSetting
+            settingKey: "keycapStyle"
+            label: I18n.tr("Keycap Style")
+            description: I18n.tr("Visual style for rendered keycaps (Default, Laptop, Low Profile, PBT, Minimal)")
+            options: [
+                { label: I18n.tr("Default"), value: "default" },
+                { label: I18n.tr("Laptop"), value: "laptop" },
+                { label: I18n.tr("Low Profile"), value: "lowprofile" },
+                { label: I18n.tr("PBT"), value: "pbt" },
+                { label: I18n.tr("Minimal"), value: "minimal" }
+            ]
+            defaultValue: "default"
         }
 
         Separator {}
