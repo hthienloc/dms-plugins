@@ -14,3 +14,4 @@ KeycapSurface 1.0 KeycapSurface.qml
 ColorSettingPlus 1.0 ColorSettingPlus.qml
 KeyIcon 1.0 KeyIcon.qml
 KeycapDelegate 1.0 KeycapDelegate.qml
+CreditsList 1.0 CreditsList.qml
