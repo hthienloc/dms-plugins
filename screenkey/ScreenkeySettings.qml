@@ -271,29 +271,29 @@ print(json.dumps(devs))
 
         Separator {}
 
-        ColorDropdownSettingPlus {
+        ColorSettingPlus {
             id: textColorSetting
             settingKey: "textColor"
             label: I18n.tr("Normal Text Color")
-            defaultValueMode: "default"
+            defaultValue: "primary"
         }
 
         Separator {}
 
-        ColorDropdownSettingPlus {
+        ColorSettingPlus {
             id: keycapTextColorSetting
             settingKey: "keycapTextColor"
             label: I18n.tr("Keycap & Mouse Color")
-            defaultValueMode: "default"
+            defaultValue: "primary"
         }
 
         Separator {}
 
-        ColorDropdownSettingPlus {
+        ColorSettingPlus {
             id: bgColorSetting
             settingKey: "bgColor"
             label: I18n.tr("Overlay Background Color")
-            defaultValueMode: "default"
+            defaultValue: "#1e2326"
         }
 
         Separator {}

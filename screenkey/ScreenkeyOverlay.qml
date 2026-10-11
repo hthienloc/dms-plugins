@@ -50,10 +50,10 @@ PanelWindow {
     }
 
     readonly property real unifiedHeight: dummyText.implicitHeight + Theme.spacingXS * 2
-    function resolveColor(mode, custom) {
-        if (mode === "custom") return custom ? Qt.color(custom) : Theme.primary;
-        if (mode === "default") return Theme.primary;
-        return Theme.roleColor(mode);
+    function resolveColor(val) {
+        if (!val || val === "default" || val === "primary") return Theme.primary;
+        if (typeof val === "string" && (val.startsWith("#") || val.startsWith("rgb"))) return Qt.color(val);
+        return Theme.roleColor(val);
     }
 
     function getOverlayKeyText(keyText) {
@@ -72,14 +72,14 @@ PanelWindow {
         return macMap[keyText] || keyText;
     }
 
-    readonly property color resolvedTextColor: daemon ? overlayWindow.resolveColor(daemon.textColorMode, daemon.textColorCustom) : Theme.primary
-    readonly property color resolvedKeycapTextColor: daemon ? overlayWindow.resolveColor(daemon.keycapTextColorMode, daemon.keycapTextColorCustom) : Theme.primary
+    readonly property color resolvedTextColor: daemon ? overlayWindow.resolveColor(daemon.textColor) : Theme.primary
+    readonly property color resolvedKeycapTextColor: daemon ? overlayWindow.resolveColor(daemon.keycapTextColor) : Theme.primary
     readonly property bool roundedKeycaps: daemon ? daemon.roundedKeycaps : true
     readonly property color resolvedBgColor: {
         if (!daemon) return Theme.withAlpha(Theme.surface, 0.85);
-        if (daemon.bgColorMode === "default") return Theme.withAlpha(Theme.surface, 0.85);
-        if (daemon.bgColorMode === "custom") return Qt.color(daemon.bgColorCustom);
-        return Theme.roleColor(daemon.bgColorMode);
+        if (daemon.bgColor === "default" || !daemon.bgColor) return Theme.withAlpha(Theme.surface, 0.85);
+        if (typeof daemon.bgColor === "string" && (daemon.bgColor.startsWith("#") || daemon.bgColor.startsWith("rgb"))) return Qt.color(daemon.bgColor);
+        return Theme.roleColor(daemon.bgColor);
     }
 
     // Match window size to container size
