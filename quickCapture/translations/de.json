@@ -198,7 +198,7 @@
     "Close": "Schließen"
   },
   "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": {
-    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": ""
+    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": "Kontrollzentrum vor der Aufnahme schließen, wenn diese über das Kontrollzentrum ausgelöst wird. Kurzbefehle und IPC-Aufnahmen sind nicht betroffen."
   },
   "Color": {
     "Color": "Farbe"
@@ -259,6 +259,9 @@
   },
   "Could not crop image": {
     "Could not crop image": "Bild konnte nicht zugeschnitten werden"
+  },
+  "Credits": {
+    "Credits": ""
   },
   "Crop / Resize": {
     "Crop / Resize": "Zuschneiden / Größe ändern"
@@ -389,11 +392,14 @@
   "Floating": {
     "Floating": "Schwebend"
   },
+  "Floating window and continuous editing workflow.": {
+    "Floating window and continuous editing workflow.": ""
+  },
   "Focused Screen": {
     "Focused Screen": "Fokussierter Bildschirm"
   },
   "Folder": {
-    "Folder": ""
+    "Folder": "Ordner"
   },
   "Font Size": {
     "Font Size": "Schriftgrösse"
@@ -408,7 +414,7 @@
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "Format-Token: {user} (Benutzername), \\n (Zeilenumbruch), %Y (Jahr), %y (2-stelliges Jahr), %m (Monat), %d (Tag), %H (Stunde), %M (Minute), %S (Sekunde)"
   },
   "Format: %1 (%2 FPS)": {
-    "Format: %1 (%2 FPS)": ""
+    "Format: %1 (%2 FPS)": "Format: %1 (%2 FPS)"
   },
   "Framerate": {
     "Framerate": "Bildrate"
@@ -453,7 +459,7 @@
     "Hide Control Center by Default": "Control Center standardmäßig ausblenden"
   },
   "Hide Control Center on Capture": {
-    "Hide Control Center on Capture": ""
+    "Hide Control Center on Capture": "Kontrollzentrum bei Aufnahme ausblenden"
   },
   "High": {
     "High": "Hoch"
@@ -689,6 +695,9 @@
   "Palette Preset": {
     "Palette Preset": "Palette-Voreinstellung"
   },
+  "Paste from Clipboard": {
+    "Paste from Clipboard": ""
+  },
   "Pause": {
     "Pause": "Pause"
   },
@@ -773,6 +782,9 @@
   "Radial Menu": {
     "Radial Menu": "Radialmenü"
   },
+  "Radial menu and tool interaction patterns.": {
+    "Radial menu and tool interaction patterns.": ""
+  },
   "Ratio": {
     "Ratio": "Verhältnis"
   },
@@ -798,7 +810,7 @@
     "Recording Folder": "Aufnahmeordner"
   },
   "Recording Paused": {
-    "Recording Paused": ""
+    "Recording Paused": "Aufnahme angehalten"
   },
   "Recording ended with error code %1.": {
     "Recording ended with error code %1.": "Aufnahme mit Fehlercode %1 beendet."
@@ -1093,6 +1105,9 @@
   },
   "Toolbar Position": {
     "Toolbar Position": "Position der Symbolleiste"
+  },
+  "Toolbar design and layout inspiration.": {
+    "Toolbar design and layout inspiration.": ""
   },
   "Tools": {
     "Tools": "Werkzeuge"

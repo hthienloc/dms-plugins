@@ -198,7 +198,7 @@
     "Close": "סגירה"
   },
   "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": {
-    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": ""
+    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": "סגור/י את מרכז הבקרה לפני הלכידה כאשר היא מופעלת מתוך מרכז הבקרה. לכידות באמצעות קיצורים וIPC אינן מושפעות."
   },
   "Color": {
     "Color": "צבע"
@@ -259,6 +259,9 @@
   },
   "Could not crop image": {
     "Could not crop image": "לא ניתן לחתוך את התמונה"
+  },
+  "Credits": {
+    "Credits": ""
   },
   "Crop / Resize": {
     "Crop / Resize": "חיתוך / שינוי גודל"
@@ -389,11 +392,14 @@
   "Floating": {
     "Floating": "צף"
   },
+  "Floating window and continuous editing workflow.": {
+    "Floating window and continuous editing workflow.": ""
+  },
   "Focused Screen": {
     "Focused Screen": "מסך ממוקד"
   },
   "Folder": {
-    "Folder": ""
+    "Folder": "תיקייה"
   },
   "Font Size": {
     "Font Size": "גודל הגופן"
@@ -408,7 +414,7 @@
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "תווי תבנית: {user} (שם משתמש), ‎\\n (שורה חדשה), %Y (שנה), %y (שנה ב2 ספרות), %m (חודש), %d (יום), %H (שעה), %M (דקה), %S (שנייה)"
   },
   "Format: %1 (%2 FPS)": {
-    "Format: %1 (%2 FPS)": ""
+    "Format: %1 (%2 FPS)": "פורמט: %1 (%2 FPS)"
   },
   "Framerate": {
     "Framerate": "קצב פריימים"
@@ -453,7 +459,7 @@
     "Hide Control Center by Default": "הסתרת מרכז הבקרה כברירת מחדל"
   },
   "Hide Control Center on Capture": {
-    "Hide Control Center on Capture": ""
+    "Hide Control Center on Capture": "הסתרת מרכז הבקרה בעת לכידה"
   },
   "High": {
     "High": "גבוה"
@@ -689,6 +695,9 @@
   "Palette Preset": {
     "Palette Preset": "ערכת פלטה מוכנה"
   },
+  "Paste from Clipboard": {
+    "Paste from Clipboard": ""
+  },
   "Pause": {
     "Pause": "השהיה"
   },
@@ -773,6 +782,9 @@
   "Radial Menu": {
     "Radial Menu": "תפריט מעגלי (רדיאלי)"
   },
+  "Radial menu and tool interaction patterns.": {
+    "Radial menu and tool interaction patterns.": ""
+  },
   "Ratio": {
     "Ratio": "יחס"
   },
@@ -798,7 +810,7 @@
     "Recording Folder": "תיקיית הקלטות"
   },
   "Recording Paused": {
-    "Recording Paused": ""
+    "Recording Paused": "ההקלטה מושהית"
   },
   "Recording ended with error code %1.": {
     "Recording ended with error code %1.": "ההקלטה הסתיימה עם קוד שגיאה %1."
@@ -1093,6 +1105,9 @@
   },
   "Toolbar Position": {
     "Toolbar Position": "מיקום סרגל הכלים"
+  },
+  "Toolbar design and layout inspiration.": {
+    "Toolbar design and layout inspiration.": ""
   },
   "Tools": {
     "Tools": "כלים"

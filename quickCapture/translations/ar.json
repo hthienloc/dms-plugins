@@ -198,7 +198,7 @@
     "Close": "اغلاق"
   },
   "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": {
-    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": ""
+    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": "أغلق مركز التحكم قبل الالتقاط عند تشغيله من لوحة مركز التحكم. الاختصارات وعمليات الالتقاط عبر IPC لا تتأثر."
   },
   "Color": {
     "Color": "اللون"
@@ -259,6 +259,9 @@
   },
   "Could not crop image": {
     "Could not crop image": "تعذر اقتصاص الصورة"
+  },
+  "Credits": {
+    "Credits": ""
   },
   "Crop / Resize": {
     "Crop / Resize": "قص / تغيير الحجم"
@@ -389,11 +392,14 @@
   "Floating": {
     "Floating": "عائم"
   },
+  "Floating window and continuous editing workflow.": {
+    "Floating window and continuous editing workflow.": ""
+  },
   "Focused Screen": {
     "Focused Screen": "الشاشة المركزة"
   },
   "Folder": {
-    "Folder": ""
+    "Folder": "مجلد"
   },
   "Font Size": {
     "Font Size": "حجم الخط"
@@ -408,7 +414,7 @@
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "رموز التنسيق: {user} (اسم المستخدم)، \\n (سطر جديد)، %Y (السنة)، %y (السنة برقمين)، %m (الشهر)، %d (اليوم)، %H (الساعة)، %M (الدقيقة)، %S (الثانية)"
   },
   "Format: %1 (%2 FPS)": {
-    "Format: %1 (%2 FPS)": ""
+    "Format: %1 (%2 FPS)": "التنسيق: %1 (%2 إطار في الثانية)"
   },
   "Framerate": {
     "Framerate": "معدل الإطارات"
@@ -453,7 +459,7 @@
     "Hide Control Center by Default": "إخفاء مركز التحكم افتراضياً"
   },
   "Hide Control Center on Capture": {
-    "Hide Control Center on Capture": ""
+    "Hide Control Center on Capture": "إخفاء مركز التحكم عند الالتقاط"
   },
   "High": {
     "High": "عالي"
@@ -689,6 +695,9 @@
   "Palette Preset": {
     "Palette Preset": "إعدادات اللوحة المسبقة"
   },
+  "Paste from Clipboard": {
+    "Paste from Clipboard": ""
+  },
   "Pause": {
     "Pause": "إيقاف مؤقت"
   },
@@ -773,6 +782,9 @@
   "Radial Menu": {
     "Radial Menu": "قائمة شعاعية"
   },
+  "Radial menu and tool interaction patterns.": {
+    "Radial menu and tool interaction patterns.": ""
+  },
   "Ratio": {
     "Ratio": "نسبة"
   },
@@ -798,7 +810,7 @@
     "Recording Folder": "مجلد التسجيل"
   },
   "Recording Paused": {
-    "Recording Paused": ""
+    "Recording Paused": "تم إيقاف التسجيل مؤقتاً"
   },
   "Recording ended with error code %1.": {
     "Recording ended with error code %1.": "انتهى التسجيل برمز خطأ %1."
@@ -1093,6 +1105,9 @@
   },
   "Toolbar Position": {
     "Toolbar Position": "موقع شريط الأدوات"
+  },
+  "Toolbar design and layout inspiration.": {
+    "Toolbar design and layout inspiration.": ""
   },
   "Tools": {
     "Tools": "الأدوات"

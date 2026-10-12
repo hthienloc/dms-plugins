@@ -260,6 +260,9 @@
   "Could not crop image": {
     "Could not crop image": ""
   },
+  "Credits": {
+    "Credits": ""
+  },
   "Crop / Resize": {
     "Crop / Resize": ""
   },
@@ -388,6 +391,9 @@
   },
   "Floating": {
     "Floating": "浮動"
+  },
+  "Floating window and continuous editing workflow.": {
+    "Floating window and continuous editing workflow.": ""
   },
   "Focused Screen": {
     "Focused Screen": ""
@@ -689,6 +695,9 @@
   "Palette Preset": {
     "Palette Preset": ""
   },
+  "Paste from Clipboard": {
+    "Paste from Clipboard": ""
+  },
   "Pause": {
     "Pause": "暫停"
   },
@@ -772,6 +781,9 @@
   },
   "Radial Menu": {
     "Radial Menu": ""
+  },
+  "Radial menu and tool interaction patterns.": {
+    "Radial menu and tool interaction patterns.": ""
   },
   "Ratio": {
     "Ratio": ""
@@ -1093,6 +1105,9 @@
   },
   "Toolbar Position": {
     "Toolbar Position": ""
+  },
+  "Toolbar design and layout inspiration.": {
+    "Toolbar design and layout inspiration.": ""
   },
   "Tools": {
     "Tools": "工具"

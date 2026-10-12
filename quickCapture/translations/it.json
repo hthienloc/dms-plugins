@@ -260,6 +260,9 @@
   "Could not crop image": {
     "Could not crop image": "Impossibile ritagliare l'immagine"
   },
+  "Credits": {
+    "Credits": ""
+  },
   "Crop / Resize": {
     "Crop / Resize": "Ritaglia / Ridimensiona"
   },
@@ -388,6 +391,9 @@
   },
   "Floating": {
     "Floating": "Fluttuante"
+  },
+  "Floating window and continuous editing workflow.": {
+    "Floating window and continuous editing workflow.": ""
   },
   "Focused Screen": {
     "Focused Screen": "Schermo attivo"
@@ -689,6 +695,9 @@
   "Palette Preset": {
     "Palette Preset": "Preset della palette"
   },
+  "Paste from Clipboard": {
+    "Paste from Clipboard": ""
+  },
   "Pause": {
     "Pause": "Pausa"
   },
@@ -772,6 +781,9 @@
   },
   "Radial Menu": {
     "Radial Menu": "Menu radiale"
+  },
+  "Radial menu and tool interaction patterns.": {
+    "Radial menu and tool interaction patterns.": ""
   },
   "Ratio": {
     "Ratio": "Preset radiale"
@@ -1093,6 +1105,9 @@
   },
   "Toolbar Position": {
     "Toolbar Position": "Posizione della barra degli strumenti"
+  },
+  "Toolbar design and layout inspiration.": {
+    "Toolbar design and layout inspiration.": ""
   },
   "Tools": {
     "Tools": "Strumenti"

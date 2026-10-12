@@ -51,7 +51,7 @@
     "Audio": "Hang"
   },
   "Audio & Overlay": {
-    "Audio & Overlay": "Hang és rátét"
+    "Audio & Overlay": "Hang és átfedés"
   },
   "Audio Codec": {
     "Audio Codec": "Hangkodek"
@@ -198,7 +198,7 @@
     "Close": "Bezárás"
   },
   "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": {
-    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": ""
+    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": "Vezérlőközpont bezárása a rögzítés előtt, ha a Vezérlőközpont panelről indítják. A gyorsbillentyűket és az IPC rögzítéseket nem érinti."
   },
   "Color": {
     "Color": "Szín"
@@ -259,6 +259,9 @@
   },
   "Could not crop image": {
     "Could not crop image": "A kép kivágása nem sikerült"
+  },
+  "Credits": {
+    "Credits": ""
   },
   "Crop / Resize": {
     "Crop / Resize": "Körbevágás / Átméretezés"
@@ -389,11 +392,14 @@
   "Floating": {
     "Floating": "Lebegő"
   },
+  "Floating window and continuous editing workflow.": {
+    "Floating window and continuous editing workflow.": ""
+  },
   "Focused Screen": {
     "Focused Screen": "Fókuszált képernyő"
   },
   "Folder": {
-    "Folder": ""
+    "Folder": "Mappa"
   },
   "Font Size": {
     "Font Size": "Betűméret"
@@ -408,7 +414,7 @@
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "Formátumjelek: {user} (Felhasználónév), \\n (Új sor), %Y (Év), %y (2 jegyű év), %m (Hónap), %d (Nap), %H (Óra), %M (Perc), %S (Másodperc)"
   },
   "Format: %1 (%2 FPS)": {
-    "Format: %1 (%2 FPS)": ""
+    "Format: %1 (%2 FPS)": "Formátum: %1 (%2 FPS)"
   },
   "Framerate": {
     "Framerate": "Képkockasebesség"
@@ -453,7 +459,7 @@
     "Hide Control Center by Default": "Vezérlőközpont elrejtése alapértelmezés szerint"
   },
   "Hide Control Center on Capture": {
-    "Hide Control Center on Capture": ""
+    "Hide Control Center on Capture": "Vezérlőközpont elrejtése rögzítéskor"
   },
   "High": {
     "High": "Magas"
@@ -689,6 +695,9 @@
   "Palette Preset": {
     "Palette Preset": "Paletta előbeállítás"
   },
+  "Paste from Clipboard": {
+    "Paste from Clipboard": ""
+  },
   "Pause": {
     "Pause": "Szüneteltetés"
   },
@@ -773,6 +782,9 @@
   "Radial Menu": {
     "Radial Menu": "Körkörös menü"
   },
+  "Radial menu and tool interaction patterns.": {
+    "Radial menu and tool interaction patterns.": ""
+  },
   "Ratio": {
     "Ratio": "Arány"
   },
@@ -798,7 +810,7 @@
     "Recording Folder": "Rögzítési mappa"
   },
   "Recording Paused": {
-    "Recording Paused": ""
+    "Recording Paused": "Felvétel szüneteltetve"
   },
   "Recording ended with error code %1.": {
     "Recording ended with error code %1.": "A rögzítés hibával fejeződött be. Hibakód: %1."
@@ -1093,6 +1105,9 @@
   },
   "Toolbar Position": {
     "Toolbar Position": "Eszköztár pozíciója"
+  },
+  "Toolbar design and layout inspiration.": {
+    "Toolbar design and layout inspiration.": ""
   },
   "Tools": {
     "Tools": "Eszközök"

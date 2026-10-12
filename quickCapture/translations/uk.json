@@ -260,6 +260,9 @@
   "Could not crop image": {
     "Could not crop image": ""
   },
+  "Credits": {
+    "Credits": ""
+  },
   "Crop / Resize": {
     "Crop / Resize": "Обрізати / Змінити розмір"
   },
@@ -388,6 +391,9 @@
   },
   "Floating": {
     "Floating": "Плавучий"
+  },
+  "Floating window and continuous editing workflow.": {
+    "Floating window and continuous editing workflow.": ""
   },
   "Focused Screen": {
     "Focused Screen": "Фокусний екран"
@@ -689,6 +695,9 @@
   "Palette Preset": {
     "Palette Preset": "Набір налаштувань палітри"
   },
+  "Paste from Clipboard": {
+    "Paste from Clipboard": ""
+  },
   "Pause": {
     "Pause": "Призупинити"
   },
@@ -772,6 +781,9 @@
   },
   "Radial Menu": {
     "Radial Menu": "Радіальне меню"
+  },
+  "Radial menu and tool interaction patterns.": {
+    "Radial menu and tool interaction patterns.": ""
   },
   "Ratio": {
     "Ratio": "Співвідношення"
@@ -1093,6 +1105,9 @@
   },
   "Toolbar Position": {
     "Toolbar Position": "Позиція панелі інструментів"
+  },
+  "Toolbar design and layout inspiration.": {
+    "Toolbar design and layout inspiration.": ""
   },
   "Tools": {
     "Tools": "Інструменти"
