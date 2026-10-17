@@ -311,11 +311,19 @@ if not cache_is_valid:
 
     property var preSliceQueue: []
 
+    // Plays the key sounds in a helper process so QtMultimedia stays out of
+    // the shell (see SfxClient.qml).
+    SfxClient {
+        id: sfx
+        name: "typingSounds"
+    }
+
     // Dynamically load sound effects
     Instantiator {
         model: Object.keys(root.currentDefines)
         delegate: SoundEffectWrapper {
             keycode: modelData
+            client: sfx
             sourcePath: "file://" + root.cachePath + "/" + modelData + ".wav"
             volumeValue: Math.min(root.volume / 200.0, 1.0)
 

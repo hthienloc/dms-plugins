@@ -1,25 +1,40 @@
 import QtQuick
-import QtMultimedia
 
+// One key sound. Played through the out-of-process helper (SfxClient);
+// LocalSoundEffect (QtMultimedia inside the shell) is only loaded as fallback.
 Item {
     id: root
+
     property string keycode: ""
-    property alias source: player.source
-    property alias volume: player.volume
+    property var client: null
+    property string sourcePath: ""
+    property real volumeValue: 1.0
 
-    // Define sourcePath and volumeValue aliases for clean dynamic loading
-    property alias sourcePath: player.source
-    property alias volumeValue: player.volume
+    readonly property bool _useHelper: root.client !== null && !root.client.unavailable
 
-    SoundEffect {
-        id: player
-    }
-
-    Component.onDestruction: {
-        player.stop();
+    function _preload() {
+        if (root._useHelper && root.sourcePath !== "")
+            root.client.load(root.sourcePath);
     }
 
     function play() {
-        player.play();
+        if (root._useHelper)
+            root.client.play(root.sourcePath, root.volumeValue);
+        else if (local.item)
+            local.item.play();
+    }
+
+    onSourcePathChanged: root._preload()
+    Component.onCompleted: root._preload()
+
+    Loader {
+        id: local
+
+        active: !root._useHelper && root.sourcePath !== ""
+        source: "LocalSoundEffect.qml"
+        onLoaded: {
+            item.source = Qt.binding(() => root.sourcePath);
+            item.volume = Qt.binding(() => root.volumeValue);
+        }
     }
 }
