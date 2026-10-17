@@ -579,10 +579,17 @@ PluginComponent {
     Component.onCompleted: {
         fetchDevices();
         migrateColorSetting();
-        // Instantiate the sound singleton up front so the WAVs are preloaded
-        // and the first click isn't dropped while still loading.
+        // Preload the sounds up front so the first click isn't dropped while
+        // still loading.
         BongoSoundService.volume = _soundVol;
         BongoSoundService.soundProfile = soundProfile;
+        if (soundEnabled)
+            BongoSoundService.warmUp();
+    }
+
+    onSoundEnabledChanged: {
+        if (soundEnabled)
+            BongoSoundService.warmUp();
     }
 
     // One-time migration of the legacy boolean so the settings page and the
