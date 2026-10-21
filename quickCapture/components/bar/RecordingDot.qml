@@ -14,7 +14,8 @@ Rectangle {
     color: paused ? Theme.warning : Theme.error
 
     SequentialAnimation on opacity {
-        running: root.visible && !root.paused && root.blink
+        // Item.visible stays true inside a hidden window; an endless animation there keeps every shell window repainting
+        running: root.visible && (root.Window.window ? root.Window.window.visible : false) && !root.paused && root.blink
         loops: Animation.Infinite
         NumberAnimation {
             to: 0.35
