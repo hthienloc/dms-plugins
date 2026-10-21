@@ -370,6 +370,8 @@ Item {
         root.isPaused = !root.isPaused;
         root.recordingState = root.isPaused ? "paused" : "recording";
         signalRecorder(12, success => {
+            if (!root.isRecording)
+                return;
             if (!success) {
                 root.isPaused = !root.isPaused;
                 root.recordingState = root.isPaused ? "paused" : "recording";
@@ -408,6 +410,8 @@ Item {
         root.recordingState = "stopping";
         safetyTimer.restart();
         signalRecorder(2, success => {
+            if (root.recordingState !== "stopping")
+                return;
             if (!success) {
                 safetyTimer.stop();
                 if (root.isFlatpakActive && recorderProcess.running) {
