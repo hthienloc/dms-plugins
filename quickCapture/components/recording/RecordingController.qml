@@ -393,7 +393,7 @@ Item {
             return;
         }
         const escapedPath = Helpers.escapeRegex(root.outputPath);
-        Proc.runCommand("quickCapture.signalFlatpakRecorder", ["pkill", "-" + sig, "-f", "--", "^gpu-screen-recorder .*-o " + escapedPath], (stdout, exitCode) => {
+        Proc.runCommand("quickCapture.signalFlatpakRecorder", ["pkill", "-" + sig, "-f", "--", "^gpu-screen-recorder .*-o " + escapedPath + "(\\s|$)"], (stdout, exitCode) => {
             const success = exitCode === 0;
             if (!success) {
                 console.warn("quickCapture: failed to signal Flatpak recorder via pkill (exit " + exitCode + ")");
