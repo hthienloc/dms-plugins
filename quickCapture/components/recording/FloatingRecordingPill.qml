@@ -167,6 +167,7 @@ PanelWindow {
                 dotSize: 9
                 paused: root.isPaused
                 blink: root.isRecording && root.blinkRecordDot
+                visible: root.shouldBeVisible
                 anchors.verticalCenter: parent.verticalCenter
             }
 
