@@ -166,7 +166,7 @@ PanelWindow {
             RecordingDot {
                 dotSize: 9
                 paused: root.isPaused
-                blink: root.blinkRecordDot
+                blink: root.isRecording && root.blinkRecordDot
                 anchors.verticalCenter: parent.verticalCenter
             }
 

@@ -610,7 +610,7 @@ PopoutComponent {
                         RecordingDot {
                             dotSize: 10
                             paused: root.widget.isPaused
-                            blink: root.widget.blinkRecordDot
+                            blink: root.isRecording && root.widget.blinkRecordDot
                             anchors.verticalCenter: parent.verticalCenter
                         }
 
