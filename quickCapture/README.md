@@ -27,11 +27,12 @@ Screenshot annotation and screen recording plugin for DankMaterialShell.
 | **img2pdf**                          | PDF export                                         |
 | **tesseract**                        | OCR text scanner                                   |
 | **zbar** (`zbarimg`)                 | QR scanner                                         |
+| **pkill** (`procps` / `procps-ng`)   | Signaling Flatpak GPU Screen Recorder sessions      |
 
 > [!NOTE]
 > At least one recording backend (`gpu-screen-recorder` or `wf-recorder`) is required for video capture. `gpu-screen-recorder` is recommended for optimal performance, pause/resume support, and audio (supports both native package and Flatpak `com.dec05eba.gpu_screen_recorder`); `wf-recorder` serves as a lightweight CPU-based alternative (video only, pause/resume not supported).
 >
-> If using Flatpak GPU Screen Recorder, system installation is recommended for proper KMS/DRI screen capture permissions:
+> If using Flatpak GPU Screen Recorder, system installation is recommended for proper KMS/DRI screen capture permissions (`pkill` on host is used to control pause/stop/cancel):
 > ```bash
 > flatpak install --system com.dec05eba.gpu_screen_recorder
 > ```
