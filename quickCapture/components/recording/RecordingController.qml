@@ -390,7 +390,7 @@ Item {
                 callback(true);
             return;
         }
-        const escapedPath = root.outputPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const escapedPath = Helpers.escapeRegex(root.outputPath);
         Proc.runCommand("quickCapture.signalFlatpakRecorder", ["pkill", "-" + sig, "-f", "--", "^gpu-screen-recorder .*-o " + escapedPath], (stdout, exitCode) => {
             const success = exitCode === 0;
             if (!success) {

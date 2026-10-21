@@ -7,7 +7,7 @@
  *
  * Sections:
  *   1. Color utilities     — hexToRgb, getLuminance, getContrastingColor, formatHexColor, colorEquals, toHex6
- *   2. UI / formatting     — formatCounter, shortcutToken, formatWatermarkText, findByKey
+ *   2. UI / formatting     — formatCounter, shortcutToken, formatWatermarkText, findByKey, escapeRegex
  *   3. Geometry            — constrainSquarePoint, distance, clamp, isInsideCropRect, smoothStrokePoints
  *   4. Color analysis      — extractDominantColors, getBoundaryColorOrGradient
  *   5. Stroke geometry     — getStrokeBBox, findStrokeAt, getStrokeHandleAt
@@ -368,6 +368,17 @@ function findByKey(items, key) {
             return items[i];
     }
     return null;
+}
+
+/**
+ * Escapes special regular expression characters in a string.
+ * @param {string} str - The string to escape.
+ * @returns {string} The escaped string.
+ */
+function escapeRegex(str) {
+    if (!str)
+        return "";
+    return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function sectorIndexAt(dx, dy, numSectors, innerRadius, outerRadius) {
