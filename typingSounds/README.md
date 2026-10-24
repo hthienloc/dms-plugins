@@ -14,6 +14,9 @@ Play mechanical keyboard sounds globally as you type on your system.
 > [!NOTE]
 > On many distros, the libinput CLI is in a separate package: `libinput-tools` (Arch/Debian/Ubuntu) or `libinput-utils` (Fedora). Logout and back in after adding your user to the input group.
 
+> [!NOTE]
+> Sounds play in a small helper process (`quickshell -p <plugin>/sfx`) instead of inside the shell. QtMultimedia's PipeWire backend can crash its process when the output device disappears during playback (e.g. unplugging a USB headset); this way only the helper restarts. If the helper cannot start, the plugin falls back to in-process playback.
+
 ## Installation
 
 ### Via DMS CLI
