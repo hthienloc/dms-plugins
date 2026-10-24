@@ -1754,7 +1754,7 @@ Item {
             cropCommandId: "crop-ocr-temp",
             scanCommandId: "run-ocr",
             cleanupCommandId: "cleanup-ocr-temp",
-            scanArgs: path => ["tesseract", path, "-", "-l", "eng"],
+            scanArgs: path => ["tesseract", path, "-", "-l", (config && config.ocrLanguage) || "eng"],
             noResultMessage: I18n.trFor("quickCapture", "No text detected"),
             scanErrorMessage: I18n.trFor("quickCapture", "OCR failed")
         };

@@ -1,5 +1,6 @@
 import QtQuick
 import qs.Common
+import qs.DCommon.Widgets
 import "../../shared"
 import "../core/Constants.js" as Constants
 import "../core/Defaults.js" as Defaults
@@ -8,6 +9,67 @@ SettingsGroup {
     id: root
 
     property QtObject config: null
+    property var availableOcrLangs: []
+    property var selectedOcrLangs: ["eng"]
+
+    function findSettings() {
+        let item = parent;
+        while (item) {
+            if (item.saveValue !== undefined && item.loadValue !== undefined)
+                return item;
+            item = item.parent;
+        }
+        return null;
+    }
+
+    function loadOcrLangs() {
+        const settings = findSettings();
+        let val = Defaults.values.ocrLanguage;
+        if (settings) {
+            const loaded = settings.loadValue("ocrLanguage", Defaults.values.ocrLanguage);
+            if (loaded !== undefined && loaded !== null && String(loaded).trim() !== "")
+                val = String(loaded);
+        }
+        const parsed = String(val).split("+").map(s => s.trim()).filter(s => s !== "");
+        selectedOcrLangs = parsed.length > 0 ? parsed : ["eng"];
+    }
+
+    function toggleOcrLang(lang) {
+        const list = selectedOcrLangs.slice();
+        const index = list.indexOf(lang);
+        if (index >= 0) {
+            if (list.length <= 1)
+                return;
+            list.splice(index, 1);
+        } else {
+            list.push(lang);
+        }
+        selectedOcrLangs = list;
+        const settings = findSettings();
+        if (settings)
+            settings.saveValue("ocrLanguage", list.join("+"));
+    }
+
+    Component.onCompleted: {
+        Qt.callLater(loadOcrLangs);
+        Proc.runCommand(
+            "quickcapture-list-langs",
+            ["tesseract", "--list-langs"],
+            (stdout, exitCode) => {
+                if (exitCode === 0) {
+                    const lines = stdout.split("\n");
+                    const langs = [];
+                    for (let i = 1; i < lines.length; i++) {
+                        const l = lines[i].trim();
+                        if (l !== "" && l !== "osd")
+                            langs.push(l);
+                    }
+                    availableOcrLangs = langs.sort();
+                }
+            },
+            0
+        );
+    }
 
     readonly property var toolRows: [
         {
@@ -289,6 +351,61 @@ SettingsGroup {
             label: I18n.trFor("quickCapture", "Pen Auto-Close")
             description: I18n.trFor("quickCapture", "Auto-close the loop when ending near the start point.")
             defaultValue: Defaults.values.penAutoClose
+        }
+    }
+
+    SettingsSection {
+        title: I18n.trFor("quickCapture", "OCR")
+        icon: "document_scanner"
+
+        InfoText {
+            text: I18n.trFor("quickCapture", "Select one or more installed Tesseract language packs for OCR text recognition.")
+        }
+
+        Flow {
+            id: ocrLangFlow
+            width: parent.width
+            spacing: Theme.spacingS
+            visible: root.availableOcrLangs.length > 0
+
+            Repeater {
+                model: root.availableOcrLangs
+
+                delegate: Rectangle {
+                    id: langChip
+                    required property string modelData
+                    readonly property bool isSelected: root.selectedOcrLangs.indexOf(modelData) >= 0
+
+                    width: (ocrLangFlow.width - (Theme.spacingS * 2)) / 3
+                    height: 36
+                    radius: Theme.cornerRadius
+                    color: isSelected ? Theme.primary : Theme.surfaceContainerHigh
+
+                    Row {
+                        anchors.centerIn: parent
+                        spacing: Theme.spacingXS
+
+                        DIcon {
+                            name: langChip.isSelected ? "check_circle" : "radio_button_unchecked"
+                            size: 14
+                            color: langChip.isSelected ? Theme.onPrimary : Theme.surfaceVariantText
+                        }
+
+                        StyledText {
+                            text: langChip.modelData.toUpperCase()
+                            font.pixelSize: Theme.fontSizeSmall
+                            font.weight: langChip.isSelected ? Font.Bold : Font.Normal
+                            color: langChip.isSelected ? Theme.onPrimary : Theme.surfaceText
+                        }
+                    }
+
+                    MouseArea {
+                        anchors.fill: parent
+                        cursorShape: Qt.PointingHandCursor
+                        onClicked: root.toggleOcrLang(langChip.modelData)
+                    }
+                }
+            }
         }
     }
 }
