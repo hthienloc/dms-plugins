@@ -398,4 +398,5 @@ QtObject {
     readonly property string modalDisplayMode: pluginData["modalDisplayMode"] || "floating"
     readonly property string modalDisplayTarget: pluginData["modalDisplayTarget"] || "focused"
     readonly property string modalAspectRatio: pluginData["modalAspectRatio"] || "landscape"
+    readonly property string ocrLanguage: pluginData["ocrLanguage"] || "eng"
 }

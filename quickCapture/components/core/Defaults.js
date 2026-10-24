@@ -56,6 +56,7 @@ const values = {
     defaultToolMode: "preset",
     defaultPresetIndex: "0",
     defaultTool: "pen",
+    ocrLanguage: "eng",
     textFontFamily: "system",
     stampFontFamily: "system",
     textBold: false,
