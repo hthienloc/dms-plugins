@@ -15,6 +15,9 @@ Watch the cat tap its paws as you type!
 
 If a requirement is missing, the cat shows a warning badge with setup instructions.
 
+> [!NOTE]
+> Sounds play in a small helper process (`quickshell -p <plugin>/sfx`) instead of inside the shell. QtMultimedia's PipeWire backend can crash its process when the output device disappears during playback (e.g. unplugging a USB headset); this way only the helper restarts. If the helper cannot start, the plugin falls back to in-process playback.
+
 ## Install
 
 Use the DMS CLI:
