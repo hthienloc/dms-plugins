@@ -180,7 +180,7 @@
     "Choose the editor shape for portrait or landscape screens.": "Wählen Sie die Editor-Form für Hoch- oder Querformat-Bildschirme."
   },
   "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": {
-    "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": ""
+    "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": "Wählen Sie aus, wo der Aufnahmestatus und die Steuerelemente erscheinen sollen: Automatisch (DankBar falls vorhanden, ansonsten Floating Pill), DankBar, Floating Pill oder beides."
   },
   "Choose whether the editor opens as a modal overlay or a movable floating window.": {
     "Choose whether the editor opens as a modal overlay or a movable floating window.": "Wählen Sie, ob der Editor als modales Overlay oder als bewegliches, schwebendes Fenster geöffnet wird."
@@ -273,7 +273,7 @@
     "Custom": "Individuell"
   },
   "DankBar": {
-    "DankBar": ""
+    "DankBar": "DankBar"
   },
   "Dark": {
     "Dark": "Dunkel"
@@ -399,7 +399,7 @@
     "Floating": "Schwebend"
   },
   "Floating Pill": {
-    "Floating Pill": ""
+    "Floating Pill": "Floating Pill"
   },
   "Floating window and continuous editing workflow.": {
     "Floating window and continuous editing workflow.": "Schwebendes Fenster und kontinuierlicher Bearbeitungs-Workflow."
@@ -626,6 +626,9 @@
   "No QR code detected": {
     "No QR code detected": "Kein QR-Code erkannt"
   },
+  "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": {
+    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": ""
+  },
   "No output available": {
     "No output available": "Keine Ausgabe verfügbar"
   },
@@ -672,7 +675,7 @@
     "Off (Hidden)": "Aus (Ausgeblendet)"
   },
   "On": {
-    "On": ""
+    "On": "Ein"
   },
   "Opacity": {
     "Opacity": "Deckkraft"
@@ -825,7 +828,7 @@
     "Recording Paused": "Aufnahme angehalten"
   },
   "Recording Status Location": {
-    "Recording Status Location": ""
+    "Recording Status Location": "Position des Aufnahmestatus"
   },
   "Recording ended with error code %1.": {
     "Recording ended with error code %1.": "Aufnahme mit Fehlercode %1 beendet."
@@ -964,6 +967,9 @@
   },
   "Select Image to Annotate": {
     "Select Image to Annotate": "Bild zum Annotieren auswählen"
+  },
+  "Select one or more installed Tesseract language packs for OCR text recognition.": {
+    "Select one or more installed Tesseract language packs for OCR text recognition.": ""
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Bildschirmaufnahme-Backend auswählen. Auto versucht zuerst GPU und fällt auf CPU (%1) zurück."

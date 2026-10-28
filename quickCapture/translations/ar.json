@@ -180,7 +180,7 @@
     "Choose the editor shape for portrait or landscape screens.": "اختر شكل المحرر للشاشات العمودية أو الأفقية."
   },
   "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": {
-    "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": ""
+    "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": "اختر مكان ظهور حالة التسجيل وعناصر التحكم: تلقائي (DankBar إذا كان موجودًا، وإلا القرص العائم)، DankBar، القرص العائم، أو كلاهما."
   },
   "Choose whether the editor opens as a modal overlay or a movable floating window.": {
     "Choose whether the editor opens as a modal overlay or a movable floating window.": "اختر ما إذا كان المحرر يفتح كطبقة تراكب مشروطة أو نافذة عائمة قابلة للتحريك."
@@ -273,7 +273,7 @@
     "Custom": "خيار مخصص"
   },
   "DankBar": {
-    "DankBar": ""
+    "DankBar": "DankBar"
   },
   "Dark": {
     "Dark": "داكن"
@@ -399,7 +399,7 @@
     "Floating": "عائم"
   },
   "Floating Pill": {
-    "Floating Pill": ""
+    "Floating Pill": "القرص العائم"
   },
   "Floating window and continuous editing workflow.": {
     "Floating window and continuous editing workflow.": "نافذة عائمة وسير عمل تحرير مستمر."
@@ -626,6 +626,9 @@
   "No QR code detected": {
     "No QR code detected": "لم يتم اكتشاف رمز QR"
   },
+  "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": {
+    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": ""
+  },
   "No output available": {
     "No output available": "لا يوجد مخرج متاح"
   },
@@ -672,7 +675,7 @@
     "Off (Hidden)": "إيقاف (مخفي)"
   },
   "On": {
-    "On": ""
+    "On": "تشغيل"
   },
   "Opacity": {
     "Opacity": "الشفافية"
@@ -825,7 +828,7 @@
     "Recording Paused": "تم إيقاف التسجيل مؤقتاً"
   },
   "Recording Status Location": {
-    "Recording Status Location": ""
+    "Recording Status Location": "موقع حالة التسجيل"
   },
   "Recording ended with error code %1.": {
     "Recording ended with error code %1.": "انتهى التسجيل برمز خطأ %1."
@@ -964,6 +967,9 @@
   },
   "Select Image to Annotate": {
     "Select Image to Annotate": "تحديد صورة للتعليق عليها"
+  },
+  "Select one or more installed Tesseract language packs for OCR text recognition.": {
+    "Select one or more installed Tesseract language packs for OCR text recognition.": ""
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "حدد خلفية تسجيل الشاشة. يحاول الوضع التلقائي استخدام وحدة معالجة الرسومات (GPU) أولاً، ثم يعود إلى وحدة المعالجة المركزية (CPU) (%1)."

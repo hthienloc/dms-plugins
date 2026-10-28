@@ -626,6 +626,9 @@
   "No QR code detected": {
     "No QR code detected": "Nessun codice QR rilevato"
   },
+  "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": {
+    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": ""
+  },
   "No output available": {
     "No output available": "Nessuna uscita disponibile"
   },
@@ -964,6 +967,9 @@
   },
   "Select Image to Annotate": {
     "Select Image to Annotate": "Seleziona immagine da annotare"
+  },
+  "Select one or more installed Tesseract language packs for OCR text recognition.": {
+    "Select one or more installed Tesseract language packs for OCR text recognition.": ""
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Seleziona il backend di registrazione dello schermo. Automatico prova prima la GPU e ripiega sulla CPU (%1)."

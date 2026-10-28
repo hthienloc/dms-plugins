@@ -180,7 +180,7 @@
     "Choose the editor shape for portrait or landscape screens.": "בחר/י את צורת העורך למסכים לאורך או לרוחב."
   },
   "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": {
-    "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": ""
+    "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": "בחר/י היכן יוצגו מצב ההקלטה ופקדי השליטה: אוטומטי (DuxBar אם הוא זמין, אחרת קפסולה צפה), DuxBar, קפסולה צפה או שניהם."
   },
   "Choose whether the editor opens as a modal overlay or a movable floating window.": {
     "Choose whether the editor opens as a modal overlay or a movable floating window.": "בחר/י האם העורך ייפתח כשכבת כיסוי מודלית או כחלון צף הניתן להזזה."
@@ -264,7 +264,7 @@
     "Could not crop image": "לא ניתן לחתוך את התמונה"
   },
   "Credits": {
-    "Credits": ""
+    "Credits": "תודות"
   },
   "Crop / Resize": {
     "Crop / Resize": "חיתוך / שינוי גודל"
@@ -273,7 +273,7 @@
     "Custom": "מותאם אישית"
   },
   "DankBar": {
-    "DankBar": ""
+    "DankBar": "DuxBar"
   },
   "Dark": {
     "Dark": "כהה"
@@ -399,10 +399,10 @@
     "Floating": "צף"
   },
   "Floating Pill": {
-    "Floating Pill": ""
+    "Floating Pill": "קפסולה צפה"
   },
   "Floating window and continuous editing workflow.": {
-    "Floating window and continuous editing workflow.": ""
+    "Floating window and continuous editing workflow.": "חלון צף ותהליך עבודה של עריכה רציפה."
   },
   "Focused Screen": {
     "Focused Screen": "מסך ממוקד"
@@ -626,6 +626,9 @@
   "No QR code detected": {
     "No QR code detected": "לא זוהה קוד QR"
   },
+  "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": {
+    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": ""
+  },
   "No output available": {
     "No output available": "אין פלט זמין"
   },
@@ -672,7 +675,7 @@
     "Off (Hidden)": "כבוי (מוסתר)"
   },
   "On": {
-    "On": ""
+    "On": "מופעל"
   },
   "Opacity": {
     "Opacity": "שקיפות"
@@ -708,7 +711,7 @@
     "Palette Preset": "ערכת פלטה מוכנה"
   },
   "Paste from Clipboard": {
-    "Paste from Clipboard": ""
+    "Paste from Clipboard": "הדבקה מלוח ההעתקה"
   },
   "Pause": {
     "Pause": "השהיה"
@@ -795,7 +798,7 @@
     "Radial Menu": "תפריט מעגלי (רדיאלי)"
   },
   "Radial menu and tool interaction patterns.": {
-    "Radial menu and tool interaction patterns.": ""
+    "Radial menu and tool interaction patterns.": "תפריט מעגלי (רדיאלי) ודפוסי שימוש בכלים."
   },
   "Ratio": {
     "Ratio": "יחס"
@@ -825,7 +828,7 @@
     "Recording Paused": "ההקלטה מושהית"
   },
   "Recording Status Location": {
-    "Recording Status Location": ""
+    "Recording Status Location": "מיקום מצב ההקלטה"
   },
   "Recording ended with error code %1.": {
     "Recording ended with error code %1.": "ההקלטה הסתיימה עם קוד שגיאה %1."
@@ -964,6 +967,9 @@
   },
   "Select Image to Annotate": {
     "Select Image to Annotate": "בחירת תמונה לעריכת הערות"
+  },
+  "Select one or more installed Tesseract language packs for OCR text recognition.": {
+    "Select one or more installed Tesseract language packs for OCR text recognition.": ""
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "בחר/י Backend להקלטת מסך. מצב אוטומטי מנסה תחילה את המעבד הגרפי (GPU) ועובר למעבד (CPU) (%1) במקרה הצורך."
@@ -1122,7 +1128,7 @@
     "Toolbar Position": "מיקום סרגל הכלים"
   },
   "Toolbar design and layout inspiration.": {
-    "Toolbar design and layout inspiration.": ""
+    "Toolbar design and layout inspiration.": "השראה לעיצוב ולפריסה של סרגל הכלים."
   },
   "Tools": {
     "Tools": "כלים"
