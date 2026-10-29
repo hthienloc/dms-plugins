@@ -627,7 +627,7 @@
     "No QR code detected": "QR-код не виявлено"
   },
   "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": {
-    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": ""
+    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": "Не знайдено жодного мовного пакета Tesseract. Переконайтеся, що tesseract встановлено та має пакети мовних даних"
   },
   "No output available": {
     "No output available": "Немає доступного виводу"
@@ -969,7 +969,7 @@
     "Select Image to Annotate": "Вибрати зображення для анотування"
   },
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
-    "Select one or more installed Tesseract language packs for OCR text recognition.": ""
+    "Select one or more installed Tesseract language packs for OCR text recognition.": "Виберіть один або кілька встановлених мовних пакетів Tesseract для оптичного розпізнавання тексту"
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Виберіть пристрій запису екрана. «Авто» спочатку пробує GPU, а потім перемикається на CPU (%1)"

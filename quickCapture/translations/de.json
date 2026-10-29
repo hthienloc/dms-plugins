@@ -33,7 +33,7 @@
     "All Outputs": "Alle Ausgaben"
   },
   "Annotating": {
-    "Annotating": "Kommentieren"
+    "Annotating": "Mit Anmerkungen versehen"
   },
   "Annotation Tools": {
     "Annotation Tools": "Anmerkungswerkzeuge"
@@ -54,7 +54,7 @@
     "Audio & Overlay": "Audio & Overlay"
   },
   "Audio Codec": {
-    "Audio Codec": "Audio Codec"
+    "Audio Codec": "Audiocodec"
   },
   "Audio recording is disabled when using the %1 backend.": {
     "Audio recording is disabled when using the %1 backend.": "Audioaufnahme ist bei Verwendung des %1-Backends deaktiviert."
@@ -165,7 +165,7 @@
     "Capture Options": "Aufnahmeoptionen"
   },
   "Capturing...": {
-    "Capturing...": "Aufnahme läuft..."
+    "Capturing...": "Aufnahme läuft ..."
   },
   "Center": {
     "Center": "Mitte"
@@ -228,7 +228,7 @@
     "Controls the preview pixel budget while editing. Lower it if you experience lag. Does not affect the final saved image quality.": "Steuert das Pixelbudget der Vorschau während der Bearbeitung. Verringern Sie es bei Verzögerungen. Beeinflusst nicht die Qualität des endgültig gespeicherten Bildes."
   },
   "Converting recording to GIF...": {
-    "Converting recording to GIF...": "Aufnahme wird in GIF umgewandelt..."
+    "Converting recording to GIF...": "Aufnahme wird in GIF umgewandelt ..."
   },
   "Copied Anonymously": {
     "Copied Anonymously": "Anonym kopiert"
@@ -258,7 +258,7 @@
     "Copy vector / Paste / Duplicate": "Vektor kopieren / Einfügen / Duplizieren"
   },
   "Corner Radius": {
-    "Corner Radius": "Abrundungsradius"
+    "Corner Radius": "Eckenradius"
   },
   "Could not crop image": {
     "Could not crop image": "Bild konnte nicht zugeschnitten werden"
@@ -270,7 +270,7 @@
     "Crop / Resize": "Zuschneiden / Größe ändern"
   },
   "Custom": {
-    "Custom": "Individuell"
+    "Custom": "Benutzerdefiniert"
   },
   "DankBar": {
     "DankBar": "DankBar"
@@ -366,7 +366,7 @@
     "Failed to download image.": "Bild konnte nicht heruntergeladen werden."
   },
   "Failed to generate blurred background image": {
-    "Failed to generate blurred background image": "Fehler beim Erzeugen des unscharfen Hintergrundbildes"
+    "Failed to generate blurred background image": "Unscharfes Hintergrundbild konnte nicht generiert werden"
   },
   "Failed to load image: %1": {
     "Failed to load image: %1": "Bild konnte nicht geladen werden: %1"
@@ -387,10 +387,10 @@
     "Flip Vertical": "Vertikal spiegeln"
   },
   "Float": {
-    "Float": "Schwebend"
+    "Float": "Schweben"
   },
   "Float Window": {
-    "Float Window": "Fenster schweben lassen"
+    "Float Window": "Fenster schweben"
   },
   "Float service not available.": {
     "Float service not available.": "Schwebender Dienst nicht verfügbar."
@@ -411,7 +411,7 @@
     "Folder": "Ordner"
   },
   "Font Size": {
-    "Font Size": "Schriftgrösse"
+    "Font Size": "Schriftgröße"
   },
   "Font family used for number stamp labels": {
     "Font family used for number stamp labels": "Schriftfamilie für Nummernstempel"
@@ -441,7 +441,7 @@
     "GIF Framerate": "GIF-Bildrate"
   },
   "GPU encoder failed. Retrying with %1...": {
-    "GPU encoder failed. Retrying with %1...": "GPU-Encoder fehlgeschlagen. Versuch mit %1..."
+    "GPU encoder failed. Retrying with %1...": "GPU-Encoder fehlgeschlagen. Versuch mit %1 ..."
   },
   "General Shortcuts": {
     "General Shortcuts": "Allgemeine Tastenkürzel"
@@ -477,7 +477,7 @@
     "Highlighter": "Textmarker"
   },
   "History": {
-    "History": "Verlauf"
+    "History": "Historie"
   },
   "Hold %1 for Loupe": {
     "Hold %1 for Loupe": "%1 für Lupe gedrückt halten"
@@ -513,7 +513,7 @@
     "Image selected automatically when using Image Background mode": "Bild wird automatisch ausgewählt, wenn der Modus Bildhintergrund verwendet wird"
   },
   "Include Cursor": {
-    "Include Cursor": "Cursor einschließen"
+    "Include Cursor": "Cursor einbeziehen"
   },
   "Initial Width": {
     "Initial Width": "Anfangsbreite"
@@ -591,7 +591,7 @@
     "Menu Item Right Click": "Rechtsklick auf Menüeintrag"
   },
   "Merging audio tracks...": {
-    "Merging audio tracks...": "Audiospuren werden zusammengeführt..."
+    "Merging audio tracks...": "Audiospuren werden zusammengeführt ..."
   },
   "Microphone": {
     "Microphone": "Mikrofon"
@@ -627,13 +627,13 @@
     "No QR code detected": "Kein QR-Code erkannt"
   },
   "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": {
-    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": ""
+    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": "Keine Tesseract-Sprachpakete gefunden. Stellen Sie sicher, dass Tesseract installiert ist und über Sprachdatenpakete verfügt."
   },
   "No output available": {
     "No output available": "Keine Ausgabe verfügbar"
   },
   "No saved images yet": {
-    "No saved images yet": "Noch keine gespeicherten Bilder"
+    "No saved images yet": "Noch keine Bilder gespeichert"
   },
   "No supported images found": {
     "No supported images found": "Keine unterstützten Bilder gefunden"
@@ -678,7 +678,7 @@
     "On": "Ein"
   },
   "Opacity": {
-    "Opacity": "Deckkraft"
+    "Opacity": "Opazität"
   },
   "Open": {
     "Open": "Öffnen"
@@ -702,7 +702,7 @@
     "Output format applies only to disk saves. Clipboard copies are always PNG.": "Das Ausgabeformat gilt nur für das Speichern auf der Festplatte. Kopien in die Zwischenablage sind immer PNG."
   },
   "Overlay Opacity": {
-    "Overlay Opacity": "Overlay-Deckkraft"
+    "Overlay Opacity": "Overlay-Opazität"
   },
   "Padding": {
     "Padding": "Innenabstand"
@@ -759,7 +759,7 @@
     "Preset": "Preset"
   },
   "Preset %1": {
-    "Preset %1": "Voreinstellung %1"
+    "Preset %1": "Preset %1"
   },
   "Presets": {
     "Presets": "Presets"
@@ -969,7 +969,7 @@
     "Select Image to Annotate": "Bild zum Annotieren auswählen"
   },
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
-    "Select one or more installed Tesseract language packs for OCR text recognition.": ""
+    "Select one or more installed Tesseract language packs for OCR text recognition.": "Wählen Sie ein oder mehrere installierte Tesseract-Sprachpakete für die OCR-Texterkennung aus."
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Bildschirmaufnahme-Backend auswählen. Auto versucht zuerst GPU und fällt auf CPU (%1) zurück."
@@ -1047,7 +1047,7 @@
     "Spotlight": "Spotlight"
   },
   "Spotlight Opacity": {
-    "Spotlight Opacity": "Spotlight-Deckkraft"
+    "Spotlight Opacity": "Spotlight-Opazität"
   },
   "Stamp": {
     "Stamp": "Nummernstempel"

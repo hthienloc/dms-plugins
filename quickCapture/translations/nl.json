@@ -180,7 +180,7 @@
     "Choose the editor shape for portrait or landscape screens.": "Kies de vorm van de editor voor staande of liggende schermen."
   },
   "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": {
-    "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": ""
+    "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": "Kies waar de opnamestatus en bediening verschijnen: Auto (DankBar indien aanwezig, anders Zwevende pil), DankBar, Zwevende pil of Beide."
   },
   "Choose whether the editor opens as a modal overlay or a movable floating window.": {
     "Choose whether the editor opens as a modal overlay or a movable floating window.": "Kies of de editor opent als modale overlay of als verplaatsbaar zwevend venster."
@@ -273,7 +273,7 @@
     "Custom": "Aangepast"
   },
   "DankBar": {
-    "DankBar": ""
+    "DankBar": "DankBar"
   },
   "Dark": {
     "Dark": "Donker"
@@ -399,7 +399,7 @@
     "Floating": "Zwevend"
   },
   "Floating Pill": {
-    "Floating Pill": ""
+    "Floating Pill": "Zwevende pil"
   },
   "Floating window and continuous editing workflow.": {
     "Floating window and continuous editing workflow.": "Zwevend venster en doorlopende bewerkingsworkflow."
@@ -627,7 +627,7 @@
     "No QR code detected": "Geen QR-code gedetecteerd"
   },
   "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": {
-    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": ""
+    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": "Geen Tesseract-taalpakketten gevonden. Zorg dat tesseract geïnstalleerd is en taalgegevenspakketten heeft."
   },
   "No output available": {
     "No output available": "Geen uitvoer beschikbaar"
@@ -675,7 +675,7 @@
     "Off (Hidden)": "Uit (verborgen)"
   },
   "On": {
-    "On": ""
+    "On": "Aan"
   },
   "Opacity": {
     "Opacity": "Dekking"
@@ -828,7 +828,7 @@
     "Recording Paused": "Opname gepauzeerd"
   },
   "Recording Status Location": {
-    "Recording Status Location": ""
+    "Recording Status Location": "Locatie opnamestatus"
   },
   "Recording ended with error code %1.": {
     "Recording ended with error code %1.": "Opname beëindigd met foutcode %1."
@@ -969,7 +969,7 @@
     "Select Image to Annotate": "Afbeelding selecteren om te annoteren"
   },
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
-    "Select one or more installed Tesseract language packs for OCR text recognition.": ""
+    "Select one or more installed Tesseract language packs for OCR text recognition.": "Selecteer een of meer geïnstalleerde Tesseract-taalpakketten voor OCR-tekstherkenning."
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Selecteer de backend voor schermopname. Automatisch probeert eerst de GPU en valt terug op de CPU (%1)."

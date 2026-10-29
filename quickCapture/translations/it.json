@@ -63,7 +63,7 @@
     "Auto": "Automatico"
   },
   "Auto (Screen Scale)": {
-    "Auto (Screen Scale)": ""
+    "Auto (Screen Scale)": "Automatico (scala dello schermo)"
   },
   "Auto Balance": {
     "Auto Balance": "Bilanciamento automatico"
@@ -180,7 +180,7 @@
     "Choose the editor shape for portrait or landscape screens.": "Scegli la forma dell'editor per schermi verticali o orizzontali."
   },
   "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": {
-    "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": ""
+    "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": "Scegli dove appaiono lo stato e i controlli della registrazione: Automatico (DankBar se presente, altrimenti Pillola fluttuante), DankBar, Pillola fluttuante oppure Entrambi."
   },
   "Choose whether the editor opens as a modal overlay or a movable floating window.": {
     "Choose whether the editor opens as a modal overlay or a movable floating window.": "Scegli se l'editor si apre come overlay modale o come finestra fluttuante spostabile."
@@ -201,7 +201,7 @@
     "Close": "Chiudi"
   },
   "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": {
-    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": ""
+    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": "Chiude il centro di controllo prima di catturare quando l’azione parte dal pannello del centro di controllo. Le scorciatoie e le catture tramite IPC non sono interessate."
   },
   "Color": {
     "Color": "Colore"
@@ -264,7 +264,7 @@
     "Could not crop image": "Impossibile ritagliare l'immagine"
   },
   "Credits": {
-    "Credits": ""
+    "Credits": "Crediti"
   },
   "Crop / Resize": {
     "Crop / Resize": "Ritaglia / Ridimensiona"
@@ -273,7 +273,7 @@
     "Custom": "Personalizzata"
   },
   "DankBar": {
-    "DankBar": ""
+    "DankBar": "DankBar"
   },
   "Dark": {
     "Dark": "Scuro"
@@ -399,16 +399,16 @@
     "Floating": "Fluttuante"
   },
   "Floating Pill": {
-    "Floating Pill": ""
+    "Floating Pill": "Pillola fluttuante"
   },
   "Floating window and continuous editing workflow.": {
-    "Floating window and continuous editing workflow.": ""
+    "Floating window and continuous editing workflow.": "Finestra fluttuante e flusso di modifica continuo."
   },
   "Focused Screen": {
     "Focused Screen": "Schermo attivo"
   },
   "Folder": {
-    "Folder": ""
+    "Folder": "Cartella"
   },
   "Font Size": {
     "Font Size": "Dimensione del Font"
@@ -423,7 +423,7 @@
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "Token di formato: {user} (Nome utente), \\n (Nuova riga), %Y (Anno), %y (Anno a 2 cifre), %m (Mese), %d (Giorno), %H (Ora), %M (Minuto), %S (Secondo)"
   },
   "Format: %1 (%2 FPS)": {
-    "Format: %1 (%2 FPS)": ""
+    "Format: %1 (%2 FPS)": "Formato: %1 (%2 FPS)"
   },
   "Framerate": {
     "Framerate": "Frequenza fotogrammi"
@@ -468,7 +468,7 @@
     "Hide Control Center by Default": "Nascondi il centro di controllo per impostazione predefinita"
   },
   "Hide Control Center on Capture": {
-    "Hide Control Center on Capture": ""
+    "Hide Control Center on Capture": "Nascondi il centro di controllo durante la cattura"
   },
   "High": {
     "High": "Alta"
@@ -546,7 +546,7 @@
     "Key": "Tasto"
   },
   "Keybinding overlay size in interactive region selector.": {
-    "Keybinding overlay size in interactive region selector.": ""
+    "Keybinding overlay size in interactive region selector.": "Dimensione dell’overlay delle scorciatoie nel selettore interattivo della regione."
   },
   "Landscape": {
     "Landscape": "Orizzontale"
@@ -627,7 +627,7 @@
     "No QR code detected": "Nessun codice QR rilevato"
   },
   "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": {
-    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": ""
+    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": "Nessun pacchetto lingua di Tesseract trovato. Assicurati che tesseract sia installato e disponga dei pacchetti di dati linguistici."
   },
   "No output available": {
     "No output available": "Nessuna uscita disponibile"
@@ -672,10 +672,10 @@
     "Off": "Disattivato"
   },
   "Off (Hidden)": {
-    "Off (Hidden)": ""
+    "Off (Hidden)": "Disattivato (nascosto)"
   },
   "On": {
-    "On": ""
+    "On": "Attivo"
   },
   "Opacity": {
     "Opacity": "Opacità"
@@ -711,7 +711,7 @@
     "Palette Preset": "Preset della palette"
   },
   "Paste from Clipboard": {
-    "Paste from Clipboard": ""
+    "Paste from Clipboard": "Incolla dagli appunti"
   },
   "Pause": {
     "Pause": "Pausa"
@@ -798,7 +798,7 @@
     "Radial Menu": "Menu radiale"
   },
   "Radial menu and tool interaction patterns.": {
-    "Radial menu and tool interaction patterns.": ""
+    "Radial menu and tool interaction patterns.": "Menu radiale e modalità di interazione con gli strumenti."
   },
   "Ratio": {
     "Ratio": "Preset radiale"
@@ -825,10 +825,10 @@
     "Recording Folder": "Cartella delle registrazioni"
   },
   "Recording Paused": {
-    "Recording Paused": ""
+    "Recording Paused": "Registrazione in pausa"
   },
   "Recording Status Location": {
-    "Recording Status Location": ""
+    "Recording Status Location": "Posizione dello stato di registrazione"
   },
   "Recording ended with error code %1.": {
     "Recording ended with error code %1.": "La registrazione è terminata con codice di errore %1."
@@ -852,7 +852,7 @@
     "Region": "Regione"
   },
   "Region HUD Scale": {
-    "Region HUD Scale": ""
+    "Region HUD Scale": "Scala dell’HUD della regione"
   },
   "Reset": {
     "Reset": "Reimposta"
@@ -969,13 +969,13 @@
     "Select Image to Annotate": "Seleziona immagine da annotare"
   },
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
-    "Select one or more installed Tesseract language packs for OCR text recognition.": ""
+    "Select one or more installed Tesseract language packs for OCR text recognition.": "Seleziona uno o più pacchetti lingua di Tesseract installati per il riconoscimento del testo OCR."
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Seleziona il backend di registrazione dello schermo. Automatico prova prima la GPU e ripiega sulla CPU (%1)."
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "Seleziona il backend di registrazione dello schermo. Automatico prova prima la GPU e ripiega sulla CPU (%1). Nota: %1 non supporta la pausa."
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "Strumento / Azione selezionati"
@@ -1128,7 +1128,7 @@
     "Toolbar Position": "Posizione della barra degli strumenti"
   },
   "Toolbar design and layout inspiration.": {
-    "Toolbar design and layout inspiration.": ""
+    "Toolbar design and layout inspiration.": "Ispirazione per il design e la disposizione della barra degli strumenti."
   },
   "Tools": {
     "Tools": "Strumenti"
