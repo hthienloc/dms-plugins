@@ -10,11 +10,38 @@
   "capabilities": [
     "daemon",
     "control-center",
-    "dankbar-widget"
+    "dankbar-widget",
+    "dash-card"
   ],
   "components": {
     "daemon": "./QuickCaptureDaemon.qml",
-    "widget": "./QuickCaptureWidget.qml"
+    "widget": "./QuickCaptureWidget.qml",
+    "dashCard": "./QuickCaptureCard.qml"
+  },
+  "dash": {
+    "card": {
+      "title": "Quick Capture",
+      "w": 2,
+      "h": 1,
+      "minW": 1,
+      "minH": 1,
+      "maxW": 4,
+      "maxH": 2
+    },
+    "options": [
+      {
+        "key": "tone",
+        "text": "Tone",
+        "type": "choice",
+        "def": "",
+        "choices": [
+          { "value": "", "text": "Surface" },
+          { "value": "primary", "text": "Primary" },
+          { "value": "secondary", "text": "Secondary" },
+          { "value": "tertiary", "text": "Tertiary" }
+        ]
+      }
+    ]
   },
   "settings": "./QuickCaptureSettings.qml",
   "requires_dms": ">=2.0.0",
