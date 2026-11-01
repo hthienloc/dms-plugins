@@ -2,6 +2,7 @@ import QtQuick
 import qs.Common
 import qs.Modules.Plugins
 import qs.Services
+import qs.Widgets
 import "./components/bar"
 import "./components/core/Defaults.js" as Defaults
 
@@ -83,33 +84,75 @@ PluginComponent {
         }
     }
 
-    function openWidgetPopout() {
-        surfaceContext?.ensureVisible(root);
-        if (usesAttachedExpansion && surfaceContext?.requestExpansion(root))
-            return;
-        if (hasPopout && positionPopout())
-            PopoutManager.requestPopout(pluginPopout, undefined, popoutTriggerId);
+    DContextMenu {
+        id: dockContextMenu
+        layerNamespace: "dms:quickcapture-context-menu"
+        menuItems: [
+            {
+                type: "item",
+                icon: "crop_free",
+                text: I18n.trFor("quickCapture", "Capture Region"),
+                action: () => root.daemon?.capture("region", "edit", "", false)
+            },
+            {
+                type: "item",
+                icon: "fullscreen",
+                text: I18n.trFor("quickCapture", "Capture Fullscreen"),
+                action: () => root.daemon?.capture("full", "edit", "", false)
+            },
+            {
+                type: "item",
+                icon: "content_paste",
+                text: I18n.trFor("quickCapture", "From Clipboard"),
+                action: () => root.daemon?.fromClipboard("edit")
+            },
+            {
+                type: "separator"
+            },
+            {
+                type: "item",
+                icon: root.isRecording ? "stop" : "videocam",
+                text: root.isRecording ? I18n.trFor("quickCapture", "Stop Recording") : I18n.trFor("quickCapture", "Record Region"),
+                action: () => {
+                    if (root.isRecording)
+                        root.recorder?.stopRecording();
+                    else
+                        root.daemon?.record("region", "", false);
+                }
+            },
+            {
+                type: "separator"
+            },
+            {
+                type: "item",
+                icon: "tune",
+                text: I18n.trFor("quickCapture", "More Options"),
+                action: () => {
+                    const oldClickAction = root.pillClickAction;
+                    root.pillClickAction = null;
+                    root.triggerPopout();
+                    root.pillClickAction = oldClickAction;
+                }
+            }
+        ]
     }
 
-    pillClickAction: function () {
-        if (root.surfaceContext?.kind === "dock") {
-            if (!root.daemon)
-                return;
-            if (root.isRecording) {
-                root.recorder?.stopRecording();
-                return;
-            }
-            if (root.widgetMode === "video") {
-                root.daemon.record("region", "", false);
-                return;
-            }
-            root.daemon.capture("region", "edit", "", false);
+    readonly property bool isDockWidget: root.surfaceContext?.kind === "dock"
+    pillClickAction: isDockWidget ? function () {
+        if (!root.daemon)
+            return;
+        if (root.isRecording) {
+            root.recorder?.stopRecording();
             return;
         }
-        root.openWidgetPopout();
-    }
+        if (root.widgetMode === "video") {
+            root.daemon.record("region", "", false);
+            return;
+        }
+        root.daemon.capture("region", "edit", "", false);
+    } : null
 
-    pillRightClickAction: function () {
+    pillRightClickAction: function (x, y, width, section, screen) {
         if (!root.daemon)
             return;
         if (root.surfaceContext?.kind === "dock") {
@@ -117,8 +160,17 @@ PluginComponent {
                 root.recorder?.cancelRecording();
                 return;
             }
-            root.openWidgetPopout();
-            return;
+            const anchor = root.pillAnchor();
+            if (anchor) {
+                dockContextMenu.openFromBar({
+                    screen: anchor.screen,
+                    x: anchor.trigger.x + (root.isVertical ? 0 : anchor.trigger.width / 2),
+                    y: anchor.trigger.y + (root.isVertical ? anchor.trigger.width / 2 : 0),
+                    isVertical: root.isVertical,
+                    edge: root.axis?.edge ?? "bottom"
+                });
+                return;
+            }
         }
         if (root.isRecording) {
             root.recorder.cancelRecording();
