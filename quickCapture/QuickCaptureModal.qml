@@ -98,6 +98,8 @@ Item {
         useOverlayLayer: window.useOverlayLayer
         layerNamespace: "dms:plugins:quickCapture"
         keepPopoutsOpen: true
+        positioning: "custom"
+        customPosition: window.modalCustomPosition
         content: window.editorContent
 
         onOpened: window.opened()
@@ -1803,12 +1805,48 @@ Item {
         window.runRegionScan(type, crop);
     }
 
+    function screenEdgeInset(side) {
+        const scr = window.presentationScreen;
+        if (!scr)
+            return 0;
+        let inset = 0;
+        if (typeof ShellLayout !== "undefined" && ShellLayout && typeof ShellLayout.edge === "function") {
+            void ShellLayout.layouts;
+            const band = ShellLayout.edge(scr, side);
+            if (band)
+                inset = Math.max(band.reservation ?? 0, band.island ? (band.islandThickness ?? 0) : 0);
+        } else {
+            const posMap = {
+                "top": 0,
+                "bottom": 1,
+                "left": 2,
+                "right": 3
+            };
+            const pos = posMap[side];
+            const bars = SettingsData.barConfigs || [];
+            const hasBar = bars.some(b => (b.enabled ?? true) && (b.visible ?? true) && !b.autoHide && (b.position ?? 0) === pos);
+            if (hasBar)
+                inset = Theme.barHeight + Theme.spacingS;
+        }
+        if (typeof SettingsData.dockReservationForEdge === "function")
+            inset = Math.max(inset, SettingsData.dockReservationForEdge(scr, side));
+        return inset;
+    }
+
+    readonly property real _topChromeInset: screenEdgeInset("top")
+    readonly property real _bottomChromeInset: screenEdgeInset("bottom")
+    readonly property real _leftChromeInset: screenEdgeInset("left")
+    readonly property real _rightChromeInset: screenEdgeInset("right")
+
+    readonly property real _usableScreenW: Math.max(400, _screenW - _leftChromeInset - _rightChromeInset)
+    readonly property real _usableScreenH: Math.max(300, _screenH - _topChromeInset - _bottomChromeInset)
+
     // Modal sized to the screenshot (logical px), clamped between the toolbar's
     // footprint and 90% of the screen; falls back to 90% until the image loads
     readonly property real _screenW: window.presentationScreen ? window.presentationScreen.width : (Quickshell.screens[0] ? Quickshell.screens[0].width : 1920)
     readonly property real _screenH: window.presentationScreen ? window.presentationScreen.height : (Quickshell.screens[0] ? Quickshell.screens[0].height : 1080)
-    readonly property real _maxModalW: Math.round((config.modalAspectRatio === "portrait" ? Math.min(_screenW, _screenH) : Math.max(_screenW, _screenH)) * 0.9)
-    readonly property real _maxModalH: Math.round((config.modalAspectRatio === "portrait" ? Math.max(_screenW, _screenH) : Math.min(_screenW, _screenH)) * 0.9)
+    readonly property real _maxModalW: Math.round((config.modalAspectRatio === "portrait" ? Math.min(_usableScreenW, _usableScreenH) : Math.max(_usableScreenW, _usableScreenH)) * 0.9)
+    readonly property real _maxModalH: Math.round((config.modalAspectRatio === "portrait" ? Math.max(_usableScreenW, _usableScreenH) : Math.min(_usableScreenW, _usableScreenH)) * 0.9)
     readonly property bool _toolbarHorizontal: window.toolbarPosition === "top" || window.toolbarPosition === "bottom"
     // Chrome = boardContainer margins plus the edge the toolbar occupies (56px rail + its margin)
     readonly property real _chromeW: Theme.spacingM * 2 + (window.toolbarVisible && !_toolbarHorizontal ? 56 + Theme.spacingM : 0)
@@ -1822,6 +1860,11 @@ Item {
     readonly property bool _shouldScale: !!(window.parentWidget && window.parentWidget.pluginData && window.parentWidget.pluginData.modalScaleToContent)
     modalWidth: _shouldScale && _bgSizeKnown ? Math.round(Helpers.clamp(window.bgImageItem.sourceSize.width / _outputScale + _chromeW, _minModalW, _maxModalW)) : _maxModalW
     modalHeight: _shouldScale && _bgSizeKnown ? Math.round(Helpers.clamp(window.bgImageItem.sourceSize.height / _outputScale + _chromeH, _minModalH, _maxModalH)) : _maxModalH
+    readonly property point modalCustomPosition: {
+        const posX = Math.round(_leftChromeInset + (_usableScreenW - modalWidth) / 2);
+        const posY = Math.round(_topChromeInset + (_usableScreenH - modalHeight) / 2);
+        return Qt.point(posX, posY);
+    }
     targetScreen: {
         const mode = config.modalDisplayTarget;
         const fallback = (Quickshell.screens && Quickshell.screens.length > 0) ? Quickshell.screens[0] : null;
