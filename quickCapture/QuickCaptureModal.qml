@@ -1842,11 +1842,11 @@ Item {
     readonly property real _usableScreenH: Math.max(300, _screenH - _topChromeInset - _bottomChromeInset)
 
     // Modal sized to the screenshot (logical px), clamped between the toolbar's
-    // footprint and 90% of the screen; falls back to 90% until the image loads
+    // footprint and 95% of the usable screen; falls back to 95% until the image loads
     readonly property real _screenW: window.presentationScreen ? window.presentationScreen.width : (Quickshell.screens[0] ? Quickshell.screens[0].width : 1920)
     readonly property real _screenH: window.presentationScreen ? window.presentationScreen.height : (Quickshell.screens[0] ? Quickshell.screens[0].height : 1080)
-    readonly property real _maxModalW: Math.round((config.modalAspectRatio === "portrait" ? Math.min(_usableScreenW, _usableScreenH) : Math.max(_usableScreenW, _usableScreenH)) * 0.9)
-    readonly property real _maxModalH: Math.round((config.modalAspectRatio === "portrait" ? Math.max(_usableScreenW, _usableScreenH) : Math.min(_usableScreenW, _usableScreenH)) * 0.9)
+    readonly property real _maxModalW: Math.round(_usableScreenW * 0.95)
+    readonly property real _maxModalH: Math.round(_usableScreenH * 0.95)
     readonly property bool _toolbarHorizontal: window.toolbarPosition === "top" || window.toolbarPosition === "bottom"
     // Chrome = boardContainer margins plus the edge the toolbar occupies (56px rail + its margin)
     readonly property real _chromeW: Theme.spacingM * 2 + (window.toolbarVisible && !_toolbarHorizontal ? 56 + Theme.spacingM : 0)
