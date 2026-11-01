@@ -17,6 +17,15 @@ PluginComponent {
 
     readonly property bool showHints: pluginData.showHints ?? true
 
+    readonly property bool isDock: root.surfaceContext?.kind === "dock"
+    readonly property int effectiveIconSize: isDock ? Math.max(root.iconSize, Math.round(root.widgetThickness * 0.65)) : (root.iconSize > 0 ? Math.max(root.iconSize, 24) : 24)
+    readonly property int effectiveTextSize: root.textSize > 0 ? root.textSize : Theme.fontSizeSmall
+
+    pillRightClickAction: () => {
+        root.forceSleep = !root.forceSleep;
+        if (root.forceSleep) root.isWaiting = true;
+    }
+
 
     property int catState: 0
     property bool leftWasLast: false
@@ -192,8 +201,13 @@ PluginComponent {
             return "primary";
         return "classic";
     }
-    readonly property string catCustomColor: (pluginData && pluginData.catCustomColor)
-        ? pluginData.catCustomColor : "primary"
+    readonly property string catCustomColor: {
+        const c = pluginData?.catCustomColor;
+        if (!c) return "primary";
+        if (typeof c === "string") return c;
+        if (typeof c === "object" && c.hex) return String(c.hex);
+        return "primary";
+    }
     readonly property color resolvedCatColor: {
         if (root.classicIdle && root.isWaiting)
             return Theme.surfaceText;
@@ -297,7 +311,7 @@ PluginComponent {
         id: metricsTicker
         interval: 1000
         repeat: true
-        running: root.showMetrics
+        running: root.showMetrics && root.surfaceLive
         onTriggered: root._pruneAndCompute()
     }
 
@@ -429,7 +443,7 @@ PluginComponent {
         id: blinkIntervalTimer
         interval: 6000 + Math.random() * 8000
         repeat: true
-        running: root.enableBlinking && !root.isWaiting
+        running: root.enableBlinking && !root.isWaiting && !root.forceSleep && root.surfaceLive
         onTriggered: {
             interval = 6000 + Math.random() * 8000;
             isBlinking = true;
@@ -524,8 +538,10 @@ PluginComponent {
 
     horizontalBarPill: Component {
         Item {
-            implicitWidth: pillContent.implicitWidth + Theme.spacingS
-            implicitHeight: Math.max(Theme.iconSize, pillContent.implicitHeight)
+            implicitWidth: root.isDock && !(root.showMetrics && root.metricsInBar)
+                ? root.effectiveIconSize
+                : Math.max(root.effectiveIconSize, pillContent.implicitWidth + (root.isDock ? 0 : Theme.spacingS))
+            implicitHeight: Math.max(root.effectiveIconSize, pillContent.implicitHeight)
 
             MouseArea {
                 id: clickArea
@@ -564,7 +580,7 @@ PluginComponent {
                 Text {
                     id: catLabel
                     font.family: bongoFont.name
-                    font.pixelSize: 24 * root.catSize
+                    font.pixelSize: Math.round(root.effectiveIconSize * root.catSize)
                     color: root.forceSleep ? Theme.surfaceVariantText : root.resolvedCatColor
                     opacity: root.forceSleep ? 0.5 : 1.0
                     text: root.forceSleep ? root.sleepGlyph : (root.isWaiting ? root.sleepGlyph : (root.isBlinking && root.catState === 0 ? root.blinkGlyph : root.glyphMap[root.catState]))
@@ -574,7 +590,7 @@ PluginComponent {
                 StyledText {
                     visible: root.showMetrics && root.metricsInBar
                     text: root.liveWpm + " · " + root.cleanPercent + "%"
-                    font.pixelSize: Theme.fontSizeSmall
+                    font.pixelSize: root.effectiveTextSize
                     color: root.forceSleep ? Theme.surfaceVariantText : Theme.surfaceText
                     opacity: root.forceSleep ? 0.5 : 1.0
                 }
@@ -583,7 +599,7 @@ PluginComponent {
             DIcon {
                 visible: root.inputBroken
                 name: "warning"
-                size: Theme.iconSizeSmall
+                size: Math.max(12, Math.round(root.effectiveIconSize * 0.6))
                 color: Theme.error
                 anchors.top: parent.top
                 anchors.right: parent.right
