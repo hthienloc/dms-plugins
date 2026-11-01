@@ -501,8 +501,17 @@ PluginComponent {
 
     Connections {
         target: PopoutService.controlCenterPopout
+        ignoreUnknownSignals: true
+        function onCloseAnimationFinished() {
+            if (root.waitingForControlCenterClose) {
+                Qt.callLater(() => root.startCaptureAfterControlCenterClose());
+            }
+        }
         function onPopoutClosed() {
-            root.startCaptureAfterControlCenterClose();
+            // If animation finishes or is disabled (e.g. reduceMotion), trigger after frame ticks
+            if (root.waitingForControlCenterClose && (!PopoutService.controlCenterPopout || !PopoutService.controlCenterPopout.shouldBeVisible)) {
+                Qt.callLater(() => root.startCaptureAfterControlCenterClose());
+            }
         }
     }
 
