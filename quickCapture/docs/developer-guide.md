@@ -113,6 +113,7 @@ DMS 2.0 allows widgets (`dankbar-widget`) to run identically in panels and docks
 - **Component size:** If a component grows past ~150 lines or is reused, extract it to `components/`.
 - **Keyboard handling:** All key events are intercepted at the root Modal via `modalFocusScope.Keys.onPressed` → `handleShortcutKey()`. Do not add `Keys.onPressed` handlers in child components.
 - **Colors:** Always use `Helpers.formatHexColor()` before storing colors to `pluginData`. Always use `Helpers.colorEquals(c1, c2, Qt)` for comparison — never raw `===` on color objects.
+- **Event-Driven UI Dismissal (`Qt.callLater`):** Never use arbitrary `Timer` delays to wait for UI surfaces (menus, popouts, context menus) to close before triggering screen capture. Instead, listen for the dismiss signal (e.g. `onRenderActiveChanged` on `DContextMenu` or `onCloseAnimationFinished` on `DPopout`), then schedule the action using `Qt.callLater(() => ...)` so it executes in the next event loop tick after the Wayland layer surface is unmapped.
 
 ---
 
