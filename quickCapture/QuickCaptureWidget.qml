@@ -129,7 +129,7 @@ PluginComponent {
                 type: "item",
                 icon: "folder_open",
                 text: I18n.trFor("quickCapture", "Select Image File"),
-                action: () => root.daemon?.selectFile("edit")
+                action: () => root.daemon?.selectImage("edit", false)
             },
             {
                 type: "separator"
