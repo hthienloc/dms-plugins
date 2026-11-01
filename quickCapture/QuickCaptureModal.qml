@@ -5210,7 +5210,7 @@ Item {
 
                 Canvas {
                     id: exportCanvas
-                    readonly property real exportDpr: Screen.devicePixelRatio || 1.0
+                    readonly property real exportDpr: window._outputScale
                     property int outputPixelWidth: 1
                     property int outputPixelHeight: 1
                     visible: true
