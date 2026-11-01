@@ -90,31 +90,31 @@ PluginComponent {
                 type: "item",
                 icon: "screenshot_region",
                 text: I18n.trFor("quickCapture", "Capture Region"),
-                action: () => root.daemon?.capture("region", "edit", "", false)
+                action: () => root.runAfterDockMenuClosed(() => root.daemon?.capture("region", "edit", "", false))
             },
             {
                 type: "item",
                 icon: "fullscreen",
                 text: I18n.trFor("quickCapture", "Capture Fullscreen"),
-                action: () => root.daemon?.capture("full", "edit", "", false)
+                action: () => root.runAfterDockMenuClosed(() => root.daemon?.capture("full", "edit", "", false))
             },
             {
                 type: "item",
                 icon: "crop_square",
                 text: I18n.trFor("quickCapture", "Capture Window"),
-                action: () => root.daemon?.capture("window", "edit", "", false)
+                action: () => root.runAfterDockMenuClosed(() => root.daemon?.capture("window", "edit", "", false))
             },
             {
                 type: "item",
                 icon: "restart_alt",
                 text: I18n.trFor("quickCapture", "Last Region"),
-                action: () => root.daemon?.capture("last", "edit", "", false)
+                action: () => root.runAfterDockMenuClosed(() => root.daemon?.capture("last", "edit", "", false))
             },
             {
                 type: "item",
                 icon: "history_toggle_off",
                 text: I18n.trFor("quickCapture", "Scrolling"),
-                action: () => root.daemon?.capture("scroll", "edit", "", false)
+                action: () => root.runAfterDockMenuClosed(() => root.daemon?.capture("scroll", "edit", "", false))
             },
             {
                 type: "separator"
@@ -123,13 +123,13 @@ PluginComponent {
                 type: "item",
                 icon: "content_paste",
                 text: I18n.trFor("quickCapture", "From Clipboard"),
-                action: () => root.daemon?.fromClipboard("edit")
+                action: () => root.runAfterDockMenuClosed(() => root.daemon?.fromClipboard("edit"))
             },
             {
                 type: "item",
                 icon: "folder_open",
                 text: I18n.trFor("quickCapture", "Select Image File"),
-                action: () => root.daemon?.selectImage("edit", false)
+                action: () => root.runAfterDockMenuClosed(() => root.daemon?.selectImage("edit", false))
             },
             {
                 type: "separator"
@@ -142,14 +142,14 @@ PluginComponent {
                     if (root.isRecording)
                         root.recorder?.stopRecording();
                     else
-                        root.daemon?.record("region", "", false);
+                        root.runAfterDockMenuClosed(() => root.daemon?.record("region", "", false));
                 }
             },
             {
                 type: "item",
                 icon: "video_settings",
                 text: I18n.trFor("quickCapture", "Record Fullscreen"),
-                action: () => root.daemon?.record("screen", "", false)
+                action: () => root.runAfterDockMenuClosed(() => root.daemon?.record("screen", "", false))
             },
             {
                 type: "separator"
@@ -164,16 +164,43 @@ PluginComponent {
                 type: "item",
                 icon: "history",
                 text: I18n.trFor("quickCapture", "Recent History"),
-                action: () => root.daemon?.showHistoryCarousel()
+                action: () => root.runAfterDockMenuClosed(() => root.daemon?.showHistoryCarousel())
             }
         ];
         return items;
+    }
+
+    property var pendingDockMenuAction: null
+
+    function runAfterDockMenuClosed(action) {
+        root.pendingDockMenuAction = action;
+        if (!dockContextMenu.renderActive) {
+            Qt.callLater(() => {
+                const act = root.pendingDockMenuAction;
+                root.pendingDockMenuAction = null;
+                if (act)
+                    act();
+            });
+        }
     }
 
     DContextMenu {
         id: dockContextMenu
         layerNamespace: "dms:quickcapture-context-menu"
         menuItems: []
+
+        onRenderActiveChanged: {
+            if (!renderActive && root.pendingDockMenuAction) {
+                // Wait for the next event loop tick after renderActive drops to false
+                // ensuring the Wayland layer surface is completely unmapped before capture.
+                Qt.callLater(() => {
+                    const action = root.pendingDockMenuAction;
+                    root.pendingDockMenuAction = null;
+                    if (action)
+                        action();
+                });
+            }
+        }
     }
 
     readonly property bool isDockWidget: root.surfaceContext?.kind === "dock"
