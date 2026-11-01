@@ -162,12 +162,26 @@ PluginComponent {
             }
             const anchor = root.pillAnchor();
             if (anchor) {
+                const edge = root.axis?.edge ?? "bottom";
+                const offset = Theme.spacingM;
+                let targetX = anchor.trigger.x + (root.isVertical ? 0 : anchor.trigger.width / 2);
+                let targetY = anchor.trigger.y + (root.isVertical ? anchor.trigger.width / 2 : 0);
+
+                if (edge === "bottom")
+                    targetY -= offset;
+                else if (edge === "top")
+                    targetY += offset;
+                else if (edge === "right")
+                    targetX -= offset;
+                else if (edge === "left")
+                    targetX += offset;
+
                 dockContextMenu.openFromBar({
                     screen: anchor.screen,
-                    x: anchor.trigger.x + (root.isVertical ? 0 : anchor.trigger.width / 2),
-                    y: anchor.trigger.y + (root.isVertical ? anchor.trigger.width / 2 : 0),
+                    x: targetX,
+                    y: targetY,
                     isVertical: root.isVertical,
-                    edge: root.axis?.edge ?? "bottom"
+                    edge: edge
                 });
                 return;
             }
