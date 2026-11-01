@@ -161,16 +161,11 @@ PluginComponent {
         captureDelayTimer.start();
     }
 
-    function startCaptureAfterControlCenterClose() {
-        if (!root.waitingForControlCenterClose)
-            return;
-        root.waitingForControlCenterClose = false;
-        captureDelayTimer.stop();
-        startActualCapture();
-    }
-
     function startActualCapture() {
-        root.waitingForControlCenterClose = false;
+        if (root.waitingForControlCenterClose) {
+            root.waitingForControlCenterClose = false;
+            captureDelayTimer.stop();
+        }
         const mode = root.pendingCaptureMode;
         const action = root.pendingCaptureAction;
         const timeout = mode === "scroll" ? root.scrollCaptureTimeoutMs : root.captureTimeoutMs;
@@ -491,12 +486,7 @@ PluginComponent {
     Timer {
         id: captureDelayTimer
         interval: Math.max(50, Theme.popoutAnimationDuration + 50)
-        onTriggered: {
-            if (root.waitingForControlCenterClose)
-                root.startCaptureAfterControlCenterClose();
-            else
-                root.startActualCapture();
-        }
+        onTriggered: root.startActualCapture()
     }
 
     Connections {
@@ -504,13 +494,13 @@ PluginComponent {
         ignoreUnknownSignals: true
         function onCloseAnimationFinished() {
             if (root.waitingForControlCenterClose) {
-                Qt.callLater(() => root.startCaptureAfterControlCenterClose());
+                Qt.callLater(() => root.startActualCapture());
             }
         }
         function onPopoutClosed() {
             // If animation finishes or is disabled (e.g. reduceMotion), trigger after frame ticks
             if (root.waitingForControlCenterClose && (!PopoutService.controlCenterPopout || !PopoutService.controlCenterPopout.shouldBeVisible)) {
-                Qt.callLater(() => root.startCaptureAfterControlCenterClose());
+                Qt.callLater(() => root.startActualCapture());
             }
         }
     }
