@@ -165,20 +165,6 @@ PluginComponent {
                 icon: "history",
                 text: I18n.trFor("quickCapture", "Recent History"),
                 action: () => root.daemon?.showHistoryCarousel()
-            },
-            {
-                type: "separator"
-            },
-            {
-                type: "item",
-                icon: "tune",
-                text: I18n.trFor("quickCapture", "More Options"),
-                action: () => {
-                    const oldClickAction = root.pillClickAction;
-                    root.pillClickAction = null;
-                    root.triggerPopout();
-                    root.pillClickAction = oldClickAction;
-                }
             }
         ];
         return items;
