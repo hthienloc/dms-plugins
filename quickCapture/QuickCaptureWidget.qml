@@ -83,9 +83,43 @@ PluginComponent {
         }
     }
 
+    function openWidgetPopout() {
+        surfaceContext?.ensureVisible(root);
+        if (usesAttachedExpansion && surfaceContext?.requestExpansion(root))
+            return;
+        if (hasPopout && positionPopout())
+            PopoutManager.requestPopout(pluginPopout, undefined, popoutTriggerId);
+    }
+
+    pillClickAction: function () {
+        if (root.surfaceContext?.kind === "dock") {
+            if (!root.daemon)
+                return;
+            if (root.isRecording) {
+                root.recorder?.stopRecording();
+                return;
+            }
+            if (root.widgetMode === "video") {
+                root.daemon.record("region", "", false);
+                return;
+            }
+            root.daemon.capture("region", "edit", "", false);
+            return;
+        }
+        root.openWidgetPopout();
+    }
+
     pillRightClickAction: function () {
         if (!root.daemon)
             return;
+        if (root.surfaceContext?.kind === "dock") {
+            if (root.isRecording) {
+                root.recorder?.cancelRecording();
+                return;
+            }
+            root.openWidgetPopout();
+            return;
+        }
         if (root.isRecording) {
             root.recorder.cancelRecording();
             return;
