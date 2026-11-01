@@ -87,6 +87,23 @@ onAnnotationsToggled: window.showAnnotations = !window.showAnnotations
 
 Floating overlays (menus, popovers) must be instantiated as direct children of the fullscreen `contentRoot`, not inside a toolbar button. Use `mapToItem(contentRoot, 0, 0)` to position them relative to the trigger button.
 
+### Bar and Dock Widget Host Adaptation
+
+DMS 2.0 allows widgets (`dankbar-widget`) to run identically in panels and docks (such as OmegaDock):
+- **Sizing & Metrics:**
+  - Never hardcode fixed sizes like `Theme.iconSizeSmall` (16px) or `Theme.iconSize` (24px) for pill icons. Docks generally run at 48px–64px thickness with `iconScale: 1.6`.
+  - Always bind icon dimensions to `root.iconSize` (or `root.iconSizeLarge` for prominent glyphs) and text to `root.textSize`.
+  - Pill containers should size `implicitWidth` and `implicitHeight` based on `icon.width` and `root.contentThickness` (or `iconSize`).
+- **Pills:** Provide both `horizontalBarPill` and `verticalBarPill` components.
+- **Surface Context:** Use `surfaceContext` (`kind`, `isVertical`, `thickness`, `live`, `inlineExpansion`, `dismissExpansion()`) to detect host environment (`surfaceContext?.kind === "dock"` vs `"bar"`).
+- **Popout vs `pillClickAction` Pitfall:**
+  - In `PluginComponent.qml`, `triggerPopout()` checks `if (pillClickAction) { runPillAction(pillClickAction); return; }`.
+  - **Caution:** If `pillClickAction` is assigned, calling `triggerPopout()` (e.g. from `pillRightClickAction`) will loop back into `pillClickAction` rather than opening the popout.
+  - To open the popout directly without triggering `pillClickAction`, call `PopoutManager.requestPopout(pluginPopout, undefined, popoutTriggerId)` after positioning with `positionPopout()`, or manage click routing inside the pill item.
+- **Surface Lifecycle:** Guard timers, listeners, and animations with `surfaceLive` (or `surfaceContext.live`) so they stop while a dock or bar is hidden.
+- **Attached Content:** Support `attachedContent` for inline expansion in docks when configured by the user, alongside `popoutContent`.
+- **Instance Safety:** Use `widgetInstanceId` when storing per-instance state, as multiple instances can exist across multiple bars and docks.
+
 ---
 
 ## 4. QML Coding Style

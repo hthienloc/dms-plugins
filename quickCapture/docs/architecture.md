@@ -17,7 +17,7 @@ DMS supports different plugin types (widget, daemon, launcher, desktop). Quick C
 | Component | Role & Lifecycle |
 | :--- | :--- |
 | **`QuickCaptureDaemon`** | Background service. Listens to IPC requests, triggers screenshot portal/Wayland capture, and manages recording backends. |
-| **`QuickCaptureWidget`** | DankBar panel widget. Provides left/right/middle click triggers, active recording indicators, and drag-and-drop file ingestion. |
+| **`QuickCaptureWidget`** | DankBar and Dock widget (`dankbar-widget`). Provides left/right/middle click triggers, active recording indicators, attached panel or popout menu, and drag-and-drop file ingestion across bars and docks. |
 | **`QuickCaptureModal`** | Fullscreen annotator window. Manages canvas layers, keyboard shortcuts, tool state, and mouse event routing. |
 | **`QuickCaptureSettings`** | Multi-tab settings panel for tool defaults, watermarks, radial presets, and keybindings. |
 | **`CaptureConfig`** | Shared configuration model for tool definitions, palette presets, and translation wrappers. |

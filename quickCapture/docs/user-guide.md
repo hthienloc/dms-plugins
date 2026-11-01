@@ -4,13 +4,13 @@
 
 | Action | Result |
 | --- | --- |
-| **Left Click** | Open the widget popout |
+| **Left Click** | Open the widget popout / attached dock panel |
 | **Middle Click** | Region capture |
 | **Right Click** | Paste from clipboard |
 | **Drop Image** | Drag an image onto the icon to annotate |
 | **<kbd>Print</kbd>** | Capture using the default mode |
 
-1. Trigger a capture from the bar icon, Control Center, or <kbd>Print</kbd>.
+1. Trigger a capture from the bar or dock icon, Control Center, or <kbd>Print</kbd>.
 2. Drag to select an area.
    Drag one of the four corner handles to resize the current selection.
    Hold <kbd>Ctrl</kbd> and drag with the left mouse button to move the current selection without resizing it.
