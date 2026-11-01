@@ -12,12 +12,13 @@ Item {
     readonly property bool isPaused: widget.isPaused
     readonly property string statusLocation: Defaults.get(widget.pluginData, "recordingStatusLocation")
     readonly property bool showRecordingStatus: root.isRecording && (root.statusLocation !== "floating")
+    readonly property int effectiveIconSize: root.widget.iconSize > 0 ? root.widget.iconSize : Theme.iconSizeSmall
     property bool draggingOver: false
 
     width: implicitWidth
     height: implicitHeight
-    implicitWidth: vertical ? Math.max(Theme.iconSizeSmall, layout.implicitWidth) : (showRecordingStatus ? layout.implicitWidth : Theme.iconSizeSmall)
-    implicitHeight: vertical ? layout.implicitHeight : Theme.iconSize
+    implicitWidth: vertical ? Math.max(effectiveIconSize, layout.implicitWidth) : (showRecordingStatus ? layout.implicitWidth : effectiveIconSize)
+    implicitHeight: vertical ? layout.implicitHeight : (root.widget.surfaceContext?.kind === "dock" ? root.effectiveIconSize : Theme.iconSize)
     anchors.verticalCenter: vertical ? undefined : parent.verticalCenter
     anchors.horizontalCenter: vertical ? parent.horizontalCenter : undefined
 
@@ -46,10 +47,10 @@ Item {
 
         DIcon {
             visible: !root.showRecordingStatus
-            width: visible ? Theme.iconSizeSmall : 0
-            implicitWidth: visible ? Theme.iconSizeSmall : 0
+            width: visible ? root.effectiveIconSize : 0
+            implicitWidth: visible ? root.effectiveIconSize : 0
             name: root.widget.isDownloading ? "download" : (root.widget.widgetMode === "video" || root.isRecording ? "videocam" : "screenshot_region")
-            size: Theme.iconSizeSmall
+            size: root.effectiveIconSize
             color: root.isRecording ? (root.isPaused ? Theme.warning : Theme.error) : (root.draggingOver || root.widget.isActive || root.widget.isDownloading ? Theme.primary : Theme.surfaceText)
         }
 
