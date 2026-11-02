@@ -21,6 +21,7 @@ DashCardComponent {
 
     readonly property var ambientVars: PluginService.globalVars[root.pluginId || "ambientSound"]
     readonly property int timerRemainingMs: Number(ambientVars?.ambientSoundTimerRemaining) || 0
+    readonly property int timerTargetMinutes: Number(ambientVars?.ambientSoundTimerTargetDuration) || 0
     readonly property bool isTimerActive: timerRemainingMs > 0
 
     function sendAction(actionObj) {
@@ -45,18 +46,13 @@ DashCardComponent {
     }
 
     function cycleSleepTimer() {
-        // Toggle through 15m -> 30m -> 60m -> cancel
-        if (!root.isTimerActive) {
+        // Toggle through 30m -> 60m -> cancel based on target duration
+        if (!root.isTimerActive || root.timerTargetMinutes <= 0) {
             sendAction({ type: "timerStart", minutes: 30 });
+        } else if (root.timerTargetMinutes <= 30) {
+            sendAction({ type: "timerStart", minutes: 60 });
         } else {
-            var currentMins = Math.round(root.timerRemainingMs / 60000);
-            if (currentMins <= 15) {
-                sendAction({ type: "timerStart", minutes: 30 });
-            } else if (currentMins <= 30) {
-                sendAction({ type: "timerStart", minutes: 60 });
-            } else {
-                sendAction({ type: "timerCancel" });
-            }
+            sendAction({ type: "timerCancel" });
         }
     }
 

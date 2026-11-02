@@ -90,6 +90,11 @@ DashTabComponent {
     property var localSoundVolumes: ({})
     property var pendingVolumeTimers: ({})
 
+    readonly property var backendSoundVolumes: root.pluginData?.soundVolumes || ({})
+    onBackendSoundVolumesChanged: {
+        localSoundVolumes = Object.assign({}, backendSoundVolumes);
+    }
+
     function getSoundVolume(soundId) {
         if (localSoundVolumes[soundId] !== undefined)
             return localSoundVolumes[soundId];
@@ -163,6 +168,14 @@ DashTabComponent {
                 sendAction({ type: "setMasterVolume", value: pendingVolume });
                 pendingVolume = -1;
             }
+        }
+    }
+
+    onMasterVolumeChanged: {
+        // If master volume changes externally, cancel pending local debounce to prevent stale override
+        if (masterVolumeDebounce.running) {
+            masterVolumeDebounce.stop();
+            masterVolumeDebounce.pendingVolume = -1;
         }
     }
 
@@ -707,6 +720,11 @@ DashTabComponent {
                     property bool isRenaming: false
                     readonly property int pageSize: 9 // 3 columns x 3 rows
                     readonly property int totalPages: Math.max(1, Math.ceil(root.visibleSounds.length / pageSize))
+                    onTotalPagesChanged: {
+                        if (currentPage >= totalPages) {
+                            currentPage = Math.max(0, totalPages - 1);
+                        }
+                    }
                     readonly property var currentSounds: {
                         const start = currentPage * pageSize;
                         return root.visibleSounds.slice(start, start + pageSize);
@@ -894,14 +912,14 @@ DashTabComponent {
                                 tileRadius: 14
                                 title: modelData.name.replace(/-/g, " ")
                                 iconName: modelData.icon
-                                active: root.isPlaying(modelData.name || modelData.id)
+                                active: root.isPlaying(modelData.id || modelData.name)
                                 activeColor: Theme.primary
                                 activeContentColor: Theme.primaryText
-                                volumeProgress: root.getSoundVolume(modelData.name || modelData.id) / 100.0
+                                volumeProgress: root.getSoundVolume(modelData.id || modelData.name) / 100.0
 
-                                onClicked: root.toggleSound(modelData.name || modelData.id)
-                                onScrollUp: root.bumpSoundVolume(modelData.name || modelData.id, 5)
-                                onScrollDown: root.bumpSoundVolume(modelData.name || modelData.id, -5)
+                                onClicked: root.toggleSound(modelData.id || modelData.name)
+                                onScrollUp: root.bumpSoundVolume(modelData.id || modelData.name, 5)
+                                onScrollDown: root.bumpSoundVolume(modelData.id || modelData.name, -5)
                             }
                         }
                     }
@@ -1120,7 +1138,7 @@ DashTabComponent {
                                         height: Theme.buttonHeightXXS
                                         radius: Theme.fullRadius(Theme.buttonHeightXXS, Theme.buttonHeightXXS)
                                         buttonHeight: Theme.buttonHeightXXS
-                                        text: modelData + "m"
+                                        text: I18n.trFor("ambientSound", "%1m").arg(modelData)
                                         backgroundColor: (root.isTimerActive && Math.round(root.timerRemainingMs / 60000) === modelData) ? Theme.primary : Theme.surfaceContainerHigh
                                         textColor: (root.isTimerActive && Math.round(root.timerRemainingMs / 60000) === modelData) ? Theme.primaryText : Theme.surfaceText
                                         onClicked: root.startSleepTimer(modelData)
@@ -1216,7 +1234,7 @@ DashTabComponent {
                             containerColor: Theme.secondaryContainer
                             contentColor: Theme.onSecondaryContainer
                             anchors.verticalCenter: parent.verticalCenter
-                            tooltipText: root.isTimerActive ? Math.ceil(root.timerRemainingMs / 60000) + "m left" : I18n.trFor("ambientSound", "Sleep Timer")
+                            tooltipText: root.isTimerActive ? I18n.trFor("ambientSound", "%1m left").arg(Math.ceil(root.timerRemainingMs / 60000)) : I18n.trFor("ambientSound", "Sleep Timer")
                             onClicked: root.timerOpen = !root.timerOpen
                         }
                     }

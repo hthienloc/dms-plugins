@@ -24,19 +24,11 @@
       "title": "Ambient Sounds",
       "w": 2,
       "h": 1,
-      "minW": 1,
+      "minW": 2,
       "minH": 1,
       "maxW": 4,
       "maxH": 2
-    },
-    "options": [
-      {
-        "key": "compact",
-        "text": "Compact layout",
-        "type": "toggle",
-        "def": false
-      }
-    ]
+    }
   },
   "settings": "./AmbientSettings.qml",
   "permissions": [
