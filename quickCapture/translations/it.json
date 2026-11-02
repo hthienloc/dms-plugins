@@ -161,8 +161,17 @@
   "Capture Actions": {
     "Capture Actions": "Azioni di cattura"
   },
+  "Capture Fullscreen": {
+    "Capture Fullscreen": ""
+  },
   "Capture Options": {
     "Capture Options": "Opzioni di cattura"
+  },
+  "Capture Region": {
+    "Capture Region": ""
+  },
+  "Capture Window": {
+    "Capture Window": ""
   },
   "Capturing...": {
     "Capturing...": "Cattura in corso..."
@@ -431,6 +440,9 @@
   "Free": {
     "Free": "Libero"
   },
+  "From Clipboard": {
+    "From Clipboard": ""
+  },
   "Fullscreen": {
     "Fullscreen": "Schermo intero"
   },
@@ -611,6 +623,9 @@
   "Modal": {
     "Modal": "Modale"
   },
+  "More Options": {
+    "More Options": ""
+  },
   "More Tools": {
     "More Tools": "Altri strumenti"
   },
@@ -685,6 +700,9 @@
   },
   "Open %1 menu (Popout)": {
     "Open %1 menu (Popout)": "Apri il menu %1 (Pannello a comparsa)"
+  },
+  "Open Captures Folder": {
+    "Open Captures Folder": ""
   },
   "Open Image": {
     "Open Image": "Apri immagine"
@@ -809,8 +827,20 @@
   "Recent Edits": {
     "Recent Edits": "Modifiche recenti"
   },
+  "Recent History": {
+    "Recent History": ""
+  },
+  "Record Fullscreen": {
+    "Record Fullscreen": ""
+  },
   "Record Microphone": {
     "Record Microphone": "Registra il microfono"
+  },
+  "Record Region": {
+    "Record Region": ""
+  },
+  "Record Screen": {
+    "Record Screen": ""
   },
   "Record System Audio": {
     "Record System Audio": "Registra l'audio di sistema"
@@ -965,6 +995,9 @@
   "Select Color Slots %1": {
     "Select Color Slots %1": "Seleziona slot colore %1"
   },
+  "Select Image File": {
+    "Select Image File": ""
+  },
   "Select Image to Annotate": {
     "Select Image to Annotate": "Seleziona immagine da annotare"
   },
@@ -1069,6 +1102,9 @@
   },
   "Stop & Save": {
     "Stop & Save": "Ferma e salva"
+  },
+  "Stop Recording": {
+    "Stop Recording": ""
   },
   "Surface Container Highest": {
     "Surface Container Highest": "Contenitore superficie più alto"

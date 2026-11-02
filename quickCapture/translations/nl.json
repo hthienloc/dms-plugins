@@ -161,8 +161,17 @@
   "Capture Actions": {
     "Capture Actions": "Vastlegacties"
   },
+  "Capture Fullscreen": {
+    "Capture Fullscreen": ""
+  },
   "Capture Options": {
     "Capture Options": "Vastlegopties"
+  },
+  "Capture Region": {
+    "Capture Region": ""
+  },
+  "Capture Window": {
+    "Capture Window": ""
   },
   "Capturing...": {
     "Capturing...": "Vastleggen..."
@@ -431,6 +440,9 @@
   "Free": {
     "Free": "Vrij"
   },
+  "From Clipboard": {
+    "From Clipboard": ""
+  },
   "Fullscreen": {
     "Fullscreen": "Volledig scherm"
   },
@@ -611,6 +623,9 @@
   "Modal": {
     "Modal": "Modaal"
   },
+  "More Options": {
+    "More Options": ""
+  },
   "More Tools": {
     "More Tools": "Meer hulpmiddelen"
   },
@@ -685,6 +700,9 @@
   },
   "Open %1 menu (Popout)": {
     "Open %1 menu (Popout)": "Menu %1 openen (uitklappaneel)"
+  },
+  "Open Captures Folder": {
+    "Open Captures Folder": ""
   },
   "Open Image": {
     "Open Image": "Afbeelding openen"
@@ -809,8 +827,20 @@
   "Recent Edits": {
     "Recent Edits": "Recente bewerkingen"
   },
+  "Recent History": {
+    "Recent History": ""
+  },
+  "Record Fullscreen": {
+    "Record Fullscreen": ""
+  },
   "Record Microphone": {
     "Record Microphone": "Microfoon opnemen"
+  },
+  "Record Region": {
+    "Record Region": ""
+  },
+  "Record Screen": {
+    "Record Screen": ""
   },
   "Record System Audio": {
     "Record System Audio": "Systeemaudio opnemen"
@@ -965,6 +995,9 @@
   "Select Color Slots %1": {
     "Select Color Slots %1": "Kleurvakken %1 selecteren"
   },
+  "Select Image File": {
+    "Select Image File": ""
+  },
   "Select Image to Annotate": {
     "Select Image to Annotate": "Afbeelding selecteren om te annoteren"
   },
@@ -1069,6 +1102,9 @@
   },
   "Stop & Save": {
     "Stop & Save": "Stoppen & opslaan"
+  },
+  "Stop Recording": {
+    "Stop Recording": ""
   },
   "Surface Container Highest": {
     "Surface Container Highest": "Surface Container Highest"
