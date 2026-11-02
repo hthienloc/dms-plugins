@@ -16,13 +16,16 @@ Rectangle {
     property color textColor: Theme.surfaceText
     property real titleFontSize: Theme.fontSizeSmall
     property real volumeProgress: 0.0 // from 0.0 to 1.0
+    property real arcSize: 44
+    property real iconSize: 22
+    property real tileRadius: 16
 
     signal clicked()
     signal pressAndHold()
     signal scrollUp()
     signal scrollDown()
 
-    radius: 16
+    radius: root.tileRadius
     color: root.active
         ? root.activeColor
         : (tileMouse.containsMouse ? Theme.surfaceContainerHighest : Theme.surfaceContainerHigh)
@@ -42,8 +45,8 @@ Rectangle {
 
         Item {
             id: arcContainer
-            width: 48
-            height: 48
+            width: root.arcSize
+            height: root.arcSize
             anchors.horizontalCenter: parent.horizontalCenter
 
             Canvas {
@@ -59,7 +62,7 @@ Rectangle {
                     var cx = width / 2;
                     var cy = height / 2;
                     var radius = (Math.min(width, height) - 6) / 2;
-                    var lw = 3.5;
+                    var lw = Math.max(2.5, root.arcSize * 0.075);
 
                     var startAngle = Math.PI * 0.75; // 135 deg (bottom-left)
                     var endAngle = Math.PI * 2.25;   // 405 deg (bottom-right)
@@ -95,7 +98,7 @@ Rectangle {
 
             DIcon {
                 name: root.iconName
-                size: 22
+                size: root.iconSize
                 anchors.centerIn: parent
                 color: root.active ? root.activeContentColor : Theme.surfaceVariantText
             }

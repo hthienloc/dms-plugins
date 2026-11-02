@@ -5,6 +5,7 @@ import qs.Common
 import qs.Services
 import qs.DCommon.Widgets
 import qs.Modules.Plugins
+import qs.Widgets
 import "./shared"
 
 
@@ -155,6 +156,24 @@ PluginComponent {
     property bool isMuted: false
     property bool showVolumeIndicator: false
 
+    PluginGlobalVar {
+        id: dashAction
+        varName: "ambientSoundDashAction"
+        defaultValue: ""
+    }
+
+    PluginGlobalVar {
+        id: timerRemainingVar
+        varName: "ambientSoundTimerRemaining"
+        defaultValue: 0
+    }
+
+    PluginGlobalVar {
+        id: timerTargetDurationVar
+        varName: "ambientSoundTimerTargetDuration"
+        defaultValue: 0
+    }
+
     Timer {
         id: volumeIndicatorTimer
         interval: 1200
@@ -167,6 +186,15 @@ PluginComponent {
         return (individual / 100) * (root.isMuted ? 0 : root.masterVolume);
     }
 
+    function persistRuntimeState() {
+        if (pluginService) {
+            pluginService.savePluginData(root.pluginId, "playingSounds", playingSounds.slice());
+            pluginService.savePluginData(root.pluginId, "masterVolume", root.masterVolume);
+            pluginService.savePluginData(root.pluginId, "isMuted", root.isMuted);
+            pluginService.savePluginData(root.pluginId, "selectedPreset", root.activePresetName);
+        }
+    }
+
     function setSoundVolume(sound, vol) {
         var volumes = Object.assign({}, soundVolumes);
         volumes[sound] = vol;
@@ -174,6 +202,7 @@ PluginComponent {
         pluginService.savePluginData(root.pluginId, "soundVolumes", soundVolumes);
         var session = activeSessions[sound];
         if (session) session.applyVolume(getEffectiveVolume(sound));
+        persistRuntimeState();
     }
 
     // Preset state
@@ -191,10 +220,12 @@ PluginComponent {
         } else {
             if (root.lastPlayingSounds.length > 0) {
                 var toPlay = root.lastPlayingSounds.slice();
+                var started = [];
                 for (var i = 0; i < toPlay.length; i++) {
-                    root.startSound(toPlay[i]);
+                    if (root.startSound(toPlay[i])) started.push(toPlay[i]);
                 }
-                root.playingSounds = toPlay;
+                root.playingSounds = started;
+                root.persistRuntimeState();
             } else if (root.selectedPresetIndex >= 0 && root.selectedPresetIndex < root.presets.length) {
                 root.loadPreset(root.presets[root.selectedPresetIndex]);
             } else if (root.presets.length > 0) {
@@ -209,7 +240,7 @@ PluginComponent {
 
     function savePreset() {
         if (playingSounds.length === 0) {
-            ToastService.showError(I18n.tr("Play some sounds first to save as preset!"));
+            ToastService.showError(I18n.trFor("ambientSound", "Play some sounds first to save as preset!"));
             return;
         }
         var newPresets = presets.slice();
@@ -223,20 +254,58 @@ PluginComponent {
         pluginService.savePluginData(root.pluginId, "presets", newPresets);
         selectedPresetIndex = newPresets.length - 1;
         activePresetName = presetName;
-        ToastService.showInfo(I18n.tr("Saved ") + presetName);
+        persistRuntimeState();
+        ToastService.showInfo(I18n.trFor("ambientSound", "Saved %1").arg(presetName));
     }
 
     function loadPreset(preset) {
         activePresetName = preset.name;
-        stopAll(() => {
-            root.isMuted = false;
-            root.masterVolume = preset.volume;
-            var startedSounds = [];
-            for (var i = 0; i < preset.sounds.length; i++) {
-                if (root.startSound(preset.sounds[i])) startedSounds.push(preset.sounds[i]);
+        root.isMuted = false;
+        root.masterVolume = preset.volume;
+
+        var targetSounds = preset.sounds || [];
+        var toStop = [];
+        var toStart = [];
+
+        // 1. Identify sounds to stop (sounds currently playing but not in the new preset)
+        for (var i = 0; i < root.playingSounds.length; i++) {
+            var cur = root.playingSounds[i];
+            if (targetSounds.indexOf(cur) < 0) {
+                toStop.push(cur);
             }
-            root.playingSounds = startedSounds;
-        });
+        }
+
+        // 2. Identify sounds to start (sounds in new preset not yet playing)
+        for (var j = 0; j < targetSounds.length; j++) {
+            var tgt = targetSounds[j];
+            if (root.playingSounds.indexOf(tgt) < 0) {
+                toStart.push(tgt);
+            }
+        }
+
+        // 3. Stop unneeded sounds immediately
+        for (var s = 0; s < toStop.length; s++) {
+            root.stopSound(toStop[s]);
+        }
+
+        // 4. Start new sounds directly without killing shared ones
+        var startedSounds = [];
+        for (var k = 0; k < root.playingSounds.length; k++) {
+            var existingSound = root.playingSounds[k];
+            if (targetSounds.indexOf(existingSound) >= 0) {
+                startedSounds.push(existingSound);
+            }
+        }
+        for (var a = 0; a < toStart.length; a++) {
+            if (root.startSound(toStart[a])) {
+                startedSounds.push(toStart[a]);
+            }
+        }
+
+        // 5. Update state seamlessly with only successfully started sounds
+        root.playingSounds = startedSounds;
+        root.updateAllVolumes();
+        root.persistRuntimeState();
     }
 
     function togglePresetByName(presetName) {
@@ -311,7 +380,8 @@ PluginComponent {
                 presets = newPresets;
                 pluginService.savePluginData(root.pluginId, "presets", newPresets);
                 activePresetName = trimmed;
-                ToastService.showInfo(I18n.tr("Preset overwritten: ") + trimmed);
+                persistRuntimeState();
+                ToastService.showInfo(I18n.trFor("ambientSound", "Preset overwritten: %1").arg(trimmed));
             } else {
                 var isSameName = (newPresets[index].name.toLowerCase() === trimmed.toLowerCase());
                 newPresets[index] = {
@@ -322,10 +392,11 @@ PluginComponent {
                 presets = newPresets;
                 pluginService.savePluginData(root.pluginId, "presets", newPresets);
                 activePresetName = trimmed;
+                persistRuntimeState();
                 if (isSameName) {
-                    ToastService.showInfo(I18n.tr("Preset overwritten: ") + trimmed);
+                    ToastService.showInfo(I18n.trFor("ambientSound", "Preset overwritten: %1").arg(trimmed));
                 } else {
-                    ToastService.showInfo(I18n.tr("Preset renamed to ") + trimmed);
+                    ToastService.showInfo(I18n.trFor("ambientSound", "Preset renamed to %1").arg(trimmed));
                 }
             }
         }
@@ -346,7 +417,15 @@ PluginComponent {
             ToastService.showError("Install mpv or ffplay for playback.");
             return false;
         }
-        if (activeSessions[sound]) return true;
+        var existingSession = activeSessions[sound];
+        if (existingSession) {
+            if (!existingSession.stopping) {
+                return true;
+            }
+            // If existing session is in the process of stopping, destroy it immediately so a new one starts cleanly
+            existingSession.destroy();
+            delete activeSessions[sound];
+        }
 
         var soundData = getSound(sound);
         if (!soundData) {
@@ -393,6 +472,7 @@ PluginComponent {
             var list = playingSounds.slice();
             list.splice(idx, 1);
             playingSounds = list;
+            persistRuntimeState();
         }
 
         if (!session.stopping && exitCode !== 0) {
@@ -422,6 +502,7 @@ PluginComponent {
     function toggleMute() {
         isMuted = !isMuted;
         updateAllVolumes();
+        persistRuntimeState();
     }
     
     function toggleSound(sound) {
@@ -441,11 +522,13 @@ PluginComponent {
                 playingSounds = list;
             }
         }
+        persistRuntimeState();
     }
 
     function stopAll(callback) {
         playingSounds = [];
         isMuted = false;
+        persistRuntimeState();
         if (callback) stopCallbacks = stopCallbacks.concat([callback]);
 
         var sessionIds = Object.keys(activeSessions);
@@ -488,6 +571,177 @@ PluginComponent {
             root.masterVolume = newVol;
             if (newVol > 0 && root.isMuted) root.isMuted = false;
             updateAllVolumes();
+            persistRuntimeState();
+        }
+    }
+
+    function processDashAction(payload) {
+        if (!payload)
+            return;
+        switch (payload.type) {
+        case "toggleSound":
+            root.toggleSound(payload.sound);
+            break;
+        case "adjustSoundVolume":
+            if (payload.sound) {
+                var current = root.soundVolumes[payload.sound] !== undefined ? root.soundVolumes[payload.sound] : 100;
+                root.setSoundVolume(payload.sound, Math.max(0, Math.min(100, current + (payload.delta || 0))));
+            }
+            break;
+        case "setMasterVolume":
+            root.masterVolume = Math.max(0, Math.min(100, Number(payload.value) || 0));
+            if (root.masterVolume > 0 && root.isMuted) root.isMuted = false;
+            root.updateAllVolumes();
+            root.persistRuntimeState();
+            break;
+        case "toggleMute":
+            root.toggleMute();
+            break;
+        case "togglePlayPause":
+            root.togglePlayPause();
+            break;
+        case "stopAll":
+            root.stopAll();
+            break;
+        case "loadPreset":
+            var presetIdx = -1;
+            for (var lpi = 0; lpi < root.presets.length; lpi++) {
+                if (root.presets[lpi].name === payload.name) {
+                    presetIdx = lpi;
+                    break;
+                }
+            }
+            if (presetIdx >= 0) {
+                root.selectedPresetIndex = presetIdx;
+                root.loadPreset(root.presets[presetIdx]);
+            }
+            break;
+        case "saveNewPreset":
+            if (root.playingSounds.length === 0) {
+                ToastService.showError(I18n.trFor("ambientSound", "Play some sounds first to save as preset!"));
+                break;
+            }
+            if (payload.name && payload.name.trim() !== "") {
+                var trimmed = payload.name.trim();
+                var exists = false;
+                for (var exi = 0; exi < root.presets.length; exi++) {
+                    if (root.presets[exi].name.toLowerCase() === trimmed.toLowerCase()) {
+                        exists = true;
+                        break;
+                    }
+                }
+                if (exists) {
+                    ToastService.showWarning(I18n.trFor("ambientSound", "A preset named \"%1\" already exists.").arg(trimmed));
+                    break;
+                }
+                var newPresets = root.presets.slice();
+                newPresets.push({
+                    name: trimmed,
+                    sounds: root.playingSounds.slice(),
+                    volume: root.masterVolume
+                });
+                root.presets = newPresets;
+                pluginService.savePluginData(root.pluginId, "presets", newPresets);
+                root.selectedPresetIndex = newPresets.length - 1;
+                root.activePresetName = trimmed;
+                root.persistRuntimeState();
+                ToastService.showInfo(I18n.trFor("ambientSound", "Preset saved: %1").arg(trimmed));
+            } else {
+                root.savePreset();
+            }
+            break;
+        case "renamePreset":
+            var oldName = payload.oldName || root.activePresetName;
+            var newName = payload.newName;
+            var rIdx = -1;
+            for (var ri = 0; ri < root.presets.length; ri++) {
+                if (root.presets[ri].name === oldName) {
+                    rIdx = ri;
+                    break;
+                }
+            }
+            if (rIdx >= 0 && newName && newName.trim() !== "") {
+                root.renamePreset(rIdx, newName.trim());
+                root.persistRuntimeState();
+            } else if (root.selectedPresetIndex >= 0 && newName && newName.trim() !== "") {
+                root.renamePreset(root.selectedPresetIndex, newName.trim());
+                root.persistRuntimeState();
+            }
+            break;
+        case "overwritePreset":
+            var targetName = payload.name || root.activePresetName;
+            var targetIdx = -1;
+            for (var pi = 0; pi < root.presets.length; pi++) {
+                if (root.presets[pi].name === targetName) {
+                    targetIdx = pi;
+                    break;
+                }
+            }
+            if (targetIdx >= 0) {
+                var newPresets = root.presets.slice();
+                newPresets[targetIdx] = {
+                    name: targetName,
+                    sounds: root.playingSounds.slice(),
+                    volume: root.masterVolume
+                };
+                root.presets = newPresets;
+                pluginService.savePluginData(root.pluginId, "presets", newPresets);
+                root.selectedPresetIndex = targetIdx;
+                root.activePresetName = targetName;
+                root.persistRuntimeState();
+                ToastService.showInfo(I18n.trFor("ambientSound", "Preset overwritten: %1").arg(targetName));
+            } else {
+                ToastService.showWarning(I18n.trFor("ambientSound", "No preset selected to overwrite."));
+            }
+            break;
+        case "deletePreset":
+            var delName = payload.name || root.activePresetName;
+            var delIdx = -1;
+            for (var di = 0; di < root.presets.length; di++) {
+                if (root.presets[di].name === delName) {
+                    delIdx = di;
+                    break;
+                }
+            }
+            if (delIdx >= 0) {
+                root.deletePreset(delIdx);
+                root.persistRuntimeState();
+                ToastService.showInfo(I18n.trFor("ambientSound", "Preset deleted: %1").arg(delName));
+            }
+            break;
+        case "timerStart":
+            var tMins = Number(payload.minutes || 30);
+            sleepTimer.interval = tMins * 60 * 1000;
+            sleepTimer.remainingTime = sleepTimer.interval;
+            timerRemainingVar.set(sleepTimer.remainingTime);
+            timerTargetDurationVar.set(tMins);
+            sleepTimer.start();
+            break;
+        case "timerCancel":
+            sleepTimer.stop();
+            sleepTimer.remainingTime = 0;
+            timerRemainingVar.set(0);
+            timerTargetDurationVar.set(0);
+            break;
+        case "toggleWhenDone":
+            root.toggleWhenDoneAction(payload.value);
+            break;
+        }
+    }
+
+    Connections {
+        target: dashAction
+        onValueChanged: {
+            var raw = dashAction.value;
+            if (!raw)
+                return;
+            try {
+                var payload = JSON.parse(raw);
+                root.processDashAction(payload);
+            } catch (e) {
+                console.warn("[ambientSound] Invalid dash action:", raw, e);
+            }
+            dashAction.set("");
         }
     }
 
@@ -518,6 +772,8 @@ PluginComponent {
                 if (minutes > 0) {
                     sleepTimer.interval = minutes * 60 * 1000;
                     sleepTimer.remainingTime = minutes * 60 * 1000;
+                    timerRemainingVar.set(sleepTimer.remainingTime);
+                    timerTargetDurationVar.set(minutes);
                     sleepTimer.start();
                 }
             }
@@ -527,9 +783,12 @@ PluginComponent {
     Timer {
         id: sleepTimer
         property int remainingTime: 0
+        onRemainingTimeChanged: timerRemainingVar.set(remainingTime)
         onTriggered: {
             executeWhenDone();
             remainingTime = 0;
+            timerRemainingVar.set(0);
+            timerTargetDurationVar.set(0);
         }
     }
 
@@ -541,6 +800,7 @@ PluginComponent {
             } else if (action === "mute") {
                 root.isMuted = true;
                 root.updateAllVolumes();
+                root.persistRuntimeState();
             } else if (action === "lock") {
                 Proc.runCommand("lock-screen", ["loginctl", "lock-session"], null, 0);
             } else if (action === "suspend") {
@@ -560,6 +820,11 @@ PluginComponent {
     }
 
     Component.onCompleted: {
+        // Clear stale saved playback state on fresh widget initialization if not autostarting
+        persistRuntimeState();
+        timerRemainingVar.set(0);
+        timerTargetDurationVar.set(0);
+
         autoStartTimer.start();
         // Initialize default preset only once
         if (pluginData.hasInitializedPresets === undefined) {
@@ -950,6 +1215,7 @@ PluginComponent {
                                         root.masterVolume = v;
                                         if (v > 0 && root.isMuted) root.isMuted = false;
                                         root.updateAllVolumes();
+                                        root.persistRuntimeState();
                                     }
                                 }
 
@@ -1077,6 +1343,8 @@ PluginComponent {
                                         var ms = modelData.minutes * 60 * 1000;
                                         sleepTimer.interval = ms;
                                         sleepTimer.remainingTime = ms;
+                                        timerRemainingVar.set(ms);
+                                        timerTargetDurationVar.set(Math.round(ms / 60000));
                                         sleepTimer.start();
                                         root.timerDropdownOpen = false;
                                     }
@@ -1112,7 +1380,12 @@ PluginComponent {
                                 height: Theme.buttonHeightXS
                                 backgroundColor: Theme.surfaceContainerHighest
                                 textColor: Theme.surfaceText
-                                onClicked: sleepTimer.stop()
+                                onClicked: {
+                                    sleepTimer.stop();
+                                    sleepTimer.remainingTime = 0;
+                                    timerRemainingVar.set(0);
+                                    timerTargetDurationVar.set(0);
+                                }
                             }
                         }
 

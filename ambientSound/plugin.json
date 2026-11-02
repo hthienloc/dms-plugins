@@ -7,11 +7,29 @@
   "license": "GPL-3.0",
   "author": "Loc Huynh",
   "icon": "music_note",
-  "type": "widget",
+  "type": "composite",
   "capabilities": [
-    "dankbar-widget"
+    "dankbar-widget",
+    "dash-tab",
+    "dash-card"
   ],
-  "component": "./AmbientWidget.qml",
+  "components": {
+    "widget": "./AmbientWidget.qml",
+    "dash": "./DashTab.qml",
+    "dashCard": "./DashCard.qml"
+  },
+  "dash": {
+    "title": "Ambient Sounds",
+    "card": {
+      "title": "Ambient Sounds",
+      "w": 2,
+      "h": 1,
+      "minW": 2,
+      "minH": 1,
+      "maxW": 4,
+      "maxH": 2
+    }
+  },
   "settings": "./AmbientSettings.qml",
   "permissions": [
     "settings_read",
