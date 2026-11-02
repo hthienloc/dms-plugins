@@ -345,6 +345,32 @@ PluginComponent {
     readonly property string soundProfile: (pluginData && pluginData.soundProfile !== undefined ? pluginData.soundProfile : "bongo")
     readonly property real _soundVol: Math.max(0, Math.min(1, soundVolume / 100))
 
+    readonly property string catSkin: (pluginData && pluginData.catSkin !== undefined ? pluginData.catSkin : "classic")
+    readonly property var skinOptions: [I18n.tr("Classic (Vector)"), I18n.tr("Pixel Doodle")]
+    function skinToLabel(s) {
+        if (s === "pixel") return I18n.tr("Pixel Doodle");
+        return I18n.tr("Classic (Vector)");
+    }
+    function labelToSkin(l) {
+        if (l === I18n.tr("Pixel Doodle")) return "pixel";
+        return "classic";
+    }
+
+    readonly property var pixelSpriteMap: [
+        "./assets/skins/pixel/idle@4x.png",
+        "./assets/skins/pixel/left@4x.png",
+        "./assets/skins/pixel/right@4x.png",
+        "./assets/skins/pixel/both@4x.png"
+    ]
+    readonly property string pixelBlinkSprite: "./assets/skins/pixel/blink@4x.png"
+    readonly property string pixelSleepSprite: "./assets/skins/pixel/sleep@4x.png"
+
+    readonly property string activeSpriteSource: {
+        if (root.forceSleep || root.isWaiting) return pixelSleepSprite;
+        if (root.isBlinking && root.catState === 0) return pixelBlinkSprite;
+        return pixelSpriteMap[root.catState] || pixelSpriteMap[0];
+    }
+
     function playClick(isBigHit) {
         if (!soundEnabled || forceSleep)
             return;
@@ -577,14 +603,36 @@ PluginComponent {
                 horizontalItemAlignment: Grid.AlignHCenter
                 verticalItemAlignment: Grid.AlignVCenter
 
-                Text {
-                    id: catLabel
-                    font.family: bongoFont.name
-                    font.pixelSize: Math.round(root.effectiveIconSize * root.catSize)
-                    color: root.forceSleep ? Theme.surfaceVariantText : root.resolvedCatColor
-                    opacity: root.forceSleep ? 0.5 : 1.0
-                    text: root.forceSleep ? root.sleepGlyph : (root.isWaiting ? root.sleepGlyph : (root.isBlinking && root.catState === 0 ? root.blinkGlyph : root.glyphMap[root.catState]))
-                    transform: Translate { y: root.catYOffset }
+                Item {
+                    id: catContainer
+                    width: root.catSkin === "pixel" ? Math.round(root.effectiveIconSize * root.catSize * 1.25) : catLabel.implicitWidth
+                    height: root.catSkin === "pixel" ? Math.round(root.effectiveIconSize * root.catSize) : catLabel.implicitHeight
+
+                    Text {
+                        id: catLabel
+                        visible: root.catSkin !== "pixel"
+                        anchors.centerIn: parent
+                        font.family: bongoFont.name
+                        font.pixelSize: Math.round(root.effectiveIconSize * root.catSize)
+                        color: root.forceSleep ? Theme.surfaceVariantText : root.resolvedCatColor
+                        opacity: root.forceSleep ? 0.5 : 1.0
+                        text: root.forceSleep ? root.sleepGlyph : (root.isWaiting ? root.sleepGlyph : (root.isBlinking && root.catState === 0 ? root.blinkGlyph : root.glyphMap[root.catState]))
+                        transform: Translate { y: root.catYOffset }
+                    }
+
+                    Image {
+                        id: catPixelSprite
+                        visible: root.catSkin === "pixel"
+                        anchors.centerIn: parent
+                        width: parent.width
+                        height: parent.height
+                        fillMode: Image.PreserveAspectFit
+                        smooth: false
+                        mipmap: false
+                        opacity: root.forceSleep ? 0.5 : 1.0
+                        source: root.activeSpriteSource
+                        transform: Translate { y: root.catYOffset }
+                    }
                 }
 
                 StyledText {
@@ -703,17 +751,10 @@ PluginComponent {
                         }
 
                         // The Big Cat
-                        Text {
+                        Item {
                             anchors.centerIn: parent
-                            font.family: bongoFont.name
-                            font.pixelSize: Theme.fontSizeXLarge * 4
-                            font.letterSpacing: -2
-                            color: root.catColorMode === "classic"
-                                ? (popout.isActive ? Theme.onPrimaryContainer : Theme.surfaceText)
-                                : root.resolvedCatColor
-                            text: root.forceSleep
-                                ? root.sleepGlyph
-                                : (!popout.isActive ? root.sleepGlyph : (root.isBlinking && root.catState === 0 ? root.blinkGlyph : root.glyphMap[root.catState]))
+                            width: root.catSkin === "pixel" ? 140 : bigCatText.implicitWidth
+                            height: root.catSkin === "pixel" ? 110 : bigCatText.implicitHeight
                             scale: popout.isActive ? 1.0 : 0.94
 
                             Behavior on scale {
@@ -722,6 +763,33 @@ PluginComponent {
                                     easing.type: Easing.BezierSpline
                                     easing.bezierCurve: M3E.curveFastSpatial
                                 }
+                            }
+
+                            Text {
+                                id: bigCatText
+                                visible: root.catSkin !== "pixel"
+                                anchors.centerIn: parent
+                                font.family: bongoFont.name
+                                font.pixelSize: Theme.fontSizeXLarge * 4
+                                font.letterSpacing: -2
+                                color: root.catColorMode === "classic"
+                                    ? (popout.isActive ? Theme.onPrimaryContainer : Theme.surfaceText)
+                                    : root.resolvedCatColor
+                                text: root.forceSleep
+                                    ? root.sleepGlyph
+                                    : (!popout.isActive ? root.sleepGlyph : (root.isBlinking && root.catState === 0 ? root.blinkGlyph : root.glyphMap[root.catState]))
+                            }
+
+                            Image {
+                                id: bigCatPixel
+                                visible: root.catSkin === "pixel"
+                                anchors.centerIn: parent
+                                width: parent.width
+                                height: parent.height
+                                fillMode: Image.PreserveAspectFit
+                                smooth: false
+                                mipmap: false
+                                source: root.activeSpriteSource
                             }
                         }
 
@@ -875,7 +943,44 @@ PluginComponent {
                             }
                         }
 
-                        // Row 2: Cat Color Mode & Swatch
+                        // Row 2: Skin Selector Card
+                        DCard {
+                            width: parent.width
+                            height: 48
+                            pad: 0
+                            topLeftRadius: Theme.groupedListInnerRadius
+                            topRightRadius: Theme.groupedListInnerRadius
+                            bottomLeftRadius: Theme.groupedListInnerRadius
+                            bottomRightRadius: Theme.groupedListInnerRadius
+                            color: Theme.surfaceContainerHigh
+
+                            Row {
+                                anchors.fill: parent
+                                anchors.leftMargin: Theme.spacingM
+                                anchors.rightMargin: Theme.spacingM
+                                spacing: Theme.spacingS
+
+                                DIcon {
+                                    name: "pets"
+                                    size: Theme.iconSizeSmall
+                                    color: Theme.primary
+                                    anchors.verticalCenter: parent.verticalCenter
+                                }
+
+                                DDropdown {
+                                    id: skinDropdown
+                                    width: parent.width - Theme.iconSizeSmall - Theme.spacingS
+                                    options: root.skinOptions
+                                    currentValue: root.skinToLabel(root.catSkin)
+                                    maxPopupHeight: 200
+                                    compactMode: true
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    onValueChanged: v => root.saveSetting("catSkin", root.labelToSkin(v))
+                                }
+                            }
+                        }
+
+                        // Row 3: Cat Color Mode & Swatch
                         DCard {
                             width: parent.width
                             height: 48

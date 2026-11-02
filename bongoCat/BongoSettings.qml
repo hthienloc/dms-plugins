@@ -12,8 +12,9 @@ PluginSettings {
         SectionTitle { 
             text: I18n.tr("Appearance")
             icon: "palette" 
-            showReset: catSizePercent.isDirty || catYOffset.isDirty || catColorMode.isDirty || catCustomColor.isDirty || enableBlinking.isDirty || classicIdle.isDirty
+            showReset: catSkin.isDirty || catSizePercent.isDirty || catYOffset.isDirty || catColorMode.isDirty || catCustomColor.isDirty || enableBlinking.isDirty || classicIdle.isDirty
             onResetClicked: {
+                catSkin.resetToDefault();
                 catSizePercent.resetToDefault();
                 catYOffset.resetToDefault();
                 catColorMode.resetToDefault();
@@ -22,6 +23,20 @@ PluginSettings {
                 classicIdle.resetToDefault();
             }
         }
+
+        SelectionSettingPlus {
+            id: catSkin
+            settingKey: "catSkin"
+            label: I18n.tr("Cat Skin")
+            description: I18n.tr("Choose between the classic vector font cat or the pixel doodle sprite skin.")
+            defaultValue: "classic"
+            options: [
+                { label: I18n.tr("Classic (Vector)"), value: "classic" },
+                { label: I18n.tr("Pixel Doodle"), value: "pixel" }
+            ]
+        }
+
+        Separator {}
 
         SliderSettingPlus {
             id: catSizePercent
