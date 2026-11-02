@@ -3248,6 +3248,7 @@ Item {
             console.warn("exportCanvasItem is not initialized yet");
             return;
         }
+        window.exportCanvasItem.exportDpr = (window.presentationScreen && CompositorService.getScreenScale(window.presentationScreen)) || 1;
         const exportWidth = window.hasSelection && window.effectiveBackgroundMode === "none" ? window.cropRect.width : window.canvasWidth;
         const exportHeight = window.hasSelection && window.effectiveBackgroundMode === "none" ? window.cropRect.height : window.canvasHeight;
         window.exportCanvasItem.outputPixelWidth = Math.max(1, Math.round(exportWidth));
@@ -5210,7 +5211,7 @@ Item {
 
                 Canvas {
                     id: exportCanvas
-                    readonly property real exportDpr: window._outputScale
+                    property real exportDpr: 1.0
                     property int outputPixelWidth: 1
                     property int outputPixelHeight: 1
                     visible: true
