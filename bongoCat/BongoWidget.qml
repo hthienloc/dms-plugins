@@ -980,11 +980,12 @@ PluginComponent {
                             }
                         }
 
-                        // Row 3: Cat Color Mode & Swatch
+                        // Row 3: Cat Color Mode & Swatch (Vector skin only)
                         DCard {
                             width: parent.width
                             height: 48
                             pad: 0
+                            visible: root.catSkin !== "pixel"
                             topLeftRadius: Theme.groupedListInnerRadius
                             topRightRadius: Theme.groupedListInnerRadius
                             bottomLeftRadius: Theme.groupedListInnerRadius

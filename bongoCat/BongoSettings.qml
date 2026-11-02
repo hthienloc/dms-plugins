@@ -64,50 +64,63 @@ PluginSettings {
             rightLabel: "10px"
         }
 
-        Separator {}
-
-        SelectionSettingPlus {
-            id: catColorMode
-            settingKey: "catColorMode"
-            label: I18n.tr("Cat Color")
-            description: I18n.tr("Recolor the cat. Classic keeps the theme's default black and white, Primary follows the system accent, or pick a custom color.")
-            defaultValue: "classic"
-            options: [
-                { label: I18n.tr("Classic B/W"), value: "classic" },
-                { label: I18n.tr("Theme Primary"), value: "primary" },
-                { label: I18n.tr("Custom"), value: "custom" }
-            ]
-        }
-
         Column {
             width: parent.width
-            visible: catColorMode.value === "custom"
+            visible: catSkin.value !== "pixel"
             height: visible ? implicitHeight : 0
             spacing: appearanceSection.spacing
 
             function loadValue() {
+                catColorMode.loadValue();
                 catCustomColor.loadValue();
+                classicIdle.loadValue();
             }
 
             Separator {}
 
-            ColorSettingPlus {
-                id: catCustomColor
-                settingKey: "catCustomColor"
-                label: I18n.tr("Custom Color")
-                description: I18n.tr("Used when Cat Color is set to Custom.")
-                defaultValue: Theme.primary
+            SelectionSettingPlus {
+                id: catColorMode
+                settingKey: "catColorMode"
+                label: I18n.tr("Cat Color")
+                description: I18n.tr("Recolor the cat. Classic keeps the theme's default black and white, Primary follows the system accent, or pick a custom color.")
+                defaultValue: "classic"
+                options: [
+                    { label: I18n.tr("Classic B/W"), value: "classic" },
+                    { label: I18n.tr("Theme Primary"), value: "primary" },
+                    { label: I18n.tr("Custom"), value: "custom" }
+                ]
             }
-        }
 
-        Separator {}
+            Column {
+                width: parent.width
+                visible: catColorMode.value === "custom"
+                height: visible ? implicitHeight : 0
+                spacing: appearanceSection.spacing
 
-        ToggleSettingPlus {
-            id: classicIdle
-            settingKey: "classicIdle"
-            label: I18n.tr("Classic Color on Idle")
-            description: I18n.tr("Return the cat to the classic black and white color when sleeping or idle.")
-            defaultValue: false
+                function loadValue() {
+                    catCustomColor.loadValue();
+                }
+
+                Separator {}
+
+                ColorSettingPlus {
+                    id: catCustomColor
+                    settingKey: "catCustomColor"
+                    label: I18n.tr("Custom Color")
+                    description: I18n.tr("Used when Cat Color is set to Custom.")
+                    defaultValue: Theme.primary
+                }
+            }
+
+            Separator {}
+
+            ToggleSettingPlus {
+                id: classicIdle
+                settingKey: "classicIdle"
+                label: I18n.tr("Classic Color on Idle")
+                description: I18n.tr("Return the cat to the classic black and white color when sleeping or idle.")
+                defaultValue: false
+            }
         }
 
         Separator {}
