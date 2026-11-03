@@ -1,6 +1,7 @@
 import QtQuick
 import qs.Common
 import "../../shared"
+import "../core" as Core
 import "../core/Defaults.js" as Defaults
 
 SettingsGroup {
@@ -35,8 +36,8 @@ SettingsGroup {
         StringSettingPlus {
             settingKey: "recordingDirectory"
             label: I18n.trFor("quickCapture", "Recording Folder")
-            placeholder: Defaults.values.recordingDirectory
-            defaultValue: Defaults.values.recordingDirectory
+            placeholder: Core.CapturePaths.defaultRecordingDirectory
+            defaultValue: Core.CapturePaths.defaultRecordingDirectory
             isDirectory: true
         }
 

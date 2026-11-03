@@ -1,6 +1,7 @@
 import QtQuick
 import qs.Common
 import qs.Services
+import "." as Core
 import "Helpers.js" as Helpers
 import "Defaults.js" as Defaults
 
@@ -17,7 +18,7 @@ QtObject {
     readonly property var pluginData: daemon?.pluginData ?? ({})
 
     function setting(key) {
-        return Defaults.get(root.pluginData, key);
+        return Core.CapturePaths.setting(root.pluginData, key);
     }
 
     function saveDirectory() {

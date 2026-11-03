@@ -111,7 +111,7 @@ const values = {
     radialMenuOpacity: 100
 };
 
-function get(data, key) {
+function get(data, key, fallback) {
     const value = data ? data[key] : undefined;
-    return value === undefined || value === null ? values[key] : value;
+    return value === undefined || value === null ? (fallback === undefined ? values[key] : fallback) : value;
 }

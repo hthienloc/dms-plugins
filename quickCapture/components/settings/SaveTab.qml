@@ -1,6 +1,7 @@
 import QtQuick
 import qs.Common
 import "../../shared"
+import "../core" as Core
 import "../core/Defaults.js" as Defaults
 
 SettingsGroup {
@@ -37,8 +38,8 @@ SettingsGroup {
         StringSettingPlus {
             settingKey: "saveDirectory"
             label: I18n.trFor("quickCapture", "Screenshot Folder")
-            placeholder: Defaults.values.saveDirectory
-            defaultValue: Defaults.values.saveDirectory
+            placeholder: Core.CapturePaths.defaultSaveDirectory
+            defaultValue: Core.CapturePaths.defaultSaveDirectory
             isDirectory: true
         }
 

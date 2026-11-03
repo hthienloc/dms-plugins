@@ -102,7 +102,7 @@ PluginComponent {
 
     function openFolder(kind) {
         const key = kind === "video" ? "recordingDirectory" : "saveDirectory";
-        Proc.runCommand("quickCapture.openFolder", ["xdg-open", Paths.expandTilde(String(Defaults.get(pluginData, key)))]);
+        Proc.runCommand("quickCapture.openFolder", ["xdg-open", Paths.expandTilde(String(CapturePaths.setting(pluginData, key)))]);
     }
 
     function toggleHideControlCenter() {

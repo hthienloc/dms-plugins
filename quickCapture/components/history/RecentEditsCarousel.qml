@@ -2,7 +2,7 @@ import QtQuick
 import qs.Common
 import qs.Services
 import qs.DCommon.Widgets
-import "../core/Defaults.js" as Defaults
+import "../core" as Core
 
 Item {
     id: root
@@ -29,7 +29,7 @@ Item {
 
     onEntriesChanged: clampPage()
 
-    readonly property string saveDirectory: Defaults.get(root.daemon?.pluginData, "saveDirectory")
+    readonly property string saveDirectory: Core.CapturePaths.setting(root.daemon?.pluginData, "saveDirectory")
 
     function refresh() {
         if (!root.daemon)

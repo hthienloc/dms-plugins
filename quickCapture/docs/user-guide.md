@@ -17,6 +17,8 @@
 3. Annotate with the toolbar, shortcuts, or radial menus.
 4. Press <kbd>Enter</kbd> to finish or <kbd>Esc</kbd> to discard.
 
+By default, screenshots are saved to the XDG Pictures directory under `Screenshots`, and recordings to the XDG Videos directory under `Recordings`. You can choose different folders in the Save and Recording settings.
+
 ### Scrolling Capture
 
 Select a region, press <kbd>Space</kbd> or <kbd>Enter</kbd> to confirm, scroll the content, then press <kbd>Enter</kbd> to finish stitching. Adjust the scroll interval in settings.

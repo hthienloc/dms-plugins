@@ -2,8 +2,8 @@ import QtQuick
 import Quickshell.Io
 import qs.Common
 import qs.Services
+import "../core" as Core
 import "../core/Helpers.js" as Helpers
-import "../core/Defaults.js" as Defaults
 
 Item {
     id: root
@@ -49,7 +49,7 @@ Item {
     ]
 
     function setting(key) {
-        return Defaults.get(root.pluginData, key);
+        return Core.CapturePaths.setting(root.pluginData, key);
     }
 
     readonly property string videoFormat: setting("recordingFormat")
