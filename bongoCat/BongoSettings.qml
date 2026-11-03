@@ -407,6 +407,12 @@ PluginSettings {
                     url: "https://x.com/StrayRogue",
                     role: I18n.tr("Creator of the original Bongo Cat artwork."),
                     icon: "brush"
+                },
+                {
+                    author: "StrawberryMatchaArt",
+                    url: "https://www.etsy.com/shop/StrawberryMatchaArt",
+                    role: I18n.tr("Creator of the Pixel Doodle Bongo Cat artwork."),
+                    icon: "palette"
                 }
             ]
         }
