@@ -23,28 +23,22 @@ PluginComponent {
     readonly property string durationText: recorder ? recorder.formatDuration(recorder.recordingSeconds) : "00:00"
     readonly property alias config: captureConfig
 
-    property var pendingPopoutAction: null
+    property var activePopout: null
 
     CaptureConfig {
         id: captureConfig
         pluginData: root.pluginData
     }
 
-    Timer {
-        id: popoutCloseTimer
-        interval: Math.max(50, Theme.popoutAnimationDuration + 50)
-        onTriggered: {
-            const action = root.pendingPopoutAction;
-            root.pendingPopoutAction = null;
-            if (action)
-                action();
-        }
-    }
-
     function runAfterPopoutClosed(action) {
-        root.pendingPopoutAction = action;
-        root.closePopout();
-        popoutCloseTimer.restart();
+        if (root.attachedActive)
+            root.surfaceContext?.dismissExpansion?.();
+        if (root.activePopout && typeof root.activePopout.instantClose === "function") {
+            root.activePopout.instantClose();
+        } else {
+            root.closePopout();
+        }
+        Qt.callLater(action);
     }
 
     function setWidgetMode(mode) {
@@ -68,6 +62,7 @@ PluginComponent {
     popoutContent: Component {
         CaptureMenu {
             widget: root
+            onParentPopoutChanged: root.activePopout = parentPopout
         }
     }
 

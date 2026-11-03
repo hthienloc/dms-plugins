@@ -50,7 +50,6 @@ PluginComponent {
     property string pendingCaptureMode: ""
     property string pendingOutputName: ""
     property bool pendingFromControlCenter: false
-    property var pendingMenuAction: null
 
     function savePluginData(key, value) {
         pluginService.savePluginData(pluginId, key, value);
@@ -339,7 +338,11 @@ PluginComponent {
     }
 
     function closeMenu() {
-        menuModal.close();
+        if (menuModal && typeof menuModal.instantClose === "function") {
+            menuModal.instantClose();
+        } else {
+            menuModal.close();
+        }
     }
 
     function toggleMenu() {
@@ -349,14 +352,6 @@ PluginComponent {
         }
         openMenu();
         return "OPENED";
-    }
-
-    function runPendingMenuAction() {
-        menuCloseTimer.stop();
-        const action = root.pendingMenuAction;
-        root.pendingMenuAction = null;
-        if (action)
-            action();
     }
 
     IpcHandler {
@@ -451,12 +446,6 @@ PluginComponent {
         pluginData: root.pluginData
     }
 
-    Timer {
-        id: menuCloseTimer
-        interval: Math.max(50, Theme.modalAnimationDuration + 50)
-        onTriggered: root.runPendingMenuAction()
-    }
-
     QtObject {
         id: menuWidgetAdapter
 
@@ -476,9 +465,8 @@ PluginComponent {
         }
 
         function runAfterPopoutClosed(action) {
-            root.pendingMenuAction = action;
             root.closeMenu();
-            menuCloseTimer.restart();
+            Qt.callLater(action);
         }
 
         function setWidgetMode(mode) {
@@ -552,7 +540,6 @@ PluginComponent {
         closeOnEscapeKey: true
         closeOnBackgroundClick: true
         onBackgroundClicked: close()
-        onDialogClosed: root.runPendingMenuAction()
 
         modalWidth: 432 + Theme.spacingM * 2
         modalHeight: 304 + Theme.spacingM * 2

@@ -70,6 +70,7 @@ PopoutComponent {
     headerText: ""
     showCloseButton: false
     spacing: Theme.spacingS
+    property var parentPopout: null
     closePopout: () => widget.closePopout()
 
     function refreshDevices() {
