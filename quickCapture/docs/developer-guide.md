@@ -190,6 +190,24 @@ If your tool has style variants (e.g. dashed/dotted, head shapes), create a new 
 
 ## 6. Debugging & Reloading
 
+### Headless menu-dispatch regression tests
+
+From the repository root, with Python 3 and Qt's `qmltestrunner` (including the
+QtTest QML module) available:
+
+```bash
+python3 quickCapture/tests/test_menu_dispatch.py
+```
+
+Use `--qmltestrunner /path/to/qmltestrunner` if it is not on `PATH`. If Qt's QML
+modules are outside its default import paths, set `QML_IMPORT_PATH` accordingly.
+
+The harness extracts the production dispatch methods for both the centered
+launcher and the bar popout. It destroys the originating menu on close and
+checks deferred capture/recording arguments and missing-daemon guards without
+capturing the screen or starting a recorder. Recording delegate wiring is also
+checked. Real capture and recording should still be tested interactively.
+
 ### Reload the plugin without restarting the shell
 
 ```bash
