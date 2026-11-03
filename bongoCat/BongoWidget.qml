@@ -219,16 +219,16 @@ PluginComponent {
     }
 
     // Label/value mapping for the popout dropdown (DDropdown is label-based).
-    // Both directions go through I18n.tr() so they stay consistent per locale.
-    readonly property var colorModeOptions: [I18n.tr("Classic B/W"), I18n.tr("Theme Primary"), I18n.tr("Custom")]
+    // Both directions go through I18n.trFor("bongoCat", ) so they stay consistent per locale.
+    readonly property var colorModeOptions: [I18n.trFor("bongoCat", "Classic B/W"), I18n.trFor("bongoCat", "Theme Primary"), I18n.trFor("bongoCat", "Custom")]
     function colorModeToLabel(m) {
-        if (m === "primary") return I18n.tr("Theme Primary");
-        if (m === "custom") return I18n.tr("Custom");
-        return I18n.tr("Classic B/W");
+        if (m === "primary") return I18n.trFor("bongoCat", "Theme Primary");
+        if (m === "custom") return I18n.trFor("bongoCat", "Custom");
+        return I18n.trFor("bongoCat", "Classic B/W");
     }
     function labelToColorMode(l) {
-        if (l === I18n.tr("Theme Primary")) return "primary";
-        if (l === I18n.tr("Custom")) return "custom";
+        if (l === I18n.trFor("bongoCat", "Theme Primary")) return "primary";
+        if (l === I18n.trFor("bongoCat", "Custom")) return "custom";
         return "classic";
     }
 
@@ -346,24 +346,52 @@ PluginComponent {
     readonly property real _soundVol: Math.max(0, Math.min(1, soundVolume / 100))
 
     readonly property string catSkin: (pluginData && pluginData.catSkin !== undefined ? pluginData.catSkin : "classic")
-    readonly property var skinOptions: [I18n.tr("Classic (Vector)"), I18n.tr("Pixel Doodle")]
+    readonly property var skinOptions: [I18n.trFor("bongoCat", "Classic (Vector)"), I18n.trFor("bongoCat", "Pixel Doodle")]
     function skinToLabel(s) {
-        if (s === "pixel") return I18n.tr("Pixel Doodle");
-        return I18n.tr("Classic (Vector)");
+        if (s === "pixel") return I18n.trFor("bongoCat", "Pixel Doodle");
+        return I18n.trFor("bongoCat", "Classic (Vector)");
     }
     function labelToSkin(l) {
-        if (l === I18n.tr("Pixel Doodle")) return "pixel";
+        if (l === I18n.trFor("bongoCat", "Pixel Doodle")) return "pixel";
         return "classic";
     }
 
-    readonly property var pixelSpriteMap: [
-        "./assets/skins/pixel/idle@4x.png",
-        "./assets/skins/pixel/left@4x.png",
-        "./assets/skins/pixel/right@4x.png",
-        "./assets/skins/pixel/both@4x.png"
+    readonly property string pixelSkinColor: (pluginData && pluginData.pixelSkinColor !== undefined ? pluginData.pixelSkinColor : "white")
+    readonly property var pixelColorOptions: [
+        I18n.trFor("bongoCat", "Classic White"),
+        I18n.trFor("bongoCat", "Midnight Black"),
+        I18n.trFor("bongoCat", "Ginger Orange"),
+        I18n.trFor("bongoCat", "Calico"),
+        I18n.trFor("bongoCat", "Siamese"),
+        I18n.trFor("bongoCat", "Sakura Pink")
     ]
-    readonly property string pixelBlinkSprite: "./assets/skins/pixel/blink@4x.png"
-    readonly property string pixelSleepSprite: "./assets/skins/pixel/sleep@4x.png"
+    function pixelColorToLabel(c) {
+        if (c === "black") return I18n.trFor("bongoCat", "Midnight Black");
+        if (c === "orange") return I18n.trFor("bongoCat", "Ginger Orange");
+        if (c === "calico") return I18n.trFor("bongoCat", "Calico");
+        if (c === "siamese") return I18n.trFor("bongoCat", "Siamese");
+        if (c === "pink") return I18n.trFor("bongoCat", "Sakura Pink");
+        return I18n.trFor("bongoCat", "Classic White");
+    }
+    function labelToPixelColor(l) {
+        if (l === I18n.trFor("bongoCat", "Midnight Black")) return "black";
+        if (l === I18n.trFor("bongoCat", "Ginger Orange")) return "orange";
+        if (l === I18n.trFor("bongoCat", "Calico")) return "calico";
+        if (l === I18n.trFor("bongoCat", "Siamese")) return "siamese";
+        if (l === I18n.trFor("bongoCat", "Sakura Pink")) return "pink";
+        return "white";
+    }
+
+    readonly property string pixelSkinFolder: pixelSkinColor === "white" ? "pixel" : ("pixel_" + pixelSkinColor)
+
+    readonly property var pixelSpriteMap: [
+        "./assets/skins/" + pixelSkinFolder + "/idle@4x.png",
+        "./assets/skins/" + pixelSkinFolder + "/left@4x.png",
+        "./assets/skins/" + pixelSkinFolder + "/right@4x.png",
+        "./assets/skins/" + pixelSkinFolder + "/both@4x.png"
+    ]
+    readonly property string pixelBlinkSprite: "./assets/skins/" + pixelSkinFolder + "/blink@4x.png"
+    readonly property string pixelSleepSprite: "./assets/skins/" + pixelSkinFolder + "/sleep@4x.png"
 
     readonly property string activeSpriteSource: {
         if (root.forceSleep || root.isWaiting) return pixelSleepSprite;
@@ -694,8 +722,8 @@ PluginComponent {
                                 width: parent.width
                                 visible: root.inputToolMissing
                                 text: root.selectedDevicePath === "all"
-                                    ? I18n.tr("The 'libinput' CLI was not found, so Auto mode can't see your keyboard. Install it (Arch: libinput-tools, Debian/Ubuntu: libinput-tools, Fedora: libinput-utils) or pick a specific keyboard below.")
-                                    : I18n.tr("'evtest' was not found — install it to monitor a specific keyboard, or switch to Auto mode.")
+                                    ? I18n.trFor("bongoCat", "The 'libinput' CLI was not found, so Auto mode can't see your keyboard. Install it (Arch: libinput-tools, Debian/Ubuntu: libinput-tools, Fedora: libinput-utils) or pick a specific keyboard below.")
+                                    : I18n.trFor("bongoCat", "'evtest' was not found — install it to monitor a specific keyboard, or switch to Auto mode.")
                                 font.pixelSize: Theme.fontSizeSmall
                                 color: Theme.onErrorContainer ?? Theme.error
                                 wrapMode: Text.Wrap
@@ -704,7 +732,7 @@ PluginComponent {
                             StyledText {
                                 width: parent.width
                                 visible: root.notInInputGroup
-                                text: I18n.tr("Your user is not in the 'input' group, so keyboard events can't be read. Run: sudo usermod -aG input $USER — then log out and back in.")
+                                text: I18n.trFor("bongoCat", "Your user is not in the 'input' group, so keyboard events can't be read. Run: sudo usermod -aG input $USER — then log out and back in.")
                                 font.pixelSize: Theme.fontSizeSmall
                                 color: Theme.onErrorContainer ?? Theme.error
                                 wrapMode: Text.Wrap
@@ -713,7 +741,7 @@ PluginComponent {
                             StyledText {
                                 width: parent.width
                                 visible: root.mouseBroken
-                                text: I18n.tr("Mouse interaction needs the 'libinput' CLI — install it (Arch: libinput-tools, Debian/Ubuntu: libinput-tools, Fedora: libinput-utils) or switch the keyboard to Auto mode.")
+                                text: I18n.trFor("bongoCat", "Mouse interaction needs the 'libinput' CLI — install it (Arch: libinput-tools, Debian/Ubuntu: libinput-tools, Fedora: libinput-utils) or switch the keyboard to Auto mode.")
                                 font.pixelSize: Theme.fontSizeSmall
                                 color: Theme.onErrorContainer ?? Theme.error
                                 wrapMode: Text.Wrap
@@ -814,7 +842,7 @@ PluginComponent {
                                     anchors.verticalCenter: parent.verticalCenter
                                 }
                                 StyledText {
-                                    text: root.forceSleep ? I18n.tr("Asleep") : I18n.tr("Awake")
+                                    text: root.forceSleep ? I18n.trFor("bongoCat", "Asleep") : I18n.trFor("bongoCat", "Awake")
                                     font.pixelSize: Theme.fontSizeExtraSmall
                                     font.weight: Font.Medium
                                     color: root.forceSleep ? Theme.onPrimary : Theme.surfaceText
@@ -1034,7 +1062,7 @@ PluginComponent {
                                             if (typeof PopoutService !== "undefined" && PopoutService && PopoutService.colorPickerModal) {
                                                 const widget = root;
                                                 PopoutService.colorPickerModal.selectedColor = root.catCustomColor === "primary" ? Theme.primary : Qt.color(root.catCustomColor);
-                                                PopoutService.colorPickerModal.pickerTitle = I18n.tr("Cat Color");
+                                                PopoutService.colorPickerModal.pickerTitle = I18n.trFor("bongoCat", "Cat Color");
                                                 PopoutService.colorPickerModal.onColorSelectedCallback = function(selectedColor) {
                                                     widget.saveSetting("catCustomColor", selectedColor.toString());
                                                 };
@@ -1042,6 +1070,44 @@ PluginComponent {
                                             }
                                         }
                                     }
+                                }
+                            }
+                        }
+
+                        // Row 3 (alt): Pixel Cat Color (Pixel Doodle skin only)
+                        DCard {
+                            width: parent.width
+                            height: 48
+                            pad: 0
+                            visible: root.catSkin === "pixel"
+                            topLeftRadius: Theme.groupedListInnerRadius
+                            topRightRadius: Theme.groupedListInnerRadius
+                            bottomLeftRadius: Theme.groupedListInnerRadius
+                            bottomRightRadius: Theme.groupedListInnerRadius
+                            color: Theme.surfaceContainerHigh
+
+                            Row {
+                                anchors.fill: parent
+                                anchors.leftMargin: Theme.spacingM
+                                anchors.rightMargin: Theme.spacingM
+                                spacing: Theme.spacingS
+
+                                DIcon {
+                                    name: "palette"
+                                    size: Theme.iconSizeSmall
+                                    color: Theme.primary
+                                    anchors.verticalCenter: parent.verticalCenter
+                                }
+
+                                DDropdown {
+                                    id: pixelColorDropdown
+                                    width: parent.width - Theme.iconSizeSmall - Theme.spacingS
+                                    options: root.pixelColorOptions
+                                    currentValue: root.pixelColorToLabel(root.pixelSkinColor)
+                                    maxPopupHeight: 200
+                                    compactMode: true
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    onValueChanged: v => root.saveSetting("pixelSkinColor", root.labelToPixelColor(v))
                                 }
                             }
                         }
@@ -1077,7 +1143,7 @@ PluginComponent {
                                     }
 
                                     StyledText {
-                                        text: I18n.tr("Size")
+                                        text: I18n.trFor("bongoCat", "Size")
                                         font.pixelSize: Theme.fontSizeSmall
                                         color: Theme.surfaceText
                                         width: 44
@@ -1136,7 +1202,7 @@ PluginComponent {
                                     }
 
                                     StyledText {
-                                        text: I18n.tr("Sleep")
+                                        text: I18n.trFor("bongoCat", "Sleep")
                                         font.pixelSize: Theme.fontSizeSmall
                                         color: Theme.surfaceText
                                         width: 44
@@ -1195,7 +1261,7 @@ PluginComponent {
                                     }
 
                                     StyledText {
-                                        text: I18n.tr("Paw")
+                                        text: I18n.trFor("bongoCat", "Paw")
                                         font.pixelSize: Theme.fontSizeSmall
                                         color: Theme.surfaceText
                                         width: 44
@@ -1276,7 +1342,7 @@ PluginComponent {
                                         color: root.enableBlinking ? Theme.onPrimaryContainer : Theme.surfaceVariantText
                                     }
                                     StyledText {
-                                        text: I18n.tr("Blink")
+                                        text: I18n.trFor("bongoCat", "Blink")
                                         font.pixelSize: Theme.fontSizeSmall
                                         font.weight: root.enableBlinking ? Font.Bold : Font.Normal
                                         color: root.enableBlinking ? Theme.onPrimaryContainer : Theme.surfaceText
@@ -1313,7 +1379,7 @@ PluginComponent {
                                         color: root.soundEnabled ? Theme.onPrimaryContainer : Theme.surfaceVariantText
                                     }
                                     StyledText {
-                                        text: I18n.tr("Sound")
+                                        text: I18n.trFor("bongoCat", "Sound")
                                         font.pixelSize: Theme.fontSizeSmall
                                         font.weight: root.soundEnabled ? Font.Bold : Font.Normal
                                         color: root.soundEnabled ? Theme.onPrimaryContainer : Theme.surfaceText
@@ -1350,7 +1416,7 @@ PluginComponent {
                                         color: root.showMetrics ? Theme.onPrimaryContainer : Theme.surfaceVariantText
                                     }
                                     StyledText {
-                                        text: I18n.tr("Stats")
+                                        text: I18n.trFor("bongoCat", "Stats")
                                         font.pixelSize: Theme.fontSizeSmall
                                         font.weight: root.showMetrics ? Font.Bold : Font.Normal
                                         color: root.showMetrics ? Theme.onPrimaryContainer : Theme.surfaceText
@@ -1375,7 +1441,7 @@ PluginComponent {
 
                         HintItem {
                             icon: "mouse"
-                            text: I18n.tr("Right-click bar icon to toggle sleep mode.")
+                            text: I18n.trFor("bongoCat", "Right-click bar icon to toggle sleep mode.")
                         }
                     }
                 }
