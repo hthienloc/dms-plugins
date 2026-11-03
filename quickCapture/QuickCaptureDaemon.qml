@@ -91,6 +91,18 @@ PluginComponent {
         }
     }
 
+    // Closing a popout destroys its menu content. Keep deferred actions in
+    // the daemon's context so they do not reference a destroyed menu item.
+    function captureFromMenu(mode, action, outputName, widget) {
+        widget.closePopout();
+        Qt.callLater(() => root.capture(mode, action, outputName, false));
+    }
+
+    function recordFromMenu(mode, widget) {
+        widget.closePopout();
+        Qt.callLater(() => root.record(mode, "", false));
+    }
+
     function record(mode, geometry, fromControlCenter) {
         if (fromControlCenter && root.hideControlCenter) {
             closeControlCenter();
