@@ -7,11 +7,15 @@
   "license": "MIT",
   "author": "Loc Huynh",
   "icon": "pets",
-  "type": "widget",
+  "type": "composite",
   "capabilities": [
-    "dankbar-widget"
+    "dankbar-widget",
+    "desktop-widget"
   ],
-  "component": "./BongoWidget.qml",
+  "components": {
+    "widget": "./BongoWidget.qml",
+    "desktop": "./BongoDesktopWidget.qml"
+  },
   "settings": "./BongoSettings.qml",
   "permissions": [
     "settings_read",

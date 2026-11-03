@@ -383,6 +383,42 @@ PluginSettings {
     }
 
     SettingsCard {
+        id: desktopSection
+        SectionTitle {
+            text: I18n.trFor("bongoCat", "Desktop Widget")
+            icon: "desktop_windows"
+            showReset: desktopBackgroundOpacity.isDirty || desktopShowMetrics.isDirty
+            onResetClicked: {
+                desktopBackgroundOpacity.resetToDefault();
+                desktopShowMetrics.resetToDefault();
+            }
+        }
+
+        SliderSettingPlus {
+            id: desktopBackgroundOpacity
+            settingKey: "desktopBackgroundOpacity"
+            label: I18n.trFor("bongoCat", "Background Opacity")
+            description: I18n.trFor("bongoCat", "Adjust transparency of the desktop widget card.")
+            defaultValue: 0
+            minimum: 0
+            maximum: 100
+            unit: "%"
+            leftLabel: "0%"
+            rightLabel: "100%"
+        }
+
+        Separator {}
+
+        ToggleSettingPlus {
+            id: desktopShowMetrics
+            settingKey: "desktopShowMetrics"
+            label: I18n.trFor("bongoCat", "Show Typing Metrics")
+            description: I18n.trFor("bongoCat", "Display live WPM and accuracy underneath the cat on the desktop.")
+            defaultValue: false
+        }
+    }
+
+    SettingsCard {
         id: behaviorSection
         SectionTitle { 
             text: I18n.trFor("bongoCat", "Behavior")

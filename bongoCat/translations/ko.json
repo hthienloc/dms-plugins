@@ -14,6 +14,9 @@
   "Add your user to the 'input' group to detect keyboard activity:": {
     "Add your user to the 'input' group to detect keyboard activity:": ""
   },
+  "Adjust transparency of the desktop widget card.": {
+    "Adjust transparency of the desktop widget card.": ""
+  },
   "After running the command, logout and login again for changes to take effect.": {
     "After running the command, logout and login again for changes to take effect.": "명령을 실행한 후 로그아웃했다가 다시 로그인하면 변경 사항이 적용됩니다."
   },
@@ -31,6 +34,9 @@
   },
   "Awake": {
     "Awake": ""
+  },
+  "Background Opacity": {
+    "Background Opacity": ""
   },
   "Behavior": {
     "Behavior": ""
@@ -88,6 +94,12 @@
   },
   "Custom Color": {
     "Custom Color": ""
+  },
+  "Desktop Widget": {
+    "Desktop Widget": ""
+  },
+  "Display live WPM and accuracy underneath the cat on the desktop.": {
+    "Display live WPM and accuracy underneath the cat on the desktop.": ""
   },
   "Display live typing speed (WPM) and correction rate in the popout. Only keystroke timing is counted; no key contents are stored.": {
     "Display live typing speed (WPM) and correction rate in the popout. Only keystroke timing is counted; no key contents are stored.": ""
