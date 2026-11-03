@@ -1,0 +1,257 @@
+{
+  "+5m": {
+    "+5m": ""
+  },
+  "Adherence": {
+    "Adherence": ""
+  },
+  "Alert Volume": {
+    "Alert Volume": ""
+  },
+  "Audio & Playback": {
+    "Audio & Playback": ""
+  },
+  "Automatically pause active music players when a break starts, and resume them when the break ends.": {
+    "Automatically pause active music players when a break starts, and resume them when the break ends.": ""
+  },
+  "Automatically snooze breaks if an application is running in fullscreen.": {
+    "Automatically snooze breaks if an application is running in fullscreen.": ""
+  },
+  "Automatically snooze breaks if your microphone is active.": {
+    "Automatically snooze breaks if your microphone is active.": ""
+  },
+  "Blink 10-20 times quickly to moisten your eyes.": {
+    "Blink 10-20 times quickly to moisten your eyes.": ""
+  },
+  "Bottom Center": {
+    "Bottom Center": ""
+  },
+  "Bottom Left": {
+    "Bottom Left": ""
+  },
+  "Bottom Right": {
+    "Bottom Right": ""
+  },
+  "Break Incoming": {
+    "Break Incoming": ""
+  },
+  "Break Schedule": {
+    "Break Schedule": ""
+  },
+  "Break: %1": {
+    "Break: %1": ""
+  },
+  "Close your eyes tightly for 2 seconds, then open them.": {
+    "Close your eyes tightly for 2 seconds, then open them.": ""
+  },
+  "Completed": {
+    "Completed": ""
+  },
+  "Currently on a break": {
+    "Currently on a break": ""
+  },
+  "Drink a glass of water.": {
+    "Drink a glass of water.": ""
+  },
+  "Enable Sound Alerts": {
+    "Enable Sound Alerts": ""
+  },
+  "Hide Overlay": {
+    "Hide Overlay": ""
+  },
+  "Hide Pre-Warning": {
+    "Hide Pre-Warning": ""
+  },
+  "How many seconds before the break to show the warning notification.": {
+    "How many seconds before the break to show the warning notification.": ""
+  },
+  "How transparent the fullscreen break background should be.": {
+    "How transparent the fullscreen break background should be.": ""
+  },
+  "How transparent the pre-warning notification should be.": {
+    "How transparent the pre-warning notification should be.": ""
+  },
+  "Left Center": {
+    "Left Center": ""
+  },
+  "Long Break": {
+    "Long Break": ""
+  },
+  "Long Break Active": {
+    "Long Break Active": ""
+  },
+  "Long Break Duration": {
+    "Long Break Duration": ""
+  },
+  "Look at something 20 feet away for 20 seconds.": {
+    "Look at something 20 feet away for 20 seconds.": ""
+  },
+  "Look out a window to relax your eye muscles.": {
+    "Look out a window to relax your eye muscles.": ""
+  },
+  "Next: Long Break": {
+    "Next: Long Break": ""
+  },
+  "Next: Short Break": {
+    "Next: Short Break": ""
+  },
+  "Overlay Background Opacity": {
+    "Overlay Background Opacity": ""
+  },
+  "Pause": {
+    "Pause": ""
+  },
+  "Pause Music during Break": {
+    "Pause Music during Break": ""
+  },
+  "Paused": {
+    "Paused": ""
+  },
+  "Play a gentle sound when a break starts and ends.": {
+    "Play a gentle sound when a break starts and ends.": ""
+  },
+  "Pre-break Warning Timing": {
+    "Pre-break Warning Timing": ""
+  },
+  "Pre-warning Opacity": {
+    "Pre-warning Opacity": ""
+  },
+  "Pre-warning Position": {
+    "Pre-warning Position": ""
+  },
+  "Preview Fullscreen Break": {
+    "Preview Fullscreen Break": ""
+  },
+  "Preview Pre-Warning": {
+    "Preview Pre-Warning": ""
+  },
+  "Refresh": {
+    "Refresh": ""
+  },
+  "Reset": {
+    "Reset": ""
+  },
+  "Reset Session": {
+    "Reset Session": ""
+  },
+  "Reset Stats": {
+    "Reset Stats": ""
+  },
+  "Resume": {
+    "Resume": ""
+  },
+  "Right Center": {
+    "Right Center": ""
+  },
+  "Roll your eyes clockwise, then counter-clockwise.": {
+    "Roll your eyes clockwise, then counter-clockwise.": ""
+  },
+  "Settings": {
+    "Settings": ""
+  },
+  "Short Break": {
+    "Short Break": ""
+  },
+  "Short Break Active": {
+    "Short Break Active": ""
+  },
+  "Short Break Duration": {
+    "Short Break Duration": ""
+  },
+  "Short Break Interval": {
+    "Short Break Interval": ""
+  },
+  "Short breaks before long break": {
+    "Short breaks before long break": ""
+  },
+  "Skip": {
+    "Skip": ""
+  },
+  "Skip this break": {
+    "Skip this break": ""
+  },
+  "Skipped": {
+    "Skipped": ""
+  },
+  "Smart Suppression": {
+    "Smart Suppression": ""
+  },
+  "Snooze (5m)": {
+    "Snooze (5m)": ""
+  },
+  "Snooze 5m": {
+    "Snooze 5m": ""
+  },
+  "Snoozed": {
+    "Snoozed": ""
+  },
+  "Statistics": {
+    "Statistics": ""
+  },
+  "Stretch your arms and neck.": {
+    "Stretch your arms and neck.": ""
+  },
+  "Suppress during Meetings": {
+    "Suppress during Meetings": ""
+  },
+  "Suppress in Fullscreen": {
+    "Suppress in Fullscreen": ""
+  },
+  "Take Break": {
+    "Take Break": ""
+  },
+  "Take a Break": {
+    "Take a Break": ""
+  },
+  "Test Alert Sound": {
+    "Test Alert Sound": ""
+  },
+  "Testing & Preview": {
+    "Testing & Preview": ""
+  },
+  "This Week": {
+    "This Week": ""
+  },
+  "Today": {
+    "Today": ""
+  },
+  "Today Done": {
+    "Today Done": ""
+  },
+  "Today:": {
+    "Today:": ""
+  },
+  "Top Center": {
+    "Top Center": ""
+  },
+  "Top Left": {
+    "Top Left": ""
+  },
+  "Top Right": {
+    "Top Right": ""
+  },
+  "Total Breaks Logged": {
+    "Total Breaks Logged": ""
+  },
+  "UI Appearance": {
+    "UI Appearance": ""
+  },
+  "Week:": {
+    "Week:": ""
+  },
+  "Where the pre-warning notification appears.": {
+    "Where the pre-warning notification appears.": ""
+  },
+  "Your": {
+    "Your": ""
+  },
+  "break starts in": {
+    "break starts in": ""
+  },
+  "long": {
+    "long": ""
+  },
+  "short": {
+    "short": ""
+  }
+}

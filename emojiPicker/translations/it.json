@@ -14,6 +14,9 @@
   "Choose the modal size that best fits your display.": {
     "Choose the modal size that best fits your display.": "Scegli la dimensione modale che meglio si adatta al tuo display."
   },
+  "Clear": {
+    "Clear": ""
+  },
   "Clear All": {
     "Clear All": "Cancella tutto"
   },
@@ -44,11 +47,35 @@
   "Copy Confirmation": {
     "Copy Confirmation": "Conferma di copia"
   },
+  "Copy to clipboard": {
+    "Copy to clipboard": ""
+  },
+  "Credits": {
+    "Credits": ""
+  },
+  "Dark": {
+    "Dark": ""
+  },
+  "Default": {
+    "Default": ""
+  },
+  "Default Action": {
+    "Default Action": ""
+  },
   "Default Category": {
     "Default Category": "Categoria predefinita"
   },
-  "Emoji Picker": {
-    "Emoji Picker": "Selettore di emoji"
+  "Default skin tone modifier for people and hand emojis.": {
+    "Default skin tone modifier for people and hand emojis.": ""
+  },
+  "Emoji catalog and inspiration.": {
+    "Emoji catalog and inspiration.": ""
+  },
+  "Emoji metadata.": {
+    "Emoji metadata.": ""
+  },
+  "Emojis Per Row": {
+    "Emojis Per Row": ""
   },
   "Failed to copy emoji": {
     "Failed to copy emoji": "Impossibile copiare l'emoji"
@@ -71,11 +98,38 @@
   "IPC Commands": {
     "IPC Commands": "Comandi IPC"
   },
+  "In the grid, press <b>Backspace</b> or <b>Delete</b> with an empty queue to clear the search and return to it.": {
+    "In the grid, press <b>Backspace</b> or <b>Delete</b> with an empty queue to clear the search and return to it.": ""
+  },
+  "In the grid, use <b>Ctrl+H/J/K/L</b> for Vim-style left/down/up/right navigation.": {
+    "In the grid, use <b>Ctrl+H/J/K/L</b> for Vim-style left/down/up/right navigation.": ""
+  },
+  "Keyboard Hints": {
+    "Keyboard Hints": ""
+  },
   "Large (620 px)": {
     "Large (620 px)": "Grande (620px)"
   },
+  "Left click and Enter use this action; right click and Ctrl+Enter use the other one.": {
+    "Left click and Enter use this action; right click and Ctrl+Enter use the other one.": ""
+  },
+  "Light": {
+    "Light": ""
+  },
+  "Medium": {
+    "Medium": ""
+  },
+  "Medium-Dark": {
+    "Medium-Dark": ""
+  },
+  "Medium-Light": {
+    "Medium-Light": ""
+  },
   "No emoji found": {
     "No emoji found": "Nessuna emoji trovata"
+  },
+  "Number of emojis displayed per row. Each emoji stays square.": {
+    "Number of emojis displayed per row. Each emoji stays square.": ""
   },
   "Objects": {
     "Objects": "Oggetti"
@@ -86,17 +140,23 @@
   "Paste": {
     "Paste": "Impasto"
   },
+  "Paste at cursor": {
+    "Paste at cursor": ""
+  },
   "Picker Size": {
     "Picker Size": "Dimensione del selettore"
   },
   "Press <b>Backspace</b> to remove the last queued emoji.": {
     "Press <b>Backspace</b> to remove the last queued emoji.": "Premi <b>Backspace</b> per rimuovere l'ultima emoji in coda."
   },
-  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
-    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "Premi <b>Giù</b> o <b>Tab</b> per passare dalla ricerca alla griglia degli emoji."
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the first emoji.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the first emoji.": ""
   },
   "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
     "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "Premi <b>Esc</b> per eliminare la coda o chiudi il selettore quando la coda è vuota."
+  },
+  "Queue": {
+    "Queue": ""
   },
   "Recent History": {
     "Recent History": "Storia recente"
@@ -110,14 +170,26 @@
   "Recently Used": {
     "Recently Used": "Usato di recente"
   },
+  "Remove": {
+    "Remove": ""
+  },
   "Search emoji": {
     "Search emoji": "Cerca emoji"
+  },
+  "Search in %1": {
+    "Search in %1": ""
   },
   "Search results": {
     "Search results": "Risultati della ricerca"
   },
   "Show a toast containing the emoji after copying it.": {
     "Show a toast containing the emoji after copying it.": "Mostra un brindisi contenente l'emoji dopo averlo copiato."
+  },
+  "Show keyboard navigation hints at the bottom of the picker.": {
+    "Show keyboard navigation hints at the bottom of the picker.": ""
+  },
+  "Skin Tone": {
+    "Skin Tone": ""
   },
   "Smileys & People": {
     "Smileys & People": "Faccine e persone"
@@ -142,5 +214,8 @@
   },
   "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
     "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "Con gli emoji in coda, <b>Invio</b> copia la sequenza e <b>Ctrl+Invio</b> la incolla."
+  },
+  "nav": {
+    "nav": ""
   }
 }

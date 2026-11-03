@@ -11,6 +11,9 @@
   "Behavior": {
     "Behavior": "Gedrag"
   },
+  "Clear Image & Text": {
+    "Clear Image & Text": ""
+  },
   "Copy Text": {
     "Copy Text": "Kopieer tekst"
   },
@@ -35,8 +38,8 @@
   "Recognition Languages": {
     "Recognition Languages": "Herkenning Talen"
   },
-  "Right-click to scan clipboard, Middle-click to scan screenshot": {
-    "Right-click to scan clipboard, Middle-click to scan screenshot": "Klik met de rechtermuisknop om het klembord te scannen, klik met de middelste muisknop om de schermafbeelding te scannen"
+  "Right-click pill to scan clipboard, Middle-click to take screenshot": {
+    "Right-click pill to scan clipboard, Middle-click to take screenshot": ""
   },
   "Save Text": {
     "Save Text": "Tekst opslaan"
@@ -46,6 +49,9 @@
   },
   "Scanned text is automatically copied to the <b>clipboard</b>.": {
     "Scanned text is automatically copied to the <b>clipboard</b>.": "Gescande tekst wordt automatisch gekopieerd naar het <b>klembord</b>."
+  },
+  "Screenshot": {
+    "Screenshot": ""
   },
   "Select File": {
     "Select File": "Selecteer Bestand"

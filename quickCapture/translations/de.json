@@ -431,9 +431,6 @@
   "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "Format-Token: {user} (Benutzername), \\n (Zeilenumbruch), %Y (Jahr), %y (2-stelliges Jahr), %m (Monat), %d (Tag), %H (Stunde), %M (Minute), %S (Sekunde)"
   },
-  "Format: %1 (%2 FPS)": {
-    "Format: %1 (%2 FPS)": "Format: %1 (%2 FPS)"
-  },
   "Framerate": {
     "Framerate": "Bildrate"
   },
@@ -472,12 +469,6 @@
   },
   "Hide Annotations": {
     "Hide Annotations": "Annotationen ausblenden"
-  },
-  "Hide Control Center": {
-    "Hide Control Center": "Kontrollzentrum ausblenden"
-  },
-  "Hide Control Center by Default": {
-    "Hide Control Center by Default": "Kontrollzentrum standardmäßig ausblenden"
   },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": "Kontrollzentrum bei Aufnahme ausblenden"
@@ -529,9 +520,6 @@
   },
   "Initial Width": {
     "Initial Width": "Initiale Breite"
-  },
-  "Initial state for the Control Center toggle.": {
-    "Initial state for the Control Center toggle.": "Initialzustand für den Kontrollzentrum-Umschalter."
   },
   "Inline": {
     "Inline": "Inline"
@@ -706,9 +694,6 @@
   },
   "Open Image": {
     "Open Image": "Bild öffnen"
-  },
-  "Open folder": {
-    "Open folder": "Ordner öffnen"
   },
   "Outline Variant": {
     "Outline Variant": "Umrissvariante"
@@ -1004,17 +989,11 @@
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
     "Select one or more installed Tesseract language packs for OCR text recognition.": "Wählen Sie ein oder mehrere installierte Tesseract-Sprachpakete für die OCR-Texterkennung aus."
   },
-  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Backend für Bildschirmaufnahme auswählen. 'Auto' versucht zunächst, die GPU zu nutzen, und greift andernfalls auf die CPU (%1) zurück."
-  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "Backend für Bildschirmaufnahme auswählen. 'Auto' versucht zunächst, die GPU zu nutzen, und greift andernfalls auf die CPU (%1) zurück. Hinweis: %1 unterstützt kein Pausieren."
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "Ausgewähltes Werkzeug / Aktion"
-  },
-  "Settings": {
-    "Settings": "Einstellungen"
   },
   "Shadow Strength": {
     "Shadow Strength": "Schattenstärke"
@@ -1027,9 +1006,6 @@
   },
   "Show Annotations": {
     "Show Annotations": "Annotationen zeigen"
-  },
-  "Show Control Center": {
-    "Show Control Center": "Kontrollzentrum zeigen"
   },
   "Show Keyboard Shortcut Hints": {
     "Show Keyboard Shortcut Hints": "Tipps zu Tastatur-Shortcuts zeigen"

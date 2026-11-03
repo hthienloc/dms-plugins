@@ -11,6 +11,9 @@
   "Behavior": {
     "Behavior": "Viselkedés"
   },
+  "Clear Image & Text": {
+    "Clear Image & Text": ""
+  },
   "Copy Text": {
     "Copy Text": "Szöveg másolása"
   },
@@ -35,8 +38,8 @@
   "Recognition Languages": {
     "Recognition Languages": "Felismerési nyelvek"
   },
-  "Right-click to scan clipboard, Middle-click to scan screenshot": {
-    "Right-click to scan clipboard, Middle-click to scan screenshot": "Kattintson a jobb gombbal a vágólap beolvasásához, a középső gombbal pedig a képernyőkép beolvasásához"
+  "Right-click pill to scan clipboard, Middle-click to take screenshot": {
+    "Right-click pill to scan clipboard, Middle-click to take screenshot": ""
   },
   "Save Text": {
     "Save Text": "Szöveg mentése"
@@ -46,6 +49,9 @@
   },
   "Scanned text is automatically copied to the <b>clipboard</b>.": {
     "Scanned text is automatically copied to the <b>clipboard</b>.": "A beolvasott szöveg automatikusan a <b>vágólapra</b> másolódik."
+  },
+  "Screenshot": {
+    "Screenshot": ""
   },
   "Select File": {
     "Select File": "Válassza a Fájl lehetőséget"

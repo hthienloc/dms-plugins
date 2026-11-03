@@ -11,6 +11,9 @@
   "Behavior": {
     "Behavior": "Поведінка"
   },
+  "Clear Image & Text": {
+    "Clear Image & Text": ""
+  },
   "Copy Text": {
     "Copy Text": "Копіювати текст"
   },
@@ -35,8 +38,8 @@
   "Recognition Languages": {
     "Recognition Languages": "Мови розпізнавання"
   },
-  "Right-click to scan clipboard, Middle-click to scan screenshot": {
-    "Right-click to scan clipboard, Middle-click to scan screenshot": "Клацніть правою кнопкою миші, щоб сканувати буфер обміну, клацніть середньою кнопкою миші, щоб сканувати знімок екрана"
+  "Right-click pill to scan clipboard, Middle-click to take screenshot": {
+    "Right-click pill to scan clipboard, Middle-click to take screenshot": ""
   },
   "Save Text": {
     "Save Text": "Зберегти текст"
@@ -46,6 +49,9 @@
   },
   "Scanned text is automatically copied to the <b>clipboard</b>.": {
     "Scanned text is automatically copied to the <b>clipboard</b>.": "Відсканований текст автоматично копіюється в <b>буфер обміну</b>."
+  },
+  "Screenshot": {
+    "Screenshot": ""
   },
   "Select File": {
     "Select File": "Виберіть Файл"

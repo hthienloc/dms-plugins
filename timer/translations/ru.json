@@ -1,0 +1,182 @@
+{
+  "1h 5m 10s": {
+    "1h 5m 10s": "1 час 5 минут 10 секунд"
+  },
+  "5m 10s": {
+    "5m 10s": "5 минут 10 секунд"
+  },
+  "<b>Left-click</b> the pill to <b>Pause</b> or <b>Resume</b> the timer.": {
+    "<b>Left-click</b> the pill to <b>Pause</b> or <b>Resume</b> the timer.": ""
+  },
+  "<b>Right-click</b> the pill to <b>Reset</b> (or <b>Quick Start</b> if ready).": {
+    "<b>Right-click</b> the pill to <b>Reset</b> (or <b>Quick Start</b> if ready).": ""
+  },
+  "All files": {
+    "All files": ""
+  },
+  "Audio files": {
+    "Audio files": ""
+  },
+  "Automatically Do Not Disturb": {
+    "Automatically Do Not Disturb": ""
+  },
+  "Automatically perform a system action when the timer finishes.": {
+    "Automatically perform a system action when the timer finishes.": "Автоматически выполнять системное действие по завершении таймера."
+  },
+  "Behavior": {
+    "Behavior": "Поведение"
+  },
+  "Comma-separated list of minutes for quick start buttons.": {
+    "Comma-separated list of minutes for quick start buttons.": "Список минут, разделенный запятыми, для кнопок быстрого запуска."
+  },
+  "Custom": {
+    "Custom": ""
+  },
+  "Custom Actions": {
+    "Custom Actions": "Пользовательские действия"
+  },
+  "Custom Command": {
+    "Custom Command": ""
+  },
+  "Custom Sound Path": {
+    "Custom Sound Path": "Пользовательский звуковой путь"
+  },
+  "Custom shell command...": {
+    "Custom shell command...": ""
+  },
+  "Display": {
+    "Display": "Отображать"
+  },
+  "Display Content": {
+    "Display Content": "Отображать контент"
+  },
+  "Execute a shell command when the timer finishes.": {
+    "Execute a shell command when the timer finishes.": "Выполните команду оболочки после завершения таймера."
+  },
+  "Full path to sound file. Leave empty for default.": {
+    "Full path to sound file. Leave empty for default.": "Полный путь к звуковому файлу. Оставьте пустым по умолчанию."
+  },
+  "Hibernate": {
+    "Hibernate": "Спящий режим"
+  },
+  "Icon Only": {
+    "Icon Only": "Только значок"
+  },
+  "Left-click to Pause/Resume, Right-click to Reset (Quick Start when ready).": {
+    "Left-click to Pause/Resume, Right-click to Reset (Quick Start when ready).": "Щелкните левой кнопкой мыши, чтобы приостановить/возобновить, щелкните правой кнопкой мыши, чтобы сбросить (быстрый старт, когда все будет готово)."
+  },
+  "Lock": {
+    "Lock": ""
+  },
+  "Lock Screen": {
+    "Lock Screen": "Экран блокировки"
+  },
+  "None": {
+    "None": "Никто"
+  },
+  "Notification Body": {
+    "Notification Body": "Орган уведомления"
+  },
+  "Notification Title": {
+    "Notification Title": "Название уведомления"
+  },
+  "Notifications": {
+    "Notifications": "Уведомления"
+  },
+  "Open the <b>Popout</b> to select presets or enter custom minutes.": {
+    "Open the <b>Popout</b> to select presets or enter custom minutes.": ""
+  },
+  "Power Off": {
+    "Power Off": "Выключить питание"
+  },
+  "Presets": {
+    "Presets": "Пресеты"
+  },
+  "Progress Bar": {
+    "Progress Bar": "Индикатор выполнения"
+  },
+  "Pulse Dot ✦": {
+    "Pulse Dot ✦": "Пульсирующая точка ✦"
+  },
+  "Quick Presets": {
+    "Quick Presets": ""
+  },
+  "Reset to Ready": {
+    "Reset to Ready": "Сброс до готовности"
+  },
+  "Right-Click Quick Start": {
+    "Right-Click Quick Start": ""
+  },
+  "Run Custom Shell Command": {
+    "Run Custom Shell Command": "Запустите пользовательскую команду оболочки"
+  },
+  "Select a preset or enter minutes": {
+    "Select a preset or enter minutes": "Выберите предустановку или введите минуты"
+  },
+  "Set": {
+    "Set": "Набор"
+  },
+  "Show 'When Done' Section": {
+    "Show 'When Done' Section": ""
+  },
+  "Show Desktop Notification": {
+    "Show Desktop Notification": "Показать уведомление на рабочем столе"
+  },
+  "Show Hints": {
+    "Show Hints": "Показать подсказки"
+  },
+  "Show Icon": {
+    "Show Icon": "Показать значок"
+  },
+  "Show Ready Placeholder": {
+    "Show Ready Placeholder": "Показать готовый заполнитель"
+  },
+  "Show placeholder digits/text when the timer is in the ready state.": {
+    "Show placeholder digits/text when the timer is in the ready state.": "Показывать цифры/текст заполнителя, когда таймер находится в состоянии готовности."
+  },
+  "Shutdown": {
+    "Shutdown": ""
+  },
+  "Sleep": {
+    "Sleep": ""
+  },
+  "Sound": {
+    "Sound": "Звук"
+  },
+  "Stay at Finished": {
+    "Stay at Finished": "Оставайтесь на готовом"
+  },
+  "Suspend": {
+    "Suspend": "Приостановить"
+  },
+  "The duration in minutes to start when right-clicking the icon in Ready state.": {
+    "The duration in minutes to start when right-clicking the icon in Ready state.": "Продолжительность в минутах, которая начнется при щелчке правой кнопкой мыши по значку в состоянии «Готово»."
+  },
+  "Timeout!": {
+    "Timeout!": "Тайм-аут!"
+  },
+  "Timer": {
+    "Timer": "Таймер"
+  },
+  "Toggle Do Not Disturb mode when the timer is active.": {
+    "Toggle Do Not Disturb mode when the timer is active.": ""
+  },
+  "Trigger System Action": {
+    "Trigger System Action": "Триггерное действие системы"
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use System Notification Sound": {
+    "Use System Notification Sound": "Использовать звук системного уведомления"
+  },
+  "Use system's critical notification sound if no path is set.": {
+    "Use system's critical notification sound if no path is set.": "Используйте звуковой сигнал критического уведомления системы, если путь не указан."
+  },
+  "When Done": {
+    "When Done": "Когда будет готово"
+  },
+  "When Finished": {
+    "When Finished": "Когда закончите"
+  }
+}

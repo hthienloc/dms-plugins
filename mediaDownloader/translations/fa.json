@@ -1,0 +1,98 @@
+{
+  "Cancel": {
+    "Cancel": ""
+  },
+  "Cancelled": {
+    "Cancelled": ""
+  },
+  "Clear History": {
+    "Clear History": ""
+  },
+  "Completed": {
+    "Completed": ""
+  },
+  "Custom Audio": {
+    "Custom Audio": ""
+  },
+  "Custom Video": {
+    "Custom Video": ""
+  },
+  "Download Audio": {
+    "Download Audio": ""
+  },
+  "Download Video": {
+    "Download Video": ""
+  },
+  "Download failed": {
+    "Download failed": ""
+  },
+  "Downloads Queue": {
+    "Downloads Queue": ""
+  },
+  "Fetching info...": {
+    "Fetching info...": ""
+  },
+  "Fetching video details...": {
+    "Fetching video details...": ""
+  },
+  "Format": {
+    "Format": ""
+  },
+  "Format & bitrate": {
+    "Format & bitrate": ""
+  },
+  "Loading metadata...": {
+    "Loading metadata...": ""
+  },
+  "Music": {
+    "Music": ""
+  },
+  "No active downloads": {
+    "No active downloads": ""
+  },
+  "Open Folder": {
+    "Open Folder": ""
+  },
+  "Paste a video or audio link above to download": {
+    "Paste a video or audio link above to download": ""
+  },
+  "Paste video or audio link here...": {
+    "Paste video or audio link here...": ""
+  },
+  "Play": {
+    "Play": ""
+  },
+  "Quality": {
+    "Quality": ""
+  },
+  "Quality & format": {
+    "Quality & format": ""
+  },
+  "Quick Audio": {
+    "Quick Audio": ""
+  },
+  "Quick Video": {
+    "Quick Video": ""
+  },
+  "Ready to download": {
+    "Ready to download": ""
+  },
+  "Remove": {
+    "Remove": ""
+  },
+  "Remove from History": {
+    "Remove from History": ""
+  },
+  "Retry": {
+    "Retry": ""
+  },
+  "Update Engine": {
+    "Update Engine": ""
+  },
+  "Updating...": {
+    "Updating...": ""
+  },
+  "Videos": {
+    "Videos": ""
+  }
+}

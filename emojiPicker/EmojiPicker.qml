@@ -624,7 +624,7 @@ PluginComponent {
                         Layout.fillWidth: true
                         placeholderText: root.selectedCategory === "recent" || !root.categoryNames[root.selectedCategory]
                             ? I18n.trFor("emojiPicker", "Search emoji")
-                            : I18n.trFor("emojiPicker", "Search in %1").arg(I18n.tr(root.categoryNames[root.selectedCategory]))
+                            : I18n.trFor("emojiPicker", "Search in %1").arg(I18n.trFor("emojiPicker", root.categoryNames[root.selectedCategory]))
                         text: root.query
                         onTextChanged: {
                             root.query = text;
@@ -712,7 +712,7 @@ PluginComponent {
                                 required property int index
                                 iconName: root.categoryIcons[modelData] || "category"
                                 iconSize: 22
-                                tooltipText: I18n.tr(root.categoryNames[modelData] || "")
+                                tooltipText: I18n.trFor("emojiPicker", root.categoryNames[modelData] || "")
                                 buttonSize: (categoryRow.width - (root.categoryOrder.length - 1) * categoryRow.spacing) / root.categoryOrder.length
                                 backgroundColor: root.selectedCategory === modelData ? Theme.primary : Theme.surfaceContainerHigh
                                 iconColor: root.selectedCategory === modelData ? Theme.onPrimary : Theme.surfaceText
@@ -738,7 +738,7 @@ PluginComponent {
                     spacing: Theme.spacingS
 
                     StyledText {
-                        text: root.visibleEntries.length > 0 ? (root.query ? I18n.trFor("emojiPicker", "Search results") : (I18n.tr(root.categoryNames[root.selectedCategory] || ""))) : I18n.trFor("emojiPicker", "No emoji found")
+                        text: root.visibleEntries.length > 0 ? (root.query ? I18n.trFor("emojiPicker", "Search results") : (I18n.trFor("emojiPicker", root.categoryNames[root.selectedCategory] || ""))) : I18n.trFor("emojiPicker", "No emoji found")
                         color: Theme.surfaceVariantText
                         font.pixelSize: Theme.fontSizeSmall
                         verticalAlignment: Text.AlignVCenter

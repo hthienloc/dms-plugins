@@ -1,0 +1,170 @@
+{
+  "<b>Left-click</b> the pill to open the IP details popout.": {
+    "<b>Left-click</b> the pill to open the IP details popout.": ""
+  },
+  "<b>Middle-click</b> the pill to toggle privacy mode.": {
+    "<b>Middle-click</b> the pill to toggle privacy mode.": ""
+  },
+  "<b>Right-click</b> the pill to manually force a refresh.": {
+    "<b>Right-click</b> the pill to manually force a refresh.": ""
+  },
+  "Bar Display": {
+    "Bar Display": "バー表示"
+  },
+  "Behavior": {
+    "Behavior": "行動"
+  },
+  "City": {
+    "City": "市"
+  },
+  "City + IP": {
+    "City + IP": "都市 + IP"
+  },
+  "Click any <b>IP address</b> in the popout to copy it to the clipboard.": {
+    "Click any <b>IP address</b> in the popout to copy it to the clipboard.": ""
+  },
+  "Click the <b>eye icon</b> in the popout to toggle privacy mode.": {
+    "Click the <b>eye icon</b> in the popout to toggle privacy mode.": ""
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": ""
+  },
+  "Copy IPv4": {
+    "Copy IPv4": ""
+  },
+  "Copy IPv6": {
+    "Copy IPv6": ""
+  },
+  "Country": {
+    "Country": "国"
+  },
+  "Country + City": {
+    "Country + City": "国+都市"
+  },
+  "Country + IP": {
+    "Country + IP": "国 + IP"
+  },
+  "Default to Privacy Mode": {
+    "Default to Privacy Mode": "デフォルトはプライバシーモード"
+  },
+  "Disable Privacy Mode": {
+    "Disable Privacy Mode": ""
+  },
+  "Display Content": {
+    "Display Content": ""
+  },
+  "Enable Privacy Mode": {
+    "Enable Privacy Mode": ""
+  },
+  "Gateway": {
+    "Gateway": "ゲートウェイ"
+  },
+  "How often to check for IP changes.": {
+    "How often to check for IP changes.": "IP の変更を確認する頻度。"
+  },
+  "IP Address": {
+    "IP Address": "IPアドレス"
+  },
+  "IP Change Notifications": {
+    "IP Change Notifications": ""
+  },
+  "IPv4": {
+    "IPv4": ""
+  },
+  "IPv6": {
+    "IPv6": ""
+  },
+  "ISP": {
+    "ISP": "ISP"
+  },
+  "Icon Only": {
+    "Icon Only": "アイコンのみ"
+  },
+  "Interface": {
+    "Interface": "インタフェース"
+  },
+  "Latency": {
+    "Latency": "レイテンシ"
+  },
+  "Local IP": {
+    "Local IP": "ローカルIP"
+  },
+  "Local Network": {
+    "Local Network": "ローカルネットワーク"
+  },
+  "Location": {
+    "Location": "位置"
+  },
+  "Middle-click the bar icon or use the eye button to toggle Privacy Mode": {
+    "Middle-click the bar icon or use the eye button to toggle Privacy Mode": ""
+  },
+  "Popout Content": {
+    "Popout Content": ""
+  },
+  "Public Connection": {
+    "Public Connection": "パブリック接続"
+  },
+  "Refresh Interval": {
+    "Refresh Interval": "リフレッシュ間隔"
+  },
+  "Refresh Network Info": {
+    "Refresh Network Info": ""
+  },
+  "Right-click the bar icon to quickly refresh network status": {
+    "Right-click the bar icon to quickly refresh network status": "バーアイコンを右クリックすると、ネットワークステータスをすばやく更新できます"
+  },
+  "Show Hints": {
+    "Show Hints": "ヒントを表示する"
+  },
+  "Show IPv4": {
+    "Show IPv4": ""
+  },
+  "Show IPv6": {
+    "Show IPv6": ""
+  },
+  "Show ISP": {
+    "Show ISP": "ISPを表示"
+  },
+  "Show Latency": {
+    "Show Latency": "レイテンシの表示"
+  },
+  "Show Local Gateway": {
+    "Show Local Gateway": "ローカルゲートウェイを表示"
+  },
+  "Show Local IP": {
+    "Show Local IP": "ローカルIPを表示"
+  },
+  "Show Local IP in Bar": {
+    "Show Local IP in Bar": ""
+  },
+  "Show Local Interface": {
+    "Show Local Interface": "ローカルインターフェースを表示"
+  },
+  "Show Location": {
+    "Show Location": "場所を表示"
+  },
+  "Show Public IP in Bar": {
+    "Show Public IP in Bar": ""
+  },
+  "Show a desktop notification when your public IP address or ISP changes.": {
+    "Show a desktop notification when your public IP address or ISP changes.": "パブリック IP アドレスまたは ISP が変更されたときにデスクトップ通知を表示します。"
+  },
+  "Show the country's flag on the bar pill instead of the default globe icon.": {
+    "Show the country's flag on the bar pill instead of the default globe icon.": ""
+  },
+  "Start the plugin with public IP details hidden by default.": {
+    "Start the plugin with public IP details hidden by default.": "デフォルトではパブリック IP の詳細を非表示にしてプラグインを起動します。"
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use Country Flag as Icon": {
+    "Use Country Flag as Icon": "国旗をアイコンとして使用する"
+  },
+  "VPN:": {
+    "VPN:": ""
+  },
+  "min": {
+    "min": "分"
+  }
+}

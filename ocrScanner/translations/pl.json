@@ -11,6 +11,9 @@
   "Behavior": {
     "Behavior": "Zachowanie"
   },
+  "Clear Image & Text": {
+    "Clear Image & Text": ""
+  },
   "Copy Text": {
     "Copy Text": "Skopiuj tekst"
   },
@@ -35,8 +38,8 @@
   "Recognition Languages": {
     "Recognition Languages": "Języki rozpoznawania"
   },
-  "Right-click to scan clipboard, Middle-click to scan screenshot": {
-    "Right-click to scan clipboard, Middle-click to scan screenshot": "Kliknij prawym przyciskiem myszy, aby przeskanować schowek, kliknij środkowym przyciskiem myszy, aby zeskanować zrzut ekranu"
+  "Right-click pill to scan clipboard, Middle-click to take screenshot": {
+    "Right-click pill to scan clipboard, Middle-click to take screenshot": ""
   },
   "Save Text": {
     "Save Text": "Zapisz tekst"
@@ -46,6 +49,9 @@
   },
   "Scanned text is automatically copied to the <b>clipboard</b>.": {
     "Scanned text is automatically copied to the <b>clipboard</b>.": "Zeskanowany tekst jest automatycznie kopiowany do <b>schowka</b>."
+  },
+  "Screenshot": {
+    "Screenshot": ""
   },
   "Select File": {
     "Select File": "Wybierz opcję Plik"

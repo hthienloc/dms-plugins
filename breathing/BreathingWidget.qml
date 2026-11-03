@@ -658,11 +658,11 @@ PluginComponent {
                                 spacing: 4
 
                                 StyledText {
-                                    text: root.isPaused ? I18n.tr("Paused") : (
-                                        breathPhase === "inhale" ? I18n.tr("Breathe In") : 
-                                        breathPhase === "hold" ? I18n.tr("Hold") : 
-                                        breathPhase === "exhale" ? I18n.tr("Breathe Out") :
-                                        breathPhase === "holdAfterExhale" ? I18n.tr("Hold") : "---"
+                                    text: root.isPaused ? I18n.trFor("breathing", "Paused") : (
+                                        breathPhase === "inhale" ? I18n.trFor("breathing", "Breathe In") : 
+                                        breathPhase === "hold" ? I18n.trFor("breathing", "Hold") : 
+                                        breathPhase === "exhale" ? I18n.trFor("breathing", "Breathe Out") :
+                                        breathPhase === "holdAfterExhale" ? I18n.trFor("breathing", "Hold") : "---"
                                     )
                                     font.pixelSize: Theme.fontSizeMedium
                                     font.bold: true
@@ -734,11 +734,11 @@ PluginComponent {
                             spacing: 4
 
                             StyledText {
-                                text: root.isPaused ? I18n.tr("Paused") : (
-                                    breathPhase === "inhale" ? I18n.tr("Breathe In") : 
-                                    breathPhase === "hold" ? I18n.tr("Hold") : 
-                                    breathPhase === "exhale" ? I18n.tr("Breathe Out") :
-                                    breathPhase === "holdAfterExhale" ? I18n.tr("Hold") : "---"
+                                text: root.isPaused ? I18n.trFor("breathing", "Paused") : (
+                                    breathPhase === "inhale" ? I18n.trFor("breathing", "Breathe In") : 
+                                    breathPhase === "hold" ? I18n.trFor("breathing", "Hold") : 
+                                    breathPhase === "exhale" ? I18n.trFor("breathing", "Breathe Out") :
+                                    breathPhase === "holdAfterExhale" ? I18n.trFor("breathing", "Hold") : "---"
                                 )
                                 font.pixelSize: Theme.fontSizeXLarge
                                 font.bold: true
@@ -802,11 +802,11 @@ PluginComponent {
                                 }
 
                                 StyledText {
-                                    text: root.isPaused ? I18n.tr("Paused") : (
-                                        breathPhase === "inhale" ? I18n.tr("Breathe In") : 
-                                        breathPhase === "hold" ? I18n.tr("Hold") : 
-                                        breathPhase === "exhale" ? I18n.tr("Breathe Out") :
-                                        breathPhase === "holdAfterExhale" ? I18n.tr("Hold") : "---"
+                                    text: root.isPaused ? I18n.trFor("breathing", "Paused") : (
+                                        breathPhase === "inhale" ? I18n.trFor("breathing", "Breathe In") : 
+                                        breathPhase === "hold" ? I18n.trFor("breathing", "Hold") : 
+                                        breathPhase === "exhale" ? I18n.trFor("breathing", "Breathe Out") :
+                                        breathPhase === "holdAfterExhale" ? I18n.trFor("breathing", "Hold") : "---"
                                     )
                                     font.pixelSize: Theme.fontSizeMedium
                                     font.bold: true
@@ -925,7 +925,7 @@ PluginComponent {
                         spacing: Theme.spacingS
 
                         DButton {
-                            text: root.isRunning ? (root.isPaused ? I18n.tr("Resume") : I18n.tr("Pause")) : I18n.tr("Start")
+                            text: root.isRunning ? (root.isPaused ? I18n.trFor("breathing", "Resume") : I18n.trFor("breathing", "Pause")) : I18n.trFor("breathing", "Start")
                             width: (parent.width - parent.spacing) / 2
                             height: Theme.buttonHeightS
                             iconName: root.isPaused ? "play_arrow" : (root.isRunning ? "pause" : "play_arrow")
@@ -939,7 +939,7 @@ PluginComponent {
                         }
 
                         DButton {
-                            text: I18n.tr("Stop")
+                            text: I18n.trFor("breathing", "Stop")
                             width: (parent.width - parent.spacing) / 2
                             height: Theme.buttonHeightS
                             backgroundColor: (root.isRunning || root.breathPhase !== "") ? Theme.withAlpha(Theme.error, 0.15) : Theme.surfaceContainerHigh
@@ -964,7 +964,7 @@ PluginComponent {
                             iconName: root.isMuted ? "volume_off" : (root.soundVolume > 50 ? "volume_up" : (root.soundVolume > 0 ? "volume_down" : "volume_mute"))
                             iconSize: Theme.iconSizeSmall
                             iconColor: root.isMuted ? Theme.error : Theme.surfaceText
-                            tooltipText: root.isMuted ? I18n.tr("Unmute") : I18n.tr("Mute")
+                            tooltipText: root.isMuted ? I18n.trFor("breathing", "Unmute") : I18n.trFor("breathing", "Mute")
                             onClicked: root.toggleMute()
                         }
 
@@ -989,7 +989,7 @@ PluginComponent {
                             iconName: root.isTestingSound ? "stop" : "play_arrow"
                             iconSize: Theme.iconSizeSmall
                             iconColor: root.isTestingSound ? Theme.primary : Theme.surfaceText
-                            tooltipText: root.isTestingSound ? I18n.tr("Stop Test") : I18n.tr("Test Sound")
+                            tooltipText: root.isTestingSound ? I18n.trFor("breathing", "Stop Test") : I18n.trFor("breathing", "Test Sound")
                             onClicked: root.toggleTestSound()
                         }
                     }
@@ -1000,15 +1000,15 @@ PluginComponent {
 
                     HintItem {
                         icon: "mouse"
-                        text: I18n.tr("Right-click bar icon to quickly toggle Start/Pause.")
+                        text: I18n.trFor("breathing", "Right-click bar icon to quickly toggle Start/Pause.")
                     }
                     HintItem {
                         icon: "mouse"
-                        text: I18n.tr("Double-click an exercise tile to start it immediately.")
+                        text: I18n.trFor("breathing", "Double-click an exercise tile to start it immediately.")
                     }
                     HintItem {
                         icon: "keyboard"
-                        text: I18n.tr("Press 'Space' to Pause/Resume, 'R' to Reset.")
+                        text: I18n.trFor("breathing", "Press 'Space' to Pause/Resume, 'R' to Reset.")
                     }
                 }
             }

@@ -1,0 +1,170 @@
+{
+  "<b>Left-click</b> the pill to open the IP details popout.": {
+    "<b>Left-click</b> the pill to open the IP details popout.": ""
+  },
+  "<b>Middle-click</b> the pill to toggle privacy mode.": {
+    "<b>Middle-click</b> the pill to toggle privacy mode.": ""
+  },
+  "<b>Right-click</b> the pill to manually force a refresh.": {
+    "<b>Right-click</b> the pill to manually force a refresh.": ""
+  },
+  "Bar Display": {
+    "Bar Display": "Барный дисплей"
+  },
+  "Behavior": {
+    "Behavior": "Поведение"
+  },
+  "City": {
+    "City": "Город"
+  },
+  "City + IP": {
+    "City + IP": "Город + ИП"
+  },
+  "Click any <b>IP address</b> in the popout to copy it to the clipboard.": {
+    "Click any <b>IP address</b> in the popout to copy it to the clipboard.": ""
+  },
+  "Click the <b>eye icon</b> in the popout to toggle privacy mode.": {
+    "Click the <b>eye icon</b> in the popout to toggle privacy mode.": ""
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": ""
+  },
+  "Copy IPv4": {
+    "Copy IPv4": ""
+  },
+  "Copy IPv6": {
+    "Copy IPv6": ""
+  },
+  "Country": {
+    "Country": "Страна"
+  },
+  "Country + City": {
+    "Country + City": "Страна + Город"
+  },
+  "Country + IP": {
+    "Country + IP": "Страна + IP"
+  },
+  "Default to Privacy Mode": {
+    "Default to Privacy Mode": "По умолчанию режим конфиденциальности"
+  },
+  "Disable Privacy Mode": {
+    "Disable Privacy Mode": ""
+  },
+  "Display Content": {
+    "Display Content": ""
+  },
+  "Enable Privacy Mode": {
+    "Enable Privacy Mode": ""
+  },
+  "Gateway": {
+    "Gateway": "шлюз"
+  },
+  "How often to check for IP changes.": {
+    "How often to check for IP changes.": "Как часто проверять смену IP."
+  },
+  "IP Address": {
+    "IP Address": "IP-адрес"
+  },
+  "IP Change Notifications": {
+    "IP Change Notifications": ""
+  },
+  "IPv4": {
+    "IPv4": ""
+  },
+  "IPv6": {
+    "IPv6": ""
+  },
+  "ISP": {
+    "ISP": "Интернет-провайдер"
+  },
+  "Icon Only": {
+    "Icon Only": "Только значок"
+  },
+  "Interface": {
+    "Interface": "Интерфейс"
+  },
+  "Latency": {
+    "Latency": "Задержка"
+  },
+  "Local IP": {
+    "Local IP": "Локальный IP"
+  },
+  "Local Network": {
+    "Local Network": "Локальная сеть"
+  },
+  "Location": {
+    "Location": "Расположение"
+  },
+  "Middle-click the bar icon or use the eye button to toggle Privacy Mode": {
+    "Middle-click the bar icon or use the eye button to toggle Privacy Mode": ""
+  },
+  "Popout Content": {
+    "Popout Content": ""
+  },
+  "Public Connection": {
+    "Public Connection": "Общественное соединение"
+  },
+  "Refresh Interval": {
+    "Refresh Interval": "Интервал обновления"
+  },
+  "Refresh Network Info": {
+    "Refresh Network Info": ""
+  },
+  "Right-click the bar icon to quickly refresh network status": {
+    "Right-click the bar icon to quickly refresh network status": "Щелкните правой кнопкой мыши значок панели, чтобы быстро обновить состояние сети."
+  },
+  "Show Hints": {
+    "Show Hints": "Показать подсказки"
+  },
+  "Show IPv4": {
+    "Show IPv4": ""
+  },
+  "Show IPv6": {
+    "Show IPv6": ""
+  },
+  "Show ISP": {
+    "Show ISP": "Показать интернет-провайдера"
+  },
+  "Show Latency": {
+    "Show Latency": "Показать задержку"
+  },
+  "Show Local Gateway": {
+    "Show Local Gateway": "Показать локальный шлюз"
+  },
+  "Show Local IP": {
+    "Show Local IP": "Показать локальный IP"
+  },
+  "Show Local IP in Bar": {
+    "Show Local IP in Bar": ""
+  },
+  "Show Local Interface": {
+    "Show Local Interface": "Показать локальный интерфейс"
+  },
+  "Show Location": {
+    "Show Location": "Показать местоположение"
+  },
+  "Show Public IP in Bar": {
+    "Show Public IP in Bar": ""
+  },
+  "Show a desktop notification when your public IP address or ISP changes.": {
+    "Show a desktop notification when your public IP address or ISP changes.": "Показывать уведомление на рабочем столе при изменении вашего общедоступного IP-адреса или интернет-провайдера."
+  },
+  "Show the country's flag on the bar pill instead of the default globe icon.": {
+    "Show the country's flag on the bar pill instead of the default globe icon.": "Покажите флаг страны на таблетке вместо значка глобуса по умолчанию."
+  },
+  "Start the plugin with public IP details hidden by default.": {
+    "Start the plugin with public IP details hidden by default.": "Запустите плагин со скрытыми по умолчанию сведениями об общедоступном IP-адресе."
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use Country Flag as Icon": {
+    "Use Country Flag as Icon": "Использовать флаг страны в качестве значка"
+  },
+  "VPN:": {
+    "VPN:": ""
+  },
+  "min": {
+    "min": "мин"
+  }
+}

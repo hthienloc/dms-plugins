@@ -11,6 +11,9 @@
   "Behavior": {
     "Behavior": "行動"
   },
+  "Clear Image & Text": {
+    "Clear Image & Text": ""
+  },
   "Copy Text": {
     "Copy Text": "テキストをコピーする"
   },
@@ -35,8 +38,8 @@
   "Recognition Languages": {
     "Recognition Languages": "認識言語"
   },
-  "Right-click to scan clipboard, Middle-click to scan screenshot": {
-    "Right-click to scan clipboard, Middle-click to scan screenshot": "右クリックしてクリップボードをスキャンし、中クリックしてスクリーンショットをスキャンします"
+  "Right-click pill to scan clipboard, Middle-click to take screenshot": {
+    "Right-click pill to scan clipboard, Middle-click to take screenshot": ""
   },
   "Save Text": {
     "Save Text": "テキストの保存"
@@ -46,6 +49,9 @@
   },
   "Scanned text is automatically copied to the <b>clipboard</b>.": {
     "Scanned text is automatically copied to the <b>clipboard</b>.": "スキャンされたテキストは自動的に<b>クリップボード</b>にコピーされます。"
+  },
+  "Screenshot": {
+    "Screenshot": ""
   },
   "Select File": {
     "Select File": "ファイルの選択"

@@ -1,0 +1,92 @@
+{
+  "Activate the display selector via the <b>Control Center</b> or configured <b>keybindings</b>.": {
+    "Activate the display selector via the <b>Control Center</b> or configured <b>keybindings</b>.": ""
+  },
+  "Adjust the background dimming opacity when the display settings modal is open": {
+    "Adjust the background dimming opacity when the display settings modal is open": ""
+  },
+  "Apply: Extend Displays": {
+    "Apply: Extend Displays": ""
+  },
+  "Apply: External Only": {
+    "Apply: External Only": ""
+  },
+  "Apply: Internal Only": {
+    "Apply: Internal Only": ""
+  },
+  "Apply: Mirror Displays": {
+    "Apply: Mirror Displays": ""
+  },
+  "Automatically re-enable the laptop screen if all external monitors are disconnected": {
+    "Automatically re-enable the laptop screen if all external monitors are disconnected": "すべての外部モニターが接続されていない場合、ラップトップの画面を自動的に再度有効にします"
+  },
+  "Choose what happens automatically when an external monitor is plugged in": {
+    "Choose what happens automatically when an external monitor is plugged in": "外部モニターが接続されているときに自動的に行われる動作を選択します"
+  },
+  "Close Modal": {
+    "Close Modal": ""
+  },
+  "Do Nothing": {
+    "Do Nothing": "何もしない"
+  },
+  "Enable safety fallback": {
+    "Enable safety fallback": "安全フォールバックを有効にする"
+  },
+  "Extended": {
+    "Extended": "拡張された"
+  },
+  "External Only": {
+    "External Only": "外部のみ"
+  },
+  "General Settings": {
+    "General Settings": ""
+  },
+  "IPC Commands": {
+    "IPC Commands": ""
+  },
+  "Internal Only": {
+    "Internal Only": "内部のみ"
+  },
+  "Manual Control": {
+    "Manual Control": "手動制御"
+  },
+  "Mirror": {
+    "Mirror": "鏡"
+  },
+  "Modal Background Opacity": {
+    "Modal Background Opacity": ""
+  },
+  "Niri Binding Configuration": {
+    "Niri Binding Configuration": ""
+  },
+  "No displays detected...": {
+    "No displays detected...": "ディスプレイが検出されませんでした..."
+  },
+  "Open Modal": {
+    "Open Modal": ""
+  },
+  "Preferred internal display": {
+    "Preferred internal display": "推奨される内部ディスプレイ"
+  },
+  "Project": {
+    "Project": "プロジェクト"
+  },
+  "Show Menu": {
+    "Show Menu": "メニューを表示"
+  },
+  "The name of your laptop display (e.g. eDP-1). Leave empty for auto-detection.": {
+    "The name of your laptop display (e.g. eDP-1). Leave empty for auto-detection.": "ノートパソコンのディスプレイの名前 (例: eDP-1)。自動検出するには空のままにしておきます。"
+  },
+  "Toggle Modal": {
+    "Toggle Modal": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use the <b>IPC commands</b> above to automate display switching.": {
+    "Use the <b>IPC commands</b> above to automate display switching.": ""
+  },
+  "When monitor is connected": {
+    "When monitor is connected": "モニター接続時"
+  }
+}

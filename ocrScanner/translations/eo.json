@@ -11,6 +11,9 @@
   "Behavior": {
     "Behavior": "Konduto"
   },
+  "Clear Image & Text": {
+    "Clear Image & Text": ""
+  },
   "Copy Text": {
     "Copy Text": "Kopiu Teksto"
   },
@@ -35,8 +38,8 @@
   "Recognition Languages": {
     "Recognition Languages": "Rekonaj Lingvoj"
   },
-  "Right-click to scan clipboard, Middle-click to scan screenshot": {
-    "Right-click to scan clipboard, Middle-click to scan screenshot": "Dekstre alklaku por skani tondujo, Mezklaku por skani ekrankopion"
+  "Right-click pill to scan clipboard, Middle-click to take screenshot": {
+    "Right-click pill to scan clipboard, Middle-click to take screenshot": ""
   },
   "Save Text": {
     "Save Text": "Konservu Tekston"
@@ -46,6 +49,9 @@
   },
   "Scanned text is automatically copied to the <b>clipboard</b>.": {
     "Scanned text is automatically copied to the <b>clipboard</b>.": "Skanita teksto estas aŭtomate kopiita al la <b>tondujo</b>."
+  },
+  "Screenshot": {
+    "Screenshot": ""
   },
   "Select File": {
     "Select File": "Elektu Dosiero"

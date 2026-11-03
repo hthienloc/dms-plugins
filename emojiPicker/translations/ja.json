@@ -14,6 +14,9 @@
   "Choose the modal size that best fits your display.": {
     "Choose the modal size that best fits your display.": "ディスプレイに最適なモーダル サイズを選択してください。"
   },
+  "Clear": {
+    "Clear": ""
+  },
   "Clear All": {
     "Clear All": "すべてクリア"
   },
@@ -44,11 +47,35 @@
   "Copy Confirmation": {
     "Copy Confirmation": "コピーの確認"
   },
+  "Copy to clipboard": {
+    "Copy to clipboard": ""
+  },
+  "Credits": {
+    "Credits": ""
+  },
+  "Dark": {
+    "Dark": ""
+  },
+  "Default": {
+    "Default": ""
+  },
+  "Default Action": {
+    "Default Action": ""
+  },
   "Default Category": {
     "Default Category": "デフォルトのカテゴリ"
   },
-  "Emoji Picker": {
-    "Emoji Picker": "絵文字ピッカー"
+  "Default skin tone modifier for people and hand emojis.": {
+    "Default skin tone modifier for people and hand emojis.": ""
+  },
+  "Emoji catalog and inspiration.": {
+    "Emoji catalog and inspiration.": ""
+  },
+  "Emoji metadata.": {
+    "Emoji metadata.": ""
+  },
+  "Emojis Per Row": {
+    "Emojis Per Row": ""
   },
   "Failed to copy emoji": {
     "Failed to copy emoji": "絵文字のコピーに失敗しました"
@@ -71,11 +98,38 @@
   "IPC Commands": {
     "IPC Commands": "IPCコマンド"
   },
+  "In the grid, press <b>Backspace</b> or <b>Delete</b> with an empty queue to clear the search and return to it.": {
+    "In the grid, press <b>Backspace</b> or <b>Delete</b> with an empty queue to clear the search and return to it.": ""
+  },
+  "In the grid, use <b>Ctrl+H/J/K/L</b> for Vim-style left/down/up/right navigation.": {
+    "In the grid, use <b>Ctrl+H/J/K/L</b> for Vim-style left/down/up/right navigation.": ""
+  },
+  "Keyboard Hints": {
+    "Keyboard Hints": ""
+  },
   "Large (620 px)": {
     "Large (620 px)": "大 (620 ピクセル)"
   },
+  "Left click and Enter use this action; right click and Ctrl+Enter use the other one.": {
+    "Left click and Enter use this action; right click and Ctrl+Enter use the other one.": ""
+  },
+  "Light": {
+    "Light": ""
+  },
+  "Medium": {
+    "Medium": ""
+  },
+  "Medium-Dark": {
+    "Medium-Dark": ""
+  },
+  "Medium-Light": {
+    "Medium-Light": ""
+  },
   "No emoji found": {
     "No emoji found": "絵文字が見つかりませんでした"
+  },
+  "Number of emojis displayed per row. Each emoji stays square.": {
+    "Number of emojis displayed per row. Each emoji stays square.": ""
   },
   "Objects": {
     "Objects": "オブジェクト"
@@ -86,17 +140,23 @@
   "Paste": {
     "Paste": "ペースト"
   },
+  "Paste at cursor": {
+    "Paste at cursor": ""
+  },
   "Picker Size": {
     "Picker Size": "ピッカーのサイズ"
   },
   "Press <b>Backspace</b> to remove the last queued emoji.": {
     "Press <b>Backspace</b> to remove the last queued emoji.": "<b>Backspace</b> キーを押して、最後にキューに入れられた絵文字を削除します。"
   },
-  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
-    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "<b>下</b> または <b>Tab</b> を押して、検索から絵文字グリッドに移動します。"
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the first emoji.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the first emoji.": ""
   },
   "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
     "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "<b>Escape</b> キーを押すとキューを破棄します。キューが空の場合はピッカーを閉じます。"
+  },
+  "Queue": {
+    "Queue": ""
   },
   "Recent History": {
     "Recent History": "最近の履歴"
@@ -110,14 +170,26 @@
   "Recently Used": {
     "Recently Used": "最近使用した"
   },
+  "Remove": {
+    "Remove": ""
+  },
   "Search emoji": {
     "Search emoji": "絵文字を検索"
+  },
+  "Search in %1": {
+    "Search in %1": ""
   },
   "Search results": {
     "Search results": "検索結果"
   },
   "Show a toast containing the emoji after copying it.": {
     "Show a toast containing the emoji after copying it.": "絵文字をコピーした後、その絵文字を含むトーストを表示します。"
+  },
+  "Show keyboard navigation hints at the bottom of the picker.": {
+    "Show keyboard navigation hints at the bottom of the picker.": ""
+  },
+  "Skin Tone": {
+    "Skin Tone": ""
   },
   "Smileys & People": {
     "Smileys & People": "スマイリーと人々"
@@ -142,5 +214,8 @@
   },
   "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
     "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "絵文字をキューに入れて、<b>Enter</b> キーでシーケンスをコピーし、<b>Ctrl+Enter</b> キーで貼り付けます。"
+  },
+  "nav": {
+    "nav": ""
   }
 }

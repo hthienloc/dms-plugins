@@ -9,13 +9,13 @@ Item {
     property var pluginRoot
 
     property var tips: [
-        I18n.tr("Look at something 20 feet away for 20 seconds."),
-        I18n.tr("Blink 10-20 times quickly to moisten your eyes."),
-        I18n.tr("Close your eyes tightly for 2 seconds, then open them."),
-        I18n.tr("Roll your eyes clockwise, then counter-clockwise."),
-        I18n.tr("Stretch your arms and neck."),
-        I18n.tr("Drink a glass of water."),
-        I18n.tr("Look out a window to relax your eye muscles.")
+        I18n.trFor("takeABreak", "Look at something 20 feet away for 20 seconds."),
+        I18n.trFor("takeABreak", "Blink 10-20 times quickly to moisten your eyes."),
+        I18n.trFor("takeABreak", "Close your eyes tightly for 2 seconds, then open them."),
+        I18n.trFor("takeABreak", "Roll your eyes clockwise, then counter-clockwise."),
+        I18n.trFor("takeABreak", "Stretch your arms and neck."),
+        I18n.trFor("takeABreak", "Drink a glass of water."),
+        I18n.trFor("takeABreak", "Look out a window to relax your eye muscles.")
     ]
 
     property string currentTip: tips[0]
@@ -63,7 +63,7 @@ Item {
                     }
 
                     StyledText {
-                        text: pluginRoot.nextBreakType === 1 ? I18n.tr("Short Break") : I18n.tr("Long Break")
+                        text: pluginRoot.nextBreakType === 1 ? I18n.trFor("takeABreak", "Short Break") : I18n.trFor("takeABreak", "Long Break")
                         font.pixelSize: Theme.fontSizeExtraLarge * 2
                         font.weight: Font.Bold
                         color: Theme.surfaceText
@@ -106,7 +106,7 @@ Item {
                     StyledText {
                         id: skipText
                         anchors.centerIn: parent
-                        text: I18n.tr("Skip this break")
+                        text: I18n.trFor("takeABreak", "Skip this break")
                         font.pixelSize: Theme.fontSizeSmall
                         color: Theme.surfaceVariantText
                         opacity: parent.containsMouse ? 0.6 : 0.2

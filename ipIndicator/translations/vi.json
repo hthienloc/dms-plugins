@@ -1,0 +1,170 @@
+{
+  "<b>Left-click</b> the pill to open the IP details popout.": {
+    "<b>Left-click</b> the pill to open the IP details popout.": ""
+  },
+  "<b>Middle-click</b> the pill to toggle privacy mode.": {
+    "<b>Middle-click</b> the pill to toggle privacy mode.": ""
+  },
+  "<b>Right-click</b> the pill to manually force a refresh.": {
+    "<b>Right-click</b> the pill to manually force a refresh.": ""
+  },
+  "Bar Display": {
+    "Bar Display": "Hiển thị thanh"
+  },
+  "Behavior": {
+    "Behavior": "Hành vi"
+  },
+  "City": {
+    "City": "Thành phố"
+  },
+  "City + IP": {
+    "City + IP": "Thành phố + IP"
+  },
+  "Click any <b>IP address</b> in the popout to copy it to the clipboard.": {
+    "Click any <b>IP address</b> in the popout to copy it to the clipboard.": ""
+  },
+  "Click the <b>eye icon</b> in the popout to toggle privacy mode.": {
+    "Click the <b>eye icon</b> in the popout to toggle privacy mode.": ""
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": ""
+  },
+  "Copy IPv4": {
+    "Copy IPv4": ""
+  },
+  "Copy IPv6": {
+    "Copy IPv6": ""
+  },
+  "Country": {
+    "Country": "Quốc gia"
+  },
+  "Country + City": {
+    "Country + City": "Quốc gia + Thành phố"
+  },
+  "Country + IP": {
+    "Country + IP": "Quốc gia + IP"
+  },
+  "Default to Privacy Mode": {
+    "Default to Privacy Mode": "Mặc định là Chế độ bảo mật"
+  },
+  "Disable Privacy Mode": {
+    "Disable Privacy Mode": ""
+  },
+  "Display Content": {
+    "Display Content": ""
+  },
+  "Enable Privacy Mode": {
+    "Enable Privacy Mode": ""
+  },
+  "Gateway": {
+    "Gateway": "Cổng vào"
+  },
+  "How often to check for IP changes.": {
+    "How often to check for IP changes.": "Tần suất kiểm tra các thay đổi IP."
+  },
+  "IP Address": {
+    "IP Address": "Địa chỉ IP"
+  },
+  "IP Change Notifications": {
+    "IP Change Notifications": ""
+  },
+  "IPv4": {
+    "IPv4": ""
+  },
+  "IPv6": {
+    "IPv6": ""
+  },
+  "ISP": {
+    "ISP": "ISP"
+  },
+  "Icon Only": {
+    "Icon Only": "Chỉ biểu tượng"
+  },
+  "Interface": {
+    "Interface": "Giao diện"
+  },
+  "Latency": {
+    "Latency": "Độ trễ"
+  },
+  "Local IP": {
+    "Local IP": "IP cục bộ"
+  },
+  "Local Network": {
+    "Local Network": "Mạng cục bộ"
+  },
+  "Location": {
+    "Location": "Vị trí"
+  },
+  "Middle-click the bar icon or use the eye button to toggle Privacy Mode": {
+    "Middle-click the bar icon or use the eye button to toggle Privacy Mode": ""
+  },
+  "Popout Content": {
+    "Popout Content": ""
+  },
+  "Public Connection": {
+    "Public Connection": "Kết nối công cộng"
+  },
+  "Refresh Interval": {
+    "Refresh Interval": "Khoảng thời gian làm mới"
+  },
+  "Refresh Network Info": {
+    "Refresh Network Info": ""
+  },
+  "Right-click the bar icon to quickly refresh network status": {
+    "Right-click the bar icon to quickly refresh network status": "Nhấn chuột phải vào biểu tượng thanh để làm mới nhanh trạng thái mạng"
+  },
+  "Show Hints": {
+    "Show Hints": "Hiển thị gợi ý"
+  },
+  "Show IPv4": {
+    "Show IPv4": ""
+  },
+  "Show IPv6": {
+    "Show IPv6": ""
+  },
+  "Show ISP": {
+    "Show ISP": "Hiển thị ISP"
+  },
+  "Show Latency": {
+    "Show Latency": ""
+  },
+  "Show Local Gateway": {
+    "Show Local Gateway": ""
+  },
+  "Show Local IP": {
+    "Show Local IP": "Hiển thị IP cục bộ"
+  },
+  "Show Local IP in Bar": {
+    "Show Local IP in Bar": ""
+  },
+  "Show Local Interface": {
+    "Show Local Interface": "Hiển thị giao diện cục bộ"
+  },
+  "Show Location": {
+    "Show Location": "Hiển thị vị trí"
+  },
+  "Show Public IP in Bar": {
+    "Show Public IP in Bar": ""
+  },
+  "Show a desktop notification when your public IP address or ISP changes.": {
+    "Show a desktop notification when your public IP address or ISP changes.": "Hiển thị thông báo trên màn hình khi địa chỉ IP công cộng hoặc ISP của bạn thay đổi."
+  },
+  "Show the country's flag on the bar pill instead of the default globe icon.": {
+    "Show the country's flag on the bar pill instead of the default globe icon.": "Hiển thị cờ của quốc gia trên thanh cột thay vì biểu tượng quả địa cầu mặc định."
+  },
+  "Start the plugin with public IP details hidden by default.": {
+    "Start the plugin with public IP details hidden by default.": "Bắt đầu plugin với chi tiết IP công khai được ẩn theo mặc định."
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use Country Flag as Icon": {
+    "Use Country Flag as Icon": "Sử dụng cờ quốc gia làm biểu tượng"
+  },
+  "VPN:": {
+    "VPN:": ""
+  },
+  "min": {
+    "min": "phút"
+  }
+}

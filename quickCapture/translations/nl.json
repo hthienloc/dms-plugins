@@ -431,9 +431,6 @@
   "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "Opmaaktokens: {user} (gebruikersnaam), \\n (nieuwe regel), %Y (jaar), %y (jaar in 2 cijfers), %m (maand), %d (dag), %H (uur), %M (minuut), %S (seconde)"
   },
-  "Format: %1 (%2 FPS)": {
-    "Format: %1 (%2 FPS)": "Formaat: %1 (%2 FPS)"
-  },
   "Framerate": {
     "Framerate": "Framerate"
   },
@@ -472,12 +469,6 @@
   },
   "Hide Annotations": {
     "Hide Annotations": "Annotaties verbergen"
-  },
-  "Hide Control Center": {
-    "Hide Control Center": "Bedieningscentrum verbergen"
-  },
-  "Hide Control Center by Default": {
-    "Hide Control Center by Default": "Bedieningscentrum standaard verbergen"
   },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": "Bedieningscentrum verbergen bij vastleggen"
@@ -529,9 +520,6 @@
   },
   "Initial Width": {
     "Initial Width": "Beginbreedte"
-  },
-  "Initial state for the Control Center toggle.": {
-    "Initial state for the Control Center toggle.": "Beginstatus van de schakelaar voor het bedieningscentrum."
   },
   "Inline": {
     "Inline": "Inline"
@@ -706,9 +694,6 @@
   },
   "Open Image": {
     "Open Image": "Afbeelding openen"
-  },
-  "Open folder": {
-    "Open folder": "Map openen"
   },
   "Outline Variant": {
     "Outline Variant": "Outline Variant"
@@ -1004,17 +989,11 @@
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
     "Select one or more installed Tesseract language packs for OCR text recognition.": "Selecteer een of meer geïnstalleerde Tesseract-taalpakketten voor OCR-tekstherkenning."
   },
-  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Selecteer de backend voor schermopname. Automatisch probeert eerst de GPU en valt terug op de CPU (%1)."
-  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "Selecteer de backend voor schermopname. Automatisch probeert eerst de GPU en valt terug op de CPU (%1). Let op: %1 ondersteunt geen pauzeren."
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "Geselecteerd hulpmiddel / actie"
-  },
-  "Settings": {
-    "Settings": "Instellingen"
   },
   "Shadow Strength": {
     "Shadow Strength": "Schaduwsterkte"
@@ -1027,9 +1006,6 @@
   },
   "Show Annotations": {
     "Show Annotations": "Annotaties tonen"
-  },
-  "Show Control Center": {
-    "Show Control Center": "Bedieningscentrum tonen"
   },
   "Show Keyboard Shortcut Hints": {
     "Show Keyboard Shortcut Hints": "Sneltoetstips tonen"

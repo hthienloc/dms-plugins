@@ -149,7 +149,7 @@ PanelWindow {
                     color: Theme.primary
                 }
                 StyledText {
-                    text: I18n.tr("Take a Break")
+                    text: I18n.trFor("takeABreak", "Take a Break")
                     font.pixelSize: Theme.fontSizeLarge
                     font.weight: Font.Bold
                     color: Theme.surfaceText
@@ -158,7 +158,7 @@ PanelWindow {
             }
 
             StyledText {
-                text: I18n.tr("Your ") + (pluginRoot.nextBreakType === 1 ? I18n.tr("short") : I18n.tr("long")) + I18n.tr(" break starts in ") + pluginRoot.timeToNextBreak + "s."
+                text: I18n.trFor("takeABreak", "Your ") + (pluginRoot.nextBreakType === 1 ? I18n.trFor("takeABreak", "short") : I18n.trFor("takeABreak", "long")) + I18n.trFor("takeABreak", " break starts in ") + pluginRoot.timeToNextBreak + "s."
                 font.pixelSize: Theme.fontSizeMedium
                 color: Theme.surfaceVariantText
                 wrapMode: Text.WordWrap
@@ -172,7 +172,7 @@ PanelWindow {
                 spacing: Theme.spacingS
 
                 DButton {
-                    text: I18n.tr("Snooze (5m)")
+                    text: I18n.trFor("takeABreak", "Snooze (5m)")
                     iconName: "snooze"
                     backgroundColor: Theme.primaryContainer
                     textColor: Theme.primary
@@ -191,7 +191,7 @@ PanelWindow {
 
                     StyledText {
                         anchors.centerIn: parent
-                        text: I18n.tr("Skip")
+                        text: I18n.trFor("takeABreak", "Skip")
                         font.pixelSize: Theme.fontSizeSmall
                         color: Theme.surfaceVariantText
                         opacity: parent.containsMouse ? 1.0 : 0.5

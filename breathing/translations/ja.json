@@ -1,0 +1,164 @@
+{
+  "4-7-8 Breathing": {
+    "4-7-8 Breathing": "4-7-8 呼吸"
+  },
+  "<b>Left-click</b> the pill to start/pause the breathing session.": {
+    "<b>Left-click</b> the pill to start/pause the breathing session.": ""
+  },
+  "<b>Right-click</b> the pill to stop and reset the session.": {
+    "<b>Right-click</b> the pill to stop and reset the session.": ""
+  },
+  "Absolute path to custom audio.": {
+    "Absolute path to custom audio.": ""
+  },
+  "All files": {
+    "All files": ""
+  },
+  "Alternate Nostril": {
+    "Alternate Nostril": "交互の鼻孔"
+  },
+  "Ambient Meditation": {
+    "Ambient Meditation": ""
+  },
+  "Animation Style": {
+    "Animation Style": "アニメーションスタイル"
+  },
+  "Appearance": {
+    "Appearance": "外観"
+  },
+  "Audio files": {
+    "Audio files": ""
+  },
+  "Auto-start Exercise": {
+    "Auto-start Exercise": "自動開始エクササイズ"
+  },
+  "Behavior": {
+    "Behavior": "行動"
+  },
+  "Box Breathing": {
+    "Box Breathing": "ボックス呼吸"
+  },
+  "Breathe In": {
+    "Breathe In": "息を吸う"
+  },
+  "Breathe Out": {
+    "Breathe Out": "息を吐き出す"
+  },
+  "Classic Card": {
+    "Classic Card": "クラシックカード"
+  },
+  "Custom Sound File": {
+    "Custom Sound File": "カスタムサウンドファイル"
+  },
+  "Deep Breathing": {
+    "Deep Breathing": "深呼吸"
+  },
+  "Default Duration": {
+    "Default Duration": "デフォルトの期間"
+  },
+  "Default Exercise": {
+    "Default Exercise": "デフォルトの演習"
+  },
+  "Double-click an exercise tile to start it immediately.": {
+    "Double-click an exercise tile to start it immediately.": "エクササイズ タイルをダブルクリックすると、すぐに開始できます。"
+  },
+  "Equal Breathing": {
+    "Equal Breathing": "均等な呼吸"
+  },
+  "Expanding Circle": {
+    "Expanding Circle": "広がる輪"
+  },
+  "Feedback": {
+    "Feedback": "フィードバック"
+  },
+  "Flowing Wave": {
+    "Flowing Wave": "流れる波"
+  },
+  "Follow the <b>visual guide</b> and <b>sound cues</b> to sync your breath.": {
+    "Follow the <b>visual guide</b> and <b>sound cues</b> to sync your breath.": ""
+  },
+  "General": {
+    "General": "一般的な"
+  },
+  "Haptic Feedback": {
+    "Haptic Feedback": "触覚フィードバック"
+  },
+  "Hold": {
+    "Hold": "所有"
+  },
+  "Mute": {
+    "Mute": ""
+  },
+  "Open the <b>Popout</b> to choose different breathing techniques.": {
+    "Open the <b>Popout</b> to choose different breathing techniques.": ""
+  },
+  "Pause": {
+    "Pause": "一時停止"
+  },
+  "Paused": {
+    "Paused": "一時停止中"
+  },
+  "Play falling pitch during exhale (default is inhale only).": {
+    "Play falling pitch during exhale (default is inhale only).": ""
+  },
+  "Press 'Space' to Pause/Resume, 'R' to Reset.": {
+    "Press 'Space' to Pause/Resume, 'R' to Reset.": "「スペース」を押して一時停止/再開し、「R」を押してリセットします。"
+  },
+  "Pulsating Glow": {
+    "Pulsating Glow": "脈動する輝き"
+  },
+  "Resonance": {
+    "Resonance": "共振"
+  },
+  "Resume": {
+    "Resume": "再開する"
+  },
+  "Right-click bar icon to quickly toggle Start/Pause.": {
+    "Right-click bar icon to quickly toggle Start/Pause.": "バーアイコンを右クリックして、開始/一時停止をすばやく切り替えます。"
+  },
+  "Session length for auto-started exercises.": {
+    "Session length for auto-started exercises.": ""
+  },
+  "Show Hints": {
+    "Show Hints": "ヒントを表示する"
+  },
+  "Singing Bowl Chime": {
+    "Singing Bowl Chime": ""
+  },
+  "Sound Cue Type": {
+    "Sound Cue Type": "サウンドキューの種類"
+  },
+  "Sound Cues": {
+    "Sound Cues": "サウンドキュー"
+  },
+  "Sound Volume": {
+    "Sound Volume": ""
+  },
+  "Start": {
+    "Start": "始める"
+  },
+  "Start exercise automatically on login.": {
+    "Start exercise automatically on login.": "ログイン時に自動的にエクササイズを開始します。"
+  },
+  "Stop": {
+    "Stop": "停止"
+  },
+  "Stop Test": {
+    "Stop Test": "テストの停止"
+  },
+  "Test Sound": {
+    "Test Sound": "テストサウンド"
+  },
+  "Two-Tone Model": {
+    "Two-Tone Model": "ツートンモデル"
+  },
+  "Unmute": {
+    "Unmute": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "min": {
+    "min": ""
+  }
+}

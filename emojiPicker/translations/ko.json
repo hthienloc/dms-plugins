@@ -14,6 +14,9 @@
   "Choose the modal size that best fits your display.": {
     "Choose the modal size that best fits your display.": "디스플레이에 가장 적합한 모달 크기를 선택하세요."
   },
+  "Clear": {
+    "Clear": ""
+  },
   "Clear All": {
     "Clear All": "모두 지우기"
   },
@@ -44,11 +47,35 @@
   "Copy Confirmation": {
     "Copy Confirmation": "복사 확인"
   },
+  "Copy to clipboard": {
+    "Copy to clipboard": ""
+  },
+  "Credits": {
+    "Credits": ""
+  },
+  "Dark": {
+    "Dark": ""
+  },
+  "Default": {
+    "Default": ""
+  },
+  "Default Action": {
+    "Default Action": ""
+  },
   "Default Category": {
     "Default Category": "기본 카테고리"
   },
-  "Emoji Picker": {
-    "Emoji Picker": "이모티콘 선택기"
+  "Default skin tone modifier for people and hand emojis.": {
+    "Default skin tone modifier for people and hand emojis.": ""
+  },
+  "Emoji catalog and inspiration.": {
+    "Emoji catalog and inspiration.": ""
+  },
+  "Emoji metadata.": {
+    "Emoji metadata.": ""
+  },
+  "Emojis Per Row": {
+    "Emojis Per Row": ""
   },
   "Failed to copy emoji": {
     "Failed to copy emoji": "이모티콘을 복사하지 못했습니다."
@@ -71,11 +98,38 @@
   "IPC Commands": {
     "IPC Commands": "IPC 명령"
   },
+  "In the grid, press <b>Backspace</b> or <b>Delete</b> with an empty queue to clear the search and return to it.": {
+    "In the grid, press <b>Backspace</b> or <b>Delete</b> with an empty queue to clear the search and return to it.": ""
+  },
+  "In the grid, use <b>Ctrl+H/J/K/L</b> for Vim-style left/down/up/right navigation.": {
+    "In the grid, use <b>Ctrl+H/J/K/L</b> for Vim-style left/down/up/right navigation.": ""
+  },
+  "Keyboard Hints": {
+    "Keyboard Hints": ""
+  },
   "Large (620 px)": {
     "Large (620 px)": "대형(620px)"
   },
+  "Left click and Enter use this action; right click and Ctrl+Enter use the other one.": {
+    "Left click and Enter use this action; right click and Ctrl+Enter use the other one.": ""
+  },
+  "Light": {
+    "Light": ""
+  },
+  "Medium": {
+    "Medium": ""
+  },
+  "Medium-Dark": {
+    "Medium-Dark": ""
+  },
+  "Medium-Light": {
+    "Medium-Light": ""
+  },
   "No emoji found": {
     "No emoji found": "이모티콘을 찾을 수 없습니다."
+  },
+  "Number of emojis displayed per row. Each emoji stays square.": {
+    "Number of emojis displayed per row. Each emoji stays square.": ""
   },
   "Objects": {
     "Objects": "사물"
@@ -86,17 +140,23 @@
   "Paste": {
     "Paste": "반죽"
   },
+  "Paste at cursor": {
+    "Paste at cursor": ""
+  },
   "Picker Size": {
     "Picker Size": "피커 크기"
   },
   "Press <b>Backspace</b> to remove the last queued emoji.": {
     "Press <b>Backspace</b> to remove the last queued emoji.": "마지막으로 대기 중인 이모티콘을 제거하려면 <b>백스페이스</b>를 누르세요."
   },
-  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
-    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "검색에서 그림 이모티콘 그리드로 이동하려면 <b>아래쪽</b> 또는 <b>Tab</b>을 누르세요."
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the first emoji.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the first emoji.": ""
   },
   "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
     "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "대기열을 삭제하려면 <b>Escape</b>를 누르거나 대기열이 비어 있으면 선택기를 닫으세요."
+  },
+  "Queue": {
+    "Queue": ""
   },
   "Recent History": {
     "Recent History": "최근 역사"
@@ -110,14 +170,26 @@
   "Recently Used": {
     "Recently Used": "최근 사용됨"
   },
+  "Remove": {
+    "Remove": ""
+  },
   "Search emoji": {
     "Search emoji": "이모티콘 검색"
+  },
+  "Search in %1": {
+    "Search in %1": ""
   },
   "Search results": {
     "Search results": "검색결과"
   },
   "Show a toast containing the emoji after copying it.": {
     "Show a toast containing the emoji after copying it.": "복사한 후 이모티콘이 포함된 토스트를 표시합니다."
+  },
+  "Show keyboard navigation hints at the bottom of the picker.": {
+    "Show keyboard navigation hints at the bottom of the picker.": ""
+  },
+  "Skin Tone": {
+    "Skin Tone": ""
   },
   "Smileys & People": {
     "Smileys & People": "스마일리와 사람"
@@ -142,5 +214,8 @@
   },
   "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
     "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "이모티콘이 대기열에 있는 경우 <b>Enter</b>를 누르면 시퀀스가 ​​복사되고 <b>Ctrl+Enter</b>를 붙여넣습니다."
+  },
+  "nav": {
+    "nav": ""
   }
 }

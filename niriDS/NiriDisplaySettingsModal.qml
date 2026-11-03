@@ -129,7 +129,7 @@ DModal {
                     spacing: Theme.spacingS
 
                     StyledText {
-                        text: I18n.tr("Project")
+                        text: I18n.trFor("niriDS", "Project")
                         font.pixelSize: Theme.fontSizeMedium
                         color: Theme.surfaceText
                         font.weight: Font.Medium
@@ -138,28 +138,28 @@ DModal {
                     }
                     ShortcutCard {
                         iconName: "tv"
-                        label: I18n.tr("External Only")
+                        label: I18n.trFor("niriDS", "External Only")
                         shortcut: "1"
                         disabled: !root.hasExternal
                         onClicked: { NiriDS.apply("external_only"); root.close(); }
                     }
                     ShortcutCard {
                         iconName: "grid_view"
-                        label: I18n.tr("Extended")
+                        label: I18n.trFor("niriDS", "Extended")
                         shortcut: "2"
                         disabled: !root.hasExternal
                         onClicked: { NiriDS.apply("extend"); root.close(); }
                     }
                     ShortcutCard {
                         iconName: "screen_share"
-                        label: I18n.tr("Mirror")
+                        label: I18n.trFor("niriDS", "Mirror")
                         shortcut: "3"
                         disabled: !root.hasExternal
                         onClicked: { NiriDS.apply("mirror"); root.close(); }
                     }
                     ShortcutCard {
                         iconName: "computer"
-                        label: I18n.tr("Internal Only")
+                        label: I18n.trFor("niriDS", "Internal Only")
                         shortcut: "4"
                         onClicked: { NiriDS.apply("internal_only"); root.close(); }
                     }
@@ -171,7 +171,7 @@ DModal {
                     spacing: Theme.spacingS
 
                     StyledText {
-                        text: I18n.tr("Manual Control")
+                        text: I18n.trFor("niriDS", "Manual Control")
                         font.pixelSize: Theme.fontSizeMedium
                         color: Theme.surfaceText
                         font.weight: Font.Medium
@@ -258,7 +258,7 @@ DModal {
                     }
 
                     StyledText {
-                        text: I18n.tr("No displays detected...")
+                        text: I18n.trFor("niriDS", "No displays detected...")
                         font.pixelSize: Theme.fontSizeSmall
                         color: Theme.surfaceText
                         opacity: 0.4

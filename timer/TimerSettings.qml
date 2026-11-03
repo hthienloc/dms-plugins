@@ -12,7 +12,7 @@ PluginSettings {
     SettingsCard {
         id: presetsSection
         SectionTitle {
-            text: I18n.tr("Presets"); icon: "timer"
+            text: I18n.trFor("timer", "Presets"); icon: "timer"
             showReset: presets.isDirty || quickStartMinutes.isDirty
             onResetClicked: {
                 presets.resetToDefault();
@@ -23,8 +23,8 @@ PluginSettings {
         StringSettingPlus {
             id: presets
             settingKey: "presets"
-            label: I18n.tr("Quick Presets")
-            description: I18n.tr("Comma-separated list of minutes for quick start buttons.")
+            label: I18n.trFor("timer", "Quick Presets")
+            description: I18n.trFor("timer", "Comma-separated list of minutes for quick start buttons.")
             placeholder: "1, 2, 5, 10, 15, 20, 25, 30, 45, 60, 90, 120"
             defaultValue: "1, 2, 5, 10, 15, 20, 25, 30, 45, 60, 90, 120"
         }
@@ -34,8 +34,8 @@ PluginSettings {
         StringSettingPlus {
             id: quickStartMinutes
             settingKey: "quickStartMinutes"
-            label: I18n.tr("Right-Click Quick Start")
-            description: I18n.tr("The duration in minutes to start when right-clicking the icon in Ready state.")
+            label: I18n.trFor("timer", "Right-Click Quick Start")
+            description: I18n.trFor("timer", "The duration in minutes to start when right-clicking the icon in Ready state.")
             placeholder: "25"
             defaultValue: "25"
         }
@@ -44,7 +44,7 @@ PluginSettings {
     SettingsCard {
         id: displaySection
         SectionTitle {
-            text: I18n.tr("Display"); icon: "display_settings"
+            text: I18n.trFor("timer", "Display"); icon: "display_settings"
             showReset: showPillIcon.isDirty || showReadyPlaceholder.isDirty || displayFormat.isDirty
             onResetClicked: {
                 showPillIcon.resetToDefault();
@@ -56,7 +56,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showPillIcon
             settingKey: "showPillIcon"
-            label: I18n.tr("Show Icon")
+            label: I18n.trFor("timer", "Show Icon")
             defaultValue: true
         }
 
@@ -65,8 +65,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: showReadyPlaceholder
             settingKey: "showReadyPlaceholder"
-            label: I18n.tr("Show Ready Placeholder")
-            description: I18n.tr("Show placeholder digits/text when the timer is in the ready state.")
+            label: I18n.trFor("timer", "Show Ready Placeholder")
+            description: I18n.trFor("timer", "Show placeholder digits/text when the timer is in the ready state.")
             defaultValue: true
         }
 
@@ -75,24 +75,24 @@ PluginSettings {
         SelectionSettingPlus {
             id: displayFormat
             settingKey: "displayFormat"
-            label: I18n.tr("Display Content")
+            label: I18n.trFor("timer", "Display Content")
             options: [{
                 "label": "00:00:00",
                 "value": "full"
             }, {
-                "label": I18n.tr("1h 5m 10s"),
+                "label": I18n.trFor("timer", "1h 5m 10s"),
                 "value": "compact"
             }, {
-                "label": I18n.tr("5m 10s"),
+                "label": I18n.trFor("timer", "5m 10s"),
                 "value": "minimal"
             }, {
-                "label": I18n.tr("Progress Bar"),
+                "label": I18n.trFor("timer", "Progress Bar"),
                 "value": "progress"
             }, {
-                "label": I18n.tr("Icon Only"),
+                "label": I18n.trFor("timer", "Icon Only"),
                 "value": "icon"
             }, {
-                "label": I18n.tr("Pulse Dot ✦"),
+                "label": I18n.trFor("timer", "Pulse Dot ✦"),
                 "value": "pulse"
             }]
             defaultValue: "full"
@@ -102,7 +102,7 @@ PluginSettings {
     SettingsCard {
         id: notificationsSection
         SectionTitle {
-            text: I18n.tr("Notifications"); icon: "notifications"
+            text: I18n.trFor("timer", "Notifications"); icon: "notifications"
             showReset: timeoutBehavior.isDirty || showNotification.isDirty || notificationTitle.isDirty || notificationBody.isDirty || autoDND.isDirty
             onResetClicked: {
                 timeoutBehavior.resetToDefault();
@@ -116,12 +116,12 @@ PluginSettings {
         ButtonGroupSettingPlus {
             id: timeoutBehavior
             settingKey: "timeoutBehavior"
-            label: I18n.tr("When Finished")
+            label: I18n.trFor("timer", "When Finished")
             options: [{
-                "label": I18n.tr("Stay at Finished"),
+                "label": I18n.trFor("timer", "Stay at Finished"),
                 "value": "stay"
             }, {
-                "label": I18n.tr("Reset to Ready"),
+                "label": I18n.trFor("timer", "Reset to Ready"),
                 "value": "reset"
             }]
             defaultValue: "reset"
@@ -132,7 +132,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showNotification
             settingKey: "showNotification"
-            label: I18n.tr("Show Desktop Notification")
+            label: I18n.trFor("timer", "Show Desktop Notification")
             defaultValue: true
         }
 
@@ -141,9 +141,9 @@ PluginSettings {
         StringSettingPlus {
             id: notificationTitle
             settingKey: "notificationTitle"
-            label: I18n.tr("Notification Title")
-            placeholder: I18n.tr("Timer")
-            defaultValue: I18n.tr("Timer")
+            label: I18n.trFor("timer", "Notification Title")
+            placeholder: I18n.trFor("timer", "Timer")
+            defaultValue: I18n.trFor("timer", "Timer")
             visible: showNotification.value
         }
 
@@ -152,9 +152,9 @@ PluginSettings {
         StringSettingPlus {
             id: notificationBody
             settingKey: "notificationBody"
-            label: I18n.tr("Notification Body")
-            placeholder: I18n.tr("Timeout!")
-            defaultValue: I18n.tr("Timeout!")
+            label: I18n.trFor("timer", "Notification Body")
+            placeholder: I18n.trFor("timer", "Timeout!")
+            defaultValue: I18n.trFor("timer", "Timeout!")
             visible: showNotification.value
         }
 
@@ -163,8 +163,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: autoDND
             settingKey: "autoDND"
-            label: I18n.tr("Automatically Do Not Disturb")
-            description: I18n.tr("Toggle Do Not Disturb mode when the timer is active.")
+            label: I18n.trFor("timer", "Automatically Do Not Disturb")
+            description: I18n.trFor("timer", "Toggle Do Not Disturb mode when the timer is active.")
             defaultValue: false
         }
     }
@@ -172,7 +172,7 @@ PluginSettings {
     SettingsCard {
         id: customActionsSection
         SectionTitle {
-            text: I18n.tr("Custom Actions"); icon: "bolt"
+            text: I18n.trFor("timer", "Custom Actions"); icon: "bolt"
             showReset: systemActionOnTimeout.isDirty || customCommandOnTimeout.isDirty
             onResetClicked: {
                 systemActionOnTimeout.resetToDefault();
@@ -183,25 +183,25 @@ PluginSettings {
         SelectionSettingPlus {
             id: systemActionOnTimeout
             settingKey: "systemActionOnTimeout"
-            label: I18n.tr("Trigger System Action")
-            description: I18n.tr("Automatically perform a system action when the timer finishes.")
+            label: I18n.trFor("timer", "Trigger System Action")
+            description: I18n.trFor("timer", "Automatically perform a system action when the timer finishes.")
             options: [{
-                "label": I18n.tr("None"),
+                "label": I18n.trFor("timer", "None"),
                 "value": "none"
             }, {
-                "label": I18n.tr("Lock Screen"),
+                "label": I18n.trFor("timer", "Lock Screen"),
                 "value": "lock"
             }, {
-                "label": I18n.tr("Suspend"),
+                "label": I18n.trFor("timer", "Suspend"),
                 "value": "suspend"
             }, {
-                "label": I18n.tr("Hibernate"),
+                "label": I18n.trFor("timer", "Hibernate"),
                 "value": "hibernate"
             }, {
-                "label": I18n.tr("Power Off"),
+                "label": I18n.trFor("timer", "Power Off"),
                 "value": "poweroff"
             }, {
-                "label": I18n.tr("Custom Command"),
+                "label": I18n.trFor("timer", "Custom Command"),
                 "value": "custom"
             }]
             defaultValue: "none"
@@ -212,8 +212,8 @@ PluginSettings {
         StringSettingPlus {
             id: customCommandOnTimeout
             settingKey: "customCommandOnTimeout"
-            label: I18n.tr("Run Custom Shell Command")
-            description: I18n.tr("Execute a shell command when the timer finishes.")
+            label: I18n.trFor("timer", "Run Custom Shell Command")
+            description: I18n.trFor("timer", "Execute a shell command when the timer finishes.")
             placeholder: "e.g., systemctl suspend"
             defaultValue: ""
             visible: systemActionOnTimeout.value === "custom"
@@ -223,7 +223,7 @@ PluginSettings {
     SettingsCard {
         id: soundSection
         SectionTitle {
-            text: I18n.tr("Sound"); icon: "volume_up"
+            text: I18n.trFor("timer", "Sound"); icon: "volume_up"
             showReset: soundPath.isDirty || useSystemNotificationSound.isDirty
             onResetClicked: {
                 soundPath.resetToDefault();
@@ -234,12 +234,12 @@ PluginSettings {
         StringSettingPlus {
             id: soundPath
             settingKey: "soundPath"
-            label: I18n.tr("Custom Sound Path")
-            description: I18n.tr("Full path to sound file. Leave empty for default.")
+            label: I18n.trFor("timer", "Custom Sound Path")
+            description: I18n.trFor("timer", "Full path to sound file. Leave empty for default.")
             placeholder: "/usr/share/sounds/freedesktop/stereo/complete.oga"
             defaultValue: ""
             isFile: true
-            fileExtensions: [I18n.tr("Audio files") + " (*.mp3 *.wav *.ogg *.oga *.flac)", I18n.tr("All files") + " (*)"]
+            fileExtensions: [I18n.trFor("timer", "Audio files") + " (*.mp3 *.wav *.ogg *.oga *.flac)", I18n.trFor("timer", "All files") + " (*)"]
         }
 
         Separator {}
@@ -247,8 +247,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: useSystemNotificationSound
             settingKey: "useSystemNotificationSound"
-            label: I18n.tr("Use System Notification Sound")
-            description: I18n.tr("Use system's critical notification sound if no path is set.")
+            label: I18n.trFor("timer", "Use System Notification Sound")
+            description: I18n.trFor("timer", "Use system's critical notification sound if no path is set.")
             defaultValue: true
         }
     }
@@ -256,7 +256,7 @@ PluginSettings {
     SettingsCard {
         id: behaviorSection
         SectionTitle {
-            text: I18n.tr("Behavior"); icon: "settings"
+            text: I18n.trFor("timer", "Behavior"); icon: "settings"
             showReset: showTimeoutActions.isDirty || showHints.isDirty
             onResetClicked: {
                 showTimeoutActions.resetToDefault();
@@ -267,7 +267,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showTimeoutActions
             settingKey: "showTimeoutActions"
-            label: I18n.tr("Show 'When Done' Section")
+            label: I18n.trFor("timer", "Show 'When Done' Section")
             defaultValue: true
         }
 
@@ -276,7 +276,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showHints
             settingKey: "showHints"
-            label: I18n.tr("Show Hints")
+            label: I18n.trFor("timer", "Show Hints")
             defaultValue: true
         }
     }
@@ -284,7 +284,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle { 
             id: usageTitle
-            text: I18n.tr("Usage Guide")
+            text: I18n.trFor("timer", "Usage Guide")
             icon: "menu_book" 
             collapsible: true
             settingKey: "usageGuideExpanded"
@@ -293,9 +293,9 @@ PluginSettings {
         UsageGuide {
             expanded: usageTitle.isExpanded
             items: [
-                I18n.tr("<b>Left-click</b> the pill to <b>Pause</b> or <b>Resume</b> the timer."),
-                I18n.tr("<b>Right-click</b> the pill to <b>Reset</b> (or <b>Quick Start</b> if ready)."),
-                I18n.tr("Open the <b>Popout</b> to select presets or enter custom minutes.")
+                I18n.trFor("timer", "<b>Left-click</b> the pill to <b>Pause</b> or <b>Resume</b> the timer."),
+                I18n.trFor("timer", "<b>Right-click</b> the pill to <b>Reset</b> (or <b>Quick Start</b> if ready)."),
+                I18n.trFor("timer", "Open the <b>Popout</b> to select presets or enter custom minutes.")
             ]
         }
     }

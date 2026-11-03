@@ -59,9 +59,9 @@ PluginSettings {
             iconName: livePlugin ? (livePlugin.isPaused ? "pause_circle" : "timer") : ""
             title: {
                 if (!livePlugin) return "";
-                if (livePlugin.isPaused) return I18n.tr("Paused");
-                if (livePlugin.isBreakActive) return livePlugin.nextBreakType === 1 ? I18n.tr("Short Break Active") : I18n.tr("Long Break Active");
-                return livePlugin.nextBreakType === 1 ? I18n.tr("Next: Short Break") : I18n.tr("Next: Long Break");
+                if (livePlugin.isPaused) return I18n.trFor("takeABreak", "Paused");
+                if (livePlugin.isBreakActive) return livePlugin.nextBreakType === 1 ? I18n.trFor("takeABreak", "Short Break Active") : I18n.trFor("takeABreak", "Long Break Active");
+                return livePlugin.nextBreakType === 1 ? I18n.trFor("takeABreak", "Next: Short Break") : I18n.trFor("takeABreak", "Next: Long Break");
             }
             subtitle: {
                 if (!livePlugin) return "0:00";
@@ -91,7 +91,7 @@ PluginSettings {
             spacing: Theme.spacingS
 
             DButton {
-                text: livePlugin && livePlugin.isPaused ? I18n.tr("Resume") : I18n.tr("Pause")
+                text: livePlugin && livePlugin.isPaused ? I18n.trFor("takeABreak", "Resume") : I18n.trFor("takeABreak", "Pause")
                 iconName: livePlugin && livePlugin.isPaused ? "play_arrow" : "pause"
                 backgroundColor: Theme.surfaceContainerHigh
                 textColor: Theme.surfaceText
@@ -101,7 +101,7 @@ PluginSettings {
             }
 
             DButton {
-                text: I18n.tr("Reset Session")
+                text: I18n.trFor("takeABreak", "Reset Session")
                 iconName: "refresh"
                 backgroundColor: Theme.surfaceContainerHigh
                 textColor: Theme.surfaceText
@@ -114,14 +114,14 @@ PluginSettings {
 
     SettingsCard {
         SectionTitle {
-            text: I18n.tr("Break Schedule")
+            text: I18n.trFor("takeABreak", "Break Schedule")
             icon: "timer"
         }
 
         SliderSettingPlus {
             id: shortBreakInterval
             settingKey: "shortBreakInterval"
-            label: I18n.tr("Short Break Interval")
+            label: I18n.trFor("takeABreak", "Short Break Interval")
             defaultValue: 20
             minimum: 5
             maximum: 60
@@ -133,7 +133,7 @@ PluginSettings {
         SliderSettingPlus {
             id: shortBreakDuration
             settingKey: "shortBreakDuration"
-            label: I18n.tr("Short Break Duration")
+            label: I18n.trFor("takeABreak", "Short Break Duration")
             defaultValue: 20
             minimum: 5
             maximum: 120
@@ -146,7 +146,7 @@ PluginSettings {
 
         SliderSettingPlus {
             settingKey: "shortBreaksBeforeLong"
-            label: I18n.tr("Short breaks before long break")
+            label: I18n.trFor("takeABreak", "Short breaks before long break")
             defaultValue: 3
             minimum: 1
             maximum: 10
@@ -158,7 +158,7 @@ PluginSettings {
         SliderSettingPlus {
             id: longBreakDuration
             settingKey: "longBreakDuration"
-            label: I18n.tr("Long Break Duration")
+            label: I18n.trFor("takeABreak", "Long Break Duration")
             defaultValue: 5
             minimum: 1
             maximum: 30
@@ -171,8 +171,8 @@ PluginSettings {
 
         SliderSettingPlus {
             settingKey: "preWarningTime"
-            label: I18n.tr("Pre-break Warning Timing")
-            description: I18n.tr("How many seconds before the break to show the warning notification.")
+            label: I18n.trFor("takeABreak", "Pre-break Warning Timing")
+            description: I18n.trFor("takeABreak", "How many seconds before the break to show the warning notification.")
             defaultValue: 5
             minimum: 0
             maximum: 15
@@ -184,38 +184,38 @@ PluginSettings {
 
     SettingsCard {
         SectionTitle {
-            text: I18n.tr("Smart Suppression")
+            text: I18n.trFor("takeABreak", "Smart Suppression")
             icon: "psychology"
         }
 
         ToggleSettingPlus {
             id: suppressFullscreen
             settingKey: "suppressFullscreen"
-            label: I18n.tr("Suppress in Fullscreen")
-            description: I18n.tr("Automatically snooze breaks if an application is running in fullscreen.")
+            label: I18n.trFor("takeABreak", "Suppress in Fullscreen")
+            description: I18n.trFor("takeABreak", "Automatically snooze breaks if an application is running in fullscreen.")
             defaultValue: true
         }
 
         ToggleSettingPlus {
             id: suppressMeetings
             settingKey: "suppressMeetings"
-            label: I18n.tr("Suppress during Meetings")
-            description: I18n.tr("Automatically snooze breaks if your microphone is active.")
+            label: I18n.trFor("takeABreak", "Suppress during Meetings")
+            description: I18n.trFor("takeABreak", "Automatically snooze breaks if your microphone is active.")
             defaultValue: true
         }
     }
 
     SettingsCard {
         SectionTitle {
-            text: I18n.tr("Audio & Playback")
+            text: I18n.trFor("takeABreak", "Audio & Playback")
             icon: "volume_up"
         }
 
         ToggleSettingPlus {
             id: pauseMusic
             settingKey: "pauseMusic"
-            label: I18n.tr("Pause Music during Break")
-            description: I18n.tr("Automatically pause active music players when a break starts, and resume them when the break ends.")
+            label: I18n.trFor("takeABreak", "Pause Music during Break")
+            description: I18n.trFor("takeABreak", "Automatically pause active music players when a break starts, and resume them when the break ends.")
             defaultValue: false
         }
 
@@ -223,8 +223,8 @@ PluginSettings {
 
         ToggleSettingPlus {
             settingKey: "soundEnabled"
-            label: I18n.tr("Enable Sound Alerts")
-            description: I18n.tr("Play a gentle sound when a break starts and ends.")
+            label: I18n.trFor("takeABreak", "Enable Sound Alerts")
+            description: I18n.trFor("takeABreak", "Play a gentle sound when a break starts and ends.")
             defaultValue: true
         }
 
@@ -232,7 +232,7 @@ PluginSettings {
 
         SliderSettingPlus {
             settingKey: "soundVolume"
-            label: I18n.tr("Alert Volume")
+            label: I18n.trFor("takeABreak", "Alert Volume")
             defaultValue: 80
             minimum: 0
             maximum: 100
@@ -244,23 +244,23 @@ PluginSettings {
 
     SettingsCard {
         SectionTitle {
-            text: I18n.tr("UI Appearance")
+            text: I18n.trFor("takeABreak", "UI Appearance")
             icon: "palette"
         }
 
         SelectionSettingPlus {
             settingKey: "preWarningAlignment"
-            label: I18n.tr("Pre-warning Position")
-            description: I18n.tr("Where the pre-warning notification appears.")
+            label: I18n.trFor("takeABreak", "Pre-warning Position")
+            description: I18n.trFor("takeABreak", "Where the pre-warning notification appears.")
             options: [
-                { label: I18n.tr("Top Left"), value: "top-left" },
-                { label: I18n.tr("Top Center"), value: "top-center" },
-                { label: I18n.tr("Top Right"), value: "top-right" },
-                { label: I18n.tr("Bottom Left"), value: "bottom-left" },
-                { label: I18n.tr("Bottom Center"), value: "bottom-center" },
-                { label: I18n.tr("Bottom Right"), value: "bottom-right" },
-                { label: I18n.tr("Left Center"), value: "left-center" },
-                { label: I18n.tr("Right Center"), value: "right-center" }
+                { label: I18n.trFor("takeABreak", "Top Left"), value: "top-left" },
+                { label: I18n.trFor("takeABreak", "Top Center"), value: "top-center" },
+                { label: I18n.trFor("takeABreak", "Top Right"), value: "top-right" },
+                { label: I18n.trFor("takeABreak", "Bottom Left"), value: "bottom-left" },
+                { label: I18n.trFor("takeABreak", "Bottom Center"), value: "bottom-center" },
+                { label: I18n.trFor("takeABreak", "Bottom Right"), value: "bottom-right" },
+                { label: I18n.trFor("takeABreak", "Left Center"), value: "left-center" },
+                { label: I18n.trFor("takeABreak", "Right Center"), value: "right-center" }
             ]
             defaultValue: "bottom-right"
         }
@@ -269,8 +269,8 @@ PluginSettings {
 
         SliderSettingPlus {
             settingKey: "preWarningOpacity"
-            label: I18n.tr("Pre-warning Opacity")
-            description: I18n.tr("How transparent the pre-warning notification should be.")
+            label: I18n.trFor("takeABreak", "Pre-warning Opacity")
+            description: I18n.trFor("takeABreak", "How transparent the pre-warning notification should be.")
             defaultValue: 100
             minimum: 20
             maximum: 100
@@ -283,8 +283,8 @@ PluginSettings {
 
         SliderSettingPlus {
             settingKey: "overlayOpacity"
-            label: I18n.tr("Overlay Background Opacity")
-            description: I18n.tr("How transparent the fullscreen break background should be.")
+            label: I18n.trFor("takeABreak", "Overlay Background Opacity")
+            description: I18n.trFor("takeABreak", "How transparent the fullscreen break background should be.")
             defaultValue: 100
             minimum: 50
             maximum: 100
@@ -306,7 +306,7 @@ PluginSettings {
 
     SettingsCard {
         SectionTitle {
-            text: I18n.tr("Statistics")
+            text: I18n.trFor("takeABreak", "Statistics")
             icon: "bar_chart"
         }
 
@@ -321,7 +321,7 @@ PluginSettings {
 
                 InfoTile {
                     width: (parent.width - parent.spacing) / 2
-                    label: I18n.tr("Today")
+                    label: I18n.trFor("takeABreak", "Today")
                     value: {
                         var s = livePlugin ? livePlugin._stats : null;
                         if (!s || s.todayRate < 0) return "—";
@@ -337,7 +337,7 @@ PluginSettings {
 
                 InfoTile {
                     width: (parent.width - parent.spacing) / 2
-                    label: I18n.tr("This Week")
+                    label: I18n.trFor("takeABreak", "This Week")
                     value: {
                         var s = livePlugin ? livePlugin._stats : null;
                         if (!s || s.weekRate < 0) return "—";
@@ -358,7 +358,7 @@ PluginSettings {
 
                 InfoTile {
                     width: (parent.width - parent.spacing) / 2
-                    label: I18n.tr("Completed")
+                    label: I18n.trFor("takeABreak", "Completed")
                     value: {
                         var s = livePlugin ? livePlugin._stats : null;
                         if (!s || s.todayRate < 0) return "0";
@@ -370,7 +370,7 @@ PluginSettings {
 
                 InfoTile {
                     width: (parent.width - parent.spacing) / 2
-                    label: I18n.tr("Skipped")
+                    label: I18n.trFor("takeABreak", "Skipped")
                     value: {
                         var s = livePlugin ? livePlugin._stats : null;
                         if (!s || s.todayRate < 0) return "0";
@@ -387,11 +387,11 @@ PluginSettings {
 
                 InfoTile {
                     width: (parent.width - parent.spacing) / 2
-                    label: I18n.tr("Snoozed")
+                    label: I18n.trFor("takeABreak", "Snoozed")
                     value: {
                         var s = livePlugin ? livePlugin._stats : null;
                         if (!s || s.todayRate < 0) return "0";
-                        return I18n.tr("Today: ") + s.todaySnoozed + " — " + I18n.tr("Week: ") + s.weekSnoozed;
+                        return I18n.trFor("takeABreak", "Today: ") + s.todaySnoozed + " — " + I18n.trFor("takeABreak", "Week: ") + s.weekSnoozed;
                     }
                     iconName: "snooze"
                     accentColor: Theme.primary
@@ -399,7 +399,7 @@ PluginSettings {
 
                 InfoTile {
                     width: (parent.width - parent.spacing) / 2
-                    label: I18n.tr("Total Breaks Logged")
+                    label: I18n.trFor("takeABreak", "Total Breaks Logged")
                     value: {
                         var s = livePlugin ? livePlugin._stats : null;
                         return s ? String(s.totalAll) : "0";
@@ -414,7 +414,7 @@ PluginSettings {
                 spacing: Theme.spacingS
 
                 DButton {
-                    text: I18n.tr("Refresh")
+                    text: I18n.trFor("takeABreak", "Refresh")
                     iconName: "refresh"
                     backgroundColor: Theme.surfaceContainerHigh
                     textColor: Theme.surfaceText
@@ -426,7 +426,7 @@ PluginSettings {
                 }
 
                 DButton {
-                    text: I18n.tr("Reset Stats")
+                    text: I18n.trFor("takeABreak", "Reset Stats")
                     iconName: "delete_sweep"
                     backgroundColor: Theme.errorContainer
                     textColor: Theme.error
@@ -446,7 +446,7 @@ PluginSettings {
 
     SettingsCard {
         SectionTitle {
-            text: I18n.tr("Testing & Preview")
+            text: I18n.trFor("takeABreak", "Testing & Preview")
             icon: "preview"
         }
 
@@ -460,7 +460,7 @@ PluginSettings {
                 spacing: Theme.spacingS
 
                 DButton {
-                    text: (livePlugin && livePlugin.isPreWarning) ? I18n.tr("Hide Pre-Warning") : I18n.tr("Preview Pre-Warning")
+                    text: (livePlugin && livePlugin.isPreWarning) ? I18n.trFor("takeABreak", "Hide Pre-Warning") : I18n.trFor("takeABreak", "Preview Pre-Warning")
                     iconName: (livePlugin && livePlugin.isPreWarning) ? "notifications_off" : "notifications"
                     backgroundColor: (livePlugin && livePlugin.isPreWarning) ? Theme.primaryContainer : Theme.surfaceContainerHigh
                     textColor: (livePlugin && livePlugin.isPreWarning) ? Theme.primary : Theme.surfaceText
@@ -470,7 +470,7 @@ PluginSettings {
                 }
 
                 DButton {
-                    text: (livePlugin && livePlugin.isBreakActive) ? I18n.tr("Hide Overlay") : I18n.tr("Preview Fullscreen Break")
+                    text: (livePlugin && livePlugin.isBreakActive) ? I18n.trFor("takeABreak", "Hide Overlay") : I18n.trFor("takeABreak", "Preview Fullscreen Break")
                     iconName: (livePlugin && livePlugin.isBreakActive) ? "fullscreen_exit" : "fullscreen"
                     backgroundColor: (livePlugin && livePlugin.isBreakActive) ? Theme.primaryContainer : Theme.surfaceContainerHigh
                     textColor: (livePlugin && livePlugin.isBreakActive) ? Theme.primary : Theme.surfaceText
@@ -481,7 +481,7 @@ PluginSettings {
             }
 
             DButton {
-                text: I18n.tr("Test Alert Sound")
+                text: I18n.trFor("takeABreak", "Test Alert Sound")
                 iconName: "volume_up"
                 backgroundColor: Theme.surfaceContainerHigh
                 textColor: Theme.surfaceText

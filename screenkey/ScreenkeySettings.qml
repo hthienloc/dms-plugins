@@ -30,7 +30,7 @@ PluginSettings {
     SettingsCard {
         id: generalSection
         SectionTitle {
-            text: I18n.tr("General Settings")
+            text: I18n.trFor("screenkey", "General Settings")
             icon: "tune"
             showReset: enabledSetting.isDirty || clickThroughSetting.isDirty || fadeTimeoutSetting.isDirty || fontSizeSetting.isDirty
             onResetClicked: {
@@ -44,7 +44,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: enabledSetting
             settingKey: "visualizerEnabled"
-            label: I18n.tr("Enable Visualizer")
+            label: I18n.trFor("screenkey", "Enable Visualizer")
             defaultValue: true
         }
 
@@ -53,8 +53,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: clickThroughSetting
             settingKey: "clickThrough"
-            label: I18n.tr("Click-through")
-            description: I18n.tr("Allow mouse clicks to pass through the overlay to underlying windows")
+            label: I18n.trFor("screenkey", "Click-through")
+            description: I18n.trFor("screenkey", "Allow mouse clicks to pass through the overlay to underlying windows")
             defaultValue: true
         }
 
@@ -63,8 +63,8 @@ PluginSettings {
         SliderSettingPlus {
             id: fadeTimeoutSetting
             settingKey: "fadeTimeout"
-            label: I18n.tr("Fade Timeout")
-            description: I18n.tr("Inactivity duration before overlay disappears")
+            label: I18n.trFor("screenkey", "Fade Timeout")
+            description: I18n.trFor("screenkey", "Inactivity duration before overlay disappears")
             minimum: 500
             maximum: 5000
             defaultValue: 1500
@@ -78,7 +78,7 @@ PluginSettings {
         SliderSettingPlus {
             id: fontSizeSetting
             settingKey: "fontSize"
-            label: I18n.tr("Font Size")
+            label: I18n.trFor("screenkey", "Font Size")
             minimum: 16
             maximum: 64
             defaultValue: 24
@@ -91,7 +91,7 @@ PluginSettings {
     SettingsCard {
         id: layoutSection
         SectionTitle {
-            text: I18n.tr("Layout & Animations")
+            text: I18n.trFor("screenkey", "Layout & Animations")
             icon: "display_settings"
             showReset: positionSetting.isDirty || entryAnimationSetting.isDirty || exitAnimationSetting.isDirty || keycapStyleSetting.isDirty || roundedKeycapsSetting.isDirty || overlayOpacitySetting.isDirty || marginSizeSetting.isDirty || charLimitSetting.isDirty || textColorSetting.isDirty || keycapTextColorSetting.isDirty || historyLimitSetting.isDirty || bgColorSetting.isDirty || customSeparatorSetting.isDirty
             onResetClicked: {
@@ -114,14 +114,14 @@ PluginSettings {
         SelectionSettingPlus {
             id: positionSetting
             settingKey: "position"
-            label: I18n.tr("Display Position")
+            label: I18n.trFor("screenkey", "Display Position")
             options: [
-                { label: I18n.tr("Top Left"), value: "top_left" },
-                { label: I18n.tr("Top Center"), value: "top_center" },
-                { label: I18n.tr("Top Right"), value: "top_right" },
-                { label: I18n.tr("Bottom Left"), value: "bottom_left" },
-                { label: I18n.tr("Bottom Center"), value: "bottom_center" },
-                { label: I18n.tr("Bottom Right"), value: "bottom_right" }
+                { label: I18n.trFor("screenkey", "Top Left"), value: "top_left" },
+                { label: I18n.trFor("screenkey", "Top Center"), value: "top_center" },
+                { label: I18n.trFor("screenkey", "Top Right"), value: "top_right" },
+                { label: I18n.trFor("screenkey", "Bottom Left"), value: "bottom_left" },
+                { label: I18n.trFor("screenkey", "Bottom Center"), value: "bottom_center" },
+                { label: I18n.trFor("screenkey", "Bottom Right"), value: "bottom_right" }
             ]
             defaultValue: "bottom_center"
         }
@@ -131,11 +131,11 @@ PluginSettings {
         ButtonGroupSettingPlus {
             id: entryAnimationSetting
             settingKey: "entryAnimation"
-            label: I18n.tr("Entry Animation")
+            label: I18n.trFor("screenkey", "Entry Animation")
             options: [
-                { label: I18n.tr("Zoom"), value: "zoom" },
-                { label: I18n.tr("Fade Only"), value: "fade" },
-                { label: I18n.tr("None"), value: "none" }
+                { label: I18n.trFor("screenkey", "Zoom"), value: "zoom" },
+                { label: I18n.trFor("screenkey", "Fade Only"), value: "fade" },
+                { label: I18n.trFor("screenkey", "None"), value: "none" }
             ]
             defaultValue: "none"
         }
@@ -143,11 +143,11 @@ PluginSettings {
         ButtonGroupSettingPlus {
             id: exitAnimationSetting
             settingKey: "exitAnimation"
-            label: I18n.tr("Exit Animation")
+            label: I18n.trFor("screenkey", "Exit Animation")
             options: [
-                { label: I18n.tr("Zoom"), value: "zoom" },
-                { label: I18n.tr("Fade Only"), value: "fade" },
-                { label: I18n.tr("None"), value: "none" }
+                { label: I18n.trFor("screenkey", "Zoom"), value: "zoom" },
+                { label: I18n.trFor("screenkey", "Fade Only"), value: "fade" },
+                { label: I18n.trFor("screenkey", "None"), value: "none" }
             ]
             defaultValue: "none"
         }
@@ -155,14 +155,14 @@ PluginSettings {
         SelectionSettingPlus {
             id: keycapStyleSetting
             settingKey: "keycapStyle"
-            label: I18n.tr("Keycap Style")
-            description: I18n.tr("Visual style for rendered keycaps (Default, Laptop, Low Profile, PBT, Minimal)")
+            label: I18n.trFor("screenkey", "Keycap Style")
+            description: I18n.trFor("screenkey", "Visual style for rendered keycaps (Default, Laptop, Low Profile, PBT, Minimal)")
             options: [
-                { label: I18n.tr("Default"), value: "default" },
-                { label: I18n.tr("Laptop"), value: "laptop" },
-                { label: I18n.tr("Low Profile"), value: "lowprofile" },
-                { label: I18n.tr("PBT"), value: "pbt" },
-                { label: I18n.tr("Minimal"), value: "minimal" }
+                { label: I18n.trFor("screenkey", "Default"), value: "default" },
+                { label: I18n.trFor("screenkey", "Laptop"), value: "laptop" },
+                { label: I18n.trFor("screenkey", "Low Profile"), value: "lowprofile" },
+                { label: I18n.trFor("screenkey", "PBT"), value: "pbt" },
+                { label: I18n.trFor("screenkey", "Minimal"), value: "minimal" }
             ]
             defaultValue: "default"
         }
@@ -172,7 +172,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: roundedKeycapsSetting
             settingKey: "roundedKeycaps"
-            label: I18n.tr("Rounded Keycap Corners")
+            label: I18n.trFor("screenkey", "Rounded Keycap Corners")
             defaultValue: true
         }
 
@@ -181,7 +181,7 @@ PluginSettings {
         SliderSettingPlus {
             id: overlayOpacitySetting
             settingKey: "overlayOpacity"
-            label: I18n.tr("Overlay Opacity")
+            label: I18n.trFor("screenkey", "Overlay Opacity")
             minimum: 10
             maximum: 100
             defaultValue: 90
@@ -195,8 +195,8 @@ PluginSettings {
         SliderSettingPlus {
             id: marginSizeSetting
             settingKey: "marginSize"
-            label: I18n.tr("Screen Margin")
-            description: I18n.tr("Adjust the distance of the overlay from screen edges")
+            label: I18n.trFor("screenkey", "Screen Margin")
+            description: I18n.trFor("screenkey", "Adjust the distance of the overlay from screen edges")
             minimum: 0
             maximum: 100
             defaultValue: 24
@@ -210,8 +210,8 @@ PluginSettings {
         SliderSettingPlus {
             id: charLimitSetting
             settingKey: "charLimit"
-            label: I18n.tr("Normal Typing Limit")
-            description: I18n.tr("Maximum characters buffer shown for normal text")
+            label: I18n.trFor("screenkey", "Normal Typing Limit")
+            description: I18n.trFor("screenkey", "Maximum characters buffer shown for normal text")
             minimum: 5
             maximum: 50
             defaultValue: 20
@@ -225,8 +225,8 @@ PluginSettings {
         SliderSettingPlus {
             id: historyLimitSetting
             settingKey: "historyLimit"
-            label: I18n.tr("Keystroke History Limit")
-            description: I18n.tr("Number of lines to display for keystroke history")
+            label: I18n.trFor("screenkey", "Keystroke History Limit")
+            description: I18n.trFor("screenkey", "Number of lines to display for keystroke history")
             minimum: 1
             maximum: 5
             defaultValue: 1
@@ -240,7 +240,7 @@ PluginSettings {
         ColorSettingPlus {
             id: textColorSetting
             settingKey: "textColor"
-            label: I18n.tr("Normal Text Color")
+            label: I18n.trFor("screenkey", "Normal Text Color")
             defaultValue: "primary"
         }
 
@@ -249,7 +249,7 @@ PluginSettings {
         ColorSettingPlus {
             id: keycapTextColorSetting
             settingKey: "keycapTextColor"
-            label: I18n.tr("Keycap & Mouse Color")
+            label: I18n.trFor("screenkey", "Keycap & Mouse Color")
             defaultValue: "primary"
         }
 
@@ -258,7 +258,7 @@ PluginSettings {
         ColorSettingPlus {
             id: bgColorSetting
             settingKey: "bgColor"
-            label: I18n.tr("Overlay Background Color")
+            label: I18n.trFor("screenkey", "Overlay Background Color")
             defaultValue: "#1e2326"
         }
 
@@ -267,8 +267,8 @@ PluginSettings {
         StringSettingPlus {
             id: customSeparatorSetting
             settingKey: "customSeparator"
-            label: I18n.tr("Custom Separator")
-            description: I18n.tr("Connector character between shortcut keys (e.g. +, -, ➔)")
+            label: I18n.trFor("screenkey", "Custom Separator")
+            description: I18n.trFor("screenkey", "Connector character between shortcut keys (e.g. +, -, ➔)")
             defaultValue: "+"
             placeholder: "+"
         }
@@ -277,7 +277,7 @@ PluginSettings {
     SettingsCard {
         id: visibilitySection
         SectionTitle {
-            text: I18n.tr("Visibility Options")
+            text: I18n.trFor("screenkey", "Visibility Options")
             icon: "visibility"
             showReset: showShortcutsSetting.isDirty || macSymbolsSetting.isDirty || showModifierStatusSetting.isDirty || showOnlyModifiersSetting.isDirty || ignoreFilterKeysSetting.isDirty || showNormalKeysSetting.isDirty || showMouseClicksSetting.isDirty
             onResetClicked: {
@@ -294,8 +294,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: showShortcutsSetting
             settingKey: "showShortcuts"
-            label: I18n.tr("Show Key Combinations")
-            description: I18n.tr("Toggle to display modifier shortcuts (e.g., Ctrl + Alt + T)")
+            label: I18n.trFor("screenkey", "Show Key Combinations")
+            description: I18n.trFor("screenkey", "Toggle to display modifier shortcuts (e.g., Ctrl + Alt + T)")
             defaultValue: true
         }
 
@@ -304,8 +304,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: macSymbolsSetting
             settingKey: "macSymbols"
-            label: I18n.tr("Use macOS Symbols")
-            description: I18n.tr("Toggle to display modifiers and control keys as macOS symbols (e.g. ⌘, ⌥, ⇧, ⌃, ⏎)")
+            label: I18n.trFor("screenkey", "Use macOS Symbols")
+            description: I18n.trFor("screenkey", "Toggle to display modifiers and control keys as macOS symbols (e.g. ⌘, ⌥, ⇧, ⌃, ⏎)")
             defaultValue: false
         }
 
@@ -314,8 +314,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: showModifierStatusSetting
             settingKey: "showModifierStatus"
-            label: I18n.tr("Show Held Modifiers")
-            description: I18n.tr("Show a real-time status bar of active modifier keys currently being held down")
+            label: I18n.trFor("screenkey", "Show Held Modifiers")
+            description: I18n.trFor("screenkey", "Show a real-time status bar of active modifier keys currently being held down")
             defaultValue: false
         }
 
@@ -324,8 +324,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: showOnlyModifiersSetting
             settingKey: "showOnlyModifiers"
-            label: I18n.tr("Show Standalone Modifiers")
-            description: I18n.tr("Toggle to display modifiers like Ctrl or Shift when pressed alone")
+            label: I18n.trFor("screenkey", "Show Standalone Modifiers")
+            description: I18n.trFor("screenkey", "Toggle to display modifiers like Ctrl or Shift when pressed alone")
             defaultValue: false
         }
 
@@ -334,8 +334,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: ignoreFilterKeysSetting
             settingKey: "ignoreFilterKeys"
-            label: I18n.tr("Ignore Lock Keys")
-            description: I18n.tr("Ignore system lock keys (CapsLock, NumLock, ScrollLock) to avoid noise")
+            label: I18n.trFor("screenkey", "Ignore Lock Keys")
+            description: I18n.trFor("screenkey", "Ignore system lock keys (CapsLock, NumLock, ScrollLock) to avoid noise")
             defaultValue: true
         }
 
@@ -344,8 +344,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: showNormalKeysSetting
             settingKey: "showNormalKeys"
-            label: I18n.tr("Show Normal Keystrokes")
-            description: I18n.tr("Toggle to display normal letters instead of just modifier shortcuts")
+            label: I18n.trFor("screenkey", "Show Normal Keystrokes")
+            description: I18n.trFor("screenkey", "Toggle to display normal letters instead of just modifier shortcuts")
             defaultValue: false
         }
 
@@ -354,7 +354,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showMouseClicksSetting
             settingKey: "showMouseClicks"
-            label: I18n.tr("Show Mouse Clicks")
+            label: I18n.trFor("screenkey", "Show Mouse Clicks")
             defaultValue: false
         }
     }
@@ -362,7 +362,7 @@ PluginSettings {
     SettingsCard {
         id: deviceSection
         SectionTitle {
-            text: I18n.tr("Input Device")
+            text: I18n.trFor("screenkey", "Input Device")
             icon: "keyboard"
             showReset: selectedDevicePathSetting.isDirty
             onResetClicked: {
@@ -373,7 +373,7 @@ PluginSettings {
         SelectionSettingPlus {
             id: selectedDevicePathSetting
             settingKey: "selectedDevicePath"
-            label: I18n.tr("Keyboard Device")
+            label: I18n.trFor("screenkey", "Keyboard Device")
             options: root.deviceOptions
             defaultValue: "all"
         }
@@ -383,7 +383,7 @@ PluginSettings {
         id: ipcSection
         SectionTitle {
             id: ipcTitle
-            text: I18n.tr("IPC Commands")
+            text: I18n.trFor("screenkey", "IPC Commands")
             icon: "terminal"
             collapsible: true
             settingKey: "ipcCommandsExpanded"
@@ -396,9 +396,9 @@ PluginSettings {
 
             Repeater {
                 model: [
-                    { text: "dms ipc screenkey toggle", label: I18n.tr("Toggle visualizer") },
-                    { text: "dms ipc screenkey enable", label: I18n.tr("Enable visualizer") },
-                    { text: "dms ipc screenkey disable", label: I18n.tr("Disable visualizer") }
+                    { text: "dms ipc screenkey toggle", label: I18n.trFor("screenkey", "Toggle visualizer") },
+                    { text: "dms ipc screenkey enable", label: I18n.trFor("screenkey", "Enable visualizer") },
+                    { text: "dms ipc screenkey disable", label: I18n.trFor("screenkey", "Disable visualizer") }
                 ]
 
                 delegate: CopyBox {
@@ -412,7 +412,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle {
             id: usageTitle
-            text: I18n.tr("Usage Guide")
+            text: I18n.trFor("screenkey", "Usage Guide")
             icon: "menu_book"
             collapsible: true
             settingKey: "usageGuideExpanded"
@@ -421,9 +421,9 @@ PluginSettings {
         UsageGuide {
             expanded: usageTitle.isExpanded
             items: [
-                I18n.tr("Displays keystrokes on an always-on-top floating screen overlay."),
-                I18n.tr("Key combinations are rendered as visual keycaps, and standard typing as stream text."),
-                I18n.tr("Ensure your user belongs to the <b>input</b> group to read keyboard events without root.")
+                I18n.trFor("screenkey", "Displays keystrokes on an always-on-top floating screen overlay."),
+                I18n.trFor("screenkey", "Key combinations are rendered as visual keycaps, and standard typing as stream text."),
+                I18n.trFor("screenkey", "Ensure your user belongs to the <b>input</b> group to read keyboard events without root.")
             ]
         }
     }
@@ -431,7 +431,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle {
             id: creditsTitle
-            text: I18n.tr("Credits")
+            text: I18n.trFor("screenkey", "Credits")
             icon: "favorite"
             collapsible: true
             settingKey: "creditsExpanded"
@@ -443,13 +443,13 @@ PluginSettings {
                 {
                     author: "@Tz-slayer",
                     url: "https://github.com/Tz-slayer/keystrokes",
-                    role: I18n.tr("Keycap styles (Laptop, Low Profile, PBT, Minimal) and icon system ported from <b>keystrokes</b>."),
+                    role: I18n.trFor("screenkey", "Keycap styles (Laptop, Low Profile, PBT, Minimal) and icon system ported from <b>keystrokes</b>."),
                     icon: "keyboard"
                 },
                 {
                     author: "@mulaRahul",
                     url: "https://github.com/mulaRahul/keyviz",
-                    role: I18n.tr("Original visual design and keycap styling inspired by <b>keyviz</b>."),
+                    role: I18n.trFor("screenkey", "Original visual design and keycap styling inspired by <b>keyviz</b>."),
                     icon: "palette"
                 }
             ]

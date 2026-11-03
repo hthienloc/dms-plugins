@@ -1,0 +1,164 @@
+{
+  "4-7-8 Breathing": {
+    "4-7-8 Breathing": "4-7-8 호흡"
+  },
+  "<b>Left-click</b> the pill to start/pause the breathing session.": {
+    "<b>Left-click</b> the pill to start/pause the breathing session.": ""
+  },
+  "<b>Right-click</b> the pill to stop and reset the session.": {
+    "<b>Right-click</b> the pill to stop and reset the session.": ""
+  },
+  "Absolute path to custom audio.": {
+    "Absolute path to custom audio.": ""
+  },
+  "All files": {
+    "All files": ""
+  },
+  "Alternate Nostril": {
+    "Alternate Nostril": "대체 콧구멍"
+  },
+  "Ambient Meditation": {
+    "Ambient Meditation": ""
+  },
+  "Animation Style": {
+    "Animation Style": "애니메이션 스타일"
+  },
+  "Appearance": {
+    "Appearance": "모습"
+  },
+  "Audio files": {
+    "Audio files": ""
+  },
+  "Auto-start Exercise": {
+    "Auto-start Exercise": "운동 자동 시작"
+  },
+  "Behavior": {
+    "Behavior": "행동"
+  },
+  "Box Breathing": {
+    "Box Breathing": "상자호흡"
+  },
+  "Breathe In": {
+    "Breathe In": "숨을들이 쉬다"
+  },
+  "Breathe Out": {
+    "Breathe Out": "숨을 내쉬세요"
+  },
+  "Classic Card": {
+    "Classic Card": "클래식 카드"
+  },
+  "Custom Sound File": {
+    "Custom Sound File": "사용자 정의 사운드 파일"
+  },
+  "Deep Breathing": {
+    "Deep Breathing": "심호흡"
+  },
+  "Default Duration": {
+    "Default Duration": "기본 기간"
+  },
+  "Default Exercise": {
+    "Default Exercise": "기본 운동"
+  },
+  "Double-click an exercise tile to start it immediately.": {
+    "Double-click an exercise tile to start it immediately.": "운동 타일을 두 번 클릭하면 즉시 시작됩니다."
+  },
+  "Equal Breathing": {
+    "Equal Breathing": "평등한 호흡"
+  },
+  "Expanding Circle": {
+    "Expanding Circle": "원 확장"
+  },
+  "Feedback": {
+    "Feedback": "피드백"
+  },
+  "Flowing Wave": {
+    "Flowing Wave": "흐르는 파도"
+  },
+  "Follow the <b>visual guide</b> and <b>sound cues</b> to sync your breath.": {
+    "Follow the <b>visual guide</b> and <b>sound cues</b> to sync your breath.": ""
+  },
+  "General": {
+    "General": "일반적인"
+  },
+  "Haptic Feedback": {
+    "Haptic Feedback": "햅틱 피드백"
+  },
+  "Hold": {
+    "Hold": "잡고 있다"
+  },
+  "Mute": {
+    "Mute": ""
+  },
+  "Open the <b>Popout</b> to choose different breathing techniques.": {
+    "Open the <b>Popout</b> to choose different breathing techniques.": ""
+  },
+  "Pause": {
+    "Pause": "정지시키다"
+  },
+  "Paused": {
+    "Paused": "일시중지됨"
+  },
+  "Play falling pitch during exhale (default is inhale only).": {
+    "Play falling pitch during exhale (default is inhale only).": ""
+  },
+  "Press 'Space' to Pause/Resume, 'R' to Reset.": {
+    "Press 'Space' to Pause/Resume, 'R' to Reset.": "일시 중지/다시 시작하려면 'Space'를 누르고 재설정하려면 'R'을 누르세요."
+  },
+  "Pulsating Glow": {
+    "Pulsating Glow": "맥동하는 빛"
+  },
+  "Resonance": {
+    "Resonance": "공명"
+  },
+  "Resume": {
+    "Resume": "재개하다"
+  },
+  "Right-click bar icon to quickly toggle Start/Pause.": {
+    "Right-click bar icon to quickly toggle Start/Pause.": "시작/일시 중지를 빠르게 전환하려면 막대 아이콘을 마우스 오른쪽 버튼으로 클릭하세요."
+  },
+  "Session length for auto-started exercises.": {
+    "Session length for auto-started exercises.": ""
+  },
+  "Show Hints": {
+    "Show Hints": "힌트 표시"
+  },
+  "Singing Bowl Chime": {
+    "Singing Bowl Chime": ""
+  },
+  "Sound Cue Type": {
+    "Sound Cue Type": "사운드 큐 유형"
+  },
+  "Sound Cues": {
+    "Sound Cues": "사운드 큐"
+  },
+  "Sound Volume": {
+    "Sound Volume": ""
+  },
+  "Start": {
+    "Start": "시작"
+  },
+  "Start exercise automatically on login.": {
+    "Start exercise automatically on login.": "로그인 시 자동으로 운동을 시작합니다."
+  },
+  "Stop": {
+    "Stop": "멈추다"
+  },
+  "Stop Test": {
+    "Stop Test": "테스트 중지"
+  },
+  "Test Sound": {
+    "Test Sound": "테스트 사운드"
+  },
+  "Two-Tone Model": {
+    "Two-Tone Model": "투톤 모델"
+  },
+  "Unmute": {
+    "Unmute": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "min": {
+    "min": ""
+  }
+}

@@ -431,9 +431,6 @@
   "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": ""
   },
-  "Format: %1 (%2 FPS)": {
-    "Format: %1 (%2 FPS)": ""
-  },
   "Framerate": {
     "Framerate": ""
   },
@@ -472,12 +469,6 @@
   },
   "Hide Annotations": {
     "Hide Annotations": ""
-  },
-  "Hide Control Center": {
-    "Hide Control Center": ""
-  },
-  "Hide Control Center by Default": {
-    "Hide Control Center by Default": ""
   },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": ""
@@ -529,9 +520,6 @@
   },
   "Initial Width": {
     "Initial Width": ""
-  },
-  "Initial state for the Control Center toggle.": {
-    "Initial state for the Control Center toggle.": ""
   },
   "Inline": {
     "Inline": ""
@@ -706,9 +694,6 @@
   },
   "Open Image": {
     "Open Image": ""
-  },
-  "Open folder": {
-    "Open folder": "Malfermi dosierujon"
   },
   "Outline Variant": {
     "Outline Variant": ""
@@ -1004,17 +989,11 @@
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
     "Select one or more installed Tesseract language packs for OCR text recognition.": ""
   },
-  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": ""
-  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": ""
-  },
-  "Settings": {
-    "Settings": "Agordoj"
   },
   "Shadow Strength": {
     "Shadow Strength": ""
@@ -1027,9 +1006,6 @@
   },
   "Show Annotations": {
     "Show Annotations": ""
-  },
-  "Show Control Center": {
-    "Show Control Center": ""
   },
   "Show Keyboard Shortcut Hints": {
     "Show Keyboard Shortcut Hints": ""

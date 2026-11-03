@@ -104,13 +104,13 @@ PluginComponent {
 
     // When Done options
     readonly property var whenDoneAudioOptions: [
-        { label: I18n.tr("Stop"), icon: "stop", value: "stopAll" },
-        { label: I18n.tr("Mute"), icon: "volume_off", value: "mute" }
+        { label: I18n.trFor("ambientSound", "Stop"), icon: "stop", value: "stopAll" },
+        { label: I18n.trFor("ambientSound", "Mute"), icon: "volume_off", value: "mute" }
     ]
     readonly property var whenDoneSystemOptions: [
-        { label: I18n.tr("Lock"), icon: "lock", value: "lock" },
-        { label: I18n.tr("Suspend"), icon: "bedtime", value: "suspend" },
-        { label: I18n.tr("Power"), icon: "power_settings_new", value: "powerOff" }
+        { label: I18n.trFor("ambientSound", "Lock"), icon: "lock", value: "lock" },
+        { label: I18n.trFor("ambientSound", "Suspend"), icon: "bedtime", value: "suspend" },
+        { label: I18n.trFor("ambientSound", "Power"), icon: "power_settings_new", value: "powerOff" }
     ]
     readonly property var whenDoneOptions: whenDoneAudioOptions.concat(whenDoneSystemOptions)
     property var whenDoneActions: (pluginData.whenDoneActions && pluginData.whenDoneActions.length > 0) ? pluginData.whenDoneActions : ["stopAll"]
@@ -1030,7 +1030,7 @@ PluginComponent {
                                 visible: !root.renamingPreset
                                 compactMode: true
                                 dropdownWidth: width
-                                emptyText: I18n.tr("Select preset…")
+                                emptyText: I18n.trFor("ambientSound", "Select preset…")
                                 options: root.presets.map(function(p) { return p.name; })
                                 currentValue: root.activePresetName
 
@@ -1074,7 +1074,7 @@ PluginComponent {
                             iconSize: Theme.iconSizeSmall + 2
                             iconColor: root.renamingPreset ? Theme.primary : Theme.surfaceText
                             backgroundColor: root.renamingPreset ? Theme.withAlpha(Theme.primary, 0.18) : Theme.surfaceContainerHigh
-                            tooltipText: root.renamingPreset ? I18n.tr("Confirm") : I18n.tr("Save Preset")
+                            tooltipText: root.renamingPreset ? I18n.trFor("ambientSound", "Confirm") : I18n.trFor("ambientSound", "Save Preset")
                             onClicked: {
                                 if (root.renamingPreset) {
                                     root.renamePreset(root.selectedPresetIndex, renameField.text);
@@ -1096,7 +1096,7 @@ PluginComponent {
                             iconSize: Theme.iconSizeSmall
                             iconColor: Theme.error
                             backgroundColor: Theme.surfaceContainerHigh
-                            tooltipText: I18n.tr("Delete Preset")
+                            tooltipText: I18n.trFor("ambientSound", "Delete Preset")
                             onClicked: {
                                 root.deletePreset(root.selectedPresetIndex);
                                 root.editingIndex = -1;
@@ -1115,7 +1115,7 @@ PluginComponent {
                             iconSize: Theme.iconSizeSmall
                             iconColor: root.renamingPreset ? Theme.error : Theme.surfaceText
                             backgroundColor: root.renamingPreset ? Theme.withAlpha(Theme.error, 0.15) : Theme.surfaceContainerHigh
-                            tooltipText: root.renamingPreset ? I18n.tr("Cancel") : I18n.tr("Rename Preset")
+                            tooltipText: root.renamingPreset ? I18n.trFor("ambientSound", "Cancel") : I18n.trFor("ambientSound", "Rename Preset")
                             onClicked: {
                                 if (root.renamingPreset) {
                                     root.cancelRename();
@@ -1194,7 +1194,7 @@ PluginComponent {
                                 iconName: root.isMuted ? "volume_off" : (root.masterVolume > 50 ? "volume_up" : (root.masterVolume > 0 ? "volume_down" : "volume_mute"))
                                 iconSize: Theme.iconSizeMedium
                                 iconColor: root.isMuted ? Theme.error : Theme.surfaceText
-                                tooltipText: root.isMuted ? I18n.tr("Unmute") : I18n.tr("Mute")
+                                tooltipText: root.isMuted ? I18n.trFor("ambientSound", "Unmute") : I18n.trFor("ambientSound", "Mute")
                                 onClicked: root.toggleMute()
                             }
 
@@ -1241,7 +1241,7 @@ PluginComponent {
                                 iconName: "timer"
                                 iconSize: Theme.iconSizeMedium
                                 iconColor: sleepTimer.running ? Theme.onPrimary : (root.timerDropdownOpen ? Theme.primary : Theme.surfaceText)
-                                tooltipText: I18n.tr("Sleep Timer")
+                                tooltipText: I18n.trFor("ambientSound", "Sleep Timer")
                                 onClicked: {
                                     root.timerDropdownOpen = !root.timerDropdownOpen;
                                 }
@@ -1278,7 +1278,7 @@ PluginComponent {
                                 iconName: root.playingSounds.length > 0 ? "pause" : "play_arrow"
                                 iconSize: Theme.iconSize
                                 iconColor: Theme.onPrimary
-                                tooltipText: root.playingSounds.length > 0 ? I18n.tr("Pause") : I18n.tr("Resume")
+                                tooltipText: root.playingSounds.length > 0 ? I18n.trFor("ambientSound", "Pause") : I18n.trFor("ambientSound", "Resume")
                                 onClicked: root.togglePlayPause()
                             }
                         }
@@ -1366,7 +1366,7 @@ PluginComponent {
                             }
 
                             StyledText {
-                                text: I18n.tr("Sleep timer: ") + Math.ceil(sleepTimer.remainingTime / 60000) + I18n.tr(" minutes left")
+                                text: I18n.trFor("ambientSound", "Sleep timer: ") + Math.ceil(sleepTimer.remainingTime / 60000) + I18n.trFor("ambientSound", " minutes left")
                                 font.pixelSize: Theme.fontSizeSmall
                                 color: Theme.primary
                                 font.weight: Font.Medium
@@ -1375,7 +1375,7 @@ PluginComponent {
                             }
 
                             DButton {
-                                text: I18n.tr("Cancel")
+                                text: I18n.trFor("ambientSound", "Cancel")
                                 width: 80
                                 height: Theme.buttonHeightXS
                                 backgroundColor: Theme.surfaceContainerHighest
@@ -1395,7 +1395,7 @@ PluginComponent {
                             spacing: Theme.spacingXS
 
                             StyledText {
-                                text: I18n.tr("When done:")
+                                text: I18n.trFor("ambientSound", "When done:")
                                 font.pixelSize: Theme.fontSizeSmall
                                 font.weight: Font.Bold
                                 color: Theme.surfaceVariantText

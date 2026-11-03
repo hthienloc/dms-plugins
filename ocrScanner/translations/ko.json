@@ -11,6 +11,9 @@
   "Behavior": {
     "Behavior": "행동"
   },
+  "Clear Image & Text": {
+    "Clear Image & Text": ""
+  },
   "Copy Text": {
     "Copy Text": "텍스트 복사"
   },
@@ -35,8 +38,8 @@
   "Recognition Languages": {
     "Recognition Languages": "인식 언어"
   },
-  "Right-click to scan clipboard, Middle-click to scan screenshot": {
-    "Right-click to scan clipboard, Middle-click to scan screenshot": "클립보드를 스캔하려면 마우스 오른쪽 버튼을 클릭하고, 스크린샷을 스캔하려면 가운데 버튼을 클릭하세요."
+  "Right-click pill to scan clipboard, Middle-click to take screenshot": {
+    "Right-click pill to scan clipboard, Middle-click to take screenshot": ""
   },
   "Save Text": {
     "Save Text": "텍스트 저장"
@@ -46,6 +49,9 @@
   },
   "Scanned text is automatically copied to the <b>clipboard</b>.": {
     "Scanned text is automatically copied to the <b>clipboard</b>.": "스캔한 텍스트는 <b>클립보드</b>에 자동으로 복사됩니다."
+  },
+  "Screenshot": {
+    "Screenshot": ""
   },
   "Select File": {
     "Select File": "파일 선택"

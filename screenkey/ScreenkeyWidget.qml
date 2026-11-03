@@ -17,11 +17,11 @@ PluginComponent {
     readonly property var daemon: PluginService.pluginInstances["screenkey"]
     property var deviceOptions: []
     property bool devicesScanning: true
-    readonly property string autoDeviceLabel: I18n.tr("All Keyboards (Auto)")
+    readonly property string autoDeviceLabel: I18n.trFor("screenkey", "All Keyboards (Auto)")
 
     readonly property string currentDeviceLabel: {
         if (root.devicesScanning)
-            return I18n.tr("Scanning devices…");
+            return I18n.trFor("screenkey", "Scanning devices…");
         const cur = root.daemon ? root.daemon.selectedDevicePath : "all";
         for (let i = 0; i < root.deviceOptions.length; i++) {
             if (root.deviceOptions[i].value === cur)
@@ -49,8 +49,8 @@ PluginComponent {
     }
 
     ccWidgetIcon: "keyboard"
-    ccWidgetPrimaryText: I18n.tr("Screenkey")
-    ccWidgetSecondaryText: daemon && daemon.visualizerEnabled ? I18n.tr("Active") : I18n.tr("Disabled")
+    ccWidgetPrimaryText: I18n.trFor("screenkey", "Screenkey")
+    ccWidgetSecondaryText: daemon && daemon.visualizerEnabled ? I18n.trFor("screenkey", "Active") : I18n.trFor("screenkey", "Disabled")
     ccWidgetIsActive: daemon ? daemon.visualizerEnabled : false
     ccDetailHeight: {
         const hasWarning = !!(root.daemon && (root.daemon.inputToolMissing || root.daemon.notInInputGroup));
@@ -102,8 +102,8 @@ PluginComponent {
                         StyledText {
                             width: parent.width - Theme.iconSizeSmall - Theme.spacingM
                             text: root.daemon?.notInInputGroup
-                                ? I18n.tr("User not in 'input' group (run: sudo usermod -aG input $USER)")
-                                : I18n.tr("Missing tool: %1").arg(root.daemon?.requiredTool ?? "libinput")
+                                ? I18n.trFor("screenkey", "User not in 'input' group (run: sudo usermod -aG input $USER)")
+                                : I18n.trFor("screenkey", "Missing tool: %1").arg(root.daemon?.requiredTool ?? "libinput")
                             font.pixelSize: Theme.fontSizeSmall
                             color: Theme.warning
                             wrapMode: Text.WordWrap
@@ -119,10 +119,10 @@ PluginComponent {
                     spacing: Theme.groupedListGap
 
                     readonly property var optionsList: [
-                        { id: "showShortcuts", label: I18n.tr("Shortcuts"), icon: "keyboard_command_key", val: root.daemon ? root.daemon.showShortcuts : true },
-                        { id: "showNormalKeys", label: I18n.tr("All Keys"), icon: "keyboard", val: root.daemon ? root.daemon.showNormalKeys : false },
-                        { id: "showMouseClicks", label: I18n.tr("Mouse"), icon: "mouse", val: root.daemon ? root.daemon.showMouseClicks : false },
-                        { id: "showModifierStatus", label: I18n.tr("Modifiers"), icon: "touch_app", val: root.daemon ? root.daemon.showModifierStatus : false }
+                        { id: "showShortcuts", label: I18n.trFor("screenkey", "Shortcuts"), icon: "keyboard_command_key", val: root.daemon ? root.daemon.showShortcuts : true },
+                        { id: "showNormalKeys", label: I18n.trFor("screenkey", "All Keys"), icon: "keyboard", val: root.daemon ? root.daemon.showNormalKeys : false },
+                        { id: "showMouseClicks", label: I18n.trFor("screenkey", "Mouse"), icon: "mouse", val: root.daemon ? root.daemon.showMouseClicks : false },
+                        { id: "showModifierStatus", label: I18n.trFor("screenkey", "Modifiers"), icon: "touch_app", val: root.daemon ? root.daemon.showModifierStatus : false }
                     ]
 
                     Repeater {
@@ -198,19 +198,19 @@ PluginComponent {
 
                     readonly property string curPos: root.daemon?.position ?? "bottom_center"
                     readonly property var positionsList: [
-                        { id: "top_left", col: 0, row: 0, label: I18n.tr("Top Left") },
-                        { id: "top_center", col: 1, row: 0, label: I18n.tr("Top Center") },
-                        { id: "top_right", col: 2, row: 0, label: I18n.tr("Top Right") },
-                        { id: "bottom_left", col: 0, row: 1, label: I18n.tr("Bottom Left") },
-                        { id: "bottom_center", col: 1, row: 1, label: I18n.tr("Bottom Center") },
-                        { id: "bottom_right", col: 2, row: 1, label: I18n.tr("Bottom Right") }
+                        { id: "top_left", col: 0, row: 0, label: I18n.trFor("screenkey", "Top Left") },
+                        { id: "top_center", col: 1, row: 0, label: I18n.trFor("screenkey", "Top Center") },
+                        { id: "top_right", col: 2, row: 0, label: I18n.trFor("screenkey", "Top Right") },
+                        { id: "bottom_left", col: 0, row: 1, label: I18n.trFor("screenkey", "Bottom Left") },
+                        { id: "bottom_center", col: 1, row: 1, label: I18n.trFor("screenkey", "Bottom Center") },
+                        { id: "bottom_right", col: 2, row: 1, label: I18n.trFor("screenkey", "Bottom Right") }
                     ]
 
                     function positionLabel(pos) {
                         for (let i = 0; i < positionsList.length; i++) {
                             if (positionsList[i].id === pos) return positionsList[i].label;
                         }
-                        return I18n.tr("Bottom Center");
+                        return I18n.trFor("screenkey", "Bottom Center");
                     }
 
                     Row {
@@ -225,7 +225,7 @@ PluginComponent {
                             spacing: 4
 
                             StyledText {
-                                text: I18n.tr("Position")
+                                text: I18n.trFor("screenkey", "Position")
                                 font.pixelSize: Theme.fontSizeMedium
                                 font.weight: Font.Medium
                                 color: Theme.surfaceText
@@ -351,7 +351,7 @@ PluginComponent {
                         spacing: Theme.spacingS
 
                         StyledText {
-                            text: I18n.tr("Keyboard Device")
+                            text: I18n.trFor("screenkey", "Keyboard Device")
                             font.pixelSize: Theme.fontSizeMedium
                             font.weight: Font.Medium
                             color: Theme.surfaceText

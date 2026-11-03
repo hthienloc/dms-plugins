@@ -11,15 +11,15 @@ PluginSettings {
     pluginId: "hiddenBar"
 
     NoteCard {
-        title: I18n.tr("Note")
+        title: I18n.trFor("hiddenBar", "Note")
         icon: "warning"
-        text: I18n.tr("Inline mode detects newly added status bar widgets automatically. Popout Overflow changes require restarting DankMaterialShell ('dms restart').")
+        text: I18n.trFor("hiddenBar", "Inline mode detects newly added status bar widgets automatically. Popout Overflow changes require restarting DankMaterialShell ('dms restart').")
     }
 
     SettingsCard {
         id: expansionSection
         SectionTitle { 
-            text: I18n.tr("Expansion & Collapse")
+            text: I18n.trFor("hiddenBar", "Expansion & Collapse")
             icon: "unfold_more" 
             showReset: usePopout.isDirty || popoutLayout.isDirty || startExpanded.isDirty || autoExpand.isDirty || hoverDelay.isDirty || autoCollapse.isDirty || collapseDelay.isDirty || animateCollapse.isDirty || animDuration.isDirty
             onResetClicked: {
@@ -37,8 +37,8 @@ PluginSettings {
 
         ToggleSettingPlus {
             id: usePopout
-            label: I18n.tr("Use Popout Overflow")
-            description: I18n.tr("Show hidden plugins in a separate popout menu instead of expanding the status bar.")
+            label: I18n.trFor("hiddenBar", "Use Popout Overflow")
+            description: I18n.trFor("hiddenBar", "Show hidden plugins in a separate popout menu instead of expanding the status bar.")
             settingKey: "usePopout"
             defaultValue: false
         }
@@ -50,13 +50,13 @@ PluginSettings {
 
         SelectionSettingPlus {
             id: popoutLayout
-            label: I18n.tr("Popout Layout")
-            description: I18n.tr("How icons are arranged inside the popout.")
+            label: I18n.trFor("hiddenBar", "Popout Layout")
+            description: I18n.trFor("hiddenBar", "How icons are arranged inside the popout.")
             settingKey: "popoutLayout"
             defaultValue: "row"
             options: [
-                { label: I18n.tr("Horizontal Row"), value: "row" },
-                { label: I18n.tr("Grid"), value: "grid" }
+                { label: I18n.trFor("hiddenBar", "Horizontal Row"), value: "row" },
+                { label: I18n.trFor("hiddenBar", "Grid"), value: "grid" }
             ]
             visible: usePopout.value
             height: visible ? implicitHeight : 0
@@ -69,8 +69,8 @@ PluginSettings {
 
         SliderSettingPlus {
             id: popoutWidthAdjustment
-            label: I18n.tr("Popout width adjustment")
-            description: I18n.tr("Fine-tune the horizontal popout width.")
+            label: I18n.trFor("hiddenBar", "Popout width adjustment")
+            description: I18n.trFor("hiddenBar", "Fine-tune the horizontal popout width.")
             settingKey: "popoutWidthAdjustment"
             defaultValue: 48
             minimum: -150
@@ -89,8 +89,8 @@ PluginSettings {
 
         SliderSettingPlus {
             id: popoutHeightAdjustment
-            label: I18n.tr("Popout height adjustment")
-            description: I18n.tr("Fine-tune the popout height.")
+            label: I18n.trFor("hiddenBar", "Popout height adjustment")
+            description: I18n.trFor("hiddenBar", "Fine-tune the popout height.")
             settingKey: "popoutHeightAdjustment"
             defaultValue: 6
             minimum: -150
@@ -104,7 +104,7 @@ PluginSettings {
 
         ToggleSettingPlus {
             id: startExpanded
-            label: I18n.tr("Start expanded")
+            label: I18n.trFor("hiddenBar", "Start expanded")
             settingKey: "startExpanded"
             defaultValue: false
             visible: !usePopout.value
@@ -117,7 +117,7 @@ PluginSettings {
 
         ToggleSettingPlus {
             id: autoExpand
-            label: I18n.tr("Auto-expand on hover")
+            label: I18n.trFor("hiddenBar", "Auto-expand on hover")
             settingKey: "autoExpand"
             defaultValue: true
         }
@@ -129,8 +129,8 @@ PluginSettings {
 
         SliderSettingPlus {
             id: hoverDelay
-            label: I18n.tr("Hover delay")
-            description: I18n.tr("Wait time before expanding on hover.")
+            label: I18n.trFor("hiddenBar", "Hover delay")
+            description: I18n.trFor("hiddenBar", "Wait time before expanding on hover.")
             settingKey: "hoverDelay"
             defaultValue: 0
             minimum: 0
@@ -146,15 +146,15 @@ PluginSettings {
 
         ToggleSettingPlus {
             id: autoCollapse
-            label: I18n.tr("Auto-collapse")
+            label: I18n.trFor("hiddenBar", "Auto-collapse")
             settingKey: "autoCollapse"
             defaultValue: true
         }
 
         SliderSettingPlus {
             id: collapseDelay
-            label: I18n.tr("Collapse delay")
-            description: I18n.tr("Wait time before collapsing automatically.")
+            label: I18n.trFor("hiddenBar", "Collapse delay")
+            description: I18n.trFor("hiddenBar", "Wait time before collapsing automatically.")
             settingKey: "collapseDelay"
             defaultValue: 1
             minimum: 0
@@ -170,16 +170,16 @@ PluginSettings {
 
         ToggleSettingPlus {
             id: animateCollapse
-            label: I18n.tr("Animate collapse")
-            description: I18n.tr("Slide widgets in and out instead of switching instantly. When off, the space is reclaimed immediately.")
+            label: I18n.trFor("hiddenBar", "Animate collapse")
+            description: I18n.trFor("hiddenBar", "Slide widgets in and out instead of switching instantly. When off, the space is reclaimed immediately.")
             settingKey: "animateCollapse"
             defaultValue: true
         }
 
         SliderSettingPlus {
             id: animDuration
-            label: I18n.tr("Animation duration")
-            description: I18n.tr("How long the slide animation takes.")
+            label: I18n.trFor("hiddenBar", "Animation duration")
+            description: I18n.trFor("hiddenBar", "How long the slide animation takes.")
             settingKey: "animDuration"
             defaultValue: 220
             minimum: 80
@@ -198,8 +198,8 @@ PluginSettings {
 
         ToggleSettingPlus {
             id: hideIconPillWhenCollapsed
-            label: I18n.tr("Hide icon pill when collapsed")
-            description: I18n.tr("Completely hide the trigger icon pill when the bar is collapsed.")
+            label: I18n.trFor("hiddenBar", "Hide icon pill when collapsed")
+            description: I18n.trFor("hiddenBar", "Completely hide the trigger icon pill when the bar is collapsed.")
             settingKey: "hideIconPillWhenCollapsed"
             defaultValue: false
         }
@@ -208,8 +208,8 @@ PluginSettings {
 
         ToggleSettingPlus {
             id: hideIconPillWhenExpanded
-            label: I18n.tr("Hide icon pill when expanded")
-            description: I18n.tr("Completely hide the trigger icon pill when the bar is expanded.")
+            label: I18n.trFor("hiddenBar", "Hide icon pill when expanded")
+            description: I18n.trFor("hiddenBar", "Completely hide the trigger icon pill when the bar is expanded.")
             settingKey: "hideIconPillWhenExpanded"
             defaultValue: false
         }
@@ -218,7 +218,7 @@ PluginSettings {
     SettingsCard {
         id: triggerSection
         SectionTitle { 
-            text: I18n.tr("Trigger Zone")
+            text: I18n.trFor("hiddenBar", "Trigger Zone")
             icon: "ads_click" 
             showReset: extendedTrigger.isDirty || showRegionPreview.isDirty || triggerAdjustment.isDirty || triggerOffset.isDirty || triggerHeightAdjustment.isDirty || triggerYOffset.isDirty
             onResetClicked: {
@@ -233,8 +233,8 @@ PluginSettings {
 
         ToggleSettingPlus {
             id: extendedTrigger
-            label: I18n.tr("Extended trigger area")
-            description: I18n.tr("Allow triggering expansion by hovering over the area where icons are hidden.")
+            label: I18n.trFor("hiddenBar", "Extended trigger area")
+            description: I18n.trFor("hiddenBar", "Allow triggering expansion by hovering over the area where icons are hidden.")
             settingKey: "extendedTrigger"
             defaultValue: true
         }
@@ -243,8 +243,8 @@ PluginSettings {
 
         ToggleSettingPlus {
             id: showRegionPreview
-            label: I18n.tr("Show region preview")
-            description: I18n.tr("Highlight the expansion trigger zone.")
+            label: I18n.trFor("hiddenBar", "Show region preview")
+            description: I18n.trFor("hiddenBar", "Highlight the expansion trigger zone.")
             settingKey: "showRegionPreview"
             defaultValue: false
         }
@@ -253,8 +253,8 @@ PluginSettings {
 
         SliderSettingPlus {
             id: triggerAdjustment
-            label: I18n.tr("Trigger area width adjustment")
-            description: I18n.tr("Fine-tune the trigger zone width along the bar axis. Positive values expand it, negative values shrink it.")
+            label: I18n.trFor("hiddenBar", "Trigger area width adjustment")
+            description: I18n.trFor("hiddenBar", "Fine-tune the trigger zone width along the bar axis. Positive values expand it, negative values shrink it.")
             settingKey: "triggerAdjustment"
             defaultValue: 0
             minimum: -150
@@ -268,8 +268,8 @@ PluginSettings {
 
         SliderSettingPlus {
             id: triggerOffset
-            label: I18n.tr("Trigger area X offset")
-            description: I18n.tr("Shift the trigger zone position along the bar axis. Positive values shift right/down, negative values shift left/up.")
+            label: I18n.trFor("hiddenBar", "Trigger area X offset")
+            description: I18n.trFor("hiddenBar", "Shift the trigger zone position along the bar axis. Positive values shift right/down, negative values shift left/up.")
             settingKey: "triggerOffset"
             defaultValue: 0
             minimum: -100
@@ -283,8 +283,8 @@ PluginSettings {
 
         SliderSettingPlus {
             id: triggerHeightAdjustment
-            label: I18n.tr("Trigger area height adjustment")
-            description: I18n.tr("Adjust the height (thickness) of the trigger area perpendicular to the bar.")
+            label: I18n.trFor("hiddenBar", "Trigger area height adjustment")
+            description: I18n.trFor("hiddenBar", "Adjust the height (thickness) of the trigger area perpendicular to the bar.")
             settingKey: "triggerHeightAdjustment"
             defaultValue: 0
             minimum: -30
@@ -298,8 +298,8 @@ PluginSettings {
 
         SliderSettingPlus {
             id: triggerYOffset
-            label: I18n.tr("Trigger area Y offset")
-            description: I18n.tr("Shift the trigger zone position perpendicular to the bar axis. Positive values shift down/right, negative values shift up/left.")
+            label: I18n.trFor("hiddenBar", "Trigger area Y offset")
+            description: I18n.trFor("hiddenBar", "Shift the trigger zone position perpendicular to the bar axis. Positive values shift down/right, negative values shift up/left.")
             settingKey: "triggerYOffset"
             defaultValue: 0
             minimum: -40
@@ -313,7 +313,7 @@ PluginSettings {
     SettingsCard {
         id: exclusionsSection
         SectionTitle {
-            text: I18n.tr("Widget Control")
+            text: I18n.trFor("hiddenBar", "Widget Control")
             icon: "tune"
             showReset: widgetSelectionMode.isDirty || excludeTray.isDirty || excludeClock.isDirty || hideCount.isDirty || (widgetList.hasSelection && widgetList.visible)
             onResetClicked: {
@@ -327,14 +327,14 @@ PluginSettings {
 
         SelectionSettingPlus {
             id: widgetSelectionMode
-            label: I18n.tr("Widget selection")
-            description: I18n.tr("Auto hides every eligible widget. Blacklist hides all except the widgets you pick. Whitelist hides only the widgets you pick.")
+            label: I18n.trFor("hiddenBar", "Widget selection")
+            description: I18n.trFor("hiddenBar", "Auto hides every eligible widget. Blacklist hides all except the widgets you pick. Whitelist hides only the widgets you pick.")
             settingKey: "widgetSelectionMode"
             defaultValue: "auto"
             options: [
-                { label: I18n.tr("Auto"), value: "auto" },
-                { label: I18n.tr("Blacklist"), value: "blacklist" },
-                { label: I18n.tr("Whitelist"), value: "whitelist" }
+                { label: I18n.trFor("hiddenBar", "Auto"), value: "auto" },
+                { label: I18n.trFor("hiddenBar", "Blacklist"), value: "blacklist" },
+                { label: I18n.trFor("hiddenBar", "Whitelist"), value: "whitelist" }
             ]
         }
 
@@ -345,8 +345,8 @@ PluginSettings {
 
         ToggleSettingPlus {
             id: excludeTray
-            label: I18n.tr("Keep System Tray")
-            description: I18n.tr("Never hide the system tray widgets.")
+            label: I18n.trFor("hiddenBar", "Keep System Tray")
+            description: I18n.trFor("hiddenBar", "Never hide the system tray widgets.")
             settingKey: "excludeTray"
             defaultValue: true
             visible: widgetSelectionMode.value === "auto"
@@ -360,8 +360,8 @@ PluginSettings {
 
         ToggleSettingPlus {
             id: excludeClock
-            label: I18n.tr("Keep Clock")
-            description: I18n.tr("Never hide the clock widget.")
+            label: I18n.trFor("hiddenBar", "Keep Clock")
+            description: I18n.trFor("hiddenBar", "Never hide the clock widget.")
             settingKey: "excludeClock"
             defaultValue: true
             visible: widgetSelectionMode.value === "auto"
@@ -393,37 +393,37 @@ PluginSettings {
             // generic "widgets" icon (see buildModel's else branch). There is no
             // upstream catalog singleton — BarWidgetService exposes IDs only.
             readonly property var builtinCatalog: ({
-                "layout": { text: I18n.tr("Layout"), icon: "view_quilt" },
-                "launcherButton": { text: I18n.tr("App Launcher"), icon: "apps" },
-                "workspaceSwitcher": { text: I18n.tr("Workspace Switcher"), icon: "view_module" },
-                "focusedWindow": { text: I18n.tr("Focused Window"), icon: "window" },
-                "runningApps": { text: I18n.tr("Running Apps"), icon: "apps" },
-                "appsDock": { text: I18n.tr("Apps Dock"), icon: "dock_to_bottom" },
-                "clock": { text: I18n.tr("Clock"), icon: "schedule" },
-                "weather": { text: I18n.tr("Weather Widget"), icon: "wb_sunny" },
-                "music": { text: I18n.tr("Media Controls"), icon: "music_note" },
-                "clipboard": { text: I18n.tr("Clipboard Manager"), icon: "content_paste" },
-                "cpuUsage": { text: I18n.tr("CPU Usage"), icon: "memory" },
-                "memUsage": { text: I18n.tr("Memory Usage"), icon: "developer_board" },
-                "diskUsage": { text: I18n.tr("Disk Usage"), icon: "storage" },
-                "cpuTemp": { text: I18n.tr("CPU Temperature"), icon: "device_thermostat" },
-                "gpuTemp": { text: I18n.tr("GPU Temperature"), icon: "auto_awesome_mosaic" },
-                "systemTray": { text: I18n.tr("System Tray"), icon: "notifications" },
-                "privacyIndicator": { text: I18n.tr("Privacy Indicator"), icon: "privacy_tip" },
-                "controlCenterButton": { text: I18n.tr("Control Center"), icon: "settings" },
-                "notificationButton": { text: I18n.tr("Notification Center"), icon: "notifications" },
-                "battery": { text: I18n.tr("Battery"), icon: "battery_std" },
-                "vpn": { text: I18n.tr("VPN"), icon: "vpn_lock" },
-                "idleInhibitor": { text: I18n.tr("Idle Inhibitor"), icon: "motion_sensor_active" },
-                "capsLockIndicator": { text: I18n.tr("Caps Lock Indicator"), icon: "shift_lock" },
-                "spacer": { text: I18n.tr("Spacer"), icon: "more_horiz" },
-                "separator": { text: I18n.tr("Separator"), icon: "remove" },
-                "network_speed_monitor": { text: I18n.tr("Network Speed Monitor"), icon: "network_check" },
-                "keyboard_layout_name": { text: I18n.tr("Keyboard Layout Name"), icon: "keyboard" },
-                "notepadButton": { text: I18n.tr("Notepad"), icon: "assignment" },
-                "colorPicker": { text: I18n.tr("Color Picker"), icon: "palette" },
-                "systemUpdate": { text: I18n.tr("System Update"), icon: "update" },
-                "powerMenuButton": { text: I18n.tr("Power"), icon: "power_settings_new" }
+                "layout": { text: I18n.trFor("hiddenBar", "Layout"), icon: "view_quilt" },
+                "launcherButton": { text: I18n.trFor("hiddenBar", "App Launcher"), icon: "apps" },
+                "workspaceSwitcher": { text: I18n.trFor("hiddenBar", "Workspace Switcher"), icon: "view_module" },
+                "focusedWindow": { text: I18n.trFor("hiddenBar", "Focused Window"), icon: "window" },
+                "runningApps": { text: I18n.trFor("hiddenBar", "Running Apps"), icon: "apps" },
+                "appsDock": { text: I18n.trFor("hiddenBar", "Apps Dock"), icon: "dock_to_bottom" },
+                "clock": { text: I18n.trFor("hiddenBar", "Clock"), icon: "schedule" },
+                "weather": { text: I18n.trFor("hiddenBar", "Weather Widget"), icon: "wb_sunny" },
+                "music": { text: I18n.trFor("hiddenBar", "Media Controls"), icon: "music_note" },
+                "clipboard": { text: I18n.trFor("hiddenBar", "Clipboard Manager"), icon: "content_paste" },
+                "cpuUsage": { text: I18n.trFor("hiddenBar", "CPU Usage"), icon: "memory" },
+                "memUsage": { text: I18n.trFor("hiddenBar", "Memory Usage"), icon: "developer_board" },
+                "diskUsage": { text: I18n.trFor("hiddenBar", "Disk Usage"), icon: "storage" },
+                "cpuTemp": { text: I18n.trFor("hiddenBar", "CPU Temperature"), icon: "device_thermostat" },
+                "gpuTemp": { text: I18n.trFor("hiddenBar", "GPU Temperature"), icon: "auto_awesome_mosaic" },
+                "systemTray": { text: I18n.trFor("hiddenBar", "System Tray"), icon: "notifications" },
+                "privacyIndicator": { text: I18n.trFor("hiddenBar", "Privacy Indicator"), icon: "privacy_tip" },
+                "controlCenterButton": { text: I18n.trFor("hiddenBar", "Control Center"), icon: "settings" },
+                "notificationButton": { text: I18n.trFor("hiddenBar", "Notification Center"), icon: "notifications" },
+                "battery": { text: I18n.trFor("hiddenBar", "Battery"), icon: "battery_std" },
+                "vpn": { text: I18n.trFor("hiddenBar", "VPN"), icon: "vpn_lock" },
+                "idleInhibitor": { text: I18n.trFor("hiddenBar", "Idle Inhibitor"), icon: "motion_sensor_active" },
+                "capsLockIndicator": { text: I18n.trFor("hiddenBar", "Caps Lock Indicator"), icon: "shift_lock" },
+                "spacer": { text: I18n.trFor("hiddenBar", "Spacer"), icon: "more_horiz" },
+                "separator": { text: I18n.trFor("hiddenBar", "Separator"), icon: "remove" },
+                "network_speed_monitor": { text: I18n.trFor("hiddenBar", "Network Speed Monitor"), icon: "network_check" },
+                "keyboard_layout_name": { text: I18n.trFor("hiddenBar", "Keyboard Layout Name"), icon: "keyboard" },
+                "notepadButton": { text: I18n.trFor("hiddenBar", "Notepad"), icon: "assignment" },
+                "colorPicker": { text: I18n.trFor("hiddenBar", "Color Picker"), icon: "palette" },
+                "systemUpdate": { text: I18n.trFor("hiddenBar", "System Update"), icon: "update" },
+                "powerMenuButton": { text: I18n.trFor("hiddenBar", "Power"), icon: "power_settings_new" }
             })
 
             // Turn an unknown widget id into a readable label, e.g.
@@ -509,7 +509,7 @@ PluginSettings {
 
             StyledText {
                 width: parent.width
-                text: widgetSelectionMode.value === "whitelist" ? I18n.tr("Only hide these widgets:") : I18n.tr("Never hide these widgets:")
+                text: widgetSelectionMode.value === "whitelist" ? I18n.trFor("hiddenBar", "Only hide these widgets:") : I18n.trFor("hiddenBar", "Never hide these widgets:")
                 font.pixelSize: Theme.fontSizeMedium
                 font.weight: Font.Medium
                 color: Theme.surfaceText
@@ -562,7 +562,7 @@ PluginSettings {
             StyledText {
                 width: parent.width
                 visible: widgetList.widgetModel.length === 0
-                text: I18n.tr("No manageable widgets detected yet. Add widgets to the bar, then run 'dms restart'.")
+                text: I18n.trFor("hiddenBar", "No manageable widgets detected yet. Add widgets to the bar, then run 'dms restart'.")
                 color: Theme.surfaceVariantText
                 font.pixelSize: Theme.fontSizeSmall
                 wrapMode: Text.WordWrap
@@ -575,8 +575,8 @@ PluginSettings {
 
         SliderSettingPlus {
             id: hideCount
-            label: I18n.tr("Max hidden widgets")
-            description: I18n.tr("Limit the number of widgets to hide. Set to 0 to hide all.")
+            label: I18n.trFor("hiddenBar", "Max hidden widgets")
+            description: I18n.trFor("hiddenBar", "Limit the number of widgets to hide. Set to 0 to hide all.")
             settingKey: "hideCount"
             defaultValue: 0
             minimum: 0
@@ -589,7 +589,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle { 
             id: ipcTitle
-            text: I18n.tr("IPC Commands")
+            text: I18n.trFor("hiddenBar", "IPC Commands")
             icon: "terminal" 
             collapsible: true
             isExpanded: false
@@ -602,27 +602,27 @@ PluginSettings {
             visible: ipcTitle.isExpanded
 
             CopyBox {
-                label: I18n.tr("Toggle Expansion")
+                label: I18n.trFor("hiddenBar", "Toggle Expansion")
                 text: "dms ipc call hiddenBar toggle"
             }
 
             CopyBox {
-                label: I18n.tr("Expand Area")
+                label: I18n.trFor("hiddenBar", "Expand Area")
                 text: "dms ipc call hiddenBar expand"
             }
 
             CopyBox {
-                label: I18n.tr("Collapse Area")
+                label: I18n.trFor("hiddenBar", "Collapse Area")
                 text: "dms ipc call hiddenBar collapse"
             }
 
             CopyBox {
-                label: I18n.tr("Pin Expansion")
+                label: I18n.trFor("hiddenBar", "Pin Expansion")
                 text: "dms ipc call hiddenBar pin"
             }
 
             CopyBox {
-                label: I18n.tr("Unpin Expansion")
+                label: I18n.trFor("hiddenBar", "Unpin Expansion")
                 text: "dms ipc call hiddenBar unpin"
             }
         }
@@ -631,7 +631,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle { 
             id: usageTitle
-            text: I18n.tr("Usage Guide")
+            text: I18n.trFor("hiddenBar", "Usage Guide")
             icon: "menu_book" 
             collapsible: true
             settingKey: "usageGuideExpanded"
@@ -640,9 +640,9 @@ PluginSettings {
         UsageGuide {
             expanded: usageTitle.isExpanded
             items: [
-                I18n.tr("<b>Hover</b> the icon (or trigger zone) to temporarily expand the hidden area."),
-                I18n.tr("<b>Left-click</b> the icon to manually toggle the expanded state."),
-                I18n.tr("<b>Right-click</b> the icon while expanded to <b>PIN</b> (prevent auto-collapse).")
+                I18n.trFor("hiddenBar", "<b>Hover</b> the icon (or trigger zone) to temporarily expand the hidden area."),
+                I18n.trFor("hiddenBar", "<b>Left-click</b> the icon to manually toggle the expanded state."),
+                I18n.trFor("hiddenBar", "<b>Right-click</b> the icon while expanded to <b>PIN</b> (prevent auto-collapse).")
             ]
         }
     }

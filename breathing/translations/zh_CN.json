@@ -1,0 +1,164 @@
+{
+  "4-7-8 Breathing": {
+    "4-7-8 Breathing": "4-7-8呼吸"
+  },
+  "<b>Left-click</b> the pill to start/pause the breathing session.": {
+    "<b>Left-click</b> the pill to start/pause the breathing session.": ""
+  },
+  "<b>Right-click</b> the pill to stop and reset the session.": {
+    "<b>Right-click</b> the pill to stop and reset the session.": ""
+  },
+  "Absolute path to custom audio.": {
+    "Absolute path to custom audio.": ""
+  },
+  "All files": {
+    "All files": ""
+  },
+  "Alternate Nostril": {
+    "Alternate Nostril": "备用鼻孔"
+  },
+  "Ambient Meditation": {
+    "Ambient Meditation": ""
+  },
+  "Animation Style": {
+    "Animation Style": "动画风格"
+  },
+  "Appearance": {
+    "Appearance": "外貌"
+  },
+  "Audio files": {
+    "Audio files": ""
+  },
+  "Auto-start Exercise": {
+    "Auto-start Exercise": "自动开始练习"
+  },
+  "Behavior": {
+    "Behavior": "行为"
+  },
+  "Box Breathing": {
+    "Box Breathing": "箱式呼吸"
+  },
+  "Breathe In": {
+    "Breathe In": "吸入"
+  },
+  "Breathe Out": {
+    "Breathe Out": "呼"
+  },
+  "Classic Card": {
+    "Classic Card": "经典卡"
+  },
+  "Custom Sound File": {
+    "Custom Sound File": "自定义声音文件"
+  },
+  "Deep Breathing": {
+    "Deep Breathing": "深呼吸"
+  },
+  "Default Duration": {
+    "Default Duration": "默认持续时间"
+  },
+  "Default Exercise": {
+    "Default Exercise": "默认行使"
+  },
+  "Double-click an exercise tile to start it immediately.": {
+    "Double-click an exercise tile to start it immediately.": "双击练习图块即可立即开始。"
+  },
+  "Equal Breathing": {
+    "Equal Breathing": "均匀呼吸"
+  },
+  "Expanding Circle": {
+    "Expanding Circle": "扩大圈子"
+  },
+  "Feedback": {
+    "Feedback": "反馈"
+  },
+  "Flowing Wave": {
+    "Flowing Wave": "流动的波浪"
+  },
+  "Follow the <b>visual guide</b> and <b>sound cues</b> to sync your breath.": {
+    "Follow the <b>visual guide</b> and <b>sound cues</b> to sync your breath.": ""
+  },
+  "General": {
+    "General": "一般的"
+  },
+  "Haptic Feedback": {
+    "Haptic Feedback": "触觉反馈"
+  },
+  "Hold": {
+    "Hold": "抓住"
+  },
+  "Mute": {
+    "Mute": ""
+  },
+  "Open the <b>Popout</b> to choose different breathing techniques.": {
+    "Open the <b>Popout</b> to choose different breathing techniques.": ""
+  },
+  "Pause": {
+    "Pause": "暂停"
+  },
+  "Paused": {
+    "Paused": "已暂停"
+  },
+  "Play falling pitch during exhale (default is inhale only).": {
+    "Play falling pitch during exhale (default is inhale only).": ""
+  },
+  "Press 'Space' to Pause/Resume, 'R' to Reset.": {
+    "Press 'Space' to Pause/Resume, 'R' to Reset.": "按“空格”键暂停/恢复，按“R”键重置。"
+  },
+  "Pulsating Glow": {
+    "Pulsating Glow": "脉动辉光"
+  },
+  "Resonance": {
+    "Resonance": "谐振"
+  },
+  "Resume": {
+    "Resume": "恢复"
+  },
+  "Right-click bar icon to quickly toggle Start/Pause.": {
+    "Right-click bar icon to quickly toggle Start/Pause.": "右键单击栏图标可快速切换开始/暂停。"
+  },
+  "Session length for auto-started exercises.": {
+    "Session length for auto-started exercises.": ""
+  },
+  "Show Hints": {
+    "Show Hints": "显示提示"
+  },
+  "Singing Bowl Chime": {
+    "Singing Bowl Chime": ""
+  },
+  "Sound Cue Type": {
+    "Sound Cue Type": "声音提示类型"
+  },
+  "Sound Cues": {
+    "Sound Cues": "声音提示"
+  },
+  "Sound Volume": {
+    "Sound Volume": ""
+  },
+  "Start": {
+    "Start": "开始"
+  },
+  "Start exercise automatically on login.": {
+    "Start exercise automatically on login.": "登录后自动开始锻炼。"
+  },
+  "Stop": {
+    "Stop": "停止"
+  },
+  "Stop Test": {
+    "Stop Test": "停止测试"
+  },
+  "Test Sound": {
+    "Test Sound": "测试声音"
+  },
+  "Two-Tone Model": {
+    "Two-Tone Model": "双音模型"
+  },
+  "Unmute": {
+    "Unmute": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "min": {
+    "min": ""
+  }
+}

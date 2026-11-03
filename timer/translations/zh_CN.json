@@ -1,0 +1,182 @@
+{
+  "1h 5m 10s": {
+    "1h 5m 10s": "1小时5米10秒"
+  },
+  "5m 10s": {
+    "5m 10s": "5m 10秒"
+  },
+  "<b>Left-click</b> the pill to <b>Pause</b> or <b>Resume</b> the timer.": {
+    "<b>Left-click</b> the pill to <b>Pause</b> or <b>Resume</b> the timer.": ""
+  },
+  "<b>Right-click</b> the pill to <b>Reset</b> (or <b>Quick Start</b> if ready).": {
+    "<b>Right-click</b> the pill to <b>Reset</b> (or <b>Quick Start</b> if ready).": ""
+  },
+  "All files": {
+    "All files": ""
+  },
+  "Audio files": {
+    "Audio files": ""
+  },
+  "Automatically Do Not Disturb": {
+    "Automatically Do Not Disturb": ""
+  },
+  "Automatically perform a system action when the timer finishes.": {
+    "Automatically perform a system action when the timer finishes.": "计时器结束时自动执行系统操作。"
+  },
+  "Behavior": {
+    "Behavior": "行为"
+  },
+  "Comma-separated list of minutes for quick start buttons.": {
+    "Comma-separated list of minutes for quick start buttons.": "用于快速启动按钮的以逗号分隔的分钟列表。"
+  },
+  "Custom": {
+    "Custom": ""
+  },
+  "Custom Actions": {
+    "Custom Actions": "自定义操作"
+  },
+  "Custom Command": {
+    "Custom Command": ""
+  },
+  "Custom Sound Path": {
+    "Custom Sound Path": "自定义声音路径"
+  },
+  "Custom shell command...": {
+    "Custom shell command...": ""
+  },
+  "Display": {
+    "Display": "展示"
+  },
+  "Display Content": {
+    "Display Content": "显示内容"
+  },
+  "Execute a shell command when the timer finishes.": {
+    "Execute a shell command when the timer finishes.": "当计时器结束时执行 shell 命令。"
+  },
+  "Full path to sound file. Leave empty for default.": {
+    "Full path to sound file. Leave empty for default.": "声音文件的完整路径。默认留空。"
+  },
+  "Hibernate": {
+    "Hibernate": "休眠"
+  },
+  "Icon Only": {
+    "Icon Only": "仅图标"
+  },
+  "Left-click to Pause/Resume, Right-click to Reset (Quick Start when ready).": {
+    "Left-click to Pause/Resume, Right-click to Reset (Quick Start when ready).": "左键单击暂停/恢复，右键单击重置（准备好后快速启动）。"
+  },
+  "Lock": {
+    "Lock": ""
+  },
+  "Lock Screen": {
+    "Lock Screen": "锁屏"
+  },
+  "None": {
+    "None": "没有任何"
+  },
+  "Notification Body": {
+    "Notification Body": "通知正文"
+  },
+  "Notification Title": {
+    "Notification Title": "通知标题"
+  },
+  "Notifications": {
+    "Notifications": "通知"
+  },
+  "Open the <b>Popout</b> to select presets or enter custom minutes.": {
+    "Open the <b>Popout</b> to select presets or enter custom minutes.": ""
+  },
+  "Power Off": {
+    "Power Off": "关闭电源"
+  },
+  "Presets": {
+    "Presets": "预设"
+  },
+  "Progress Bar": {
+    "Progress Bar": "进度条"
+  },
+  "Pulse Dot ✦": {
+    "Pulse Dot ✦": "脉冲点 ✦"
+  },
+  "Quick Presets": {
+    "Quick Presets": ""
+  },
+  "Reset to Ready": {
+    "Reset to Ready": "重置为就绪状态"
+  },
+  "Right-Click Quick Start": {
+    "Right-Click Quick Start": ""
+  },
+  "Run Custom Shell Command": {
+    "Run Custom Shell Command": "运行自定义 Shell 命令"
+  },
+  "Select a preset or enter minutes": {
+    "Select a preset or enter minutes": "选择预设或输入分钟"
+  },
+  "Set": {
+    "Set": "放"
+  },
+  "Show 'When Done' Section": {
+    "Show 'When Done' Section": ""
+  },
+  "Show Desktop Notification": {
+    "Show Desktop Notification": "显示桌面通知"
+  },
+  "Show Hints": {
+    "Show Hints": "显示提示"
+  },
+  "Show Icon": {
+    "Show Icon": "显示图标"
+  },
+  "Show Ready Placeholder": {
+    "Show Ready Placeholder": "显示就绪占位符"
+  },
+  "Show placeholder digits/text when the timer is in the ready state.": {
+    "Show placeholder digits/text when the timer is in the ready state.": "当计时器处于就绪状态时显示占位符数字/文本。"
+  },
+  "Shutdown": {
+    "Shutdown": ""
+  },
+  "Sleep": {
+    "Sleep": ""
+  },
+  "Sound": {
+    "Sound": "声音"
+  },
+  "Stay at Finished": {
+    "Stay at Finished": "停留在完成状态"
+  },
+  "Suspend": {
+    "Suspend": "暂停"
+  },
+  "The duration in minutes to start when right-clicking the icon in Ready state.": {
+    "The duration in minutes to start when right-clicking the icon in Ready state.": "右键单击“就绪”状态的图标时开始的持续时间（以分钟为单位）。"
+  },
+  "Timeout!": {
+    "Timeout!": "暂停！"
+  },
+  "Timer": {
+    "Timer": "计时器"
+  },
+  "Toggle Do Not Disturb mode when the timer is active.": {
+    "Toggle Do Not Disturb mode when the timer is active.": ""
+  },
+  "Trigger System Action": {
+    "Trigger System Action": "触发系统动作"
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use System Notification Sound": {
+    "Use System Notification Sound": "使用系统通知声音"
+  },
+  "Use system's critical notification sound if no path is set.": {
+    "Use system's critical notification sound if no path is set.": "如果未设置路径，则使用系统的关键通知声音。"
+  },
+  "When Done": {
+    "When Done": "完成后"
+  },
+  "When Finished": {
+    "When Finished": "完成后"
+  }
+}

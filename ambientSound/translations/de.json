@@ -1,0 +1,257 @@
+{
+  "%1 active sounds: %2": {
+    "%1 active sounds: %2": ""
+  },
+  "%1m": {
+    "%1m": ""
+  },
+  "%1m left": {
+    "%1m left": ""
+  },
+  "1 hour": {
+    "1 hour": "1 Stunde"
+  },
+  "1.5 hours": {
+    "1.5 hours": "1,5 Stunden"
+  },
+  "15 minutes": {
+    "15 minutes": "15 Minuten"
+  },
+  "2 hours": {
+    "2 hours": "2 Stunden"
+  },
+  "30 minutes": {
+    "30 minutes": "30 Minuten"
+  },
+  "45 minutes": {
+    "45 minutes": "45 Minuten"
+  },
+  "<b>Left-click</b> the pill to open the sound selector.": {
+    "<b>Left-click</b> the pill to open the sound selector.": ""
+  },
+  "<b>Middle-click</b> the pill to toggle your chosen sound preset.": {
+    "<b>Middle-click</b> the pill to toggle your chosen sound preset.": ""
+  },
+  "<b>Right-click</b> the pill to toggle mute.": {
+    "<b>Right-click</b> the pill to toggle mute.": ""
+  },
+  "A preset named \"%1\" already exists.": {
+    "A preset named \"%1\" already exists.": ""
+  },
+  "Add Custom Sound": {
+    "Add Custom Sound": ""
+  },
+  "Added custom sound!": {
+    "Added custom sound!": ""
+  },
+  "Ambient Sounds": {
+    "Ambient Sounds": ""
+  },
+  "Audio": {
+    "Audio": "Audio"
+  },
+  "Auto-play Preset": {
+    "Auto-play Preset": ""
+  },
+  "Auto-start Mode": {
+    "Auto-start Mode": ""
+  },
+  "Behavior": {
+    "Behavior": "Verhalten"
+  },
+  "Cancel": {
+    "Cancel": "Stornieren"
+  },
+  "Choose a preset or tap individual sounds to start": {
+    "Choose a preset or tap individual sounds to start": ""
+  },
+  "Confirm": {
+    "Confirm": ""
+  },
+  "Confirm Rename": {
+    "Confirm Rename": ""
+  },
+  "Credits": {
+    "Credits": ""
+  },
+  "Custom Sounds": {
+    "Custom Sounds": ""
+  },
+  "Customize Sound Mix": {
+    "Customize Sound Mix": ""
+  },
+  "Default Duration": {
+    "Default Duration": "Standarddauer"
+  },
+  "Default Volume": {
+    "Default Volume": "Standardlautstärke"
+  },
+  "Delete Preset": {
+    "Delete Preset": ""
+  },
+  "Delete Selected Preset": {
+    "Delete Selected Preset": ""
+  },
+  "Enable Sleep Timer": {
+    "Enable Sleep Timer": "Aktivieren Sie den Sleep-Timer"
+  },
+  "Individual Sounds": {
+    "Individual Sounds": ""
+  },
+  "Initial volume when starting.": {
+    "Initial volume when starting.": "Anfangslautstärke beim Start."
+  },
+  "Lock": {
+    "Lock": ""
+  },
+  "Master volume is muted": {
+    "Master volume is muted": ""
+  },
+  "Middle-click Preset": {
+    "Middle-click Preset": ""
+  },
+  "Mute": {
+    "Mute": ""
+  },
+  "Next Page": {
+    "Next Page": ""
+  },
+  "No preset selected to overwrite.": {
+    "No preset selected to overwrite.": ""
+  },
+  "None": {
+    "None": ""
+  },
+  "Overwrite Selected Preset": {
+    "Overwrite Selected Preset": ""
+  },
+  "PAUSED": {
+    "PAUSED": ""
+  },
+  "PLAYING": {
+    "PLAYING": ""
+  },
+  "Pause": {
+    "Pause": ""
+  },
+  "Play": {
+    "Play": ""
+  },
+  "Play some sounds first to save as preset!": {
+    "Play some sounds first to save as preset!": ""
+  },
+  "Power": {
+    "Power": ""
+  },
+  "Preset": {
+    "Preset": ""
+  },
+  "Preset deleted: %1": {
+    "Preset deleted: %1": ""
+  },
+  "Preset overwritten: %1": {
+    "Preset overwritten: %1": ""
+  },
+  "Preset renamed to %1": {
+    "Preset renamed to %1": ""
+  },
+  "Preset saved: %1": {
+    "Preset saved: %1": ""
+  },
+  "Previous Page": {
+    "Previous Page": ""
+  },
+  "Remaining:": {
+    "Remaining:": ""
+  },
+  "Rename Preset": {
+    "Rename Preset": ""
+  },
+  "Rename Selected Preset": {
+    "Rename Selected Preset": ""
+  },
+  "Resume": {
+    "Resume": ""
+  },
+  "Save Preset": {
+    "Save Preset": ""
+  },
+  "Save as New Preset": {
+    "Save as New Preset": ""
+  },
+  "Saved %1": {
+    "Saved %1": ""
+  },
+  "Select Audio File": {
+    "Select Audio File": ""
+  },
+  "Select Mode": {
+    "Select Mode": ""
+  },
+  "Select preset to play automatically when you log in.": {
+    "Select preset to play automatically when you log in.": ""
+  },
+  "Select preset…": {
+    "Select preset…": ""
+  },
+  "Set Sleep Timer (30m)": {
+    "Set Sleep Timer (30m)": ""
+  },
+  "Set the <b>Sleep Timer</b> in the popout to turn off sounds after a delay.": {
+    "Set the <b>Sleep Timer</b> in the popout to turn off sounds after a delay.": ""
+  },
+  "Show Hints": {
+    "Show Hints": "Hinweise anzeigen"
+  },
+  "Show Visual Scene": {
+    "Show Visual Scene": ""
+  },
+  "Sleep Timer": {
+    "Sleep Timer": "Sleep-Timer"
+  },
+  "Sleep timer:": {
+    "Sleep timer:": ""
+  },
+  "Sound already exists.": {
+    "Sound already exists.": ""
+  },
+  "Sound assets and audio player inspiration.": {
+    "Sound assets and audio player inspiration.": ""
+  },
+  "Sound assets and inspiration.": {
+    "Sound assets and inspiration.": ""
+  },
+  "Sound preset to play/toggle when middle-clicking the bar icon.": {
+    "Sound preset to play/toggle when middle-clicking the bar icon.": ""
+  },
+  "Stop": {
+    "Stop": ""
+  },
+  "Stop audio automatically after set duration.": {
+    "Stop audio automatically after set duration.": "Stoppen Sie den Ton automatisch nach der eingestellten Dauer."
+  },
+  "Suspend": {
+    "Suspend": ""
+  },
+  "UI redesign concept and aesthetics.": {
+    "UI redesign concept and aesthetics.": ""
+  },
+  "Unmute": {
+    "Unmute": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Visible Sounds": {
+    "Visible Sounds": ""
+  },
+  "When done:": {
+    "When done:": ""
+  },
+  "You can play <b>multiple sounds</b> simultaneously to create your own atmosphere.": {
+    "You can play <b>multiple sounds</b> simultaneously to create your own atmosphere.": ""
+  },
+  "minutes left": {
+    "minutes left": ""
+  }
+}

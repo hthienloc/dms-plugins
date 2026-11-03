@@ -634,7 +634,7 @@ PluginComponent {
                         anchors.horizontalCenter: parent.horizontalCenter
 
                         StyledText {
-                            text: I18n.tr("VPN: ") + vpnInterfaceName
+                            text: I18n.trFor("ipIndicator", "VPN: ") + vpnInterfaceName
                             color: Theme.success
                             font.pixelSize: Theme.fontSizeMedium
                         }
@@ -661,7 +661,7 @@ PluginComponent {
                             spacing: Theme.spacingM
 
                             StyledText {
-                                text: I18n.tr("Public Connection")
+                                text: I18n.trFor("ipIndicator", "Public Connection")
                                 font.pixelSize: Theme.fontSizeSmall
                                 font.bold: true
                                 color: Theme.primary
@@ -673,7 +673,7 @@ PluginComponent {
                                 visible: root.showIPv4
 
                                 StyledText {
-                                    text: I18n.tr("IPv4")
+                                    text: I18n.trFor("ipIndicator", "IPv4")
                                     font.pixelSize: Theme.fontSizeMedium
                                     color: Theme.surfaceVariantText
                                     width: mainContent.labelWidth
@@ -701,11 +701,11 @@ PluginComponent {
                                         iconColor: Theme.primary
                                         buttonSize: Theme.iconSize
                                         anchors.verticalCenter: parent.verticalCenter
-                                        tooltipText: I18n.tr("Copy IPv4")
+                                        tooltipText: I18n.trFor("ipIndicator", "Copy IPv4")
                                         onClicked: {
                                             Proc.runCommand("copy-ipv4", ["dms", "cl", "copy", publicIPv4], function() {
                                                 if (typeof ToastService !== "undefined" && ToastService)
-                                                    ToastService.showInfo(I18n.tr("Copied to clipboard"));
+                                                    ToastService.showInfo(I18n.trFor("ipIndicator", "Copied to clipboard"));
                                             });
                                         }
                                     }
@@ -728,7 +728,7 @@ PluginComponent {
                                 visible: root.showIPv6
 
                                 StyledText {
-                                    text: I18n.tr("IPv6")
+                                    text: I18n.trFor("ipIndicator", "IPv6")
                                     font.pixelSize: Theme.fontSizeMedium
                                     color: Theme.surfaceVariantText
                                     width: mainContent.labelWidth
@@ -756,11 +756,11 @@ PluginComponent {
                                         iconColor: Theme.primary
                                         buttonSize: Theme.iconSize
                                         anchors.verticalCenter: parent.verticalCenter
-                                        tooltipText: I18n.tr("Copy IPv6")
+                                        tooltipText: I18n.trFor("ipIndicator", "Copy IPv6")
                                         onClicked: {
                                             Proc.runCommand("copy-ipv6", ["dms", "cl", "copy", publicIPv6], function() {
                                                 if (typeof ToastService !== "undefined" && ToastService)
-                                                    ToastService.showInfo(I18n.tr("Copied to clipboard"));
+                                                    ToastService.showInfo(I18n.trFor("ipIndicator", "Copied to clipboard"));
                                             });
                                         }
                                     }
@@ -783,7 +783,7 @@ PluginComponent {
                                 visible: root.showISP
 
                                 StyledText {
-                                    text: I18n.tr("ISP")
+                                    text: I18n.trFor("ipIndicator", "ISP")
                                     font.pixelSize: Theme.fontSizeMedium
                                     color: Theme.surfaceVariantText
                                     width: mainContent.labelWidth
@@ -805,7 +805,7 @@ PluginComponent {
                                 visible: root.showLocation
 
                                 StyledText {
-                                    text: I18n.tr("Location")
+                                    text: I18n.trFor("ipIndicator", "Location")
                                     font.pixelSize: Theme.fontSizeMedium
                                     color: Theme.surfaceVariantText
                                     width: mainContent.labelWidth
@@ -845,7 +845,7 @@ PluginComponent {
                             spacing: Theme.spacingM
 
                             StyledText {
-                                text: I18n.tr("Local Network")
+                                text: I18n.trFor("ipIndicator", "Local Network")
                                 font.pixelSize: Theme.fontSizeSmall
                                 font.bold: true
                                 color: Theme.primary
@@ -857,7 +857,7 @@ PluginComponent {
                                 visible: root.showLocalIP
 
                                 StyledText {
-                                    text: I18n.tr("Local IP")
+                                    text: I18n.trFor("ipIndicator", "Local IP")
                                     font.pixelSize: Theme.fontSizeMedium
                                     color: Theme.surfaceVariantText
                                     width: mainContent.labelWidth
@@ -879,7 +879,7 @@ PluginComponent {
                                 visible: root.showLocalGateway
 
                                 StyledText {
-                                    text: I18n.tr("Gateway")
+                                    text: I18n.trFor("ipIndicator", "Gateway")
                                     font.pixelSize: Theme.fontSizeMedium
                                     color: Theme.surfaceVariantText
                                     width: mainContent.labelWidth
@@ -901,7 +901,7 @@ PluginComponent {
                                 visible: root.showLocalInterface
 
                                 StyledText {
-                                    text: I18n.tr("Interface")
+                                    text: I18n.trFor("ipIndicator", "Interface")
                                     font.pixelSize: Theme.fontSizeMedium
                                     color: Theme.surfaceVariantText
                                     width: mainContent.labelWidth
@@ -923,7 +923,7 @@ PluginComponent {
                                 visible: root.showLatency
 
                                 StyledText {
-                                    text: I18n.tr("Latency")
+                                    text: I18n.trFor("ipIndicator", "Latency")
                                     font.pixelSize: Theme.fontSizeMedium
                                     color: Theme.surfaceVariantText
                                     width: mainContent.labelWidth
@@ -949,12 +949,12 @@ PluginComponent {
 
                         HintItem {
                             icon: "mouse"
-                            text: I18n.tr("Right-click the bar icon to quickly refresh network status")
+                            text: I18n.trFor("ipIndicator", "Right-click the bar icon to quickly refresh network status")
                         }
 
                         HintItem {
                             icon: "visibility_off"
-                            text: I18n.tr("Middle-click the bar icon or use the eye button to toggle Privacy Mode")
+                            text: I18n.trFor("ipIndicator", "Middle-click the bar icon or use the eye button to toggle Privacy Mode")
                         }
 
                     }
@@ -973,7 +973,7 @@ PluginComponent {
                             iconColor: Theme.surfaceText
                             buttonSize: Theme.buttonHeightXS
                             anchors.verticalCenter: parent.verticalCenter
-                            tooltipText: privacyMode ? I18n.tr("Disable Privacy Mode") : I18n.tr("Enable Privacy Mode")
+                            tooltipText: privacyMode ? I18n.trFor("ipIndicator", "Disable Privacy Mode") : I18n.trFor("ipIndicator", "Enable Privacy Mode")
                             onClicked: togglePrivacy()
                         }
 
@@ -984,7 +984,7 @@ PluginComponent {
                             iconColor: Theme.surfaceText
                             buttonSize: Theme.buttonHeightXS
                             anchors.verticalCenter: parent.verticalCenter
-                            tooltipText: pillShowLocal ? I18n.tr("Show Public IP in Bar") : I18n.tr("Show Local IP in Bar")
+                            tooltipText: pillShowLocal ? I18n.trFor("ipIndicator", "Show Public IP in Bar") : I18n.trFor("ipIndicator", "Show Local IP in Bar")
                             onClicked: root.setPillSource(!pillShowLocal)
                         }
 
@@ -995,7 +995,7 @@ PluginComponent {
                             iconColor: Theme.surfaceText
                             buttonSize: Theme.buttonHeightXS
                             anchors.verticalCenter: parent.verticalCenter
-                            tooltipText: I18n.tr("Refresh Network Info")
+                            tooltipText: I18n.trFor("ipIndicator", "Refresh Network Info")
                             onClicked: {
                                 checkVPN();
                                 fetchLocalDetails();

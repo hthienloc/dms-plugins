@@ -1,0 +1,170 @@
+{
+  "<b>Left-click</b> the pill to open the IP details popout.": {
+    "<b>Left-click</b> the pill to open the IP details popout.": ""
+  },
+  "<b>Middle-click</b> the pill to toggle privacy mode.": {
+    "<b>Middle-click</b> the pill to toggle privacy mode.": ""
+  },
+  "<b>Right-click</b> the pill to manually force a refresh.": {
+    "<b>Right-click</b> the pill to manually force a refresh.": ""
+  },
+  "Bar Display": {
+    "Bar Display": "Balkenanzeige"
+  },
+  "Behavior": {
+    "Behavior": "Verhalten"
+  },
+  "City": {
+    "City": "Stadt"
+  },
+  "City + IP": {
+    "City + IP": "Stadt + IP"
+  },
+  "Click any <b>IP address</b> in the popout to copy it to the clipboard.": {
+    "Click any <b>IP address</b> in the popout to copy it to the clipboard.": ""
+  },
+  "Click the <b>eye icon</b> in the popout to toggle privacy mode.": {
+    "Click the <b>eye icon</b> in the popout to toggle privacy mode.": ""
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": ""
+  },
+  "Copy IPv4": {
+    "Copy IPv4": ""
+  },
+  "Copy IPv6": {
+    "Copy IPv6": ""
+  },
+  "Country": {
+    "Country": "Land"
+  },
+  "Country + City": {
+    "Country + City": "Land + Stadt"
+  },
+  "Country + IP": {
+    "Country + IP": "Land + IP"
+  },
+  "Default to Privacy Mode": {
+    "Default to Privacy Mode": "Standardmäßig ist der Datenschutzmodus aktiviert"
+  },
+  "Disable Privacy Mode": {
+    "Disable Privacy Mode": ""
+  },
+  "Display Content": {
+    "Display Content": ""
+  },
+  "Enable Privacy Mode": {
+    "Enable Privacy Mode": ""
+  },
+  "Gateway": {
+    "Gateway": "Tor"
+  },
+  "How often to check for IP changes.": {
+    "How often to check for IP changes.": "Wie oft soll nach IP-Änderungen gesucht werden?"
+  },
+  "IP Address": {
+    "IP Address": "IP-Adresse"
+  },
+  "IP Change Notifications": {
+    "IP Change Notifications": ""
+  },
+  "IPv4": {
+    "IPv4": ""
+  },
+  "IPv6": {
+    "IPv6": ""
+  },
+  "ISP": {
+    "ISP": "ISP"
+  },
+  "Icon Only": {
+    "Icon Only": "Nur Symbol"
+  },
+  "Interface": {
+    "Interface": "Schnittstelle"
+  },
+  "Latency": {
+    "Latency": "Latenz"
+  },
+  "Local IP": {
+    "Local IP": "Lokale IP"
+  },
+  "Local Network": {
+    "Local Network": "Lokales Netzwerk"
+  },
+  "Location": {
+    "Location": "Standort"
+  },
+  "Middle-click the bar icon or use the eye button to toggle Privacy Mode": {
+    "Middle-click the bar icon or use the eye button to toggle Privacy Mode": ""
+  },
+  "Popout Content": {
+    "Popout Content": ""
+  },
+  "Public Connection": {
+    "Public Connection": "Öffentliche Verbindung"
+  },
+  "Refresh Interval": {
+    "Refresh Interval": "Aktualisierungsintervall"
+  },
+  "Refresh Network Info": {
+    "Refresh Network Info": ""
+  },
+  "Right-click the bar icon to quickly refresh network status": {
+    "Right-click the bar icon to quickly refresh network status": "Klicken Sie mit der rechten Maustaste auf das Balkensymbol, um den Netzwerkstatus schnell zu aktualisieren"
+  },
+  "Show Hints": {
+    "Show Hints": "Hinweise anzeigen"
+  },
+  "Show IPv4": {
+    "Show IPv4": ""
+  },
+  "Show IPv6": {
+    "Show IPv6": ""
+  },
+  "Show ISP": {
+    "Show ISP": "ISP anzeigen"
+  },
+  "Show Latency": {
+    "Show Latency": "Latenz anzeigen"
+  },
+  "Show Local Gateway": {
+    "Show Local Gateway": "Lokales Gateway anzeigen"
+  },
+  "Show Local IP": {
+    "Show Local IP": "Lokale IP anzeigen"
+  },
+  "Show Local IP in Bar": {
+    "Show Local IP in Bar": ""
+  },
+  "Show Local Interface": {
+    "Show Local Interface": "Lokale Schnittstelle anzeigen"
+  },
+  "Show Location": {
+    "Show Location": "Standort anzeigen"
+  },
+  "Show Public IP in Bar": {
+    "Show Public IP in Bar": ""
+  },
+  "Show a desktop notification when your public IP address or ISP changes.": {
+    "Show a desktop notification when your public IP address or ISP changes.": "Zeigen Sie eine Desktop-Benachrichtigung an, wenn sich Ihre öffentliche IP-Adresse oder Ihr ISP ändert."
+  },
+  "Show the country's flag on the bar pill instead of the default globe icon.": {
+    "Show the country's flag on the bar pill instead of the default globe icon.": "Zeigen Sie die Flagge des Landes auf der Barpille anstelle des Standard-Globussymbols an."
+  },
+  "Start the plugin with public IP details hidden by default.": {
+    "Start the plugin with public IP details hidden by default.": "Starten Sie das Plugin mit standardmäßig ausgeblendeten öffentlichen IP-Details."
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use Country Flag as Icon": {
+    "Use Country Flag as Icon": "Verwenden Sie die Landesflagge als Symbol"
+  },
+  "VPN:": {
+    "VPN:": ""
+  },
+  "min": {
+    "min": "min"
+  }
+}

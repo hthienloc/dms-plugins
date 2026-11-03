@@ -1,0 +1,164 @@
+{
+  "4-7-8 Breathing": {
+    "4-7-8 Breathing": "4-7-8 Дыхание"
+  },
+  "<b>Left-click</b> the pill to start/pause the breathing session.": {
+    "<b>Left-click</b> the pill to start/pause the breathing session.": ""
+  },
+  "<b>Right-click</b> the pill to stop and reset the session.": {
+    "<b>Right-click</b> the pill to stop and reset the session.": ""
+  },
+  "Absolute path to custom audio.": {
+    "Absolute path to custom audio.": ""
+  },
+  "All files": {
+    "All files": ""
+  },
+  "Alternate Nostril": {
+    "Alternate Nostril": "Альтернативная ноздря"
+  },
+  "Ambient Meditation": {
+    "Ambient Meditation": ""
+  },
+  "Animation Style": {
+    "Animation Style": "Стиль анимации"
+  },
+  "Appearance": {
+    "Appearance": "Появление"
+  },
+  "Audio files": {
+    "Audio files": ""
+  },
+  "Auto-start Exercise": {
+    "Auto-start Exercise": "Автозапуск упражнения"
+  },
+  "Behavior": {
+    "Behavior": "Поведение"
+  },
+  "Box Breathing": {
+    "Box Breathing": "Коробочное дыхание"
+  },
+  "Breathe In": {
+    "Breathe In": "Вдохните"
+  },
+  "Breathe Out": {
+    "Breathe Out": "Выдохните"
+  },
+  "Classic Card": {
+    "Classic Card": "Классическая карта"
+  },
+  "Custom Sound File": {
+    "Custom Sound File": "Пользовательский звуковой файл"
+  },
+  "Deep Breathing": {
+    "Deep Breathing": "Глубокое дыхание"
+  },
+  "Default Duration": {
+    "Default Duration": "Продолжительность по умолчанию"
+  },
+  "Default Exercise": {
+    "Default Exercise": "Упражнение по умолчанию"
+  },
+  "Double-click an exercise tile to start it immediately.": {
+    "Double-click an exercise tile to start it immediately.": "Дважды щелкните плитку упражнения, чтобы начать его немедленно."
+  },
+  "Equal Breathing": {
+    "Equal Breathing": "Равное дыхание"
+  },
+  "Expanding Circle": {
+    "Expanding Circle": "Расширяющийся круг"
+  },
+  "Feedback": {
+    "Feedback": "Обратная связь"
+  },
+  "Flowing Wave": {
+    "Flowing Wave": "Текущая волна"
+  },
+  "Follow the <b>visual guide</b> and <b>sound cues</b> to sync your breath.": {
+    "Follow the <b>visual guide</b> and <b>sound cues</b> to sync your breath.": ""
+  },
+  "General": {
+    "General": "Общий"
+  },
+  "Haptic Feedback": {
+    "Haptic Feedback": "Тактильная обратная связь"
+  },
+  "Hold": {
+    "Hold": "Держать"
+  },
+  "Mute": {
+    "Mute": ""
+  },
+  "Open the <b>Popout</b> to choose different breathing techniques.": {
+    "Open the <b>Popout</b> to choose different breathing techniques.": ""
+  },
+  "Pause": {
+    "Pause": "Пауза"
+  },
+  "Paused": {
+    "Paused": "Приостановлено"
+  },
+  "Play falling pitch during exhale (default is inhale only).": {
+    "Play falling pitch during exhale (default is inhale only).": ""
+  },
+  "Press 'Space' to Pause/Resume, 'R' to Reset.": {
+    "Press 'Space' to Pause/Resume, 'R' to Reset.": "Нажмите «Пробел», чтобы приостановить/возобновить, «R» для сброса."
+  },
+  "Pulsating Glow": {
+    "Pulsating Glow": "Пульсирующее свечение"
+  },
+  "Resonance": {
+    "Resonance": "Резонанс"
+  },
+  "Resume": {
+    "Resume": "Резюме"
+  },
+  "Right-click bar icon to quickly toggle Start/Pause.": {
+    "Right-click bar icon to quickly toggle Start/Pause.": "Щелкните правой кнопкой мыши значок панели, чтобы быстро переключить «Пуск/Пауза»."
+  },
+  "Session length for auto-started exercises.": {
+    "Session length for auto-started exercises.": ""
+  },
+  "Show Hints": {
+    "Show Hints": "Показать подсказки"
+  },
+  "Singing Bowl Chime": {
+    "Singing Bowl Chime": ""
+  },
+  "Sound Cue Type": {
+    "Sound Cue Type": "Тип звукового сигнала"
+  },
+  "Sound Cues": {
+    "Sound Cues": "Звуковые сигналы"
+  },
+  "Sound Volume": {
+    "Sound Volume": ""
+  },
+  "Start": {
+    "Start": "Начинать"
+  },
+  "Start exercise automatically on login.": {
+    "Start exercise automatically on login.": "Запускайте упражнения автоматически при входе в систему."
+  },
+  "Stop": {
+    "Stop": "Останавливаться"
+  },
+  "Stop Test": {
+    "Stop Test": "Остановить тест"
+  },
+  "Test Sound": {
+    "Test Sound": "Тестовый звук"
+  },
+  "Two-Tone Model": {
+    "Two-Tone Model": "Двухцветная модель"
+  },
+  "Unmute": {
+    "Unmute": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "min": {
+    "min": ""
+  }
+}

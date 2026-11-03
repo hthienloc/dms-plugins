@@ -431,9 +431,6 @@
   "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "رموز التنسيق: {user} (اسم المستخدم)، \\n (سطر جديد)، %Y (السنة)، %y (السنة برقمين)، %m (الشهر)، %d (اليوم)، %H (الساعة)، %M (الدقيقة)، %S (الثانية)"
   },
-  "Format: %1 (%2 FPS)": {
-    "Format: %1 (%2 FPS)": "التنسيق: %1 (%2 إطار في الثانية)"
-  },
   "Framerate": {
     "Framerate": "معدل الإطارات"
   },
@@ -472,12 +469,6 @@
   },
   "Hide Annotations": {
     "Hide Annotations": "إخفاء التعليقات التوضيحية"
-  },
-  "Hide Control Center": {
-    "Hide Control Center": "إخفاء مركز التحكم"
-  },
-  "Hide Control Center by Default": {
-    "Hide Control Center by Default": "إخفاء مركز التحكم افتراضياً"
   },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": "إخفاء مركز التحكم عند الالتقاط"
@@ -529,9 +520,6 @@
   },
   "Initial Width": {
     "Initial Width": "العرض الأولي"
-  },
-  "Initial state for the Control Center toggle.": {
-    "Initial state for the Control Center toggle.": "الحالة الأولية لتبديل مركز التحكم."
   },
   "Inline": {
     "Inline": "مضمن"
@@ -706,9 +694,6 @@
   },
   "Open Image": {
     "Open Image": "فتح الصورة"
-  },
-  "Open folder": {
-    "Open folder": "فتح المجلد"
   },
   "Outline Variant": {
     "Outline Variant": "تباين المخطط التفصيلي"
@@ -1004,17 +989,11 @@
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
     "Select one or more installed Tesseract language packs for OCR text recognition.": ""
   },
-  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "حدد خلفية تسجيل الشاشة. يحاول الوضع التلقائي استخدام وحدة معالجة الرسومات (GPU) أولاً، ثم يعود إلى وحدة المعالجة المركزية (CPU) (%1)."
-  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "حدد نظام تسجيل الشاشة. يحاول الوضع التلقائي استخدام وحدة معالجة الرسومات أولاً ثم ينتقل إلى وحدة المعالجة المركزية (%1). ملاحظة: %1 لا يدعم الإيقاف المؤقت."
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "الأداة / الإجراء المحدد"
-  },
-  "Settings": {
-    "Settings": "الإعدادات"
   },
   "Shadow Strength": {
     "Shadow Strength": "قوة الظل الافتراضية"
@@ -1027,9 +1006,6 @@
   },
   "Show Annotations": {
     "Show Annotations": "إظهار التعليقات التوضيحية"
-  },
-  "Show Control Center": {
-    "Show Control Center": "إظهار مركز التحكم"
   },
   "Show Keyboard Shortcut Hints": {
     "Show Keyboard Shortcut Hints": "إظهار تلميحات اختصارات لوحة المفاتيح"

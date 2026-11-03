@@ -36,7 +36,7 @@ PluginComponent {
             if (root.packOptions[i].value === cur)
                 return root.packOptions[i].label;
         }
-        return root._packInit && root.packOptions.length > 0 ? root.packOptions[0].label : I18n.tr("Default Pack");
+        return root._packInit && root.packOptions.length > 0 ? root.packOptions[0].label : I18n.trFor("typingSounds", "Default Pack");
     }
 
     readonly property string currentDeviceLabel: {
@@ -45,7 +45,7 @@ PluginComponent {
             if (root.deviceOptions[i].value === cur)
                 return root.deviceOptions[i].label;
         }
-        return I18n.tr("All Keyboards (Auto)");
+        return I18n.trFor("typingSounds", "All Keyboards (Auto)");
     }
 
     readonly property string volumeIcon: {
@@ -93,7 +93,7 @@ print(json.dumps(res))
 
     function scanDevices() {
         InputDeviceScanner.scanKeyboards("typingSounds.scanDevices", (devices) => {
-            var options = [{ label: I18n.tr("All Keyboards (Auto)"), value: "all" }];
+            var options = [{ label: I18n.trFor("typingSounds", "All Keyboards (Auto)"), value: "all" }];
             for (var i = 0; i < devices.length; i++) {
                 options.push(devices[i]);
             }
@@ -108,8 +108,8 @@ print(json.dumps(res))
     }
 
     ccWidgetIcon: "volume_up"
-    ccWidgetPrimaryText: I18n.tr("Typing Sounds")
-    ccWidgetSecondaryText: daemon && daemon.soundEnabled ? I18n.tr("Active") : I18n.tr("Disabled")
+    ccWidgetPrimaryText: I18n.trFor("typingSounds", "Typing Sounds")
+    ccWidgetSecondaryText: daemon && daemon.soundEnabled ? I18n.trFor("typingSounds", "Active") : I18n.trFor("typingSounds", "Disabled")
     ccWidgetIsActive: daemon ? daemon.soundEnabled : false
     ccDetailHeight: {
         const hasWarning = !!(root.daemon && (root.daemon.inputToolMissing || root.daemon.notInInputGroup));
@@ -162,8 +162,8 @@ print(json.dumps(res))
                         StyledText {
                             width: parent.width - Theme.iconSizeSmall - Theme.spacingM
                             text: root.daemon?.notInInputGroup
-                                ? I18n.tr("User not in 'input' group (run: sudo usermod -aG input $USER)")
-                                : I18n.tr("Missing tool: %1").arg(root.daemon?.requiredTool ?? "libinput")
+                                ? I18n.trFor("typingSounds", "User not in 'input' group (run: sudo usermod -aG input $USER)")
+                                : I18n.trFor("typingSounds", "Missing tool: %1").arg(root.daemon?.requiredTool ?? "libinput")
                             font.pixelSize: Theme.fontSizeSmall
                             color: Theme.warning
                             wrapMode: Text.WordWrap
@@ -207,7 +207,7 @@ print(json.dumps(res))
                                 }
 
                                 StyledText {
-                                    text: I18n.tr("Volume")
+                                    text: I18n.trFor("typingSounds", "Volume")
                                     font.pixelSize: Theme.fontSizeMedium
                                     font.weight: Font.Medium
                                     color: Theme.surfaceText
@@ -263,7 +263,7 @@ print(json.dumps(res))
                             height: 28
 
                             StyledText {
-                                text: I18n.tr("Sound Pack")
+                                text: I18n.trFor("typingSounds", "Sound Pack")
                                 font.pixelSize: Theme.fontSizeMedium
                                 font.weight: Font.Medium
                                 color: Theme.surfaceText
@@ -312,7 +312,7 @@ print(json.dumps(res))
                                     }
 
                                     StyledText {
-                                        text: I18n.tr("Test")
+                                        text: I18n.trFor("typingSounds", "Test")
                                         font.pixelSize: Theme.fontSizeSmall
                                         font.weight: Font.SemiBold
                                         color: (root.daemon?.soundEnabled ?? false)
@@ -372,7 +372,7 @@ print(json.dumps(res))
                         spacing: Theme.spacingS
 
                         StyledText {
-                            text: I18n.tr("Keyboard Device")
+                            text: I18n.trFor("typingSounds", "Keyboard Device")
                             font.pixelSize: Theme.fontSizeMedium
                             font.weight: Font.Medium
                             color: Theme.surfaceText
@@ -409,7 +409,7 @@ print(json.dumps(res))
                         anchors.left: parent.left
                         anchors.leftMargin: Theme.spacingM
                         anchors.verticalCenter: parent.verticalCenter
-                        text: I18n.tr("Mouse Click Sounds")
+                        text: I18n.trFor("typingSounds", "Mouse Click Sounds")
                         font.pixelSize: Theme.fontSizeMedium
                         font.weight: Font.Medium
                         color: Theme.surfaceText

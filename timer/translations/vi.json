@@ -1,0 +1,182 @@
+{
+  "1h 5m 10s": {
+    "1h 5m 10s": "1h 5t 10s"
+  },
+  "5m 10s": {
+    "5m 10s": "5 phút 10 giây"
+  },
+  "<b>Left-click</b> the pill to <b>Pause</b> or <b>Resume</b> the timer.": {
+    "<b>Left-click</b> the pill to <b>Pause</b> or <b>Resume</b> the timer.": ""
+  },
+  "<b>Right-click</b> the pill to <b>Reset</b> (or <b>Quick Start</b> if ready).": {
+    "<b>Right-click</b> the pill to <b>Reset</b> (or <b>Quick Start</b> if ready).": ""
+  },
+  "All files": {
+    "All files": ""
+  },
+  "Audio files": {
+    "Audio files": ""
+  },
+  "Automatically Do Not Disturb": {
+    "Automatically Do Not Disturb": ""
+  },
+  "Automatically perform a system action when the timer finishes.": {
+    "Automatically perform a system action when the timer finishes.": "Tự động thực hiện một hành động của hệ thống khi bộ đếm thời gian kết thúc."
+  },
+  "Behavior": {
+    "Behavior": "Hành vi"
+  },
+  "Comma-separated list of minutes for quick start buttons.": {
+    "Comma-separated list of minutes for quick start buttons.": "Danh sách phút được phân tách bằng dấu phẩy cho các nút khởi động nhanh."
+  },
+  "Custom": {
+    "Custom": ""
+  },
+  "Custom Actions": {
+    "Custom Actions": "Hành động tùy chỉnh"
+  },
+  "Custom Command": {
+    "Custom Command": ""
+  },
+  "Custom Sound Path": {
+    "Custom Sound Path": "Đường dẫn âm thanh tùy chỉnh"
+  },
+  "Custom shell command...": {
+    "Custom shell command...": ""
+  },
+  "Display": {
+    "Display": "Trưng bày"
+  },
+  "Display Content": {
+    "Display Content": "Hiển thị nội dung"
+  },
+  "Execute a shell command when the timer finishes.": {
+    "Execute a shell command when the timer finishes.": "Thực thi lệnh shell khi bộ đếm thời gian kết thúc."
+  },
+  "Full path to sound file. Leave empty for default.": {
+    "Full path to sound file. Leave empty for default.": "Đường dẫn đầy đủ đến tập tin âm thanh. Để trống theo mặc định."
+  },
+  "Hibernate": {
+    "Hibernate": "Ngủ đông"
+  },
+  "Icon Only": {
+    "Icon Only": "Chỉ biểu tượng"
+  },
+  "Left-click to Pause/Resume, Right-click to Reset (Quick Start when ready).": {
+    "Left-click to Pause/Resume, Right-click to Reset (Quick Start when ready).": "Nhấp chuột trái để Tạm dừng/Tiếp tục, Nhấp chuột phải để Đặt lại (Bắt đầu nhanh khi sẵn sàng)."
+  },
+  "Lock": {
+    "Lock": ""
+  },
+  "Lock Screen": {
+    "Lock Screen": "Màn hình khóa"
+  },
+  "None": {
+    "None": "Không có"
+  },
+  "Notification Body": {
+    "Notification Body": "Nội dung thông báo"
+  },
+  "Notification Title": {
+    "Notification Title": "Tiêu đề thông báo"
+  },
+  "Notifications": {
+    "Notifications": "Thông báo"
+  },
+  "Open the <b>Popout</b> to select presets or enter custom minutes.": {
+    "Open the <b>Popout</b> to select presets or enter custom minutes.": ""
+  },
+  "Power Off": {
+    "Power Off": "Tắt nguồn"
+  },
+  "Presets": {
+    "Presets": "cài đặt trước"
+  },
+  "Progress Bar": {
+    "Progress Bar": "Thanh tiến trình"
+  },
+  "Pulse Dot ✦": {
+    "Pulse Dot ✦": "Chấm xung ✦"
+  },
+  "Quick Presets": {
+    "Quick Presets": ""
+  },
+  "Reset to Ready": {
+    "Reset to Ready": "Đặt lại về trạng thái sẵn sàng"
+  },
+  "Right-Click Quick Start": {
+    "Right-Click Quick Start": ""
+  },
+  "Run Custom Shell Command": {
+    "Run Custom Shell Command": "Chạy lệnh Shell tùy chỉnh"
+  },
+  "Select a preset or enter minutes": {
+    "Select a preset or enter minutes": "Chọn cài đặt trước hoặc nhập phút"
+  },
+  "Set": {
+    "Set": "Bộ"
+  },
+  "Show 'When Done' Section": {
+    "Show 'When Done' Section": ""
+  },
+  "Show Desktop Notification": {
+    "Show Desktop Notification": "Hiển thị thông báo trên màn hình"
+  },
+  "Show Hints": {
+    "Show Hints": "Hiển thị gợi ý"
+  },
+  "Show Icon": {
+    "Show Icon": "Hiển thị biểu tượng"
+  },
+  "Show Ready Placeholder": {
+    "Show Ready Placeholder": "Hiển thị phần giữ chỗ sẵn sàng"
+  },
+  "Show placeholder digits/text when the timer is in the ready state.": {
+    "Show placeholder digits/text when the timer is in the ready state.": "Hiển thị chữ số/văn bản giữ chỗ khi bộ hẹn giờ ở trạng thái sẵn sàng."
+  },
+  "Shutdown": {
+    "Shutdown": ""
+  },
+  "Sleep": {
+    "Sleep": ""
+  },
+  "Sound": {
+    "Sound": "Âm thanh"
+  },
+  "Stay at Finished": {
+    "Stay at Finished": "Ở lại Đã hoàn thành"
+  },
+  "Suspend": {
+    "Suspend": ""
+  },
+  "The duration in minutes to start when right-clicking the icon in Ready state.": {
+    "The duration in minutes to start when right-clicking the icon in Ready state.": "Thời lượng tính bằng phút để bắt đầu khi nhấp chuột phải vào biểu tượng ở trạng thái Sẵn sàng."
+  },
+  "Timeout!": {
+    "Timeout!": "Hết giờ!"
+  },
+  "Timer": {
+    "Timer": "hẹn giờ"
+  },
+  "Toggle Do Not Disturb mode when the timer is active.": {
+    "Toggle Do Not Disturb mode when the timer is active.": ""
+  },
+  "Trigger System Action": {
+    "Trigger System Action": "Hành động của hệ thống kích hoạt"
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use System Notification Sound": {
+    "Use System Notification Sound": "Sử dụng âm thanh thông báo hệ thống"
+  },
+  "Use system's critical notification sound if no path is set.": {
+    "Use system's critical notification sound if no path is set.": "Sử dụng âm thanh thông báo quan trọng của hệ thống nếu không có đường dẫn nào được đặt."
+  },
+  "When Done": {
+    "When Done": "Khi hoàn tất"
+  },
+  "When Finished": {
+    "When Finished": "Khi hoàn thành"
+  }
+}

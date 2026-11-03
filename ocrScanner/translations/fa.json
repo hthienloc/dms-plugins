@@ -11,6 +11,9 @@
   "Behavior": {
     "Behavior": "رفتار"
   },
+  "Clear Image & Text": {
+    "Clear Image & Text": ""
+  },
   "Copy Text": {
     "Copy Text": "متن را کپی کنید"
   },
@@ -35,8 +38,8 @@
   "Recognition Languages": {
     "Recognition Languages": "زبان های تشخیص"
   },
-  "Right-click to scan clipboard, Middle-click to scan screenshot": {
-    "Right-click to scan clipboard, Middle-click to scan screenshot": "برای اسکن کلیپ بورد کلیک راست کنید، برای اسکن اسکرین شات، وسط کلیک کنید"
+  "Right-click pill to scan clipboard, Middle-click to take screenshot": {
+    "Right-click pill to scan clipboard, Middle-click to take screenshot": ""
   },
   "Save Text": {
     "Save Text": "ذخیره متن"
@@ -46,6 +49,9 @@
   },
   "Scanned text is automatically copied to the <b>clipboard</b>.": {
     "Scanned text is automatically copied to the <b>clipboard</b>.": "متن اسکن شده به طور خودکار در <b>بریده‌دان</b> کپی می‌شود."
+  },
+  "Screenshot": {
+    "Screenshot": ""
   },
   "Select File": {
     "Select File": "فایل را انتخاب کنید"

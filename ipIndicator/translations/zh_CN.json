@@ -1,0 +1,170 @@
+{
+  "<b>Left-click</b> the pill to open the IP details popout.": {
+    "<b>Left-click</b> the pill to open the IP details popout.": ""
+  },
+  "<b>Middle-click</b> the pill to toggle privacy mode.": {
+    "<b>Middle-click</b> the pill to toggle privacy mode.": ""
+  },
+  "<b>Right-click</b> the pill to manually force a refresh.": {
+    "<b>Right-click</b> the pill to manually force a refresh.": ""
+  },
+  "Bar Display": {
+    "Bar Display": "条形展示"
+  },
+  "Behavior": {
+    "Behavior": "行为"
+  },
+  "City": {
+    "City": "城市"
+  },
+  "City + IP": {
+    "City + IP": "城市+IP"
+  },
+  "Click any <b>IP address</b> in the popout to copy it to the clipboard.": {
+    "Click any <b>IP address</b> in the popout to copy it to the clipboard.": ""
+  },
+  "Click the <b>eye icon</b> in the popout to toggle privacy mode.": {
+    "Click the <b>eye icon</b> in the popout to toggle privacy mode.": ""
+  },
+  "Copied to clipboard": {
+    "Copied to clipboard": ""
+  },
+  "Copy IPv4": {
+    "Copy IPv4": ""
+  },
+  "Copy IPv6": {
+    "Copy IPv6": ""
+  },
+  "Country": {
+    "Country": "国家"
+  },
+  "Country + City": {
+    "Country + City": "国家+城市"
+  },
+  "Country + IP": {
+    "Country + IP": "国家+IP"
+  },
+  "Default to Privacy Mode": {
+    "Default to Privacy Mode": "默认为隐私模式"
+  },
+  "Disable Privacy Mode": {
+    "Disable Privacy Mode": ""
+  },
+  "Display Content": {
+    "Display Content": ""
+  },
+  "Enable Privacy Mode": {
+    "Enable Privacy Mode": ""
+  },
+  "Gateway": {
+    "Gateway": "网关"
+  },
+  "How often to check for IP changes.": {
+    "How often to check for IP changes.": "检查 IP 更改的频率。"
+  },
+  "IP Address": {
+    "IP Address": "IP地址"
+  },
+  "IP Change Notifications": {
+    "IP Change Notifications": ""
+  },
+  "IPv4": {
+    "IPv4": ""
+  },
+  "IPv6": {
+    "IPv6": ""
+  },
+  "ISP": {
+    "ISP": "互联网服务供应商"
+  },
+  "Icon Only": {
+    "Icon Only": "仅图标"
+  },
+  "Interface": {
+    "Interface": "界面"
+  },
+  "Latency": {
+    "Latency": "延迟"
+  },
+  "Local IP": {
+    "Local IP": "本地IP"
+  },
+  "Local Network": {
+    "Local Network": "本地网络"
+  },
+  "Location": {
+    "Location": "地点"
+  },
+  "Middle-click the bar icon or use the eye button to toggle Privacy Mode": {
+    "Middle-click the bar icon or use the eye button to toggle Privacy Mode": ""
+  },
+  "Popout Content": {
+    "Popout Content": ""
+  },
+  "Public Connection": {
+    "Public Connection": "公共连接"
+  },
+  "Refresh Interval": {
+    "Refresh Interval": "刷新间隔"
+  },
+  "Refresh Network Info": {
+    "Refresh Network Info": ""
+  },
+  "Right-click the bar icon to quickly refresh network status": {
+    "Right-click the bar icon to quickly refresh network status": "右键点击栏图标可快速刷新网络状态"
+  },
+  "Show Hints": {
+    "Show Hints": "显示提示"
+  },
+  "Show IPv4": {
+    "Show IPv4": ""
+  },
+  "Show IPv6": {
+    "Show IPv6": ""
+  },
+  "Show ISP": {
+    "Show ISP": "显示ISP"
+  },
+  "Show Latency": {
+    "Show Latency": "显示延迟"
+  },
+  "Show Local Gateway": {
+    "Show Local Gateway": "显示本地网关"
+  },
+  "Show Local IP": {
+    "Show Local IP": "显示本地IP"
+  },
+  "Show Local IP in Bar": {
+    "Show Local IP in Bar": ""
+  },
+  "Show Local Interface": {
+    "Show Local Interface": "显示本地界面"
+  },
+  "Show Location": {
+    "Show Location": "显示地点"
+  },
+  "Show Public IP in Bar": {
+    "Show Public IP in Bar": ""
+  },
+  "Show a desktop notification when your public IP address or ISP changes.": {
+    "Show a desktop notification when your public IP address or ISP changes.": "当您的公共 IP 地址或 ISP 更改时显示桌面通知。"
+  },
+  "Show the country's flag on the bar pill instead of the default globe icon.": {
+    "Show the country's flag on the bar pill instead of the default globe icon.": "在条形药丸上显示该国家的国旗，而不是默认的地球图标。"
+  },
+  "Start the plugin with public IP details hidden by default.": {
+    "Start the plugin with public IP details hidden by default.": "启动插件时默认隐藏公共 IP 详细信息。"
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use Country Flag as Icon": {
+    "Use Country Flag as Icon": "使用国旗作为图标"
+  },
+  "VPN:": {
+    "VPN:": ""
+  },
+  "min": {
+    "min": "分钟"
+  }
+}

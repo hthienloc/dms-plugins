@@ -1,0 +1,164 @@
+{
+  "%1 active groups": {
+    "%1 active groups": ""
+  },
+  "1 active group": {
+    "1 active group": ""
+  },
+  "<b>Click it again</b> to return the widgets to the desktop background layer.": {
+    "<b>Click it again</b> to return the widgets to the desktop background layer.": ""
+  },
+  "<b>Click</b> a group button on the status bar to show its widgets on top of all windows (overlay).": {
+    "<b>Click</b> a group button on the status bar to show its widgets on top of all windows (overlay).": ""
+  },
+  "Allow All": {
+    "Allow All": ""
+  },
+  "Allow clicks to pass through widgets in this group": {
+    "Allow clicks to pass through widgets in this group": ""
+  },
+  "Allow multiple groups if they don't share widgets.": {
+    "Allow multiple groups if they don't share widgets.": ""
+  },
+  "Auto-dismiss Overlay": {
+    "Auto-dismiss Overlay": ""
+  },
+  "Automatically turn off the active overlay group after this duration. Set to 0 to keep active.": {
+    "Automatically turn off the active overlay group after this duration. Set to 0 to keep active.": ""
+  },
+  "Bar Display Mode": {
+    "Bar Display Mode": ""
+  },
+  "Behavior": {
+    "Behavior": ""
+  },
+  "Block Overlap": {
+    "Block Overlap": ""
+  },
+  "Choose how widget group toggles are displayed on the status bar.": {
+    "Choose how widget group toggles are displayed on the status bar.": ""
+  },
+  "Choose how widget groups can be toggled simultaneously.": {
+    "Choose how widget groups can be toggled simultaneously.": ""
+  },
+  "Click Through": {
+    "Click Through": ""
+  },
+  "Click through": {
+    "Click through": ""
+  },
+  "Configure behavior for each widget separately instead of using group-wide settings.": {
+    "Configure behavior for each widget separately instead of using group-wide settings.": ""
+  },
+  "Delete": {
+    "Delete": ""
+  },
+  "Depending on the Toggle Mode setting, you can activate one or multiple groups concurrently.": {
+    "Depending on the Toggle Mode setting, you can activate one or multiple groups concurrently.": ""
+  },
+  "Deselect All": {
+    "Deselect All": ""
+  },
+  "Desktop Widgets": {
+    "Desktop Widgets": ""
+  },
+  "Group": {
+    "Group": ""
+  },
+  "Group Behavior": {
+    "Group Behavior": ""
+  },
+  "Group Name": {
+    "Group Name": ""
+  },
+  "Hide inactive": {
+    "Hide inactive": ""
+  },
+  "Hide the widgets in this group entirely when the group is inactive.": {
+    "Hide the widgets in this group entirely when the group is inactive.": ""
+  },
+  "Hide when inactive": {
+    "Hide when inactive": ""
+  },
+  "IPC Command": {
+    "IPC Command": ""
+  },
+  "Icon": {
+    "Icon": ""
+  },
+  "Individual Widget Behavior": {
+    "Individual Widget Behavior": ""
+  },
+  "Minimal Popout": {
+    "Minimal Popout": ""
+  },
+  "No active groups": {
+    "No active groups": ""
+  },
+  "No desktop widgets found.": {
+    "No desktop widgets found.": ""
+  },
+  "No restrictions, multiple groups can be active.": {
+    "No restrictions, multiple groups can be active.": ""
+  },
+  "Off": {
+    "Off": ""
+  },
+  "Only one group can be active at a time.": {
+    "Only one group can be active at a time.": ""
+  },
+  "Overlay": {
+    "Overlay": ""
+  },
+  "Overview": {
+    "Overview": ""
+  },
+  "Overview Only": {
+    "Overview Only": ""
+  },
+  "Select All": {
+    "Select All": ""
+  },
+  "Select Widgets": {
+    "Select Widgets": ""
+  },
+  "Show All Groups": {
+    "Show All Groups": ""
+  },
+  "Show on Overlay": {
+    "Show on Overlay": ""
+  },
+  "Show on Overview": {
+    "Show on Overview": ""
+  },
+  "Show on Overview Only": {
+    "Show on Overview Only": ""
+  },
+  "Show widgets in this group during workspace overview": {
+    "Show widgets in this group during workspace overview": ""
+  },
+  "Show widgets in this group in the desktop overlay layer": {
+    "Show widgets in this group in the desktop overlay layer": ""
+  },
+  "Show widgets in this group only during workspace overview": {
+    "Show widgets in this group only during workspace overview": ""
+  },
+  "Single Active Group": {
+    "Single Active Group": ""
+  },
+  "Toggle Mode": {
+    "Toggle Mode": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Widget Groups": {
+    "Widget Groups": ""
+  },
+  "Widgets": {
+    "Widgets": ""
+  },
+  "e.g. Work Widgets": {
+    "e.g. Work Widgets": ""
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "Active": {
+    "Active": ""
+  },
+  "All Keyboards (Auto)": {
+    "All Keyboards (Auto)": ""
+  },
+  "Bundled mechanical keyboard sound packs.": {
+    "Bundled mechanical keyboard sound packs.": ""
+  },
+  "Credits": {
+    "Credits": ""
+  },
+  "Default Pack": {
+    "Default Pack": ""
+  },
+  "Device & Sounds": {
+    "Device & Sounds": ""
+  },
+  "Disable typing sounds": {
+    "Disable typing sounds": ""
+  },
+  "Disabled": {
+    "Disabled": ""
+  },
+  "Enable Typing Sounds": {
+    "Enable Typing Sounds": ""
+  },
+  "Enable typing sounds": {
+    "Enable typing sounds": ""
+  },
+  "General": {
+    "General": ""
+  },
+  "IPC Commands": {
+    "IPC Commands": ""
+  },
+  "Keyboard Device": {
+    "Keyboard Device": ""
+  },
+  "Missing tool: %1": {
+    "Missing tool: %1": ""
+  },
+  "Mouse Click Sounds": {
+    "Mouse Click Sounds": ""
+  },
+  "Mouse Interaction": {
+    "Mouse Interaction": ""
+  },
+  "Play mechanical keyboard sounds globally as you type.": {
+    "Play mechanical keyboard sounds globally as you type.": ""
+  },
+  "Play sounds for mouse clicks": {
+    "Play sounds for mouse clicks": ""
+  },
+  "Select a custom sound pack in the settings to change key sounds.": {
+    "Select a custom sound pack in the settings to change key sounds.": ""
+  },
+  "Sound Pack": {
+    "Sound Pack": ""
+  },
+  "Sound Volume": {
+    "Sound Volume": ""
+  },
+  "Test": {
+    "Test": ""
+  },
+  "Toggle typing sounds": {
+    "Toggle typing sounds": ""
+  },
+  "Typing Sounds": {
+    "Typing Sounds": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "User not in 'input' group (run: sudo usermod -aG input $USER)": {
+    "User not in 'input' group (run: sudo usermod -aG input $USER)": ""
+  },
+  "Volume": {
+    "Volume": ""
+  },
+  "You must be in the <b>input</b> group to allow keyboard event reading without root.": {
+    "You must be in the <b>input</b> group to allow keyboard event reading without root.": ""
+  }
+}

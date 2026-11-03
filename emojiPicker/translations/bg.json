@@ -14,6 +14,9 @@
   "Choose the modal size that best fits your display.": {
     "Choose the modal size that best fits your display.": "Изберете модалния размер, който най-добре пасва на вашия дисплей."
   },
+  "Clear": {
+    "Clear": ""
+  },
   "Clear All": {
     "Clear All": "Изчистване на всички"
   },
@@ -44,11 +47,35 @@
   "Copy Confirmation": {
     "Copy Confirmation": "Потвърждение за копиране"
   },
+  "Copy to clipboard": {
+    "Copy to clipboard": ""
+  },
+  "Credits": {
+    "Credits": ""
+  },
+  "Dark": {
+    "Dark": ""
+  },
+  "Default": {
+    "Default": ""
+  },
+  "Default Action": {
+    "Default Action": ""
+  },
   "Default Category": {
     "Default Category": "Категория по подразбиране"
   },
-  "Emoji Picker": {
-    "Emoji Picker": "Избор на емотикони"
+  "Default skin tone modifier for people and hand emojis.": {
+    "Default skin tone modifier for people and hand emojis.": ""
+  },
+  "Emoji catalog and inspiration.": {
+    "Emoji catalog and inspiration.": ""
+  },
+  "Emoji metadata.": {
+    "Emoji metadata.": ""
+  },
+  "Emojis Per Row": {
+    "Emojis Per Row": ""
   },
   "Failed to copy emoji": {
     "Failed to copy emoji": "Неуспешно копиране на емотикони"
@@ -71,11 +98,38 @@
   "IPC Commands": {
     "IPC Commands": "IPC команди"
   },
+  "In the grid, press <b>Backspace</b> or <b>Delete</b> with an empty queue to clear the search and return to it.": {
+    "In the grid, press <b>Backspace</b> or <b>Delete</b> with an empty queue to clear the search and return to it.": ""
+  },
+  "In the grid, use <b>Ctrl+H/J/K/L</b> for Vim-style left/down/up/right navigation.": {
+    "In the grid, use <b>Ctrl+H/J/K/L</b> for Vim-style left/down/up/right navigation.": ""
+  },
+  "Keyboard Hints": {
+    "Keyboard Hints": ""
+  },
   "Large (620 px)": {
     "Large (620 px)": "Голям (620 px)"
   },
+  "Left click and Enter use this action; right click and Ctrl+Enter use the other one.": {
+    "Left click and Enter use this action; right click and Ctrl+Enter use the other one.": ""
+  },
+  "Light": {
+    "Light": ""
+  },
+  "Medium": {
+    "Medium": ""
+  },
+  "Medium-Dark": {
+    "Medium-Dark": ""
+  },
+  "Medium-Light": {
+    "Medium-Light": ""
+  },
   "No emoji found": {
     "No emoji found": "Няма намерени емотикони"
+  },
+  "Number of emojis displayed per row. Each emoji stays square.": {
+    "Number of emojis displayed per row. Each emoji stays square.": ""
   },
   "Objects": {
     "Objects": "Обекти"
@@ -86,17 +140,23 @@
   "Paste": {
     "Paste": "Залепете"
   },
+  "Paste at cursor": {
+    "Paste at cursor": ""
+  },
   "Picker Size": {
     "Picker Size": "Размер на инструмента за избор"
   },
   "Press <b>Backspace</b> to remove the last queued emoji.": {
     "Press <b>Backspace</b> to remove the last queued emoji.": "Натиснете <b>Backspace</b>, за да премахнете последното емоджи в опашката."
   },
-  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
-    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "Натиснете <b>Надолу</b> или <b>Tab</b>, за да преминете от търсене към мрежата с емотикони."
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the first emoji.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the first emoji.": ""
   },
   "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
     "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "Натиснете <b>Escape</b>, за да отхвърлите опашката, или затворете инструмента за избор, когато опашката е празна."
+  },
+  "Queue": {
+    "Queue": ""
   },
   "Recent History": {
     "Recent History": "Скорошна история"
@@ -110,14 +170,26 @@
   "Recently Used": {
     "Recently Used": "Наскоро използван"
   },
+  "Remove": {
+    "Remove": ""
+  },
   "Search emoji": {
     "Search emoji": "Търсене на емотикони"
+  },
+  "Search in %1": {
+    "Search in %1": ""
   },
   "Search results": {
     "Search results": "Резултати от търсенето"
   },
   "Show a toast containing the emoji after copying it.": {
     "Show a toast containing the emoji after copying it.": "Покажете тост, съдържащ емоджито, след като го копирате."
+  },
+  "Show keyboard navigation hints at the bottom of the picker.": {
+    "Show keyboard navigation hints at the bottom of the picker.": ""
+  },
+  "Skin Tone": {
+    "Skin Tone": ""
   },
   "Smileys & People": {
     "Smileys & People": "Усмивки и хора"
@@ -142,5 +214,8 @@
   },
   "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
     "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "Когато емотикони са на опашка, <b>Enter</b> копира последователността и <b>Ctrl+Enter</b> я поставя."
+  },
+  "nav": {
+    "nav": ""
   }
 }

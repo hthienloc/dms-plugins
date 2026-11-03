@@ -14,6 +14,9 @@
   "Choose the modal size that best fits your display.": {
     "Choose the modal size that best fits your display.": "Chọn kích thước cửa sổ phù hợp nhất với màn hình của bạn."
   },
+  "Clear": {
+    "Clear": ""
+  },
   "Clear All": {
     "Clear All": "Xóa tất cả"
   },
@@ -44,11 +47,35 @@
   "Copy Confirmation": {
     "Copy Confirmation": "Xác nhận sao chép"
   },
+  "Copy to clipboard": {
+    "Copy to clipboard": ""
+  },
+  "Credits": {
+    "Credits": ""
+  },
+  "Dark": {
+    "Dark": ""
+  },
+  "Default": {
+    "Default": ""
+  },
+  "Default Action": {
+    "Default Action": ""
+  },
   "Default Category": {
     "Default Category": "Danh mục mặc định"
   },
-  "Emoji Picker": {
-    "Emoji Picker": "Bộ chọn Emoji"
+  "Default skin tone modifier for people and hand emojis.": {
+    "Default skin tone modifier for people and hand emojis.": ""
+  },
+  "Emoji catalog and inspiration.": {
+    "Emoji catalog and inspiration.": ""
+  },
+  "Emoji metadata.": {
+    "Emoji metadata.": ""
+  },
+  "Emojis Per Row": {
+    "Emojis Per Row": ""
   },
   "Failed to copy emoji": {
     "Failed to copy emoji": "Không thể sao chép emoji"
@@ -71,11 +98,38 @@
   "IPC Commands": {
     "IPC Commands": "Lệnh IPC"
   },
+  "In the grid, press <b>Backspace</b> or <b>Delete</b> with an empty queue to clear the search and return to it.": {
+    "In the grid, press <b>Backspace</b> or <b>Delete</b> with an empty queue to clear the search and return to it.": ""
+  },
+  "In the grid, use <b>Ctrl+H/J/K/L</b> for Vim-style left/down/up/right navigation.": {
+    "In the grid, use <b>Ctrl+H/J/K/L</b> for Vim-style left/down/up/right navigation.": ""
+  },
+  "Keyboard Hints": {
+    "Keyboard Hints": ""
+  },
   "Large (620 px)": {
     "Large (620 px)": "Lớn (620 px)"
   },
+  "Left click and Enter use this action; right click and Ctrl+Enter use the other one.": {
+    "Left click and Enter use this action; right click and Ctrl+Enter use the other one.": ""
+  },
+  "Light": {
+    "Light": ""
+  },
+  "Medium": {
+    "Medium": ""
+  },
+  "Medium-Dark": {
+    "Medium-Dark": ""
+  },
+  "Medium-Light": {
+    "Medium-Light": ""
+  },
   "No emoji found": {
     "No emoji found": "Không tìm thấy emoji"
+  },
+  "Number of emojis displayed per row. Each emoji stays square.": {
+    "Number of emojis displayed per row. Each emoji stays square.": ""
   },
   "Objects": {
     "Objects": "Đồ vật"
@@ -86,17 +140,23 @@
   "Paste": {
     "Paste": "Dán"
   },
+  "Paste at cursor": {
+    "Paste at cursor": ""
+  },
   "Picker Size": {
     "Picker Size": "Kích thước bảng chọn"
   },
   "Press <b>Backspace</b> to remove the last queued emoji.": {
     "Press <b>Backspace</b> to remove the last queued emoji.": "Nhấn <b>Backspace</b> để xóa emoji cuối cùng khỏi hàng chờ."
   },
-  "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": {
-    "Press <b>Down</b> or <b>Tab</b> to move from search to the emoji grid.": "Nhấn <b>Xuống</b> hoặc <b>Tab</b> để di chuyển từ ô tìm kiếm sang lưới emoji."
+  "Press <b>Down</b> or <b>Tab</b> to move from search to the first emoji.": {
+    "Press <b>Down</b> or <b>Tab</b> to move from search to the first emoji.": ""
   },
   "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": {
     "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.": "Nhấn <b>Escape</b> để hủy hàng chờ, hoặc đóng bảng chọn khi hàng chờ trống."
+  },
+  "Queue": {
+    "Queue": ""
   },
   "Recent History": {
     "Recent History": "Lịch sử gần đây"
@@ -110,14 +170,26 @@
   "Recently Used": {
     "Recently Used": "Dùng gần đây"
   },
+  "Remove": {
+    "Remove": ""
+  },
   "Search emoji": {
     "Search emoji": "Tìm kiếm emoji"
+  },
+  "Search in %1": {
+    "Search in %1": ""
   },
   "Search results": {
     "Search results": "Kết quả tìm kiếm"
   },
   "Show a toast containing the emoji after copying it.": {
     "Show a toast containing the emoji after copying it.": "Hiển thị thông báo chứa emoji sau khi sao chép."
+  },
+  "Show keyboard navigation hints at the bottom of the picker.": {
+    "Show keyboard navigation hints at the bottom of the picker.": ""
+  },
+  "Skin Tone": {
+    "Skin Tone": ""
   },
   "Smileys & People": {
     "Smileys & People": "Mặt cười & Con người"
@@ -142,5 +214,8 @@
   },
   "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": {
     "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it.": "Khi có emoji trong hàng chờ, <b>Enter</b> sẽ sao chép chuỗi và <b>Ctrl+Enter</b> sẽ dán chuỗi."
+  },
+  "nav": {
+    "nav": ""
   }
 }

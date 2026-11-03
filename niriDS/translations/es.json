@@ -1,0 +1,92 @@
+{
+  "Activate the display selector via the <b>Control Center</b> or configured <b>keybindings</b>.": {
+    "Activate the display selector via the <b>Control Center</b> or configured <b>keybindings</b>.": ""
+  },
+  "Adjust the background dimming opacity when the display settings modal is open": {
+    "Adjust the background dimming opacity when the display settings modal is open": ""
+  },
+  "Apply: Extend Displays": {
+    "Apply: Extend Displays": ""
+  },
+  "Apply: External Only": {
+    "Apply: External Only": ""
+  },
+  "Apply: Internal Only": {
+    "Apply: Internal Only": ""
+  },
+  "Apply: Mirror Displays": {
+    "Apply: Mirror Displays": ""
+  },
+  "Automatically re-enable the laptop screen if all external monitors are disconnected": {
+    "Automatically re-enable the laptop screen if all external monitors are disconnected": "Vuelva a habilitar automáticamente la pantalla del portátil si todos los monitores externos están desconectados"
+  },
+  "Choose what happens automatically when an external monitor is plugged in": {
+    "Choose what happens automatically when an external monitor is plugged in": "Elija qué sucede automáticamente cuando se conecta un monitor externo"
+  },
+  "Close Modal": {
+    "Close Modal": ""
+  },
+  "Do Nothing": {
+    "Do Nothing": "no hacer nada"
+  },
+  "Enable safety fallback": {
+    "Enable safety fallback": "Habilitar respaldo de seguridad"
+  },
+  "Extended": {
+    "Extended": "Extendido"
+  },
+  "External Only": {
+    "External Only": "Sólo externo"
+  },
+  "General Settings": {
+    "General Settings": ""
+  },
+  "IPC Commands": {
+    "IPC Commands": ""
+  },
+  "Internal Only": {
+    "Internal Only": "Sólo interno"
+  },
+  "Manual Control": {
+    "Manual Control": "Control manual"
+  },
+  "Mirror": {
+    "Mirror": "Espejo"
+  },
+  "Modal Background Opacity": {
+    "Modal Background Opacity": ""
+  },
+  "Niri Binding Configuration": {
+    "Niri Binding Configuration": ""
+  },
+  "No displays detected...": {
+    "No displays detected...": "No se detectaron pantallas..."
+  },
+  "Open Modal": {
+    "Open Modal": ""
+  },
+  "Preferred internal display": {
+    "Preferred internal display": "Pantalla interna preferida"
+  },
+  "Project": {
+    "Project": "Proyecto"
+  },
+  "Show Menu": {
+    "Show Menu": "Mostrar menú"
+  },
+  "The name of your laptop display (e.g. eDP-1). Leave empty for auto-detection.": {
+    "The name of your laptop display (e.g. eDP-1). Leave empty for auto-detection.": "El nombre de la pantalla de su computadora portátil (por ejemplo, eDP-1). Déjelo vacío para la detección automática."
+  },
+  "Toggle Modal": {
+    "Toggle Modal": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use the <b>IPC commands</b> above to automate display switching.": {
+    "Use the <b>IPC commands</b> above to automate display switching.": ""
+  },
+  "When monitor is connected": {
+    "When monitor is connected": "Cuando el monitor está conectado"
+  }
+}

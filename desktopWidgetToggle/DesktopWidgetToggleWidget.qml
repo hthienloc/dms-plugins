@@ -25,12 +25,12 @@ PluginComponent {
 
     popoutContent: Component {
         PopoutComponent {
-            headerText: I18n.tr("Desktop Widgets")
+            headerText: I18n.trFor("desktopWidgetToggle", "Desktop Widgets")
             detailsText: {
                 const activeCount = rootWidget.activeGroupIds.length;
-                if (activeCount === 0) return I18n.tr("No active groups");
-                if (activeCount === 1) return I18n.tr("1 active group");
-                return I18n.tr("%1 active groups").arg(activeCount);
+                if (activeCount === 0) return I18n.trFor("desktopWidgetToggle", "No active groups");
+                if (activeCount === 1) return I18n.trFor("desktopWidgetToggle", "1 active group");
+                return I18n.trFor("desktopWidgetToggle", "%1 active groups").arg(activeCount);
             }
             showCloseButton: true
 

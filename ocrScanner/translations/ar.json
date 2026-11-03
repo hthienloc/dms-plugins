@@ -11,6 +11,9 @@
   "Behavior": {
     "Behavior": "سلوك"
   },
+  "Clear Image & Text": {
+    "Clear Image & Text": ""
+  },
   "Copy Text": {
     "Copy Text": "نسخ النص"
   },
@@ -35,8 +38,8 @@
   "Recognition Languages": {
     "Recognition Languages": "لغات الاعتراف"
   },
-  "Right-click to scan clipboard, Middle-click to scan screenshot": {
-    "Right-click to scan clipboard, Middle-click to scan screenshot": "انقر بزر الماوس الأيمن لمسح الحافظة، وانقر بزر الماوس الأوسط لمسح لقطة الشاشة"
+  "Right-click pill to scan clipboard, Middle-click to take screenshot": {
+    "Right-click pill to scan clipboard, Middle-click to take screenshot": ""
   },
   "Save Text": {
     "Save Text": "حفظ النص"
@@ -46,6 +49,9 @@
   },
   "Scanned text is automatically copied to the <b>clipboard</b>.": {
     "Scanned text is automatically copied to the <b>clipboard</b>.": "يتم نسخ النص الممسوح ضوئيًا تلقائيًا إلى <b>الحافظة</b>."
+  },
+  "Screenshot": {
+    "Screenshot": ""
   },
   "Select File": {
     "Select File": "حدد ملف"

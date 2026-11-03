@@ -11,6 +11,9 @@
   "Behavior": {
     "Behavior": "行為"
   },
+  "Clear Image & Text": {
+    "Clear Image & Text": ""
+  },
   "Copy Text": {
     "Copy Text": "複製文字"
   },
@@ -35,8 +38,8 @@
   "Recognition Languages": {
     "Recognition Languages": "識別語言"
   },
-  "Right-click to scan clipboard, Middle-click to scan screenshot": {
-    "Right-click to scan clipboard, Middle-click to scan screenshot": "右鍵掃描剪貼板，中鍵掃描截圖"
+  "Right-click pill to scan clipboard, Middle-click to take screenshot": {
+    "Right-click pill to scan clipboard, Middle-click to take screenshot": ""
   },
   "Save Text": {
     "Save Text": "儲存文字"
@@ -46,6 +49,9 @@
   },
   "Scanned text is automatically copied to the <b>clipboard</b>.": {
     "Scanned text is automatically copied to the <b>clipboard</b>.": "掃描的文字會自動複製到<b>剪貼簿</b>。"
+  },
+  "Screenshot": {
+    "Screenshot": ""
   },
   "Select File": {
     "Select File": "選擇文件"

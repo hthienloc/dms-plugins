@@ -11,6 +11,9 @@
   "Behavior": {
     "Behavior": "הִתְנַהֲגוּת"
   },
+  "Clear Image & Text": {
+    "Clear Image & Text": ""
+  },
   "Copy Text": {
     "Copy Text": "העתק טקסט"
   },
@@ -35,8 +38,8 @@
   "Recognition Languages": {
     "Recognition Languages": "שפות זיהוי"
   },
-  "Right-click to scan clipboard, Middle-click to scan screenshot": {
-    "Right-click to scan clipboard, Middle-click to scan screenshot": "לחץ לחיצה ימנית כדי לסרוק את הלוח, לחץ לחיצה אמצעית כדי לסרוק צילום מסך"
+  "Right-click pill to scan clipboard, Middle-click to take screenshot": {
+    "Right-click pill to scan clipboard, Middle-click to take screenshot": ""
   },
   "Save Text": {
     "Save Text": "שמור טקסט"
@@ -46,6 +49,9 @@
   },
   "Scanned text is automatically copied to the <b>clipboard</b>.": {
     "Scanned text is automatically copied to the <b>clipboard</b>.": "טקסט סרוק מועתק אוטומטית ל<b>לוח</b>."
+  },
+  "Screenshot": {
+    "Screenshot": ""
   },
   "Select File": {
     "Select File": "בחר קובץ"

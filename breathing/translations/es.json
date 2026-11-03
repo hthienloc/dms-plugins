@@ -1,0 +1,164 @@
+{
+  "4-7-8 Breathing": {
+    "4-7-8 Breathing": "4-7-8 Respiración"
+  },
+  "<b>Left-click</b> the pill to start/pause the breathing session.": {
+    "<b>Left-click</b> the pill to start/pause the breathing session.": ""
+  },
+  "<b>Right-click</b> the pill to stop and reset the session.": {
+    "<b>Right-click</b> the pill to stop and reset the session.": ""
+  },
+  "Absolute path to custom audio.": {
+    "Absolute path to custom audio.": ""
+  },
+  "All files": {
+    "All files": ""
+  },
+  "Alternate Nostril": {
+    "Alternate Nostril": "Fosa nasal alternativa"
+  },
+  "Ambient Meditation": {
+    "Ambient Meditation": ""
+  },
+  "Animation Style": {
+    "Animation Style": "Estilo de animación"
+  },
+  "Appearance": {
+    "Appearance": "Apariencia"
+  },
+  "Audio files": {
+    "Audio files": ""
+  },
+  "Auto-start Exercise": {
+    "Auto-start Exercise": "Ejercicio de inicio automático"
+  },
+  "Behavior": {
+    "Behavior": "Comportamiento"
+  },
+  "Box Breathing": {
+    "Box Breathing": "Respiración de caja"
+  },
+  "Breathe In": {
+    "Breathe In": "Aspirar"
+  },
+  "Breathe Out": {
+    "Breathe Out": "Exhalar"
+  },
+  "Classic Card": {
+    "Classic Card": "Tarjeta clásica"
+  },
+  "Custom Sound File": {
+    "Custom Sound File": "Archivo de sonido personalizado"
+  },
+  "Deep Breathing": {
+    "Deep Breathing": "Respiración profunda"
+  },
+  "Default Duration": {
+    "Default Duration": "Duración predeterminada"
+  },
+  "Default Exercise": {
+    "Default Exercise": "Ejercicio predeterminado"
+  },
+  "Double-click an exercise tile to start it immediately.": {
+    "Double-click an exercise tile to start it immediately.": "Haga doble clic en un mosaico de ejercicio para iniciarlo inmediatamente."
+  },
+  "Equal Breathing": {
+    "Equal Breathing": "Respiración igual"
+  },
+  "Expanding Circle": {
+    "Expanding Circle": "Círculo en expansión"
+  },
+  "Feedback": {
+    "Feedback": ""
+  },
+  "Flowing Wave": {
+    "Flowing Wave": "Ola que fluye"
+  },
+  "Follow the <b>visual guide</b> and <b>sound cues</b> to sync your breath.": {
+    "Follow the <b>visual guide</b> and <b>sound cues</b> to sync your breath.": ""
+  },
+  "General": {
+    "General": "General"
+  },
+  "Haptic Feedback": {
+    "Haptic Feedback": "Retroalimentación háptica"
+  },
+  "Hold": {
+    "Hold": "Sostener"
+  },
+  "Mute": {
+    "Mute": ""
+  },
+  "Open the <b>Popout</b> to choose different breathing techniques.": {
+    "Open the <b>Popout</b> to choose different breathing techniques.": ""
+  },
+  "Pause": {
+    "Pause": "Pausa"
+  },
+  "Paused": {
+    "Paused": "En pausa"
+  },
+  "Play falling pitch during exhale (default is inhale only).": {
+    "Play falling pitch during exhale (default is inhale only).": ""
+  },
+  "Press 'Space' to Pause/Resume, 'R' to Reset.": {
+    "Press 'Space' to Pause/Resume, 'R' to Reset.": "Presione 'Espacio' para pausar/reanudar, 'R' para restablecer."
+  },
+  "Pulsating Glow": {
+    "Pulsating Glow": "Resplandor pulsante"
+  },
+  "Resonance": {
+    "Resonance": "Resonancia"
+  },
+  "Resume": {
+    "Resume": "Reanudar"
+  },
+  "Right-click bar icon to quickly toggle Start/Pause.": {
+    "Right-click bar icon to quickly toggle Start/Pause.": "Haga clic derecho en el icono de la barra para alternar rápidamente Inicio/Pausa."
+  },
+  "Session length for auto-started exercises.": {
+    "Session length for auto-started exercises.": ""
+  },
+  "Show Hints": {
+    "Show Hints": "Mostrar sugerencias"
+  },
+  "Singing Bowl Chime": {
+    "Singing Bowl Chime": ""
+  },
+  "Sound Cue Type": {
+    "Sound Cue Type": "Tipo de señal de sonido"
+  },
+  "Sound Cues": {
+    "Sound Cues": "Señales de sonido"
+  },
+  "Sound Volume": {
+    "Sound Volume": ""
+  },
+  "Start": {
+    "Start": "Comenzar"
+  },
+  "Start exercise automatically on login.": {
+    "Start exercise automatically on login.": "Comience el ejercicio automáticamente al iniciar sesión."
+  },
+  "Stop": {
+    "Stop": "Detener"
+  },
+  "Stop Test": {
+    "Stop Test": "Detener prueba"
+  },
+  "Test Sound": {
+    "Test Sound": "Sonido de prueba"
+  },
+  "Two-Tone Model": {
+    "Two-Tone Model": "Modelo de dos tonos"
+  },
+  "Unmute": {
+    "Unmute": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "min": {
+    "min": ""
+  }
+}

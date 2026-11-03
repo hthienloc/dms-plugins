@@ -39,8 +39,8 @@ PluginSettings {
     }
 
     property var subTabModel: [
-        { "text": I18n.tr("Group"), "icon": "settings", "isAction": false },
-        { "text": I18n.tr("Widgets"), "icon": "widgets", "isAction": false }
+        { "text": I18n.trFor("desktopWidgetToggle", "Group"), "icon": "settings", "isAction": false },
+        { "text": I18n.trFor("desktopWidgetToggle", "Widgets"), "icon": "widgets", "isAction": false }
     ]
 
     function saveGroups(newGroups) {
@@ -138,7 +138,7 @@ PluginSettings {
         id: groupsSection
 
         SectionTitle {
-            text: I18n.tr("Widget Groups")
+            text: I18n.trFor("desktopWidgetToggle", "Widget Groups")
             icon: "widgets"
         }
 
@@ -199,7 +199,7 @@ PluginSettings {
                                 }
 
                                 StyledText {
-                                    text: I18n.tr("Group")
+                                    text: I18n.trFor("desktopWidgetToggle", "Group")
                                     font.bold: true
                                     font.pixelSize: Theme.fontSizeSmall
                                     color: rootSettings.selectedGroupSubTabIndex === 0 ? Theme.onPrimary : Theme.surfaceText
@@ -233,7 +233,7 @@ PluginSettings {
                                 }
 
                                 StyledText {
-                                    text: I18n.tr("Widgets")
+                                    text: I18n.trFor("desktopWidgetToggle", "Widgets")
                                     font.bold: true
                                     font.pixelSize: Theme.fontSizeSmall
                                     color: rootSettings.selectedGroupSubTabIndex === 1 ? Theme.onPrimary : Theme.surfaceText
@@ -262,7 +262,7 @@ PluginSettings {
                         anchors.bottom: parent.bottom
 
                         StyledText {
-                            text: I18n.tr("Group Name")
+                            text: I18n.trFor("desktopWidgetToggle", "Group Name")
                             font.pixelSize: Theme.fontSizeSmall
                             color: Theme.surfaceVariantText
                         }
@@ -271,7 +271,7 @@ PluginSettings {
                             width: parent.width
                             height: 40
                             text: activeGroupDetails.currentGroup ? (activeGroupDetails.currentGroup.name || "") : ""
-                            placeholderText: I18n.tr("e.g. Work Widgets")
+                            placeholderText: I18n.trFor("desktopWidgetToggle", "e.g. Work Widgets")
                             onEditingFinished: {
                                 if (activeGroupDetails.currentGroup) {
                                     rootSettings.renameGroup(rootSettings.selectedGroupIndex, text.trim());
@@ -286,7 +286,7 @@ PluginSettings {
                         anchors.bottom: parent.bottom
 
                         StyledText {
-                            text: I18n.tr("Icon")
+                            text: I18n.trFor("desktopWidgetToggle", "Icon")
                             font.pixelSize: Theme.fontSizeSmall
                             color: Theme.surfaceVariantText
                         }
@@ -326,7 +326,7 @@ PluginSettings {
 
                     DButton {
                         id: deleteBtn
-                        text: I18n.tr("Delete")
+                        text: I18n.trFor("desktopWidgetToggle", "Delete")
                         iconName: "delete"
                         backgroundColor: Theme.error
                         textColor: Theme.onError
@@ -347,7 +347,7 @@ PluginSettings {
                     leftPadding: Theme.spacingM
 
                     StyledText {
-                        text: I18n.tr("Group Behavior")
+                        text: I18n.trFor("desktopWidgetToggle", "Group Behavior")
                         font.pixelSize: Theme.fontSizeSmall
                         font.weight: Font.Medium
                         color: Theme.surfaceText
@@ -355,8 +355,8 @@ PluginSettings {
 
                     DToggle {
                         width: parent.width
-                        text: I18n.tr("Show on Overlay")
-                        description: I18n.tr("Show widgets in this group in the desktop overlay layer")
+                        text: I18n.trFor("desktopWidgetToggle", "Show on Overlay")
+                        description: I18n.trFor("desktopWidgetToggle", "Show widgets in this group in the desktop overlay layer")
                         checked: activeGroupDetails.currentGroup ? (activeGroupDetails.currentGroup.toggleOverlay !== false) : true
                         onToggled: isChecked => {
                             if (activeGroupDetails.currentGroup) {
@@ -368,8 +368,8 @@ PluginSettings {
                     DToggle {
                         visible: CompositorService.isNiri
                         width: parent.width
-                        text: I18n.tr("Show on Overview")
-                        description: I18n.tr("Show widgets in this group during workspace overview")
+                        text: I18n.trFor("desktopWidgetToggle", "Show on Overview")
+                        description: I18n.trFor("desktopWidgetToggle", "Show widgets in this group during workspace overview")
                         checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.toggleOverview : false
                         onToggled: isChecked => {
                             if (activeGroupDetails.currentGroup) {
@@ -381,8 +381,8 @@ PluginSettings {
                     DToggle {
                         visible: CompositorService.isNiri
                         width: parent.width
-                        text: I18n.tr("Show on Overview Only")
-                        description: I18n.tr("Show widgets in this group only during workspace overview")
+                        text: I18n.trFor("desktopWidgetToggle", "Show on Overview Only")
+                        description: I18n.trFor("desktopWidgetToggle", "Show widgets in this group only during workspace overview")
                         checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.toggleOverviewOnly : false
                         onToggled: isChecked => {
                             if (activeGroupDetails.currentGroup) {
@@ -393,8 +393,8 @@ PluginSettings {
 
                     DToggle {
                         width: parent.width
-                        text: I18n.tr("Click Through")
-                        description: I18n.tr("Allow clicks to pass through widgets in this group")
+                        text: I18n.trFor("desktopWidgetToggle", "Click Through")
+                        description: I18n.trFor("desktopWidgetToggle", "Allow clicks to pass through widgets in this group")
                         checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.toggleClickThrough : false
                         onToggled: isChecked => {
                             if (activeGroupDetails.currentGroup) {
@@ -405,8 +405,8 @@ PluginSettings {
 
                     DToggle {
                         width: parent.width
-                        text: I18n.tr("Hide when inactive")
-                        description: I18n.tr("Hide the widgets in this group entirely when the group is inactive.")
+                        text: I18n.trFor("desktopWidgetToggle", "Hide when inactive")
+                        description: I18n.trFor("desktopWidgetToggle", "Hide the widgets in this group entirely when the group is inactive.")
                         checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.hideWhenInactive : false
                         onToggled: isChecked => {
                             if (activeGroupDetails.currentGroup) {
@@ -420,13 +420,13 @@ PluginSettings {
                     SliderSettingPlus {
                         id: autoDismissDuration
                         settingKey: "autoDismissDuration_" + (activeGroupDetails.currentGroup ? activeGroupDetails.currentGroup.id : "none")
-                        label: I18n.tr("Auto-dismiss Overlay")
-                        description: I18n.tr("Automatically turn off the active overlay group after this duration. Set to 0 to keep active.")
+                        label: I18n.trFor("desktopWidgetToggle", "Auto-dismiss Overlay")
+                        description: I18n.trFor("desktopWidgetToggle", "Automatically turn off the active overlay group after this duration. Set to 0 to keep active.")
                         defaultValue: 0
                         minimum: 0
                         maximum: 15
                         unit: "s"
-                        leftLabel: I18n.tr("Off")
+                        leftLabel: I18n.trFor("desktopWidgetToggle", "Off")
                         rightLabel: "15s"
 
                         Connections {
@@ -447,8 +447,8 @@ PluginSettings {
 
                 DToggle {
                     width: parent.width
-                    text: I18n.tr("Individual Widget Behavior")
-                    description: I18n.tr("Configure behavior for each widget separately instead of using group-wide settings.")
+                    text: I18n.trFor("desktopWidgetToggle", "Individual Widget Behavior")
+                    description: I18n.trFor("desktopWidgetToggle", "Configure behavior for each widget separately instead of using group-wide settings.")
                     checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.overrideIndividual : false
                     onToggled: isChecked => {
                         if (activeGroupDetails.currentGroup) {
@@ -470,7 +470,7 @@ PluginSettings {
 
                         StyledText {
                             id: selectWidgetsTitle
-                            text: I18n.tr("Select Widgets")
+                            text: I18n.trFor("desktopWidgetToggle", "Select Widgets")
                             font.pixelSize: Theme.fontSizeSmall
                             font.weight: Font.Medium
                             color: Theme.surfaceText
@@ -486,7 +486,7 @@ PluginSettings {
                             visible: (SettingsData.desktopWidgetInstances || []).length > 0
 
                             DButton {
-                                text: I18n.tr("Select All")
+                                text: I18n.trFor("desktopWidgetToggle", "Select All")
                                 buttonHeight: 32
                                 horizontalPadding: Theme.spacingM
                                 backgroundColor: Theme.primaryContainer
@@ -495,7 +495,7 @@ PluginSettings {
                             }
 
                             DButton {
-                                text: I18n.tr("Deselect All")
+                                text: I18n.trFor("desktopWidgetToggle", "Deselect All")
                                 buttonHeight: 32
                                 horizontalPadding: Theme.spacingM
                                 backgroundColor: Theme.surfaceContainerHigh
@@ -538,11 +538,11 @@ PluginSettings {
                                 spacing: Theme.spacingXS
 
                                 readonly property var activeModel: [
-                                    { key: "toggleOverlay", label: I18n.tr("Overlay") },
-                                    { key: "toggleOverview", label: I18n.tr("Overview"), visible: CompositorService.isNiri },
-                                    { key: "toggleOverviewOnly", label: I18n.tr("Overview Only"), visible: CompositorService.isNiri },
-                                    { key: "toggleClickThrough", label: I18n.tr("Click through") },
-                                    { key: "hideWhenInactive", label: I18n.tr("Hide inactive") }
+                                    { key: "toggleOverlay", label: I18n.trFor("desktopWidgetToggle", "Overlay") },
+                                    { key: "toggleOverview", label: I18n.trFor("desktopWidgetToggle", "Overview"), visible: CompositorService.isNiri },
+                                    { key: "toggleOverviewOnly", label: I18n.trFor("desktopWidgetToggle", "Overview Only"), visible: CompositorService.isNiri },
+                                    { key: "toggleClickThrough", label: I18n.trFor("desktopWidgetToggle", "Click through") },
+                                    { key: "hideWhenInactive", label: I18n.trFor("desktopWidgetToggle", "Hide inactive") }
                                 ].filter(m => m.visible !== false)
 
                                 property var overrides: (activeGroupDetails.currentGroup.widgetOverrides && activeGroupDetails.currentGroup.widgetOverrides[widgetItem.modelData.id]) || {}
@@ -590,7 +590,7 @@ PluginSettings {
                     }
 
                     StyledText {
-                        text: I18n.tr("No desktop widgets found.")
+                        text: I18n.trFor("desktopWidgetToggle", "No desktop widgets found.")
                         font.pixelSize: Theme.fontSizeSmall
                         color: Theme.surfaceVariantText
                         visible: (SettingsData.desktopWidgetInstances || []).length === 0
@@ -606,7 +606,7 @@ PluginSettings {
                 leftPadding: Theme.spacingM
 
                 StyledText {
-                    text: I18n.tr("IPC Command")
+                    text: I18n.trFor("desktopWidgetToggle", "IPC Command")
                     font.pixelSize: Theme.fontSizeSmall
                     font.weight: Font.Medium
                     color: Theme.surfaceText
@@ -624,7 +624,7 @@ PluginSettings {
         id: behaviorSection
         SectionTitle {
             id: behaviorTitle
-            text: I18n.tr("Behavior")
+            text: I18n.trFor("desktopWidgetToggle", "Behavior")
             icon: "settings"
             showReset: conflictModeSetting.isDirty || displayModeSetting.isDirty
             onResetClicked: {
@@ -636,12 +636,12 @@ PluginSettings {
         ButtonGroupSettingPlus {
             id: displayModeSetting
             settingKey: "displayMode"
-            label: I18n.tr("Bar Display Mode")
-            description: I18n.tr("Choose how widget group toggles are displayed on the status bar.")
+            label: I18n.trFor("desktopWidgetToggle", "Bar Display Mode")
+            description: I18n.trFor("desktopWidgetToggle", "Choose how widget group toggles are displayed on the status bar.")
             defaultValue: "all"
             options: [
-                { "value": "all", "label": I18n.tr("Show All Groups") },
-                { "value": "minimal", "label": I18n.tr("Minimal Popout") }
+                { "value": "all", "label": I18n.trFor("desktopWidgetToggle", "Show All Groups") },
+                { "value": "minimal", "label": I18n.trFor("desktopWidgetToggle", "Minimal Popout") }
             ]
         }
 
@@ -650,13 +650,13 @@ PluginSettings {
         SelectionSettingPlus {
             id: conflictModeSetting
             settingKey: "conflictMode"
-            label: I18n.tr("Toggle Mode")
-            description: I18n.tr("Choose how widget groups can be toggled simultaneously.")
+            label: I18n.trFor("desktopWidgetToggle", "Toggle Mode")
+            description: I18n.trFor("desktopWidgetToggle", "Choose how widget groups can be toggled simultaneously.")
             defaultValue: "single"
             options: [
-                { "value": "single", "label": I18n.tr("Single Active Group") },
-                { "value": "overlap", "label": I18n.tr("Block Overlap") },
-                { "value": "all", "label": I18n.tr("Allow All") }
+                { "value": "single", "label": I18n.trFor("desktopWidgetToggle", "Single Active Group") },
+                { "value": "overlap", "label": I18n.trFor("desktopWidgetToggle", "Block Overlap") },
+                { "value": "all", "label": I18n.trFor("desktopWidgetToggle", "Allow All") }
             ]
         }
 
@@ -664,9 +664,9 @@ PluginSettings {
             width: parent.width
             text: {
                 switch (conflictModeSetting.value) {
-                    case "single": return I18n.tr("Only one group can be active at a time.");
-                    case "overlap": return I18n.tr("Allow multiple groups if they don't share widgets.");
-                    case "all": return I18n.tr("No restrictions, multiple groups can be active.");
+                    case "single": return I18n.trFor("desktopWidgetToggle", "Only one group can be active at a time.");
+                    case "overlap": return I18n.trFor("desktopWidgetToggle", "Allow multiple groups if they don't share widgets.");
+                    case "all": return I18n.trFor("desktopWidgetToggle", "No restrictions, multiple groups can be active.");
                     default: return "";
                 }
             }
@@ -681,7 +681,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle {
             id: usageTitle
-            text: I18n.tr("Usage Guide")
+            text: I18n.trFor("desktopWidgetToggle", "Usage Guide")
             icon: "menu_book"
             collapsible: true
             settingKey: "usageGuideExpanded"
@@ -690,9 +690,9 @@ PluginSettings {
         UsageGuide {
             expanded: usageTitle.isExpanded
             items: [
-                I18n.tr("<b>Click</b> a group button on the status bar to show its widgets on top of all windows (overlay)."),
-                I18n.tr("<b>Click it again</b> to return the widgets to the desktop background layer."),
-                I18n.tr("Depending on the Toggle Mode setting, you can activate one or multiple groups concurrently.")
+                I18n.trFor("desktopWidgetToggle", "<b>Click</b> a group button on the status bar to show its widgets on top of all windows (overlay)."),
+                I18n.trFor("desktopWidgetToggle", "<b>Click it again</b> to return the widgets to the desktop background layer."),
+                I18n.trFor("desktopWidgetToggle", "Depending on the Toggle Mode setting, you can activate one or multiple groups concurrently.")
             ]
         }
     }

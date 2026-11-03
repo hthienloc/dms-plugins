@@ -1,0 +1,227 @@
+{
+  "'evtest' was not found — install it to monitor a specific keyboard, or switch to Auto mode.": {
+    "'evtest' was not found — install it to monitor a specific keyboard, or switch to Auto mode.": ""
+  },
+  "<b>Left-click</b> the cat to open the settings popout.": {
+    "<b>Left-click</b> the cat to open the settings popout.": ""
+  },
+  "<b>Right-click</b> the cat to manually toggle <b>Sleep Mode</b>.": {
+    "<b>Right-click</b> the cat to manually toggle <b>Sleep Mode</b>.": ""
+  },
+  "Add to input group": {
+    "Add to input group": "添加到输入组"
+  },
+  "Add your user to the 'input' group to detect keyboard activity:": {
+    "Add your user to the 'input' group to detect keyboard activity:": ""
+  },
+  "After running the command, logout and login again for changes to take effect.": {
+    "After running the command, logout and login again for changes to take effect.": "运行命令后，注销并再次登录以使更改生效。"
+  },
+  "Also play a click on mouse buttons.": {
+    "Also play a click on mouse buttons.": ""
+  },
+  "Also show WPM and correction rate next to the cat in the bar.": {
+    "Also show WPM and correction rate next to the cat in the bar.": ""
+  },
+  "Appearance": {
+    "Appearance": ""
+  },
+  "Asleep": {
+    "Asleep": ""
+  },
+  "Awake": {
+    "Awake": ""
+  },
+  "Behavior": {
+    "Behavior": ""
+  },
+  "Blink": {
+    "Blink": ""
+  },
+  "Bongo": {
+    "Bongo": ""
+  },
+  "Calico": {
+    "Calico": ""
+  },
+  "Cat Color": {
+    "Cat Color": ""
+  },
+  "Cat Size": {
+    "Cat Size": ""
+  },
+  "Cat Skin": {
+    "Cat Skin": ""
+  },
+  "Choose a color pattern for the Pixel Doodle skin.": {
+    "Choose a color pattern for the Pixel Doodle skin.": ""
+  },
+  "Choose between the classic vector font cat or the pixel doodle sprite skin.": {
+    "Choose between the classic vector font cat or the pixel doodle sprite skin.": ""
+  },
+  "Choose the type of key-click sound.": {
+    "Choose the type of key-click sound.": ""
+  },
+  "Classic (Vector)": {
+    "Classic (Vector)": ""
+  },
+  "Classic B/W": {
+    "Classic B/W": ""
+  },
+  "Classic Color on Idle": {
+    "Classic Color on Idle": ""
+  },
+  "Classic White": {
+    "Classic White": ""
+  },
+  "Creator of the Pixel Doodle Bongo Cat artwork.": {
+    "Creator of the Pixel Doodle Bongo Cat artwork.": ""
+  },
+  "Creator of the original Bongo Cat artwork.": {
+    "Creator of the original Bongo Cat artwork.": ""
+  },
+  "Credits": {
+    "Credits": ""
+  },
+  "Custom": {
+    "Custom": ""
+  },
+  "Custom Color": {
+    "Custom Color": ""
+  },
+  "Display live typing speed (WPM) and correction rate in the popout. Only keystroke timing is counted; no key contents are stored.": {
+    "Display live typing speed (WPM) and correction rate in the popout. Only keystroke timing is counted; no key contents are stored.": ""
+  },
+  "Enable Blinking": {
+    "Enable Blinking": ""
+  },
+  "Enable Sounds": {
+    "Enable Sounds": ""
+  },
+  "Ginger Orange": {
+    "Ginger Orange": ""
+  },
+  "How long the paws stay down after a key press (0 for instant).": {
+    "How long the paws stay down after a key press (0 for instant).": ""
+  },
+  "Inactivity time before the cat falls asleep.": {
+    "Inactivity time before the cat falls asleep.": ""
+  },
+  "Input & Behavior": {
+    "Input & Behavior": ""
+  },
+  "Measurement Window": {
+    "Measurement Window": ""
+  },
+  "Midnight Black": {
+    "Midnight Black": ""
+  },
+  "Mouse Clicks": {
+    "Mouse Clicks": ""
+  },
+  "Mouse Interaction": {
+    "Mouse Interaction": ""
+  },
+  "Mouse interaction needs the 'libinput' CLI — install it (Arch: libinput-tools, Debian/Ubuntu: libinput-tools, Fedora: libinput-utils) or switch the keyboard to Auto mode.": {
+    "Mouse interaction needs the 'libinput' CLI — install it (Arch: libinput-tools, Debian/Ubuntu: libinput-tools, Fedora: libinput-utils) or switch the keyboard to Auto mode.": ""
+  },
+  "Paw": {
+    "Paw": ""
+  },
+  "Paw Hold Duration": {
+    "Paw Hold Duration": ""
+  },
+  "Paws react to mouse input: left and right click hold the matching paw, other buttons slam both, scrolling drums with alternating paws.": {
+    "Paws react to mouse input: left and right click hold the matching paw, other buttons slam both, scrolling drums with alternating paws.": ""
+  },
+  "Pixel Doodle": {
+    "Pixel Doodle": ""
+  },
+  "Play a soft key-click sound as you type.": {
+    "Play a soft key-click sound as you type.": ""
+  },
+  "Pop": {
+    "Pop": ""
+  },
+  "Pressing Space or Enter triggers both paws to slam the table.": {
+    "Pressing Space or Enter triggers both paws to slam the table.": ""
+  },
+  "Recolor the cat. Classic keeps the theme's default black and white, Primary follows the system accent, or pick a custom color.": {
+    "Recolor the cat. Classic keeps the theme's default black and white, Primary follows the system accent, or pick a custom color.": ""
+  },
+  "Return the cat to the classic black and white color when sleeping or idle.": {
+    "Return the cat to the classic black and white color when sleeping or idle.": ""
+  },
+  "Right-click bar icon to toggle sleep mode.": {
+    "Right-click bar icon to toggle sleep mode.": ""
+  },
+  "Sakura Pink": {
+    "Sakura Pink": ""
+  },
+  "Setup": {
+    "Setup": "设置"
+  },
+  "Show Hints": {
+    "Show Hints": "显示提示"
+  },
+  "Show Metrics in Bar": {
+    "Show Metrics in Bar": ""
+  },
+  "Show Typing Metrics": {
+    "Show Typing Metrics": ""
+  },
+  "Siamese": {
+    "Siamese": ""
+  },
+  "Size": {
+    "Size": ""
+  },
+  "Sleep": {
+    "Sleep": ""
+  },
+  "Sleep Timeout": {
+    "Sleep Timeout": ""
+  },
+  "Sound": {
+    "Sound": ""
+  },
+  "Sound Profile": {
+    "Sound Profile": ""
+  },
+  "Sounds": {
+    "Sounds": ""
+  },
+  "Space/Enter Double Slam": {
+    "Space/Enter Double Slam": ""
+  },
+  "Stats": {
+    "Stats": ""
+  },
+  "The 'libinput' CLI was not found, so Auto mode can't see your keyboard. Install it (Arch: libinput-tools, Debian/Ubuntu: libinput-tools, Fedora: libinput-utils) or pick a specific keyboard below.": {
+    "The 'libinput' CLI was not found, so Auto mode can't see your keyboard. Install it (Arch: libinput-tools, Debian/Ubuntu: libinput-tools, Fedora: libinput-utils) or pick a specific keyboard below.": ""
+  },
+  "The cat will automatically tap its paws as you type.": {
+    "The cat will automatically tap its paws as you type.": ""
+  },
+  "Theme Primary": {
+    "Theme Primary": ""
+  },
+  "Time span the speed and correction rate are averaged over.": {
+    "Time span the speed and correction rate are averaged over.": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": "使用指南"
+  },
+  "Used when Cat Color is set to Custom.": {
+    "Used when Cat Color is set to Custom.": ""
+  },
+  "Vertical Offset": {
+    "Vertical Offset": ""
+  },
+  "Volume": {
+    "Volume": ""
+  },
+  "Your user is not in the 'input' group, so keyboard events can't be read. Run: sudo usermod -aG input $USER — then log out and back in.": {
+    "Your user is not in the 'input' group, so keyboard events can't be read. Run: sudo usermod -aG input $USER — then log out and back in.": ""
+  }
+}

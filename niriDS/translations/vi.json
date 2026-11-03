@@ -1,0 +1,92 @@
+{
+  "Activate the display selector via the <b>Control Center</b> or configured <b>keybindings</b>.": {
+    "Activate the display selector via the <b>Control Center</b> or configured <b>keybindings</b>.": ""
+  },
+  "Adjust the background dimming opacity when the display settings modal is open": {
+    "Adjust the background dimming opacity when the display settings modal is open": ""
+  },
+  "Apply: Extend Displays": {
+    "Apply: Extend Displays": ""
+  },
+  "Apply: External Only": {
+    "Apply: External Only": ""
+  },
+  "Apply: Internal Only": {
+    "Apply: Internal Only": ""
+  },
+  "Apply: Mirror Displays": {
+    "Apply: Mirror Displays": ""
+  },
+  "Automatically re-enable the laptop screen if all external monitors are disconnected": {
+    "Automatically re-enable the laptop screen if all external monitors are disconnected": "Tự động kích hoạt lại màn hình laptop nếu tất cả màn hình ngoài bị ngắt kết nối"
+  },
+  "Choose what happens automatically when an external monitor is plugged in": {
+    "Choose what happens automatically when an external monitor is plugged in": "Chọn điều gì sẽ tự động xảy ra khi cắm màn hình ngoài"
+  },
+  "Close Modal": {
+    "Close Modal": ""
+  },
+  "Do Nothing": {
+    "Do Nothing": "Không làm gì cả"
+  },
+  "Enable safety fallback": {
+    "Enable safety fallback": "Bật dự phòng an toàn"
+  },
+  "Extended": {
+    "Extended": "Mở rộng"
+  },
+  "External Only": {
+    "External Only": "Chỉ bên ngoài"
+  },
+  "General Settings": {
+    "General Settings": ""
+  },
+  "IPC Commands": {
+    "IPC Commands": ""
+  },
+  "Internal Only": {
+    "Internal Only": "Chỉ nội bộ"
+  },
+  "Manual Control": {
+    "Manual Control": "Điều khiển bằng tay"
+  },
+  "Mirror": {
+    "Mirror": "Gương"
+  },
+  "Modal Background Opacity": {
+    "Modal Background Opacity": ""
+  },
+  "Niri Binding Configuration": {
+    "Niri Binding Configuration": ""
+  },
+  "No displays detected...": {
+    "No displays detected...": "Không phát hiện thấy màn hình nào..."
+  },
+  "Open Modal": {
+    "Open Modal": ""
+  },
+  "Preferred internal display": {
+    "Preferred internal display": "Màn hình bên trong ưa thích"
+  },
+  "Project": {
+    "Project": "Dự án"
+  },
+  "Show Menu": {
+    "Show Menu": "Hiển thị thực đơn"
+  },
+  "The name of your laptop display (e.g. eDP-1). Leave empty for auto-detection.": {
+    "The name of your laptop display (e.g. eDP-1). Leave empty for auto-detection.": "Tên màn hình máy tính xách tay của bạn (ví dụ: eDP-1). Để trống để tự động phát hiện."
+  },
+  "Toggle Modal": {
+    "Toggle Modal": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use the <b>IPC commands</b> above to automate display switching.": {
+    "Use the <b>IPC commands</b> above to automate display switching.": ""
+  },
+  "When monitor is connected": {
+    "When monitor is connected": "Khi màn hình được kết nối"
+  }
+}

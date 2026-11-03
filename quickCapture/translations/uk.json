@@ -431,9 +431,6 @@
   "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "Токени формату: {user} (Ім'я користувача), \\n (Новий рядок), %Y (Рік), %y (рік з 2 цифр), %m (Місяць), %d (День), %H (Година), %M (Хвилина), %S (Секунда)"
   },
-  "Format: %1 (%2 FPS)": {
-    "Format: %1 (%2 FPS)": "Формат: %1 (%2 FPS)"
-  },
   "Framerate": {
     "Framerate": "Частота кадрів"
   },
@@ -472,12 +469,6 @@
   },
   "Hide Annotations": {
     "Hide Annotations": "Приховати анотації"
-  },
-  "Hide Control Center": {
-    "Hide Control Center": "Приховати центр керування"
-  },
-  "Hide Control Center by Default": {
-    "Hide Control Center by Default": "Приховувати центр керування за замовчуванням"
   },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": "Приховати Центр керування під час захоплення"
@@ -529,9 +520,6 @@
   },
   "Initial Width": {
     "Initial Width": "Початкова ширина"
-  },
-  "Initial state for the Control Center toggle.": {
-    "Initial state for the Control Center toggle.": "Початковий стан перемикача центру керування"
   },
   "Inline": {
     "Inline": "Вбудовано"
@@ -706,9 +694,6 @@
   },
   "Open Image": {
     "Open Image": "Відкрити зображення"
-  },
-  "Open folder": {
-    "Open folder": "Відкрити папку"
   },
   "Outline Variant": {
     "Outline Variant": "Варіант контуру"
@@ -1004,17 +989,11 @@
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
     "Select one or more installed Tesseract language packs for OCR text recognition.": "Виберіть один або кілька встановлених мовних пакетів Tesseract для оптичного розпізнавання тексту"
   },
-  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Виберіть пристрій запису екрана. «Авто» спочатку пробує GPU, а потім перемикається на CPU (%1)"
-  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "Виберіть пристрій запису екрана. «Авто» спочатку пробує GPU, а потім перемикається на CPU (%1). Примітка: %1 не підтримує паузу"
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "Вибраний інструмент / дія"
-  },
-  "Settings": {
-    "Settings": "Налаштування"
   },
   "Shadow Strength": {
     "Shadow Strength": "Інтенсивність тіні"
@@ -1027,9 +1006,6 @@
   },
   "Show Annotations": {
     "Show Annotations": "Показати анотації"
-  },
-  "Show Control Center": {
-    "Show Control Center": "Показати центр керування"
   },
   "Show Keyboard Shortcut Hints": {
     "Show Keyboard Shortcut Hints": "Показати підказки щодо гарячих клавіш"

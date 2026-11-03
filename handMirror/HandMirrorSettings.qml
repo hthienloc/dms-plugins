@@ -15,7 +15,7 @@ PluginSettings {
     function getCameraOptions() {
         const devices = mediaDevices.videoInputs;
         if (!devices || devices.length === 0) {
-            return [{ label: I18n.tr("Default Camera"), value: "0" }];
+            return [{ label: I18n.trFor("handMirror", "Default Camera"), value: "0" }];
         }
         let opts = [];
         for (let i = 0; i < devices.length; i++) {
@@ -27,7 +27,7 @@ PluginSettings {
     SettingsCard {
         id: cameraSection
         SectionTitle { 
-            text: I18n.tr("Camera & Layout")
+            text: I18n.trFor("handMirror", "Camera & Layout")
             icon: "videocam" 
             showReset: cameraIndex.isDirty || zoomFactor.isDirty || borderRadius.isDirty || screenFlash.isDirty || captureDelay.isDirty || filterMode.isDirty || filterStrength.isDirty || smoothingAmount.isDirty
             onResetClicked: {
@@ -45,12 +45,12 @@ PluginSettings {
         SelectionSettingPlus {
             id: filterMode
             settingKey: "filterMode"
-            label: I18n.tr("Visual Filter")
+            label: I18n.trFor("handMirror", "Visual Filter")
             options: [
-                { label: I18n.tr("None"), value: "none" },
-                { label: I18n.tr("Grayscale"), value: "grayscale" },
-                { label: I18n.tr("Sepia"), value: "sepia" },
-                { label: I18n.tr("High Contrast"), value: "contrast" }
+                { label: I18n.trFor("handMirror", "None"), value: "none" },
+                { label: I18n.trFor("handMirror", "Grayscale"), value: "grayscale" },
+                { label: I18n.trFor("handMirror", "Sepia"), value: "sepia" },
+                { label: I18n.trFor("handMirror", "High Contrast"), value: "contrast" }
             ]
             defaultValue: "none"
         }
@@ -60,7 +60,7 @@ PluginSettings {
         SliderSettingPlus {
             id: filterStrength
             settingKey: "filterStrength"
-            label: I18n.tr("Filter Strength")
+            label: I18n.trFor("handMirror", "Filter Strength")
             defaultValue: 100
             minimum: 0
             maximum: 100
@@ -75,8 +75,8 @@ PluginSettings {
         SliderSettingPlus {
             id: smoothingAmount
             settingKey: "smoothingAmount"
-            label: I18n.tr("Smoothing (Denoise)")
-            description: I18n.tr("Reduces camera noise by softening the image.")
+            label: I18n.trFor("handMirror", "Smoothing (Denoise)")
+            description: I18n.trFor("handMirror", "Reduces camera noise by softening the image.")
             defaultValue: 0
             minimum: 0
             maximum: 100
@@ -90,7 +90,7 @@ PluginSettings {
         SelectionSettingPlus {
             id: cameraIndex
             settingKey: "cameraIndex"
-            label: I18n.tr("Select Camera")
+            label: I18n.trFor("handMirror", "Select Camera")
             options: root.getCameraOptions()
             defaultValue: "0"
         }
@@ -100,7 +100,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: mirror
             settingKey: "mirror"
-            label: I18n.tr("Mirror Image")
+            label: I18n.trFor("handMirror", "Mirror Image")
             defaultValue: true
         }
 
@@ -109,7 +109,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: screenFlash
             settingKey: "screenFlash"
-            label: I18n.tr("Screen Flash on Snapshot")
+            label: I18n.trFor("handMirror", "Screen Flash on Snapshot")
             defaultValue: true
         }
 
@@ -118,7 +118,7 @@ PluginSettings {
         SliderSettingPlus {
             id: zoomFactor
             settingKey: "zoomFactor"
-            label: I18n.tr("Digital Zoom")
+            label: I18n.trFor("handMirror", "Digital Zoom")
             defaultValue: 1.0
             minimum: 1.0
             maximum: 3.0
@@ -132,7 +132,7 @@ PluginSettings {
         SliderSettingPlus {
             id: borderRadius
             settingKey: "borderRadius"
-            label: I18n.tr("Corner Radius")
+            label: I18n.trFor("handMirror", "Corner Radius")
             defaultValue: 16
             minimum: 0
             maximum: 64
@@ -146,12 +146,12 @@ PluginSettings {
         SelectionSettingPlus {
             id: captureDelay
             settingKey: "captureDelay"
-            label: I18n.tr("Capture Delay")
+            label: I18n.trFor("handMirror", "Capture Delay")
             options: [
-                { label: I18n.tr("Instant"), value: "0" },
-                { label: I18n.tr("3 Seconds"), value: "3" },
-                { label: I18n.tr("5 Seconds"), value: "5" },
-                { label: I18n.tr("10 Seconds"), value: "10" }
+                { label: I18n.trFor("handMirror", "Instant"), value: "0" },
+                { label: I18n.trFor("handMirror", "3 Seconds"), value: "3" },
+                { label: I18n.trFor("handMirror", "5 Seconds"), value: "5" },
+                { label: I18n.trFor("handMirror", "10 Seconds"), value: "10" }
             ]
             defaultValue: "0"
         }
@@ -160,7 +160,7 @@ PluginSettings {
     SettingsCard {
         id: popoutSection
         SectionTitle { 
-            text: I18n.tr("Popout Configuration")
+            text: I18n.trFor("handMirror", "Popout Configuration")
             icon: "menu" 
             showReset: popoutScale.isDirty
             onResetClicked: {
@@ -171,7 +171,7 @@ PluginSettings {
         SliderSettingPlus {
             id: popoutScale
             settingKey: "popoutScale"
-            label: I18n.tr("Popout Scale")
+            label: I18n.trFor("handMirror", "Popout Scale")
             defaultValue: 100
             minimum: 50
             maximum: 250
@@ -184,7 +184,7 @@ PluginSettings {
     SettingsCard {
         id: windowSection
         SectionTitle { 
-            text: I18n.tr("Standalone Window Configuration")
+            text: I18n.trFor("handMirror", "Standalone Window Configuration")
             icon: "aspect_ratio" 
             showReset: windowScale.isDirty || aspectRatio.isDirty
             onResetClicked: {
@@ -196,7 +196,7 @@ PluginSettings {
         SliderSettingPlus {
             id: windowScale
             settingKey: "windowScale"
-            label: I18n.tr("Window Scale")
+            label: I18n.trFor("handMirror", "Window Scale")
             defaultValue: 100
             minimum: 50
             maximum: 250
@@ -210,12 +210,12 @@ PluginSettings {
         SelectionSettingPlus {
             id: aspectRatio
             settingKey: "aspectRatio"
-            label: I18n.tr("Aspect Ratio")
+            label: I18n.trFor("handMirror", "Aspect Ratio")
             options: [
-                { label: I18n.tr("Auto (Camera default)"), value: "auto" },
-                { label: I18n.tr("16:9 Widescreen"), value: "16:9" },
-                { label: I18n.tr("4:3 Standard"), value: "4:3" },
-                { label: I18n.tr("1:1 Square"), value: "1:1" }
+                { label: I18n.trFor("handMirror", "Auto (Camera default)"), value: "auto" },
+                { label: I18n.trFor("handMirror", "16:9 Widescreen"), value: "16:9" },
+                { label: I18n.trFor("handMirror", "4:3 Standard"), value: "4:3" },
+                { label: I18n.trFor("handMirror", "1:1 Square"), value: "1:1" }
             ]
             defaultValue: "auto"
         }
@@ -224,7 +224,7 @@ PluginSettings {
     SettingsCard {
         id: snapshotSection
         SectionTitle { 
-            text: I18n.tr("Snapshot Options")
+            text: I18n.trFor("handMirror", "Snapshot Options")
             icon: "photo_camera" 
             showReset: saveDirectory.isDirty
             onResetClicked: {
@@ -235,7 +235,7 @@ PluginSettings {
         StringSettingPlus {
             id: saveDirectory
             settingKey: "saveDirectory"
-            label: I18n.tr("Save Directory")
+            label: I18n.trFor("handMirror", "Save Directory")
             placeholder: "~/Pictures/Snaps"
             defaultValue: "~/Pictures/Snaps"
             isDirectory: true

@@ -431,9 +431,6 @@
   "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "Formátumjelek: {user} (Felhasználónév), \\n (Új sor), %Y (Év), %y (2 jegyű év), %m (Hónap), %d (Nap), %H (Óra), %M (Perc), %S (Másodperc)"
   },
-  "Format: %1 (%2 FPS)": {
-    "Format: %1 (%2 FPS)": "Formátum: %1 (%2 FPS)"
-  },
   "Framerate": {
     "Framerate": "Képkockasebesség"
   },
@@ -472,12 +469,6 @@
   },
   "Hide Annotations": {
     "Hide Annotations": "Megjegyzések elrejtése"
-  },
-  "Hide Control Center": {
-    "Hide Control Center": "Vezérlőközpont elrejtése"
-  },
-  "Hide Control Center by Default": {
-    "Hide Control Center by Default": "Vezérlőközpont elrejtése alapértelmezés szerint"
   },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": "Vezérlőközpont elrejtése rögzítéskor"
@@ -529,9 +520,6 @@
   },
   "Initial Width": {
     "Initial Width": "Kezdeti szélesség"
-  },
-  "Initial state for the Control Center toggle.": {
-    "Initial state for the Control Center toggle.": "A Vezérlőközpont kapcsolójának kezdőállapota."
   },
   "Inline": {
     "Inline": "Soron belül"
@@ -706,9 +694,6 @@
   },
   "Open Image": {
     "Open Image": "Kép megnyitása"
-  },
-  "Open folder": {
-    "Open folder": "Mappa megnyitása"
   },
   "Outline Variant": {
     "Outline Variant": "Körvonal változata"
@@ -1004,17 +989,11 @@
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
     "Select one or more installed Tesseract language packs for OCR text recognition.": "Válassz ki egy vagy több telepített Tesseract nyelvi csomagot az OCR-szövegfelismeréshez."
   },
-  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Válaszd ki a képernyőfelvétel háttérprogramját. Az „Automatikus” beállítás először a GPU-t próbálja meg, majd CPU-ra vált (%1)."
-  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "Válaszd ki a képernyőfelvétel háttérprogramját. Az „Automatikus” beállítás először a GPU-t próbálja meg, majd CPU-ra vált (%1). Megjegyzés: A(z) %1 nem támogatja a szüneteltetést."
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "Kiválasztott eszköz / művelet"
-  },
-  "Settings": {
-    "Settings": "Beállítások"
   },
   "Shadow Strength": {
     "Shadow Strength": "Árnyékereje"
@@ -1027,9 +1006,6 @@
   },
   "Show Annotations": {
     "Show Annotations": "Megjegyzések megjelenítése"
-  },
-  "Show Control Center": {
-    "Show Control Center": "Vezérlőközpont megjelenítése"
   },
   "Show Keyboard Shortcut Hints": {
     "Show Keyboard Shortcut Hints": "Gyorsbillentyű-tippek megjelenítése"

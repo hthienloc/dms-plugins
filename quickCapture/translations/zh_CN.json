@@ -431,9 +431,6 @@
   "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": ""
   },
-  "Format: %1 (%2 FPS)": {
-    "Format: %1 (%2 FPS)": "格式：%1（%2 帧）"
-  },
   "Framerate": {
     "Framerate": "帧率"
   },
@@ -472,12 +469,6 @@
   },
   "Hide Annotations": {
     "Hide Annotations": ""
-  },
-  "Hide Control Center": {
-    "Hide Control Center": "隐藏控制中心"
-  },
-  "Hide Control Center by Default": {
-    "Hide Control Center by Default": "默认隐藏控制中心"
   },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": "在捕获中隐藏控制中心"
@@ -529,9 +520,6 @@
   },
   "Initial Width": {
     "Initial Width": "初始宽度"
-  },
-  "Initial state for the Control Center toggle.": {
-    "Initial state for the Control Center toggle.": "控制中心开关的初始状态。"
   },
   "Inline": {
     "Inline": ""
@@ -706,9 +694,6 @@
   },
   "Open Image": {
     "Open Image": "打开图像"
-  },
-  "Open folder": {
-    "Open folder": "打开文件夹"
   },
   "Outline Variant": {
     "Outline Variant": "边框变体"
@@ -1004,17 +989,11 @@
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
     "Select one or more installed Tesseract language packs for OCR text recognition.": ""
   },
-  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "选择屏幕录制后端。自动模式优先尝试 GPU，失败时回退至 CPU (%1)。"
-  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "所选工具 / 操作"
-  },
-  "Settings": {
-    "Settings": "设置"
   },
   "Shadow Strength": {
     "Shadow Strength": "默认阴影强度"
@@ -1027,9 +1006,6 @@
   },
   "Show Annotations": {
     "Show Annotations": ""
-  },
-  "Show Control Center": {
-    "Show Control Center": "显示控制中心"
   },
   "Show Keyboard Shortcut Hints": {
     "Show Keyboard Shortcut Hints": "显示快捷键提示"

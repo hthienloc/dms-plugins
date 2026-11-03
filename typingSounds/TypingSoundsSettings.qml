@@ -78,7 +78,7 @@ print(json.dumps(res))
     SettingsCard {
         id: generalSection
         SectionTitle {
-            text: I18n.tr("General")
+            text: I18n.trFor("typingSounds", "General")
             icon: "tune"
             showReset: enabledSetting.isDirty || volumeSetting.isDirty || mouseEnabledSetting.isDirty
             onResetClicked: {
@@ -91,7 +91,7 @@ print(json.dumps(res))
         ToggleSettingPlus {
             id: enabledSetting
             settingKey: "soundEnabled"
-            label: I18n.tr("Enable Typing Sounds")
+            label: I18n.trFor("typingSounds", "Enable Typing Sounds")
             defaultValue: true
         }
 
@@ -100,7 +100,7 @@ print(json.dumps(res))
         SliderSettingPlus {
             id: volumeSetting
             settingKey: "volume"
-            label: I18n.tr("Sound Volume")
+            label: I18n.trFor("typingSounds", "Sound Volume")
             defaultValue: 100
             minimum: 0
             maximum: 200
@@ -114,8 +114,8 @@ print(json.dumps(res))
         ToggleSettingPlus {
             id: mouseEnabledSetting
             settingKey: "mouseEnabled"
-            label: I18n.tr("Mouse Interaction")
-            description: I18n.tr("Play sounds for mouse clicks")
+            label: I18n.trFor("typingSounds", "Mouse Interaction")
+            description: I18n.trFor("typingSounds", "Play sounds for mouse clicks")
             defaultValue: false
         }
     }
@@ -123,7 +123,7 @@ print(json.dumps(res))
     SettingsCard {
         id: deviceSection
         SectionTitle {
-            text: I18n.tr("Device & Sounds")
+            text: I18n.trFor("typingSounds", "Device & Sounds")
             icon: "keyboard"
             showReset: selectedPackPathSetting.isDirty || selectedDevicePathSetting.isDirty
             onResetClicked: {
@@ -135,7 +135,7 @@ print(json.dumps(res))
         SelectionSettingPlus {
             id: selectedPackPathSetting
             settingKey: "selectedPackPath"
-            label: I18n.tr("Sound Pack")
+            label: I18n.trFor("typingSounds", "Sound Pack")
             options: root.packOptions
             defaultValue: ""
         }
@@ -145,7 +145,7 @@ print(json.dumps(res))
         SelectionSettingPlus {
             id: selectedDevicePathSetting
             settingKey: "selectedDevicePath"
-            label: I18n.tr("Keyboard Device")
+            label: I18n.trFor("typingSounds", "Keyboard Device")
             options: root.deviceOptions
             defaultValue: "all"
         }
@@ -155,7 +155,7 @@ print(json.dumps(res))
         id: ipcSection
         SectionTitle {
             id: ipcTitle
-            text: I18n.tr("IPC Commands")
+            text: I18n.trFor("typingSounds", "IPC Commands")
             icon: "terminal"
             collapsible: true
             settingKey: "ipcCommandsExpanded"
@@ -168,9 +168,9 @@ print(json.dumps(res))
 
             Repeater {
                 model: [
-                    { text: "dms ipc typingSounds toggle", label: I18n.tr("Toggle typing sounds") },
-                    { text: "dms ipc typingSounds enable", label: I18n.tr("Enable typing sounds") },
-                    { text: "dms ipc typingSounds disable", label: I18n.tr("Disable typing sounds") }
+                    { text: "dms ipc typingSounds toggle", label: I18n.trFor("typingSounds", "Toggle typing sounds") },
+                    { text: "dms ipc typingSounds enable", label: I18n.trFor("typingSounds", "Enable typing sounds") },
+                    { text: "dms ipc typingSounds disable", label: I18n.trFor("typingSounds", "Disable typing sounds") }
                 ]
 
                 delegate: CopyBox {
@@ -184,7 +184,7 @@ print(json.dumps(res))
     SettingsCard {
         SectionTitle {
             id: usageTitle
-            text: I18n.tr("Usage Guide")
+            text: I18n.trFor("typingSounds", "Usage Guide")
             icon: "menu_book"
             collapsible: true
             settingKey: "usageGuideExpanded"
@@ -193,9 +193,9 @@ print(json.dumps(res))
         UsageGuide {
             expanded: usageTitle.isExpanded
             items: [
-                I18n.tr("Play mechanical keyboard sounds globally as you type."),
-                I18n.tr("You must be in the <b>input</b> group to allow keyboard event reading without root."),
-                I18n.tr("Select a custom sound pack in the settings to change key sounds.")
+                I18n.trFor("typingSounds", "Play mechanical keyboard sounds globally as you type."),
+                I18n.trFor("typingSounds", "You must be in the <b>input</b> group to allow keyboard event reading without root."),
+                I18n.trFor("typingSounds", "Select a custom sound pack in the settings to change key sounds.")
             ]
         }
     }
@@ -203,7 +203,7 @@ print(json.dumps(res))
     SettingsCard {
         SectionTitle {
             id: creditsTitle
-            text: I18n.tr("Credits")
+            text: I18n.trFor("typingSounds", "Credits")
             icon: "favorite"
             collapsible: true
             settingKey: "creditsExpanded"
@@ -215,7 +215,7 @@ print(json.dumps(res))
                 {
                     author: "Mechvibes",
                     url: "https://github.com/hainguyents13/mechvibes",
-                    role: I18n.tr("Bundled mechanical keyboard sound packs."),
+                    role: I18n.trFor("typingSounds", "Bundled mechanical keyboard sound packs."),
                     icon: "keyboard"
                 }
             ]

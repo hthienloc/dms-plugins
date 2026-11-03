@@ -1,0 +1,164 @@
+{
+  "4-7-8 Breathing": {
+    "4-7-8 Breathing": "Hơi thở 4-7-8"
+  },
+  "<b>Left-click</b> the pill to start/pause the breathing session.": {
+    "<b>Left-click</b> the pill to start/pause the breathing session.": ""
+  },
+  "<b>Right-click</b> the pill to stop and reset the session.": {
+    "<b>Right-click</b> the pill to stop and reset the session.": ""
+  },
+  "Absolute path to custom audio.": {
+    "Absolute path to custom audio.": ""
+  },
+  "All files": {
+    "All files": ""
+  },
+  "Alternate Nostril": {
+    "Alternate Nostril": "Lỗ mũi thay thế"
+  },
+  "Ambient Meditation": {
+    "Ambient Meditation": ""
+  },
+  "Animation Style": {
+    "Animation Style": "Phong cách hoạt hình"
+  },
+  "Appearance": {
+    "Appearance": "Vẻ bề ngoài"
+  },
+  "Audio files": {
+    "Audio files": ""
+  },
+  "Auto-start Exercise": {
+    "Auto-start Exercise": "Bài tập tự động bắt đầu"
+  },
+  "Behavior": {
+    "Behavior": "Hành vi"
+  },
+  "Box Breathing": {
+    "Box Breathing": "Hơi thở hộp"
+  },
+  "Breathe In": {
+    "Breathe In": "hít vào"
+  },
+  "Breathe Out": {
+    "Breathe Out": "thở ra"
+  },
+  "Classic Card": {
+    "Classic Card": "Thẻ cổ điển"
+  },
+  "Custom Sound File": {
+    "Custom Sound File": "Tệp âm thanh tùy chỉnh"
+  },
+  "Deep Breathing": {
+    "Deep Breathing": "Hít thở sâu"
+  },
+  "Default Duration": {
+    "Default Duration": "Thời lượng mặc định"
+  },
+  "Default Exercise": {
+    "Default Exercise": "Bài tập mặc định"
+  },
+  "Double-click an exercise tile to start it immediately.": {
+    "Double-click an exercise tile to start it immediately.": "Bấm đúp vào ô bài tập để bắt đầu ngay."
+  },
+  "Equal Breathing": {
+    "Equal Breathing": "Hơi thở bình đẳng"
+  },
+  "Expanding Circle": {
+    "Expanding Circle": "Vòng tròn mở rộng"
+  },
+  "Feedback": {
+    "Feedback": "Nhận xét"
+  },
+  "Flowing Wave": {
+    "Flowing Wave": "Sóng Chảy"
+  },
+  "Follow the <b>visual guide</b> and <b>sound cues</b> to sync your breath.": {
+    "Follow the <b>visual guide</b> and <b>sound cues</b> to sync your breath.": ""
+  },
+  "General": {
+    "General": "Tổng quan"
+  },
+  "Haptic Feedback": {
+    "Haptic Feedback": "Phản hồi xúc giác"
+  },
+  "Hold": {
+    "Hold": "Giữ"
+  },
+  "Mute": {
+    "Mute": ""
+  },
+  "Open the <b>Popout</b> to choose different breathing techniques.": {
+    "Open the <b>Popout</b> to choose different breathing techniques.": ""
+  },
+  "Pause": {
+    "Pause": "Tạm dừng"
+  },
+  "Paused": {
+    "Paused": "Đã tạm dừng"
+  },
+  "Play falling pitch during exhale (default is inhale only).": {
+    "Play falling pitch during exhale (default is inhale only).": ""
+  },
+  "Press 'Space' to Pause/Resume, 'R' to Reset.": {
+    "Press 'Space' to Pause/Resume, 'R' to Reset.": "Nhấn 'Space' để Tạm dừng/Tiếp tục, 'R' để Đặt lại."
+  },
+  "Pulsating Glow": {
+    "Pulsating Glow": "Rực rỡ"
+  },
+  "Resonance": {
+    "Resonance": "cộng hưởng"
+  },
+  "Resume": {
+    "Resume": "Bản tóm tắt"
+  },
+  "Right-click bar icon to quickly toggle Start/Pause.": {
+    "Right-click bar icon to quickly toggle Start/Pause.": "Nhấp chuột phải vào biểu tượng thanh để nhanh chóng chuyển đổi Bắt đầu/Tạm dừng."
+  },
+  "Session length for auto-started exercises.": {
+    "Session length for auto-started exercises.": ""
+  },
+  "Show Hints": {
+    "Show Hints": "Hiển thị gợi ý"
+  },
+  "Singing Bowl Chime": {
+    "Singing Bowl Chime": ""
+  },
+  "Sound Cue Type": {
+    "Sound Cue Type": "Loại tín hiệu âm thanh"
+  },
+  "Sound Cues": {
+    "Sound Cues": "Tín hiệu âm thanh"
+  },
+  "Sound Volume": {
+    "Sound Volume": ""
+  },
+  "Start": {
+    "Start": "Bắt đầu"
+  },
+  "Start exercise automatically on login.": {
+    "Start exercise automatically on login.": "Bắt đầu bài tập tự động khi đăng nhập."
+  },
+  "Stop": {
+    "Stop": "Dừng lại"
+  },
+  "Stop Test": {
+    "Stop Test": "Dừng kiểm tra"
+  },
+  "Test Sound": {
+    "Test Sound": "Kiểm tra âm thanh"
+  },
+  "Two-Tone Model": {
+    "Two-Tone Model": "Mô hình hai tông màu"
+  },
+  "Unmute": {
+    "Unmute": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "min": {
+    "min": ""
+  }
+}

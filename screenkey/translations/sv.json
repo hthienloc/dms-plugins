@@ -1,0 +1,239 @@
+{
+  "Active": {
+    "Active": ""
+  },
+  "Adjust the distance of the overlay from screen edges": {
+    "Adjust the distance of the overlay from screen edges": ""
+  },
+  "All Keyboards (Auto)": {
+    "All Keyboards (Auto)": ""
+  },
+  "All Keys": {
+    "All Keys": ""
+  },
+  "Allow mouse clicks to pass through the overlay to underlying windows": {
+    "Allow mouse clicks to pass through the overlay to underlying windows": ""
+  },
+  "Bottom Center": {
+    "Bottom Center": ""
+  },
+  "Bottom Left": {
+    "Bottom Left": ""
+  },
+  "Bottom Right": {
+    "Bottom Right": ""
+  },
+  "Click-through": {
+    "Click-through": ""
+  },
+  "Connector character between shortcut keys (e.g. +, -, ➔)": {
+    "Connector character between shortcut keys (e.g. +, -, ➔)": ""
+  },
+  "Credits": {
+    "Credits": ""
+  },
+  "Custom Separator": {
+    "Custom Separator": ""
+  },
+  "Default": {
+    "Default": ""
+  },
+  "Disable visualizer": {
+    "Disable visualizer": ""
+  },
+  "Disabled": {
+    "Disabled": ""
+  },
+  "Display Position": {
+    "Display Position": ""
+  },
+  "Displays keystrokes on an always-on-top floating screen overlay.": {
+    "Displays keystrokes on an always-on-top floating screen overlay.": ""
+  },
+  "Enable Visualizer": {
+    "Enable Visualizer": ""
+  },
+  "Enable visualizer": {
+    "Enable visualizer": ""
+  },
+  "Ensure your user belongs to the <b>input</b> group to read keyboard events without root.": {
+    "Ensure your user belongs to the <b>input</b> group to read keyboard events without root.": ""
+  },
+  "Entry Animation": {
+    "Entry Animation": ""
+  },
+  "Exit Animation": {
+    "Exit Animation": ""
+  },
+  "Fade Only": {
+    "Fade Only": ""
+  },
+  "Fade Timeout": {
+    "Fade Timeout": ""
+  },
+  "Font Size": {
+    "Font Size": ""
+  },
+  "General Settings": {
+    "General Settings": ""
+  },
+  "IPC Commands": {
+    "IPC Commands": ""
+  },
+  "Ignore Lock Keys": {
+    "Ignore Lock Keys": ""
+  },
+  "Ignore system lock keys (CapsLock, NumLock, ScrollLock) to avoid noise": {
+    "Ignore system lock keys (CapsLock, NumLock, ScrollLock) to avoid noise": ""
+  },
+  "Inactivity duration before overlay disappears": {
+    "Inactivity duration before overlay disappears": ""
+  },
+  "Input Device": {
+    "Input Device": ""
+  },
+  "Key combinations are rendered as visual keycaps, and standard typing as stream text.": {
+    "Key combinations are rendered as visual keycaps, and standard typing as stream text.": ""
+  },
+  "Keyboard Device": {
+    "Keyboard Device": ""
+  },
+  "Keycap & Mouse Color": {
+    "Keycap & Mouse Color": ""
+  },
+  "Keycap Style": {
+    "Keycap Style": ""
+  },
+  "Keycap styles (Laptop, Low Profile, PBT, Minimal) and icon system ported from <b>keystrokes</b>.": {
+    "Keycap styles (Laptop, Low Profile, PBT, Minimal) and icon system ported from <b>keystrokes</b>.": ""
+  },
+  "Keystroke History Limit": {
+    "Keystroke History Limit": ""
+  },
+  "Laptop": {
+    "Laptop": ""
+  },
+  "Layout & Animations": {
+    "Layout & Animations": ""
+  },
+  "Low Profile": {
+    "Low Profile": ""
+  },
+  "Maximum characters buffer shown for normal text": {
+    "Maximum characters buffer shown for normal text": ""
+  },
+  "Minimal": {
+    "Minimal": ""
+  },
+  "Missing tool: %1": {
+    "Missing tool: %1": ""
+  },
+  "Modifiers": {
+    "Modifiers": ""
+  },
+  "Mouse": {
+    "Mouse": ""
+  },
+  "None": {
+    "None": ""
+  },
+  "Normal Text Color": {
+    "Normal Text Color": ""
+  },
+  "Normal Typing Limit": {
+    "Normal Typing Limit": ""
+  },
+  "Number of lines to display for keystroke history": {
+    "Number of lines to display for keystroke history": ""
+  },
+  "Original visual design and keycap styling inspired by <b>keyviz</b>.": {
+    "Original visual design and keycap styling inspired by <b>keyviz</b>.": ""
+  },
+  "Overlay Background Color": {
+    "Overlay Background Color": ""
+  },
+  "Overlay Opacity": {
+    "Overlay Opacity": ""
+  },
+  "PBT": {
+    "PBT": ""
+  },
+  "Position": {
+    "Position": ""
+  },
+  "Rounded Keycap Corners": {
+    "Rounded Keycap Corners": ""
+  },
+  "Scanning devices…": {
+    "Scanning devices…": ""
+  },
+  "Screen Margin": {
+    "Screen Margin": ""
+  },
+  "Screenkey": {
+    "Screenkey": ""
+  },
+  "Shortcuts": {
+    "Shortcuts": ""
+  },
+  "Show Held Modifiers": {
+    "Show Held Modifiers": ""
+  },
+  "Show Key Combinations": {
+    "Show Key Combinations": ""
+  },
+  "Show Mouse Clicks": {
+    "Show Mouse Clicks": ""
+  },
+  "Show Normal Keystrokes": {
+    "Show Normal Keystrokes": ""
+  },
+  "Show Standalone Modifiers": {
+    "Show Standalone Modifiers": ""
+  },
+  "Show a real-time status bar of active modifier keys currently being held down": {
+    "Show a real-time status bar of active modifier keys currently being held down": ""
+  },
+  "Toggle to display modifier shortcuts (e.g., Ctrl + Alt + T)": {
+    "Toggle to display modifier shortcuts (e.g., Ctrl + Alt + T)": ""
+  },
+  "Toggle to display modifiers and control keys as macOS symbols (e.g. ⌘, ⌥, ⇧, ⌃, ⏎)": {
+    "Toggle to display modifiers and control keys as macOS symbols (e.g. ⌘, ⌥, ⇧, ⌃, ⏎)": ""
+  },
+  "Toggle to display modifiers like Ctrl or Shift when pressed alone": {
+    "Toggle to display modifiers like Ctrl or Shift when pressed alone": ""
+  },
+  "Toggle to display normal letters instead of just modifier shortcuts": {
+    "Toggle to display normal letters instead of just modifier shortcuts": ""
+  },
+  "Toggle visualizer": {
+    "Toggle visualizer": ""
+  },
+  "Top Center": {
+    "Top Center": ""
+  },
+  "Top Left": {
+    "Top Left": ""
+  },
+  "Top Right": {
+    "Top Right": ""
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use macOS Symbols": {
+    "Use macOS Symbols": ""
+  },
+  "User not in 'input' group (run: sudo usermod -aG input $USER)": {
+    "User not in 'input' group (run: sudo usermod -aG input $USER)": ""
+  },
+  "Visibility Options": {
+    "Visibility Options": ""
+  },
+  "Visual style for rendered keycaps (Default, Laptop, Low Profile, PBT, Minimal)": {
+    "Visual style for rendered keycaps (Default, Laptop, Low Profile, PBT, Minimal)": ""
+  },
+  "Zoom": {
+    "Zoom": ""
+  }
+}

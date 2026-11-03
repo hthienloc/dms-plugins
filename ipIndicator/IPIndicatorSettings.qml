@@ -12,7 +12,7 @@ PluginSettings {
     SettingsCard {
         id: barDisplaySection
         SectionTitle { 
-            text: I18n.tr("Bar Display")
+            text: I18n.trFor("ipIndicator", "Bar Display")
             icon: "view_day" 
             showReset: displayMode.isDirty || useFlagIcon.isDirty
             onResetClicked: {
@@ -24,30 +24,30 @@ PluginSettings {
         SelectionSettingPlus {
             id: displayMode
             settingKey: "displayMode"
-            label: I18n.tr("Display Content")
+            label: I18n.trFor("ipIndicator", "Display Content")
             options: [{
-                "label": I18n.tr("Country"),
+                "label": I18n.trFor("ipIndicator", "Country"),
                 "value": "country"
             }, {
-                "label": I18n.tr("City"),
+                "label": I18n.trFor("ipIndicator", "City"),
                 "value": "city"
             }, {
-                "label": I18n.tr("ISP"),
+                "label": I18n.trFor("ipIndicator", "ISP"),
                 "value": "isp"
             }, {
-                "label": I18n.tr("IP Address"),
+                "label": I18n.trFor("ipIndicator", "IP Address"),
                 "value": "ip"
             }, {
-                "label": I18n.tr("Country + IP"),
+                "label": I18n.trFor("ipIndicator", "Country + IP"),
                 "value": "country_ip"
             }, {
-                "label": I18n.tr("Country + City"),
+                "label": I18n.trFor("ipIndicator", "Country + City"),
                 "value": "country_city"
             }, {
-                "label": I18n.tr("City + IP"),
+                "label": I18n.trFor("ipIndicator", "City + IP"),
                 "value": "city_ip"
             }, {
-                "label": I18n.tr("Icon Only"),
+                "label": I18n.trFor("ipIndicator", "Icon Only"),
                 "value": "icon"
             }]
             defaultValue: "country"
@@ -58,8 +58,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: useFlagIcon
             settingKey: "useFlagIcon"
-            label: I18n.tr("Use Country Flag as Icon")
-            description: I18n.tr("Show the country's flag on the bar pill instead of the default globe icon.")
+            label: I18n.trFor("ipIndicator", "Use Country Flag as Icon")
+            description: I18n.trFor("ipIndicator", "Show the country's flag on the bar pill instead of the default globe icon.")
             defaultValue: true
         }
     }
@@ -67,7 +67,7 @@ PluginSettings {
     SettingsCard {
         id: popoutSection
         SectionTitle { 
-            text: I18n.tr("Popout Content")
+            text: I18n.trFor("ipIndicator", "Popout Content")
             icon: "call_made" 
             showReset: showIPv4.isDirty || showIPv6.isDirty || showISP.isDirty || showLocation.isDirty || showLocalIP.isDirty || showLocalGateway.isDirty || showLocalInterface.isDirty || showLatency.isDirty || showHints.isDirty
             onResetClicked: {
@@ -86,7 +86,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showIPv4
             settingKey: "showIPv4"
-            label: I18n.tr("Show IPv4")
+            label: I18n.trFor("ipIndicator", "Show IPv4")
             defaultValue: true
         }
 
@@ -95,7 +95,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showIPv6
             settingKey: "showIPv6"
-            label: I18n.tr("Show IPv6")
+            label: I18n.trFor("ipIndicator", "Show IPv6")
             defaultValue: true
         }
 
@@ -104,7 +104,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showISP
             settingKey: "showISP"
-            label: I18n.tr("Show ISP")
+            label: I18n.trFor("ipIndicator", "Show ISP")
             defaultValue: true
         }
 
@@ -113,7 +113,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showLocation
             settingKey: "showLocation"
-            label: I18n.tr("Show Location")
+            label: I18n.trFor("ipIndicator", "Show Location")
             defaultValue: true
         }
 
@@ -122,7 +122,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showLocalIP
             settingKey: "showLocalIP"
-            label: I18n.tr("Show Local IP")
+            label: I18n.trFor("ipIndicator", "Show Local IP")
             defaultValue: true
         }
 
@@ -131,7 +131,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showLocalGateway
             settingKey: "showLocalGateway"
-            label: I18n.tr("Show Local Gateway")
+            label: I18n.trFor("ipIndicator", "Show Local Gateway")
             defaultValue: true
         }
 
@@ -140,7 +140,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showLocalInterface
             settingKey: "showLocalInterface"
-            label: I18n.tr("Show Local Interface")
+            label: I18n.trFor("ipIndicator", "Show Local Interface")
             defaultValue: true
         }
 
@@ -149,7 +149,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showLatency
             settingKey: "showLatency"
-            label: I18n.tr("Show Latency")
+            label: I18n.trFor("ipIndicator", "Show Latency")
             defaultValue: true
         }
 
@@ -158,7 +158,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showHints
             settingKey: "showHints"
-            label: I18n.tr("Show Hints")
+            label: I18n.trFor("ipIndicator", "Show Hints")
             defaultValue: true
         }
     }
@@ -166,7 +166,7 @@ PluginSettings {
     SettingsCard {
         id: behaviorSection
         SectionTitle { 
-            text: I18n.tr("Behavior")
+            text: I18n.trFor("ipIndicator", "Behavior")
             icon: "settings" 
             showReset: refreshInterval.isDirty || notifyOnIPChange.isDirty || privacyDefault.isDirty
             onResetClicked: {
@@ -179,11 +179,11 @@ PluginSettings {
         SliderSettingPlus {
             id: refreshInterval
             settingKey: "refreshInterval"
-            label: I18n.tr("Refresh Interval")
-            description: I18n.tr("How often to check for IP changes.")
+            label: I18n.trFor("ipIndicator", "Refresh Interval")
+            description: I18n.trFor("ipIndicator", "How often to check for IP changes.")
             minimum: 1
             maximum: 60
-            unit: I18n.tr("min")
+            unit: I18n.trFor("ipIndicator", "min")
             defaultValue: 30
             leftLabel: "1"
             rightLabel: "60"
@@ -194,8 +194,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: notifyOnIPChange
             settingKey: "notifyOnIPChange"
-            label: I18n.tr("IP Change Notifications")
-            description: I18n.tr("Show a desktop notification when your public IP address or ISP changes.")
+            label: I18n.trFor("ipIndicator", "IP Change Notifications")
+            description: I18n.trFor("ipIndicator", "Show a desktop notification when your public IP address or ISP changes.")
             defaultValue: false
         }
 
@@ -204,8 +204,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: privacyDefault
             settingKey: "privacyDefault"
-            label: I18n.tr("Default to Privacy Mode")
-            description: I18n.tr("Start the plugin with public IP details hidden by default.")
+            label: I18n.trFor("ipIndicator", "Default to Privacy Mode")
+            description: I18n.trFor("ipIndicator", "Start the plugin with public IP details hidden by default.")
             defaultValue: false
         }
     }
@@ -213,7 +213,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle { 
             id: usageTitle
-            text: I18n.tr("Usage Guide")
+            text: I18n.trFor("ipIndicator", "Usage Guide")
             icon: "menu_book" 
             collapsible: true
             settingKey: "usageGuideExpanded"
@@ -222,11 +222,11 @@ PluginSettings {
         UsageGuide {
             expanded: usageTitle.isExpanded
             items: [
-                I18n.tr("<b>Left-click</b> the pill to open the IP details popout."),
-                I18n.tr("<b>Right-click</b> the pill to manually force a refresh."),
-                I18n.tr("<b>Middle-click</b> the pill to toggle privacy mode."),
-                I18n.tr("Click any <b>IP address</b> in the popout to copy it to the clipboard."),
-                I18n.tr("Click the <b>eye icon</b> in the popout to toggle privacy mode.")
+                I18n.trFor("ipIndicator", "<b>Left-click</b> the pill to open the IP details popout."),
+                I18n.trFor("ipIndicator", "<b>Right-click</b> the pill to manually force a refresh."),
+                I18n.trFor("ipIndicator", "<b>Middle-click</b> the pill to toggle privacy mode."),
+                I18n.trFor("ipIndicator", "Click any <b>IP address</b> in the popout to copy it to the clipboard."),
+                I18n.trFor("ipIndicator", "Click the <b>eye icon</b> in the popout to toggle privacy mode.")
             ]
         }
     }

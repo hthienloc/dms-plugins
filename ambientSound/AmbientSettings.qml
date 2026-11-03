@@ -48,7 +48,7 @@ PluginSettings {
     ]
 
     property var autoStartStates: ({})
-    property var presetOptions: [{ label: I18n.tr("None"), value: "" }]
+    property var presetOptions: [{ label: I18n.trFor("ambientSound", "None"), value: "" }]
 
     function autoStartKey(soundName) {
         return "autoStart" + soundName.charAt(0).toUpperCase() + soundName.slice(1).replace("-", "");
@@ -64,7 +64,7 @@ PluginSettings {
     }
 
     function updatePresetsList() {
-        let opts = [{ label: I18n.tr("None"), value: "" }];
+        let opts = [{ label: I18n.trFor("ambientSound", "None"), value: "" }];
         let saved = root.loadValue("presets", []);
         for (let i = 0; i < saved.length; i++) {
             opts.push({ label: saved[i].name, value: saved[i].name });
@@ -88,7 +88,7 @@ PluginSettings {
     SettingsCard {
         id: audioSection
         SectionTitle { 
-            text: I18n.tr("Audio")
+            text: I18n.trFor("ambientSound", "Audio")
             icon: "volume_up" 
             showReset: defaultVolume.isDirty
             onResetClicked: defaultVolume.resetToDefault()
@@ -97,8 +97,8 @@ PluginSettings {
         SliderSettingPlus {
             id: defaultVolume
             settingKey: "defaultVolume"
-            label: I18n.tr("Default Volume")
-            description: I18n.tr("Initial volume when starting.")
+            label: I18n.trFor("ambientSound", "Default Volume")
+            description: I18n.trFor("ambientSound", "Initial volume when starting.")
             minimum: 0
             maximum: 100
             unit: "%"
@@ -111,7 +111,7 @@ PluginSettings {
     SettingsCard {
         id: timerSection
         SectionTitle { 
-            text: I18n.tr("Sleep Timer")
+            text: I18n.trFor("ambientSound", "Sleep Timer")
             icon: "timer" 
             showReset: enableSleepTimer.isDirty || defaultTimer.isDirty
             onResetClicked: {
@@ -123,8 +123,8 @@ PluginSettings {
         ToggleSettingPlus {
             id: enableSleepTimer
             settingKey: "enableSleepTimer"
-            label: I18n.tr("Enable Sleep Timer")
-            description: I18n.tr("Stop audio automatically after set duration.")
+            label: I18n.trFor("ambientSound", "Enable Sleep Timer")
+            description: I18n.trFor("ambientSound", "Stop audio automatically after set duration.")
             defaultValue: true
         }
 
@@ -133,14 +133,14 @@ PluginSettings {
         SelectionSettingPlus {
             id: defaultTimer
             settingKey: "defaultTimer"
-            label: I18n.tr("Default Duration")
+            label: I18n.trFor("ambientSound", "Default Duration")
             options: [
-                { label: I18n.tr("15 minutes"), value: "15" },
-                { label: I18n.tr("30 minutes"), value: "30" },
-                { label: I18n.tr("45 minutes"), value: "45" },
-                { label: I18n.tr("1 hour"), value: "60" },
-                { label: I18n.tr("1.5 hours"), value: "90" },
-                { label: I18n.tr("2 hours"), value: "120" }
+                { label: I18n.trFor("ambientSound", "15 minutes"), value: "15" },
+                { label: I18n.trFor("ambientSound", "30 minutes"), value: "30" },
+                { label: I18n.trFor("ambientSound", "45 minutes"), value: "45" },
+                { label: I18n.trFor("ambientSound", "1 hour"), value: "60" },
+                { label: I18n.trFor("ambientSound", "1.5 hours"), value: "90" },
+                { label: I18n.trFor("ambientSound", "2 hours"), value: "120" }
             ]
             defaultValue: "30"
             visible: enableSleepTimer.value
@@ -148,15 +148,15 @@ PluginSettings {
     }
 
     SettingsCard {
-        SectionTitle { text: I18n.tr("Auto-start Mode"); icon: "play_arrow" }
+        SectionTitle { text: I18n.trFor("ambientSound", "Auto-start Mode"); icon: "play_arrow" }
 
         ButtonGroupSettingPlus {
             id: autoStartMode
             settingKey: "autoStartMode"
-            label: I18n.tr("Select Mode")
+            label: I18n.trFor("ambientSound", "Select Mode")
             options: [
-                { label: I18n.tr("Preset"), value: "preset" },
-                { label: I18n.tr("Individual Sounds"), value: "individual" }
+                { label: I18n.trFor("ambientSound", "Preset"), value: "preset" },
+                { label: I18n.trFor("ambientSound", "Individual Sounds"), value: "individual" }
             ]
             defaultValue: "preset"
         }
@@ -166,8 +166,8 @@ PluginSettings {
         SelectionSettingPlus {
             id: autoStartPreset
             settingKey: "autoStartPreset"
-            label: I18n.tr("Auto-play Preset")
-            description: I18n.tr("Select preset to play automatically when you log in.")
+            label: I18n.trFor("ambientSound", "Auto-play Preset")
+            description: I18n.trFor("ambientSound", "Select preset to play automatically when you log in.")
             options: root.presetOptions
             defaultValue: ""
             visible: autoStartMode.value === "preset"
@@ -202,7 +202,7 @@ PluginSettings {
                             color: isChecked ? Theme.onPrimary : Theme.surfaceVariantText
                         }
                         StyledText {
-                            text: I18n.tr(modelData.name.replace("-", " "))
+                            text: I18n.trFor("ambientSound", modelData.name.replace("-", " "))
                             font.pixelSize: Theme.fontSizeSmall
                             font.weight: isChecked ? Font.Bold : Font.Normal
                             color: isChecked ? Theme.onPrimary : Theme.surfaceText
@@ -224,7 +224,7 @@ PluginSettings {
     SettingsCard {
         id: behaviorSection
         SectionTitle { 
-            text: I18n.tr("Behavior")
+            text: I18n.trFor("ambientSound", "Behavior")
             icon: "settings" 
             showReset: showHints.isDirty || middleClickAction.isDirty
             onResetClicked: {
@@ -236,8 +236,8 @@ PluginSettings {
         SelectionSettingPlus {
             id: middleClickAction
             settingKey: "middleClickAction"
-            label: I18n.tr("Middle-click Preset")
-            description: I18n.tr("Sound preset to play/toggle when middle-clicking the bar icon.")
+            label: I18n.trFor("ambientSound", "Middle-click Preset")
+            description: I18n.trFor("ambientSound", "Sound preset to play/toggle when middle-clicking the bar icon.")
             options: root.presetOptions
             defaultValue: ""
         }
@@ -247,7 +247,7 @@ PluginSettings {
         ToggleSettingPlus {
             id: showHints
             settingKey: "showHints"
-            label: I18n.tr("Show Hints")
+            label: I18n.trFor("ambientSound", "Show Hints")
             defaultValue: true
         }
     }
@@ -255,12 +255,12 @@ PluginSettings {
     SettingsCard {
         id: customSoundsSection
         SectionTitle {
-            text: I18n.tr("Custom Sounds")
+            text: I18n.trFor("ambientSound", "Custom Sounds")
             icon: "music_note"
         }
 
         DButton {
-            text: I18n.tr("Add Custom Sound")
+            text: I18n.trFor("ambientSound", "Add Custom Sound")
             iconName: "add"
             backgroundColor: Theme.primary
             width: parent.width
@@ -330,7 +330,7 @@ PluginSettings {
 
     FileBrowserModal {
         id: customSoundBrowser
-        browserTitle: I18n.tr("Select Audio File")
+        browserTitle: I18n.trFor("ambientSound", "Select Audio File")
         fileExtensions: ["*.ogg", "*.mp3", "*.wav", "*.m4a"]
         onFileSelected: (filePath) => {
             let cleanPath = filePath;
@@ -346,14 +346,14 @@ PluginSettings {
             if (!updated.some(item => item.path === cleanPath)) {
                 updated.push({ name: nameWithoutExt, path: cleanPath });
                 root.saveCustomSounds(updated);
-                ToastService.showInfo(I18n.tr("Added custom sound!"));
+                ToastService.showInfo(I18n.trFor("ambientSound", "Added custom sound!"));
             } else {
-                ToastService.showWarning(I18n.tr("Sound already exists."));
+                ToastService.showWarning(I18n.trFor("ambientSound", "Sound already exists."));
             }
         }
     }
     SettingsCard {
-        SectionTitle { text: I18n.tr("Visible Sounds"); icon: "visibility" }
+        SectionTitle { text: I18n.trFor("ambientSound", "Visible Sounds"); icon: "visibility" }
 
         Flow {
             id: visibleSoundsFlow
@@ -380,7 +380,7 @@ PluginSettings {
                             color: isVisible ? Theme.onPrimary : Theme.surfaceVariantText
                         }
                         StyledText {
-                            text: I18n.tr(modelData.name.replace("-", " "))
+                            text: I18n.trFor("ambientSound", modelData.name.replace("-", " "))
                             font.pixelSize: Theme.fontSizeSmall
                             font.weight: isVisible ? Font.Bold : Font.Normal
                             color: isVisible ? Theme.onPrimary : Theme.surfaceText
@@ -410,7 +410,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle { 
             id: usageTitle
-            text: I18n.tr("Usage Guide")
+            text: I18n.trFor("ambientSound", "Usage Guide")
             icon: "menu_book" 
             collapsible: true
             settingKey: "usageGuideExpanded"
@@ -419,11 +419,11 @@ PluginSettings {
         UsageGuide {
             expanded: usageTitle.isExpanded
             items: [
-                I18n.tr("<b>Left-click</b> the pill to open the sound selector."),
-                I18n.tr("<b>Middle-click</b> the pill to toggle your chosen sound preset."),
-                I18n.tr("<b>Right-click</b> the pill to toggle mute."),
-                I18n.tr("You can play <b>multiple sounds</b> simultaneously to create your own atmosphere."),
-                I18n.tr("Set the <b>Sleep Timer</b> in the popout to turn off sounds after a delay.")
+                I18n.trFor("ambientSound", "<b>Left-click</b> the pill to open the sound selector."),
+                I18n.trFor("ambientSound", "<b>Middle-click</b> the pill to toggle your chosen sound preset."),
+                I18n.trFor("ambientSound", "<b>Right-click</b> the pill to toggle mute."),
+                I18n.trFor("ambientSound", "You can play <b>multiple sounds</b> simultaneously to create your own atmosphere."),
+                I18n.trFor("ambientSound", "Set the <b>Sleep Timer</b> in the popout to turn off sounds after a delay.")
             ]
         }
     }
@@ -431,7 +431,7 @@ PluginSettings {
     SettingsCard {
         SectionTitle {
             id: creditsTitle
-            text: I18n.tr("Credits")
+            text: I18n.trFor("ambientSound", "Credits")
             icon: "favorite"
             collapsible: true
             settingKey: "creditsExpanded"
@@ -443,19 +443,19 @@ PluginSettings {
                 {
                     author: "Zurvan",
                     url: "https://github.com/georgestafilidis",
-                    role: I18n.tr("UI redesign concept and aesthetics."),
+                    role: I18n.trFor("ambientSound", "UI redesign concept and aesthetics."),
                     icon: "palette"
                 },
                 {
                     author: "Blankie",
                     url: "https://github.com/codybrom/Blankie",
-                    role: I18n.tr("Sound assets and inspiration."),
+                    role: I18n.trFor("ambientSound", "Sound assets and inspiration."),
                     icon: "library_music"
                 },
                 {
                     author: "Blanket",
                     url: "https://github.com/rafaelmardojai/blanket",
-                    role: I18n.tr("Sound assets and audio player inspiration."),
+                    role: I18n.trFor("ambientSound", "Sound assets and audio player inspiration."),
                     icon: "library_music"
                 }
             ]

@@ -1,0 +1,182 @@
+{
+  "1h 5m 10s": {
+    "1h 5m 10s": "1h 5m 10s"
+  },
+  "5m 10s": {
+    "5m 10s": "5m 10s"
+  },
+  "<b>Left-click</b> the pill to <b>Pause</b> or <b>Resume</b> the timer.": {
+    "<b>Left-click</b> the pill to <b>Pause</b> or <b>Resume</b> the timer.": ""
+  },
+  "<b>Right-click</b> the pill to <b>Reset</b> (or <b>Quick Start</b> if ready).": {
+    "<b>Right-click</b> the pill to <b>Reset</b> (or <b>Quick Start</b> if ready).": ""
+  },
+  "All files": {
+    "All files": ""
+  },
+  "Audio files": {
+    "Audio files": ""
+  },
+  "Automatically Do Not Disturb": {
+    "Automatically Do Not Disturb": ""
+  },
+  "Automatically perform a system action when the timer finishes.": {
+    "Automatically perform a system action when the timer finishes.": "Führen Sie automatisch eine Systemaktion aus, wenn der Timer abgelaufen ist."
+  },
+  "Behavior": {
+    "Behavior": "Verhalten"
+  },
+  "Comma-separated list of minutes for quick start buttons.": {
+    "Comma-separated list of minutes for quick start buttons.": "Durch Kommas getrennte Minutenliste für Schnellstartschaltflächen."
+  },
+  "Custom": {
+    "Custom": ""
+  },
+  "Custom Actions": {
+    "Custom Actions": "Benutzerdefinierte Aktionen"
+  },
+  "Custom Command": {
+    "Custom Command": ""
+  },
+  "Custom Sound Path": {
+    "Custom Sound Path": "Benutzerdefinierter Klangpfad"
+  },
+  "Custom shell command...": {
+    "Custom shell command...": ""
+  },
+  "Display": {
+    "Display": "Anzeige"
+  },
+  "Display Content": {
+    "Display Content": "Inhalte anzeigen"
+  },
+  "Execute a shell command when the timer finishes.": {
+    "Execute a shell command when the timer finishes.": "Führen Sie einen Shell-Befehl aus, wenn der Timer abgelaufen ist."
+  },
+  "Full path to sound file. Leave empty for default.": {
+    "Full path to sound file. Leave empty for default.": "Vollständiger Pfad zur Sounddatei. Als Standardwert leer lassen."
+  },
+  "Hibernate": {
+    "Hibernate": "Überwintern"
+  },
+  "Icon Only": {
+    "Icon Only": "Nur Symbol"
+  },
+  "Left-click to Pause/Resume, Right-click to Reset (Quick Start when ready).": {
+    "Left-click to Pause/Resume, Right-click to Reset (Quick Start when ready).": "Klicken Sie mit der linken Maustaste, um anzuhalten/fortzusetzen, und klicken Sie mit der rechten Maustaste, um zurückzusetzen (Schnellstart, wenn Sie bereit sind)."
+  },
+  "Lock": {
+    "Lock": ""
+  },
+  "Lock Screen": {
+    "Lock Screen": "Bildschirm sperren"
+  },
+  "None": {
+    "None": "Keiner"
+  },
+  "Notification Body": {
+    "Notification Body": "Benachrichtigungsstelle"
+  },
+  "Notification Title": {
+    "Notification Title": "Titel der Benachrichtigung"
+  },
+  "Notifications": {
+    "Notifications": "Benachrichtigungen"
+  },
+  "Open the <b>Popout</b> to select presets or enter custom minutes.": {
+    "Open the <b>Popout</b> to select presets or enter custom minutes.": ""
+  },
+  "Power Off": {
+    "Power Off": "Ausschalten"
+  },
+  "Presets": {
+    "Presets": "Voreinstellungen"
+  },
+  "Progress Bar": {
+    "Progress Bar": "Fortschrittsbalken"
+  },
+  "Pulse Dot ✦": {
+    "Pulse Dot ✦": "Pulspunkt ✦"
+  },
+  "Quick Presets": {
+    "Quick Presets": ""
+  },
+  "Reset to Ready": {
+    "Reset to Ready": "Auf „Bereit“ zurücksetzen"
+  },
+  "Right-Click Quick Start": {
+    "Right-Click Quick Start": ""
+  },
+  "Run Custom Shell Command": {
+    "Run Custom Shell Command": "Führen Sie den benutzerdefinierten Shell-Befehl aus"
+  },
+  "Select a preset or enter minutes": {
+    "Select a preset or enter minutes": "Wählen Sie eine Voreinstellung oder geben Sie Minuten ein"
+  },
+  "Set": {
+    "Set": "Satz"
+  },
+  "Show 'When Done' Section": {
+    "Show 'When Done' Section": ""
+  },
+  "Show Desktop Notification": {
+    "Show Desktop Notification": "Desktop-Benachrichtigung anzeigen"
+  },
+  "Show Hints": {
+    "Show Hints": "Hinweise anzeigen"
+  },
+  "Show Icon": {
+    "Show Icon": "Symbol anzeigen"
+  },
+  "Show Ready Placeholder": {
+    "Show Ready Placeholder": "Bereit-Platzhalter anzeigen"
+  },
+  "Show placeholder digits/text when the timer is in the ready state.": {
+    "Show placeholder digits/text when the timer is in the ready state.": "Platzhalterziffern/-text anzeigen, wenn der Timer im Bereitschaftszustand ist."
+  },
+  "Shutdown": {
+    "Shutdown": ""
+  },
+  "Sleep": {
+    "Sleep": ""
+  },
+  "Sound": {
+    "Sound": "Klang"
+  },
+  "Stay at Finished": {
+    "Stay at Finished": "Bleiben Sie bei „Fertig“."
+  },
+  "Suspend": {
+    "Suspend": "Aussetzen"
+  },
+  "The duration in minutes to start when right-clicking the icon in Ready state.": {
+    "The duration in minutes to start when right-clicking the icon in Ready state.": "Die Dauer in Minuten, die beim Klicken mit der rechten Maustaste auf das Symbol im Status „Bereit“ beginnt."
+  },
+  "Timeout!": {
+    "Timeout!": "Time-out!"
+  },
+  "Timer": {
+    "Timer": "Timer"
+  },
+  "Toggle Do Not Disturb mode when the timer is active.": {
+    "Toggle Do Not Disturb mode when the timer is active.": ""
+  },
+  "Trigger System Action": {
+    "Trigger System Action": "Systemaktion auslösen"
+  },
+  "Usage Guide": {
+    "Usage Guide": ""
+  },
+  "Use System Notification Sound": {
+    "Use System Notification Sound": "Verwenden Sie den Systembenachrichtigungston"
+  },
+  "Use system's critical notification sound if no path is set.": {
+    "Use system's critical notification sound if no path is set.": "Verwenden Sie den kritischen Benachrichtigungston des Systems, wenn kein Pfad festgelegt ist."
+  },
+  "When Done": {
+    "When Done": "Wenn fertig"
+  },
+  "When Finished": {
+    "When Finished": "Wenn fertig"
+  }
+}
