@@ -30,7 +30,7 @@ PluginComponent {
         pluginData: root.pluginData
     }
 
-    function runAfterPopoutClosed(action) {
+    function closePopoutImmediately() {
         if (root.attachedActive)
             root.surfaceContext?.dismissExpansion?.();
         if (root.activePopout && typeof root.activePopout.instantClose === "function") {
@@ -38,6 +38,10 @@ PluginComponent {
         } else {
             root.closePopout();
         }
+    }
+
+    function runAfterPopoutClosed(action) {
+        closePopoutImmediately();
         Qt.callLater(action);
     }
 
