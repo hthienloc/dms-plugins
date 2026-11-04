@@ -6,7 +6,7 @@ Display your public IP, ISP, and location.
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install ipIndicator
 ```

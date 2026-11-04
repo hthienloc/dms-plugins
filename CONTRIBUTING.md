@@ -7,8 +7,8 @@ Contributions to plugins in this repository are welcome. Follow these guidelines
 ## 1. Core Principles
 
 - **No Magic Numbers:** Never hardcode pixel sizes, margins, padding, or colors. Always use tokens from `Theme` (`qs.Common`).
-- **Reuse Built-in Primitives:** Always prefer official DMS components (`DActionButton`, `DDropdown`, `DSlider`, `StyledText`) over custom ad-hoc shapes.
-- **Minimal Dependencies:** Never declare external package dependencies for tools DMS provides natively.
+- **Reuse Built-in Primitives:** Always prefer official Dux Shell components (`DActionButton`, `DDropdown`, `DSlider`, `StyledText`) over custom ad-hoc shapes.
+- **Minimal Dependencies:** Never declare external package dependencies for tools Dux Shell provides natively.
 - **One Plugin per PR:** Scope each PR strictly to a single plugin directory (`<pluginName>/`).
 
 ---
@@ -18,7 +18,7 @@ Contributions to plugins in this repository are welcome. Follow these guidelines
 Consult these focused guides before implementing or updating plugin UI:
 
 - **[Design System & Tokens](docs/design-system.md):** Complete reference for `Theme.buttonHeight*`, `Theme.iconSize*`, spacing, corner radius, and color roles.
-- **[Components Reference](docs/components.md):** Official DMS widgets and shared settings components.
+- **[Components Reference](docs/components.md):** Official Dux Shell widgets and shared settings components.
 - **[Conventions & Native Services](docs/conventions.md):** Directory standards, settings layout, and native CLI/QML replacements.
 - **[Development & Testing](docs/development.md):** IPC hot-reloading commands, testing workflows, and linting scripts.
 

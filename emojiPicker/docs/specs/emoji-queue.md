@@ -53,15 +53,16 @@ example, `👍`, `🔥`, `🚀` produces `👍🔥🚀`.
 ## Tech Stack
 
 - QML / QtQuick 6
-- Quickshell and DankMaterialShell plugin APIs
+- Quickshell and Dux Shell plugin APIs
 - `DMSService` clipboard request and `ClipboardService` paste keystroke
-- Existing DMS theme and widget components
+- Existing Dux Shell theme and widget components
 
 ## Commands
 
 ```bash
+# Set DUX_SHELL_SOURCE to the path of your local Dux Shell checkout.
 # Static QML validation
-qmllint -I /home/loccun/Documents/GitHub/DankMaterialShell/quickshell -I . \
+qmllint -I "$DUX_SHELL_SOURCE/quickshell" -I . \
   EmojiPicker.qml EmojiQueuePreview.qml EmojiPickerSettings.qml
 
 # Manifest validation
@@ -71,7 +72,7 @@ jq -e . plugin.json
 git diff --check
 ```
 
-Manual verification runs in DMS after opening the plugin with:
+Manual verification runs in Dux Shell after opening the plugin with:
 
 ```bash
 dms ipc call emojiPicker open
@@ -84,14 +85,14 @@ EmojiPicker.qml          Picker state, clipboard actions, modal UI, input handli
 EmojiQueuePreview.qml    Queue sequence and copy/paste actions
 EmojiPickerSettings.qml  Settings usage guide
 README.md                User-facing controls documentation
-plugin.json              DMS plugin manifest
+plugin.json              Dux Shell plugin manifest
 docs/specs/              Feature specifications
 ```
 
 ## Code Style
 
 Follow the existing QML style: root-owned state, small intent-named functions,
-early returns, `const`/`let` for local JavaScript state, and DMS theme tokens.
+early returns, `const`/`let` for local JavaScript state, and Dux Shell theme tokens.
 
 ```qml
 function appendCurrentEmoji() {

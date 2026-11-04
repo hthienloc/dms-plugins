@@ -6,7 +6,7 @@ Hide unused bar widgets and expand them on demand.
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install hiddenBar
 ```
@@ -33,7 +33,7 @@ git clone https://github.com/hthienloc/dms-hidden-bar ~/.config/DankMaterialShel
 | Right click | Pin/unpin expanded state |
 
 > [!NOTE]
-> Inline mode detects newly added status bar widgets automatically. Popout Overflow changes require restarting DankMaterialShell (`dms restart`).
+> Inline mode detects newly added status bar widgets automatically. Popout Overflow changes require restarting Dux Shell (`dms restart`).
 
 ## IPC Commands
 

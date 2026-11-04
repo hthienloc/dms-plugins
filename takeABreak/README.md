@@ -6,7 +6,7 @@ A gentle companion that reminds you to rest your eyes with short and long breaks
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install takeABreak
 ```
@@ -23,7 +23,7 @@ git clone https://github.com/hthienloc/dms-take-a-break ~/.config/DankMaterialSh
 - **Fullscreen Overlay** - Immersive break experience with health tips and a countdown timer.
 - **Smart Suppression** - Automatically delays breaks if you are in a fullscreen app or game.
 - **UI Customization** - Choose from 8 screen positions for warnings and adjust overlay transparency.
-- **Work Area Aware** - UI elements automatically avoid DMS bars and docks.
+- **Work Area Aware** - UI elements automatically avoid Dux Shell bars and docks.
 
 ## Usage
 

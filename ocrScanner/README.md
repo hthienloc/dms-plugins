@@ -6,7 +6,7 @@ Extract text from images using Tesseract OCR.
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install ocrScanner
 ```
@@ -46,7 +46,7 @@ GPL-3.0
 
 ## Roadmap / TODO
 
-- [x] **Screenshot OCR**: Capture and scan portions of the screen directly using the DMS screenshot tool.
+- [x] **Screenshot OCR**: Capture and scan portions of the screen directly using the Dux Shell screenshot tool.
 - [x] **Persistent History**: Implement a local database to store previous scans, including timestamps and source image references.
 - [ ] **On-device Translation**: Integrate a lightweight translation service (or API) to translate extracted text instantly.
 - [ ] **Batch Processing**: Support selecting multiple images for sequential OCR with a merged text output.

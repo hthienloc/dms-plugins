@@ -6,7 +6,7 @@ Browse and copy kaomoji (Japanese emoticons) directly to your clipboard.
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install kaomojiPicker
 ```

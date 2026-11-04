@@ -1,6 +1,6 @@
-# DMS Plugins
+# Dux Shell Plugins
 
-A collection of plugins for [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell) maintained by [@hthienloc](https://github.com/hthienloc).
+A collection of plugins for [Dux Shell](https://github.com/duxlabs-dev/dux-shell) maintained by [@hthienloc](https://github.com/hthienloc).
 
 ## Plugins
 
@@ -16,7 +16,7 @@ A collection of plugins for [DankMaterialShell](https://github.com/AvengeMedia/D
 | [Hidden Bar](hiddenBar) | DankBar Widget | Expand and collapse extra DankBar items like macOS Hidden Bar. |
 | [Hydrate](hydrate) | DankBar Widget / Popout | Water intake reminder and hydration tracking dashboard. |
 | [IP Indicator](ipIndicator) | DankBar Widget / Popout | Display local/public IP address, ISP, and network location. |
-| [Kaomoji Picker](kaomojiPicker) | Launcher | Search and copy Japanese emoticons (kaomojis) directly from DMS launcher. |
+| [Kaomoji Picker](kaomojiPicker) | Launcher | Search and copy Japanese emoticons (kaomojis) directly from the Dux Shell launcher. |
 | [Lutris Launcher](lutrisLauncher) | DankBar Widget / Popout | Browse and launch Lutris games from a visual bar popout grid. |
 | [Media Downloader](mediaDownloader) | DankBar Widget / Popout | Download media via yt-dlp right from the shell. |
 | [Niri Display Settings](niriDS) | Composite (Daemon / Control Center) | Manage display scaling, resolution, and monitor profile layout for Niri. |
@@ -31,7 +31,7 @@ A collection of plugins for [DankMaterialShell](https://github.com/AvengeMedia/D
 ## Documentation
 
 - **[Design System & Tokens](docs/design-system.md)**: Color rules, sizing matrix, spacing, corner radius, and typography tokens.
-- **[Components Reference](docs/components.md)**: Standard DMS widgets and repository shared UI components.
+- **[Components Reference](docs/components.md)**: Standard Dux Shell widgets and repository shared UI components.
 - **[Conventions & Native Services](docs/conventions.md)**: Plugin directory standards, settings layout, and native replacements.
 - **[Development & Testing](docs/development.md)**: Development setup, IPC hot-reloading, and linting suite.
 

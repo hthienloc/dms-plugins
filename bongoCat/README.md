@@ -17,7 +17,7 @@ If a requirement is missing, the cat shows a warning badge with setup instructio
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install bongoCat
 ```

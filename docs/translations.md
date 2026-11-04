@@ -6,7 +6,7 @@ This guide describes how to contribute and manage translations across `dms-plugi
 
 ## 1. Overview & Workflows
 
-DMS 1.6+ supports native sideload translations stored in `<pluginName>/translations/<locale>.json`.
+Dux Shell 1.6+ supports native sideload translations stored in `<pluginName>/translations/<locale>.json`.
 
 Currently, two workflows are used depending on the plugin:
 

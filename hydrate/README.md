@@ -6,7 +6,7 @@ Distraction-free drink water reminder and tracker.
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install hydrate
 ```

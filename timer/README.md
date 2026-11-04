@@ -6,7 +6,7 @@ Countdown timer with presets and notifications.
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install timer
 ```
@@ -70,5 +70,4 @@ MIT
 - [ ] **Multi-Timer Manager**: Support for labeling and tracking multiple concurrent countdowns.
 - [x] **External Control (IPC)**: API to start, pause, or reset timers via command line or external scripts.
 - [ ] **Improved Persistence**: Save active timer state to disk to survive session restarts.
-
 

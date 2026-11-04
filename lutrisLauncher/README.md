@@ -6,7 +6,7 @@ Browse and launch your Lutris games from the bar.
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install lutrisLauncher
 ```

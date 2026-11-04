@@ -6,7 +6,7 @@ Layered desktop calendar HUD inspired by *Persona 5* and *Persona 5 Royal* with 
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install persona5Calendar
 ```
@@ -19,7 +19,7 @@ git clone https://github.com/hthienloc/dms-persona5-calendar ~/.config/DankMater
 ## Features
 
 - **Layered HUD** - Comic-style date, month, and day-of-week layering
-- **Animated Weather** - 3-frame cycling icons synced with DMS `WeatherService`
+- **Animated Weather** - 3-frame cycling icons synced with Dux Shell `WeatherService`
 - **Dynamic Theming** - Auto-switches between P5 Vanilla and P5 Royal palettes
 - **Time of Day** - Game schedule or astronomical sun period tracking
 

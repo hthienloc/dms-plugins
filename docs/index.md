@@ -1,4 +1,4 @@
-# DMS Plugins Documentation
+# Dux Shell Plugins Documentation
 
 Welcome to the documentation for the `dms-plugins` ecosystem.
 
@@ -11,13 +11,13 @@ Welcome to the documentation for the `dms-plugins` ecosystem.
    - Dynamic token tables: Colors, button heights, icon sizes, spacing, corner radii, typography.
 
 2. **[Components Reference](components.md)**
-   - Official DMS widgets (`DActionButton`, `DDropdown`, `DSlider`, `DButton`).
+   - Official Dux Shell widgets (`DActionButton`, `DDropdown`, `DSlider`, `DButton`).
    - Repository shared components (`SettingsCard`, `UsageGuide`, `CreditsList`, settings rows).
 
 3. **[Conventions & Native Services](conventions.md)**
    - Plugin naming and directory structure.
    - Standard settings layout and card ordering.
-   - Native DMS CLI alternatives and in-process QML services.
+   - Native Dux Shell CLI alternatives and in-process QML services.
 
 4. **[Development & Testing](development.md)**
    - Local setup and symlinking.
@@ -28,4 +28,3 @@ Welcome to the documentation for the `dms-plugins` ecosystem.
    - Translation workflows (POEditor for Quick Capture, manual JSON for other plugins).
    - Translation management scripts (`scripts/i18n.py`).
    - QML internationalization conventions.
-

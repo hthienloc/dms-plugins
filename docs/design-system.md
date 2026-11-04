@@ -1,6 +1,6 @@
-# DMS Plugins Design System & Tokens
+# Dux Shell Plugins Design System & Tokens
 
-This document defines the visual design standards and token system for DankMaterialShell (DMS) plugins.
+This document defines the visual design standards and token system for Dux Shell plugins.
 Always use `Theme` tokens (`import qs.Common`). Never hardcode hex strings, pixel sizes, arbitrary colors, or magic numbers.
 
 ---
@@ -114,4 +114,3 @@ Import `./shared` (or `../shared`, `../../shared`) to access `M3E` (`shared/M3E.
 | `M3E.activeBlendFactor`, `M3E.switcherActiveRatio` | Highlight hover blend (`0.18`) and 2-segment switcher active ratio (`0.68`). |
 | `M3E.tileRadius(pressed, hovered, highlighted)` | Computes M3E morphing radius for grid tiles. |
 | `M3E.iconPillRadius(pressed, hovered, height)` | Computes M3E morphing radius for inner icon pills. |
-

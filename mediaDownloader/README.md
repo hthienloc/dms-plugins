@@ -1,12 +1,12 @@
 # Media Downloader
 
-A feature-rich media downloader for DankMaterialShell, inspired by Parabolic. Powered by `yt-dlp`.
+A feature-rich media downloader for Dux Shell, inspired by Parabolic. Powered by `yt-dlp`.
 
 <img src="screenshot.png" width="400" alt="Screenshot">
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install mediaDownloader
 ```

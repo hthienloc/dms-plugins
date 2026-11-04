@@ -1,6 +1,6 @@
-# DMS Quick Capture Documentation
+# Dux Shell Quick Capture Documentation
 
-Welcome to the documentation for **DMS Quick Capture**, a composite screenshot and annotation plugin for DankMaterialShell (DMS).
+Welcome to the documentation for **Dux Shell Quick Capture**, a composite screenshot and annotation plugin for Dux Shell.
 
 ---
 

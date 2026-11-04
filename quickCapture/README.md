@@ -1,12 +1,12 @@
-# DMS Quick Capture
+# Dux Shell Quick Capture
 
 <p align="center">
   <a href="https://github.com/AvengeMedia/dms-plugin-registry/issues/432">
-    <img src="https://img.shields.io/badge/Upvote%20on%20DMS%20Plugin%20Registry-%E2%86%91-blue?style=flat-square" alt="Upvote on DMS Plugin Registry"/>
+    <img src="https://img.shields.io/badge/Upvote%20on%20Dux%20Shell%20Plugin%20Registry-%E2%86%91-blue?style=flat-square" alt="Upvote on Dux Shell Plugin Registry"/>
   </a>
 </p>
 
-Screenshot annotation and screen recording plugin for DankMaterialShell.
+Screenshot annotation and screen recording plugin for Dux Shell.
 
 <img src="screenshot.png" width="800" alt="Screenshot">
 
@@ -19,7 +19,7 @@ Screenshot annotation and screen recording plugin for DankMaterialShell.
 
 | Dependency                           | Purpose                                            |
 | ------------------------------------ | -------------------------------------------------- |
-| DankMaterialShell >= **1.6.0**       | Required for floating window and scrolling capture |
+| Dux Shell >= **1.6.0**               | Required for floating window and scrolling capture |
 | **gpu-screen-recorder**              | Screen recording backend (Hardware NVENC / VA-API; native or Flatpak `com.dec05eba.gpu_screen_recorder`) |
 | **wf-recorder**                      | Alternative CPU screen recording backend (Software libx264, fallback when GPU encoder is unavailable) |
 | **ffmpeg**                           | Video thumbnail generation                         |
@@ -39,7 +39,7 @@ Screenshot annotation and screen recording plugin for DankMaterialShell.
 
 ## Install
 
-Via DMS CLI:
+Via Dux Shell CLI (`dms`):
 
 ```bash
 dms plugins install quickCapture
@@ -53,7 +53,7 @@ git clone https://github.com/hthienloc/dms-quick-capture ~/.config/DankMaterialS
 
 ## Translations
 
-Quick Capture supports native DMS 1.6+ sideload translations located in `translations/<locale>.json`.
+Quick Capture supports native Dux Shell 1.6+ sideload translations located in `translations/<locale>.json`.
 
 Translations are crowdsourced and managed online via **POEditor**:  
 👉 **[Contribute translations on POEditor (Project #839330)](https://poeditor.com/projects/view?id=839330)**
@@ -109,7 +109,7 @@ Translations are crowdsourced and managed online via **POEditor**:
 - **[Snapzy](https://github.com/duongductrong/Snapzy)** — Inspiration for the float image / continue-editing workflow
 - **vky** and **bodify** (Discord) — Bug reports and feedback that helped polish the plugin
 
-Thanks to everyone who supported, contributed code, gave feedback, and helped the DankMaterialShell community.
+Thanks to everyone who supported, contributed code, gave feedback, and helped the Dux Shell community.
 
 ## License
 

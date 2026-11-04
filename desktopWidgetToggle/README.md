@@ -6,7 +6,7 @@ Toggle visibility of desktop widget groups as overlay.
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install desktopWidgetToggle
 ```

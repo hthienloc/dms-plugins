@@ -11,7 +11,7 @@ Guided breathing techniques for relaxation and focus.
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install breathing
 ```

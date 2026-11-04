@@ -1,4 +1,4 @@
-# Contributing to DMS Quick Capture
+# Contributing to Dux Shell Quick Capture
 
 Thanks for contributing! Here's everything you need to get started.
 
@@ -14,7 +14,7 @@ Thanks for contributing! Here's everything you need to get started.
 ## Development setup
 
 ```bash
-# Clone into the DMS plugins directory so it loads automatically
+# Clone into the Dux Shell plugins directory so it loads automatically
 git clone https://github.com/hthienloc/dms-quick-capture \
   ~/.config/DankMaterialShell/plugins/quickCapture
 
@@ -47,7 +47,7 @@ journalctl --user -f -u dank-material-shell
 - **No logic changes in refactor PRs.** If you're cleaning up code, don't sneak in behavior changes.
 - **Test before submitting.** The plugin must load without errors (`dms plugins reload quickCapture` should produce no warnings in the log).
 - **Update docs if needed.** If you add a tool, shortcut, IPC command, or widget host capability (such as Dock integration), update the relevant doc in `docs/`.
-- **DMS 2.0 Dock & Bar Widget Conventions:** Ensure widget pills adapt properly to both panel bars and docks (`kind: "bar" | "dock"`). Use dynamic sizing (`root.iconSize` / `root.textSize`) instead of fixed sizes like `iconSizeSmall`, support both `horizontalBarPill` and `verticalBarPill`, avoid `triggerPopout()` loops when using `pillClickAction`, gate timers/animations on `surfaceLive`, and never assume a single singleton widget instance (`widgetInstanceId`).
+- **Dux Shell 2.0 Dock & Bar Widget Conventions:** Ensure widget pills adapt properly to both panel bars and docks (`kind: "bar" | "dock"`). Use dynamic sizing (`root.iconSize` / `root.textSize`) instead of fixed sizes like `iconSizeSmall`, support both `horizontalBarPill` and `verticalBarPill`, avoid `triggerPopout()` loops when using `pillClickAction`, gate timers/animations on `surfaceLive`, and never assume a single singleton widget instance (`widgetInstanceId`).
 - **One concern per PR.** A PR that fixes a bug and adds a feature is two PRs.
 
 ---

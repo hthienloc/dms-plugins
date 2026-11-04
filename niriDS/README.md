@@ -6,7 +6,7 @@ Quickly manage, toggle, and configure display outputs in the Niri Wayland compos
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install niriDS
 ```
@@ -44,7 +44,7 @@ binds {
 
 ## Requirements
 
-- DankMaterialShell >= 1.5
+- Dux Shell >= 1.5
 - Niri Wayland compositor
 - `wl-mirror`
 

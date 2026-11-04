@@ -6,7 +6,7 @@ This reference outlines the IPC interface, keyboard/mouse shortcut registries, a
 
 ## 1. IPC (Inter-Process Communication) Interface
 
-You can interact with Quick Capture from external scripts, keyboard shortcut managers, or status bar launchers using the DMS IPC commands:
+You can interact with Quick Capture from external scripts, keyboard shortcut managers, or status bar launchers using Dux Shell IPC commands (`dms ipc`):
 
 ```bash
 dms ipc call quickCapture <command> [arg] edit|float
@@ -116,7 +116,7 @@ Pressing these keys changes the active tool:
 
 ## 3. Configuration & State Schema (`plugin.json`)
 
-The following settings are registered inside DMS settings manager and stored in `~/.config/DankMaterialShell/settings/quickCapture.json`:
+The following settings are registered inside the Dux Shell settings manager and stored in `~/.config/DankMaterialShell/settings/quickCapture.json`:
 
 ```json
 {
@@ -139,4 +139,4 @@ The following settings are registered inside DMS settings manager and stored in 
   }
 }
 ```
-*(Values can be customized via the Quick Capture Settings tab in DMS panel settings).*
+*(Values can be customized via the Quick Capture Settings tab in Dux Shell panel settings).*

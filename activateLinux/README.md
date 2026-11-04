@@ -6,7 +6,7 @@ Display Windows-style "Activate Linux" watermark on your desktop.
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install activateLinux
 ```

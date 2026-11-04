@@ -1,16 +1,16 @@
 # System Architecture & Engine Reference
 
-DMS Quick Capture is designed as a **Composite Plugin** for DankMaterialShell (DMS). This document covers the system architecture, component lifecycles, canvas rendering pipeline, and Wayland window management.
+Dux Shell Quick Capture is designed as a **Composite Plugin** for Dux Shell. This document covers the system architecture, component lifecycles, canvas rendering pipeline, and Wayland window management.
 
 ---
 
 ## 1. Plugin Lifecycle & Composite Model
 
-DMS supports different plugin types (widget, daemon, launcher, desktop). Quick Capture is a **composite plugin**, bundling multiple execution entry points:
+Dux Shell supports different plugin types (widget, daemon, launcher, desktop). Quick Capture is a **composite plugin**, bundling multiple execution entry points:
 
 - `daemon`: `./QuickCaptureDaemon.qml` (runs continuously in the background).
 - `widget`: `./QuickCaptureWidget.qml` (loaded by DankBar).
-- `settings`: `./QuickCaptureSettings.qml` (rendered in the DMS Settings Center).
+- `settings`: `./QuickCaptureSettings.qml` (rendered in the Dux Shell Settings Center).
 
 ### Component Map
 

@@ -1,12 +1,12 @@
-# DMS Components Reference
+# Dux Shell Components Reference
 
-Always prefer built-in DMS primitives (`qs.DCommon.Widgets`) and repository shared components (`import "./shared"`) over custom ad-hoc shapes.
+Always prefer built-in Dux Shell primitives (`qs.DCommon.Widgets`) and repository shared components (`import "./shared"`) over custom ad-hoc shapes.
 
 Shell-specific widgets such as `DPopout`, `DBackdrop`, `DFloatingWindow`, `DOSD`, and `PluginGlobalVar` still live in `qs.Widgets`; import that module only when you need them.
 
 ---
 
-## 1. Official DMS Widgets (`qs.DCommon.Widgets`)
+## 1. Official Dux Shell Widgets (`qs.DCommon.Widgets`)
 
 ### `DActionButton`
 Compact circular or square icon buttons for toolbars, headers, and DankBar widgets.
@@ -93,4 +93,3 @@ import "./shared"
 | **`Separator`** | Thin divider line between settings rows. |
 | **`NumericText`** | Number counter or readout with formatted units. |
 | **`M3E`** (`singleton`) | Material 3 Expressive motion curves, durations, connected group radii, and hover/press morphing tokens. |
-

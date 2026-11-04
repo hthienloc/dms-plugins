@@ -1,12 +1,12 @@
-# DMS Hand Mirror
+# Dux Shell Hand Mirror
 
-Cozy camera preview plugin for DankMaterialShell (DMS). Inspired by the macOS "Hand Mirror" app.
+Cozy camera preview plugin for Dux Shell. Inspired by the macOS "Hand Mirror" app.
 
 <img src="screenshot.png" width="800" alt="Screenshot">
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install handMirror
 ```
@@ -21,7 +21,7 @@ git clone https://github.com/hthienloc/dms-hand-mirror ~/.config/DankMaterialShe
 - **Camera Preview:** Instant camera check from the DankBar status pill.
 - **Snapshot:** Capture frames with optional countdown delay (3s, 5s, 10s) and trigger a preview overlay with Save, Copy, or Discard actions.
 - **Visual Filters:** Support for Grayscale, Sepia, and High Contrast filters with adjustable strength and smoothing.
-- **Native Clipboard:** Uses DMS native API for high-performance file copying to clipboard.
+- **Native Clipboard:** Uses the Dux Shell native API for high-performance file copying to clipboard.
 - **Screen Flash:** Toggleable flash animation on snapshot.
 
 ### Bar Interactions
@@ -62,7 +62,7 @@ binds {
 
 ## Requirements
 
-- DankMaterialShell >= 1.5
+- Dux Shell >= 1.5
 
 ## TODO / Roadmap
 

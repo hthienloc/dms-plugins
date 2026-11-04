@@ -16,7 +16,7 @@ Play mechanical keyboard sounds globally as you type on your system.
 
 ## Installation
 
-### Via DMS CLI
+### Via Dux Shell CLI (`dms`)
 ```bash
 dms plugins install typingSounds
 ```
@@ -34,7 +34,7 @@ git clone https://github.com/hthienloc/dms-typing-sounds ~/.config/DankMaterialS
 ## Usage
 
 ### IPC Commands
-You can control the daemon from the command line using DMS IPC:
+You can control the daemon from the command line using Dux Shell IPC (`dms ipc`):
 ```bash
 # Toggle typing sounds on/off
 dms ipc typingSounds toggle

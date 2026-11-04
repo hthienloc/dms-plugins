@@ -1,4 +1,4 @@
-# DMS Plugin Conventions & Guidelines
+# Dux Shell Plugin Conventions & Guidelines
 
 Guidelines and structural standards for plugins in `dms-plugins`.
 
@@ -82,9 +82,9 @@ PluginSettings {
 
 ## 3. Native Services & CLI Replacements
 
-Never require external packages when DMS provides built-in replacements:
+Never require external packages when Dux Shell provides built-in replacements:
 
-| Capability | External Package to Avoid | DMS Native Solution |
+| Capability | External Package to Avoid | Dux Shell Native Solution |
 | :--- | :--- | :--- |
 | **Clipboard** | `wl-clipboard`, `xclip` | `dms cl copy <text>`, `dms cl paste` |
 | **Notifications** | `libnotify` (`notify-send`) | `dms notify "<title>" "<message>"` |

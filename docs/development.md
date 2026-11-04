@@ -6,7 +6,7 @@ This document describes the workflow for testing, hot-reloading, and linting plu
 
 ## 1. Local Development Setup
 
-Symlink your target plugin into the local DMS plugins directory:
+Symlink your target plugin into the local Dux Shell plugins directory:
 
 ```bash
 ln -sfn "$PWD/<pluginName>" "$HOME/.config/DankMaterialShell/plugins/<pluginName>"
@@ -16,7 +16,7 @@ ln -sfn "$PWD/<pluginName>" "$HOME/.config/DankMaterialShell/plugins/<pluginName
 
 ## 2. Hot-Reloading via IPC
 
-Never restart DMS or Quickshell to verify plugin changes. Reload immediately via IPC:
+Never restart Dux Shell or Quickshell to verify plugin changes. Reload immediately via IPC:
 
 ```bash
 dms ipc call plugins reload <pluginName>
@@ -49,7 +49,7 @@ Before committing changes, run the QML syntax check:
 qmllint <pluginName>/*.qml <pluginName>/shared/*.qml
 ```
 
-Audit widget imports and DMS version requirements:
+Audit widget imports and Dux Shell version requirements:
 
 ```bash
 python3 scripts/refactor_dcommon.py --check --requires-dms ">=2.0.0"
@@ -62,5 +62,4 @@ Apply the `qs.DCommon.Widgets` migration with `python3 scripts/refactor_dcommon.
 ## 5. Translations & Localization
 
 For managing translations, string extraction, and POEditor links, see the [Translation Guide](translations.md).
-
 

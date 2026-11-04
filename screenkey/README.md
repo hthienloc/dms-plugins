@@ -1,12 +1,12 @@
 # Screenkey
 
-An always-on-top keystroke and mouse click visualizer for DankMaterialShell (DMS), suitable for screencasts, tutorials, and presentations.
+An always-on-top keystroke and mouse click visualizer for Dux Shell, suitable for screencasts, tutorials, and presentations.
 
 <img src="screenshot.png" width="400" alt="Screenshot">
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install screenkey
 ```
@@ -18,7 +18,7 @@ git clone https://github.com/hthienloc/dms-plugins ~/.config/DankMaterialShell/p
 
 ## Requirements
 
-- **DankMaterialShell** `>= 1.5.0`
+- **Dux Shell** `>= 1.5.0`
 - `evtest` - For monitoring specific keyboard events.
 - `libinput` **CLI** - For **"All Keyboards"** mode.
 - **Input group** - User must be in the `input` group: `sudo usermod -aG input $USER`.
@@ -36,7 +36,7 @@ git clone https://github.com/hthienloc/dms-plugins ~/.config/DankMaterialShell/p
 ## Usage
 
 ### Control Center Widget
-Toggle the visualizer from the DMS Control Center:
+Toggle the visualizer from the Dux Shell Control Center:
 - **Click widget** - Toggle the visualizer overlay on/off.
 - **Click settings icon** - Open the Screenkey settings page.
 
@@ -72,4 +72,3 @@ dms ipc screenkey disable
 ## License
 
 MIT
-

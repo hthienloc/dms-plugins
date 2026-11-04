@@ -17,16 +17,16 @@ dms-quick-capture/
 │   ├── floating/                    # Float window service and window instance
 │   ├── history/                     # Recent edits carousel
 │   └── misc/                        # Radial menu, magnifier, warning dialog
-├── shared/                          # Shared DMS UI primitives (sliders, toggles, settings cards)
+├── shared/                          # Shared Dux Shell UI primitives (sliders, toggles, settings cards)
 ├── docs/                            # Documentation
 ├── scripts/                         # Dev utilities (palette generator, i18n extractor)
 ├── translations/                    # Localization files
 ├── CaptureConfig.qml                # Tool list, shortcut table, color palette data, i18n strings
 ├── QuickCaptureDaemon.qml           # Background daemon — IPC listener, screenshot portal
 ├── QuickCaptureModal.qml            # Main editor window — canvas layers, state, keyboard handler
-├── QuickCaptureSettings.qml         # DMS Settings panel UI
+├── QuickCaptureSettings.qml         # Dux Shell Settings panel UI
 ├── QuickCaptureWidget.qml           # DankBar widget — click/drag triggers
-└── plugin.json                      # DMS plugin manifest
+└── plugin.json                      # Dux Shell plugin manifest
 ```
 
 ---
@@ -89,7 +89,7 @@ Floating overlays (menus, popovers) must be instantiated as direct children of t
 
 ### Bar and Dock Widget Host Adaptation
 
-DMS 2.0 allows widgets (`dankbar-widget`) to run identically in panels and docks (such as OmegaDock):
+Dux Shell 2.0 allows widgets (`dankbar-widget`) to run identically in panels and docks (such as OmegaDock):
 - **Sizing & Metrics:**
   - Never hardcode fixed sizes like `Theme.iconSizeSmall` (16px) or `Theme.iconSize` (24px) for pill icons. Docks generally run at 48px–64px thickness with `iconScale: 1.6`.
   - Always bind icon dimensions to `root.iconSize` (or `root.iconSizeLarge` for prominent glyphs) and text to `root.textSize`.
@@ -202,7 +202,7 @@ dms plugins reload quickCapture
 journalctl --user -f -u dank-material-shell
 ```
 
-Or in a verbose DMS session:
+Or in a verbose Dux Shell session:
 
 ```bash
 dms-session-launch --verbose

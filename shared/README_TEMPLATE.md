@@ -6,11 +6,11 @@
 
 ## Requirements
 * **System packages**: `[package-name]` (e.g. `poppler-utils` for pdf rendering)
-* **DMS version**: `[version]`
+* **Dux Shell version**: `[version]`
 
 ## Installation
 
-### Via DMS CLI
+### Via Dux Shell CLI (`dms`)
 ```bash
 dms plugins install [plugin-id]
 ```
@@ -22,7 +22,7 @@ git clone https://github.com/[username]/dms-[plugin-id] ~/.config/DankMaterialSh
 
 ## Plugin Specifications
 * **Type:** `composite` | `daemon` | `widget` | `launcher` | `desktop`
-* **Requires DMS:** `>=2.0.0`
+* **Requires Dux Shell:** `>=2.0.0`
 * **Capabilities:** `["daemon", "dankbar-widget", "ipc", "desktop-widget", "launcher-action"]`
 
 ## Features
@@ -69,7 +69,7 @@ bindings {
 ```
 
 ## Configuration & Settings
-Describe any settings customizable via the DMS settings panel or directly in `settings` block of `plugin.json`.
+Describe any settings customizable via the Dux Shell settings panel or directly in `settings` block of `plugin.json`.
 
 * **Property Name** (`type`): [Default Value] - [Description]
 
@@ -79,7 +79,7 @@ Describe any settings customizable via the DMS settings panel or directly in `se
 
 ## Development
 
-1. Sync local changes to the live DMS environment:
+1. Sync local changes to the live Dux Shell environment:
    ```bash
    ./sync_to_runtime.sh
    ```
@@ -94,4 +94,3 @@ Describe any settings customizable via the DMS settings panel or directly in `se
 
 ## License
 [License Type, e.g., GPL-3.0 / MIT]
-

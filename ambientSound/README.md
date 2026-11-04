@@ -11,7 +11,7 @@ Play ambient sounds for focus and relaxation.
 
 ## Install
 
-Use the DMS CLI:
+Use the Dux Shell CLI (`dms`):
 ```bash
 dms plugins install ambientSound
 ```
