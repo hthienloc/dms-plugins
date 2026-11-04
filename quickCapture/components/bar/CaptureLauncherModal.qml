@@ -84,7 +84,13 @@ Item {
     function run(mode, action, outputName) {
         if (!root.daemon)
             return;
-        root.widget.runAfterPopoutClosed(() => root.daemon.capture(mode, action, outputName));
+        root.daemon.captureFromMenu(mode, action, outputName, root.widget);
+    }
+
+    function runRecording(mode) {
+        if (!root.daemon)
+            return;
+        root.daemon.recordFromMenu(mode, root.widget);
     }
 
     // M3E Expressive Tile with shape morphing & tonal icon pill
@@ -807,7 +813,7 @@ Item {
                                 columns: 3
                                 tileHeight: 96
                                 showPin: false
-                                onTriggered: root.widget.runAfterPopoutClosed(() => root.daemon?.record(modelData.value))
+                                onTriggered: root.runRecording(modelData.value)
                             }
                         }
                     }

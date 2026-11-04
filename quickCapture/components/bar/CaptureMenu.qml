@@ -84,7 +84,13 @@ PopoutComponent {
     function run(mode, action, outputName) {
         if (!root.daemon)
             return;
-        root.widget.runAfterPopoutClosed(() => root.daemon.capture(mode, action, outputName));
+        root.daemon.captureFromMenu(mode, action, outputName, root.widget);
+    }
+
+    function runRecording(mode) {
+        if (!root.daemon)
+            return;
+        root.daemon.recordFromMenu(mode, root.widget);
     }
 
     component ConnectedFooterButton: Rectangle {
@@ -722,7 +728,7 @@ PopoutComponent {
                         isFirst: index === 0
                         isLast: index === 2
                         showPin: false
-                        onTriggered: root.widget.runAfterPopoutClosed(() => root.daemon?.record(modelData.value))
+                        onTriggered: root.runRecording(modelData.value)
                     }
                 }
             }
