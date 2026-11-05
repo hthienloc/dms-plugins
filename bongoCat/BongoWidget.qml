@@ -363,7 +363,9 @@ PluginComponent {
         I18n.trFor("bongoCat", "Ginger Orange"),
         I18n.trFor("bongoCat", "Calico"),
         I18n.trFor("bongoCat", "Siamese"),
-        I18n.trFor("bongoCat", "Sakura Pink")
+        I18n.trFor("bongoCat", "Sakura Pink"),
+        I18n.trFor("bongoCat", "Cyberpunk"),
+        I18n.trFor("bongoCat", "Zombie")
     ]
     function pixelColorToLabel(c) {
         if (c === "black") return I18n.trFor("bongoCat", "Midnight Black");
@@ -371,6 +373,8 @@ PluginComponent {
         if (c === "calico") return I18n.trFor("bongoCat", "Calico");
         if (c === "siamese") return I18n.trFor("bongoCat", "Siamese");
         if (c === "pink") return I18n.trFor("bongoCat", "Sakura Pink");
+        if (c === "cyberpunk") return I18n.trFor("bongoCat", "Cyberpunk");
+        if (c === "zombie") return I18n.trFor("bongoCat", "Zombie");
         return I18n.trFor("bongoCat", "Classic White");
     }
     function labelToPixelColor(l) {
@@ -379,6 +383,8 @@ PluginComponent {
         if (l === I18n.trFor("bongoCat", "Calico")) return "calico";
         if (l === I18n.trFor("bongoCat", "Siamese")) return "siamese";
         if (l === I18n.trFor("bongoCat", "Sakura Pink")) return "pink";
+        if (l === I18n.trFor("bongoCat", "Cyberpunk")) return "cyberpunk";
+        if (l === I18n.trFor("bongoCat", "Zombie")) return "zombie";
         return "white";
     }
 

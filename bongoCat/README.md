@@ -37,6 +37,12 @@ git clone https://github.com/hthienloc/dms-bongo-cat ~/.config/DankMaterialShell
 - **Typing metrics (optional)** - Live WPM and accuracy tracking with a privacy-first approach.
 - **Key sounds (optional)** - Soft click as you type, with adjustable volume.
 
+## Pixel Skins
+
+Pixel skins share the original 32x25 sprite silhouette and pose layout. See
+[the pixel skin authoring guide](assets/skins/README.md) for the pixel-coordinate
+map, palette roles, and export requirements.
+
 ## Usage
 
 | Action | Result |

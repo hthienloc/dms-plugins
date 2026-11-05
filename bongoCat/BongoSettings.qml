@@ -89,7 +89,9 @@ PluginSettings {
                     { label: I18n.trFor("bongoCat", "Ginger Orange"), value: "orange" },
                     { label: I18n.trFor("bongoCat", "Calico"), value: "calico" },
                     { label: I18n.trFor("bongoCat", "Siamese"), value: "siamese" },
-                    { label: I18n.trFor("bongoCat", "Sakura Pink"), value: "pink" }
+                    { label: I18n.trFor("bongoCat", "Sakura Pink"), value: "pink" },
+                    { label: I18n.trFor("bongoCat", "Cyberpunk"), value: "cyberpunk" },
+                    { label: I18n.trFor("bongoCat", "Zombie"), value: "zombie" }
                 ]
             }
         }
@@ -484,4 +486,3 @@ PluginSettings {
         }
     }
 }
-
