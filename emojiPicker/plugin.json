@@ -2,7 +2,7 @@
   "id": "emojiPicker",
   "name": "Emoji Picker",
   "description": "Search, copy, and paste emoji",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "author": "Loc Huynh",
   "license": "GPL-3.0-or-later",
   "icon": "emoji_emotions",

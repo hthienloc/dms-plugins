@@ -2,7 +2,7 @@
   "id": "ocrScanner",
   "name": "OCR Scanner",
   "description": "Extract text from images in clipboard or files using Tesseract OCR",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "requires_dms": ">=2.0.0",
   "license": "GPL-3.0",
   "author": "Loc Huynh",

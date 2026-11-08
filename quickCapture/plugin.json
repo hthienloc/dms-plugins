@@ -3,7 +3,7 @@
   "id": "quickCapture",
   "name": "Quick Capture",
   "description": "Screenshot annotation and screen recording tool",
-  "version": "5.9.0",
+  "version": "5.10.0",
   "author": "Loc Huynh",
   "icon": "screenshot_region",
   "type": "composite",
@@ -35,10 +35,22 @@
         "type": "choice",
         "def": "",
         "choices": [
-          { "value": "", "text": "Surface" },
-          { "value": "primary", "text": "Primary" },
-          { "value": "secondary", "text": "Secondary" },
-          { "value": "tertiary", "text": "Tertiary" }
+          {
+            "value": "",
+            "text": "Surface"
+          },
+          {
+            "value": "primary",
+            "text": "Primary"
+          },
+          {
+            "value": "secondary",
+            "text": "Secondary"
+          },
+          {
+            "value": "tertiary",
+            "text": "Tertiary"
+          }
         ]
       }
     ]

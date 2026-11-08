@@ -2,7 +2,7 @@
   "id": "breathing",
   "name": "Breathing Exercise",
   "description": "Breathing exercises for relaxation and focus",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "requires_dms": ">=2.0.0",
   "license": "GPL-3.0",
   "author": "Loc Huynh",

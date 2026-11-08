@@ -2,7 +2,7 @@
   "id": "kaomojiPicker",
   "name": "Kaomoji Picker",
   "description": "Local kaomoji picker for DMS",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "requires_dms": ">=2.0.0",
   "author": "Loc Huynh",
   "icon": "pets",

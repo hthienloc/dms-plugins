@@ -2,7 +2,7 @@
   "id": "handMirror",
   "name": "Hand Mirror",
   "description": "Cozy camera preview widget.",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "requires_dms": ">=2.0.0",
   "author": "Loc Huynh",
   "type": "widget",

@@ -2,7 +2,7 @@
   "id": "takeABreak",
   "name": "Take a Break",
   "description": "A gentle companion that reminds you to rest your eyes with short and long breaks.",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "requires_dms": ">=2.0.0",
   "author": "Loc Huynh",
   "icon": "self_improvement",

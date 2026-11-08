@@ -2,7 +2,7 @@
   "id": "desktopWidgetToggle",
   "name": "Desktop Widget Toggle",
   "description": "Toggle visibility of desktop widget groups as overlay.",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "author": "Loc Huynh",
   "icon": "widgets",
   "type": "composite",

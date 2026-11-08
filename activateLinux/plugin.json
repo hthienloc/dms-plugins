@@ -2,7 +2,7 @@
   "id": "activateLinux",
   "name": "Activate Linux Watermark",
   "description": "Adds a watermark to the bottom-right of the screen",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "requires_dms": ">=2.0.0",
   "license": "MIT",
   "author": "Loc Huynh",

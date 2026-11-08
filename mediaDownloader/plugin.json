@@ -2,7 +2,7 @@
   "id": "mediaDownloader",
   "name": "Media Downloader",
   "description": "Download audio and video from web links using yt-dlp",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "requires_dms": ">=2.0.0",
   "author": "Loc Huynh",
   "icon": "download",

@@ -2,7 +2,7 @@
   "id": "hydrate",
   "name": "Hydrate",
   "description": "Drink water reminder widget with daily progress dashboard",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "requires_dms": ">=2.0.0",
   "author": "Loc Huynh",
   "icon": "water_drop",
