@@ -416,6 +416,7 @@ PluginComponent {
     readonly property var glyphMap: ["bc", "dc", "ba", "da"]
     readonly property string currentCatGlyph: root.forceSleep ? root.sleepGlyph : (root.isWaiting ? root.sleepGlyph : (root.isBlinking && root.catState === 0 ? root.blinkGlyph : root.glyphMap[root.catState]))
     readonly property real catGlyphPixelSize: Math.round(root.effectiveIconSize * root.catSize)
+    readonly property real vectorCatWidth: Math.round(root.catGlyphPixelSize * 2) - 1
     readonly property int iconSize: Theme.iconSizeSmall
     readonly property int padding: Theme.spacingS
     readonly property int spacing: Theme.spacingXS
@@ -643,10 +644,8 @@ PluginComponent {
                     id: catContainer
                     width: root.catSkin === "pixel"
                         ? Math.round(root.effectiveIconSize * root.catSize * 1.25)
-                        : Math.max(leftCatHalf.implicitWidth, rightCatHalf.implicitWidth) * 2 - 1
-                    height: root.catSkin === "pixel"
-                        ? Math.round(root.effectiveIconSize * root.catSize)
-                        : leftCatHalf.implicitHeight
+                        : root.vectorCatWidth
+                    height: Math.round(root.effectiveIconSize * root.catSize)
 
                     Item {
                         id: catVectorItem
