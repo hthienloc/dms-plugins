@@ -391,13 +391,13 @@ PluginComponent {
     readonly property string pixelSkinFolder: pixelSkinColor === "white" ? "pixel" : ("pixel_" + pixelSkinColor)
 
     readonly property var pixelSpriteMap: [
-        "./assets/skins/" + pixelSkinFolder + "/idle@4x.png",
-        "./assets/skins/" + pixelSkinFolder + "/left@4x.png",
-        "./assets/skins/" + pixelSkinFolder + "/right@4x.png",
-        "./assets/skins/" + pixelSkinFolder + "/both@4x.png"
+        Qt.resolvedUrl("./assets/skins/" + pixelSkinFolder + "/idle@4x.png"),
+        Qt.resolvedUrl("./assets/skins/" + pixelSkinFolder + "/left@4x.png"),
+        Qt.resolvedUrl("./assets/skins/" + pixelSkinFolder + "/right@4x.png"),
+        Qt.resolvedUrl("./assets/skins/" + pixelSkinFolder + "/both@4x.png")
     ]
-    readonly property string pixelBlinkSprite: "./assets/skins/" + pixelSkinFolder + "/blink@4x.png"
-    readonly property string pixelSleepSprite: "./assets/skins/" + pixelSkinFolder + "/sleep@4x.png"
+    readonly property string pixelBlinkSprite: Qt.resolvedUrl("./assets/skins/" + pixelSkinFolder + "/blink@4x.png")
+    readonly property string pixelSleepSprite: Qt.resolvedUrl("./assets/skins/" + pixelSkinFolder + "/sleep@4x.png")
 
     readonly property string activeSpriteSource: {
         if (root.forceSleep || root.isWaiting) return pixelSleepSprite;
@@ -416,17 +416,6 @@ PluginComponent {
     readonly property var glyphMap: ["bc", "dc", "ba", "da"]
     readonly property string currentCatGlyph: root.forceSleep ? root.sleepGlyph : (root.isWaiting ? root.sleepGlyph : (root.isBlinking && root.catState === 0 ? root.blinkGlyph : root.glyphMap[root.catState]))
     readonly property real catGlyphPixelSize: Math.round(root.effectiveIconSize * root.catSize)
-    readonly property real vectorCatWidth: Math.round(catMeasureText.implicitWidth * 0.84)
-    readonly property real catGlyphLetterSpacing: -Math.max(1, Math.round(root.catGlyphPixelSize * 0.05))
-
-    Text {
-        id: catMeasureText
-        visible: false
-        font.family: bongoFont.name
-        font.pixelSize: root.catGlyphPixelSize
-        font.letterSpacing: root.catGlyphLetterSpacing
-        text: root.glyphMap[0] // "bc" baseline
-    }
     readonly property int iconSize: Theme.iconSizeSmall
     readonly property int padding: Theme.spacingS
     readonly property int spacing: Theme.spacingXS
@@ -650,39 +639,15 @@ PluginComponent {
                 horizontalItemAlignment: Grid.AlignHCenter
                 verticalItemAlignment: Grid.AlignVCenter
 
-                Item {
+                BongoCatView {
                     id: catContainer
-                    width: root.catSkin === "pixel"
-                        ? Math.round(root.effectiveIconSize * root.catSize * 1.25)
-                        : root.vectorCatWidth
-                    height: Math.round(root.effectiveIconSize * root.catSize)
-
-                    Text {
-                        id: catLabel
-                        visible: root.catSkin !== "pixel"
-                        anchors.centerIn: parent
-                        font.family: bongoFont.name
-                        font.pixelSize: root.catGlyphPixelSize
-                        font.letterSpacing: root.catGlyphLetterSpacing
-                        color: root.forceSleep ? Theme.surfaceVariantText : root.resolvedCatColor
-                        opacity: root.forceSleep ? 0.5 : 1.0
-                        text: root.currentCatGlyph
-                        transform: Translate { y: root.catYOffset }
-                    }
-
-                    Image {
-                        id: catPixelSprite
-                        visible: root.catSkin === "pixel"
-                        anchors.centerIn: parent
-                        width: parent.width
-                        height: parent.height
-                        fillMode: Image.PreserveAspectFit
-                        smooth: false
-                        mipmap: false
-                        opacity: root.forceSleep ? 0.5 : 1.0
-                        source: root.activeSpriteSource
-                        transform: Translate { y: root.catYOffset }
-                    }
+                    skin: root.catSkin
+                    glyphText: root.currentCatGlyph
+                    targetPixelSize: root.catGlyphPixelSize
+                    catColor: root.resolvedCatColor
+                    catOpacity: root.forceSleep ? 0.5 : 1.0
+                    spriteSource: root.activeSpriteSource
+                    yOffset: root.catYOffset
                 }
 
                 StyledText {

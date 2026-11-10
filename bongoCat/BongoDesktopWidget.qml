@@ -141,15 +141,17 @@ DesktopPluginComponent {
     readonly property var glyphMap: ["bc", "dc", "ba", "da"]
     readonly property string blinkGlyph: "gh"
     readonly property string sleepGlyph: "ef"
+    readonly property string currentCatGlyph: root.forceSleep ? root.sleepGlyph : (root.isWaiting ? root.sleepGlyph : (root.isBlinking && root.catState === 0 ? root.blinkGlyph : root.glyphMap[root.catState]))
+    readonly property real catGlyphPixelSize: Math.max(24, Math.min(desktopCatContainer.width * 0.75, desktopCatContainer.height * (root.showMetrics ? 0.7 : 0.85)))
 
     readonly property var pixelSpriteMap: [
-        "./assets/skins/" + pixelSkinFolder + "/idle@4x.png",
-        "./assets/skins/" + pixelSkinFolder + "/left@4x.png",
-        "./assets/skins/" + pixelSkinFolder + "/right@4x.png",
-        "./assets/skins/" + pixelSkinFolder + "/both@4x.png"
+        Qt.resolvedUrl("./assets/skins/" + pixelSkinFolder + "/idle@4x.png"),
+        Qt.resolvedUrl("./assets/skins/" + pixelSkinFolder + "/left@4x.png"),
+        Qt.resolvedUrl("./assets/skins/" + pixelSkinFolder + "/right@4x.png"),
+        Qt.resolvedUrl("./assets/skins/" + pixelSkinFolder + "/both@4x.png")
     ]
-    readonly property string pixelBlinkSprite: "./assets/skins/" + pixelSkinFolder + "/blink@4x.png"
-    readonly property string pixelSleepSprite: "./assets/skins/" + pixelSkinFolder + "/sleep@4x.png"
+    readonly property string pixelBlinkSprite: Qt.resolvedUrl("./assets/skins/" + pixelSkinFolder + "/blink@4x.png")
+    readonly property string pixelSleepSprite: Qt.resolvedUrl("./assets/skins/" + pixelSkinFolder + "/sleep@4x.png")
 
     readonly property string activeSpriteSource: {
         if (root.forceSleep || root.isWaiting) return pixelSleepSprite;
@@ -384,33 +386,18 @@ DesktopPluginComponent {
             spacing: Theme.spacingXS
 
             Item {
+                id: desktopCatContainer
                 Layout.fillWidth: true
                 Layout.fillHeight: true
 
-                // Classic Font Cat
-                Text {
-                    id: catLabel
-                    visible: root.catSkin !== "pixel"
+                BongoCatView {
                     anchors.centerIn: parent
-                    font.family: bongoFont.name
-                    font.pixelSize: Math.max(24, Math.min(parent.width * 0.75, parent.height * (root.showMetrics ? 0.7 : 0.85)))
-                    color: root.forceSleep ? Theme.surfaceVariantText : root.resolvedCatColor
-                    opacity: root.forceSleep ? 0.5 : 1.0
-                    text: root.forceSleep ? root.sleepGlyph : (root.isWaiting ? root.sleepGlyph : (root.isBlinking && root.catState === 0 ? root.blinkGlyph : root.glyphMap[root.catState]))
-                }
-
-                // Pixel Sprite Cat
-                Image {
-                    id: catPixelSprite
-                    visible: root.catSkin === "pixel"
-                    anchors.centerIn: parent
-                    width: Math.min(parent.width, parent.height * 1.25)
-                    height: Math.min(parent.height, parent.width * 0.8)
-                    fillMode: Image.PreserveAspectFit
-                    smooth: false
-                    mipmap: false
-                    opacity: root.forceSleep ? 0.5 : 1.0
-                    source: root.activeSpriteSource
+                    skin: root.catSkin
+                    glyphText: root.currentCatGlyph
+                    targetPixelSize: root.catGlyphPixelSize
+                    catColor: root.resolvedCatColor
+                    catOpacity: root.forceSleep ? 0.5 : 1.0
+                    spriteSource: root.activeSpriteSource
                 }
             }
 
