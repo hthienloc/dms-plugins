@@ -414,6 +414,8 @@ PluginComponent {
     }
 
     readonly property var glyphMap: ["bc", "dc", "ba", "da"]
+    readonly property string currentCatGlyph: root.forceSleep ? root.sleepGlyph : (root.isWaiting ? root.sleepGlyph : (root.isBlinking && root.catState === 0 ? root.blinkGlyph : root.glyphMap[root.catState]))
+    readonly property real catGlyphPixelSize: Math.round(root.effectiveIconSize * root.catSize)
     readonly property int iconSize: Theme.iconSizeSmall
     readonly property int padding: Theme.spacingS
     readonly property int spacing: Theme.spacingXS
@@ -639,19 +641,42 @@ PluginComponent {
 
                 Item {
                     id: catContainer
-                    width: root.catSkin === "pixel" ? Math.round(root.effectiveIconSize * root.catSize * 1.25) : catLabel.implicitWidth
-                    height: root.catSkin === "pixel" ? Math.round(root.effectiveIconSize * root.catSize) : catLabel.implicitHeight
+                    width: root.catSkin === "pixel"
+                        ? Math.round(root.effectiveIconSize * root.catSize * 1.25)
+                        : Math.max(leftCatHalf.implicitWidth, rightCatHalf.implicitWidth) * 2 - 1
+                    height: root.catSkin === "pixel"
+                        ? Math.round(root.effectiveIconSize * root.catSize)
+                        : leftCatHalf.implicitHeight
 
-                    Text {
-                        id: catLabel
+                    Item {
+                        id: catVectorItem
                         visible: root.catSkin !== "pixel"
                         anchors.centerIn: parent
-                        font.family: bongoFont.name
-                        font.pixelSize: Math.round(root.effectiveIconSize * root.catSize)
-                        color: root.forceSleep ? Theme.surfaceVariantText : root.resolvedCatColor
+                        width: parent.width
+                        height: parent.height
                         opacity: root.forceSleep ? 0.5 : 1.0
-                        text: root.forceSleep ? root.sleepGlyph : (root.isWaiting ? root.sleepGlyph : (root.isBlinking && root.catState === 0 ? root.blinkGlyph : root.glyphMap[root.catState]))
                         transform: Translate { y: root.catYOffset }
+
+                        Text {
+                            id: leftCatHalf
+                            anchors.verticalCenter: parent.verticalCenter
+                            anchors.right: parent.horizontalCenter
+                            anchors.rightMargin: -1
+                            font.family: bongoFont.name
+                            font.pixelSize: root.catGlyphPixelSize
+                            color: root.forceSleep ? Theme.surfaceVariantText : root.resolvedCatColor
+                            text: root.currentCatGlyph.length > 0 ? root.currentCatGlyph.charAt(0) : ""
+                        }
+
+                        Text {
+                            id: rightCatHalf
+                            anchors.verticalCenter: parent.verticalCenter
+                            anchors.left: parent.horizontalCenter
+                            font.family: bongoFont.name
+                            font.pixelSize: root.catGlyphPixelSize
+                            color: root.forceSleep ? Theme.surfaceVariantText : root.resolvedCatColor
+                            text: root.currentCatGlyph.length > 1 ? root.currentCatGlyph.charAt(1) : ""
+                        }
                     }
 
                     Image {
