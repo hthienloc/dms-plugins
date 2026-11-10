@@ -416,7 +416,7 @@ PluginComponent {
     readonly property var glyphMap: ["bc", "dc", "ba", "da"]
     readonly property string currentCatGlyph: root.forceSleep ? root.sleepGlyph : (root.isWaiting ? root.sleepGlyph : (root.isBlinking && root.catState === 0 ? root.blinkGlyph : root.glyphMap[root.catState]))
     readonly property real catGlyphPixelSize: Math.round(root.effectiveIconSize * root.catSize)
-    readonly property real vectorCatWidth: catMeasureText.implicitWidth
+    readonly property real vectorCatWidth: Math.round(catMeasureText.implicitWidth * 0.84)
     readonly property real catGlyphLetterSpacing: -Math.max(1, Math.round(root.catGlyphPixelSize * 0.05))
 
     Text {
@@ -613,7 +613,7 @@ PluginComponent {
         Item {
             implicitWidth: root.isDock && !(root.showMetrics && root.metricsInBar)
                 ? root.effectiveIconSize
-                : Math.max(root.effectiveIconSize, pillContent.implicitWidth + (root.isDock ? 0 : Theme.spacingS))
+                : Math.max(root.effectiveIconSize, pillContent.implicitWidth)
             implicitHeight: Math.max(root.effectiveIconSize, pillContent.implicitHeight)
 
             MouseArea {
