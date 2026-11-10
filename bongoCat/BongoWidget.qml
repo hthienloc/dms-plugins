@@ -416,7 +416,17 @@ PluginComponent {
     readonly property var glyphMap: ["bc", "dc", "ba", "da"]
     readonly property string currentCatGlyph: root.forceSleep ? root.sleepGlyph : (root.isWaiting ? root.sleepGlyph : (root.isBlinking && root.catState === 0 ? root.blinkGlyph : root.glyphMap[root.catState]))
     readonly property real catGlyphPixelSize: Math.round(root.effectiveIconSize * root.catSize)
-    readonly property real vectorCatWidth: Math.round(root.catGlyphPixelSize * 2) - 1
+    readonly property real vectorCatWidth: catMeasureText.implicitWidth
+    readonly property real catGlyphLetterSpacing: -Math.max(1, Math.round(root.catGlyphPixelSize * 0.05))
+
+    Text {
+        id: catMeasureText
+        visible: false
+        font.family: bongoFont.name
+        font.pixelSize: root.catGlyphPixelSize
+        font.letterSpacing: root.catGlyphLetterSpacing
+        text: root.glyphMap[0] // "bc" baseline
+    }
     readonly property int iconSize: Theme.iconSizeSmall
     readonly property int padding: Theme.spacingS
     readonly property int spacing: Theme.spacingXS
@@ -647,35 +657,17 @@ PluginComponent {
                         : root.vectorCatWidth
                     height: Math.round(root.effectiveIconSize * root.catSize)
 
-                    Item {
-                        id: catVectorItem
+                    Text {
+                        id: catLabel
                         visible: root.catSkin !== "pixel"
                         anchors.centerIn: parent
-                        width: parent.width
-                        height: parent.height
+                        font.family: bongoFont.name
+                        font.pixelSize: root.catGlyphPixelSize
+                        font.letterSpacing: root.catGlyphLetterSpacing
+                        color: root.forceSleep ? Theme.surfaceVariantText : root.resolvedCatColor
                         opacity: root.forceSleep ? 0.5 : 1.0
+                        text: root.currentCatGlyph
                         transform: Translate { y: root.catYOffset }
-
-                        Text {
-                            id: leftCatHalf
-                            anchors.verticalCenter: parent.verticalCenter
-                            anchors.right: parent.horizontalCenter
-                            anchors.rightMargin: -1
-                            font.family: bongoFont.name
-                            font.pixelSize: root.catGlyphPixelSize
-                            color: root.forceSleep ? Theme.surfaceVariantText : root.resolvedCatColor
-                            text: root.currentCatGlyph.length > 0 ? root.currentCatGlyph.charAt(0) : ""
-                        }
-
-                        Text {
-                            id: rightCatHalf
-                            anchors.verticalCenter: parent.verticalCenter
-                            anchors.left: parent.horizontalCenter
-                            font.family: bongoFont.name
-                            font.pixelSize: root.catGlyphPixelSize
-                            color: root.forceSleep ? Theme.surfaceVariantText : root.resolvedCatColor
-                            text: root.currentCatGlyph.length > 1 ? root.currentCatGlyph.charAt(1) : ""
-                        }
                     }
 
                     Image {
