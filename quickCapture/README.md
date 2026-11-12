@@ -36,6 +36,8 @@ Screenshot annotation and screen recording plugin for Dux Shell.
 > ```bash
 > flatpak install --system com.dec05eba.gpu_screen_recorder
 > ```
+>
+> **Window Recording Notifications**: Window recording uses the Wayland ScreenCast portal (`gpu-screen-recorder -w portal`). If desktop notification banners do not appear after window recording finishes, check DMS Settings under **Notifications > Do not disturb** and disable **"Automatically enable while screen sharing"** (otherwise DMS suppresses popup banners while screen sharing sessions are active).
 
 ## Install
 

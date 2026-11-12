@@ -130,6 +130,9 @@ Quick Capture supports screen recording via GPU hardware acceleration or CPU fal
   ```
 - **wf-recorder**: Lightweight CPU libx264 backend (fallback; pause/resume and internal audio mixing are not supported).
 
+> [!NOTE]
+> Window mode uses the Wayland ScreenCast portal (`gpu-screen-recorder -w portal`). If recording notifications do not pop up upon completion, go to DMS Settings > **Notifications** > **Do not disturb** and turn off **"Automatically enable while screen sharing"**.
+
 ## Pin to Desktop
 
 - Press <kbd>Ctrl</kbd> + <kbd>F</kbd> to export and float the image.
