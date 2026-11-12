@@ -892,6 +892,19 @@ PluginComponent {
 
                             readonly property bool hasVariants: Boolean(delegateItem.modelData?.variants && delegateItem.modelData.variants.length > 0)
 
+                            // Hold threshold: initial delay before progress bar starts, ensuring regular clicks never trigger hold animation
+                            Timer {
+                                id: holdThresholdTimer
+                                interval: 220
+                                repeat: false
+                                onTriggered: {
+                                    if (emojiMouse.pressed && emojiBox.hasVariants) {
+                                        holdProgressFill.startProgress();
+                                        holdTimer.restart();
+                                    }
+                                }
+                            }
+
                             // Visual hold fill animation from left to right
                             Rectangle {
                                 id: holdProgressFill
@@ -909,7 +922,7 @@ PluginComponent {
                                     property: "width"
                                     from: 0
                                     to: emojiBox.width
-                                    duration: 350
+                                    duration: 300
                                     easing.type: Easing.Linear
                                 }
 
@@ -927,7 +940,7 @@ PluginComponent {
 
                             Timer {
                                 id: holdTimer
-                                interval: 350
+                                interval: 300
                                 repeat: false
                                 onTriggered: {
                                     emojiMouse.heldTriggered = true;
@@ -952,23 +965,22 @@ PluginComponent {
                                 acceptedButtons: Qt.LeftButton | Qt.RightButton
                                 property bool heldTriggered: false
 
+                                function cancelHold() {
+                                    holdThresholdTimer.stop();
+                                    holdTimer.stop();
+                                    holdProgressFill.resetProgress();
+                                }
+
                                 onPressed: mouse => {
                                     heldTriggered = false;
-                                    if (mouse.button === Qt.LeftButton && emojiBox.hasVariants) {
-                                        holdProgressFill.startProgress();
-                                        holdTimer.restart();
+                                    const hasModifiers = Boolean(mouse.modifiers & (Qt.ShiftModifier | Qt.ControlModifier | Qt.AltModifier | Qt.MetaModifier));
+                                    if (mouse.button === Qt.LeftButton && !hasModifiers && emojiBox.hasVariants) {
+                                        holdThresholdTimer.restart();
                                     }
                                 }
 
-                                onReleased: {
-                                    holdTimer.stop();
-                                    holdProgressFill.resetProgress();
-                                }
-
-                                onCanceled: {
-                                    holdTimer.stop();
-                                    holdProgressFill.resetProgress();
-                                }
+                                onReleased: cancelHold()
+                                onCanceled: cancelHold()
 
                                 onContainsMouseChanged: {
                                     if (containsMouse) {
@@ -976,14 +988,12 @@ PluginComponent {
                                     } else {
                                         if (emojiGrid.hoveredIndex === delegateItem.index)
                                             emojiGrid.hoveredIndex = -1;
-                                        holdTimer.stop();
-                                        holdProgressFill.resetProgress();
+                                        cancelHold();
                                     }
                                 }
 
                                 onClicked: mouse => {
-                                    holdTimer.stop();
-                                    holdProgressFill.resetProgress();
+                                    cancelHold();
                                     if (heldTriggered) {
                                         heldTriggered = false;
                                         return;
@@ -994,7 +1004,8 @@ PluginComponent {
                                         root.appendEmoji(emojiToCommit);
                                         return;
                                     }
-                                    root.commitSingleEmoji(emojiToCommit, (mouse.button === Qt.RightButton) !== root.pasteByDefault);
+                                    const togglePaste = (mouse.button === Qt.RightButton) || Boolean(mouse.modifiers & Qt.ControlModifier);
+                                    root.commitSingleEmoji(emojiToCommit, togglePaste !== root.pasteByDefault);
                                 }
                             }
                         }
@@ -1162,7 +1173,8 @@ PluginComponent {
                                         root.appendEmoji(emojiToCommit);
                                         return;
                                     }
-                                    root.commitSingleEmoji(emojiToCommit, (mouse.button === Qt.RightButton) !== root.pasteByDefault);
+                                    const togglePaste = (mouse.button === Qt.RightButton) || Boolean(mouse.modifiers & Qt.ControlModifier);
+                                    root.commitSingleEmoji(emojiToCommit, togglePaste !== root.pasteByDefault);
                                 }
                             }
                         }
