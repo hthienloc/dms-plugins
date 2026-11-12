@@ -23,7 +23,7 @@ DesktopPluginComponent {
     // Plugin settings
     readonly property string themeVersionSetting: pluginData.themeVersion ?? "dynamic" // "dynamic", "vanilla", "royal"
     readonly property string todModeSetting: pluginData.todMode ?? "game"               // "game", "solar"
-    readonly property bool animateWeather: pluginData.animateWeather ?? true
+    readonly property bool animateWeather: pluginData.animateWeather ?? false
     readonly property int animInterval: pluginData.animInterval ?? 300
     readonly property real widgetOpacity: (pluginData.widgetOpacity ?? 100) / 100.0
     readonly property bool showWeather: pluginData.showWeather ?? true

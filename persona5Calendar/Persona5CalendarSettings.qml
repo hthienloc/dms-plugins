@@ -93,7 +93,7 @@ PluginSettings {
             settingKey: "animateWeather"
             label: I18n.trFor("persona5Calendar", "Animate Weather")
             description: I18n.trFor("persona5Calendar", "Cycle weather icon frames for game-authentic animation.")
-            defaultValue: true
+            defaultValue: false
             enabled: showWeather.value
         }
 
