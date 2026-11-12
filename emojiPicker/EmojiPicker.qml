@@ -54,6 +54,8 @@ PluginComponent {
 
     readonly property string queuedText: queuedEmojis.join("")
 
+
+
     readonly property var categoryNames: EmojiData.getCategories()
     readonly property var categoryOrder: [
         "recent", "smileys-people", "animals-nature", "food-drink",
@@ -300,10 +302,11 @@ PluginComponent {
     }
 
     function handleEscape(event) {
-        if (root.queuedEmojis.length > 0)
+        if (root.queuedEmojis.length > 0) {
             root.clearQueue();
-        else
+        } else {
             root.closePicker();
+        }
         event.accepted = true;
     }
 
@@ -350,6 +353,70 @@ PluginComponent {
             implicitHeight: root.pickerHeight
             height: pickerModal.modalHeight
             focus: true
+
+            property bool variantPopupVisible: false
+            property var variantPopupOptions: []
+            property Item variantAnchorItem: null
+            property real variantPopupX: 0
+            property real variantPopupY: 0
+
+            function updateVariantPopupPosition() {
+                if (!variantPopupVisible || !variantAnchorItem)
+                    return;
+                const mapped = variantAnchorItem.mapToItem(pickerView, 0, 0);
+                const gridMapped = emojiGrid.mapToItem(pickerView, 0, 0);
+                const itemTop = mapped.y;
+                const itemBottom = mapped.y + variantAnchorItem.height;
+                const gridTop = gridMapped.y;
+                const gridBottom = gridMapped.y + emojiGrid.height;
+
+                // If the anchored emoji item is scrolled out of the visible grid viewport, hide popup
+                if (itemBottom <= gridTop || itemTop >= gridBottom) {
+                    hideVariantPopup();
+                    return;
+                }
+
+                const popupWidth = variantPopupOptions.length * 40 + 16;
+                let px = mapped.x + (variantAnchorItem.width - popupWidth) / 2;
+                px = Math.max(Theme.spacingM, Math.min(px, pickerView.width - popupWidth - Theme.spacingM));
+
+                // Always prefer orienting toward the vertical center of the emoji area (emojiGrid)
+                const gridCenterY = gridTop + emojiGrid.height / 2;
+                const itemCenterY = mapped.y + variantAnchorItem.height / 2;
+
+                let py;
+                if (itemCenterY < gridCenterY) {
+                    // Emoji is in the upper half -> display below it (towards center)
+                    py = mapped.y + variantAnchorItem.height + 6;
+                } else {
+                    // Emoji is in the lower half -> display above it (towards center)
+                    py = mapped.y - 50;
+                }
+
+                // Boundary guard checks
+                if (py < Theme.spacingM)
+                    py = mapped.y + variantAnchorItem.height + 6;
+                else if (py + 44 > pickerView.height - Theme.spacingM)
+                    py = mapped.y - 50;
+
+                variantPopupX = px;
+                variantPopupY = py;
+            }
+
+            function showVariantPopup(entry, item) {
+                if (!entry || !entry.variants || entry.variants.length === 0 || !item)
+                    return;
+                variantPopupOptions = [entry.emoji].concat(entry.variants);
+                variantAnchorItem = item;
+                variantPopupVisible = true;
+                updateVariantPopupPosition();
+            }
+
+            function hideVariantPopup() {
+                variantPopupVisible = false;
+                variantAnchorItem = null;
+                variantPopupOptions = [];
+            }
 
             function focusCategory(index) {
                 const button = categoryRepeater.itemAt(index);
@@ -483,6 +550,7 @@ PluginComponent {
             }
 
             function selectCategory(category) {
+                pickerView.hideVariantPopup();
                 const restoreGridFocus = emojiGrid.activeFocus;
                 root.selectedCategory = category;
                 root.query = "";
@@ -579,6 +647,11 @@ PluginComponent {
                 pickerView.handleSearchTyping(event);
             }
             Keys.onEscapePressed: event => {
+                if (pickerView.variantPopupVisible) {
+                    pickerView.hideVariantPopup();
+                    event.accepted = true;
+                    return;
+                }
                 root.handleEscape(event);
             }
 
@@ -627,6 +700,7 @@ PluginComponent {
                             : I18n.trFor("emojiPicker", "Search in %1").arg(I18n.trFor("emojiPicker", root.categoryNames[root.selectedCategory]))
                         text: root.query
                         onTextChanged: {
+                            pickerView.hideVariantPopup();
                             root.query = text;
                             root.selectedIndex = 0;
                         }
@@ -786,7 +860,12 @@ PluginComponent {
                     property int hoveredIndex: -1
 
                     onCurrentIndexChanged: root.selectedIndex = currentIndex
-                    onModelChanged: hoveredIndex = -1
+                    onModelChanged: {
+                        hoveredIndex = -1;
+                        pickerView.hideVariantPopup();
+                    }
+                    onContentYChanged: pickerView.updateVariantPopupPosition()
+                    onContentXChanged: pickerView.updateVariantPopupPosition()
 
                     delegate: Item {
                         id: delegateItem
@@ -797,12 +876,60 @@ PluginComponent {
                         height: emojiGrid.cellHeight
 
                         Rectangle {
+                            id: emojiBox
                             anchors.fill: parent
                             anchors.margins: 4
                             radius: Theme.cornerRadius
+                            clip: true
                             color: delegateItem.isCurrent && emojiGrid.activeFocus ? Theme.withAlpha(Theme.primary, 0.16) : (emojiMouse.containsMouse ? Theme.surfaceContainerHigh : "transparent")
                             border.width: delegateItem.isCurrent && emojiGrid.activeFocus ? 2 : 0
                             border.color: Theme.primary
+
+                            readonly property bool hasVariants: Boolean(delegateItem.modelData?.variants && delegateItem.modelData.variants.length > 0)
+
+                            // Visual hold fill animation from left to right
+                            Rectangle {
+                                id: holdProgressFill
+                                anchors.left: parent.left
+                                anchors.top: parent.top
+                                anchors.bottom: parent.bottom
+                                width: 0
+                                radius: parent.radius
+                                color: Theme.withAlpha(Theme.primary, 0.35)
+                                visible: width > 0
+
+                                PropertyAnimation {
+                                    id: fillAnim
+                                    target: holdProgressFill
+                                    property: "width"
+                                    from: 0
+                                    to: emojiBox.width
+                                    duration: 350
+                                    easing.type: Easing.Linear
+                                }
+
+                                function startProgress() {
+                                    fillAnim.stop();
+                                    holdProgressFill.width = 0;
+                                    fillAnim.start();
+                                }
+
+                                function resetProgress() {
+                                    fillAnim.stop();
+                                    holdProgressFill.width = 0;
+                                }
+                            }
+
+                            Timer {
+                                id: holdTimer
+                                interval: 350
+                                repeat: false
+                                onTriggered: {
+                                    emojiMouse.heldTriggered = true;
+                                    holdProgressFill.resetProgress();
+                                    pickerView.showVariantPopup(delegateItem.modelData, delegateItem);
+                                }
+                            }
 
                             StyledText {
                                 anchors.centerIn: parent
@@ -818,13 +945,45 @@ PluginComponent {
                                 hoverEnabled: true
                                 cursorShape: Qt.PointingHandCursor
                                 acceptedButtons: Qt.LeftButton | Qt.RightButton
-                                onContainsMouseChanged: {
-                                    if (containsMouse)
-                                        emojiGrid.hoveredIndex = delegateItem.index;
-                                    else if (emojiGrid.hoveredIndex === delegateItem.index)
-                                        emojiGrid.hoveredIndex = -1;
+                                property bool heldTriggered: false
+
+                                onPressed: mouse => {
+                                    heldTriggered = false;
+                                    if (mouse.button === Qt.LeftButton && emojiBox.hasVariants) {
+                                        holdProgressFill.startProgress();
+                                        holdTimer.restart();
+                                    }
                                 }
+
+                                onReleased: {
+                                    holdTimer.stop();
+                                    holdProgressFill.resetProgress();
+                                }
+
+                                onCanceled: {
+                                    holdTimer.stop();
+                                    holdProgressFill.resetProgress();
+                                }
+
+                                onContainsMouseChanged: {
+                                    if (containsMouse) {
+                                        emojiGrid.hoveredIndex = delegateItem.index;
+                                    } else {
+                                        if (emojiGrid.hoveredIndex === delegateItem.index)
+                                            emojiGrid.hoveredIndex = -1;
+                                        holdTimer.stop();
+                                        holdProgressFill.resetProgress();
+                                    }
+                                }
+
                                 onClicked: mouse => {
+                                    holdTimer.stop();
+                                    holdProgressFill.resetProgress();
+                                    if (heldTriggered) {
+                                        heldTriggered = false;
+                                        return;
+                                    }
+                                    pickerView.hideVariantPopup();
                                     const emojiToCommit = root.effectiveEmoji(delegateItem.modelData);
                                     if (mouse.button === Qt.LeftButton && (mouse.modifiers & Qt.ShiftModifier)) {
                                         root.appendEmoji(emojiToCommit);
@@ -922,6 +1081,79 @@ PluginComponent {
                                 text: parent.modelData.label.toLocaleLowerCase()
                                 font.pixelSize: Theme.fontSizeSmall
                                 color: Theme.surfaceVariantText
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Scrim overlay: catches all clicks and hover events outside the popup to dismiss it cleanly without propagating to items beneath
+            MouseArea {
+                anchors.fill: parent
+                visible: pickerView.variantPopupVisible
+                z: 99
+                hoverEnabled: true
+                acceptedButtons: Qt.LeftButton | Qt.RightButton
+                onClicked: mouse => {
+                    pickerView.hideVariantPopup();
+                    mouse.accepted = true;
+                }
+            }
+
+            // Skin tone variant selector popup
+            Rectangle {
+                id: variantPopup
+                visible: pickerView.variantPopupVisible
+                z: 100
+                x: pickerView.variantPopupX
+                y: pickerView.variantPopupY
+                width: variantRow.width + Theme.spacingS * 2
+                height: 44
+                radius: Theme.cornerRadius
+                color: Theme.surfaceContainerHigh
+                border.width: 1
+                border.color: Theme.outlineVariant
+
+                Row {
+                    id: variantRow
+                    anchors.centerIn: parent
+                    spacing: 4
+
+                    Repeater {
+                        model: pickerView.variantPopupOptions
+
+                        Rectangle {
+                            id: variantItem
+                            required property string modelData
+                            required property int index
+                            width: 36
+                            height: 36
+                            radius: Theme.cornerRadiusSmall
+                            color: variantMouse.containsMouse ? Theme.surfaceContainerHighest : "transparent"
+
+                            StyledText {
+                                anchors.centerIn: parent
+                                text: root.displayEmoji(variantItem.modelData)
+                                font.family: "Noto Color Emoji"
+                                font.pixelSize: 22
+                                color: Theme.surfaceText
+                            }
+
+                            MouseArea {
+                                id: variantMouse
+                                anchors.fill: parent
+                                hoverEnabled: true
+                                cursorShape: Qt.PointingHandCursor
+                                acceptedButtons: Qt.LeftButton | Qt.RightButton
+                                onClicked: mouse => {
+                                    const emojiToCommit = variantItem.modelData;
+                                    pickerView.hideVariantPopup();
+                                    if (mouse.button === Qt.LeftButton && (mouse.modifiers & Qt.ShiftModifier)) {
+                                        root.appendEmoji(emojiToCommit);
+                                        return;
+                                    }
+                                    root.commitSingleEmoji(emojiToCommit, (mouse.button === Qt.RightButton) !== root.pasteByDefault);
+                                }
                             }
                         }
                     }
