@@ -355,6 +355,7 @@ PluginComponent {
             focus: true
 
             property bool variantPopupVisible: false
+            property var variantEntry: null
             property var variantPopupOptions: []
             property Item variantAnchorItem: null
             property real variantPopupX: 0
@@ -406,7 +407,9 @@ PluginComponent {
             function showVariantPopup(entry, item) {
                 if (!entry || !entry.variants || entry.variants.length === 0 || !item)
                     return;
-                variantPopupOptions = [entry.emoji].concat(entry.variants);
+                variantEntry = entry;
+                const variants = (entry.variants || []).filter(Boolean);
+                variantPopupOptions = [entry.emoji].concat(variants);
                 variantAnchorItem = item;
                 variantPopupVisible = true;
                 updateVariantPopupPosition();
@@ -414,6 +417,7 @@ PluginComponent {
 
             function hideVariantPopup() {
                 variantPopupVisible = false;
+                variantEntry = null;
                 variantAnchorItem = null;
                 variantPopupOptions = [];
             }
@@ -664,6 +668,7 @@ PluginComponent {
                     });
                 }
                 function onClosed() {
+                    pickerView.hideVariantPopup();
                     skinToneDropdown.closeDropdownMenu();
                 }
             }
@@ -819,7 +824,7 @@ PluginComponent {
                     }
 
                     StyledText {
-                        readonly property var highlightedEntry: emojiGrid.hoveredIndex >= 0 ? root.visibleEntries[emojiGrid.hoveredIndex] : (emojiGrid.activeFocus ? root.visibleEntries[root.selectedIndex] : null)
+                        readonly property var highlightedEntry: pickerView.variantPopupVisible ? pickerView.variantEntry : (emojiGrid.hoveredIndex >= 0 ? root.visibleEntries[emojiGrid.hoveredIndex] : (emojiGrid.activeFocus ? root.visibleEntries[root.selectedIndex] : null))
                         Layout.fillWidth: true
                         text: highlightedEntry ? "·  " + highlightedEntry.name : ""
                         color: Theme.surfaceText
@@ -1017,6 +1022,11 @@ PluginComponent {
                         }
                     }
                     Keys.onEscapePressed: event => {
+                        if (pickerView.variantPopupVisible) {
+                            pickerView.hideVariantPopup();
+                            event.accepted = true;
+                            return;
+                        }
                         root.handleEscape(event);
                     }
                 }
@@ -1129,7 +1139,7 @@ PluginComponent {
                             width: 36
                             height: 36
                             radius: Theme.cornerRadiusSmall
-                            color: variantMouse.containsMouse ? Theme.surfaceContainerHighest : "transparent"
+                            color: variantMouse.containsMouse ? Theme.surfaceContainerHighest : (Theme.transparent ?? "transparent")
 
                             StyledText {
                                 anchors.centerIn: parent
