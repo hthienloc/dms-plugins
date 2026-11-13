@@ -360,6 +360,8 @@ PluginComponent {
             property Item variantAnchorItem: null
             property real variantPopupX: 0
             property real variantPopupY: 0
+            property string variantPopupPlacement: "below"
+            property real variantArrowOffsetX: 0
 
             function updateVariantPopupPosition() {
                 if (!variantPopupVisible || !variantAnchorItem)
@@ -377,7 +379,10 @@ PluginComponent {
                     return;
                 }
 
-                const popupWidth = variantPopupOptions.length * 40 + 16;
+                const popupWidth = variantPopup.width > 0 ? variantPopup.width : (variantPopupOptions.length * 40 + 16);
+                const popupHeight = variantPopup.height > 0 ? variantPopup.height : 44;
+                const arrowOffset = 10;
+
                 let px = mapped.x + (variantAnchorItem.width - popupWidth) / 2;
                 px = Math.max(Theme.spacingM, Math.min(px, pickerView.width - popupWidth - Theme.spacingM));
 
@@ -385,23 +390,27 @@ PluginComponent {
                 const gridCenterY = gridTop + emojiGrid.height / 2;
                 const itemCenterY = mapped.y + variantAnchorItem.height / 2;
 
-                let py;
-                if (itemCenterY < gridCenterY) {
-                    // Emoji is in the upper half -> display below it (towards center)
-                    py = mapped.y + variantAnchorItem.height + 6;
-                } else {
-                    // Emoji is in the lower half -> display above it (towards center)
-                    py = mapped.y - 50;
-                }
+                let placement = itemCenterY < gridCenterY ? "below" : "above";
+                let py = placement === "below"
+                    ? mapped.y + variantAnchorItem.height + arrowOffset
+                    : mapped.y - popupHeight - arrowOffset;
 
                 // Boundary guard checks
-                if (py < Theme.spacingM)
-                    py = mapped.y + variantAnchorItem.height + 6;
-                else if (py + 44 > pickerView.height - Theme.spacingM)
-                    py = mapped.y - 50;
+                if (py < Theme.spacingM) {
+                    placement = "below";
+                    py = mapped.y + variantAnchorItem.height + arrowOffset;
+                } else if (py + popupHeight > pickerView.height - Theme.spacingM) {
+                    placement = "above";
+                    py = mapped.y - popupHeight - arrowOffset;
+                }
+
+                const anchorCenterX = mapped.x + variantAnchorItem.width / 2;
+                const safeMargin = Math.min(popupWidth / 2, (Theme.cornerRadius ?? 8) + 9);
 
                 variantPopupX = px;
                 variantPopupY = py;
+                variantPopupPlacement = placement;
+                variantArrowOffsetX = Math.max(safeMargin, Math.min(anchorCenterX - px, popupWidth - safeMargin));
             }
 
             function showVariantPopup(entry, item) {
@@ -1130,10 +1139,58 @@ PluginComponent {
                 y: pickerView.variantPopupY
                 width: variantRow.width + Theme.spacingS * 2
                 height: 44
+                onWidthChanged: pickerView.updateVariantPopupPosition()
                 radius: Theme.cornerRadius
                 color: Theme.surfaceContainerHigh
                 border.width: 1
                 border.color: Theme.outlineVariant
+
+                Canvas {
+                    id: variantArrowCanvas
+                    width: 16
+                    height: 8
+                    x: Math.round(pickerView.variantArrowOffsetX - width / 2)
+                    y: pickerView.variantPopupPlacement === "below" ? -height + 1 : parent.height - 1
+
+                    readonly property color fillColor: Theme.surfaceContainerHigh
+                    readonly property color strokeColor: Theme.outlineVariant
+                    readonly property string placement: pickerView.variantPopupPlacement
+
+                    onFillColorChanged: requestPaint()
+                    onStrokeColorChanged: requestPaint()
+                    onPlacementChanged: requestPaint()
+                    onVisibleChanged: {
+                        if (visible)
+                            requestPaint();
+                    }
+
+                    onPaint: {
+                        const ctx = getContext("2d");
+                        ctx.clearRect(0, 0, width, height);
+
+                        const pointingUp = placement === "below";
+                        const baseY = pointingUp ? height : 0;
+                        const strokeBaseY = pointingUp ? height - 0.5 : 0.5;
+                        const tipY = pointingUp ? 1 : height - 1;
+
+                        ctx.beginPath();
+                        ctx.moveTo(1, baseY);
+                        ctx.lineTo(width / 2, tipY);
+                        ctx.lineTo(width - 1, baseY);
+                        ctx.closePath();
+                        ctx.fillStyle = fillColor;
+                        ctx.fill();
+
+                        ctx.beginPath();
+                        ctx.moveTo(1, strokeBaseY);
+                        ctx.lineTo(width / 2, tipY);
+                        ctx.lineTo(width - 1, strokeBaseY);
+                        ctx.strokeStyle = strokeColor;
+                        ctx.lineWidth = 1;
+                        ctx.lineJoin = "round";
+                        ctx.stroke();
+                    }
+                }
 
                 Row {
                     id: variantRow
