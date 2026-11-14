@@ -908,6 +908,7 @@ PluginComponent {
                                 repeat: false
                                 onTriggered: {
                                     if (emojiMouse.pressed && emojiBox.hasVariants) {
+                                        emojiMouse.holdThresholdPassed = true;
                                         holdProgressFill.startProgress();
                                         holdTimer.restart();
                                     }
@@ -973,6 +974,7 @@ PluginComponent {
                                 cursorShape: Qt.PointingHandCursor
                                 acceptedButtons: Qt.LeftButton | Qt.RightButton
                                 property bool heldTriggered: false
+                                property bool holdThresholdPassed: false
 
                                 function cancelHold() {
                                     holdThresholdTimer.stop();
@@ -982,6 +984,7 @@ PluginComponent {
 
                                 onPressed: mouse => {
                                     heldTriggered = false;
+                                    holdThresholdPassed = false;
                                     const hasModifiers = Boolean(mouse.modifiers & (Qt.ShiftModifier | Qt.ControlModifier | Qt.AltModifier | Qt.MetaModifier));
                                     if (mouse.button === Qt.LeftButton && !hasModifiers && emojiBox.hasVariants) {
                                         holdThresholdTimer.restart();
@@ -1003,8 +1006,9 @@ PluginComponent {
 
                                 onClicked: mouse => {
                                     cancelHold();
-                                    if (heldTriggered) {
+                                    if (heldTriggered || holdThresholdPassed) {
                                         heldTriggered = false;
+                                        holdThresholdPassed = false;
                                         return;
                                     }
                                     pickerView.hideVariantPopup();
