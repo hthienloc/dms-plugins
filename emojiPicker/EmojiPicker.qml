@@ -449,7 +449,7 @@ PluginComponent {
             function commitVariantOption(index, modifiers, toggleRightClick) {
                 if (index < 0 || index >= variantPopupOptions.length)
                     return;
-                if (modifiers & Qt.ShiftModifier) {
+                if (!toggleRightClick && (modifiers & Qt.ShiftModifier)) {
                     const emojiToCommit = variantPopupOptions[index];
                     hideVariantPopup();
                     root.appendEmoji(emojiToCommit);
@@ -645,6 +645,7 @@ PluginComponent {
                     return false;
 
                 if (event.key === Qt.Key_F) {
+                    pickerView.hideVariantPopup();
                     searchField.forceActiveFocus();
                     searchField.selectAll();
                     event.accepted = true;
@@ -1063,6 +1064,10 @@ PluginComponent {
                         if (pickerView.handleCommonShortcuts(event))
                             return;
                         if (event.key === Qt.Key_Space && !(event.modifiers & (Qt.ShiftModifier | Qt.ControlModifier | Qt.AltModifier | Qt.MetaModifier))) {
+                            if (event.isAutoRepeat) {
+                                event.accepted = true;
+                                return;
+                            }
                             if (pickerView.variantPopupVisible) {
                                 pickerView.hideVariantPopup();
                                 event.accepted = true;
@@ -1208,7 +1213,13 @@ PluginComponent {
                         return;
 
                     if (event.key === Qt.Key_Escape || event.key === Qt.Key_Space) {
-                        pickerView.hideVariantPopup();
+                        if (!event.isAutoRepeat)
+                            pickerView.hideVariantPopup();
+                        event.accepted = true;
+                        return;
+                    }
+
+                    if (event.key === Qt.Key_Up || event.key === Qt.Key_Down) {
                         event.accepted = true;
                         return;
                     }
@@ -1247,7 +1258,8 @@ PluginComponent {
                     }
 
                     if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
-                        pickerView.commitVariantOption(pickerView.variantSelectedIndex, event.modifiers, false);
+                        if (!event.isAutoRepeat)
+                            pickerView.commitVariantOption(pickerView.variantSelectedIndex, event.modifiers, false);
                         event.accepted = true;
                     }
                 }
