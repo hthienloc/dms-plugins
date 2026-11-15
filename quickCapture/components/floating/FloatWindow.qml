@@ -579,7 +579,7 @@ PanelWindow {
                     window.portalReady = true;
                 }
             }
-            onExited: {
+            onExited: exitCode => {
                 if (window.supersededPortalExits > 0) {
                     window.supersededPortalExits--;
                     return;
@@ -790,19 +790,12 @@ PanelWindow {
                 name: "minimized"
                 when: window.isMinimized
                 PropertyChanges {
-                    target: container
-                    radius: minimizedSize / 2
-                    color: Theme.primary
-                    border.width: 0
-                    opacity: 0.5
-                }
-                PropertyChanges {
-                    target: img
-                    opacity: 0
-                }
-                PropertyChanges {
-                    target: cloudIcon
-                    opacity: 1
+                    container.radius: minimizedSize / 2
+                    container.color: Theme.primary
+                    container.border.width: 0
+                    container.opacity: 0.5
+                    img.opacity: 0
+                    cloudIcon.opacity: 1
                 }
             }
         ]
