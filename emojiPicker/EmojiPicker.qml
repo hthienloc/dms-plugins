@@ -357,6 +357,7 @@ PluginComponent {
             property bool variantPopupVisible: false
             property var variantEntry: null
             property var variantPopupOptions: []
+            property int variantSelectedIndex: 0
             property Item variantAnchorItem: null
             property real variantPopupX: 0
             property real variantPopupY: 0
@@ -419,16 +420,43 @@ PluginComponent {
                 variantEntry = entry;
                 const variants = (entry.variants || []).filter(Boolean);
                 variantPopupOptions = [entry.emoji].concat(variants);
+                variantSelectedIndex = 0;
                 variantAnchorItem = item;
                 variantPopupVisible = true;
                 updateVariantPopupPosition();
+                variantPopup.forceActiveFocus();
             }
 
             function hideVariantPopup() {
+                const restoreFocus = variantPopup.activeFocus;
                 variantPopupVisible = false;
                 variantEntry = null;
                 variantAnchorItem = null;
                 variantPopupOptions = [];
+                variantSelectedIndex = 0;
+                if (restoreFocus)
+                    emojiGrid.forceActiveFocus();
+            }
+
+            function commitVariantWithPaste(index, paste) {
+                if (index < 0 || index >= variantPopupOptions.length)
+                    return;
+                const emojiToCommit = variantPopupOptions[index];
+                hideVariantPopup();
+                root.commitSingleEmoji(emojiToCommit, paste);
+            }
+
+            function commitVariantOption(index, modifiers, toggleRightClick) {
+                if (index < 0 || index >= variantPopupOptions.length)
+                    return;
+                if (modifiers & Qt.ShiftModifier) {
+                    const emojiToCommit = variantPopupOptions[index];
+                    hideVariantPopup();
+                    root.appendEmoji(emojiToCommit);
+                    return;
+                }
+                const togglePaste = Boolean(toggleRightClick) || Boolean(modifiers & Qt.ControlModifier);
+                commitVariantWithPaste(index, togglePaste !== root.pasteByDefault);
             }
 
             function focusCategory(index) {
@@ -623,12 +651,18 @@ PluginComponent {
                     return true;
                 }
                 if (event.key === Qt.Key_C) {
-                    root.commitCurrent(false);
+                    if (pickerView.variantPopupVisible)
+                        pickerView.commitVariantWithPaste(pickerView.variantSelectedIndex, false);
+                    else
+                        root.commitCurrent(false);
                     event.accepted = true;
                     return true;
                 }
                 if (event.key === Qt.Key_V) {
-                    root.commitCurrent(true);
+                    if (pickerView.variantPopupVisible)
+                        pickerView.commitVariantWithPaste(pickerView.variantSelectedIndex, true);
+                    else
+                        root.commitCurrent(true);
                     event.accepted = true;
                     return true;
                 }
@@ -1028,8 +1062,26 @@ PluginComponent {
                     Keys.onPressed: event => {
                         if (pickerView.handleCommonShortcuts(event))
                             return;
+                        if (event.key === Qt.Key_Space && !(event.modifiers & (Qt.ShiftModifier | Qt.ControlModifier | Qt.AltModifier | Qt.MetaModifier))) {
+                            if (pickerView.variantPopupVisible) {
+                                pickerView.hideVariantPopup();
+                                event.accepted = true;
+                                return;
+                            }
+                            const entry = root.visibleEntries[emojiGrid.currentIndex];
+                            if (entry && entry.variants && entry.variants.length > 0 && emojiGrid.currentItem) {
+                                pickerView.showVariantPopup(entry, emojiGrid.currentItem);
+                                event.accepted = true;
+                                return;
+                            }
+                        }
                         if (pickerView.handleVimNavigation(event))
                             return;
+                        if (pickerView.variantPopupVisible && (event.key === Qt.Key_Return || event.key === Qt.Key_Enter)) {
+                            pickerView.commitVariantOption(pickerView.variantSelectedIndex, event.modifiers, false);
+                            event.accepted = true;
+                            return;
+                        }
                         if (root.handleEnter(event))
                             return;
                         if (root.handleQueueBackspace(event, true))
@@ -1138,6 +1190,7 @@ PluginComponent {
             Rectangle {
                 id: variantPopup
                 visible: pickerView.variantPopupVisible
+                focus: pickerView.variantPopupVisible
                 z: 100
                 x: pickerView.variantPopupX
                 y: pickerView.variantPopupY
@@ -1148,6 +1201,56 @@ PluginComponent {
                 color: Theme.surfaceContainerHigh
                 border.width: 1
                 border.color: Theme.outlineVariant
+
+                Keys.onPressed: event => {
+                    const count = pickerView.variantPopupOptions.length;
+                    if (!pickerView.variantPopupVisible || count === 0)
+                        return;
+
+                    if (event.key === Qt.Key_Escape || event.key === Qt.Key_Space) {
+                        pickerView.hideVariantPopup();
+                        event.accepted = true;
+                        return;
+                    }
+
+                    if (event.key === Qt.Key_Left || event.key === Qt.Key_H) {
+                        pickerView.variantSelectedIndex = Math.max(0, pickerView.variantSelectedIndex - 1);
+                        event.accepted = true;
+                        return;
+                    }
+
+                    if (event.key === Qt.Key_Right || event.key === Qt.Key_L) {
+                        pickerView.variantSelectedIndex = Math.min(count - 1, pickerView.variantSelectedIndex + 1);
+                        event.accepted = true;
+                        return;
+                    }
+
+                    if (event.key === Qt.Key_Home) {
+                        pickerView.variantSelectedIndex = 0;
+                        event.accepted = true;
+                        return;
+                    }
+
+                    if (event.key === Qt.Key_End) {
+                        pickerView.variantSelectedIndex = count - 1;
+                        event.accepted = true;
+                        return;
+                    }
+
+                    if (event.key >= Qt.Key_1 && event.key <= Qt.Key_6 && !(event.modifiers & (Qt.ControlModifier | Qt.AltModifier | Qt.MetaModifier))) {
+                        const targetIndex = event.key - Qt.Key_1;
+                        if (targetIndex < count) {
+                            pickerView.variantSelectedIndex = targetIndex;
+                            event.accepted = true;
+                            return;
+                        }
+                    }
+
+                    if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
+                        pickerView.commitVariantOption(pickerView.variantSelectedIndex, event.modifiers, false);
+                        event.accepted = true;
+                    }
+                }
 
                 Canvas {
                     id: variantArrowCanvas
@@ -1208,10 +1311,15 @@ PluginComponent {
                             id: variantItem
                             required property string modelData
                             required property int index
+                            readonly property bool isSelected: variantItem.index === pickerView.variantSelectedIndex
                             width: 36
                             height: 36
                             radius: Theme.cornerRadiusSmall
-                            color: variantMouse.containsMouse ? Theme.surfaceContainerHighest : (Theme.transparent ?? "transparent")
+                            color: variantMouse.containsMouse
+                                ? Theme.surfaceContainerHighest
+                                : (isSelected ? Theme.withAlpha(Theme.primary, 0.16) : (Theme.transparent ?? "transparent"))
+                            border.width: isSelected ? 2 : 0
+                            border.color: Theme.primary
 
                             StyledText {
                                 anchors.centerIn: parent
@@ -1228,14 +1336,7 @@ PluginComponent {
                                 cursorShape: Qt.PointingHandCursor
                                 acceptedButtons: Qt.LeftButton | Qt.RightButton
                                 onClicked: mouse => {
-                                    const emojiToCommit = variantItem.modelData;
-                                    pickerView.hideVariantPopup();
-                                    if (mouse.button === Qt.LeftButton && (mouse.modifiers & Qt.ShiftModifier)) {
-                                        root.appendEmoji(emojiToCommit);
-                                        return;
-                                    }
-                                    const togglePaste = (mouse.button === Qt.RightButton) || Boolean(mouse.modifiers & Qt.ControlModifier);
-                                    root.commitSingleEmoji(emojiToCommit, togglePaste !== root.pasteByDefault);
+                                    pickerView.commitVariantOption(variantItem.index, mouse.modifiers, mouse.button === Qt.RightButton);
                                 }
                             }
                         }
