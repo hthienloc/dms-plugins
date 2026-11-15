@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Effects
 import Quickshell
+import Quickshell.Io
 import Quickshell.Wayland
 import qs.Common
 import qs.Services
@@ -46,6 +47,24 @@ PanelWindow {
     property bool isTop: false
     property bool isScaling: false
     property bool temporarilyHidden: false
+    property bool dndArmed: false
+    property bool isExternalDragging: false
+    property bool suppressClick: false
+    property point pressPos: Qt.point(0, 0)
+    property string portalKey: ""
+    property string prevPortalKey: ""
+    property bool portalReady: false
+    property int dndGeneration: 0
+    readonly property string fileUri: {
+        if (!imageSource)
+            return "";
+        return imageSource.startsWith("file://") ? imageSource : ("file://" + imageSource);
+    }
+    readonly property string localFilePath: {
+        if (!fileUri)
+            return "";
+        return fileUri.startsWith("file://") ? decodeURIComponent(fileUri.slice(7)) : fileUri;
+    }
     visible: !temporarilyHidden
 
     onTargetWidthChanged: if (!manuallyMoved)
@@ -389,6 +408,8 @@ PanelWindow {
         radius: Theme.cornerRadius
         color: window.transparentBg ? "transparent" : Theme.surfaceContainer
         border.color: {
+            if (window.dndArmed || window.isExternalDragging)
+                return Theme.primary;
             switch (window.borderColor) {
             case "primary":
                 return Theme.primary;
@@ -400,7 +421,7 @@ PanelWindow {
                 return Theme.outlineVariant;
             }
         }
-        border.width: window.borderWidth
+        border.width: (window.dndArmed || window.isExternalDragging) ? Math.max(2, window.borderWidth) : window.borderWidth
         clip: true
         antialiasing: true
 
@@ -470,6 +491,128 @@ PanelWindow {
             visible: opacity > 0
         }
 
+        Item {
+            id: dndDummy
+            x: 0
+            y: 0
+            width: parent.width
+            height: parent.height
+            Drag.active: window.dndArmed && dragArea.drag.active && window.portalReady
+            Drag.dragType: Drag.Automatic
+            Drag.supportedActions: Qt.CopyAction
+            Drag.keys: ["text/uri-list"]
+            Drag.mimeData: {
+                if (!window.fileUri)
+                    return ({});
+                const data = {
+                    "text/uri-list": window.fileUri + "\r\n",
+                    "x-special/gnome-copied-files": "copy\n" + window.fileUri + "\n"
+                };
+                if (window.portalKey)
+                    data["application/vnd.portal.filetransfer"] = window.portalKey;
+                return data;
+            }
+            Drag.imageSource: window.imageSource
+            Drag.imageSourceSize: Qt.size(Math.min(256, Math.max(64, Math.round(window.targetWidth))), Math.min(256, Math.max(64, Math.round(window.targetHeight))))
+            Drag.hotSpot: Qt.point(Math.min(128, window.pressPos.x), Math.min(128, window.pressPos.y))
+            Drag.onDragStarted: {
+                window.isExternalDragging = true;
+                if (window.portalKey)
+                    window.prevPortalKey = window.portalKey;
+            }
+            Drag.onDragFinished: {
+                window.isExternalDragging = false;
+                window.dndArmed = false;
+                dndDummy.x = 0;
+                dndDummy.y = 0;
+                portalCleanupTimer.restart();
+                if (window.autoMinimize && !dragArea.containsMouse) {
+                    minimizeTimer.restart();
+                }
+            }
+        }
+
+        Rectangle {
+            id: dndBadge
+            visible: !window.isMinimized && (window.dndArmed || window.isExternalDragging)
+            anchors.top: parent.top
+            anchors.right: parent.right
+            anchors.margins: window.borderWidth + Theme.spacingXS
+            width: dndBadgeIcon.width + Theme.spacingS * 2
+            height: dndBadgeIcon.height + Theme.spacingXS * 2
+            radius: Theme.cornerRadius
+            color: Theme.primary
+            opacity: 0.92
+            z: 2
+
+            DIcon {
+                id: dndBadgeIcon
+                name: "drag_indicator"
+                anchors.centerIn: parent
+                size: Theme.iconSizeSmall
+                color: Theme.onPrimary
+            }
+        }
+
+        Process {
+            id: portalProcess
+            running: false
+            stdout: SplitParser {
+                onRead: line => {
+                    const key = (line || "").trim();
+                    if (key) {
+                        window.portalKey = key;
+                    }
+                    window.portalReady = true;
+                }
+            }
+            onExited: {
+                if (!window.portalReady) {
+                    window.portalReady = true;
+                }
+            }
+        }
+
+        Timer {
+            id: portalCleanupTimer
+            interval: 5000
+            repeat: false
+            onTriggered: {
+                if (!window.isExternalDragging && !window.dndArmed) {
+                    portalProcess.running = false;
+                }
+            }
+        }
+
+        function startPortalTransfer() {
+            portalCleanupTimer.stop();
+            portalProcess.running = false;
+            window.portalKey = "";
+            window.portalReady = false;
+            ++window.dndGeneration;
+            if (!window.localFilePath) {
+                window.portalReady = true;
+                return;
+            }
+            const scriptPath = Qt.resolvedUrl("../../scripts/portal_transfer.py").toString().replace(/^file:\/\//, "");
+            const args = window.prevPortalKey ? ["python3", scriptPath, window.localFilePath, window.prevPortalKey] : ["python3", scriptPath, window.localFilePath];
+            portalProcess.command = args;
+            portalProcess.running = true;
+        }
+
+        Timer {
+            id: holdDndTimer
+            interval: 350
+            repeat: false
+            onTriggered: {
+                if (dragArea.pressedButtons & Qt.LeftButton && !dragArea.drag.active && !window.isMinimized && window.fileUri) {
+                    window.dndArmed = true;
+                    window.suppressClick = true;
+                    minimizeTimer.stop();
+                }
+            }
+        }
+
         PinchHandler {
             id: pinchHandler
             target: null
@@ -495,12 +638,12 @@ PanelWindow {
             id: dragArea
             anchors.fill: parent
             hoverEnabled: true
-            cursorShape: Qt.SizeAllCursor
+            cursorShape: (window.dndArmed || window.isExternalDragging) ? Qt.DragCopyCursor : Qt.SizeAllCursor
             acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
 
-            drag.target: dragTarget
+            drag.target: (window.dndArmed || window.isExternalDragging) ? dndDummy : dragTarget
             drag.axis: Drag.XAndYAxis
-            drag.threshold: 0
+            drag.threshold: 6
 
             onEntered: {
                 minimizeTimer.stop();
@@ -508,7 +651,7 @@ PanelWindow {
             }
 
             onExited: {
-                if (window.autoMinimize && !drag.active) {
+                if (window.autoMinimize && !drag.active && !window.dndArmed && !window.isExternalDragging) {
                     minimizeTimer.restart();
                 }
             }
@@ -517,15 +660,58 @@ PanelWindow {
                 if (window.plugin && typeof window.plugin.raiseWindow === "function") {
                     window.plugin.raiseWindow(window);
                 }
-                if (mouse.button === Qt.RightButton) {
+                if (mouse.button === Qt.LeftButton) {
+                    window.pressPos = Qt.point(mouse.x, mouse.y);
+                    window.dndArmed = false;
+                    window.suppressClick = false;
+                    if (!window.isMinimized && window.fileUri) {
+                        container.startPortalTransfer();
+                        holdDndTimer.restart();
+                    }
+                } else if (mouse.button === Qt.RightButton) {
+                    holdDndTimer.stop();
                     window.isMinimized = !window.isMinimized;
                 } else if (mouse.button === Qt.MiddleButton) {
+                    holdDndTimer.stop();
                     opacityToClose.start();
                 }
             }
 
+            onPositionChanged: function (mouse) {
+                if (!(mouse.buttons & Qt.LeftButton))
+                    return;
+
+                const dist = Math.hypot(mouse.x - window.pressPos.x, mouse.y - window.pressPos.y);
+                if (!window.dndArmed && !window.isExternalDragging && holdDndTimer.running && dist > 6) {
+                    holdDndTimer.stop();
+                }
+            }
+
+            onReleased: function (mouse) {
+                if (mouse.button === Qt.LeftButton) {
+                    holdDndTimer.stop();
+                    window.isExternalDragging = false;
+                    window.dndArmed = false;
+                    dndDummy.x = 0;
+                    dndDummy.y = 0;
+                }
+            }
+
+            onCanceled: {
+                holdDndTimer.stop();
+                window.isExternalDragging = false;
+                window.dndArmed = false;
+                window.suppressClick = false;
+                dndDummy.x = 0;
+                dndDummy.y = 0;
+            }
+
             onClicked: function (mouse) {
                 if (mouse.button === Qt.LeftButton) {
+                    if (window.suppressClick) {
+                        window.suppressClick = false;
+                        return;
+                    }
                     if (window.plugin && typeof window.plugin.requestRestore === "function") {
                         window.plugin.requestRestore(window.imageSource);
                     }
