@@ -53,7 +53,7 @@ def main() -> int:
             "StartTransfer",
             GLib.Variant(
                 "(a{sv})",
-                ({"writable": GLib.Variant("b", False), "autostop": GLib.Variant("b", True)},),
+                ({"writable": GLib.Variant("b", False), "autostop": GLib.Variant("b", False)},),
             ),
             GLib.VariantType("(s)"),
             Gio.DBusCallFlags.NONE,
@@ -119,7 +119,7 @@ def main() -> int:
         bus.signal_unsubscribe(sub_id)
     except Exception as exc:
         sys.stderr.write(f"portal_transfer: {exc}\n")
-        return 0
+        return 1
     return 0
 
 

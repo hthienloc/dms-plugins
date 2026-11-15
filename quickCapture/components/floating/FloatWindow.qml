@@ -55,15 +55,28 @@ PanelWindow {
     property string prevPortalKey: ""
     property bool portalReady: false
     property int dndGeneration: 0
+    property int supersededPortalExits: 0
+    readonly property int dragThreshold: 6
+    readonly property int dragPreviewMaxSize: 256
     readonly property string fileUri: {
         if (!imageSource)
             return "";
-        return imageSource.startsWith("file://") ? imageSource : ("file://" + imageSource);
+        if (imageSource.startsWith("file://"))
+            return imageSource;
+        const encoded = imageSource.split("/").map(seg => encodeURIComponent(seg)).join("/");
+        return "file://" + encoded;
     }
     readonly property string localFilePath: {
-        if (!fileUri)
+        if (!imageSource)
             return "";
-        return fileUri.startsWith("file://") ? decodeURIComponent(fileUri.slice(7)) : fileUri;
+        if (!imageSource.startsWith("file://"))
+            return imageSource;
+        const raw = imageSource.slice(7);
+        try {
+            return decodeURIComponent(raw);
+        } catch (e) {
+            return raw;
+        }
     }
     visible: !temporarilyHidden
 
@@ -500,7 +513,7 @@ PanelWindow {
             Drag.active: window.dndArmed && dragArea.drag.active && window.portalReady
             Drag.dragType: Drag.Automatic
             Drag.supportedActions: Qt.CopyAction
-            Drag.keys: ["text/uri-list"]
+            Drag.keys: window.portalKey ? ["text/uri-list", "application/vnd.portal.filetransfer"] : ["text/uri-list"]
             Drag.mimeData: {
                 if (!window.fileUri)
                     return ({});
@@ -513,8 +526,8 @@ PanelWindow {
                 return data;
             }
             Drag.imageSource: window.imageSource
-            Drag.imageSourceSize: Qt.size(Math.min(256, Math.max(64, Math.round(window.targetWidth))), Math.min(256, Math.max(64, Math.round(window.targetHeight))))
-            Drag.hotSpot: Qt.point(Math.min(128, window.pressPos.x), Math.min(128, window.pressPos.y))
+            Drag.imageSourceSize: Qt.size(Math.min(window.dragPreviewMaxSize, Math.max(64, Math.round(window.targetWidth))), Math.min(window.dragPreviewMaxSize, Math.max(64, Math.round(window.targetHeight))))
+            Drag.hotSpot: Qt.point(Math.min(window.dragPreviewMaxSize / 2, window.pressPos.x), Math.min(window.dragPreviewMaxSize / 2, window.pressPos.y))
             Drag.onDragStarted: {
                 window.isExternalDragging = true;
                 if (window.portalKey)
@@ -567,6 +580,10 @@ PanelWindow {
                 }
             }
             onExited: {
+                if (window.supersededPortalExits > 0) {
+                    window.supersededPortalExits--;
+                    return;
+                }
                 if (!window.portalReady) {
                     window.portalReady = true;
                 }
@@ -579,14 +596,21 @@ PanelWindow {
             repeat: false
             onTriggered: {
                 if (!window.isExternalDragging && !window.dndArmed) {
-                    portalProcess.running = false;
+                    container.stopPortalTransfer();
                 }
             }
         }
 
-        function startPortalTransfer() {
+        function stopPortalTransfer() {
             portalCleanupTimer.stop();
-            portalProcess.running = false;
+            if (portalProcess.running) {
+                window.supersededPortalExits++;
+                portalProcess.running = false;
+            }
+        }
+
+        function startPortalTransfer() {
+            stopPortalTransfer();
             window.portalKey = "";
             window.portalReady = false;
             ++window.dndGeneration;
@@ -643,7 +667,7 @@ PanelWindow {
 
             drag.target: (window.dndArmed || window.isExternalDragging) ? dndDummy : dragTarget
             drag.axis: Drag.XAndYAxis
-            drag.threshold: 6
+            drag.threshold: window.dragThreshold
 
             onEntered: {
                 minimizeTimer.stop();
@@ -682,28 +706,36 @@ PanelWindow {
                     return;
 
                 const dist = Math.hypot(mouse.x - window.pressPos.x, mouse.y - window.pressPos.y);
-                if (!window.dndArmed && !window.isExternalDragging && holdDndTimer.running && dist > 6) {
+                if (!window.dndArmed && !window.isExternalDragging && holdDndTimer.running && dist > window.dragThreshold) {
                     holdDndTimer.stop();
                 }
             }
 
             onReleased: function (mouse) {
                 if (mouse.button === Qt.LeftButton) {
+                    const wasExternalDragging = window.isExternalDragging;
                     holdDndTimer.stop();
                     window.isExternalDragging = false;
                     window.dndArmed = false;
                     dndDummy.x = 0;
                     dndDummy.y = 0;
+                    if (!wasExternalDragging) {
+                        container.stopPortalTransfer();
+                    }
                 }
             }
 
             onCanceled: {
+                const wasExternalDragging = window.isExternalDragging;
                 holdDndTimer.stop();
                 window.isExternalDragging = false;
                 window.dndArmed = false;
                 window.suppressClick = false;
                 dndDummy.x = 0;
                 dndDummy.y = 0;
+                if (!wasExternalDragging) {
+                    container.stopPortalTransfer();
+                }
             }
 
             onClicked: function (mouse) {
