@@ -355,9 +355,37 @@ SettingsGroup {
         Separator {}
 
         ToggleSettingPlus {
+            id: showRecordingDot
+            settingKey: "showRecordingDot"
+            label: I18n.trFor("quickCapture", "Show Recording Dot")
+            defaultValue: Defaults.values.showRecordingDot
+        }
+
+        Separator {
+            visible: showRecordingDot.value
+        }
+
+        ToggleSettingPlus {
+            visible: showRecordingDot.value
             settingKey: "blinkRecordDot"
             label: I18n.trFor("quickCapture", "Blink Recording Dot")
             defaultValue: Defaults.values.blinkRecordDot
+        }
+
+        Separator {}
+
+        ToggleSettingPlus {
+            settingKey: "showRecordingTimer"
+            label: I18n.trFor("quickCapture", "Show Recording Timer")
+            defaultValue: Defaults.values.showRecordingTimer
+        }
+
+        Separator {}
+
+        ToggleSettingPlus {
+            settingKey: "showRecordingControls"
+            label: I18n.trFor("quickCapture", "Show Recording Controls")
+            defaultValue: Defaults.values.showRecordingControls
         }
 
         Separator {}

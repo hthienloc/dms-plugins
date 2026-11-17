@@ -12,12 +12,17 @@ Item {
     readonly property bool isPaused: widget.isPaused
     readonly property string statusLocation: Defaults.get(widget.pluginData, "recordingStatusLocation")
     readonly property bool showRecordingStatus: root.isRecording && (root.statusLocation !== "floating")
+    readonly property bool showRecordingDot: Defaults.get(widget.pluginData, "showRecordingDot")
+    readonly property bool showRecordingTimer: Defaults.get(widget.pluginData, "showRecordingTimer")
+    readonly property bool showRecordingControls: Defaults.get(widget.pluginData, "showRecordingControls")
+    readonly property int visibleStatusParts: (root.showRecordingDot ? 1 : 0) + (root.showRecordingTimer ? 1 : 0) + (root.showRecordingControls ? 1 : 0)
+    readonly property bool showExpandedStatus: root.showRecordingStatus && root.visibleStatusParts > 0
     readonly property int effectiveIconSize: root.widget.iconSize > 0 ? root.widget.iconSize : Theme.iconSizeSmall
     property bool draggingOver: false
 
     width: implicitWidth
     height: implicitHeight
-    implicitWidth: vertical ? Math.max(effectiveIconSize, layout.implicitWidth) : (showRecordingStatus ? layout.implicitWidth : effectiveIconSize)
+    implicitWidth: vertical ? Math.max(effectiveIconSize, layout.implicitWidth) : (showExpandedStatus ? layout.implicitWidth : effectiveIconSize)
     implicitHeight: vertical ? layout.implicitHeight : (root.widget.surfaceContext?.kind === "dock" ? root.effectiveIconSize : Theme.iconSize)
     anchors.verticalCenter: vertical ? undefined : parent.verticalCenter
     anchors.horizontalCenter: vertical ? parent.horizontalCenter : undefined
@@ -33,8 +38,8 @@ Item {
     Grid {
         id: layout
         anchors.centerIn: parent
-        columns: root.vertical ? 1 : (root.showRecordingStatus ? 3 : 1)
-        spacing: root.showRecordingStatus ? (root.vertical ? Theme.spacingXS : Theme.spacingS) : 0
+        columns: root.vertical ? 1 : (root.showExpandedStatus ? root.visibleStatusParts : 1)
+        spacing: root.showExpandedStatus ? (root.vertical ? Theme.spacingXS : Theme.spacingS) : 0
         horizontalItemAlignment: Grid.AlignHCenter
         verticalItemAlignment: Grid.AlignVCenter
         scale: root.draggingOver ? 1.2 : 1.0
@@ -46,7 +51,7 @@ Item {
         }
 
         DIcon {
-            visible: !root.showRecordingStatus
+            visible: !root.showExpandedStatus
             width: visible ? root.effectiveIconSize : 0
             implicitWidth: visible ? root.effectiveIconSize : 0
             name: root.widget.isDownloading ? "download" : (root.widget.widgetMode === "video" || root.isRecording ? "videocam" : "screenshot_region")
@@ -55,13 +60,13 @@ Item {
         }
 
         RecordingDot {
-            visible: root.showRecordingStatus
+            visible: root.showExpandedStatus && root.showRecordingDot
             paused: root.isPaused
             blink: root.widget.blinkRecordDot
         }
 
         StyledText {
-            visible: root.showRecordingStatus
+            visible: root.showExpandedStatus && root.showRecordingTimer
             text: root.vertical ? root.widget.durationText.split(":").join("\n") : root.widget.durationText
             color: root.isPaused ? Theme.warning : Theme.widgetTextColor
             font.pixelSize: Theme.barTextSize(root.widget.barThickness, root.widget.barConfig?.fontScale, root.widget.barConfig?.maximizeWidgetText)
@@ -73,7 +78,7 @@ Item {
         }
 
         RecordingTransport {
-            visible: root.showRecordingStatus
+            visible: root.showExpandedStatus && root.showRecordingControls
             recorder: root.widget.recorder
             vertical: root.vertical
             buttonSize: 24

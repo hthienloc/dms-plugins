@@ -18,6 +18,12 @@ PanelWindow {
     readonly property string durationText: recorder ? recorder.formatDuration(recorder.recordingSeconds) : "00:00"
     readonly property string statusLocation: Defaults.get(daemon?.pluginData, "recordingStatusLocation")
     readonly property bool showPillBorder: Defaults.get(daemon?.pluginData, "showPillBorder")
+    readonly property bool showRecordingDot: Defaults.get(daemon?.pluginData, "showRecordingDot")
+    readonly property bool showRecordingTimer: Defaults.get(daemon?.pluginData, "showRecordingTimer")
+    readonly property bool showRecordingControls: Defaults.get(daemon?.pluginData, "showRecordingControls")
+    readonly property bool effectiveShowDot: showRecordingDot || (!showRecordingTimer && !showRecordingControls)
+    property bool controlsExpanded: false
+    readonly property bool showExpandedControls: root.shouldBeVisible && !root.showRecordingControls && root.controlsExpanded
 
     readonly property bool shouldBeVisible: {
         if (!root.isRecording)
@@ -57,6 +63,10 @@ PanelWindow {
 
     mask: Region {
         item: pillCard
+
+        Region {
+            item: root.showExpandedControls ? controlsCard : null
+        }
     }
 
     onIsRecordingChanged: {
@@ -64,6 +74,12 @@ PanelWindow {
             root.targetScreen = CompositorService.getFocusedScreen() ?? Quickshell.screens[0] ?? null;
             root.hasCustomPosition = false;
         }
+        root.controlsExpanded = false;
+    }
+
+    onShowRecordingControlsChanged: {
+        if (root.showRecordingControls)
+            root.controlsExpanded = false;
     }
 
     function edgeInset(side) {
@@ -131,12 +147,14 @@ PanelWindow {
             property real startMouseY: 0
             property real startCardX: 0
             property real startCardY: 0
+            property bool didDrag: false
 
             onPressed: mouse => {
                 if (mouse.button === Qt.RightButton) {
                     root.recorder?.cancelRecording();
                     return;
                 }
+                didDrag = false;
                 startMouseX = mouse.x;
                 startMouseY = mouse.y;
                 startCardX = pillCard.x;
@@ -148,13 +166,19 @@ PanelWindow {
                     return;
                 const dx = mouse.x - startMouseX;
                 const dy = mouse.y - startMouseY;
-                if (!root.hasCustomPosition && Math.abs(dx) + Math.abs(dy) < 3)
+                if (!didDrag && Math.abs(dx) + Math.abs(dy) < 3)
                     return;
+                didDrag = true;
                 root.customX = Math.max(root.minX, Math.min(root.maxX, startCardX + dx));
                 root.customY = Math.max(root.minY, Math.min(root.maxY, startCardY + dy));
                 root.hasCustomPosition = true;
                 startCardX = root.customX;
                 startCardY = root.customY;
+            }
+
+            onReleased: mouse => {
+                if (mouse.button === Qt.LeftButton && !didDrag && !root.showRecordingControls)
+                    root.controlsExpanded = !root.controlsExpanded;
             }
         }
 
@@ -167,7 +191,7 @@ PanelWindow {
                 dotSize: 9
                 paused: root.isPaused
                 blink: root.isRecording && root.blinkRecordDot
-                visible: root.shouldBeVisible
+                visible: root.shouldBeVisible && root.effectiveShowDot
                 anchors.verticalCenter: parent.verticalCenter
             }
 
@@ -179,6 +203,7 @@ PanelWindow {
                 font.features: {
                     "tnum": 1
                 }
+                visible: root.showRecordingTimer
                 anchors.verticalCenter: parent.verticalCenter
             }
 
@@ -188,8 +213,38 @@ PanelWindow {
                 iconSize: 14
                 filled: true
                 showCancel: true
+                visible: root.showRecordingControls
                 anchors.verticalCenter: parent.verticalCenter
             }
+        }
+    }
+
+    Rectangle {
+        id: controlsCard
+
+        readonly property real gap: Theme.spacingXS
+        readonly property bool placeAbove: (pillCard.y + pillCard.height + gap + height) > (root.height - root.bottomInset)
+
+        visible: root.showExpandedControls
+        width: expandedTransport.implicitWidth + Theme.spacingM * 2
+        height: expandedTransport.implicitHeight + Theme.spacingS * 2
+        radius: Theme.cornerRadius
+        color: Theme.withAlpha(Theme.surfaceContainer, Theme.popupTransparency)
+        border.color: Theme.outlineVariant
+        border.width: root.showPillBorder ? 1 : 0
+
+        x: Math.max(root.leftInset, Math.min(root.width - width - root.rightInset, pillCard.x + (pillCard.width - width) / 2))
+        y: placeAbove ? (pillCard.y - gap - height) : (pillCard.y + pillCard.height + gap)
+
+        RecordingTransport {
+            id: expandedTransport
+            anchors.centerIn: parent
+            recorder: root.recorder
+            buttonSize: 38
+            iconSize: Theme.iconSize
+            filled: true
+            showCancel: true
+            onActionTriggered: root.controlsExpanded = false
         }
     }
 }
