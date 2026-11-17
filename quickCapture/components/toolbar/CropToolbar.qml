@@ -7,6 +7,28 @@ Rectangle {
     id: root
 
     property string currentRatio: "" // "" = Free, "1:1", "4:3", "16:9", "3:2"
+    readonly property var ratioOptions: [
+        {
+            label: I18n.trFor("quickCapture", "Free"),
+            value: ""
+        },
+        {
+            label: "1:1",
+            value: "1:1"
+        },
+        {
+            label: "4:3",
+            value: "4:3"
+        },
+        {
+            label: "16:9",
+            value: "16:9"
+        },
+        {
+            label: "3:2",
+            value: "3:2"
+        }
+    ]
 
     signal ratioSelected(string ratio)
     signal resetRequested
@@ -32,55 +54,24 @@ Rectangle {
         anchors.centerIn: parent
         spacing: 6
 
-        // Aspect ratio pills
-        Repeater {
-            model: [
-                {
-                    label: I18n.trFor("quickCapture", "Free"),
-                    value: ""
-                },
-                {
-                    label: "1:1",
-                    value: "1:1"
-                },
-                {
-                    label: "4:3",
-                    value: "4:3"
-                },
-                {
-                    label: "16:9",
-                    value: "16:9"
-                },
-                {
-                    label: "3:2",
-                    value: "3:2"
-                }
-            ]
-
-            delegate: Rectangle {
-                id: pillRect
-                implicitHeight: 30
-                implicitWidth: pillText.implicitWidth + 18
-                radius: 15
-                readonly property bool isSelected: root.currentRatio === modelData.value
-                color: isSelected ? Theme.primary : (pillMouse.containsMouse ? Theme.withAlpha(Theme.surfaceText, 0.08) : "transparent")
-
-                Text {
-                    id: pillText
-                    anchors.centerIn: parent
-                    text: modelData.label
-                    font.family: Theme.fontFamily
-                    font.pixelSize: Theme.fontSizeSmall
-                    font.weight: pillRect.isSelected ? Font.Bold : Font.Medium
-                    color: pillRect.isSelected ? Theme.surfaceContainerHigh : Theme.surfaceText
-                }
-
-                MouseArea {
-                    id: pillMouse
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    cursorShape: Qt.PointingHandCursor
-                    onClicked: root.ratioSelected(modelData.value)
+        // Aspect ratio pill group
+        DButtonGroup {
+            id: ratioGroup
+            size: "small"
+            buttonHeight: 30
+            minButtonWidth: 40
+            checkEnabled: false
+            selectionMode: "single"
+            model: root.ratioOptions.map(opt => opt.label)
+            currentIndex: {
+                const idx = root.ratioOptions.findIndex(opt => opt.value === root.currentRatio);
+                return idx >= 0 ? idx : 0;
+            }
+            onSelectionChanged: (index, selected) => {
+                if (selected && index >= 0 && index < root.ratioOptions.length) {
+                    const nextRatio = root.ratioOptions[index].value;
+                    if (nextRatio !== root.currentRatio)
+                        root.ratioSelected(nextRatio);
                 }
             }
         }
