@@ -155,6 +155,12 @@ PluginSettings {
             expanded: creditsTitle.isExpanded
             items: [
                 {
+                    author: "ATLUS / SEGA",
+                    url: "https://atlus.com",
+                    role: I18n.trFor("persona5Calendar", "Persona 5 & Persona 5 Royal IP, UI design, and visual assets (©ATLUS. ©SEGA.)"),
+                    icon: "info"
+                },
+                {
                     author: "Mive82",
                     url: "https://github.com/Mive82/Persona-5-Calendar",
                     role: I18n.trFor("persona5Calendar", "Creator of the original Persona 5 Rainmeter skin"),

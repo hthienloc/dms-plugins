@@ -31,10 +31,13 @@ git clone https://github.com/hthienloc/dms-persona5-calendar ~/.config/DankMater
 
 ## Credits
 
+- **ATLUS / SEGA** — *Persona 5* and *Persona 5 Royal* intellectual property, original UI design, and visual assets (`©ATLUS. ©SEGA.`)
 - **[Mive82](https://github.com/Mive82/Persona-5-Calendar)** — Creator of the original Rainmeter skin
 - **[BHDown](https://www.reddit.com/r/Persona5/comments/bjldpg/high_resolution_calendar_assets_and_rainmeter/)** — High-resolution vector assets
 - **Dartemil** — Original skin concept
 
-## License
+## License & Disclaimer
 
-MIT
+Plugin code is licensed under the **MIT** License.
+
+All *Persona 5* and *Persona 5 Royal* assets, artwork, designs, and trademarks are the property of **ATLUS** and **SEGA** (`©ATLUS. ©SEGA.`). This is an unofficial fan-made plugin and is not affiliated with, endorsed by, or sponsored by ATLUS or SEGA.
