@@ -151,7 +151,7 @@ PopoutComponent {
 
         Row {
             anchors.centerIn: parent
-            spacing: 6
+            spacing: fBtn.label.length > 0 ? 6 : 0
 
             DIcon {
                 name: fBtn.iconName
@@ -161,6 +161,7 @@ PopoutComponent {
             }
 
             StyledText {
+                visible: fBtn.label.length > 0
                 width: Math.min(implicitWidth, Math.max(0, fBtn.width - Theme.iconSizeSmall - 22))
                 text: fBtn.label
                 font.pixelSize: Theme.fontSizeSmall
@@ -906,7 +907,7 @@ PopoutComponent {
         }
     }
 
-    // Bottom Connected Utility Footer (Folder & History)
+    // Bottom Connected Utility Footer (Folder, History & Settings)
     Row {
         width: parent.width
         height: 36
@@ -914,6 +915,7 @@ PopoutComponent {
 
         ConnectedFooterButton {
             isFirst: true
+            width: (parent.width - parent.spacing * 2 - settingsFooterBtn.width) / 2
             iconName: "folder"
             label: I18n.trFor("quickCapture", "Folder")
             onClicked: {
@@ -923,12 +925,23 @@ PopoutComponent {
         }
 
         ConnectedFooterButton {
-            isLast: true
+            width: (parent.width - parent.spacing * 2 - settingsFooterBtn.width) / 2
             iconName: "history"
             label: I18n.trFor("quickCapture", "History")
             onClicked: {
                 root.widget.closePopout();
                 root.daemon?.showHistoryCarousel();
+            }
+        }
+
+        ConnectedFooterButton {
+            id: settingsFooterBtn
+            isLast: true
+            width: 40
+            iconName: "settings"
+            onClicked: {
+                root.widget.closePopout();
+                PopoutService.openSettingsWithTab("plugin:quickCapture");
             }
         }
     }

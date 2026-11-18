@@ -477,7 +477,7 @@ Item {
                 ConnectedIconButton {
                     isLast: true
                     iconName: "settings"
-                    onClicked: PopoutService.openSettingsWithTab("plugins")
+                    onClicked: PopoutService.openSettingsWithTab("plugin:quickCapture")
                 }
             }
         }
