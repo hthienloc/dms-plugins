@@ -47,7 +47,7 @@ QtObject {
         return output ? output.trim() : fallback;
     }
 
-    function sendNotification(title, message, imagePath, openPath) {
+    function sendNotification(title, message, imagePath, openPath, annotatePath) {
         if (!message)
             return;
         const mode = setting("postNotification");
@@ -63,10 +63,30 @@ QtObject {
             icon = "image-x-generic";
         const args = [Proc.dmsBin, "notify", "--app", "Quick Capture", "--icon", icon];
         const fileTarget = openPath || (imagePath && !imagePath.toLowerCase().endsWith(".pdf") ? imagePath : "");
-        if (fileTarget)
+        const canAnnotate = Boolean(annotatePath && !annotatePath.toLowerCase().endsWith(".pdf") && root.daemon && typeof root.daemon.openAction === "function");
+        if (canAnnotate) {
+            args.push("-A", "annotate=" + I18n.trFor("quickCapture", "Edit"));
+            if (fileTarget) {
+                args.push("-A", "open=" + I18n.trFor("quickCapture", "Open"));
+                args.push("-A", "folder=" + I18n.trFor("quickCapture", "Open Folder"));
+            }
+        } else if (fileTarget) {
             args.push("--file", fileTarget);
+        }
         args.push("--timeout", "5000", title, message);
-        Proc.runCommand("quickCapture.notify", args);
+        Proc.runCommand(null, args, (stdout, exitCode) => {
+            if (!canAnnotate || exitCode !== 0 || !stdout)
+                return;
+            const choice = stdout.trim();
+            if (choice === "annotate") {
+                root.daemon.openAction(annotatePath, "edit");
+            } else if (choice === "open" && fileTarget) {
+                Proc.runCommand(null, ["xdg-open", fileTarget]);
+            } else if (choice === "folder" && fileTarget) {
+                const dir = fileTarget.substring(0, fileTarget.lastIndexOf("/")) || "/";
+                Proc.runCommand(null, ["xdg-open", dir]);
+            }
+        });
     }
 
     function notifyWarning(message) {
@@ -184,7 +204,7 @@ QtObject {
     function notifySaved(targetPath, originalPng) {
         const notifyPath = Paths.expandTilde(targetPath);
         const iconPath = (notifyPath.toLowerCase().endsWith(".pdf") && originalPng) ? originalPng : notifyPath;
-        sendNotification(I18n.trFor("quickCapture", "Screenshot Saved"), I18n.trFor("quickCapture", "Screenshot saved to %1").arg(notifyPath), iconPath, notifyPath);
+        sendNotification(I18n.trFor("quickCapture", "Screenshot Saved"), I18n.trFor("quickCapture", "Screenshot saved to %1").arg(notifyPath), iconPath, notifyPath, notifyPath);
     }
 
     function copyImage(path, after) {
@@ -238,7 +258,7 @@ QtObject {
                 }
                 const notifyPath = Paths.expandTilde(targetPath);
                 const iconPath = (notifyPath.toLowerCase().endsWith(".pdf") && originalPng) ? originalPng : notifyPath;
-                sendNotification(I18n.trFor("quickCapture", "Screenshot Saved"), I18n.trFor("quickCapture", "Screenshot copied to clipboard and saved to %1").arg(saveDir), iconPath, notifyPath);
+                sendNotification(I18n.trFor("quickCapture", "Screenshot Saved"), I18n.trFor("quickCapture", "Screenshot copied to clipboard and saved to %1").arg(saveDir), iconPath, notifyPath, notifyPath);
                 if (after)
                     after(true);
             });
@@ -302,7 +322,7 @@ QtObject {
             } else {
                 const notifyPath = Paths.expandTilde(targetPath);
                 const iconPath = (notifyPath.toLowerCase().endsWith(".pdf") && originalPng) ? originalPng : notifyPath;
-                sendNotification(I18n.trFor("quickCapture", "Screenshot Saved"), I18n.trFor("quickCapture", "Screenshot copied to clipboard and saved to %1").arg(saveDir), iconPath, notifyPath);
+                sendNotification(I18n.trFor("quickCapture", "Screenshot Saved"), I18n.trFor("quickCapture", "Screenshot copied to clipboard and saved to %1").arg(saveDir), iconPath, notifyPath, notifyPath);
             }
             finishExport(finalPath, originalPng);
         });

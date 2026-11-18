@@ -14,7 +14,7 @@ dms ipc call quickCapture <command> [arg] edit|float
 
 ### Supported Commands
 
-Commands that capture or open images accept an `action` parameter (`edit` / `float`):
+Commands that capture or open images accept an `action` parameter (`edit`, `float`, `copy`, `save`, `copyAndSave`):
 
 | Command | Arguments | Description |
 | :--- | :--- | :--- |
@@ -34,12 +34,15 @@ Commands that capture or open images accept an `action` parameter (`edit` / `flo
 | `recordStatus` | *(none)* | Returns recorder status. |
 
 ```bash
-dms ipc call quickCapture toggle                    # toggle centered menu
-dms ipc call quickCapture screenshot region edit    # open editor
-dms ipc call quickCapture screenshot region float   # float directly
-dms ipc call quickCapture recordStart region        # record selected region
-dms ipc call quickCapture recordStop                # stop recording
+dms ipc call quickCapture toggle                          # toggle centered menu
+dms ipc call quickCapture screenshot region edit          # open editor
+dms ipc call quickCapture screenshot region float         # float directly
+dms ipc call quickCapture screenshot full copyAndSave     # save, copy, and notify with Edit action
+dms ipc call quickCapture recordStart region              # record selected region
+dms ipc call quickCapture recordStop                      # stop recording
 ```
+
+> **Capture & Annotate on Demand**: Using `save` or `copyAndSave` saves the screenshot immediately without opening the editor. When **Post-action Notification** (`postNotification`) is set to `notification` or `both` (for non-PDF outputs), the notification includes **Edit**, **Open**, and **Open Folder** buttons so you can open the saved image in the annotator only when needed.
 
 ### Integration Examples
 

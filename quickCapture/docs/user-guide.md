@@ -142,13 +142,16 @@ Quick Capture supports screen recording via GPU hardware acceleration or CPU fal
 
 ## IPC Commands
 
-Commands that capture or open images accept `edit` or `float` as the action:
+Commands that capture or open images accept `edit`, `float`, `copy`, `save`, or `copyAndSave` as the action:
 
 ```bash
-dms ipc call quickCapture <command> [arg] edit|float
+dms ipc call quickCapture <command> [arg] edit|float|copy|save|copyAndSave
 dms ipc call quickCapture screenshot region edit
 dms ipc call quickCapture screenshot region float
+dms ipc call quickCapture screenshot full copyAndSave
 ```
+
+> **Tip (Capture & Annotate on Demand):** Using `save` or `copyAndSave` skips opening the editor immediately and sends a desktop notification (when `postNotification` is `notification` or `both`) with an **Edit** button to open the saved screenshot in the annotator if needed.
 
 | Command | Arguments | Description |
 | --- | --- | --- |
