@@ -3601,6 +3601,10 @@ Item {
             return window.acceptKeyEvent(event);
         }
         if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
+            if (window.currentTool === "crop") {
+                window.applyCrop();
+                return window.acceptKeyEvent(event);
+            }
             captureActions.performDoneAction();
             return window.acceptKeyEvent(event);
         }
