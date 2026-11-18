@@ -5118,18 +5118,7 @@ Item {
                             ctx.save();
                             ctx.scale(window.editScale, window.editScale);
 
-                            // 1. Draw Dimming Selection Overlay (only if in crop/ocr/qr mode)
-                            DrawingRenderer.drawSelectionOverlay(ctx, {
-                                isCropMode: window.currentTool === "crop",
-                                isOcrMode: window.currentTool === "ocr" || window.currentTool === "qr",
-                                cropRect: window.cropRect,
-                                ocrRect: window.ocrRect,
-                                canvasWidth: window.canvasWidth,
-                                canvasHeight: window.canvasHeight,
-                                cropAspectRatio: window.cropAspectRatio
-                            }, Theme);
-
-                            // 2. Draw active/selected annotations (translated in edit mode, or clipped in crop mode)
+                            // Draw active/selected annotations (translated in edit mode, or clipped in crop mode)
                             ctx.save();
                             const isBackgroundActive = window.effectiveBackgroundMode !== "none";
                             window.applyEditorAnnotationTransform(ctx, isBackgroundActive);
@@ -5177,6 +5166,12 @@ Item {
                         radius: Theme.cornerRadius / drawingCanvas.scale
                         z: 10
                         visible: (config.pluginData["showCanvasBorder"] !== undefined ? config.pluginData["showCanvasBorder"] : true) && (window.effectiveBackgroundMode === "none")
+                    }
+
+                    CropSelectionOverlay {
+                        id: cropSelectionOverlay
+                        window: rootWindow
+                        boardContainer: boardContainer
                     }
 
                     TextInputDialog {
