@@ -162,16 +162,16 @@
     "Capture Actions": "Rögzítési műveletek"
   },
   "Capture Fullscreen": {
-    "Capture Fullscreen": ""
+    "Capture Fullscreen": "Teljes képernyő rögzítése"
   },
   "Capture Options": {
     "Capture Options": "Rögzítési beállítások"
   },
   "Capture Region": {
-    "Capture Region": ""
+    "Capture Region": "Terület rögzítése"
   },
   "Capture Window": {
-    "Capture Window": ""
+    "Capture Window": "Ablak rögzítése"
   },
   "Capturing...": {
     "Capturing...": "Rögzítés…"
@@ -431,6 +431,9 @@
   "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "Formátumjelek: {user} (Felhasználónév), \\n (Új sor), %Y (Év), %y (2 jegyű év), %m (Hónap), %d (Nap), %H (Óra), %M (Perc), %S (Másodperc)"
   },
+  "Format: %1 (%2 FPS)": {
+    "Format: %1 (%2 FPS)": "Formátum: %1 (%2 FPS)"
+  },
   "Framerate": {
     "Framerate": "Képkockasebesség"
   },
@@ -438,7 +441,7 @@
     "Free": "Szabad"
   },
   "From Clipboard": {
-    "From Clipboard": ""
+    "From Clipboard": "Vágólapról"
   },
   "Fullscreen": {
     "Fullscreen": "Teljes képernyő"
@@ -469,6 +472,12 @@
   },
   "Hide Annotations": {
     "Hide Annotations": "Megjegyzések elrejtése"
+  },
+  "Hide Control Center": {
+    "Hide Control Center": "Vezérlőközpont elrejtése"
+  },
+  "Hide Control Center by Default": {
+    "Hide Control Center by Default": "Vezérlőközpont elrejtése alapértelmezés szerint"
   },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": "Vezérlőközpont elrejtése rögzítéskor"
@@ -520,6 +529,9 @@
   },
   "Initial Width": {
     "Initial Width": "Kezdeti szélesség"
+  },
+  "Initial state for the Control Center toggle.": {
+    "Initial state for the Control Center toggle.": "A Vezérlőközpont kapcsolójának kezdőállapota."
   },
   "Inline": {
     "Inline": "Soron belül"
@@ -612,7 +624,7 @@
     "Modal": "Modális"
   },
   "More Options": {
-    "More Options": ""
+    "More Options": "További beállítások"
   },
   "More Tools": {
     "More Tools": "További eszközök"
@@ -690,10 +702,16 @@
     "Open %1 menu (Popout)": "%1 menü megnyitása (felugró ablak)"
   },
   "Open Captures Folder": {
-    "Open Captures Folder": ""
+    "Open Captures Folder": "Rögzítések mappájának megnyitása"
+  },
+  "Open Folder": {
+    "Open Folder": ""
   },
   "Open Image": {
     "Open Image": "Kép megnyitása"
+  },
+  "Open folder": {
+    "Open folder": "Mappa megnyitása"
   },
   "Outline Variant": {
     "Outline Variant": "Körvonal változata"
@@ -813,19 +831,19 @@
     "Recent Edits": "Legutóbbi szerkesztések"
   },
   "Recent History": {
-    "Recent History": ""
+    "Recent History": "Előzmények"
   },
   "Record Fullscreen": {
-    "Record Fullscreen": ""
+    "Record Fullscreen": "Teljes képernyő felvétele"
   },
   "Record Microphone": {
     "Record Microphone": "Mikrofon rögzítése"
   },
   "Record Region": {
-    "Record Region": ""
+    "Record Region": "Terület felvétele"
   },
   "Record Screen": {
-    "Record Screen": ""
+    "Record Screen": "Képernyő felvétele"
   },
   "Record System Audio": {
     "Record System Audio": "Rendszerhang rögzítése"
@@ -981,7 +999,7 @@
     "Select Color Slots %1": "Színhelyek kiválasztása %1"
   },
   "Select Image File": {
-    "Select Image File": ""
+    "Select Image File": "Képfájl kiválasztása"
   },
   "Select Image to Annotate": {
     "Select Image to Annotate": "Válaszd ki a jegyzetekkel ellátandó képet"
@@ -989,11 +1007,17 @@
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
     "Select one or more installed Tesseract language packs for OCR text recognition.": "Válassz ki egy vagy több telepített Tesseract nyelvi csomagot az OCR-szövegfelismeréshez."
   },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Válaszd ki a képernyőfelvétel háttérprogramját. Az „Automatikus” beállítás először a GPU-t próbálja meg, majd CPU-ra vált (%1)."
+  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "Válaszd ki a képernyőfelvétel háttérprogramját. Az „Automatikus” beállítás először a GPU-t próbálja meg, majd CPU-ra vált (%1). Megjegyzés: A(z) %1 nem támogatja a szüneteltetést."
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "Kiválasztott eszköz / művelet"
+  },
+  "Settings": {
+    "Settings": "Beállítások"
   },
   "Shadow Strength": {
     "Shadow Strength": "Árnyékereje"
@@ -1007,11 +1031,23 @@
   "Show Annotations": {
     "Show Annotations": "Megjegyzések megjelenítése"
   },
+  "Show Control Center": {
+    "Show Control Center": "Vezérlőközpont megjelenítése"
+  },
   "Show Keyboard Shortcut Hints": {
     "Show Keyboard Shortcut Hints": "Gyorsbillentyű-tippek megjelenítése"
   },
   "Show Pill Border": {
     "Show Pill Border": "Szegély megjelenítése"
+  },
+  "Show Recording Controls": {
+    "Show Recording Controls": ""
+  },
+  "Show Recording Dot": {
+    "Show Recording Dot": ""
+  },
+  "Show Recording Timer": {
+    "Show Recording Timer": ""
   },
   "Show Region Border": {
     "Show Region Border": "Terület szegélyének megjelenítése"
@@ -1080,7 +1116,7 @@
     "Stop & Save": "Leállítás és mentés"
   },
   "Stop Recording": {
-    "Stop Recording": ""
+    "Stop Recording": "Felvétel leállítása"
   },
   "Surface Container Highest": {
     "Surface Container Highest": "Legmagasabb felületi konténer"

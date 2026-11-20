@@ -431,6 +431,9 @@
   "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "Token di formato: {user} (Nome utente), \\n (Nuova riga), %Y (Anno), %y (Anno a 2 cifre), %m (Mese), %d (Giorno), %H (Ora), %M (Minuto), %S (Secondo)"
   },
+  "Format: %1 (%2 FPS)": {
+    "Format: %1 (%2 FPS)": "Formato: %1 (%2 FPS)"
+  },
   "Framerate": {
     "Framerate": "Frequenza fotogrammi"
   },
@@ -469,6 +472,12 @@
   },
   "Hide Annotations": {
     "Hide Annotations": "Nascondi annotazioni"
+  },
+  "Hide Control Center": {
+    "Hide Control Center": "Nascondi il centro di controllo"
+  },
+  "Hide Control Center by Default": {
+    "Hide Control Center by Default": "Nascondi il centro di controllo per impostazione predefinita"
   },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": "Nascondi il centro di controllo durante la cattura"
@@ -520,6 +529,9 @@
   },
   "Initial Width": {
     "Initial Width": "Larghezza iniziale"
+  },
+  "Initial state for the Control Center toggle.": {
+    "Initial state for the Control Center toggle.": "Stato iniziale dell'interruttore del centro di controllo."
   },
   "Inline": {
     "Inline": "In linea"
@@ -692,8 +704,14 @@
   "Open Captures Folder": {
     "Open Captures Folder": ""
   },
+  "Open Folder": {
+    "Open Folder": ""
+  },
   "Open Image": {
     "Open Image": "Apri immagine"
+  },
+  "Open folder": {
+    "Open folder": "Apri cartella"
   },
   "Outline Variant": {
     "Outline Variant": "Variante contorno"
@@ -989,11 +1007,17 @@
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
     "Select one or more installed Tesseract language packs for OCR text recognition.": "Seleziona uno o più pacchetti lingua di Tesseract installati per il riconoscimento del testo OCR."
   },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Seleziona il backend di registrazione dello schermo. Automatico prova prima la GPU e ripiega sulla CPU (%1)."
+  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "Seleziona il backend di registrazione dello schermo. Automatico prova prima la GPU e ripiega sulla CPU (%1). Nota: %1 non supporta la pausa."
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "Strumento / Azione selezionati"
+  },
+  "Settings": {
+    "Settings": "Impostazioni"
   },
   "Shadow Strength": {
     "Shadow Strength": "Intensità dell'ombra predefinita"
@@ -1007,11 +1031,23 @@
   "Show Annotations": {
     "Show Annotations": "Mostra annotazioni"
   },
+  "Show Control Center": {
+    "Show Control Center": "Mostra il centro di controllo"
+  },
   "Show Keyboard Shortcut Hints": {
     "Show Keyboard Shortcut Hints": "Mostra suggerimenti per le scorciatoie da tastiera"
   },
   "Show Pill Border": {
     "Show Pill Border": "Mostra il bordo della pillola"
+  },
+  "Show Recording Controls": {
+    "Show Recording Controls": ""
+  },
+  "Show Recording Dot": {
+    "Show Recording Dot": ""
+  },
+  "Show Recording Timer": {
+    "Show Recording Timer": ""
   },
   "Show Region Border": {
     "Show Region Border": "Mostra il bordo della regione"

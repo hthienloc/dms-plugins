@@ -63,7 +63,7 @@
     "Auto": "自动"
   },
   "Auto (Screen Scale)": {
-    "Auto (Screen Scale)": ""
+    "Auto (Screen Scale)": "自动（屏幕缩放）"
   },
   "Auto Balance": {
     "Auto Balance": "自动平衡"
@@ -162,16 +162,16 @@
     "Capture Actions": "截图操作"
   },
   "Capture Fullscreen": {
-    "Capture Fullscreen": ""
+    "Capture Fullscreen": "全屏截图"
   },
   "Capture Options": {
     "Capture Options": "截图选项"
   },
   "Capture Region": {
-    "Capture Region": ""
+    "Capture Region": "区域截图"
   },
   "Capture Window": {
-    "Capture Window": ""
+    "Capture Window": "窗口截图"
   },
   "Capturing...": {
     "Capturing...": "正在截图..."
@@ -210,7 +210,7 @@
     "Close": "关闭"
   },
   "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": {
-    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": ""
+    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": "在控制中心面板中触发截图操作时，先关闭控制中心。通过快捷键或 IPC 进行的截图操作不受此影响。"
   },
   "Color": {
     "Color": "颜色"
@@ -431,6 +431,9 @@
   "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": ""
   },
+  "Format: %1 (%2 FPS)": {
+    "Format: %1 (%2 FPS)": "格式：%1（%2 帧）"
+  },
   "Framerate": {
     "Framerate": "帧率"
   },
@@ -438,7 +441,7 @@
     "Free": "自由"
   },
   "From Clipboard": {
-    "From Clipboard": ""
+    "From Clipboard": "来自剪贴板"
   },
   "Fullscreen": {
     "Fullscreen": "全屏"
@@ -450,7 +453,7 @@
     "GIF Framerate": "GIF 帧率"
   },
   "GPU encoder failed. Retrying with %1...": {
-    "GPU encoder failed. Retrying with %1...": "GPU 编码器失败。正在重试使用 %1)..."
+    "GPU encoder failed. Retrying with %1...": "GPU 编码失败。正在使用 %1 重试..."
   },
   "General Shortcuts": {
     "General Shortcuts": "通用快捷键"
@@ -470,8 +473,14 @@
   "Hide Annotations": {
     "Hide Annotations": ""
   },
+  "Hide Control Center": {
+    "Hide Control Center": "隐藏控制中心"
+  },
+  "Hide Control Center by Default": {
+    "Hide Control Center by Default": "默认隐藏控制中心"
+  },
   "Hide Control Center on Capture": {
-    "Hide Control Center on Capture": "在捕获中隐藏控制中心"
+    "Hide Control Center on Capture": "在截图中隐藏控制中心"
   },
   "High": {
     "High": "高"
@@ -520,6 +529,9 @@
   },
   "Initial Width": {
     "Initial Width": "初始宽度"
+  },
+  "Initial state for the Control Center toggle.": {
+    "Initial state for the Control Center toggle.": "控制中心开关的初始状态。"
   },
   "Inline": {
     "Inline": ""
@@ -612,7 +624,7 @@
     "Modal": "模态"
   },
   "More Options": {
-    "More Options": ""
+    "More Options": "更多选项"
   },
   "More Tools": {
     "More Tools": "更多工具"
@@ -692,8 +704,14 @@
   "Open Captures Folder": {
     "Open Captures Folder": ""
   },
+  "Open Folder": {
+    "Open Folder": ""
+  },
   "Open Image": {
     "Open Image": "打开图像"
+  },
+  "Open folder": {
+    "Open folder": "打开文件夹"
   },
   "Outline Variant": {
     "Outline Variant": "边框变体"
@@ -816,16 +834,16 @@
     "Recent History": ""
   },
   "Record Fullscreen": {
-    "Record Fullscreen": ""
+    "Record Fullscreen": "录制全屏"
   },
   "Record Microphone": {
     "Record Microphone": "录制麦克风"
   },
   "Record Region": {
-    "Record Region": ""
+    "Record Region": "录制区域"
   },
   "Record Screen": {
-    "Record Screen": ""
+    "Record Screen": "录制屏幕"
   },
   "Record System Audio": {
     "Record System Audio": "录制系统音频"
@@ -867,7 +885,7 @@
     "Region": "区域"
   },
   "Region HUD Scale": {
-    "Region HUD Scale": ""
+    "Region HUD Scale": "区域中 HUD 缩放"
   },
   "Reset": {
     "Reset": "重置"
@@ -969,7 +987,7 @@
     "Scroll Interval": "滚动间隔"
   },
   "Scroll capture: select a region, scroll content, then press %1 to finish.": {
-    "Scroll capture: select a region, scroll content, then press %1 to finish.": ""
+    "Scroll capture: select a region, scroll content, then press %1 to finish.": "滚动截图：选择一个区域，滚动内容，然后使用 %1 完成。"
   },
   "Scrolling": {
     "Scrolling": "滚动"
@@ -989,11 +1007,17 @@
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
     "Select one or more installed Tesseract language packs for OCR text recognition.": ""
   },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "选择屏幕录制后端。自动模式优先尝试 GPU，失败时回退至 CPU（%1）。"
+  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "所选工具 / 操作"
+  },
+  "Settings": {
+    "Settings": "设置"
   },
   "Shadow Strength": {
     "Shadow Strength": "默认阴影强度"
@@ -1007,11 +1031,23 @@
   "Show Annotations": {
     "Show Annotations": ""
   },
+  "Show Control Center": {
+    "Show Control Center": "显示控制中心"
+  },
   "Show Keyboard Shortcut Hints": {
     "Show Keyboard Shortcut Hints": "显示快捷键提示"
   },
   "Show Pill Border": {
     "Show Pill Border": "显示胶囊边框"
+  },
+  "Show Recording Controls": {
+    "Show Recording Controls": ""
+  },
+  "Show Recording Dot": {
+    "Show Recording Dot": ""
+  },
+  "Show Recording Timer": {
+    "Show Recording Timer": ""
   },
   "Show Region Border": {
     "Show Region Border": "显示区域边框"
@@ -1080,7 +1116,7 @@
     "Stop & Save": "停止并保存"
   },
   "Stop Recording": {
-    "Stop Recording": ""
+    "Stop Recording": "停止录制"
   },
   "Surface Container Highest": {
     "Surface Container Highest": "Surface 容器最高层"
