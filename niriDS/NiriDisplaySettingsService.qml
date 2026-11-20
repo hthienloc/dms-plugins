@@ -84,8 +84,10 @@ Singleton {
     }
 
     function setDisplays() {
-        if (NiriService.outputs && Object.keys(NiriService.outputs).length > 0) {
-            updateOutputs(NiriService.outputs);
+        // Older niri versions do not emit OutputsChanged. Refresh the native
+        // service instead of treating its nonempty output cache as current.
+        if (typeof NiriService.fetchOutputs === "function") {
+            NiriService.fetchOutputs();
             return;
         }
         Proc.runCommand("niriDS:getOutputs", ["niri", "msg", "--json", "outputs"], (output, exitCode) => {
