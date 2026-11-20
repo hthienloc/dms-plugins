@@ -1,8 +1,3 @@
-module dms.common
+module shared
 HintItem 1.0 HintItem.qml
 HintSection 1.0 HintSection.qml
-SectionTitle 1.0 SectionTitle.qml
-SelectionSettingPlus 1.0 SelectionSettingPlus.qml
-SettingsCard 1.0 SettingsCard.qml
-ToggleSettingPlus 1.0 ToggleSettingPlus.qml
-UsageGuide 1.0 UsageGuide.qml

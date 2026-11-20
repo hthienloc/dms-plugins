@@ -1,11 +1,2 @@
-module dms.common
-DankSliderPlus 1.0 DankSliderPlus.qml
+module shared
 singleton M3E 1.0 M3E.qml
-NumericText 1.0 NumericText.qml
-SectionTitle 1.0 SectionTitle.qml
-SelectionSettingPlus 1.0 SelectionSettingPlus.qml
-SettingsCard 1.0 SettingsCard.qml
-SliderSettingPlus 1.0 SliderSettingPlus.qml
-StringSettingPlus 1.0 StringSettingPlus.qml
-ToggleSettingPlus 1.0 ToggleSettingPlus.qml
-UsageGuide 1.0 UsageGuide.qml

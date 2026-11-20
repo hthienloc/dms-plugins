@@ -1,16 +1,46 @@
 import QtQuick
 import qs.Common
-import "../../shared"
+import qs.DCommon.Widgets
+import qs.Modals.FileBrowser
+import qs.Modules.Settings.Widgets
 import "../core" as Core
 import "../core/Defaults.js" as Defaults
 
-SettingsGroup {
+Column {
     id: root
 
     property QtObject config: null
+    property var settings: null
     property var daemon: null
 
-    readonly property bool gpuBackend: recordingBackend.value !== "wf-recorder"
+    width: parent ? parent.width : 0
+    spacing: Theme.spacingM
+
+    property string recordingDirectory: Core.CapturePaths.defaultRecordingDirectory
+    property string recordingBackend: Defaults.values.recordingBackend
+    property string recordingScreenTarget: Defaults.values.recordingScreenTarget
+    property string recordingFormat: Defaults.values.recordingFormat
+    property string recordingGifFramerate: String(Defaults.values.recordingGifFramerate)
+    property string recordingFramerate: String(Defaults.values.recordingFramerate)
+    property string recordingQuality: Defaults.values.recordingQuality
+    property string recordingCodec: Defaults.values.recordingCodec
+    property bool recordCursor: Defaults.values.recordCursor
+    property bool recordingSkipConfirm: Defaults.values.recordingSkipConfirm
+
+    property bool recordSystemAudio: Defaults.values.recordSystemAudio
+    property string systemAudioDevice: Defaults.values.systemAudioDevice
+    property bool recordMic: Defaults.values.recordMic
+    property string micDevice: Defaults.values.micDevice
+    property string audioCodec: Defaults.values.audioCodec
+    property string recordingStatusLocation: Defaults.values.recordingStatusLocation
+    property bool showPillBorder: Defaults.values.showPillBorder
+    property bool showRecordingDot: Defaults.values.showRecordingDot
+    property bool blinkRecordDot: Defaults.values.blinkRecordDot
+    property bool showRecordingTimer: Defaults.values.showRecordingTimer
+    property bool showRecordingControls: Defaults.values.showRecordingControls
+    property bool showRegionBorder: Defaults.values.showRegionBorder
+
+    readonly property bool gpuBackend: recordingBackend !== "wf-recorder"
     readonly property var fallbackInputs: [
         {
             label: I18n.trFor("quickCapture", "Default Microphone"),
@@ -23,377 +53,522 @@ SettingsGroup {
             value: "default_output"
         }
     ]
+    readonly property var screenTargetOptions: root.config ? root.config.screenOptions([
+        {
+            label: I18n.trFor("quickCapture", "Primary Screen"),
+            value: "screen"
+        },
+        {
+            label: I18n.trFor("quickCapture", "Focused Screen"),
+            value: "focused"
+        }
+    ]) : [
+        {
+            label: I18n.trFor("quickCapture", "Primary Screen"),
+            value: "screen"
+        },
+        {
+            label: I18n.trFor("quickCapture", "Focused Screen"),
+            value: "focused"
+        }
+    ]
+    readonly property var outputDeviceOptions: (root.daemon && root.daemon.audioOutputsList) ? root.daemon.audioOutputsList : root.fallbackOutputs
+    readonly property var inputDeviceOptions: (root.daemon && root.daemon.audioInputsList) ? root.daemon.audioInputsList : root.fallbackInputs
 
+    function cleanPath(url) {
+        let path = url.toString();
+        if (path.startsWith("file://"))
+            path = path.substring(7);
+        if (path.length > 1 && path.endsWith("/"))
+            path = path.substring(0, path.length - 1);
+        return path;
+    }
+
+    function loadValue() {
+        if (!settings)
+            return;
+        recordingDirectory = settings.loadValue("recordingDirectory", Core.CapturePaths.defaultRecordingDirectory);
+        recordingBackend = settings.loadValue("recordingBackend", Defaults.values.recordingBackend);
+        recordingScreenTarget = settings.loadValue("recordingScreenTarget", Defaults.values.recordingScreenTarget);
+        recordingFormat = settings.loadValue("recordingFormat", Defaults.values.recordingFormat);
+        recordingGifFramerate = String(settings.loadValue("recordingGifFramerate", Defaults.values.recordingGifFramerate));
+        recordingFramerate = String(settings.loadValue("recordingFramerate", Defaults.values.recordingFramerate));
+        recordingQuality = settings.loadValue("recordingQuality", Defaults.values.recordingQuality);
+        recordingCodec = settings.loadValue("recordingCodec", Defaults.values.recordingCodec);
+        recordCursor = settings.loadValue("recordCursor", Defaults.values.recordCursor);
+        recordingSkipConfirm = settings.loadValue("recordingSkipConfirm", Defaults.values.recordingSkipConfirm);
+
+        recordSystemAudio = settings.loadValue("recordSystemAudio", Defaults.values.recordSystemAudio);
+        systemAudioDevice = settings.loadValue("systemAudioDevice", Defaults.values.systemAudioDevice);
+        recordMic = settings.loadValue("recordMic", Defaults.values.recordMic);
+        micDevice = settings.loadValue("micDevice", Defaults.values.micDevice);
+        audioCodec = settings.loadValue("audioCodec", Defaults.values.audioCodec);
+        recordingStatusLocation = settings.loadValue("recordingStatusLocation", Defaults.values.recordingStatusLocation);
+        showPillBorder = settings.loadValue("showPillBorder", Defaults.values.showPillBorder);
+        showRecordingDot = settings.loadValue("showRecordingDot", Defaults.values.showRecordingDot);
+        blinkRecordDot = settings.loadValue("blinkRecordDot", Defaults.values.blinkRecordDot);
+        showRecordingTimer = settings.loadValue("showRecordingTimer", Defaults.values.showRecordingTimer);
+        showRecordingControls = settings.loadValue("showRecordingControls", Defaults.values.showRecordingControls);
+        showRegionBorder = settings.loadValue("showRegionBorder", Defaults.values.showRegionBorder);
+    }
+
+    function save(key, val) {
+        if (settings)
+            settings.saveValue(key, val);
+    }
+
+    onSettingsChanged: loadValue()
     Component.onCompleted: {
+        loadValue();
         if (daemon)
             daemon.refreshAudioDevices();
     }
 
-    SettingsSection {
-        title: I18n.trFor("quickCapture", "Video")
-        icon: "videocam"
+    Column {
+        width: parent.width
+        spacing: 0
 
-        StringSettingPlus {
-            settingKey: "recordingDirectory"
-            label: I18n.trFor("quickCapture", "Recording Folder")
-            placeholder: Core.CapturePaths.defaultRecordingDirectory
-            defaultValue: Core.CapturePaths.defaultRecordingDirectory
-            isDirectory: true
-        }
-
-        Separator {}
-
-        SelectionSettingPlus {
-            id: recordingBackend
-            settingKey: "recordingBackend"
-            label: I18n.trFor("quickCapture", "Recording Backend")
-            description: I18n.trFor("quickCapture", "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.").arg("wf-recorder")
-            options: [
-                {
-                    label: I18n.trFor("quickCapture", "Auto"),
-                    value: "auto"
-                },
-                {
-                    label: "GPU Screen Recorder (NVENC / VA-API)",
-                    value: "gpu-screen-recorder"
-                },
-                {
-                    label: "GPU Screen Recorder (Flatpak)",
-                    value: "gpu-screen-recorder-flatpak"
-                },
-                {
-                    label: "wf-recorder (CPU libx264 - no pause)",
-                    value: "wf-recorder"
-                }
-            ]
-            defaultValue: Defaults.values.recordingBackend
-        }
-
-        Separator {}
-
-        SelectionSettingPlus {
-            settingKey: "recordingScreenTarget"
-            label: I18n.trFor("quickCapture", "Fullscreen Target")
-            description: I18n.trFor("quickCapture", "Choose which monitor to capture during full screen recording.")
-            options: root.config.screenOptions([
-                {
-                    label: I18n.trFor("quickCapture", "Primary Screen"),
-                    value: "screen"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "Focused Screen"),
-                    value: "focused"
-                }
-            ])
-            defaultValue: Defaults.values.recordingScreenTarget
-        }
-
-        Separator {}
-
-        ButtonGroupSettingPlus {
-            id: recordingFormat
-            settingKey: "recordingFormat"
-            label: I18n.trFor("quickCapture", "Container Format")
-            options: [
-                {
-                    label: "MP4",
-                    value: "mp4"
-                },
-                {
-                    label: "MKV",
-                    value: "mkv"
-                },
-                {
-                    label: "WebM",
-                    value: "webm"
-                },
-                {
-                    label: "FLV",
-                    value: "flv"
-                },
-                {
-                    label: "GIF",
-                    value: "gif"
-                }
-            ]
-            defaultValue: Defaults.values.recordingFormat
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("quickCapture", "Video")
         }
 
         SettingsGroup {
-            visible: recordingFormat.value === "gif"
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
 
-            Separator {}
-
-            ButtonGroupSettingPlus {
-                settingKey: "recordingGifFramerate"
-                label: I18n.trFor("quickCapture", "GIF Framerate")
-                options: [
-                    {
-                        label: "10 FPS",
-                        value: "10"
-                    },
-                    {
-                        label: "15 FPS",
-                        value: "15"
-                    },
-                    {
-                        label: "24 FPS",
-                        value: "24"
-                    },
-                    {
-                        label: "30 FPS",
-                        value: "30"
-                    }
-                ]
-                defaultValue: Defaults.values.recordingGifFramerate
+            SettingsTextFieldRow {
+                id: recordingDirectoryField
+                text: I18n.trFor("quickCapture", "Recording Folder")
+                placeholderText: Core.CapturePaths.defaultRecordingDirectory
+                value: root.recordingDirectory
+                modified: root.recordingDirectory !== Core.CapturePaths.defaultRecordingDirectory
+                onResetRequested: {
+                    root.recordingDirectory = Core.CapturePaths.defaultRecordingDirectory;
+                    recordingDirectoryField.value = Core.CapturePaths.defaultRecordingDirectory;
+                    root.save("recordingDirectory", Core.CapturePaths.defaultRecordingDirectory);
+                }
+                onValueEdited: val => {
+                    root.recordingDirectory = val;
+                    root.save("recordingDirectory", val);
+                }
+                actions: DActionButton {
+                    iconName: "folder_open"
+                    tooltipText: I18n.trFor("quickCapture", "Browse")
+                    onClicked: recordingDirBrowser.open()
+                }
             }
-        }
 
-        Separator {}
-
-        ButtonGroupSettingPlus {
-            settingKey: "recordingFramerate"
-            label: I18n.trFor("quickCapture", "Framerate")
-            options: [
-                {
-                    label: "30 FPS",
-                    value: "30"
-                },
-                {
-                    label: "60 FPS",
-                    value: "60"
-                },
-                {
-                    label: "120 FPS",
-                    value: "120"
+            SettingsDropdownRow {
+                text: I18n.trFor("quickCapture", "Recording Backend")
+                description: I18n.trFor("quickCapture", "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.").arg("wf-recorder")
+                options: [
+                    I18n.trFor("quickCapture", "Auto"),
+                    "GPU Screen Recorder (NVENC / VA-API)",
+                    "GPU Screen Recorder (Flatpak)",
+                    "wf-recorder (CPU libx264 - no pause)"
+                ]
+                optionValues: ["auto", "gpu-screen-recorder", "gpu-screen-recorder-flatpak", "wf-recorder"]
+                currentValue: root.recordingBackend
+                modified: root.recordingBackend !== Defaults.values.recordingBackend
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordingBackend = Defaults.values.recordingBackend;
+                    root.save("recordingBackend", Defaults.values.recordingBackend);
                 }
-            ]
-            defaultValue: Defaults.values.recordingFramerate
-        }
-
-        Separator {}
-
-        SelectionSettingPlus {
-            settingKey: "recordingQuality"
-            label: I18n.trFor("quickCapture", "Quality")
-            options: [
-                {
-                    label: I18n.trFor("quickCapture", "Very High"),
-                    value: "very_high"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "High"),
-                    value: "high"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "Medium"),
-                    value: "medium"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "Low"),
-                    value: "low"
+                onValueChanged: val => {
+                    root.recordingBackend = val;
+                    root.save("recordingBackend", val);
                 }
-            ]
-            defaultValue: Defaults.values.recordingQuality
-        }
+            }
 
-        Separator {}
-
-        SelectionSettingPlus {
-            settingKey: "recordingCodec"
-            label: I18n.trFor("quickCapture", "Video Codec")
-            options: [
-                {
-                    label: I18n.trFor("quickCapture", "Auto"),
-                    value: "auto"
-                },
-                {
-                    label: "H.264",
-                    value: "h264"
-                },
-                {
-                    label: "HEVC (H.265)",
-                    value: "hevc"
-                },
-                {
-                    label: "AV1",
-                    value: "av1"
-                },
-                {
-                    label: "VP8",
-                    value: "vp8"
-                },
-                {
-                    label: "VP9",
-                    value: "vp9"
+            SettingsDropdownRow {
+                text: I18n.trFor("quickCapture", "Fullscreen Target")
+                description: I18n.trFor("quickCapture", "Choose which monitor to capture during full screen recording.")
+                options: root.screenTargetOptions.map(o => o.label)
+                optionValues: root.screenTargetOptions.map(o => o.value)
+                currentValue: root.recordingScreenTarget
+                modified: root.recordingScreenTarget !== Defaults.values.recordingScreenTarget
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordingScreenTarget = Defaults.values.recordingScreenTarget;
+                    root.save("recordingScreenTarget", Defaults.values.recordingScreenTarget);
                 }
-            ]
-            defaultValue: Defaults.values.recordingCodec
-        }
+                onValueChanged: val => {
+                    root.recordingScreenTarget = val;
+                    root.save("recordingScreenTarget", val);
+                }
+            }
 
-        Separator {}
+            SettingsButtonGroupRow {
+                text: I18n.trFor("quickCapture", "Container Format")
+                model: ["MP4", "MKV", "WebM", "FLV", "GIF"]
+                values: ["mp4", "mkv", "webm", "flv", "gif"]
+                value: root.recordingFormat
+                modified: root.recordingFormat !== Defaults.values.recordingFormat
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordingFormat = Defaults.values.recordingFormat;
+                    root.save("recordingFormat", Defaults.values.recordingFormat);
+                }
+                onValueSelected: val => {
+                    root.recordingFormat = val;
+                    root.save("recordingFormat", val);
+                }
+            }
 
-        ToggleSettingPlus {
-            settingKey: "recordCursor"
-            label: I18n.trFor("quickCapture", "Include Cursor")
-            defaultValue: Defaults.values.recordCursor
-        }
+            SettingsButtonGroupRow {
+                visible: root.recordingFormat === "gif"
+                text: I18n.trFor("quickCapture", "GIF Framerate")
+                model: ["10 FPS", "15 FPS", "24 FPS", "30 FPS"]
+                values: ["10", "15", "24", "30"]
+                value: root.recordingGifFramerate
+                modified: root.recordingGifFramerate !== String(Defaults.values.recordingGifFramerate)
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordingGifFramerate = String(Defaults.values.recordingGifFramerate);
+                    root.save("recordingGifFramerate", Defaults.values.recordingGifFramerate);
+                }
+                onValueSelected: val => {
+                    root.recordingGifFramerate = val;
+                    root.save("recordingGifFramerate", val);
+                }
+            }
 
-        Separator {}
+            SettingsButtonGroupRow {
+                text: I18n.trFor("quickCapture", "Framerate")
+                model: ["30 FPS", "60 FPS", "120 FPS"]
+                values: ["30", "60", "120"]
+                value: root.recordingFramerate
+                modified: root.recordingFramerate !== String(Defaults.values.recordingFramerate)
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordingFramerate = String(Defaults.values.recordingFramerate);
+                    root.save("recordingFramerate", Defaults.values.recordingFramerate);
+                }
+                onValueSelected: val => {
+                    root.recordingFramerate = val;
+                    root.save("recordingFramerate", val);
+                }
+            }
 
-        ToggleSettingPlus {
-            settingKey: "recordingSkipConfirm"
-            label: I18n.trFor("quickCapture", "Skip confirmation")
-            defaultValue: Defaults.values.recordingSkipConfirm
+            SettingsDropdownRow {
+                text: I18n.trFor("quickCapture", "Quality")
+                options: [
+                    I18n.trFor("quickCapture", "Very High"),
+                    I18n.trFor("quickCapture", "High"),
+                    I18n.trFor("quickCapture", "Medium"),
+                    I18n.trFor("quickCapture", "Low")
+                ]
+                optionValues: ["very_high", "high", "medium", "low"]
+                currentValue: root.recordingQuality
+                modified: root.recordingQuality !== Defaults.values.recordingQuality
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordingQuality = Defaults.values.recordingQuality;
+                    root.save("recordingQuality", Defaults.values.recordingQuality);
+                }
+                onValueChanged: val => {
+                    root.recordingQuality = val;
+                    root.save("recordingQuality", val);
+                }
+            }
+
+            SettingsDropdownRow {
+                text: I18n.trFor("quickCapture", "Video Codec")
+                options: [
+                    I18n.trFor("quickCapture", "Auto"),
+                    "H.264",
+                    "HEVC (H.265)",
+                    "AV1",
+                    "VP8",
+                    "VP9"
+                ]
+                optionValues: ["auto", "h264", "hevc", "av1", "vp8", "vp9"]
+                currentValue: root.recordingCodec
+                modified: root.recordingCodec !== Defaults.values.recordingCodec
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordingCodec = Defaults.values.recordingCodec;
+                    root.save("recordingCodec", Defaults.values.recordingCodec);
+                }
+                onValueChanged: val => {
+                    root.recordingCodec = val;
+                    root.save("recordingCodec", val);
+                }
+            }
+
+            SettingsToggleRow {
+                text: I18n.trFor("quickCapture", "Include Cursor")
+                checked: root.recordCursor
+                modified: root.recordCursor !== Defaults.values.recordCursor
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordCursor = Defaults.values.recordCursor;
+                    root.save("recordCursor", Defaults.values.recordCursor);
+                }
+                onToggled: isChecked => {
+                    root.recordCursor = isChecked;
+                    root.save("recordCursor", isChecked);
+                }
+            }
+
+            SettingsToggleRow {
+                text: I18n.trFor("quickCapture", "Skip confirmation")
+                checked: root.recordingSkipConfirm
+                modified: root.recordingSkipConfirm !== Defaults.values.recordingSkipConfirm
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordingSkipConfirm = Defaults.values.recordingSkipConfirm;
+                    root.save("recordingSkipConfirm", Defaults.values.recordingSkipConfirm);
+                }
+                onToggled: isChecked => {
+                    root.recordingSkipConfirm = isChecked;
+                    root.save("recordingSkipConfirm", isChecked);
+                }
+            }
         }
     }
 
-    SettingsSection {
-        title: I18n.trFor("quickCapture", "Audio & Overlay")
-        icon: "graphic_eq"
+    Column {
+        width: parent.width
+        spacing: 0
 
-        InfoText {
-            visible: !root.gpuBackend
-            text: I18n.trFor("quickCapture", "Audio recording is disabled when using the %1 backend.").arg("wf-recorder (CPU)")
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("quickCapture", "Audio & Overlay")
         }
 
         SettingsGroup {
-            visible: root.gpuBackend
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
 
-            ToggleSettingPlus {
-                id: recordSystemAudio
-                settingKey: "recordSystemAudio"
-                label: I18n.trFor("quickCapture", "Record System Audio")
-                defaultValue: Defaults.values.recordSystemAudio
+            SettingsNoteRow {
+                visible: !root.gpuBackend
+                noteIconName: "info"
+                tint: Theme.primary
+                tintBackground: Theme.withAlpha(Theme.primary, 0.08)
+                text: I18n.trFor("quickCapture", "Audio recording is disabled when using the %1 backend.").arg("wf-recorder (CPU)")
             }
 
-            SelectionSettingPlus {
-                visible: recordSystemAudio.value
-                settingKey: "systemAudioDevice"
-                label: I18n.trFor("quickCapture", "System Audio Device")
-                options: root.daemon?.audioOutputsList ?? root.fallbackOutputs
-                defaultValue: Defaults.values.systemAudioDevice
-            }
-
-            Separator {}
-
-            ToggleSettingPlus {
-                id: recordMic
-                settingKey: "recordMic"
-                label: I18n.trFor("quickCapture", "Record Microphone")
-                defaultValue: Defaults.values.recordMic
-            }
-
-            SelectionSettingPlus {
-                visible: recordMic.value
-                settingKey: "micDevice"
-                label: I18n.trFor("quickCapture", "Microphone Device")
-                options: root.daemon?.audioInputsList ?? root.fallbackInputs
-                defaultValue: Defaults.values.micDevice
-            }
-
-            Separator {}
-
-            ButtonGroupSettingPlus {
-                settingKey: "audioCodec"
-                label: I18n.trFor("quickCapture", "Audio Codec")
-                options: [
-                    {
-                        label: "Opus",
-                        value: "opus"
-                    },
-                    {
-                        label: "AAC",
-                        value: "aac"
-                    },
-                    {
-                        label: "FLAC",
-                        value: "flac"
-                    }
-                ]
-                defaultValue: Defaults.values.audioCodec
-            }
-
-            Separator {}
-        }
-
-        ButtonGroupSettingPlus {
-            id: recordingStatusLocation
-            settingKey: "recordingStatusLocation"
-            label: I18n.trFor("quickCapture", "Recording Status Location")
-            description: I18n.trFor("quickCapture", "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.")
-            options: [
-                {
-                    label: I18n.trFor("quickCapture", "Auto"),
-                    value: "auto"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "DankBar"),
-                    value: "bar"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "Floating Pill"),
-                    value: "floating"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "Both"),
-                    value: "both"
+            SettingsToggleRow {
+                visible: root.gpuBackend
+                text: I18n.trFor("quickCapture", "Record System Audio")
+                checked: root.recordSystemAudio
+                modified: root.recordSystemAudio !== Defaults.values.recordSystemAudio
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordSystemAudio = Defaults.values.recordSystemAudio;
+                    root.save("recordSystemAudio", Defaults.values.recordSystemAudio);
                 }
-            ]
-            defaultValue: Defaults.values.recordingStatusLocation
+                onToggled: isChecked => {
+                    root.recordSystemAudio = isChecked;
+                    root.save("recordSystemAudio", isChecked);
+                }
+            }
+
+            SettingsDropdownRow {
+                visible: root.gpuBackend && root.recordSystemAudio
+                text: I18n.trFor("quickCapture", "System Audio Device")
+                options: root.outputDeviceOptions.map(o => o.label)
+                optionValues: root.outputDeviceOptions.map(o => o.value)
+                currentValue: root.systemAudioDevice
+                modified: root.systemAudioDevice !== Defaults.values.systemAudioDevice
+                resetByKeys: false
+                onResetRequested: {
+                    root.systemAudioDevice = Defaults.values.systemAudioDevice;
+                    root.save("systemAudioDevice", Defaults.values.systemAudioDevice);
+                }
+                onValueChanged: val => {
+                    root.systemAudioDevice = val;
+                    root.save("systemAudioDevice", val);
+                }
+            }
+
+            SettingsToggleRow {
+                visible: root.gpuBackend
+                text: I18n.trFor("quickCapture", "Record Microphone")
+                checked: root.recordMic
+                modified: root.recordMic !== Defaults.values.recordMic
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordMic = Defaults.values.recordMic;
+                    root.save("recordMic", Defaults.values.recordMic);
+                }
+                onToggled: isChecked => {
+                    root.recordMic = isChecked;
+                    root.save("recordMic", isChecked);
+                }
+            }
+
+            SettingsDropdownRow {
+                visible: root.gpuBackend && root.recordMic
+                text: I18n.trFor("quickCapture", "Microphone Device")
+                options: root.inputDeviceOptions.map(o => o.label)
+                optionValues: root.inputDeviceOptions.map(o => o.value)
+                currentValue: root.micDevice
+                modified: root.micDevice !== Defaults.values.micDevice
+                resetByKeys: false
+                onResetRequested: {
+                    root.micDevice = Defaults.values.micDevice;
+                    root.save("micDevice", Defaults.values.micDevice);
+                }
+                onValueChanged: val => {
+                    root.micDevice = val;
+                    root.save("micDevice", val);
+                }
+            }
+
+            SettingsButtonGroupRow {
+                visible: root.gpuBackend
+                text: I18n.trFor("quickCapture", "Audio Codec")
+                model: ["Opus", "AAC", "FLAC"]
+                values: ["opus", "aac", "flac"]
+                value: root.audioCodec
+                modified: root.audioCodec !== Defaults.values.audioCodec
+                resetByKeys: false
+                onResetRequested: {
+                    root.audioCodec = Defaults.values.audioCodec;
+                    root.save("audioCodec", Defaults.values.audioCodec);
+                }
+                onValueSelected: val => {
+                    root.audioCodec = val;
+                    root.save("audioCodec", val);
+                }
+            }
+
+            SettingsButtonGroupRow {
+                text: I18n.trFor("quickCapture", "Recording Status Location")
+                description: I18n.trFor("quickCapture", "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.")
+                model: [
+                    I18n.trFor("quickCapture", "Auto"),
+                    I18n.trFor("quickCapture", "DankBar"),
+                    I18n.trFor("quickCapture", "Floating Pill"),
+                    I18n.trFor("quickCapture", "Both")
+                ]
+                values: ["auto", "bar", "floating", "both"]
+                value: root.recordingStatusLocation
+                modified: root.recordingStatusLocation !== Defaults.values.recordingStatusLocation
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordingStatusLocation = Defaults.values.recordingStatusLocation;
+                    root.save("recordingStatusLocation", Defaults.values.recordingStatusLocation);
+                }
+                onValueSelected: val => {
+                    root.recordingStatusLocation = val;
+                    root.save("recordingStatusLocation", val);
+                }
+            }
+
+            SettingsToggleRow {
+                visible: root.recordingStatusLocation !== "bar"
+                text: I18n.trFor("quickCapture", "Show Pill Border")
+                checked: root.showPillBorder
+                modified: root.showPillBorder !== Defaults.values.showPillBorder
+                resetByKeys: false
+                onResetRequested: {
+                    root.showPillBorder = Defaults.values.showPillBorder;
+                    root.save("showPillBorder", Defaults.values.showPillBorder);
+                }
+                onToggled: isChecked => {
+                    root.showPillBorder = isChecked;
+                    root.save("showPillBorder", isChecked);
+                }
+            }
+
+            SettingsToggleRow {
+                text: I18n.trFor("quickCapture", "Show Recording Dot")
+                checked: root.showRecordingDot
+                modified: root.showRecordingDot !== Defaults.values.showRecordingDot
+                resetByKeys: false
+                onResetRequested: {
+                    root.showRecordingDot = Defaults.values.showRecordingDot;
+                    root.save("showRecordingDot", Defaults.values.showRecordingDot);
+                }
+                onToggled: isChecked => {
+                    root.showRecordingDot = isChecked;
+                    root.save("showRecordingDot", isChecked);
+                }
+            }
+
+            SettingsToggleRow {
+                visible: root.showRecordingDot
+                text: I18n.trFor("quickCapture", "Blink Recording Dot")
+                checked: root.blinkRecordDot
+                modified: root.blinkRecordDot !== Defaults.values.blinkRecordDot
+                resetByKeys: false
+                onResetRequested: {
+                    root.blinkRecordDot = Defaults.values.blinkRecordDot;
+                    root.save("blinkRecordDot", Defaults.values.blinkRecordDot);
+                }
+                onToggled: isChecked => {
+                    root.blinkRecordDot = isChecked;
+                    root.save("blinkRecordDot", isChecked);
+                }
+            }
+
+            SettingsToggleRow {
+                text: I18n.trFor("quickCapture", "Show Recording Timer")
+                checked: root.showRecordingTimer
+                modified: root.showRecordingTimer !== Defaults.values.showRecordingTimer
+                resetByKeys: false
+                onResetRequested: {
+                    root.showRecordingTimer = Defaults.values.showRecordingTimer;
+                    root.save("showRecordingTimer", Defaults.values.showRecordingTimer);
+                }
+                onToggled: isChecked => {
+                    root.showRecordingTimer = isChecked;
+                    root.save("showRecordingTimer", isChecked);
+                }
+            }
+
+            SettingsToggleRow {
+                text: I18n.trFor("quickCapture", "Show Recording Controls")
+                checked: root.showRecordingControls
+                modified: root.showRecordingControls !== Defaults.values.showRecordingControls
+                resetByKeys: false
+                onResetRequested: {
+                    root.showRecordingControls = Defaults.values.showRecordingControls;
+                    root.save("showRecordingControls", Defaults.values.showRecordingControls);
+                }
+                onToggled: isChecked => {
+                    root.showRecordingControls = isChecked;
+                    root.save("showRecordingControls", isChecked);
+                }
+            }
+
+            SettingsToggleRow {
+                text: I18n.trFor("quickCapture", "Show Region Border")
+                checked: root.showRegionBorder
+                modified: root.showRegionBorder !== Defaults.values.showRegionBorder
+                resetByKeys: false
+                onResetRequested: {
+                    root.showRegionBorder = Defaults.values.showRegionBorder;
+                    root.save("showRegionBorder", Defaults.values.showRegionBorder);
+                }
+                onToggled: isChecked => {
+                    root.showRegionBorder = isChecked;
+                    root.save("showRegionBorder", isChecked);
+                }
+            }
         }
+    }
 
-        Separator {}
-
-        ToggleSettingPlus {
-            visible: recordingStatusLocation.value !== "bar"
-            settingKey: "showPillBorder"
-            label: I18n.trFor("quickCapture", "Show Pill Border")
-            defaultValue: Defaults.values.showPillBorder
-        }
-
-        Separator {}
-
-        ToggleSettingPlus {
-            id: showRecordingDot
-            settingKey: "showRecordingDot"
-            label: I18n.trFor("quickCapture", "Show Recording Dot")
-            defaultValue: Defaults.values.showRecordingDot
-        }
-
-        Separator {
-            visible: showRecordingDot.value
-        }
-
-        ToggleSettingPlus {
-            visible: showRecordingDot.value
-            settingKey: "blinkRecordDot"
-            label: I18n.trFor("quickCapture", "Blink Recording Dot")
-            defaultValue: Defaults.values.blinkRecordDot
-        }
-
-        Separator {}
-
-        ToggleSettingPlus {
-            settingKey: "showRecordingTimer"
-            label: I18n.trFor("quickCapture", "Show Recording Timer")
-            defaultValue: Defaults.values.showRecordingTimer
-        }
-
-        Separator {}
-
-        ToggleSettingPlus {
-            settingKey: "showRecordingControls"
-            label: I18n.trFor("quickCapture", "Show Recording Controls")
-            defaultValue: Defaults.values.showRecordingControls
-        }
-
-        Separator {}
-
-        ToggleSettingPlus {
-            settingKey: "showRegionBorder"
-            label: I18n.trFor("quickCapture", "Show Region Border")
-            defaultValue: Defaults.values.showRegionBorder
+    FileBrowserSurfaceModal {
+        id: recordingDirBrowser
+        browserTitle: I18n.trFor("quickCapture", "Recording Folder")
+        browserType: "folder_picker"
+        folderMode: true
+        saveMode: false
+        fileExtensions: []
+        revealPath: root.recordingDirectory
+        onAccepted: paths => {
+            if (paths && paths.length > 0) {
+                const cleaned = root.cleanPath(paths[0]);
+                root.recordingDirectory = cleaned;
+                recordingDirectoryField.value = cleaned;
+                root.save("recordingDirectory", cleaned);
+            }
         }
     }
 }

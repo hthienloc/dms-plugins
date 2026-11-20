@@ -151,6 +151,8 @@ PluginSettings {
         source: Qt.resolvedUrl(root.tabs[root.currentTab].source)
         onLoaded: {
             item.config = captureConfig;
+            if (item.settings !== undefined)
+                item.settings = root;
             if (item.daemon !== undefined)
                 item.daemon = root.daemon;
         }

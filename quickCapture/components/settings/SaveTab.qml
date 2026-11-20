@@ -1,158 +1,256 @@
 import QtQuick
 import qs.Common
-import "../../shared"
+import qs.DCommon.Widgets
+import qs.Modals.FileBrowser
+import qs.Modules.Settings.Widgets
 import "../core" as Core
 import "../core/Defaults.js" as Defaults
 
-SettingsGroup {
+Column {
     id: root
 
     property QtObject config: null
+    property var settings: null
 
-    SettingsSection {
-        title: I18n.trFor("quickCapture", "Save")
-        icon: "save"
+    width: parent ? parent.width : 0
+    spacing: Theme.spacingM
 
-        ButtonGroupSettingPlus {
-            settingKey: "doneAction"
-            label: I18n.trFor("quickCapture", "Action on %1").arg("Enter")
-            options: [
-                {
-                    label: I18n.trFor("quickCapture", "Copy"),
-                    value: "clipboard"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "Save"),
-                    value: "file"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "Copy & Save"),
-                    value: "both"
-                }
-            ]
-            defaultValue: Defaults.values.doneAction
-        }
+    property string doneAction: Defaults.values.doneAction
+    property string saveDirectory: Core.CapturePaths.defaultSaveDirectory
+    property string saveFilenamePattern: Defaults.values.saveFilenamePattern
+    property string outputFormat: Defaults.values.outputFormat
+    property int jpegQuality: Defaults.values.jpegQuality
+    property int webpQuality: Defaults.values.webpQuality
+    property string postNotification: Defaults.values.postNotification
 
-        Separator {}
+    function cleanPath(url) {
+        let path = url.toString();
+        if (path.startsWith("file://"))
+            path = path.substring(7);
+        if (path.length > 1 && path.endsWith("/"))
+            path = path.substring(0, path.length - 1);
+        return path;
+    }
 
-        StringSettingPlus {
-            settingKey: "saveDirectory"
-            label: I18n.trFor("quickCapture", "Screenshot Folder")
-            placeholder: Core.CapturePaths.defaultSaveDirectory
-            defaultValue: Core.CapturePaths.defaultSaveDirectory
-            isDirectory: true
-        }
+    function loadValue() {
+        if (!settings)
+            return;
+        doneAction = settings.loadValue("doneAction", Defaults.values.doneAction);
+        saveDirectory = settings.loadValue("saveDirectory", Core.CapturePaths.defaultSaveDirectory);
+        saveFilenamePattern = settings.loadValue("saveFilenamePattern", Defaults.values.saveFilenamePattern);
+        outputFormat = settings.loadValue("outputFormat", Defaults.values.outputFormat);
+        jpegQuality = settings.loadValue("jpegQuality", Defaults.values.jpegQuality);
+        webpQuality = settings.loadValue("webpQuality", Defaults.values.webpQuality);
+        postNotification = settings.loadValue("postNotification", Defaults.values.postNotification);
+    }
 
-        Separator {}
+    function save(key, val) {
+        if (settings)
+            settings.saveValue(key, val);
+    }
 
-        StringSettingPlus {
-            settingKey: "saveFilenamePattern"
-            label: I18n.trFor("quickCapture", "Filename Pattern")
-            placeholder: Defaults.values.saveFilenamePattern
-            defaultValue: Defaults.values.saveFilenamePattern
-        }
+    onSettingsChanged: loadValue()
+    Component.onCompleted: loadValue()
 
-        InfoText {
-            text: I18n.trFor("quickCapture", "Format tokens: %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second), {zzz} (Ms)")
-        }
+    Column {
+        width: parent.width
+        spacing: 0
 
-        Separator {}
-
-        ButtonGroupSettingPlus {
-            id: outputFormat
-            settingKey: "outputFormat"
-            label: I18n.trFor("quickCapture", "Output Format")
-            options: [
-                {
-                    label: "PNG",
-                    value: "png"
-                },
-                {
-                    label: "JPEG",
-                    value: "jpg"
-                },
-                {
-                    label: "WebP",
-                    value: "webp"
-                },
-                {
-                    label: "PDF",
-                    value: "pdf"
-                },
-                {
-                    label: "PPM",
-                    value: "ppm"
-                }
-            ]
-            defaultValue: Defaults.values.outputFormat
-        }
-
-        InfoText {
-            text: I18n.trFor("quickCapture", "Output format applies only to disk saves. Clipboard copies are always PNG.")
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("quickCapture", "Save")
         }
 
         SettingsGroup {
-            visible: outputFormat.value === "jpg"
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
 
-            Separator {}
-
-            SliderSettingPlus {
-                settingKey: "jpegQuality"
-                label: I18n.trFor("quickCapture", "JPEG Quality")
-                defaultValue: Defaults.values.jpegQuality
-                minimum: 1
-                maximum: 100
-                unit: "%"
-                leftLabel: "1"
-                rightLabel: "100"
+            SettingsButtonGroupRow {
+                text: I18n.trFor("quickCapture", "Action on %1").arg("Enter")
+                model: [
+                    I18n.trFor("quickCapture", "Copy"),
+                    I18n.trFor("quickCapture", "Save"),
+                    I18n.trFor("quickCapture", "Copy & Save")
+                ]
+                values: ["clipboard", "file", "both"]
+                value: root.doneAction
+                modified: root.doneAction !== Defaults.values.doneAction
+                resetByKeys: false
+                onResetRequested: {
+                    root.doneAction = Defaults.values.doneAction;
+                    root.save("doneAction", Defaults.values.doneAction);
+                }
+                onValueSelected: val => {
+                    root.doneAction = val;
+                    root.save("doneAction", val);
+                }
             }
-        }
 
-        SettingsGroup {
-            visible: outputFormat.value === "webp"
+            SettingsTextFieldRow {
+                id: saveDirectoryField
+                text: I18n.trFor("quickCapture", "Screenshot Folder")
+                placeholderText: Core.CapturePaths.defaultSaveDirectory
+                value: root.saveDirectory
+                modified: root.saveDirectory !== Core.CapturePaths.defaultSaveDirectory
+                onResetRequested: {
+                    root.saveDirectory = Core.CapturePaths.defaultSaveDirectory;
+                    saveDirectoryField.value = Core.CapturePaths.defaultSaveDirectory;
+                    root.save("saveDirectory", Core.CapturePaths.defaultSaveDirectory);
+                }
+                onValueEdited: val => {
+                    root.saveDirectory = val;
+                    root.save("saveDirectory", val);
+                }
+                actions: DActionButton {
+                    iconName: "folder_open"
+                    tooltipText: I18n.trFor("quickCapture", "Browse")
+                    onClicked: saveDirBrowser.open()
+                }
+            }
 
-            Separator {}
+            SettingsTextFieldRow {
+                id: saveFilenamePatternField
+                text: I18n.trFor("quickCapture", "Filename Pattern")
+                placeholderText: Defaults.values.saveFilenamePattern
+                value: root.saveFilenamePattern
+                modified: root.saveFilenamePattern !== Defaults.values.saveFilenamePattern
+                onResetRequested: {
+                    root.saveFilenamePattern = Defaults.values.saveFilenamePattern;
+                    saveFilenamePatternField.value = Defaults.values.saveFilenamePattern;
+                    root.save("saveFilenamePattern", Defaults.values.saveFilenamePattern);
+                }
+                onValueEdited: val => {
+                    root.saveFilenamePattern = val;
+                    root.save("saveFilenamePattern", val);
+                }
+            }
 
-            SliderSettingPlus {
-                settingKey: "webpQuality"
-                label: I18n.trFor("quickCapture", "WebP Quality")
-                defaultValue: Defaults.values.webpQuality
+            SettingsNoteRow {
+                noteIconName: "info"
+                tint: Theme.primary
+                tintBackground: Theme.withAlpha(Theme.primary, 0.08)
+                text: I18n.trFor("quickCapture", "Format tokens: %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second), {zzz} (Ms)")
+            }
+
+            SettingsButtonGroupRow {
+                text: I18n.trFor("quickCapture", "Output Format")
+                model: ["PNG", "JPEG", "WebP", "PDF", "PPM"]
+                values: ["png", "jpg", "webp", "pdf", "ppm"]
+                value: root.outputFormat
+                modified: root.outputFormat !== Defaults.values.outputFormat
+                resetByKeys: false
+                onResetRequested: {
+                    root.outputFormat = Defaults.values.outputFormat;
+                    root.save("outputFormat", Defaults.values.outputFormat);
+                }
+                onValueSelected: val => {
+                    root.outputFormat = val;
+                    root.save("outputFormat", val);
+                }
+            }
+
+            SettingsNoteRow {
+                noteIconName: "info"
+                tint: Theme.primary
+                tintBackground: Theme.withAlpha(Theme.primary, 0.08)
+                text: I18n.trFor("quickCapture", "Output format applies only to disk saves. Clipboard copies are always PNG.")
+            }
+
+            SettingsSliderRow {
+                visible: root.outputFormat === "jpg"
+                text: I18n.trFor("quickCapture", "JPEG Quality")
+                value: root.jpegQuality
                 minimum: 1
                 maximum: 100
+                step: 1
                 unit: "%"
-                leftLabel: "1"
-                rightLabel: "100"
+                modified: root.jpegQuality !== Defaults.values.jpegQuality
+                resetByKeys: false
+                onResetRequested: {
+                    root.jpegQuality = Defaults.values.jpegQuality;
+                    root.save("jpegQuality", Defaults.values.jpegQuality);
+                }
+                onSliderDragFinished: finalValue => {
+                    root.jpegQuality = finalValue;
+                    root.save("jpegQuality", finalValue);
+                }
+            }
+
+            SettingsSliderRow {
+                visible: root.outputFormat === "webp"
+                text: I18n.trFor("quickCapture", "WebP Quality")
+                value: root.webpQuality
+                minimum: 1
+                maximum: 100
+                step: 1
+                unit: "%"
+                modified: root.webpQuality !== Defaults.values.webpQuality
+                resetByKeys: false
+                onResetRequested: {
+                    root.webpQuality = Defaults.values.webpQuality;
+                    root.save("webpQuality", Defaults.values.webpQuality);
+                }
+                onSliderDragFinished: finalValue => {
+                    root.webpQuality = finalValue;
+                    root.save("webpQuality", finalValue);
+                }
             }
         }
     }
 
-    SettingsSection {
-        title: I18n.trFor("quickCapture", "Notifications")
-        icon: "notifications"
+    Column {
+        width: parent.width
+        spacing: 0
 
-        ButtonGroupSettingPlus {
-            settingKey: "postNotification"
-            label: I18n.trFor("quickCapture", "Post-Capture Notification")
-            description: I18n.trFor("quickCapture", "Choose notifications shown after copy or save.")
-            defaultValue: Defaults.values.postNotification
-            options: [
-                {
-                    label: I18n.trFor("quickCapture", "Notification"),
-                    value: "notification"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "Toast"),
-                    value: "toast"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "Both"),
-                    value: "both"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "None"),
-                    value: "none"
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("quickCapture", "Notifications")
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+
+            SettingsButtonGroupRow {
+                text: I18n.trFor("quickCapture", "Post-Capture Notification")
+                description: I18n.trFor("quickCapture", "Choose notifications shown after copy or save.")
+                model: [
+                    I18n.trFor("quickCapture", "Notification"),
+                    I18n.trFor("quickCapture", "Toast"),
+                    I18n.trFor("quickCapture", "Both"),
+                    I18n.trFor("quickCapture", "None")
+                ]
+                values: ["notification", "toast", "both", "none"]
+                value: root.postNotification
+                modified: root.postNotification !== Defaults.values.postNotification
+                resetByKeys: false
+                onResetRequested: {
+                    root.postNotification = Defaults.values.postNotification;
+                    root.save("postNotification", Defaults.values.postNotification);
                 }
-            ]
+                onValueSelected: val => {
+                    root.postNotification = val;
+                    root.save("postNotification", val);
+                }
+            }
+        }
+    }
+
+    FileBrowserSurfaceModal {
+        id: saveDirBrowser
+        browserTitle: I18n.trFor("quickCapture", "Screenshot Folder")
+        browserType: "folder_picker"
+        folderMode: true
+        saveMode: false
+        fileExtensions: []
+        revealPath: root.saveDirectory
+        onAccepted: paths => {
+            if (paths && paths.length > 0) {
+                const cleaned = root.cleanPath(paths[0]);
+                root.saveDirectory = cleaned;
+                saveDirectoryField.value = cleaned;
+                root.save("saveDirectory", cleaned);
+            }
         }
     }
 }

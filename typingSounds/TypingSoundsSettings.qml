@@ -1,14 +1,26 @@
 import QtQuick
-import QtQuick.Controls
-import Quickshell
 import qs.Common
+import qs.DCommon.Widgets
 import qs.Modules.Plugins
+import qs.Modules.Settings.Widgets
 import "./shared"
 
 PluginSettings {
     id: root
 
     pluginId: "typingSounds"
+
+    readonly property bool defaultSoundEnabled: true
+    readonly property int defaultVolume: 100
+    readonly property bool defaultMouseEnabled: false
+    readonly property string defaultSelectedPackPath: ""
+    readonly property string defaultSelectedDevicePath: "all"
+
+    property bool soundEnabled: defaultSoundEnabled
+    property int volume: defaultVolume
+    property bool mouseEnabled: defaultMouseEnabled
+    property string selectedPackPath: defaultSelectedPackPath
+    property string selectedDevicePath: defaultSelectedDevicePath
 
     readonly property string pluginDir: {
         if (root.pluginService && typeof root.pluginService.getPluginPath === "function") {
@@ -20,14 +32,32 @@ PluginSettings {
     }
 
     // Soundpack discovery lists
-    property var packOptions: []
+    property var packLabels: []
+    property var packValues: []
     // Keyboard devices
-    property var deviceOptions: [{ label: "All Keyboards (Auto)", value: "all" }]
+    property var deviceLabels: ["All Keyboards (Auto)"]
+    property var deviceValues: ["all"]
+
+    function loadSettings() {
+        if (!pluginService)
+            return;
+        soundEnabled = loadValue("soundEnabled", defaultSoundEnabled);
+        volume = loadValue("volume", defaultVolume);
+        mouseEnabled = loadValue("mouseEnabled", defaultMouseEnabled);
+        selectedPackPath = loadValue("selectedPackPath", defaultSelectedPackPath);
+        selectedDevicePath = loadValue("selectedDevicePath", defaultSelectedDevicePath);
+        ipcSection.expanded = loadValue("ipcCommandsExpanded", true);
+        usageSection.expanded = loadValue("usageGuideExpanded", true);
+        creditsSection.expanded = loadValue("creditsExpanded", true);
+    }
 
     Component.onCompleted: {
+        loadSettings();
         scanSoundpacks();
         scanDevices();
     }
+
+    onPluginServiceChanged: loadSettings()
 
     function scanSoundpacks() {
         const script = `
@@ -51,175 +81,303 @@ print(json.dumps(res))
         const userPath = Paths.expandTilde("~/.config/dms-typing-sounds/soundpacks");
 
         Proc.runCommand("typingSounds.scanSoundpacks", ["python3", "-c", script, userPath, localPath], (stdout, exitCode) => {
-            if (exitCode !== 0) return;
+            if (exitCode !== 0)
+                return;
             try {
                 const data = JSON.parse(stdout.trim());
-                var options = [];
+                var labels = [];
+                var values = [];
                 for (var i = 0; i < data.length; i++) {
-                    options.push({ label: data[i][0], value: data[i][1] });
+                    labels.push(data[i][0]);
+                    values.push(data[i][1]);
                 }
-                root.packOptions = options;
-            } catch(e) {
+                root.packLabels = labels;
+                root.packValues = values;
+            } catch (e) {
                 console.warn("[TypingSounds] Failed to parse pack scanner output:", e);
             }
         });
     }
 
     function scanDevices() {
-        InputDeviceScanner.scanKeyboards("typingSounds.scanDevices", (devices) => {
-            const options = [{ label: "All Keyboards (Auto)", value: "all" }];
+        InputDeviceScanner.scanKeyboards("typingSounds.scanDevices", devices => {
+            const labels = ["All Keyboards (Auto)"];
+            const values = ["all"];
             for (let i = 0; i < devices.length; i++) {
-                options.push(devices[i]);
+                labels.push(devices[i].label);
+                values.push(devices[i].value);
             }
-            root.deviceOptions = options;
+            root.deviceLabels = labels;
+            root.deviceValues = values;
         });
     }
 
-    SettingsCard {
-        id: generalSection
-        SectionTitle {
-            text: I18n.trFor("typingSounds", "General")
-            icon: "tune"
-            showReset: enabledSetting.isDirty || volumeSetting.isDirty || mouseEnabledSetting.isDirty
-            onResetClicked: {
-                enabledSetting.resetToDefault();
-                volumeSetting.resetToDefault();
-                mouseEnabledSetting.resetToDefault();
-            }
-        }
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
 
-        ToggleSettingPlus {
-            id: enabledSetting
-            settingKey: "soundEnabled"
-            label: I18n.trFor("typingSounds", "Enable Typing Sounds")
-            defaultValue: true
-        }
-
-        Separator {}
-
-        SliderSettingPlus {
-            id: volumeSetting
-            settingKey: "volume"
-            label: I18n.trFor("typingSounds", "Sound Volume")
-            defaultValue: 100
-            minimum: 0
-            maximum: 200
-            unit: "%"
-            leftLabel: "0%"
-            rightLabel: "200%"
-        }
-
-        Separator {}
-
-        ToggleSettingPlus {
-            id: mouseEnabledSetting
-            settingKey: "mouseEnabled"
-            label: I18n.trFor("typingSounds", "Mouse Interaction")
-            description: I18n.trFor("typingSounds", "Play sounds for mouse clicks")
-            defaultValue: false
-        }
-    }
-
-    SettingsCard {
-        id: deviceSection
-        SectionTitle {
-            text: I18n.trFor("typingSounds", "Device & Sounds")
-            icon: "keyboard"
-            showReset: selectedPackPathSetting.isDirty || selectedDevicePathSetting.isDirty
-            onResetClicked: {
-                selectedPackPathSetting.resetToDefault();
-                selectedDevicePathSetting.resetToDefault();
-            }
-        }
-
-        SelectionSettingPlus {
-            id: selectedPackPathSetting
-            settingKey: "selectedPackPath"
-            label: I18n.trFor("typingSounds", "Sound Pack")
-            options: root.packOptions
-            defaultValue: ""
-        }
-
-        Separator {}
-
-        SelectionSettingPlus {
-            id: selectedDevicePathSetting
-            settingKey: "selectedDevicePath"
-            label: I18n.trFor("typingSounds", "Keyboard Device")
-            options: root.deviceOptions
-            defaultValue: "all"
-        }
-    }
-
-    SettingsCard {
-        id: ipcSection
-        SectionTitle {
-            id: ipcTitle
-            text: I18n.trFor("typingSounds", "IPC Commands")
-            icon: "terminal"
-            collapsible: true
-            settingKey: "ipcCommandsExpanded"
-        }
-
-        Column {
+        SettingsSectionLabel {
             width: parent.width
-            spacing: Theme.spacingS
-            visible: ipcTitle.isExpanded
+            text: I18n.trFor("typingSounds", "General")
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+
+            SettingsToggleRow {
+                text: I18n.trFor("typingSounds", "Enable Typing Sounds")
+                checked: root.soundEnabled
+                modified: root.soundEnabled !== root.defaultSoundEnabled
+                resetByKeys: false
+                onResetRequested: {
+                    root.soundEnabled = root.defaultSoundEnabled;
+                    root.saveValue("soundEnabled", root.defaultSoundEnabled);
+                }
+                onToggled: isChecked => {
+                    root.soundEnabled = isChecked;
+                    root.saveValue("soundEnabled", isChecked);
+                }
+            }
+
+            SettingsSliderRow {
+                text: I18n.trFor("typingSounds", "Sound Volume")
+                minimum: 0
+                maximum: 200
+                step: 1
+                unit: "%"
+                value: root.volume
+                modified: root.volume !== root.defaultVolume
+                resetByKeys: false
+                onResetRequested: {
+                    root.volume = root.defaultVolume;
+                    root.saveValue("volume", root.defaultVolume);
+                }
+                onSliderDragFinished: finalValue => {
+                    root.volume = finalValue;
+                    root.saveValue("volume", finalValue);
+                }
+            }
+
+            SettingsToggleRow {
+                text: I18n.trFor("typingSounds", "Mouse Interaction")
+                description: I18n.trFor("typingSounds", "Play sounds for mouse clicks")
+                checked: root.mouseEnabled
+                modified: root.mouseEnabled !== root.defaultMouseEnabled
+                resetByKeys: false
+                onResetRequested: {
+                    root.mouseEnabled = root.defaultMouseEnabled;
+                    root.saveValue("mouseEnabled", root.defaultMouseEnabled);
+                }
+                onToggled: isChecked => {
+                    root.mouseEnabled = isChecked;
+                    root.saveValue("mouseEnabled", isChecked);
+                }
+            }
+        }
+    }
+
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("typingSounds", "Device & Sounds")
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+
+            SettingsDropdownRow {
+                text: I18n.trFor("typingSounds", "Sound Pack")
+                options: root.packLabels
+                optionValues: root.packValues
+                currentValue: root.selectedPackPath
+                modified: root.selectedPackPath !== root.defaultSelectedPackPath
+                resetByKeys: false
+                onResetRequested: {
+                    root.selectedPackPath = root.defaultSelectedPackPath;
+                    root.saveValue("selectedPackPath", root.defaultSelectedPackPath);
+                }
+                onValueChanged: val => {
+                    root.selectedPackPath = val;
+                    root.saveValue("selectedPackPath", val);
+                }
+            }
+
+            SettingsDropdownRow {
+                text: I18n.trFor("typingSounds", "Keyboard Device")
+                options: root.deviceLabels
+                optionValues: root.deviceValues
+                currentValue: root.selectedDevicePath
+                modified: root.selectedDevicePath !== root.defaultSelectedDevicePath
+                resetByKeys: false
+                onResetRequested: {
+                    root.selectedDevicePath = root.defaultSelectedDevicePath;
+                    root.saveValue("selectedDevicePath", root.defaultSelectedDevicePath);
+                }
+                onValueChanged: val => {
+                    root.selectedDevicePath = val;
+                    root.saveValue("selectedDevicePath", val);
+                }
+            }
+        }
+    }
+
+    Column {
+        id: ipcSection
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        property bool expanded: true
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("typingSounds", "IPC Commands")
+            collapsible: true
+            expanded: ipcSection.expanded
+            onToggleRequested: {
+                ipcSection.expanded = !ipcSection.expanded;
+                if (root.pluginService)
+                    root.saveValue("ipcCommandsExpanded", ipcSection.expanded);
+            }
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: ipcSection.expanded
+
+            Column {
+                width: parent.width
+                spacing: Theme.spacingS
+
+                Repeater {
+                    model: [
+                        { text: "dms ipc typingSounds toggle", label: I18n.trFor("typingSounds", "Toggle typing sounds") },
+                        { text: "dms ipc typingSounds enable", label: I18n.trFor("typingSounds", "Enable typing sounds") },
+                        { text: "dms ipc typingSounds disable", label: I18n.trFor("typingSounds", "Disable typing sounds") }
+                    ]
+
+                    delegate: CopyBox {
+                        required property var modelData
+                        label: modelData.label
+                        text: modelData.text
+                    }
+                }
+            }
+        }
+    }
+
+    Column {
+        id: usageSection
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        property bool expanded: true
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("typingSounds", "Usage Guide")
+            collapsible: true
+            expanded: usageSection.expanded
+            onToggleRequested: {
+                usageSection.expanded = !usageSection.expanded;
+                if (root.pluginService)
+                    root.saveValue("usageGuideExpanded", usageSection.expanded);
+            }
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: usageSection.expanded
+
+            Column {
+                width: parent.width
+                spacing: Theme.spacingS
+
+                Repeater {
+                    model: [
+                        I18n.trFor("typingSounds", "Play mechanical keyboard sounds globally as you type."),
+                        I18n.trFor("typingSounds", "You must be in the <b>input</b> group to allow keyboard event reading without root."),
+                        I18n.trFor("typingSounds", "Select a custom sound pack in the settings to change key sounds.")
+                    ]
+
+                    delegate: Row {
+                        required property string modelData
+                        width: parent.width
+                        spacing: Theme.spacingS
+
+                        StyledText {
+                            id: bullet
+                            text: "•"
+                            color: Theme.primary
+                            font.pixelSize: Theme.fontSizeSmall
+                            font.weight: Font.Bold
+                        }
+
+                        StyledText {
+                            width: parent.width - bullet.width - parent.spacing
+                            text: modelData
+                            color: Theme.surfaceVariantText
+                            font.pixelSize: Theme.fontSizeSmall
+                            wrapMode: Text.WordWrap
+                            textFormat: Text.StyledText
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    Column {
+        id: creditsSection
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        property bool expanded: true
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("typingSounds", "Credits")
+            collapsible: true
+            expanded: creditsSection.expanded
+            onToggleRequested: {
+                creditsSection.expanded = !creditsSection.expanded;
+                if (root.pluginService)
+                    root.saveValue("creditsExpanded", creditsSection.expanded);
+            }
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: creditsSection.expanded
 
             Repeater {
                 model: [
-                    { text: "dms ipc typingSounds toggle", label: I18n.trFor("typingSounds", "Toggle typing sounds") },
-                    { text: "dms ipc typingSounds enable", label: I18n.trFor("typingSounds", "Enable typing sounds") },
-                    { text: "dms ipc typingSounds disable", label: I18n.trFor("typingSounds", "Disable typing sounds") }
+                    {
+                        author: "Mechvibes",
+                        url: "https://github.com/hainguyents13/mechvibes",
+                        role: I18n.trFor("typingSounds", "Bundled mechanical keyboard sound packs."),
+                        icon: "keyboard"
+                    }
                 ]
 
-                delegate: CopyBox {
-                    label: modelData.label
-                    text: modelData.text
+                delegate: SettingsRow {
+                    required property var modelData
+                    title: modelData.author
+                    subtitle: modelData.role
+                    iconName: modelData.icon
+                    iconBox: true
+                    clickable: true
+                    showChevron: true
+                    onClicked: Qt.openUrlExternally(modelData.url)
                 }
             }
         }
     }
-
-    SettingsCard {
-        SectionTitle {
-            id: usageTitle
-            text: I18n.trFor("typingSounds", "Usage Guide")
-            icon: "menu_book"
-            collapsible: true
-            settingKey: "usageGuideExpanded"
-        }
-
-        UsageGuide {
-            expanded: usageTitle.isExpanded
-            items: [
-                I18n.trFor("typingSounds", "Play mechanical keyboard sounds globally as you type."),
-                I18n.trFor("typingSounds", "You must be in the <b>input</b> group to allow keyboard event reading without root."),
-                I18n.trFor("typingSounds", "Select a custom sound pack in the settings to change key sounds.")
-            ]
-        }
-    }
-
-    SettingsCard {
-        SectionTitle {
-            id: creditsTitle
-            text: I18n.trFor("typingSounds", "Credits")
-            icon: "favorite"
-            collapsible: true
-            settingKey: "creditsExpanded"
-        }
-
-        CreditsList {
-            expanded: creditsTitle.isExpanded
-            items: [
-                {
-                    author: "Mechvibes",
-                    url: "https://github.com/hainguyents13/mechvibes",
-                    role: I18n.trFor("typingSounds", "Bundled mechanical keyboard sound packs."),
-                    icon: "keyboard"
-                }
-            ]
-        }
-    }
 }
-

@@ -1,8 +1,8 @@
 import QtQuick
-import QtQuick.Controls
 import qs.Common
 import qs.DCommon.Widgets
 import qs.Modules.Plugins
+import qs.Modules.Settings.Widgets
 import "./shared"
 
 PluginSettings {
@@ -10,13 +10,27 @@ PluginSettings {
     pluginId: "ocrScanner"
 
     readonly property string defaultOcrLanguage: "eng"
+    readonly property bool defaultAutoCopy: true
+    readonly property bool defaultKeepResults: true
+    readonly property bool defaultShowPopoutOnRightClick: true
+    readonly property bool defaultShowHints: true
+
     property var availableLangs: []
     property var selectedLangs: []
+    property bool autoCopy: defaultAutoCopy
+    property bool keepResults: defaultKeepResults
+    property bool showPopoutOnRightClick: defaultShowPopoutOnRightClick
+    property bool showHints: defaultShowHints
 
     function loadSettings() {
         let val = root.defaultOcrLanguage;
         if (root.pluginService) {
             val = root.loadValue("ocrLanguage", root.defaultOcrLanguage);
+            autoCopy = root.loadValue("autoCopy", defaultAutoCopy);
+            keepResults = root.loadValue("keepResults", defaultKeepResults);
+            showPopoutOnRightClick = root.loadValue("showPopoutOnRightClick", defaultShowPopoutOnRightClick);
+            showHints = root.loadValue("showHints", defaultShowHints);
+            usageSection.expanded = root.loadValue("usageGuideExpanded", true);
         }
         if (val === undefined || val === null) {
             val = root.defaultOcrLanguage;
@@ -32,10 +46,10 @@ PluginSettings {
         } else {
             list.push(lang);
         }
-        
+
         let newVal = list.join("+");
         root.saveValue("ocrLanguage", newVal);
-        
+
         // Update local state to trigger UI
         selectedLangs = list;
     }
@@ -62,7 +76,8 @@ PluginSettings {
                     var langs = [];
                     for (var i = 1; i < lines.length; i++) {
                         var l = lines[i].trim();
-                        if (l !== "" && l !== "osd") langs.push(l);
+                        if (l !== "" && l !== "osd")
+                            langs.push(l);
                     }
                     availableLangs = langs.sort();
                 }
@@ -73,140 +88,239 @@ PluginSettings {
 
     onPluginServiceChanged: loadSettings()
 
-    SettingsCard {
-        SectionTitle { text: I18n.trFor("ocrScanner", "Recognition Languages"); icon: "language" }
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
 
-        Flow {
-            id: langFlow
+        SettingsSectionLabel {
             width: parent.width
-            spacing: Theme.spacingS
+            text: I18n.trFor("ocrScanner", "Recognition Languages")
+        }
 
-            Repeater {
-                model: root.availableLangs
-                delegate: Rectangle {
-                    width: (langFlow.width - (Theme.spacingS * 2)) / 3
-                    height: 36
-                    radius: Theme.cornerRadius
-                    color: root.selectedLangs.indexOf(modelData) >= 0 ? Theme.primary : Theme.surfaceContainerHigh
-                    
-                    Row {
-                        anchors.centerIn: parent
-                        spacing: Theme.spacingXS
-                        DIcon {
-                            name: root.selectedLangs.indexOf(modelData) >= 0 ? "check_circle" : "radio_button_unchecked"
-                            size: 14
-                            color: root.selectedLangs.indexOf(modelData) >= 0 ? Theme.onPrimary : Theme.surfaceVariantText
-                        }
-                        StyledText {
-                            text: modelData.toUpperCase()
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: root.selectedLangs.indexOf(modelData) >= 0 ? Font.Bold : Font.Normal
-                            color: root.selectedLangs.indexOf(modelData) >= 0 ? Theme.onPrimary : Theme.surfaceText
-                        }
-                    }
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
 
-                    MouseArea {
-                        anchors.fill: parent
-                        cursorShape: Qt.PointingHandCursor
-                        onClicked: root.toggleLang(modelData)
+            Flow {
+                id: langFlow
+                width: parent.width
+                spacing: Theme.spacingS
+
+                Repeater {
+                    model: root.availableLangs
+                    delegate: Rectangle {
+                        required property string modelData
+                        width: (langFlow.width - (Theme.spacingS * 2)) / 3
+                        height: 36
+                        radius: Theme.cornerRadius
+                        color: root.selectedLangs.indexOf(modelData) >= 0 ? Theme.primary : Theme.surfaceContainerHigh
+
+                        Row {
+                            anchors.centerIn: parent
+                            spacing: Theme.spacingXS
+
+                            DIcon {
+                                name: root.selectedLangs.indexOf(modelData) >= 0 ? "check_circle" : "radio_button_unchecked"
+                                size: 14
+                                color: root.selectedLangs.indexOf(modelData) >= 0 ? Theme.onPrimary : Theme.surfaceVariantText
+                            }
+
+                            StyledText {
+                                text: modelData.toUpperCase()
+                                font.pixelSize: Theme.fontSizeSmall
+                                font.weight: root.selectedLangs.indexOf(modelData) >= 0 ? Font.Bold : Font.Normal
+                                color: root.selectedLangs.indexOf(modelData) >= 0 ? Theme.onPrimary : Theme.surfaceText
+                            }
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: root.toggleLang(modelData)
+                        }
                     }
                 }
             }
         }
     }
 
-    SettingsCard {
-        SectionTitle { 
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
             text: I18n.trFor("ocrScanner", "Behavior")
-            icon: "settings" 
-            showReset: autoCopy.isDirty || keepResults.isDirty || showPopout.isDirty || showHints.isDirty
-            onResetClicked: {
-                autoCopy.resetToDefault();
-                keepResults.resetToDefault();
-                showPopout.resetToDefault();
-                showHints.resetToDefault();
-            }
         }
 
-        ToggleSettingPlus {
-            id: autoCopy
-            settingKey: "autoCopy"
-            label: I18n.trFor("ocrScanner", "Auto-copy to Clipboard")
-            defaultValue: true
-        }
-
-        Separator { leftMargin: Theme.spacingM; rightMargin: Theme.spacingM }
-
-        ToggleSettingPlus {
-            id: keepResults
-            settingKey: "keepResults"
-            label: I18n.trFor("ocrScanner", "Keep results when closed")
-            defaultValue: true
-        }
-
-        Separator { leftMargin: Theme.spacingM; rightMargin: Theme.spacingM }
-
-        ToggleSettingPlus {
-            id: showPopout
-            settingKey: "showPopoutOnRightClick"
-            label: I18n.trFor("ocrScanner", "Show popout on right-click")
-            defaultValue: true
-        }
-
-        Separator { leftMargin: Theme.spacingM; rightMargin: Theme.spacingM }
-
-        ToggleSettingPlus {
-            id: showHints
-            settingKey: "showHints"
-            label: I18n.trFor("ocrScanner", "Show Hints")
-            defaultValue: true
-        }
-    }
-
-    SettingsCard {
-        SectionTitle { text: I18n.trFor("ocrScanner", "Installation"); icon: "download" }
-
-        InfoText {
-            text: I18n.trFor("ocrScanner", "Install the required packages:")
-        }
-
-        Column {
+        SettingsGroup {
             width: parent.width
-            spacing: Theme.spacingS
+            slotColor: SettingsMetrics.controlColor
 
-            Repeater {
-                model: [
-                    { cmd: "sudo dnf install tesseract tesseract-langpack-eng tesseract-langpack-vie wl-clipboard", label: "Fedora" },
-                    { cmd: "sudo pacman -S tesseract tesseract-data-eng tesseract-data-vie wl-clipboard", label: "Arch Linux" },
-                    { cmd: "sudo apt install tesseract tesseract-ocr-eng tesseract-ocr-vie wl-clipboard", label: "Debian/Ubuntu" },
-                    { cmd: "sudo zypper install tesseract tesseract-langpack-en tesseract-langpack-vi wl-clipboard", label: "openSUSE" }
-                ]
+            SettingsToggleRow {
+                text: I18n.trFor("ocrScanner", "Auto-copy to Clipboard")
+                checked: root.autoCopy
+                modified: root.autoCopy !== root.defaultAutoCopy
+                resetByKeys: false
+                onResetRequested: {
+                    root.autoCopy = root.defaultAutoCopy;
+                    root.saveValue("autoCopy", root.defaultAutoCopy);
+                }
+                onToggled: isChecked => {
+                    root.autoCopy = isChecked;
+                    root.saveValue("autoCopy", isChecked);
+                }
+            }
 
-                delegate: CopyBox {
-                    label: modelData.label
-                    text: modelData.cmd
+            SettingsToggleRow {
+                text: I18n.trFor("ocrScanner", "Keep results when closed")
+                checked: root.keepResults
+                modified: root.keepResults !== root.defaultKeepResults
+                resetByKeys: false
+                onResetRequested: {
+                    root.keepResults = root.defaultKeepResults;
+                    root.saveValue("keepResults", root.defaultKeepResults);
+                }
+                onToggled: isChecked => {
+                    root.keepResults = isChecked;
+                    root.saveValue("keepResults", isChecked);
+                }
+            }
+
+            SettingsToggleRow {
+                text: I18n.trFor("ocrScanner", "Show popout on right-click")
+                checked: root.showPopoutOnRightClick
+                modified: root.showPopoutOnRightClick !== root.defaultShowPopoutOnRightClick
+                resetByKeys: false
+                onResetRequested: {
+                    root.showPopoutOnRightClick = root.defaultShowPopoutOnRightClick;
+                    root.saveValue("showPopoutOnRightClick", root.defaultShowPopoutOnRightClick);
+                }
+                onToggled: isChecked => {
+                    root.showPopoutOnRightClick = isChecked;
+                    root.saveValue("showPopoutOnRightClick", isChecked);
+                }
+            }
+
+            SettingsToggleRow {
+                text: I18n.trFor("ocrScanner", "Show Hints")
+                checked: root.showHints
+                modified: root.showHints !== root.defaultShowHints
+                resetByKeys: false
+                onResetRequested: {
+                    root.showHints = root.defaultShowHints;
+                    root.saveValue("showHints", root.defaultShowHints);
+                }
+                onToggled: isChecked => {
+                    root.showHints = isChecked;
+                    root.saveValue("showHints", isChecked);
                 }
             }
         }
     }
 
-    SettingsCard {
-        SectionTitle { 
-            id: usageTitle
-            text: I18n.trFor("ocrScanner", "Usage Guide")
-            icon: "menu_book" 
-            collapsible: true
-            settingKey: "usageGuideExpanded"
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("ocrScanner", "Installation")
         }
 
-        UsageGuide {
-            expanded: usageTitle.isExpanded
-            items: [
-                I18n.trFor("ocrScanner", "<b>Left-click</b> the pill to start a new screen scan."),
-                I18n.trFor("ocrScanner", "<b>Right-click</b> the pill to perform a quick scan or open results."),
-                I18n.trFor("ocrScanner", "Dropping an <b>image</b> onto the pill will scan it for text."),
-                I18n.trFor("ocrScanner", "Scanned text is automatically copied to the <b>clipboard</b>.")
-            ]
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+
+            SettingsNoteRow {
+                noteIconName: "info"
+                tint: Theme.primary
+                tintBackground: Theme.withAlpha(Theme.primary, 0.08)
+                text: I18n.trFor("ocrScanner", "Install the required packages:")
+            }
+
+            Column {
+                width: parent.width
+                spacing: Theme.spacingS
+
+                Repeater {
+                    model: [
+                        { cmd: "sudo dnf install tesseract tesseract-langpack-eng tesseract-langpack-vie wl-clipboard", label: "Fedora" },
+                        { cmd: "sudo pacman -S tesseract tesseract-data-eng tesseract-data-vie wl-clipboard", label: "Arch Linux" },
+                        { cmd: "sudo apt install tesseract tesseract-ocr-eng tesseract-ocr-vie wl-clipboard", label: "Debian/Ubuntu" },
+                        { cmd: "sudo zypper install tesseract tesseract-langpack-en tesseract-langpack-vi wl-clipboard", label: "openSUSE" }
+                    ]
+
+                    delegate: CopyBox {
+                        required property var modelData
+                        label: modelData.label
+                        text: modelData.cmd
+                    }
+                }
+            }
+        }
+    }
+
+    Column {
+        id: usageSection
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        property bool expanded: true
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("ocrScanner", "Usage Guide")
+            collapsible: true
+            expanded: usageSection.expanded
+            onToggleRequested: {
+                usageSection.expanded = !usageSection.expanded;
+                if (root.pluginService)
+                    root.saveValue("usageGuideExpanded", usageSection.expanded);
+            }
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: usageSection.expanded
+
+            Column {
+                width: parent.width
+                spacing: Theme.spacingS
+
+                Repeater {
+                    model: [
+                        I18n.trFor("ocrScanner", "<b>Left-click</b> the pill to start a new screen scan."),
+                        I18n.trFor("ocrScanner", "<b>Right-click</b> the pill to perform a quick scan or open results."),
+                        I18n.trFor("ocrScanner", "Dropping an <b>image</b> onto the pill will scan it for text."),
+                        I18n.trFor("ocrScanner", "Scanned text is automatically copied to the <b>clipboard</b>.")
+                    ]
+
+                    delegate: Row {
+                        required property string modelData
+                        width: parent.width
+                        spacing: Theme.spacingS
+
+                        StyledText {
+                            id: bullet
+                            text: "•"
+                            color: Theme.primary
+                            font.pixelSize: Theme.fontSizeSmall
+                            font.weight: Font.Bold
+                        }
+
+                        StyledText {
+                            width: parent.width - bullet.width - parent.spacing
+                            text: modelData
+                            color: Theme.surfaceVariantText
+                            font.pixelSize: Theme.fontSizeSmall
+                            wrapMode: Text.WordWrap
+                            textFormat: Text.StyledText
+                        }
+                    }
+                }
+            }
         }
     }
 }

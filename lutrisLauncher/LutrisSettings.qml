@@ -1,73 +1,161 @@
 import QtQuick
-import QtQuick.Controls
 import qs.Common
+import qs.DCommon.Widgets
 import qs.Modules.Plugins
-import "./shared"
+import qs.Modules.Settings.Widgets
 
 PluginSettings {
     id: root
     pluginId: "lutrisLauncher"
 
-    SettingsCard {
-        id: displaySection
-        SectionTitle { 
+    readonly property string defaultDateFormat: "YYYY - MM - DD"
+    readonly property bool defaultShowHints: true
+
+    property string dateFormat: defaultDateFormat
+    property bool showHints: defaultShowHints
+
+    function loadSettings() {
+        if (!pluginService)
+            return;
+        dateFormat = loadValue("dateFormat", defaultDateFormat);
+        showHints = loadValue("showHints", defaultShowHints);
+        usageSection.expanded = loadValue("usageGuideExpanded", true);
+    }
+
+    Component.onCompleted: loadSettings()
+    onPluginServiceChanged: loadSettings()
+
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
             text: I18n.trFor("lutrisLauncher", "Display Options")
-            icon: "visibility" 
-            showReset: dateFormat.isDirty
-            onResetClicked: {
-                dateFormat.resetToDefault();
-            }
         }
 
-        SelectionSettingPlus {
-            id: dateFormat
-            settingKey: "dateFormat"
-            label: I18n.trFor("lutrisLauncher", "Last Played Format")
-            options: [
-                { label: I18n.trFor("lutrisLauncher", "YYYY - MM - DD"), value: "YYYY - MM - DD" },
-                { label: I18n.trFor("lutrisLauncher", "DD / MM / YYYY"), value: "DD / MM / YYYY" },
-                { label: I18n.trFor("lutrisLauncher", "MM / DD / YYYY"), value: "MM / DD / YYYY" },
-                { label: I18n.trFor("lutrisLauncher", "Relative time"), value: "relative" }
-            ]
-            defaultValue: "YYYY - MM - DD"
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+
+            SettingsDropdownRow {
+                text: I18n.trFor("lutrisLauncher", "Last Played Format")
+                options: [
+                    I18n.trFor("lutrisLauncher", "YYYY - MM - DD"),
+                    I18n.trFor("lutrisLauncher", "DD / MM / YYYY"),
+                    I18n.trFor("lutrisLauncher", "MM / DD / YYYY"),
+                    I18n.trFor("lutrisLauncher", "Relative time")
+                ]
+                optionValues: [
+                    "YYYY - MM - DD",
+                    "DD / MM / YYYY",
+                    "MM / DD / YYYY",
+                    "relative"
+                ]
+                currentValue: root.dateFormat
+                modified: root.dateFormat !== root.defaultDateFormat
+                resetByKeys: false
+                onResetRequested: {
+                    root.dateFormat = root.defaultDateFormat;
+                    root.saveValue("dateFormat", root.defaultDateFormat);
+                }
+                onValueChanged: val => {
+                    root.dateFormat = val;
+                    root.saveValue("dateFormat", val);
+                }
+            }
         }
     }
 
-    SettingsCard {
-        id: behaviorSection
-        SectionTitle { 
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
             text: I18n.trFor("lutrisLauncher", "Behavior")
-            icon: "settings" 
-            showReset: showHints.isDirty
-            onResetClicked: {
-                showHints.resetToDefault();
-            }
         }
 
-        ToggleSettingPlus {
-            id: showHints
-            settingKey: "showHints"
-            label: I18n.trFor("lutrisLauncher", "Show Hints")
-            defaultValue: true
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+
+            SettingsToggleRow {
+                text: I18n.trFor("lutrisLauncher", "Show Hints")
+                checked: root.showHints
+                modified: root.showHints !== root.defaultShowHints
+                resetByKeys: false
+                onResetRequested: {
+                    root.showHints = root.defaultShowHints;
+                    root.saveValue("showHints", root.defaultShowHints);
+                }
+                onToggled: isChecked => {
+                    root.showHints = isChecked;
+                    root.saveValue("showHints", isChecked);
+                }
+            }
         }
     }
 
-    SettingsCard {
-        SectionTitle { 
-            id: usageTitle
+    Column {
+        id: usageSection
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        property bool expanded: true
+
+        SettingsSectionLabel {
+            width: parent.width
             text: I18n.trFor("lutrisLauncher", "Usage Guide")
-            icon: "menu_book" 
             collapsible: true
-            settingKey: "usageGuideExpanded"
+            expanded: usageSection.expanded
+            onToggleRequested: {
+                usageSection.expanded = !usageSection.expanded;
+                if (root.pluginService)
+                    root.saveValue("usageGuideExpanded", usageSection.expanded);
+            }
         }
 
-        UsageGuide {
-            expanded: usageTitle.isExpanded
-            items: [
-                I18n.trFor("lutrisLauncher", "<b>Left-click</b> a game tile to launch it instantly."),
-                I18n.trFor("lutrisLauncher", "<b>Right-click</b> a tile to view stats and manage visibility."),
-                I18n.trFor("lutrisLauncher", "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.")
-            ]
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: usageSection.expanded
+
+            Column {
+                width: parent.width
+                spacing: Theme.spacingS
+
+                Repeater {
+                    model: [
+                        I18n.trFor("lutrisLauncher", "<b>Left-click</b> a game tile to launch it instantly."),
+                        I18n.trFor("lutrisLauncher", "<b>Right-click</b> a tile to view stats and manage visibility."),
+                        I18n.trFor("lutrisLauncher", "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.")
+                    ]
+
+                    delegate: Row {
+                        required property string modelData
+                        width: parent.width
+                        spacing: Theme.spacingS
+
+                        StyledText {
+                            id: bullet
+                            text: "•"
+                            color: Theme.primary
+                            font.pixelSize: Theme.fontSizeSmall
+                            font.weight: Font.Bold
+                        }
+
+                        StyledText {
+                            width: parent.width - bullet.width - parent.spacing
+                            text: modelData
+                            color: Theme.surfaceVariantText
+                            font.pixelSize: Theme.fontSizeSmall
+                            wrapMode: Text.WordWrap
+                            textFormat: Text.StyledText
+                        }
+                    }
+                }
+            }
         }
     }
 }

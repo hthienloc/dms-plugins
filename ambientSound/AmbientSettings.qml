@@ -1,22 +1,39 @@
 import QtQuick
-import QtQuick.Controls
 import qs.Common
-import qs.Services
 import qs.DCommon.Widgets
-import qs.Modules.Plugins
 import qs.Modals.FileBrowser
-import "./shared"
+import qs.Modules.Plugins
+import qs.Modules.Settings.Widgets
+import qs.Services
 
 PluginSettings {
     id: root
     pluginId: "ambientSound"
 
-    property var customSounds: {
-        settingChanged;
-        return loadValue("customSounds", []);
-    }
+    readonly property int defaultDefaultVolume: 100
+    readonly property bool defaultEnableSleepTimer: true
+    readonly property string defaultDefaultTimer: "30"
+    readonly property string defaultAutoStartMode: "preset"
+    readonly property string defaultAutoStartPreset: ""
+    readonly property string defaultMiddleClickAction: ""
+    readonly property bool defaultShowHints: true
+
+    property int defaultVolume: defaultDefaultVolume
+    property bool enableSleepTimer: defaultEnableSleepTimer
+    property string defaultTimer: defaultDefaultTimer
+    property string autoStartMode: defaultAutoStartMode
+    property string autoStartPreset: defaultAutoStartPreset
+    property string middleClickAction: defaultMiddleClickAction
+    property bool showHints: defaultShowHints
+
+    property var customSounds: []
+    property var hiddenSounds: []
+    property var autoStartStates: ({})
+    property var presetLabels: [I18n.trFor("ambientSound", "None")]
+    property var presetValues: [""]
 
     function saveCustomSounds(newSounds) {
+        customSounds = newSounds;
         saveValue("customSounds", newSounds);
     }
 
@@ -47,9 +64,6 @@ PluginSettings {
         { name: "green-noise", icon: "lens_blur" }
     ]
 
-    property var autoStartStates: ({})
-    property var presetOptions: [{ label: I18n.trFor("ambientSound", "None"), value: "" }]
-
     function autoStartKey(soundName) {
         return "autoStart" + soundName.charAt(0).toUpperCase() + soundName.slice(1).replace("-", "");
     }
@@ -64,156 +78,230 @@ PluginSettings {
     }
 
     function updatePresetsList() {
-        let opts = [{ label: I18n.trFor("ambientSound", "None"), value: "" }];
+        let labels = [I18n.trFor("ambientSound", "None")];
+        let values = [""];
         let saved = root.loadValue("presets", []);
         for (let i = 0; i < saved.length; i++) {
-            opts.push({ label: saved[i].name, value: saved[i].name });
+            labels.push(saved[i].name);
+            values.push(saved[i].name);
         }
-        presetOptions = opts;
+        presetLabels = labels;
+        presetValues = values;
     }
 
-    Component.onCompleted: {
+    function loadSettings() {
+        if (!pluginService)
+            return;
+        defaultVolume = loadValue("defaultVolume", defaultDefaultVolume);
+        enableSleepTimer = loadValue("enableSleepTimer", defaultEnableSleepTimer);
+        defaultTimer = loadValue("defaultTimer", defaultDefaultTimer);
+        autoStartMode = loadValue("autoStartMode", defaultAutoStartMode);
+        autoStartPreset = loadValue("autoStartPreset", defaultAutoStartPreset);
+        middleClickAction = loadValue("middleClickAction", defaultMiddleClickAction);
+        showHints = loadValue("showHints", defaultShowHints);
+        customSounds = loadValue("customSounds", []);
+        hiddenSounds = loadValue("hiddenSounds", []);
+        usageSection.expanded = loadValue("usageGuideExpanded", true);
+        creditsSection.expanded = loadValue("creditsExpanded", true);
         updateAutoStartStates();
         updatePresetsList();
     }
+
+    Component.onCompleted: loadSettings()
+    onPluginServiceChanged: loadSettings()
     onSettingChanged: {
-        updateAutoStartStates();
-        updatePresetsList();
-    }
-    onPluginServiceChanged: {
+        if (!pluginService)
+            return;
+        customSounds = loadValue("customSounds", []);
+        hiddenSounds = loadValue("hiddenSounds", []);
         updateAutoStartStates();
         updatePresetsList();
     }
 
-    SettingsCard {
-        id: audioSection
-        SectionTitle { 
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
             text: I18n.trFor("ambientSound", "Audio")
-            icon: "volume_up" 
-            showReset: defaultVolume.isDirty
-            onResetClicked: defaultVolume.resetToDefault()
         }
 
-        SliderSettingPlus {
-            id: defaultVolume
-            settingKey: "defaultVolume"
-            label: I18n.trFor("ambientSound", "Default Volume")
-            description: I18n.trFor("ambientSound", "Initial volume when starting.")
-            minimum: 0
-            maximum: 100
-            unit: "%"
-            defaultValue: 100
-            leftLabel: "0%"
-            rightLabel: "100%"
-        }
-    }
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
 
-    SettingsCard {
-        id: timerSection
-        SectionTitle { 
-            text: I18n.trFor("ambientSound", "Sleep Timer")
-            icon: "timer" 
-            showReset: enableSleepTimer.isDirty || defaultTimer.isDirty
-            onResetClicked: {
-                enableSleepTimer.resetToDefault();
-                defaultTimer.resetToDefault();
+            SettingsSliderRow {
+                text: I18n.trFor("ambientSound", "Default Volume")
+                description: I18n.trFor("ambientSound", "Initial volume when starting.")
+                minimum: 0
+                maximum: 100
+                step: 1
+                unit: "%"
+                value: root.defaultVolume
+                modified: root.defaultVolume !== root.defaultDefaultVolume
+                resetByKeys: false
+                onResetRequested: {
+                    root.defaultVolume = root.defaultDefaultVolume;
+                    root.saveValue("defaultVolume", root.defaultDefaultVolume);
+                }
+                onSliderDragFinished: finalValue => {
+                    root.defaultVolume = finalValue;
+                    root.saveValue("defaultVolume", finalValue);
+                }
             }
         }
+    }
 
-        ToggleSettingPlus {
-            id: enableSleepTimer
-            settingKey: "enableSleepTimer"
-            label: I18n.trFor("ambientSound", "Enable Sleep Timer")
-            description: I18n.trFor("ambientSound", "Stop audio automatically after set duration.")
-            defaultValue: true
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("ambientSound", "Sleep Timer")
         }
 
-        Separator { visible: enableSleepTimer.value }
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
 
-        SelectionSettingPlus {
-            id: defaultTimer
-            settingKey: "defaultTimer"
-            label: I18n.trFor("ambientSound", "Default Duration")
-            options: [
-                { label: I18n.trFor("ambientSound", "15 minutes"), value: "15" },
-                { label: I18n.trFor("ambientSound", "30 minutes"), value: "30" },
-                { label: I18n.trFor("ambientSound", "45 minutes"), value: "45" },
-                { label: I18n.trFor("ambientSound", "1 hour"), value: "60" },
-                { label: I18n.trFor("ambientSound", "1.5 hours"), value: "90" },
-                { label: I18n.trFor("ambientSound", "2 hours"), value: "120" }
-            ]
-            defaultValue: "30"
-            visible: enableSleepTimer.value
+            SettingsToggleRow {
+                text: I18n.trFor("ambientSound", "Enable Sleep Timer")
+                description: I18n.trFor("ambientSound", "Stop audio automatically after set duration.")
+                checked: root.enableSleepTimer
+                modified: root.enableSleepTimer !== root.defaultEnableSleepTimer
+                resetByKeys: false
+                onResetRequested: {
+                    root.enableSleepTimer = root.defaultEnableSleepTimer;
+                    root.saveValue("enableSleepTimer", root.defaultEnableSleepTimer);
+                }
+                onToggled: isChecked => {
+                    root.enableSleepTimer = isChecked;
+                    root.saveValue("enableSleepTimer", isChecked);
+                }
+            }
+
+            SettingsDropdownRow {
+                visible: root.enableSleepTimer
+                text: I18n.trFor("ambientSound", "Default Duration")
+                options: [
+                    I18n.trFor("ambientSound", "15 minutes"),
+                    I18n.trFor("ambientSound", "30 minutes"),
+                    I18n.trFor("ambientSound", "45 minutes"),
+                    I18n.trFor("ambientSound", "1 hour"),
+                    I18n.trFor("ambientSound", "1.5 hours"),
+                    I18n.trFor("ambientSound", "2 hours")
+                ]
+                optionValues: ["15", "30", "45", "60", "90", "120"]
+                currentValue: root.defaultTimer
+                modified: root.defaultTimer !== root.defaultDefaultTimer
+                resetByKeys: false
+                onResetRequested: {
+                    root.defaultTimer = root.defaultDefaultTimer;
+                    root.saveValue("defaultTimer", root.defaultDefaultTimer);
+                }
+                onValueChanged: newValue => {
+                    root.defaultTimer = newValue;
+                    root.saveValue("defaultTimer", newValue);
+                }
+            }
         }
     }
 
-    SettingsCard {
-        SectionTitle { text: I18n.trFor("ambientSound", "Auto-start Mode"); icon: "play_arrow" }
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
 
-        ButtonGroupSettingPlus {
-            id: autoStartMode
-            settingKey: "autoStartMode"
-            label: I18n.trFor("ambientSound", "Select Mode")
-            options: [
-                { label: I18n.trFor("ambientSound", "Preset"), value: "preset" },
-                { label: I18n.trFor("ambientSound", "Individual Sounds"), value: "individual" }
-            ]
-            defaultValue: "preset"
-        }
-
-        Separator { visible: autoStartMode.value === "preset" }
-
-        SelectionSettingPlus {
-            id: autoStartPreset
-            settingKey: "autoStartPreset"
-            label: I18n.trFor("ambientSound", "Auto-play Preset")
-            description: I18n.trFor("ambientSound", "Select preset to play automatically when you log in.")
-            options: root.presetOptions
-            defaultValue: ""
-            visible: autoStartMode.value === "preset"
-        }
-
-        Separator { visible: autoStartMode.value === "individual" }
-
-        Flow {
-            id: autoStartFlow
+        SettingsSectionLabel {
             width: parent.width
-            spacing: 6
-            visible: autoStartMode.value === "individual"
+            text: I18n.trFor("ambientSound", "Auto-start Mode")
+        }
 
-            Repeater {
-                model: root.sounds
-                delegate: Rectangle {
-                    width: (autoStartFlow.width - 12) / 3
-                    height: 36
-                    radius: Theme.cornerRadius
-                    
-                    readonly property string sKey: root.autoStartKey(modelData.name)
-                    readonly property bool isChecked: root.autoStartStates[sKey] ?? false
-                    
-                    color: isChecked ? Theme.primary : Theme.surfaceContainerHigh
-                    
-                    Row {
-                        anchors.centerIn: parent
-                        spacing: 6
-                        DIcon {
-                            name: modelData.icon || "music_note"
-                            size: 16
-                            color: isChecked ? Theme.onPrimary : Theme.surfaceVariantText
-                        }
-                        StyledText {
-                            text: I18n.trFor("ambientSound", modelData.name.replace("-", " "))
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: isChecked ? Font.Bold : Font.Normal
-                            color: isChecked ? Theme.onPrimary : Theme.surfaceText
-                        }
-                    }
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
 
-                    MouseArea {
-                        anchors.fill: parent
-                        cursorShape: Qt.PointingHandCursor
-                        onClicked: {
-                            root.saveValue(sKey, !isChecked);
+            SettingsButtonGroupRow {
+                text: I18n.trFor("ambientSound", "Select Mode")
+                model: [
+                    I18n.trFor("ambientSound", "Preset"),
+                    I18n.trFor("ambientSound", "Individual Sounds")
+                ]
+                values: ["preset", "individual"]
+                value: root.autoStartMode
+                modified: root.autoStartMode !== root.defaultAutoStartMode
+                resetByKeys: false
+                onResetRequested: {
+                    root.autoStartMode = root.defaultAutoStartMode;
+                    root.saveValue("autoStartMode", root.defaultAutoStartMode);
+                }
+                onValueSelected: newValue => {
+                    root.autoStartMode = newValue;
+                    root.saveValue("autoStartMode", newValue);
+                }
+            }
+
+            SettingsDropdownRow {
+                visible: root.autoStartMode === "preset"
+                text: I18n.trFor("ambientSound", "Auto-play Preset")
+                description: I18n.trFor("ambientSound", "Select preset to play automatically when you log in.")
+                options: root.presetLabels
+                optionValues: root.presetValues
+                currentValue: root.autoStartPreset
+                modified: root.autoStartPreset !== root.defaultAutoStartPreset
+                resetByKeys: false
+                onResetRequested: {
+                    root.autoStartPreset = root.defaultAutoStartPreset;
+                    root.saveValue("autoStartPreset", root.defaultAutoStartPreset);
+                }
+                onValueChanged: newValue => {
+                    root.autoStartPreset = newValue;
+                    root.saveValue("autoStartPreset", newValue);
+                }
+            }
+
+            Flow {
+                id: autoStartFlow
+                width: parent.width
+                spacing: 6
+                visible: root.autoStartMode === "individual"
+
+                Repeater {
+                    model: root.sounds
+                    delegate: Rectangle {
+                        required property var modelData
+                        width: (autoStartFlow.width - 12) / 3
+                        height: 36
+                        radius: Theme.cornerRadius
+
+                        readonly property string sKey: root.autoStartKey(modelData.name)
+                        readonly property bool isChecked: root.autoStartStates[sKey] || false
+
+                        color: isChecked ? Theme.primary : Theme.surfaceContainerHigh
+
+                        Row {
+                            anchors.centerIn: parent
+                            spacing: 6
+                            DIcon {
+                                name: modelData.icon || "music_note"
+                                size: 16
+                                color: isChecked ? Theme.onPrimary : Theme.surfaceVariantText
+                            }
+                            StyledText {
+                                text: I18n.trFor("ambientSound", modelData.name.replace("-", " "))
+                                font.pixelSize: Theme.fontSizeSmall
+                                font.weight: isChecked ? Font.Bold : Font.Normal
+                                color: isChecked ? Theme.onPrimary : Theme.surfaceText
+                            }
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: {
+                                root.saveValue(sKey, !isChecked);
+                            }
                         }
                     }
                 }
@@ -221,104 +309,128 @@ PluginSettings {
         }
     }
 
-    SettingsCard {
-        id: behaviorSection
-        SectionTitle { 
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
             text: I18n.trFor("ambientSound", "Behavior")
-            icon: "settings" 
-            showReset: showHints.isDirty || middleClickAction.isDirty
-            onResetClicked: {
-                showHints.resetToDefault();
-                middleClickAction.resetToDefault();
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+
+            SettingsDropdownRow {
+                text: I18n.trFor("ambientSound", "Middle-click Preset")
+                description: I18n.trFor("ambientSound", "Sound preset to play/toggle when middle-clicking the bar icon.")
+                options: root.presetLabels
+                optionValues: root.presetValues
+                currentValue: root.middleClickAction
+                modified: root.middleClickAction !== root.defaultMiddleClickAction
+                resetByKeys: false
+                onResetRequested: {
+                    root.middleClickAction = root.defaultMiddleClickAction;
+                    root.saveValue("middleClickAction", root.defaultMiddleClickAction);
+                }
+                onValueChanged: newValue => {
+                    root.middleClickAction = newValue;
+                    root.saveValue("middleClickAction", newValue);
+                }
             }
-        }
 
-        SelectionSettingPlus {
-            id: middleClickAction
-            settingKey: "middleClickAction"
-            label: I18n.trFor("ambientSound", "Middle-click Preset")
-            description: I18n.trFor("ambientSound", "Sound preset to play/toggle when middle-clicking the bar icon.")
-            options: root.presetOptions
-            defaultValue: ""
-        }
-
-        Separator {}
-
-        ToggleSettingPlus {
-            id: showHints
-            settingKey: "showHints"
-            label: I18n.trFor("ambientSound", "Show Hints")
-            defaultValue: true
+            SettingsToggleRow {
+                text: I18n.trFor("ambientSound", "Show Hints")
+                checked: root.showHints
+                modified: root.showHints !== root.defaultShowHints
+                resetByKeys: false
+                onResetRequested: {
+                    root.showHints = root.defaultShowHints;
+                    root.saveValue("showHints", root.defaultShowHints);
+                }
+                onToggled: isChecked => {
+                    root.showHints = isChecked;
+                    root.saveValue("showHints", isChecked);
+                }
+            }
         }
     }
 
-    SettingsCard {
-        id: customSoundsSection
-        SectionTitle {
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
             text: I18n.trFor("ambientSound", "Custom Sounds")
-            icon: "music_note"
         }
 
-        DButton {
-            text: I18n.trFor("ambientSound", "Add Custom Sound")
-            iconName: "add"
-            backgroundColor: Theme.primary
+        SettingsGroup {
             width: parent.width
-            onClicked: customSoundBrowser.open()
-        }
+            slotColor: SettingsMetrics.controlColor
 
-        Column {
-            width: parent.width
-            spacing: Theme.spacingS
-            visible: customSoundsRepeater.count > 0
+            DButton {
+                text: I18n.trFor("ambientSound", "Add Custom Sound")
+                iconName: "add"
+                backgroundColor: Theme.primary
+                width: parent.width
+                onClicked: customSoundBrowser.open()
+            }
 
-            Repeater {
-                id: customSoundsRepeater
-                model: root.customSounds
+            Column {
+                width: parent.width
+                spacing: Theme.spacingS
+                visible: customSoundsRepeater.count > 0
 
-                delegate: StyledRect {
-                    required property var modelData
-                    required property int index
-                    width: parent.width
-                    height: 40
-                    color: Theme.surfaceContainerHigh
-                    radius: Theme.cornerRadius
+                Repeater {
+                    id: customSoundsRepeater
+                    model: root.customSounds
 
-                    Row {
-                        anchors.fill: parent
-                        anchors.leftMargin: Theme.spacingM
-                        anchors.rightMargin: Theme.spacingM
-                        spacing: Theme.spacingM
+                    delegate: StyledRect {
+                        required property var modelData
+                        required property int index
+                        width: parent.width
+                        height: 40
+                        color: Theme.surfaceContainerHigh
+                        radius: Theme.cornerRadius
 
-                        DIcon {
-                            name: "audiotrack"
-                            size: 16
-                            color: Theme.primary
-                            anchors.verticalCenter: parent.verticalCenter
-                        }
+                        Row {
+                            anchors.fill: parent
+                            anchors.leftMargin: Theme.spacingM
+                            anchors.rightMargin: Theme.spacingM
+                            spacing: Theme.spacingM
 
-                        StyledText {
-                            text: modelData.name
-                            font.pixelSize: Theme.fontSizeSmall
-                            color: Theme.surfaceText
-                            anchors.verticalCenter: parent.verticalCenter
-                            width: parent.width - 64
-                            elide: Text.ElideRight
-                        }
+                            DIcon {
+                                name: "audiotrack"
+                                size: 16
+                                color: Theme.primary
+                                anchors.verticalCenter: parent.verticalCenter
+                            }
 
-                        DIcon {
-                            name: "delete"
-                            size: 16
-                            color: Theme.error
-                            anchors.verticalCenter: parent.verticalCenter
+                            StyledText {
+                                text: modelData.name
+                                font.pixelSize: Theme.fontSizeSmall
+                                color: Theme.surfaceText
+                                anchors.verticalCenter: parent.verticalCenter
+                                width: parent.width - 64
+                                elide: Text.ElideRight
+                            }
 
-                            MouseArea {
-                                anchors.fill: parent
-                                cursorShape: Qt.PointingHandCursor
-                                onClicked: {
-                                    let updated = JSON.parse(JSON.stringify(root.customSounds));
-                                    updated.splice(index, 1);
-                                    root.saveCustomSounds(updated);
+                            DIcon {
+                                name: "delete"
+                                size: 16
+                                color: Theme.error
+                                anchors.verticalCenter: parent.verticalCenter
+
+                                MouseArea {
+                                    anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                    onClicked: {
+                                        let updated = JSON.parse(JSON.stringify(root.customSounds));
+                                        updated.splice(index, 1);
+                                        root.saveCustomSounds(updated);
+                                    }
                                 }
                             }
                         }
@@ -352,54 +464,67 @@ PluginSettings {
             }
         }
     }
-    SettingsCard {
-        SectionTitle { text: I18n.trFor("ambientSound", "Visible Sounds"); icon: "visibility" }
 
-        Flow {
-            id: visibleSoundsFlow
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
             width: parent.width
-            spacing: 6
+            text: I18n.trFor("ambientSound", "Visible Sounds")
+        }
 
-            Repeater {
-                model: root.sounds
-                delegate: Rectangle {
-                    width: (visibleSoundsFlow.width - 12) / 3
-                    height: 36
-                    radius: Theme.cornerRadius
-                    
-                    readonly property bool isVisible: (root.loadValue("hiddenSounds", [])).indexOf(modelData.name) < 0
-                    
-                    color: isVisible ? Theme.primary : Theme.surfaceContainerHigh
-                    
-                    Row {
-                        anchors.centerIn: parent
-                        spacing: 6
-                        DIcon {
-                            name: modelData.icon || "music_note"
-                            size: 16
-                            color: isVisible ? Theme.onPrimary : Theme.surfaceVariantText
-                        }
-                        StyledText {
-                            text: I18n.trFor("ambientSound", modelData.name.replace("-", " "))
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: isVisible ? Font.Bold : Font.Normal
-                            color: isVisible ? Theme.onPrimary : Theme.surfaceText
-                        }
-                    }
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
 
-                    MouseArea {
-                        anchors.fill: parent
-                        cursorShape: Qt.PointingHandCursor
-                        onClicked: {
-                            let list = root.loadValue("hiddenSounds", []);
-                            let idx = list.indexOf(modelData.name);
-                            let newList = list.slice();
-                            if (idx >= 0) {
-                                newList.splice(idx, 1);
-                            } else {
-                                newList.push(modelData.name);
+            Flow {
+                id: visibleSoundsFlow
+                width: parent.width
+                spacing: 6
+
+                Repeater {
+                    model: root.sounds
+                    delegate: Rectangle {
+                        required property var modelData
+                        width: (visibleSoundsFlow.width - 12) / 3
+                        height: 36
+                        radius: Theme.cornerRadius
+
+                        readonly property bool isVisible: root.hiddenSounds.indexOf(modelData.name) < 0
+
+                        color: isVisible ? Theme.primary : Theme.surfaceContainerHigh
+
+                        Row {
+                            anchors.centerIn: parent
+                            spacing: 6
+                            DIcon {
+                                name: modelData.icon || "music_note"
+                                size: 16
+                                color: isVisible ? Theme.onPrimary : Theme.surfaceVariantText
                             }
-                            root.saveValue("hiddenSounds", newList);
+                            StyledText {
+                                text: I18n.trFor("ambientSound", modelData.name.replace("-", " "))
+                                font.pixelSize: Theme.fontSizeSmall
+                                font.weight: isVisible ? Font.Bold : Font.Normal
+                                color: isVisible ? Theme.onPrimary : Theme.surfaceText
+                            }
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: {
+                                let idx = root.hiddenSounds.indexOf(modelData.name);
+                                let newList = root.hiddenSounds.slice();
+                                if (idx >= 0) {
+                                    newList.splice(idx, 1);
+                                } else {
+                                    newList.push(modelData.name);
+                                }
+                                root.hiddenSounds = newList;
+                                root.saveValue("hiddenSounds", newList);
+                            }
                         }
                     }
                 }
@@ -407,58 +532,127 @@ PluginSettings {
         }
     }
 
-    SettingsCard {
-        SectionTitle { 
-            id: usageTitle
+    Column {
+        id: usageSection
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        property bool expanded: true
+
+        SettingsSectionLabel {
+            width: parent.width
             text: I18n.trFor("ambientSound", "Usage Guide")
-            icon: "menu_book" 
             collapsible: true
-            settingKey: "usageGuideExpanded"
+            expanded: usageSection.expanded
+            onToggleRequested: {
+                usageSection.expanded = !usageSection.expanded;
+                if (root.pluginService)
+                    root.saveValue("usageGuideExpanded", usageSection.expanded);
+            }
         }
 
-        UsageGuide {
-            expanded: usageTitle.isExpanded
-            items: [
-                I18n.trFor("ambientSound", "<b>Left-click</b> the pill to open the sound selector."),
-                I18n.trFor("ambientSound", "<b>Middle-click</b> the pill to toggle your chosen sound preset."),
-                I18n.trFor("ambientSound", "<b>Right-click</b> the pill to toggle mute."),
-                I18n.trFor("ambientSound", "You can play <b>multiple sounds</b> simultaneously to create your own atmosphere."),
-                I18n.trFor("ambientSound", "Set the <b>Sleep Timer</b> in the popout to turn off sounds after a delay.")
-            ]
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: usageSection.expanded
+
+            Column {
+                width: parent.width
+                spacing: Theme.spacingS
+
+                Repeater {
+                    model: [
+                        I18n.trFor("ambientSound", "<b>Left-click</b> the pill to open the sound selector."),
+                        I18n.trFor("ambientSound", "<b>Middle-click</b> the pill to toggle your chosen sound preset."),
+                        I18n.trFor("ambientSound", "<b>Right-click</b> the pill to toggle mute."),
+                        I18n.trFor("ambientSound", "You can play <b>multiple sounds</b> simultaneously to create your own atmosphere."),
+                        I18n.trFor("ambientSound", "Set the <b>Sleep Timer</b> in the popout to turn off sounds after a delay.")
+                    ]
+
+                    delegate: Row {
+                        required property string modelData
+                        width: parent.width
+                        spacing: Theme.spacingS
+
+                        StyledText {
+                            id: bullet
+                            text: "•"
+                            color: Theme.primary
+                            font.pixelSize: Theme.fontSizeSmall
+                            font.weight: Font.Bold
+                        }
+
+                        StyledText {
+                            width: parent.width - bullet.width - parent.spacing
+                            text: modelData
+                            color: Theme.surfaceVariantText
+                            font.pixelSize: Theme.fontSizeSmall
+                            wrapMode: Text.WordWrap
+                            textFormat: Text.StyledText
+                        }
+                    }
+                }
+            }
         }
     }
 
-    SettingsCard {
-        SectionTitle {
-            id: creditsTitle
+    Column {
+        id: creditsSection
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        property bool expanded: true
+
+        SettingsSectionLabel {
+            width: parent.width
             text: I18n.trFor("ambientSound", "Credits")
-            icon: "favorite"
             collapsible: true
-            settingKey: "creditsExpanded"
+            expanded: creditsSection.expanded
+            onToggleRequested: {
+                creditsSection.expanded = !creditsSection.expanded;
+                if (root.pluginService)
+                    root.saveValue("creditsExpanded", creditsSection.expanded);
+            }
         }
 
-        CreditsList {
-            expanded: creditsTitle.isExpanded
-            items: [
-                {
-                    author: "Zurvan",
-                    url: "https://github.com/georgestafilidis",
-                    role: I18n.trFor("ambientSound", "UI redesign concept and aesthetics."),
-                    icon: "palette"
-                },
-                {
-                    author: "Blankie",
-                    url: "https://github.com/codybrom/Blankie",
-                    role: I18n.trFor("ambientSound", "Sound assets and inspiration."),
-                    icon: "library_music"
-                },
-                {
-                    author: "Blanket",
-                    url: "https://github.com/rafaelmardojai/blanket",
-                    role: I18n.trFor("ambientSound", "Sound assets and audio player inspiration."),
-                    icon: "library_music"
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: creditsSection.expanded
+
+            Repeater {
+                model: [
+                    {
+                        author: "Zurvan",
+                        url: "https://github.com/georgestafilidis",
+                        role: I18n.trFor("ambientSound", "UI redesign concept and aesthetics."),
+                        icon: "palette"
+                    },
+                    {
+                        author: "Blankie",
+                        url: "https://github.com/codybrom/Blankie",
+                        role: I18n.trFor("ambientSound", "Sound assets and inspiration."),
+                        icon: "library_music"
+                    },
+                    {
+                        author: "Blanket",
+                        url: "https://github.com/rafaelmardojai/blanket",
+                        role: I18n.trFor("ambientSound", "Sound assets and audio player inspiration."),
+                        icon: "library_music"
+                    }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    title: modelData.author
+                    subtitle: modelData.role
+                    iconName: modelData.icon
+                    iconBox: true
+                    clickable: true
+                    showChevron: true
+                    onClicked: Qt.openUrlExternally(modelData.url)
                 }
-            ]
+            }
         }
     }
 }

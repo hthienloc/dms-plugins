@@ -1,152 +1,268 @@
+import "./shared"
 import QtQuick
 import qs.Common
+import qs.DCommon.Widgets
 import qs.Modules.Plugins
-import "./shared"
+import qs.Modules.Settings.Widgets
 
 PluginSettings {
     id: root
     pluginId: "niriDS"
 
-    SettingsCard {
-        id: generalSettingsSection
-        SectionTitle { 
-            text: I18n.trFor("niriDS", "General Settings")
-            icon: "settings" 
-            showReset: connectionAction.isDirty || enableFallback.isDirty || fallbackDisplay.isDirty || bgOpacity.isDirty
-            onResetClicked: {
-                connectionAction.resetToDefault();
-                enableFallback.resetToDefault();
-                fallbackDisplay.resetToDefault();
-                bgOpacity.resetToDefault();
-            }
-        }
+    readonly property string defaultConnectionAction: "show_menu"
+    readonly property bool defaultEnableFallback: true
+    readonly property string defaultFallbackDisplay: ""
+    readonly property int defaultBgOpacity: 50
 
-        SelectionSettingPlus {
-            id: connectionAction
-            settingKey: "connectionAction"
-            label: I18n.trFor("niriDS", "When monitor is connected")
-            description: I18n.trFor("niriDS", "Choose what happens automatically when an external monitor is plugged in")
-            options: [
-                { label: I18n.trFor("niriDS", "Show Menu"), value: "show_menu" },
-                { label: I18n.trFor("niriDS", "External Only"), value: "external_only" },
-                { label: I18n.trFor("niriDS", "Extended"), value: "extend" },
-                { label: I18n.trFor("niriDS", "Internal Only"), value: "internal_only" },
-                { label: I18n.trFor("niriDS", "Mirror"), value: "mirror" },
-                { label: I18n.trFor("niriDS", "Do Nothing"), value: "none" }
-            ]
-            defaultValue: "show_menu"
-        }
+    property string connectionAction: defaultConnectionAction
+    property bool enableFallback: defaultEnableFallback
+    property string fallbackDisplay: defaultFallbackDisplay
+    property int bgOpacity: defaultBgOpacity
 
-        Separator {}
-
-        ToggleSettingPlus {
-            id: enableFallback
-            settingKey: "enableFallback"
-            label: I18n.trFor("niriDS", "Enable safety fallback")
-            description: I18n.trFor("niriDS", "Automatically re-enable the laptop screen if all external monitors are disconnected")
-            defaultValue: true
-        }
-
-        Separator {}
-
-        StringSettingPlus {
-            id: fallbackDisplay
-            settingKey: "fallbackDisplay"
-            label: I18n.trFor("niriDS", "Preferred internal display")
-            description: I18n.trFor("niriDS", "The name of your laptop display (e.g. eDP-1). Leave empty for auto-detection.")
-            placeholder: "eDP-1"
-            defaultValue: ""
-        }
-
-        Separator {}
-
-        SliderSettingPlus {
-            id: bgOpacity
-            settingKey: "bgOpacity"
-            label: I18n.trFor("niriDS", "Modal Background Opacity")
-            description: I18n.trFor("niriDS", "Adjust the background dimming opacity when the display settings modal is open")
-            minimum: 0
-            maximum: 100
-            defaultValue: 50
-            unit: "%"
-            previewType: "opacity"
-        }
+    function loadSettings() {
+        if (!pluginService)
+            return;
+        connectionAction = loadValue("connectionAction", defaultConnectionAction);
+        enableFallback = loadValue("enableFallback", defaultEnableFallback);
+        fallbackDisplay = loadValue("fallbackDisplay", defaultFallbackDisplay);
+        bgOpacity = loadValue("bgOpacity", defaultBgOpacity);
+        ipcSection.expanded = loadValue("ipcCommandsExpanded", false);
+        usageSection.expanded = loadValue("usageGuideExpanded", true);
     }
 
-    SettingsCard {
-        SectionTitle {
-            id: ipcTitle
-            text: I18n.trFor("niriDS", "IPC Commands")
-            icon: "terminal"
-            collapsible: true
-            isExpanded: false
-            settingKey: "ipcCommandsExpanded"
-        }
+    Component.onCompleted: loadSettings()
+    onPluginServiceChanged: loadSettings()
 
-        Column {
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
             width: parent.width
-            spacing: Theme.spacingM
-            visible: ipcTitle.isExpanded
+            text: I18n.trFor("niriDS", "General Settings")
+        }
 
-            CopyBox {
-                label: I18n.trFor("niriDS", "Toggle Modal")
-                text: "dms ipc call niriDS toggle"
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+
+            SettingsDropdownRow {
+                text: I18n.trFor("niriDS", "When monitor is connected")
+                description: I18n.trFor("niriDS", "Choose what happens automatically when an external monitor is plugged in")
+                options: [
+                    I18n.trFor("niriDS", "Show Menu"),
+                    I18n.trFor("niriDS", "External Only"),
+                    I18n.trFor("niriDS", "Extended"),
+                    I18n.trFor("niriDS", "Internal Only"),
+                    I18n.trFor("niriDS", "Mirror"),
+                    I18n.trFor("niriDS", "Do Nothing")
+                ]
+                optionValues: ["show_menu", "external_only", "extend", "internal_only", "mirror", "none"]
+                currentValue: root.connectionAction
+                modified: root.connectionAction !== root.defaultConnectionAction
+                resetByKeys: false
+                onResetRequested: {
+                    root.connectionAction = root.defaultConnectionAction;
+                    root.saveValue("connectionAction", root.defaultConnectionAction);
+                }
+                onValueChanged: val => {
+                    root.connectionAction = val;
+                    root.saveValue("connectionAction", val);
+                }
             }
 
-            CopyBox {
-                label: I18n.trFor("niriDS", "Open Modal")
-                text: "dms ipc call niriDS open"
+            SettingsToggleRow {
+                text: I18n.trFor("niriDS", "Enable safety fallback")
+                description: I18n.trFor("niriDS", "Automatically re-enable the laptop screen if all external monitors are disconnected")
+                checked: root.enableFallback
+                modified: root.enableFallback !== root.defaultEnableFallback
+                resetByKeys: false
+                onResetRequested: {
+                    root.enableFallback = root.defaultEnableFallback;
+                    root.saveValue("enableFallback", root.defaultEnableFallback);
+                }
+                onToggled: isChecked => {
+                    root.enableFallback = isChecked;
+                    root.saveValue("enableFallback", isChecked);
+                }
             }
 
-            CopyBox {
-                label: I18n.trFor("niriDS", "Close Modal")
-                text: "dms ipc call niriDS close"
+            SettingsTextFieldRow {
+                id: fallbackDisplayField
+                text: I18n.trFor("niriDS", "Preferred internal display")
+                description: I18n.trFor("niriDS", "The name of your laptop display (e.g. eDP-1). Leave empty for auto-detection.")
+                placeholderText: "eDP-1"
+                value: root.fallbackDisplay
+                modified: root.fallbackDisplay !== root.defaultFallbackDisplay
+                onResetRequested: {
+                    root.fallbackDisplay = root.defaultFallbackDisplay;
+                    fallbackDisplayField.value = root.defaultFallbackDisplay;
+                    root.saveValue("fallbackDisplay", root.defaultFallbackDisplay);
+                }
+                onValueEdited: newValue => {
+                    root.fallbackDisplay = newValue;
+                    root.saveValue("fallbackDisplay", newValue);
+                }
             }
 
-            CopyBox {
-                label: I18n.trFor("niriDS", "Apply: Internal Only")
-                text: "dms ipc call niriDS apply internal_only"
-            }
-
-            CopyBox {
-                label: I18n.trFor("niriDS", "Apply: External Only")
-                text: "dms ipc call niriDS apply external_only"
-            }
-
-            CopyBox {
-                label: I18n.trFor("niriDS", "Apply: Extend Displays")
-                text: "dms ipc call niriDS apply extend"
-            }
-
-            CopyBox {
-                label: I18n.trFor("niriDS", "Apply: Mirror Displays")
-                text: "dms ipc call niriDS apply mirror"
-            }
-
-            Separator { opacity: 0.1 }
-
-            CopyBox {
-                label: I18n.trFor("niriDS", "Niri Binding Configuration")
-                text: "Mod+P { spawn \"dms\" \"ipc\" \"call\" \"niriDS\" \"toggle\"; }"
+            SettingsSliderRow {
+                text: I18n.trFor("niriDS", "Modal Background Opacity")
+                description: I18n.trFor("niriDS", "Adjust the background dimming opacity when the display settings modal is open")
+                minimum: 0
+                maximum: 100
+                step: 1
+                unit: "%"
+                value: root.bgOpacity
+                modified: root.bgOpacity !== root.defaultBgOpacity
+                resetByKeys: false
+                onResetRequested: {
+                    root.bgOpacity = root.defaultBgOpacity;
+                    root.saveValue("bgOpacity", root.defaultBgOpacity);
+                }
+                onSliderDragFinished: finalValue => {
+                    root.bgOpacity = finalValue;
+                    root.saveValue("bgOpacity", finalValue);
+                }
             }
         }
     }
 
-    SettingsCard {
-        SectionTitle { 
-            id: usageTitle
-            text: I18n.trFor("niriDS", "Usage Guide")
-            icon: "menu_book" 
+    Column {
+        id: ipcSection
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        property bool expanded: false
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("niriDS", "IPC Commands")
             collapsible: true
-            settingKey: "usageGuideExpanded"
+            expanded: ipcSection.expanded
+            onToggleRequested: {
+                ipcSection.expanded = !ipcSection.expanded;
+                if (root.pluginService)
+                    root.saveValue("ipcCommandsExpanded", ipcSection.expanded);
+            }
         }
 
-        UsageGuide {
-            expanded: usageTitle.isExpanded
-            items: [
-                I18n.trFor("niriDS", "Activate the display selector via the <b>Control Center</b> or configured <b>keybindings</b>."),
-                I18n.trFor("niriDS", "Use the <b>IPC commands</b> above to automate display switching.")
-            ]
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: ipcSection.expanded
+
+            Column {
+                width: parent.width
+                spacing: Theme.spacingM
+
+                CopyBox {
+                    label: I18n.trFor("niriDS", "Toggle Modal")
+                    text: "dms ipc call niriDS toggle"
+                }
+
+                CopyBox {
+                    label: I18n.trFor("niriDS", "Open Modal")
+                    text: "dms ipc call niriDS open"
+                }
+
+                CopyBox {
+                    label: I18n.trFor("niriDS", "Close Modal")
+                    text: "dms ipc call niriDS close"
+                }
+
+                CopyBox {
+                    label: I18n.trFor("niriDS", "Apply: Internal Only")
+                    text: "dms ipc call niriDS apply internal_only"
+                }
+
+                CopyBox {
+                    label: I18n.trFor("niriDS", "Apply: External Only")
+                    text: "dms ipc call niriDS apply external_only"
+                }
+
+                CopyBox {
+                    label: I18n.trFor("niriDS", "Apply: Extend Displays")
+                    text: "dms ipc call niriDS apply extend"
+                }
+
+                CopyBox {
+                    label: I18n.trFor("niriDS", "Apply: Mirror Displays")
+                    text: "dms ipc call niriDS apply mirror"
+                }
+
+                Rectangle {
+                    width: parent.width
+                    height: 1
+                    color: Theme.outline
+                    opacity: 0.1
+                }
+
+                CopyBox {
+                    label: I18n.trFor("niriDS", "Niri Binding Configuration")
+                    text: "Mod+P { spawn \"dms\" \"ipc\" \"call\" \"niriDS\" \"toggle\"; }"
+                }
+            }
+        }
+    }
+
+    Column {
+        id: usageSection
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        property bool expanded: true
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("niriDS", "Usage Guide")
+            collapsible: true
+            expanded: usageSection.expanded
+            onToggleRequested: {
+                usageSection.expanded = !usageSection.expanded;
+                if (root.pluginService)
+                    root.saveValue("usageGuideExpanded", usageSection.expanded);
+            }
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: usageSection.expanded
+
+            Column {
+                width: parent.width
+                spacing: Theme.spacingS
+
+                Repeater {
+                    model: [
+                        I18n.trFor("niriDS", "Activate the display selector via the <b>Control Center</b> or configured <b>keybindings</b>."),
+                        I18n.trFor("niriDS", "Use the <b>IPC commands</b> above to automate display switching.")
+                    ]
+
+                    delegate: Row {
+                        required property string modelData
+                        width: parent.width
+                        spacing: Theme.spacingS
+
+                        StyledText {
+                            id: bullet
+                            text: "•"
+                            color: Theme.primary
+                            font.pixelSize: Theme.fontSizeSmall
+                            font.weight: Font.Bold
+                        }
+
+                        StyledText {
+                            width: parent.width - bullet.width - parent.spacing
+                            text: modelData
+                            color: Theme.surfaceVariantText
+                            font.pixelSize: Theme.fontSizeSmall
+                            wrapMode: Text.WordWrap
+                            textFormat: Text.StyledText
+                        }
+                    }
+                }
+            }
         }
     }
 }

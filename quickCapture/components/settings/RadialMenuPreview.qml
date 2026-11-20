@@ -18,8 +18,10 @@ Item {
     readonly property real centerRadius: 34
     readonly property var activePreset: presets[activeIndex] ?? null
 
-    width: 240
-    height: 240
+    implicitWidth: 240
+    implicitHeight: 240
+    width: implicitWidth
+    height: implicitHeight
     opacity: menuOpacity
 
     onActiveIndexChanged: sectors.requestPaint()

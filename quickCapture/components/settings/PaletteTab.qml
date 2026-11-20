@@ -1,153 +1,179 @@
 import QtQuick
 import qs.Common
-import "../../shared"
+import qs.DCommon.Widgets
+import qs.Modules.Settings.Widgets
 import "../core/Defaults.js" as Defaults
 
-SettingsGroup {
+Column {
     id: root
 
     property QtObject config: null
+    property var settings: null
 
-    readonly property bool customPalette: palettePreset.value === "custom"
-    readonly property bool registryPalette: !["adaptive", "classic", "custom", "catppuccin"].includes(palettePreset.value)
+    width: parent ? parent.width : 0
+    spacing: Theme.spacingM
+
+    property string color_palette_preset: Defaults.values.color_palette_preset
+    property string registry_theme_variant: Defaults.values.registry_theme_variant
+    property string catppuccin_variant: Defaults.values.catppuccin_variant
+
+    readonly property bool customPalette: color_palette_preset === "custom"
+    readonly property bool registryPalette: !["adaptive", "classic", "custom", "catppuccin"].includes(color_palette_preset)
 
     function slotOverride(index) {
-        if (root.customPalette)
+        if (root.customPalette || !root.config)
             return null;
-        if (palettePreset.value !== "adaptive")
+        if (root.color_palette_preset !== "adaptive")
             return root.config.defaultAccentColors[index];
         return index === 0 ? Theme.primary : root.config.adaptiveColors[index - 1];
     }
 
-    SettingsSection {
-        title: I18n.trFor("quickCapture", "Toolbar Palette")
-        icon: "palette"
+    function loadValue() {
+        if (!settings)
+            return;
+        color_palette_preset = settings.loadValue("color_palette_preset", Defaults.values.color_palette_preset);
+        registry_theme_variant = settings.loadValue("registry_theme_variant", Defaults.values.registry_theme_variant);
+        catppuccin_variant = settings.loadValue("catppuccin_variant", Defaults.values.catppuccin_variant);
+    }
 
-        InfoText {
-            text: I18n.trFor("quickCapture", "Pick a palette preset or customize individual color slots.")
-        }
+    function save(key, val) {
+        if (settings)
+            settings.saveValue(key, val);
+    }
 
-        SelectionSettingPlus {
-            id: palettePreset
-            settingKey: "color_palette_preset"
-            label: I18n.trFor("quickCapture", "Palette Preset")
-            defaultValue: Defaults.values.color_palette_preset
-            options: [
-                {
-                    label: I18n.trFor("quickCapture", "Adaptive"),
-                    value: "adaptive"
-                },
-                {
-                    label: "Classic (Tailwind)",
-                    value: "classic"
-                },
-                {
-                    label: "Nord",
-                    value: "nord"
-                },
-                {
-                    label: "Dracula",
-                    value: "dracula"
-                },
-                {
-                    label: "Gruvbox Material",
-                    value: "gruvbox"
-                },
-                {
-                    label: "Catppuccin",
-                    value: "catppuccin"
-                },
-                {
-                    label: "Everforest",
-                    value: "everforest"
-                },
-                {
-                    label: "Rosé Pine",
-                    value: "rosePine"
-                },
-                {
-                    label: "Kanagawa",
-                    value: "kanagawaWl"
-                },
-                {
-                    label: "Tokyo Night",
-                    value: "tokyoNight"
-                },
-                {
-                    label: "Synthwave Electric",
-                    value: "synthwaveElectric"
-                },
-                {
-                    label: "Dank Violet",
-                    value: "dankViolet"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "Custom"),
-                    value: "custom"
-                }
-            ]
-        }
+    onSettingsChanged: loadValue()
+    Component.onCompleted: loadValue()
 
-        ButtonGroupSettingPlus {
-            visible: root.registryPalette
-            settingKey: "registry_theme_variant"
-            label: I18n.trFor("quickCapture", "Variant")
-            defaultValue: Defaults.values.registry_theme_variant
-            options: [
-                {
-                    label: I18n.trFor("quickCapture", "Dark"),
-                    value: "dark"
-                },
-                {
-                    label: I18n.trFor("quickCapture", "Light"),
-                    value: "light"
-                }
-            ]
-        }
+    Column {
+        width: parent.width
+        spacing: 0
 
-        ButtonGroupSettingPlus {
-            visible: palettePreset.value === "catppuccin"
-            settingKey: "catppuccin_variant"
-            label: I18n.trFor("quickCapture", "Variant")
-            defaultValue: Defaults.values.catppuccin_variant
-            options: [
-                {
-                    label: "Latte",
-                    value: "latte"
-                },
-                {
-                    label: "Frappé",
-                    value: "frappe"
-                },
-                {
-                    label: "Macchiato",
-                    value: "macchiato"
-                },
-                {
-                    label: "Mocha",
-                    value: "mocha"
-                }
-            ]
-        }
-
-        Separator {}
-
-        Grid {
+        SettingsSectionLabel {
             width: parent.width
-            columns: 4
-            rowSpacing: Theme.spacingM
-            columnSpacing: Theme.spacingM
+            text: I18n.trFor("quickCapture", "Toolbar Palette")
+        }
 
-            Repeater {
-                model: 8
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
 
-                delegate: CompactColorSetting {
-                    required property int index
-                    settingKey: index === 0 ? "toolbar_color_primary" : "toolbar_color_" + (index - 1)
-                    label: I18n.trFor("quickCapture", "Slot %1").arg(index + 1)
-                    defaultValue: index === 0 ? "primary" : root.config.adaptiveColors[index - 1]
-                    readOnly: !root.customPalette
-                    overrideColor: root.slotOverride(index)
+            SettingsNoteRow {
+                noteIconName: "info"
+                tint: Theme.primary
+                tintBackground: Theme.withAlpha(Theme.primary, 0.08)
+                text: I18n.trFor("quickCapture", "Pick a palette preset or customize individual color slots.")
+            }
+
+            SettingsDropdownRow {
+                text: I18n.trFor("quickCapture", "Palette Preset")
+                options: [
+                    I18n.trFor("quickCapture", "Adaptive"),
+                    "Classic (Tailwind)",
+                    "Nord",
+                    "Dracula",
+                    "Gruvbox Material",
+                    "Catppuccin",
+                    "Everforest",
+                    "Rosé Pine",
+                    "Kanagawa",
+                    "Tokyo Night",
+                    "Synthwave Electric",
+                    "Dank Violet",
+                    I18n.trFor("quickCapture", "Custom")
+                ]
+                optionValues: [
+                    "adaptive",
+                    "classic",
+                    "nord",
+                    "dracula",
+                    "gruvbox",
+                    "catppuccin",
+                    "everforest",
+                    "rosePine",
+                    "kanagawaWl",
+                    "tokyoNight",
+                    "synthwaveElectric",
+                    "dankViolet",
+                    "custom"
+                ]
+                currentValue: root.color_palette_preset
+                modified: root.color_palette_preset !== Defaults.values.color_palette_preset
+                resetByKeys: false
+                onResetRequested: {
+                    root.color_palette_preset = Defaults.values.color_palette_preset;
+                    root.save("color_palette_preset", Defaults.values.color_palette_preset);
+                }
+                onValueChanged: val => {
+                    root.color_palette_preset = val;
+                    root.save("color_palette_preset", val);
+                }
+            }
+
+            SettingsButtonGroupRow {
+                visible: root.registryPalette
+                text: I18n.trFor("quickCapture", "Variant")
+                model: [
+                    I18n.trFor("quickCapture", "Dark"),
+                    I18n.trFor("quickCapture", "Light")
+                ]
+                values: ["dark", "light"]
+                value: root.registry_theme_variant
+                modified: root.registry_theme_variant !== Defaults.values.registry_theme_variant
+                resetByKeys: false
+                onResetRequested: {
+                    root.registry_theme_variant = Defaults.values.registry_theme_variant;
+                    root.save("registry_theme_variant", Defaults.values.registry_theme_variant);
+                }
+                onValueSelected: val => {
+                    root.registry_theme_variant = val;
+                    root.save("registry_theme_variant", val);
+                }
+            }
+
+            SettingsButtonGroupRow {
+                visible: root.color_palette_preset === "catppuccin"
+                text: I18n.trFor("quickCapture", "Variant")
+                model: ["Latte", "Frappé", "Macchiato", "Mocha"]
+                values: ["latte", "frappe", "macchiato", "mocha"]
+                value: root.catppuccin_variant
+                modified: root.catppuccin_variant !== Defaults.values.catppuccin_variant
+                resetByKeys: false
+                onResetRequested: {
+                    root.catppuccin_variant = Defaults.values.catppuccin_variant;
+                    root.save("catppuccin_variant", Defaults.values.catppuccin_variant);
+                }
+                onValueSelected: val => {
+                    root.catppuccin_variant = val;
+                    root.save("catppuccin_variant", val);
+                }
+            }
+
+            Item {
+                width: parent.width
+                height: slotsGrid.implicitHeight + Theme.spacingM * 2
+
+                Grid {
+                    id: slotsGrid
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.margins: Theme.spacingM
+                    columns: 4
+                    rowSpacing: Theme.spacingM
+                    columnSpacing: Theme.spacingM
+
+                    Repeater {
+                        model: 8
+
+                        delegate: CompactColorSetting {
+                            required property int index
+                            settingKey: index === 0 ? "toolbar_color_primary" : "toolbar_color_" + (index - 1)
+                            label: I18n.trFor("quickCapture", "Slot %1").arg(index + 1)
+                            defaultValue: index === 0 ? "primary" : (root.config ? root.config.adaptiveColors[index - 1] : "#ffffff")
+                            readOnly: !root.customPalette
+                            overrideColor: root.slotOverride(index)
+                        }
+                    }
                 }
             }
         }

@@ -1,12 +1,25 @@
 import QtQuick
 import qs.Common
-import qs.Widgets
+import qs.DCommon.Widgets
+import qs.Modules.Settings.Widgets
 import "../../shared"
 
-SettingsGroup {
+Column {
     id: root
 
     property QtObject config: null
+    property var settings: null
+
+    width: parent ? parent.width : 0
+    spacing: Theme.spacingM
+
+    function loadValue() {
+    }
+
+    function save(key, val) {
+        if (settings)
+            settings.saveValue(key, val);
+    }
 
     readonly property var barRows: [
         {
@@ -27,10 +40,10 @@ SettingsGroup {
         }
     ]
 
-    readonly property var toolRows: config.tools.filter(t => t.shortcut !== "").map(t => ({
+    readonly property var toolRows: root.config ? root.config.tools.filter(t => t.shortcut !== "").map(t => ({
                 key: t.shortcut,
                 action: t.label
-            }))
+            })) : []
 
     readonly property var generalRows: [
         {
@@ -115,7 +128,7 @@ SettingsGroup {
         }
     ]
 
-    readonly property var screenshotCommands: ["region", "full", "all", "output", "window", "last", "scroll"].map(mode => ({
+    readonly property var screenshotCommands: root.config ? ["region", "full", "all", "output", "window", "last", "scroll"].map(mode => ({
                 label: I18n.trFor("quickCapture", "Screenshot") + " · " + root.config.captureModeLabel(mode),
                 command: "screenshot " + mode
             })).concat([
@@ -131,7 +144,7 @@ SettingsGroup {
             label: I18n.trFor("quickCapture", "Open Image"),
             command: "openImage /path/to/image.png"
         }
-    ])
+    ]) : []
 
     readonly property var otherCommands: [
         {
@@ -176,6 +189,27 @@ SettingsGroup {
         }
     ]
 
+    readonly property var creditsItems: [
+        {
+            author: "Gradia Capture",
+            url: "https://github.com/AlexanderVanhee/gradia-capture",
+            role: I18n.trFor("quickCapture", "Toolbar design and layout inspiration."),
+            icon: "palette"
+        },
+        {
+            author: "Flameshot",
+            url: "https://github.com/flameshot-org/flameshot",
+            role: I18n.trFor("quickCapture", "Radial menu and tool interaction patterns."),
+            icon: "camera"
+        },
+        {
+            author: "Snapzy",
+            url: "https://github.com/duongductrong/Snapzy",
+            role: I18n.trFor("quickCapture", "Floating window and continuous editing workflow."),
+            icon: "open_in_new"
+        }
+    ]
+
     component GuideHeading: StyledText {
         font.pixelSize: Theme.fontSizeLarge
         font.weight: Font.Bold
@@ -207,134 +241,183 @@ SettingsGroup {
         }
     }
 
-    SettingsSection {
-        title: I18n.trFor("quickCapture", "Usage Guide")
-        icon: "menu_book"
-        resettable: false
-        collapsible: true
-        stateKey: "usageGuideExpanded"
+    Column {
+        id: usageSection
+        width: parent.width
+        spacing: 0
+        property bool expanded: true
 
-        GuideHeading {
-            text: I18n.trFor("quickCapture", "Bar Interactions")
-        }
-
-        ShortcutTable {
-            keyHeader: I18n.trFor("quickCapture", "Action")
-            actionHeader: I18n.trFor("quickCapture", "Interaction / Result")
-            rows: root.barRows
-        }
-
-        Separator {}
-
-        GuideHeading {
-            text: I18n.trFor("quickCapture", "Annotation Tools")
-        }
-
-        ShortcutTable {
-            keyHeader: I18n.trFor("quickCapture", "Key")
-            actionHeader: I18n.trFor("quickCapture", "Selected Tool / Action")
-            rows: root.toolRows
-        }
-
-        Separator {}
-
-        GuideHeading {
-            text: I18n.trFor("quickCapture", "General Shortcuts")
-        }
-
-        ShortcutTable {
-            keyHeader: I18n.trFor("quickCapture", "Key")
-            actionHeader: I18n.trFor("quickCapture", "Shortcut Action")
-            rows: root.generalRows
-        }
-    }
-
-    SettingsSection {
-        title: I18n.trFor("quickCapture", "IPC Commands")
-        icon: "terminal"
-        resettable: false
-        collapsible: true
-        expanded: false
-        stateKey: "ipcCommandsExpanded"
-
-        StyledText {
+        SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("quickCapture", "Each command accepts action: %1 (open editor) or %2 (always-on-top window).").arg("<b>edit</b>").arg("<b>float</b>")
-            wrapMode: Text.WordWrap
-            font.pixelSize: Theme.fontSizeSmall
-            color: Theme.surfaceVariantText
-            textFormat: Text.RichText
+            text: I18n.trFor("quickCapture", "Usage Guide")
+            collapsible: true
+            expanded: usageSection.expanded
+            onToggleRequested: usageSection.expanded = !usageSection.expanded
         }
 
-        Repeater {
-            model: root.screenshotCommands
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: usageSection.expanded
 
-            delegate: Column {
-                required property var modelData
+            Item {
                 width: parent.width
-                spacing: Theme.spacingS
+                height: usageCol.implicitHeight + Theme.spacingM * 2
 
-                CopyBox {
-                    label: modelData.label + " · " + I18n.trFor("quickCapture", "Edit")
-                    text: "dms ipc call quickCapture " + modelData.command + " edit"
-                }
+                Column {
+                    id: usageCol
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.margins: Theme.spacingM
+                    spacing: Theme.spacingM
 
-                CopyBox {
-                    label: modelData.label + " · " + I18n.trFor("quickCapture", "Float")
-                    text: "dms ipc call quickCapture " + modelData.command + " float"
+                    GuideHeading {
+                        text: I18n.trFor("quickCapture", "Bar Interactions")
+                    }
+
+                    ShortcutTable {
+                        keyHeader: I18n.trFor("quickCapture", "Action")
+                        actionHeader: I18n.trFor("quickCapture", "Interaction / Result")
+                        rows: root.barRows
+                    }
+
+                    GuideHeading {
+                        text: I18n.trFor("quickCapture", "Annotation Tools")
+                    }
+
+                    ShortcutTable {
+                        keyHeader: I18n.trFor("quickCapture", "Key")
+                        actionHeader: I18n.trFor("quickCapture", "Selected Tool / Action")
+                        rows: root.toolRows
+                    }
+
+                    GuideHeading {
+                        text: I18n.trFor("quickCapture", "General Shortcuts")
+                    }
+
+                    ShortcutTable {
+                        keyHeader: I18n.trFor("quickCapture", "Key")
+                        actionHeader: I18n.trFor("quickCapture", "Shortcut Action")
+                        rows: root.generalRows
+                    }
                 }
             }
-        }
-
-        Repeater {
-            model: root.otherCommands
-
-            delegate: CopyBox {
-                required property var modelData
-                label: modelData.label
-                text: "dms ipc call quickCapture " + modelData.command
-            }
-        }
-
-        Separator {}
-
-        CopyBox {
-            label: I18n.trFor("quickCapture", "Niri Binding Example")
-            text: "binds {\n    Print { spawn \"dms\" \"ipc\" \"call\" \"quickCapture\" \"screenshot\" \"region\" \"edit\"; }\n}"
         }
     }
 
-    SettingsSection {
-        title: I18n.trFor("quickCapture", "Credits")
-        icon: "favorite"
-        resettable: false
-        collapsible: true
-        expanded: false
-        stateKey: "creditsExpanded"
+    Column {
+        id: ipcSection
+        width: parent.width
+        spacing: 0
+        property bool expanded: false
 
-        CreditsList {
-            expanded: true
-            items: [
-                {
-                    author: "Gradia Capture",
-                    url: "https://github.com/AlexanderVanhee/gradia-capture",
-                    role: I18n.trFor("quickCapture", "Toolbar design and layout inspiration."),
-                    icon: "palette"
-                },
-                {
-                    author: "Flameshot",
-                    url: "https://github.com/flameshot-org/flameshot",
-                    role: I18n.trFor("quickCapture", "Radial menu and tool interaction patterns."),
-                    icon: "camera"
-                },
-                {
-                    author: "Snapzy",
-                    url: "https://github.com/duongductrong/Snapzy",
-                    role: I18n.trFor("quickCapture", "Floating window and continuous editing workflow."),
-                    icon: "open_in_new"
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("quickCapture", "IPC Commands")
+            collapsible: true
+            expanded: ipcSection.expanded
+            onToggleRequested: ipcSection.expanded = !ipcSection.expanded
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: ipcSection.expanded
+
+            Item {
+                width: parent.width
+                height: ipcCol.implicitHeight + Theme.spacingM * 2
+
+                Column {
+                    id: ipcCol
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.margins: Theme.spacingM
+                    spacing: Theme.spacingS
+
+                    StyledText {
+                        width: parent.width
+                        text: I18n.trFor("quickCapture", "Each command accepts action: %1 (open editor) or %2 (always-on-top window).").arg("<b>edit</b>").arg("<b>float</b>")
+                        wrapMode: Text.WordWrap
+                        font.pixelSize: Theme.fontSizeSmall
+                        color: Theme.surfaceVariantText
+                        textFormat: Text.RichText
+                    }
+
+                    Repeater {
+                        model: root.screenshotCommands
+
+                        delegate: Column {
+                            required property var modelData
+                            width: parent.width
+                            spacing: Theme.spacingS
+
+                            CopyBox {
+                                label: modelData.label + " · " + I18n.trFor("quickCapture", "Edit")
+                                text: "dms ipc call quickCapture " + modelData.command + " edit"
+                            }
+
+                            CopyBox {
+                                label: modelData.label + " · " + I18n.trFor("quickCapture", "Float")
+                                text: "dms ipc call quickCapture " + modelData.command + " float"
+                            }
+                        }
+                    }
+
+                    Repeater {
+                        model: root.otherCommands
+
+                        delegate: CopyBox {
+                            required property var modelData
+                            label: modelData.label
+                            text: "dms ipc call quickCapture " + modelData.command
+                        }
+                    }
+
+                    CopyBox {
+                        label: I18n.trFor("quickCapture", "Niri Binding Example")
+                        text: "binds {\n    Print { spawn \"dms\" \"ipc\" \"call\" \"quickCapture\" \"screenshot\" \"region\" \"edit\"; }\n}"
+                    }
                 }
-            ]
+            }
+        }
+    }
+
+    Column {
+        id: creditsSection
+        width: parent.width
+        spacing: 0
+        property bool expanded: false
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("quickCapture", "Credits")
+            collapsible: true
+            expanded: creditsSection.expanded
+            onToggleRequested: creditsSection.expanded = !creditsSection.expanded
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: creditsSection.expanded
+
+            Repeater {
+                model: root.creditsItems
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    title: modelData.author
+                    subtitle: modelData.role
+                    iconName: modelData.icon
+                    iconBox: true
+                    clickable: true
+                    showChevron: true
+                    onClicked: Qt.openUrlExternally(modelData.url)
+                }
+            }
         }
     }
 }
-

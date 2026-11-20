@@ -1,16 +1,5 @@
 module dms.common
-ButtonGroupSettingPlus 1.0 ButtonGroupSettingPlus.qml
 ColorSettingPlus 1.0 ColorSettingPlus.qml
 CopyBox 1.0 CopyBox.qml
-CreditsList 1.0 CreditsList.qml
-DankSliderPlus 1.0 DankSliderPlus.qml
-FontSelectionSettingPlus 1.0 FontSelectionSettingPlus.qml
-InfoText 1.0 InfoText.qml
 singleton M3E 1.0 M3E.qml
 NumericText 1.0 NumericText.qml
-SectionTitle 1.0 SectionTitle.qml
-SelectionSettingPlus 1.0 SelectionSettingPlus.qml
-Separator 1.0 Separator.qml
-SliderSettingPlus 1.0 SliderSettingPlus.qml
-StringSettingPlus 1.0 StringSettingPlus.qml
-ToggleSettingPlus 1.0 ToggleSettingPlus.qml

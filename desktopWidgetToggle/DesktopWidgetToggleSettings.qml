@@ -1,15 +1,22 @@
-pragma ComponentBehavior: Bound
-
 import "./shared"
 import QtQuick
 import qs.Common
 import qs.DCommon.Widgets
 import qs.Modules.Plugins
+import qs.Modules.Settings.Widgets
 import qs.Services
 
 PluginSettings {
-    id: rootSettings
+    id: root
     pluginId: "desktopWidgetToggle"
+
+    readonly property string defaultDisplayMode: "all"
+    readonly property string defaultConflictMode: "single"
+    readonly property int defaultAutoDismissDuration: 0
+
+    property string displayMode: defaultDisplayMode
+    property string conflictMode: defaultConflictMode
+    property int currentAutoDismissDuration: defaultAutoDismissDuration
 
     property var groups: {
         settingChanged;
@@ -42,6 +49,24 @@ PluginSettings {
         { "text": I18n.trFor("desktopWidgetToggle", "Group"), "icon": "settings", "isAction": false },
         { "text": I18n.trFor("desktopWidgetToggle", "Widgets"), "icon": "widgets", "isAction": false }
     ]
+
+    function loadSettings() {
+        if (!pluginService)
+            return;
+        displayMode = loadValue("displayMode", defaultDisplayMode);
+        conflictMode = loadValue("conflictMode", defaultConflictMode);
+        usageSection.expanded = loadValue("usageGuideExpanded", true);
+        loadCurrentGroupAutoDismiss();
+    }
+
+    function loadCurrentGroupAutoDismiss() {
+        if (!pluginService || !activeGroupDetails.currentGroup)
+            return;
+        currentAutoDismissDuration = loadValue("autoDismissDuration_" + activeGroupDetails.currentGroup.id, defaultAutoDismissDuration);
+    }
+
+    Component.onCompleted: loadSettings()
+    onPluginServiceChanged: loadSettings()
 
     function saveGroups(newGroups) {
         saveValue("groups", newGroups);
@@ -85,14 +110,14 @@ PluginSettings {
             return;
         let updated = JSON.parse(JSON.stringify(groups));
         const deletedId = updated[index].id;
-        
+
         let activeIds = loadValue("activeGroupIds", []);
         if (activeIds.includes(deletedId)) {
             activeIds = activeIds.filter(id => id !== deletedId);
             saveValue("activeGroupIds", activeIds);
             saveValue("activeGroupId", activeIds.length > 0 ? activeIds[0] : "");
         }
-        
+
         updated.splice(index, 1);
         saveGroups(updated);
 
@@ -128,572 +153,679 @@ PluginSettings {
 
     function updateWidgetOverride(groupIndex, widgetId, key, value) {
         let updated = JSON.parse(JSON.stringify(groups));
-        if (!updated[groupIndex].widgetOverrides) updated[groupIndex].widgetOverrides = {};
-        if (!updated[groupIndex].widgetOverrides[widgetId]) updated[groupIndex].widgetOverrides[widgetId] = {};
+        if (!updated[groupIndex].widgetOverrides)
+            updated[groupIndex].widgetOverrides = {};
+        if (!updated[groupIndex].widgetOverrides[widgetId])
+            updated[groupIndex].widgetOverrides[widgetId] = {};
         updated[groupIndex].widgetOverrides[widgetId][key] = value;
         saveGroups(updated);
     }
 
-    SettingsCard {
-        id: groupsSection
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
 
-        SectionTitle {
+        SettingsSectionLabel {
+            width: parent.width
             text: I18n.trFor("desktopWidgetToggle", "Widget Groups")
-            icon: "widgets"
         }
 
-        DTabBar {
-            id: groupTabBar
+        SettingsGroup {
             width: parent.width
-            tabHeight: 48
-            model: rootSettings.tabModel
-            currentIndex: rootSettings.selectedGroupIndex
-            equalWidthTabs: false
-            showIcons: true
+            slotColor: SettingsMetrics.controlColor
 
-            onTabClicked: index => {
-                rootSettings.selectedGroupIndex = index;
-            }
-
-            onActionTriggered: index => {
-                rootSettings.addGroup();
-            }
-        }
-
-        Column {
-            id: activeGroupDetails
-            width: parent.width
-            spacing: Theme.spacingM
-
-            readonly property var currentGroup: (rootSettings.groups && rootSettings.selectedGroupIndex >= 0 && rootSettings.selectedGroupIndex < rootSettings.groups.length) ? rootSettings.groups[rootSettings.selectedGroupIndex] : null
-
-            visible: currentGroup !== null
-
-            Rectangle {
-                width: parent.width; height: Theme.buttonHeightXS; radius: height / 2; color: Theme.withAlpha(Theme.surfaceText, 0.05)
-                border.color: Theme.withAlpha(Theme.outline, 0.1); border.width: 1
-
-                Row {
-                    anchors.fill: parent; anchors.margins: 2
-
-                    MouseArea {
-                        id: tabGroupBtn
-                        width: parent.width / 2; height: parent.height
-                        hoverEnabled: true; cursorShape: Qt.PointingHandCursor
-                        onClicked: rootSettings.selectedGroupSubTabIndex = 0
-
-                        Rectangle {
-                            anchors.fill: parent; radius: height / 2
-                            color: rootSettings.selectedGroupSubTabIndex === 0 ? Theme.primary : "transparent"
-
-                            Row {
-                                anchors.centerIn: parent
-                                spacing: Theme.spacingXS
-
-                                DIcon {
-                                    name: "settings"
-                                    size: Theme.iconSizeSmall
-                                    color: rootSettings.selectedGroupSubTabIndex === 0 ? Theme.onPrimary : Theme.surfaceText
-                                    opacity: tabGroupBtn.containsMouse ? 0.9 : 0.6
-                                    anchors.verticalCenter: parent.verticalCenter
-                                }
-
-                                StyledText {
-                                    text: I18n.trFor("desktopWidgetToggle", "Group")
-                                    font.bold: true
-                                    font.pixelSize: Theme.fontSizeSmall
-                                    color: rootSettings.selectedGroupSubTabIndex === 0 ? Theme.onPrimary : Theme.surfaceText
-                                    opacity: tabGroupBtn.containsMouse ? 0.9 : 0.6
-                                    anchors.verticalCenter: parent.verticalCenter
-                                }
-                            }
-                        }
-                    }
-
-                    MouseArea {
-                        id: tabWidgetsBtn
-                        width: parent.width / 2; height: parent.height
-                        hoverEnabled: true; cursorShape: Qt.PointingHandCursor
-                        onClicked: rootSettings.selectedGroupSubTabIndex = 1
-
-                        Rectangle {
-                            anchors.fill: parent; radius: height / 2
-                            color: rootSettings.selectedGroupSubTabIndex === 1 ? Theme.primary : "transparent"
-
-                            Row {
-                                anchors.centerIn: parent
-                                spacing: Theme.spacingXS
-
-                                DIcon {
-                                    name: "widgets"
-                                    size: Theme.iconSizeSmall
-                                    color: rootSettings.selectedGroupSubTabIndex === 1 ? Theme.onPrimary : Theme.surfaceText
-                                    opacity: tabWidgetsBtn.containsMouse ? 0.9 : 0.6
-                                    anchors.verticalCenter: parent.verticalCenter
-                                }
-
-                                StyledText {
-                                    text: I18n.trFor("desktopWidgetToggle", "Widgets")
-                                    font.bold: true
-                                    font.pixelSize: Theme.fontSizeSmall
-                                    color: rootSettings.selectedGroupSubTabIndex === 1 ? Theme.onPrimary : Theme.surfaceText
-                                    opacity: tabWidgetsBtn.containsMouse ? 0.9 : 0.6
-                                    anchors.verticalCenter: parent.verticalCenter
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            // ── Sub-Tab 1: Group Settings ────────────────────────────────────
             Column {
                 width: parent.width
                 spacing: Theme.spacingM
-                visible: rootSettings.selectedGroupSubTabIndex === 0
 
-                Row {
+                DTabBar {
+                    id: groupTabBar
+                    width: parent.width
+                    tabHeight: 48
+                    model: root.tabModel
+                    currentIndex: root.selectedGroupIndex
+                    equalWidthTabs: false
+                    showIcons: true
+
+                    onTabClicked: index => {
+                        root.selectedGroupIndex = index;
+                    }
+
+                    onActionTriggered: index => {
+                        root.addGroup();
+                    }
+                }
+
+                Column {
+                    id: activeGroupDetails
                     width: parent.width
                     spacing: Theme.spacingM
 
-                    Column {
-                        width: parent.width - deleteBtn.width - 88 - Theme.spacingM * 2
-                        spacing: Theme.spacingXS
-                        anchors.bottom: parent.bottom
+                    readonly property var currentGroup: (root.groups && root.selectedGroupIndex >= 0 && root.selectedGroupIndex < root.groups.length) ? root.groups[root.selectedGroupIndex] : null
 
-                        StyledText {
-                            text: I18n.trFor("desktopWidgetToggle", "Group Name")
-                            font.pixelSize: Theme.fontSizeSmall
-                            color: Theme.surfaceVariantText
-                        }
+                    visible: currentGroup !== null
+                    onCurrentGroupChanged: root.loadCurrentGroupAutoDismiss()
 
-                        DTextField {
-                            width: parent.width
-                            height: 40
-                            text: activeGroupDetails.currentGroup ? (activeGroupDetails.currentGroup.name || "") : ""
-                            placeholderText: I18n.trFor("desktopWidgetToggle", "e.g. Work Widgets")
-                            onEditingFinished: {
-                                if (activeGroupDetails.currentGroup) {
-                                    rootSettings.renameGroup(rootSettings.selectedGroupIndex, text.trim());
-                                }
-                            }
-                        }
-                    }
-
-                    Column {
-                        width: 88
-                        spacing: Theme.spacingXS
-                        anchors.bottom: parent.bottom
-
-                        StyledText {
-                            text: I18n.trFor("desktopWidgetToggle", "Icon")
-                            font.pixelSize: Theme.fontSizeSmall
-                            color: Theme.surfaceVariantText
-                        }
+                    Rectangle {
+                        width: parent.width
+                        height: Theme.buttonHeightXS
+                        radius: height / 2
+                        color: Theme.withAlpha(Theme.surfaceText, 0.05)
+                        border.color: Theme.withAlpha(Theme.outline, 0.1)
+                        border.width: 1
 
                         Row {
-                            width: parent.width
-                            spacing: Theme.spacingS
+                            anchors.fill: parent
+                            anchors.margins: 2
 
-                            DankIconPickerPlus {
-                                width: 40
-                                height: 40
-                                showText: false
-                                enabled: activeGroupDetails.currentGroup ? (activeGroupDetails.currentGroup.showIcon !== false) : true
-                                currentIcon: activeGroupDetails.currentGroup ? (activeGroupDetails.currentGroup.icon || "widgets") : "widgets"
-                                onIconSelected: (iconName, type) => {
-                                    if (activeGroupDetails.currentGroup) {
-                                        rootSettings.changeGroupIcon(rootSettings.selectedGroupIndex, iconName);
-                                    }
-                                }
-                            }
+                            MouseArea {
+                                id: tabGroupBtn
+                                width: parent.width / 2
+                                height: parent.height
+                                hoverEnabled: true
+                                cursorShape: Qt.PointingHandCursor
+                                onClicked: root.selectedGroupSubTabIndex = 0
 
-                            DButton {
-                                width: 40
-                                height: 40
-                                iconName: (activeGroupDetails.currentGroup && activeGroupDetails.currentGroup.showIcon !== false) ? "visibility" : "visibility_off"
-                                backgroundColor: (activeGroupDetails.currentGroup && activeGroupDetails.currentGroup.showIcon !== false) ? Theme.primaryContainer : Theme.surfaceContainerHigh
-                                textColor: (activeGroupDetails.currentGroup && activeGroupDetails.currentGroup.showIcon !== false) ? Theme.primary : Theme.surfaceVariantText
-                                onClicked: {
-                                    if (activeGroupDetails.currentGroup) {
-                                        const show = activeGroupDetails.currentGroup.showIcon !== false;
-                                        rootSettings.updateGroupControl(rootSettings.selectedGroupIndex, "showIcon", !show);
-                                    }
-                                }
-                            }
-                        }
-                    }
+                                Rectangle {
+                                    anchors.fill: parent
+                                    radius: height / 2
+                                    color: root.selectedGroupSubTabIndex === 0 ? Theme.primary : "transparent"
 
-                    DButton {
-                        id: deleteBtn
-                        text: I18n.trFor("desktopWidgetToggle", "Delete")
-                        iconName: "delete"
-                        backgroundColor: Theme.error
-                        textColor: Theme.onError
-                        buttonHeight: 40
-                        enabled: rootSettings.groups.length > 1
-                        anchors.bottom: parent.bottom
-                        onClicked: {
-                            rootSettings.deleteGroup(rootSettings.selectedGroupIndex);
-                        }
-                    }
-                }
+                                    Row {
+                                        anchors.centerIn: parent
+                                        spacing: Theme.spacingXS
 
-                Separator {}
-
-                Column {
-                    width: parent.width
-                    spacing: Theme.spacingXS
-                    leftPadding: Theme.spacingM
-
-                    StyledText {
-                        text: I18n.trFor("desktopWidgetToggle", "Group Behavior")
-                        font.pixelSize: Theme.fontSizeSmall
-                        font.weight: Font.Medium
-                        color: Theme.surfaceText
-                    }
-
-                    DToggle {
-                        width: parent.width
-                        text: I18n.trFor("desktopWidgetToggle", "Show on Overlay")
-                        description: I18n.trFor("desktopWidgetToggle", "Show widgets in this group in the desktop overlay layer")
-                        checked: activeGroupDetails.currentGroup ? (activeGroupDetails.currentGroup.toggleOverlay !== false) : true
-                        onToggled: isChecked => {
-                            if (activeGroupDetails.currentGroup) {
-                                rootSettings.updateGroupControl(rootSettings.selectedGroupIndex, "toggleOverlay", isChecked);
-                            }
-                        }
-                    }
-
-                    DToggle {
-                        visible: CompositorService.isNiri
-                        width: parent.width
-                        text: I18n.trFor("desktopWidgetToggle", "Show on Overview")
-                        description: I18n.trFor("desktopWidgetToggle", "Show widgets in this group during workspace overview")
-                        checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.toggleOverview : false
-                        onToggled: isChecked => {
-                            if (activeGroupDetails.currentGroup) {
-                                rootSettings.updateGroupControl(rootSettings.selectedGroupIndex, "toggleOverview", isChecked);
-                            }
-                        }
-                    }
-
-                    DToggle {
-                        visible: CompositorService.isNiri
-                        width: parent.width
-                        text: I18n.trFor("desktopWidgetToggle", "Show on Overview Only")
-                        description: I18n.trFor("desktopWidgetToggle", "Show widgets in this group only during workspace overview")
-                        checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.toggleOverviewOnly : false
-                        onToggled: isChecked => {
-                            if (activeGroupDetails.currentGroup) {
-                                rootSettings.updateGroupControl(rootSettings.selectedGroupIndex, "toggleOverviewOnly", isChecked);
-                            }
-                        }
-                    }
-
-                    DToggle {
-                        width: parent.width
-                        text: I18n.trFor("desktopWidgetToggle", "Click Through")
-                        description: I18n.trFor("desktopWidgetToggle", "Allow clicks to pass through widgets in this group")
-                        checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.toggleClickThrough : false
-                        onToggled: isChecked => {
-                            if (activeGroupDetails.currentGroup) {
-                                rootSettings.updateGroupControl(rootSettings.selectedGroupIndex, "toggleClickThrough", isChecked);
-                            }
-                        }
-                    }
-
-                    DToggle {
-                        width: parent.width
-                        text: I18n.trFor("desktopWidgetToggle", "Hide when inactive")
-                        description: I18n.trFor("desktopWidgetToggle", "Hide the widgets in this group entirely when the group is inactive.")
-                        checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.hideWhenInactive : false
-                        onToggled: isChecked => {
-                            if (activeGroupDetails.currentGroup) {
-                                rootSettings.updateGroupControl(rootSettings.selectedGroupIndex, "hideWhenInactive", isChecked);
-                            }
-                        }
-                    }
-
-                    Item { width: 1; height: Theme.spacingS }
-
-                    SliderSettingPlus {
-                        id: autoDismissDuration
-                        settingKey: "autoDismissDuration_" + (activeGroupDetails.currentGroup ? activeGroupDetails.currentGroup.id : "none")
-                        label: I18n.trFor("desktopWidgetToggle", "Auto-dismiss Overlay")
-                        description: I18n.trFor("desktopWidgetToggle", "Automatically turn off the active overlay group after this duration. Set to 0 to keep active.")
-                        defaultValue: 0
-                        minimum: 0
-                        maximum: 15
-                        unit: "s"
-                        leftLabel: I18n.trFor("desktopWidgetToggle", "Off")
-                        rightLabel: "15s"
-
-                        Connections {
-                            target: activeGroupDetails
-                            function onCurrentGroupChanged() {
-                                autoDismissDuration.loadValue();
-                            }
-                        }
-                    }
-                }
-            }
-
-            // ── Sub-Tab 2: Widget Settings ───────────────────────────────────
-            Column {
-                width: parent.width
-                spacing: Theme.spacingM
-                visible: rootSettings.selectedGroupSubTabIndex === 1
-
-                DToggle {
-                    width: parent.width
-                    text: I18n.trFor("desktopWidgetToggle", "Individual Widget Behavior")
-                    description: I18n.trFor("desktopWidgetToggle", "Configure behavior for each widget separately instead of using group-wide settings.")
-                    checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.overrideIndividual : false
-                    onToggled: isChecked => {
-                        if (activeGroupDetails.currentGroup) {
-                            rootSettings.updateGroupControl(rootSettings.selectedGroupIndex, "overrideIndividual", isChecked);
-                        }
-                    }
-                }
-
-                Separator {}
-
-                Column {
-                    width: parent.width
-                    spacing: Theme.spacingS
-                    leftPadding: Theme.spacingM
-
-                    Item {
-                        width: parent.width - Theme.spacingM
-                        height: Math.max(selectWidgetsTitle.implicitHeight, selectAllRow.implicitHeight)
-
-                        StyledText {
-                            id: selectWidgetsTitle
-                            text: I18n.trFor("desktopWidgetToggle", "Select Widgets")
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Medium
-                            color: Theme.surfaceText
-                            anchors.left: parent.left
-                            anchors.verticalCenter: parent.verticalCenter
-                        }
-
-                        Row {
-                            id: selectAllRow
-                            anchors.right: parent.right
-                            anchors.verticalCenter: parent.verticalCenter
-                            spacing: Theme.spacingS
-                            visible: (SettingsData.desktopWidgetInstances || []).length > 0
-
-                            DButton {
-                                text: I18n.trFor("desktopWidgetToggle", "Select All")
-                                buttonHeight: 32
-                                horizontalPadding: Theme.spacingM
-                                backgroundColor: Theme.primaryContainer
-                                textColor: Theme.primary
-                                onClicked: rootSettings.selectAllWidgetsInGroup(rootSettings.selectedGroupIndex, true)
-                            }
-
-                            DButton {
-                                text: I18n.trFor("desktopWidgetToggle", "Deselect All")
-                                buttonHeight: 32
-                                horizontalPadding: Theme.spacingM
-                                backgroundColor: Theme.surfaceContainerHigh
-                                textColor: Theme.surfaceText
-                                onClicked: rootSettings.selectAllWidgetsInGroup(rootSettings.selectedGroupIndex, false)
-                            }
-                        }
-                    }
-
-                    Repeater {
-                        model: SettingsData.desktopWidgetInstances || []
-
-                        delegate: Column {
-                            id: widgetItem
-                            required property var modelData
-                            width: parent.width
-                            spacing: Theme.spacingS
-
-                            readonly property bool isSelected: {
-                                if (!activeGroupDetails.currentGroup) return false;
-                                return (activeGroupDetails.currentGroup.widgets || []).includes(modelData.id);
-                            }
-
-                            DToggle {
-                                width: parent.width
-                                text: modelData.name || modelData.widgetType
-                                description: "ID: " + modelData.id
-                                checked: widgetItem.isSelected
-                                onToggled: isChecked => {
-                                    rootSettings.toggleWidgetInGroup(rootSettings.selectedGroupIndex, modelData.id, isChecked);
-                                }
-                            }
-
-                            // ── Individual Overrides Selection Bar ───────────
-                            Row {
-                                id: behaviorBar
-                                width: parent.width - Theme.spacingXL - Theme.spacingM
-                                x: Theme.spacingXL
-                                visible: widgetItem.isSelected && activeGroupDetails.currentGroup.overrideIndividual
-                                spacing: Theme.spacingXS
-
-                                readonly property var activeModel: [
-                                    { key: "toggleOverlay", label: I18n.trFor("desktopWidgetToggle", "Overlay") },
-                                    { key: "toggleOverview", label: I18n.trFor("desktopWidgetToggle", "Overview"), visible: CompositorService.isNiri },
-                                    { key: "toggleOverviewOnly", label: I18n.trFor("desktopWidgetToggle", "Overview Only"), visible: CompositorService.isNiri },
-                                    { key: "toggleClickThrough", label: I18n.trFor("desktopWidgetToggle", "Click through") },
-                                    { key: "hideWhenInactive", label: I18n.trFor("desktopWidgetToggle", "Hide inactive") }
-                                ].filter(m => m.visible !== false)
-
-                                property var overrides: (activeGroupDetails.currentGroup.widgetOverrides && activeGroupDetails.currentGroup.widgetOverrides[widgetItem.modelData.id]) || {}
-
-                                Repeater {
-                                    model: behaviorBar.activeModel
-
-                                    delegate: StyledRect {
-                                        required property var modelData
-                                        visible: modelData.visible !== false
-                                        width: (behaviorBar.width - (behaviorBar.spacing * (behaviorBar.activeModel.length - 1))) / behaviorBar.activeModel.length
-                                        height: Theme.buttonHeightXS
-                                        radius: Theme.cornerRadiusXS
-                                        
-                                        readonly property bool active: {
-                                            if (modelData.key === "toggleOverlay") return behaviorBar.overrides.toggleOverlay !== false;
-                                            return !!behaviorBar.overrides[modelData.key];
+                                        DIcon {
+                                            name: "settings"
+                                            size: Theme.iconSizeSmall
+                                            color: root.selectedGroupSubTabIndex === 0 ? Theme.onPrimary : Theme.surfaceText
+                                            opacity: tabGroupBtn.containsMouse ? 0.9 : 0.6
+                                            anchors.verticalCenter: parent.verticalCenter
                                         }
-
-                                        color: active ? Theme.withAlpha(Theme.primary, 0.15) : Theme.surfaceContainerHigh
-                                        border.color: active ? Theme.primary : "transparent"
-                                        border.width: 1
 
                                         StyledText {
-                                            anchors.centerIn: parent
-                                            text: modelData.label
-                                            font.pixelSize: Math.max(9, Math.round(Theme.fontSizeSmall * 0.8))
-                                            color: parent.active ? Theme.primary : Theme.surfaceVariantText
+                                            text: I18n.trFor("desktopWidgetToggle", "Group")
+                                            font.bold: true
+                                            font.pixelSize: Theme.fontSizeSmall
+                                            color: root.selectedGroupSubTabIndex === 0 ? Theme.onPrimary : Theme.surfaceText
+                                            opacity: tabGroupBtn.containsMouse ? 0.9 : 0.6
+                                            anchors.verticalCenter: parent.verticalCenter
+                                        }
+                                    }
+                                }
+                            }
+
+                            MouseArea {
+                                id: tabWidgetsBtn
+                                width: parent.width / 2
+                                height: parent.height
+                                hoverEnabled: true
+                                cursorShape: Qt.PointingHandCursor
+                                onClicked: root.selectedGroupSubTabIndex = 1
+
+                                Rectangle {
+                                    anchors.fill: parent
+                                    radius: height / 2
+                                    color: root.selectedGroupSubTabIndex === 1 ? Theme.primary : "transparent"
+
+                                    Row {
+                                        anchors.centerIn: parent
+                                        spacing: Theme.spacingXS
+
+                                        DIcon {
+                                            name: "widgets"
+                                            size: Theme.iconSizeSmall
+                                            color: root.selectedGroupSubTabIndex === 1 ? Theme.onPrimary : Theme.surfaceText
+                                            opacity: tabWidgetsBtn.containsMouse ? 0.9 : 0.6
+                                            anchors.verticalCenter: parent.verticalCenter
                                         }
 
-                                        MouseArea {
-                                            anchors.fill: parent
-                                            cursorShape: Qt.PointingHandCursor
-                                            onClicked: {
-                                                const currentVal = (modelData.key === "toggleOverlay") ? (behaviorBar.overrides.toggleOverlay !== false) : !!behaviorBar.overrides[modelData.key];
-                                                rootSettings.updateWidgetOverride(rootSettings.selectedGroupIndex, widgetItem.modelData.id, modelData.key, !currentVal);
+                                        StyledText {
+                                            text: I18n.trFor("desktopWidgetToggle", "Widgets")
+                                            font.bold: true
+                                            font.pixelSize: Theme.fontSizeSmall
+                                            color: root.selectedGroupSubTabIndex === 1 ? Theme.onPrimary : Theme.surfaceText
+                                            opacity: tabWidgetsBtn.containsMouse ? 0.9 : 0.6
+                                            anchors.verticalCenter: parent.verticalCenter
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // ── Sub-Tab 1: Group Settings ────────────────────────────────────
+                    Column {
+                        width: parent.width
+                        spacing: Theme.spacingM
+                        visible: root.selectedGroupSubTabIndex === 0
+
+                        Row {
+                            width: parent.width
+                            spacing: Theme.spacingM
+
+                            Column {
+                                width: parent.width - deleteBtn.width - 88 - Theme.spacingM * 2
+                                spacing: Theme.spacingXS
+                                anchors.bottom: parent.bottom
+
+                                StyledText {
+                                    text: I18n.trFor("desktopWidgetToggle", "Group Name")
+                                    font.pixelSize: Theme.fontSizeSmall
+                                    color: Theme.surfaceVariantText
+                                }
+
+                                DTextField {
+                                    width: parent.width
+                                    height: 40
+                                    text: activeGroupDetails.currentGroup ? (activeGroupDetails.currentGroup.name || "") : ""
+                                    placeholderText: I18n.trFor("desktopWidgetToggle", "e.g. Work Widgets")
+                                    onEditingFinished: {
+                                        if (activeGroupDetails.currentGroup) {
+                                            root.renameGroup(root.selectedGroupIndex, text.trim());
+                                        }
+                                    }
+                                }
+                            }
+
+                            Column {
+                                width: 88
+                                spacing: Theme.spacingXS
+                                anchors.bottom: parent.bottom
+
+                                StyledText {
+                                    text: I18n.trFor("desktopWidgetToggle", "Icon")
+                                    font.pixelSize: Theme.fontSizeSmall
+                                    color: Theme.surfaceVariantText
+                                }
+
+                                Row {
+                                    width: parent.width
+                                    spacing: Theme.spacingS
+
+                                    DankIconPickerPlus {
+                                        width: 40
+                                        height: 40
+                                        showText: false
+                                        enabled: activeGroupDetails.currentGroup ? (activeGroupDetails.currentGroup.showIcon !== false) : true
+                                        currentIcon: activeGroupDetails.currentGroup ? (activeGroupDetails.currentGroup.icon || "widgets") : "widgets"
+                                        onIconSelected: (iconName, type) => {
+                                            if (activeGroupDetails.currentGroup) {
+                                                root.changeGroupIcon(root.selectedGroupIndex, iconName);
+                                            }
+                                        }
+                                    }
+
+                                    DButton {
+                                        width: 40
+                                        height: 40
+                                        iconName: (activeGroupDetails.currentGroup && activeGroupDetails.currentGroup.showIcon !== false) ? "visibility" : "visibility_off"
+                                        backgroundColor: (activeGroupDetails.currentGroup && activeGroupDetails.currentGroup.showIcon !== false) ? Theme.primaryContainer : Theme.surfaceContainerHigh
+                                        textColor: (activeGroupDetails.currentGroup && activeGroupDetails.currentGroup.showIcon !== false) ? Theme.primary : Theme.surfaceVariantText
+                                        onClicked: {
+                                            if (activeGroupDetails.currentGroup) {
+                                                const show = activeGroupDetails.currentGroup.showIcon !== false;
+                                                root.updateGroupControl(root.selectedGroupIndex, "showIcon", !show);
                                             }
                                         }
                                     }
                                 }
                             }
-                            
-                            Item { width: 1; height: Theme.spacingXS; visible: widgetItem.isSelected && activeGroupDetails.currentGroup.overrideIndividual }
+
+                            DButton {
+                                id: deleteBtn
+                                text: I18n.trFor("desktopWidgetToggle", "Delete")
+                                iconName: "delete"
+                                backgroundColor: Theme.error
+                                textColor: Theme.onError
+                                buttonHeight: 40
+                                enabled: root.groups.length > 1
+                                anchors.bottom: parent.bottom
+                                onClicked: {
+                                    root.deleteGroup(root.selectedGroupIndex);
+                                }
+                            }
+                        }
+
+                        Rectangle {
+                            width: parent.width
+                            height: 1
+                            color: Theme.outline
+                            opacity: 0.15
+                        }
+
+                        Column {
+                            width: parent.width
+                            spacing: Theme.spacingXS
+
+                            StyledText {
+                                text: I18n.trFor("desktopWidgetToggle", "Group Behavior")
+                                font.pixelSize: Theme.fontSizeSmall
+                                font.weight: Font.Medium
+                                color: Theme.surfaceText
+                            }
+
+                            DToggle {
+                                width: parent.width
+                                text: I18n.trFor("desktopWidgetToggle", "Show on Overlay")
+                                description: I18n.trFor("desktopWidgetToggle", "Show widgets in this group in the desktop overlay layer")
+                                checked: activeGroupDetails.currentGroup ? (activeGroupDetails.currentGroup.toggleOverlay !== false) : true
+                                onToggled: isChecked => {
+                                    if (activeGroupDetails.currentGroup) {
+                                        root.updateGroupControl(root.selectedGroupIndex, "toggleOverlay", isChecked);
+                                    }
+                                }
+                            }
+
+                            DToggle {
+                                visible: CompositorService.isNiri
+                                width: parent.width
+                                text: I18n.trFor("desktopWidgetToggle", "Show on Overview")
+                                description: I18n.trFor("desktopWidgetToggle", "Show widgets in this group during workspace overview")
+                                checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.toggleOverview : false
+                                onToggled: isChecked => {
+                                    if (activeGroupDetails.currentGroup) {
+                                        root.updateGroupControl(root.selectedGroupIndex, "toggleOverview", isChecked);
+                                    }
+                                }
+                            }
+
+                            DToggle {
+                                visible: CompositorService.isNiri
+                                width: parent.width
+                                text: I18n.trFor("desktopWidgetToggle", "Show on Overview Only")
+                                description: I18n.trFor("desktopWidgetToggle", "Show widgets in this group only during workspace overview")
+                                checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.toggleOverviewOnly : false
+                                onToggled: isChecked => {
+                                    if (activeGroupDetails.currentGroup) {
+                                        root.updateGroupControl(root.selectedGroupIndex, "toggleOverviewOnly", isChecked);
+                                    }
+                                }
+                            }
+
+                            DToggle {
+                                width: parent.width
+                                text: I18n.trFor("desktopWidgetToggle", "Click Through")
+                                description: I18n.trFor("desktopWidgetToggle", "Allow clicks to pass through widgets in this group")
+                                checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.toggleClickThrough : false
+                                onToggled: isChecked => {
+                                    if (activeGroupDetails.currentGroup) {
+                                        root.updateGroupControl(root.selectedGroupIndex, "toggleClickThrough", isChecked);
+                                    }
+                                }
+                            }
+
+                            DToggle {
+                                width: parent.width
+                                text: I18n.trFor("desktopWidgetToggle", "Hide when inactive")
+                                description: I18n.trFor("desktopWidgetToggle", "Hide the widgets in this group entirely when the group is inactive.")
+                                checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.hideWhenInactive : false
+                                onToggled: isChecked => {
+                                    if (activeGroupDetails.currentGroup) {
+                                        root.updateGroupControl(root.selectedGroupIndex, "hideWhenInactive", isChecked);
+                                    }
+                                }
+                            }
+
+                            SettingsSliderRow {
+                                text: I18n.trFor("desktopWidgetToggle", "Auto-dismiss Overlay")
+                                description: I18n.trFor("desktopWidgetToggle", "Automatically turn off the active overlay group after this duration. Set to 0 to keep active.")
+                                minimum: 0
+                                maximum: 15
+                                step: 1
+                                unit: "s"
+                                value: root.currentAutoDismissDuration
+                                modified: root.currentAutoDismissDuration !== root.defaultAutoDismissDuration
+                                resetByKeys: false
+                                onResetRequested: {
+                                    root.currentAutoDismissDuration = root.defaultAutoDismissDuration;
+                                    if (activeGroupDetails.currentGroup) {
+                                        root.saveValue("autoDismissDuration_" + activeGroupDetails.currentGroup.id, root.defaultAutoDismissDuration);
+                                    }
+                                }
+                                onSliderDragFinished: finalValue => {
+                                    root.currentAutoDismissDuration = finalValue;
+                                    if (activeGroupDetails.currentGroup) {
+                                        root.saveValue("autoDismissDuration_" + activeGroupDetails.currentGroup.id, finalValue);
+                                    }
+                                }
+                            }
                         }
                     }
 
-                    StyledText {
-                        text: I18n.trFor("desktopWidgetToggle", "No desktop widgets found.")
-                        font.pixelSize: Theme.fontSizeSmall
-                        color: Theme.surfaceVariantText
-                        visible: (SettingsData.desktopWidgetInstances || []).length === 0
+                    // ── Sub-Tab 2: Widget Settings ───────────────────────────────────
+                    Column {
+                        width: parent.width
+                        spacing: Theme.spacingM
+                        visible: root.selectedGroupSubTabIndex === 1
+
+                        DToggle {
+                            width: parent.width
+                            text: I18n.trFor("desktopWidgetToggle", "Individual Widget Behavior")
+                            description: I18n.trFor("desktopWidgetToggle", "Configure behavior for each widget separately instead of using group-wide settings.")
+                            checked: activeGroupDetails.currentGroup ? !!activeGroupDetails.currentGroup.overrideIndividual : false
+                            onToggled: isChecked => {
+                                if (activeGroupDetails.currentGroup) {
+                                    root.updateGroupControl(root.selectedGroupIndex, "overrideIndividual", isChecked);
+                                }
+                            }
+                        }
+
+                        Rectangle {
+                            width: parent.width
+                            height: 1
+                            color: Theme.outline
+                            opacity: 0.15
+                        }
+
+                        Column {
+                            width: parent.width
+                            spacing: Theme.spacingS
+
+                            Item {
+                                width: parent.width
+                                height: Math.max(selectWidgetsTitle.implicitHeight, selectAllRow.implicitHeight)
+
+                                StyledText {
+                                    id: selectWidgetsTitle
+                                    text: I18n.trFor("desktopWidgetToggle", "Select Widgets")
+                                    font.pixelSize: Theme.fontSizeSmall
+                                    font.weight: Font.Medium
+                                    color: Theme.surfaceText
+                                    anchors.left: parent.left
+                                    anchors.verticalCenter: parent.verticalCenter
+                                }
+
+                                Row {
+                                    id: selectAllRow
+                                    anchors.right: parent.right
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    spacing: Theme.spacingS
+                                    visible: (SettingsData.desktopWidgetInstances || []).length > 0
+
+                                    DButton {
+                                        text: I18n.trFor("desktopWidgetToggle", "Select All")
+                                        buttonHeight: 32
+                                        horizontalPadding: Theme.spacingM
+                                        backgroundColor: Theme.primaryContainer
+                                        textColor: Theme.primary
+                                        onClicked: root.selectAllWidgetsInGroup(root.selectedGroupIndex, true)
+                                    }
+
+                                    DButton {
+                                        text: I18n.trFor("desktopWidgetToggle", "Deselect All")
+                                        buttonHeight: 32
+                                        horizontalPadding: Theme.spacingM
+                                        backgroundColor: Theme.surfaceContainerHigh
+                                        textColor: Theme.surfaceText
+                                        onClicked: root.selectAllWidgetsInGroup(root.selectedGroupIndex, false)
+                                    }
+                                }
+                            }
+
+                            Repeater {
+                                model: SettingsData.desktopWidgetInstances || []
+
+                                delegate: Column {
+                                    id: widgetItem
+                                    required property var modelData
+                                    width: parent.width
+                                    spacing: Theme.spacingS
+
+                                    readonly property bool isSelected: {
+                                        if (!activeGroupDetails.currentGroup)
+                                            return false;
+                                        return (activeGroupDetails.currentGroup.widgets || []).includes(modelData.id);
+                                    }
+
+                                    DToggle {
+                                        width: parent.width
+                                        text: widgetItem.modelData.name || widgetItem.modelData.widgetType
+                                        description: "ID: " + widgetItem.modelData.id
+                                        checked: widgetItem.isSelected
+                                        onToggled: isChecked => {
+                                            root.toggleWidgetInGroup(root.selectedGroupIndex, widgetItem.modelData.id, isChecked);
+                                        }
+                                    }
+
+                                    // ── Individual Overrides Selection Bar ───────────
+                                    Row {
+                                        id: behaviorBar
+                                        width: parent.width - Theme.spacingXL - Theme.spacingM
+                                        x: Theme.spacingXL
+                                        visible: widgetItem.isSelected && activeGroupDetails.currentGroup && !!activeGroupDetails.currentGroup.overrideIndividual
+                                        spacing: Theme.spacingXS
+
+                                        readonly property var activeModel: [
+                                            { key: "toggleOverlay", label: I18n.trFor("desktopWidgetToggle", "Overlay") },
+                                            { key: "toggleOverview", label: I18n.trFor("desktopWidgetToggle", "Overview"), visible: CompositorService.isNiri },
+                                            { key: "toggleOverviewOnly", label: I18n.trFor("desktopWidgetToggle", "Overview Only"), visible: CompositorService.isNiri },
+                                            { key: "toggleClickThrough", label: I18n.trFor("desktopWidgetToggle", "Click through") },
+                                            { key: "hideWhenInactive", label: I18n.trFor("desktopWidgetToggle", "Hide inactive") }
+                                        ].filter(m => m.visible !== false)
+
+                                        property var overrides: (activeGroupDetails.currentGroup && activeGroupDetails.currentGroup.widgetOverrides && activeGroupDetails.currentGroup.widgetOverrides[widgetItem.modelData.id]) || {}
+
+                                        Repeater {
+                                            model: behaviorBar.activeModel
+
+                                            delegate: StyledRect {
+                                                id: overrideBtn
+                                                required property var modelData
+                                                visible: modelData.visible !== false
+                                                width: (behaviorBar.width - (behaviorBar.spacing * (behaviorBar.activeModel.length - 1))) / behaviorBar.activeModel.length
+                                                height: Theme.buttonHeightXS
+                                                radius: Theme.cornerRadiusXS
+
+                                                readonly property bool active: {
+                                                    if (modelData.key === "toggleOverlay")
+                                                        return behaviorBar.overrides.toggleOverlay !== false;
+                                                    return !!behaviorBar.overrides[modelData.key];
+                                                }
+
+                                                color: active ? Theme.withAlpha(Theme.primary, 0.15) : Theme.surfaceContainerHigh
+                                                border.color: active ? Theme.primary : "transparent"
+                                                border.width: 1
+
+                                                StyledText {
+                                                    anchors.centerIn: parent
+                                                    text: overrideBtn.modelData.label
+                                                    font.pixelSize: Math.max(9, Math.round(Theme.fontSizeSmall * 0.8))
+                                                    color: overrideBtn.active ? Theme.primary : Theme.surfaceVariantText
+                                                }
+
+                                                MouseArea {
+                                                    anchors.fill: parent
+                                                    cursorShape: Qt.PointingHandCursor
+                                                    onClicked: {
+                                                        const currentVal = (overrideBtn.modelData.key === "toggleOverlay") ? (behaviorBar.overrides.toggleOverlay !== false) : !!behaviorBar.overrides[overrideBtn.modelData.key];
+                                                        root.updateWidgetOverride(root.selectedGroupIndex, widgetItem.modelData.id, overrideBtn.modelData.key, !currentVal);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    Item {
+                                        width: 1
+                                        height: Theme.spacingXS
+                                        visible: widgetItem.isSelected && activeGroupDetails.currentGroup && !!activeGroupDetails.currentGroup.overrideIndividual
+                                    }
+                                }
+                            }
+
+                            StyledText {
+                                text: I18n.trFor("desktopWidgetToggle", "No desktop widgets found.")
+                                font.pixelSize: Theme.fontSizeSmall
+                                color: Theme.surfaceVariantText
+                                visible: (SettingsData.desktopWidgetInstances || []).length === 0
+                            }
+                        }
+                    }
+
+                    Rectangle {
+                        width: parent.width
+                        height: 1
+                        color: Theme.outline
+                        opacity: 0.15
+                    }
+
+                    Column {
+                        width: parent.width
+                        spacing: Theme.spacingXS
+
+                        StyledText {
+                            text: I18n.trFor("desktopWidgetToggle", "IPC Command")
+                            font.pixelSize: Theme.fontSizeSmall
+                            font.weight: Font.Medium
+                            color: Theme.surfaceText
+                        }
+
+                        CopyBox {
+                            width: parent.width
+                            text: "dms ipc call desktopWidgetToggle toggle \"" + (activeGroupDetails.currentGroup ? activeGroupDetails.currentGroup.id : "") + "\""
+                        }
                     }
                 }
             }
+        }
+    }
 
-            Separator {}
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("desktopWidgetToggle", "Behavior")
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+
+            SettingsButtonGroupRow {
+                text: I18n.trFor("desktopWidgetToggle", "Bar Display Mode")
+                description: I18n.trFor("desktopWidgetToggle", "Choose how widget group toggles are displayed on the status bar.")
+                model: [
+                    I18n.trFor("desktopWidgetToggle", "Show All Groups"),
+                    I18n.trFor("desktopWidgetToggle", "Minimal Popout")
+                ]
+                values: ["all", "minimal"]
+                value: root.displayMode
+                modified: root.displayMode !== root.defaultDisplayMode
+                resetByKeys: false
+                onResetRequested: {
+                    root.displayMode = root.defaultDisplayMode;
+                    root.saveValue("displayMode", root.defaultDisplayMode);
+                }
+                onValueSelected: val => {
+                    root.displayMode = val;
+                    root.saveValue("displayMode", val);
+                }
+            }
+
+            SettingsDropdownRow {
+                text: I18n.trFor("desktopWidgetToggle", "Toggle Mode")
+                description: I18n.trFor("desktopWidgetToggle", "Choose how widget groups can be toggled simultaneously.")
+                options: [
+                    I18n.trFor("desktopWidgetToggle", "Single Active Group"),
+                    I18n.trFor("desktopWidgetToggle", "Block Overlap"),
+                    I18n.trFor("desktopWidgetToggle", "Allow All")
+                ]
+                optionValues: ["single", "overlap", "all"]
+                currentValue: root.conflictMode
+                modified: root.conflictMode !== root.defaultConflictMode
+                resetByKeys: false
+                onResetRequested: {
+                    root.conflictMode = root.defaultConflictMode;
+                    root.saveValue("conflictMode", root.defaultConflictMode);
+                }
+                onValueChanged: val => {
+                    root.conflictMode = val;
+                    root.saveValue("conflictMode", val);
+                }
+            }
+
+            SettingsNoteRow {
+                noteIconName: "info"
+                tint: Theme.primary
+                tintBackground: Theme.withAlpha(Theme.primary, 0.08)
+                text: {
+                    switch (root.conflictMode) {
+                    case "single":
+                        return I18n.trFor("desktopWidgetToggle", "Only one group can be active at a time.");
+                    case "overlap":
+                        return I18n.trFor("desktopWidgetToggle", "Allow multiple groups if they don't share widgets.");
+                    case "all":
+                        return I18n.trFor("desktopWidgetToggle", "No restrictions, multiple groups can be active.");
+                    default:
+                        return "";
+                    }
+                }
+            }
+        }
+    }
+
+    Column {
+        id: usageSection
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        property bool expanded: true
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("desktopWidgetToggle", "Usage Guide")
+            collapsible: true
+            expanded: usageSection.expanded
+            onToggleRequested: {
+                usageSection.expanded = !usageSection.expanded;
+                if (root.pluginService)
+                    root.saveValue("usageGuideExpanded", usageSection.expanded);
+            }
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: usageSection.expanded
 
             Column {
                 width: parent.width
-                spacing: Theme.spacingXS
-                leftPadding: Theme.spacingM
+                spacing: Theme.spacingS
 
-                StyledText {
-                    text: I18n.trFor("desktopWidgetToggle", "IPC Command")
-                    font.pixelSize: Theme.fontSizeSmall
-                    font.weight: Font.Medium
-                    color: Theme.surfaceText
-                }
+                Repeater {
+                    model: [
+                        I18n.trFor("desktopWidgetToggle", "<b>Click</b> a group button on the status bar to show its widgets on top of all windows (overlay)."),
+                        I18n.trFor("desktopWidgetToggle", "<b>Click it again</b> to return the widgets to the desktop background layer."),
+                        I18n.trFor("desktopWidgetToggle", "Depending on the Toggle Mode setting, you can activate one or multiple groups concurrently.")
+                    ]
 
-                CopyBox {
-                    width: parent.width
-                    text: "dms ipc call desktopWidgetToggle toggle \"" + (activeGroupDetails.currentGroup ? activeGroupDetails.currentGroup.id : "") + "\""
-                }
-            }
-        }
-    }
+                    delegate: Row {
+                        required property string modelData
+                        width: parent.width
+                        spacing: Theme.spacingS
 
-    SettingsCard {
-        id: behaviorSection
-        SectionTitle {
-            id: behaviorTitle
-            text: I18n.trFor("desktopWidgetToggle", "Behavior")
-            icon: "settings"
-            showReset: conflictModeSetting.isDirty || displayModeSetting.isDirty
-            onResetClicked: {
-                conflictModeSetting.resetToDefault();
-                displayModeSetting.resetToDefault();
-            }
-        }
+                        StyledText {
+                            id: bullet
+                            text: "•"
+                            color: Theme.primary
+                            font.pixelSize: Theme.fontSizeSmall
+                            font.weight: Font.Bold
+                        }
 
-        ButtonGroupSettingPlus {
-            id: displayModeSetting
-            settingKey: "displayMode"
-            label: I18n.trFor("desktopWidgetToggle", "Bar Display Mode")
-            description: I18n.trFor("desktopWidgetToggle", "Choose how widget group toggles are displayed on the status bar.")
-            defaultValue: "all"
-            options: [
-                { "value": "all", "label": I18n.trFor("desktopWidgetToggle", "Show All Groups") },
-                { "value": "minimal", "label": I18n.trFor("desktopWidgetToggle", "Minimal Popout") }
-            ]
-        }
-
-        Separator {}
-
-        SelectionSettingPlus {
-            id: conflictModeSetting
-            settingKey: "conflictMode"
-            label: I18n.trFor("desktopWidgetToggle", "Toggle Mode")
-            description: I18n.trFor("desktopWidgetToggle", "Choose how widget groups can be toggled simultaneously.")
-            defaultValue: "single"
-            options: [
-                { "value": "single", "label": I18n.trFor("desktopWidgetToggle", "Single Active Group") },
-                { "value": "overlap", "label": I18n.trFor("desktopWidgetToggle", "Block Overlap") },
-                { "value": "all", "label": I18n.trFor("desktopWidgetToggle", "Allow All") }
-            ]
-        }
-
-        StyledText {
-            width: parent.width
-            text: {
-                switch (conflictModeSetting.value) {
-                    case "single": return I18n.trFor("desktopWidgetToggle", "Only one group can be active at a time.");
-                    case "overlap": return I18n.trFor("desktopWidgetToggle", "Allow multiple groups if they don't share widgets.");
-                    case "all": return I18n.trFor("desktopWidgetToggle", "No restrictions, multiple groups can be active.");
-                    default: return "";
+                        StyledText {
+                            width: parent.width - bullet.width - parent.spacing
+                            text: modelData
+                            color: Theme.surfaceVariantText
+                            font.pixelSize: Theme.fontSizeSmall
+                            wrapMode: Text.WordWrap
+                            textFormat: Text.StyledText
+                        }
+                    }
                 }
             }
-            font.pixelSize: Theme.fontSizeSmall
-            color: Theme.surfaceVariantText
-            wrapMode: Text.Wrap
-            leftPadding: Theme.spacingM
-            rightPadding: Theme.spacingM
-        }
-    }
-
-    SettingsCard {
-        SectionTitle {
-            id: usageTitle
-            text: I18n.trFor("desktopWidgetToggle", "Usage Guide")
-            icon: "menu_book"
-            collapsible: true
-            settingKey: "usageGuideExpanded"
-        }
-
-        UsageGuide {
-            expanded: usageTitle.isExpanded
-            items: [
-                I18n.trFor("desktopWidgetToggle", "<b>Click</b> a group button on the status bar to show its widgets on top of all windows (overlay)."),
-                I18n.trFor("desktopWidgetToggle", "<b>Click it again</b> to return the widgets to the desktop background layer."),
-                I18n.trFor("desktopWidgetToggle", "Depending on the Toggle Mode setting, you can activate one or multiple groups concurrently.")
-            ]
         }
     }
 }

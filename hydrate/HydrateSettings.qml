@@ -1,109 +1,205 @@
-import "./shared"
 import QtQuick
-import QtQuick.Controls
 import qs.Common
+import qs.DCommon.Widgets
 import qs.Modules.Plugins
+import qs.Modules.Settings.Widgets
 
 PluginSettings {
     id: root
-
     pluginId: "hydrate"
 
-    SettingsCard {
-        id: goalSection
-        SectionTitle {
+    readonly property int defaultDailyGoal: 2000
+    readonly property int defaultInterval: 60
+    readonly property string defaultDisplayMode: "full"
+    readonly property bool defaultShowHints: true
+
+    property int dailyGoal: defaultDailyGoal
+    property int interval: defaultInterval
+    property string displayMode: defaultDisplayMode
+    property bool showHints: defaultShowHints
+
+    function loadSettings() {
+        if (!pluginService)
+            return;
+        dailyGoal = loadValue("dailyGoal", defaultDailyGoal);
+        interval = loadValue("interval", defaultInterval);
+        displayMode = loadValue("displayMode", defaultDisplayMode);
+        showHints = loadValue("showHints", defaultShowHints);
+        usageSection.expanded = loadValue("usageGuideExpanded", true);
+    }
+
+    Component.onCompleted: loadSettings()
+    onPluginServiceChanged: loadSettings()
+
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
             text: I18n.trFor("hydrate", "Hydration Goals")
-            icon: "water_drop"
-            showReset: dailyGoal.isDirty || interval.isDirty
-            onResetClicked: {
-                dailyGoal.resetToDefault();
-                interval.resetToDefault();
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+
+            SettingsSliderRow {
+                text: I18n.trFor("hydrate", "Daily Target")
+                description: I18n.trFor("hydrate", "Target water intake per day.")
+                minimum: 500
+                maximum: 5000
+                step: 100
+                unit: I18n.trFor("hydrate", " ml")
+                value: root.dailyGoal
+                modified: root.dailyGoal !== root.defaultDailyGoal
+                resetByKeys: false
+                onResetRequested: {
+                    root.dailyGoal = root.defaultDailyGoal;
+                    root.saveValue("dailyGoal", root.defaultDailyGoal);
+                }
+                onSliderDragFinished: finalValue => {
+                    root.dailyGoal = finalValue;
+                    root.saveValue("dailyGoal", finalValue);
+                }
             }
-        }
 
-        SliderSettingPlus {
-            id: dailyGoal
-            label: I18n.trFor("hydrate", "Daily Target")
-            description: I18n.trFor("hydrate", "Target water intake per day.")
-            settingKey: "dailyGoal"
-            defaultValue: 2000
-            minimum: 500
-            maximum: 5000
-            unit: I18n.trFor("hydrate", " ml")
-            leftLabel: "500"
-            rightLabel: "5000"
-        }
-
-        Separator {}
-
-        SliderSettingPlus {
-            id: interval
-            label: I18n.trFor("hydrate", "Reminder Interval")
-            description: I18n.trFor("hydrate", "How often the icon shifts to remind you to drink.")
-            settingKey: "interval"
-            defaultValue: 60
-            minimum: 15
-            maximum: 180
-            unit: I18n.trFor("hydrate", " min")
-            leftLabel: "15"
-            rightLabel: "180"
+            SettingsSliderRow {
+                text: I18n.trFor("hydrate", "Reminder Interval")
+                description: I18n.trFor("hydrate", "How often the icon shifts to remind you to drink.")
+                minimum: 15
+                maximum: 180
+                step: 5
+                unit: I18n.trFor("hydrate", " min")
+                value: root.interval
+                modified: root.interval !== root.defaultInterval
+                resetByKeys: false
+                onResetRequested: {
+                    root.interval = root.defaultInterval;
+                    root.saveValue("interval", root.defaultInterval);
+                }
+                onSliderDragFinished: finalValue => {
+                    root.interval = finalValue;
+                    root.saveValue("interval", finalValue);
+                }
+            }
         }
     }
 
-    SettingsCard {
-        id: behaviorSection
-        SectionTitle {
+    Column {
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
             text: I18n.trFor("hydrate", "Behavior")
-            icon: "settings"
-            showReset: showHints.isDirty || displayMode.isDirty
-            onResetClicked: {
-                showHints.resetToDefault();
-                displayMode.resetToDefault();
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+
+            SettingsDropdownRow {
+                text: I18n.trFor("hydrate", "Display Mode")
+                description: I18n.trFor("hydrate", "How progress is shown on the bar.")
+                options: [
+                    I18n.trFor("hydrate", "Full (Logged / Goal)"),
+                    I18n.trFor("hydrate", "Logged Only"),
+                    I18n.trFor("hydrate", "Percentage"),
+                    I18n.trFor("hydrate", "Icon Only"),
+                    I18n.trFor("hydrate", "Progress Bar"),
+                    I18n.trFor("hydrate", "Text + Bar")
+                ]
+                optionValues: ["full", "logged", "percentage", "icon", "progress", "text_progress"]
+                currentValue: root.displayMode
+                modified: root.displayMode !== root.defaultDisplayMode
+                resetByKeys: false
+                onResetRequested: {
+                    root.displayMode = root.defaultDisplayMode;
+                    root.saveValue("displayMode", root.defaultDisplayMode);
+                }
+                onValueChanged: val => {
+                    root.displayMode = val;
+                    root.saveValue("displayMode", val);
+                }
             }
-        }
 
-        SelectionSettingPlus {
-            id: displayMode
-            label: I18n.trFor("hydrate", "Display Mode")
-            description: I18n.trFor("hydrate", "How progress is shown on the bar.")
-            settingKey: "displayMode"
-            defaultValue: "full"
-            options: [
-                { label: I18n.trFor("hydrate", "Full (Logged / Goal)"), value: "full" },
-                { label: I18n.trFor("hydrate", "Logged Only"), value: "logged" },
-                { label: I18n.trFor("hydrate", "Percentage"), value: "percentage" },
-                { label: I18n.trFor("hydrate", "Icon Only"), value: "icon" },
-                { label: I18n.trFor("hydrate", "Progress Bar"), value: "progress" },
-                { label: I18n.trFor("hydrate", "Text + Bar"), value: "text_progress" }
-            ]
-        }
-
-        Separator {}
-
-        ToggleSettingPlus {
-            id: showHints
-            label: I18n.trFor("hydrate", "Show Hints")
-            settingKey: "showHints"
-            defaultValue: true
+            SettingsToggleRow {
+                text: I18n.trFor("hydrate", "Show Hints")
+                checked: root.showHints
+                modified: root.showHints !== root.defaultShowHints
+                resetByKeys: false
+                onResetRequested: {
+                    root.showHints = root.defaultShowHints;
+                    root.saveValue("showHints", root.defaultShowHints);
+                }
+                onToggled: isChecked => {
+                    root.showHints = isChecked;
+                    root.saveValue("showHints", isChecked);
+                }
+            }
         }
     }
 
-    SettingsCard {
-        SectionTitle { 
-            id: usageTitle
+    Column {
+        id: usageSection
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        property bool expanded: true
+
+        SettingsSectionLabel {
+            width: parent.width
             text: I18n.trFor("hydrate", "Usage Guide")
-            icon: "menu_book" 
             collapsible: true
-            settingKey: "usageGuideExpanded"
+            expanded: usageSection.expanded
+            onToggleRequested: {
+                usageSection.expanded = !usageSection.expanded;
+                if (root.pluginService)
+                    root.saveValue("usageGuideExpanded", usageSection.expanded);
+            }
         }
 
-        UsageGuide {
-            expanded: usageTitle.isExpanded
-            items: [
-                I18n.trFor("hydrate", "<b>Left-click</b> the pill to open the hydration dashboard."),
-                I18n.trFor("hydrate", "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>."),
-                I18n.trFor("hydrate", "The icon will <b>pulse or shift shape</b> when it's time to drink.")
-            ]
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: usageSection.expanded
+
+            Column {
+                width: parent.width
+                spacing: Theme.spacingS
+
+                Repeater {
+                    model: [
+                        I18n.trFor("hydrate", "<b>Left-click</b> the pill to open the hydration dashboard."),
+                        I18n.trFor("hydrate", "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>."),
+                        I18n.trFor("hydrate", "The icon will <b>pulse or shift shape</b> when it's time to drink.")
+                    ]
+
+                    delegate: Row {
+                        required property string modelData
+                        width: parent.width
+                        spacing: Theme.spacingS
+
+                        StyledText {
+                            id: bullet
+                            text: "•"
+                            color: Theme.primary
+                            font.pixelSize: Theme.fontSizeSmall
+                            font.weight: Font.Bold
+                        }
+
+                        StyledText {
+                            width: parent.width - bullet.width - parent.spacing
+                            text: modelData
+                            color: Theme.surfaceVariantText
+                            font.pixelSize: Theme.fontSizeSmall
+                            wrapMode: Text.WordWrap
+                            textFormat: Text.StyledText
+                        }
+                    }
+                }
+            }
         }
     }
 }
