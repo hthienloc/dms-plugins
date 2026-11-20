@@ -59,7 +59,6 @@ Column {
                 width: parent.width - Theme.iconSize - Theme.spacingS
                 text: root.text
                 isMonospace: true
-                font.family: Theme.defaultMonoFontFamily
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.secondary
                 wrapMode: Text.Wrap
