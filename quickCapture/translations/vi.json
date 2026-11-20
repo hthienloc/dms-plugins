@@ -1,15 +1,15 @@
 {
   "%1 Font": {
-    "%1 Font": ""
+    "%1 Font": "Phông chữ %1"
   },
   "%1 is not installed": {
-    "%1 is not installed": ""
+    "%1 is not installed": "%1 chưa được cài đặt"
   },
   "1 Connecting Line": {
-    "1 Connecting Line": ""
+    "1 Connecting Line": "1 đường nối"
   },
   "2 Connecting Lines": {
-    "2 Connecting Lines": ""
+    "2 Connecting Lines": "2 đường nối"
   },
   "Action": {
     "Action": "Thao tác"
@@ -24,88 +24,88 @@
     "Add": "Thêm"
   },
   "Add Text Note": {
-    "Add Text Note": ""
+    "Add Text Note": "Thêm ghi chú văn bản"
   },
   "Alignment": {
-    "Alignment": ""
+    "Alignment": "Căn chỉnh"
   },
   "All Outputs": {
-    "All Outputs": ""
+    "All Outputs": "Tất cả màn hình"
   },
   "Annotating": {
-    "Annotating": ""
+    "Annotating": "Đang chú thích"
   },
   "Annotation Tools": {
-    "Annotation Tools": ""
+    "Annotation Tools": "Công cụ chú thích"
   },
   "Anonymous Copy": {
-    "Anonymous Copy": ""
+    "Anonymous Copy": "Sao chép ẩn danh"
   },
   "Arrow": {
     "Arrow": "Mũi Tên Vector"
   },
   "Aspect Ratio": {
-    "Aspect Ratio": ""
+    "Aspect Ratio": "Tỷ lệ khung hình"
   },
   "Audio": {
     "Audio": "Âm thanh"
   },
   "Audio & Overlay": {
-    "Audio & Overlay": ""
+    "Audio & Overlay": "Âm thanh & lớp phủ"
   },
   "Audio Codec": {
     "Audio Codec": "Codec âm thanh"
   },
   "Audio recording is disabled when using the %1 backend.": {
-    "Audio recording is disabled when using the %1 backend.": ""
+    "Audio recording is disabled when using the %1 backend.": "Ghi âm bị tắt khi dùng backend %1."
   },
   "Auto": {
     "Auto": "Tự động"
   },
   "Auto (Screen Scale)": {
-    "Auto (Screen Scale)": ""
+    "Auto (Screen Scale)": "Tự động (theo tỷ lệ màn hình)"
   },
   "Auto Balance": {
-    "Auto Balance": ""
+    "Auto Balance": "Tự cân bằng"
   },
   "Auto-apply background defaults": {
-    "Auto-apply background defaults": ""
+    "Auto-apply background defaults": "Tự áp dụng nền mặc định"
   },
   "Auto-close the loop when ending near the start point.": {
-    "Auto-close the loop when ending near the start point.": ""
+    "Auto-close the loop when ending near the start point.": "Tự đóng vòng khi điểm kết thúc nằm gần điểm bắt đầu."
   },
   "Auto-minimize": {
-    "Auto-minimize": ""
+    "Auto-minimize": "Tự thu nhỏ"
   },
   "Auto-select a tool preset on hover, without releasing the mouse.": {
-    "Auto-select a tool preset on hover, without releasing the mouse.": ""
+    "Auto-select a tool preset on hover, without releasing the mouse.": "Tự chọn thiết lập sẵn của công cụ khi rê chuột qua, không cần nhả chuột."
   },
   "Auto-tiling": {
-    "Auto-tiling": ""
+    "Auto-tiling": "Tự xếp lát"
   },
   "Automatically minimize the float window after a delay": {
-    "Automatically minimize the float window after a delay": ""
+    "Automatically minimize the float window after a delay": "Tự thu nhỏ cửa sổ nổi sau một khoảng trễ"
   },
   "Automatically stack windows to avoid overlap": {
-    "Automatically stack windows to avoid overlap": ""
+    "Automatically stack windows to avoid overlap": "Tự xếp chồng các cửa sổ để tránh chồng lấn"
   },
   "Back to Annotation": {
-    "Back to Annotation": ""
+    "Back to Annotation": "Quay lại chú thích"
   },
   "Background": {
     "Background": "Nền"
   },
   "Background Defaults": {
-    "Background Defaults": ""
+    "Background Defaults": "Nền mặc định"
   },
   "Background Images": {
-    "Background Images": ""
+    "Background Images": "Ảnh nền"
   },
   "Background Mode": {
-    "Background Mode": ""
+    "Background Mode": "Chế độ nền"
   },
   "Background Presets": {
-    "Background Presets": ""
+    "Background Presets": "Thiết lập sẵn cho nền"
   },
   "Background image": {
     "Background image": "Hình nền"
@@ -114,13 +114,13 @@
     "Balanced": "Cân bằng"
   },
   "Bar Interactions": {
-    "Bar Interactions": ""
+    "Bar Interactions": "Tương tác với thanh"
   },
   "Blink Recording Dot": {
-    "Blink Recording Dot": ""
+    "Blink Recording Dot": "Nhấp nháy chấm ghi hình"
   },
   "Blur Background Image": {
-    "Blur Background Image": ""
+    "Blur Background Image": "Làm mờ ảnh nền"
   },
   "Bold": {
     "Bold": "Đậm"
@@ -132,7 +132,7 @@
     "Border Width": "Độ rộng viền"
   },
   "Both": {
-    "Both": ""
+    "Both": "Cả hai"
   },
   "Bottom": {
     "Bottom": "Nút"
@@ -147,61 +147,61 @@
     "Bottom Right": "Dưới cùng bên phải"
   },
   "Callout": {
-    "Callout": ""
+    "Callout": "Chú thích nổi"
   },
   "Callout Zoom": {
-    "Callout Zoom": ""
+    "Callout Zoom": "Phóng to chú thích nổi"
   },
   "Cancel": {
     "Cancel": "Hủy"
   },
   "Capture": {
-    "Capture": ""
+    "Capture": "Chụp"
   },
   "Capture Actions": {
-    "Capture Actions": ""
+    "Capture Actions": "Hành động chụp"
   },
   "Capture Fullscreen": {
-    "Capture Fullscreen": ""
+    "Capture Fullscreen": "Chụp toàn màn hình"
   },
   "Capture Options": {
-    "Capture Options": ""
+    "Capture Options": "Tùy chọn chụp"
   },
   "Capture Region": {
-    "Capture Region": ""
+    "Capture Region": "Chụp vùng chọn"
   },
   "Capture Window": {
-    "Capture Window": ""
+    "Capture Window": "Chụp cửa sổ"
   },
   "Capturing...": {
-    "Capturing...": ""
+    "Capturing...": "Đang chụp..."
   },
   "Center": {
-    "Center": ""
+    "Center": "Giữa"
   },
   "Choose Color": {
     "Choose Color": "Chọn màu"
   },
   "Choose notifications shown after copy or save.": {
-    "Choose notifications shown after copy or save.": ""
+    "Choose notifications shown after copy or save.": "Chọn thông báo hiển thị sau khi sao chép hoặc lưu."
   },
   "Choose the editor shape for portrait or landscape screens.": {
-    "Choose the editor shape for portrait or landscape screens.": ""
+    "Choose the editor shape for portrait or landscape screens.": "Chọn hình dạng trình chỉnh sửa cho màn hình dọc hoặc ngang."
   },
   "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": {
-    "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": ""
+    "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.": "Chọn nơi hiển thị trạng thái và nút điều khiển ghi hình: Tự động (DankBar nếu có, nếu không thì Pill nổi), DankBar, Pill nổi, hoặc Cả hai."
   },
   "Choose whether the editor opens as a modal overlay or a movable floating window.": {
-    "Choose whether the editor opens as a modal overlay or a movable floating window.": ""
+    "Choose whether the editor opens as a modal overlay or a movable floating window.": "Chọn mở trình chỉnh sửa dưới dạng lớp phủ modal hay cửa sổ nổi có thể di chuyển."
   },
   "Choose which monitor to capture during full screen recording.": {
-    "Choose which monitor to capture during full screen recording.": ""
+    "Choose which monitor to capture during full screen recording.": "Chọn màn hình sẽ được ghi khi quay toàn màn hình."
   },
   "Clean Text Eraser": {
-    "Clean Text Eraser": ""
+    "Clean Text Eraser": "Tẩy chữ sạch"
   },
   "Clear saved region selection before each capture": {
-    "Clear saved region selection before each capture": ""
+    "Clear saved region selection before each capture": "Xóa vùng chọn đã lưu trước mỗi lần chụp"
   },
   "Clipboard": {
     "Clipboard": "Bảng nhớ tạm"
@@ -210,7 +210,7 @@
     "Close": "Đóng"
   },
   "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": {
-    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": ""
+    "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.": "Đóng Trung tâm điều khiển trước khi chụp nếu thao tác được kích hoạt từ bảng Trung tâm điều khiển. Phím tắt và chụp qua IPC không bị ảnh hưởng."
   },
   "Color": {
     "Color": "Màu sắc"
@@ -219,28 +219,28 @@
     "Color %1 copied": "Đã sao chép màu %1"
   },
   "Color Palette": {
-    "Color Palette": ""
+    "Color Palette": "Bảng màu"
   },
   "Color Picker": {
     "Color Picker": "Bộ chọn màu"
   },
   "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": {
-    "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": ""
+    "Configure up to %1 quick-access tool presets. Right-click during capture to open the radial menu.": "Cấu hình tối đa %1 thiết lập công cụ truy cập nhanh. Nhấp chuột phải khi đang chụp để mở menu tròn."
   },
   "Conic Gradient": {
-    "Conic Gradient": ""
+    "Conic Gradient": "Dải màu hình nón"
   },
   "Container Format": {
-    "Container Format": ""
+    "Container Format": "Định dạng container"
   },
   "Controls the preview pixel budget while editing. Lower it if you experience lag. Does not affect the final saved image quality.": {
-    "Controls the preview pixel budget while editing. Lower it if you experience lag. Does not affect the final saved image quality.": ""
+    "Controls the preview pixel budget while editing. Lower it if you experience lag. Does not affect the final saved image quality.": "Điều chỉnh số điểm ảnh dùng cho bản xem trước khi chỉnh sửa. Hãy giảm xuống nếu bị giật lag. Không ảnh hưởng đến chất lượng ảnh lưu cuối cùng."
   },
   "Converting recording to GIF...": {
-    "Converting recording to GIF...": ""
+    "Converting recording to GIF...": "Đang chuyển bản ghi sang GIF..."
   },
   "Copied Anonymously": {
-    "Copied Anonymously": ""
+    "Copied Anonymously": "Đã sao chép ẩn danh"
   },
   "Copied to clipboard": {
     "Copied to clipboard": "Đã sao chép vào bảng nhớ tạm"
@@ -252,28 +252,28 @@
     "Copy": "Sao chép"
   },
   "Copy & Save": {
-    "Copy & Save": ""
+    "Copy & Save": "Sao chép & lưu"
   },
   "Copy Color": {
-    "Copy Color": ""
+    "Copy Color": "Sao chép màu"
   },
   "Copy Current Palette": {
-    "Copy Current Palette": ""
+    "Copy Current Palette": "Sao chép bảng màu hiện tại"
   },
   "Copy and customize this preset": {
-    "Copy and customize this preset": ""
+    "Copy and customize this preset": "Sao chép và tùy chỉnh thiết lập sẵn này"
   },
   "Copy vector / Paste / Duplicate": {
-    "Copy vector / Paste / Duplicate": ""
+    "Copy vector / Paste / Duplicate": "Sao chép vector / Dán / Nhân bản"
   },
   "Corner Radius": {
     "Corner Radius": "Bán kính góc"
   },
   "Could not crop image": {
-    "Could not crop image": ""
+    "Could not crop image": "Không thể cắt ảnh"
   },
   "Credits": {
-    "Credits": ""
+    "Credits": "Ghi công"
   },
   "Crop / Resize": {
     "Crop / Resize": "Cắt / Thay đổi kích thước"
@@ -282,61 +282,61 @@
     "Custom": "Tuỳ chỉnh"
   },
   "DankBar": {
-    "DankBar": ""
+    "DankBar": "DankBar"
   },
   "Dark": {
-    "Dark": ""
+    "Dark": "Tối"
   },
   "Darken the image to improve foreground contrast": {
-    "Darken the image to improve foreground contrast": ""
+    "Darken the image to improve foreground contrast": "Làm tối ảnh để tăng độ tương phản của phần tiền cảnh"
   },
   "Dashed Line": {
-    "Dashed Line": ""
+    "Dashed Line": "Nét đứt"
   },
   "Default Microphone": {
-    "Default Microphone": ""
+    "Default Microphone": "Micro mặc định"
   },
   "Default Output": {
-    "Default Output": ""
+    "Default Output": "Đầu ra mặc định"
   },
   "Default Watermark": {
-    "Default Watermark": ""
+    "Default Watermark": "Hình mờ mặc định"
   },
   "Delete": {
     "Delete": "Xóa"
   },
   "Dim Background Image": {
-    "Dim Background Image": ""
+    "Dim Background Image": "Làm tối ảnh nền"
   },
   "Dim Intensity": {
-    "Dim Intensity": ""
+    "Dim Intensity": "Mức độ làm tối"
   },
   "Discard & Close": {
-    "Discard & Close": ""
+    "Discard & Close": "Bỏ và đóng"
   },
   "Display": {
     "Display": "Hiển thị"
   },
   "Display Mode": {
-    "Display Mode": ""
+    "Display Mode": "Chế độ hiển thị"
   },
   "Done": {
-    "Done": ""
+    "Done": "Xong"
   },
   "Dotted Line": {
-    "Dotted Line": ""
+    "Dotted Line": "Nét chấm"
   },
   "Drag Image": {
-    "Drag Image": ""
+    "Drag Image": "Kéo ảnh"
   },
   "Draw an outer ring using the stamp number color": {
-    "Draw an outer ring using the stamp number color": ""
+    "Draw an outer ring using the stamp number color": "Vẽ vòng viền ngoài bằng màu của số trên dấu đánh số"
   },
   "Drop image onto bar icon to annotate it": {
-    "Drop image onto bar icon to annotate it": ""
+    "Drop image onto bar icon to annotate it": "Thả ảnh lên biểu tượng trên thanh để chú thích"
   },
   "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": {
-    "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": ""
+    "Each command accepts action: %1 (open editor) or %2 (always-on-top window).": "Mỗi lệnh nhận tham số action: %1 (mở trình chỉnh sửa) hoặc %2 (cửa sổ luôn nằm trên cùng)."
   },
   "Edge Spacing": {
     "Edge Spacing": "Khoảng cách cạnh"
@@ -345,133 +345,142 @@
     "Edit": "Chỉnh sửa"
   },
   "Edit Color Palette": {
-    "Edit Color Palette": ""
+    "Edit Color Palette": "Chỉnh sửa bảng màu"
   },
   "Edit Text Note": {
-    "Edit Text Note": ""
+    "Edit Text Note": "Chỉnh sửa ghi chú văn bản"
   },
   "Editor": {
-    "Editor": ""
+    "Editor": "Trình chỉnh sửa"
   },
   "Ellipse": {
     "Ellipse": "Hình elip / hình tròn"
   },
   "Enable background automatically when opening the editor": {
-    "Enable background automatically when opening the editor": ""
+    "Enable background automatically when opening the editor": "Tự bật nền khi mở trình chỉnh sửa"
   },
   "Eraser": {
     "Eraser": "Cục tẩy"
   },
   "Failed to convert recording to GIF.": {
-    "Failed to convert recording to GIF.": ""
+    "Failed to convert recording to GIF.": "Không thể chuyển bản ghi sang GIF."
   },
   "Failed to copy screenshot": {
-    "Failed to copy screenshot": ""
+    "Failed to copy screenshot": "Không thể sao chép ảnh chụp màn hình"
   },
   "Failed to create float window.": {
-    "Failed to create float window.": ""
+    "Failed to create float window.": "Không thể tạo cửa sổ nổi."
   },
   "Failed to download image.": {
-    "Failed to download image.": ""
+    "Failed to download image.": "Không thể tải ảnh xuống."
   },
   "Failed to generate blurred background image": {
-    "Failed to generate blurred background image": ""
+    "Failed to generate blurred background image": "Không thể tạo ảnh nền làm mờ"
   },
   "Failed to load image: %1": {
-    "Failed to load image: %1": ""
+    "Failed to load image: %1": "Không thể tải ảnh: %1"
   },
   "Failed to save screenshot": {
-    "Failed to save screenshot": ""
+    "Failed to save screenshot": "Không thể lưu ảnh chụp màn hình"
   },
   "File": {
     "File": "Tệp"
   },
   "Filename Pattern": {
-    "Filename Pattern": ""
+    "Filename Pattern": "Mẫu tên tệp"
   },
   "Flip Horizontal": {
-    "Flip Horizontal": ""
+    "Flip Horizontal": "Lật ngang"
   },
   "Flip Vertical": {
-    "Flip Vertical": ""
+    "Flip Vertical": "Lật dọc"
   },
   "Float": {
     "Float": "Nổi"
   },
   "Float Window": {
-    "Float Window": ""
+    "Float Window": "Cửa sổ nổi"
   },
   "Float service not available.": {
-    "Float service not available.": ""
+    "Float service not available.": "Dịch vụ cửa sổ nổi không khả dụng."
   },
   "Floating": {
     "Floating": "Nổi"
   },
   "Floating Pill": {
-    "Floating Pill": ""
+    "Floating Pill": "Pill nổi"
   },
   "Floating window and continuous editing workflow.": {
-    "Floating window and continuous editing workflow.": ""
+    "Floating window and continuous editing workflow.": "Cửa sổ nổi và quy trình chỉnh sửa liên tục."
   },
   "Focused Screen": {
-    "Focused Screen": ""
+    "Focused Screen": "Màn hình đang focus"
   },
   "Folder": {
-    "Folder": ""
+    "Folder": "Thư mục"
   },
   "Font Size": {
     "Font Size": "Kích thước phông chữ"
   },
   "Font family used for number stamp labels": {
-    "Font family used for number stamp labels": ""
+    "Font family used for number stamp labels": "Phông chữ dùng cho nhãn dấu đánh số"
   },
   "Format tokens: %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second), {zzz} (Ms)": {
-    "Format tokens: %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second), {zzz} (Ms)": ""
+    "Format tokens: %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second), {zzz} (Ms)": "Các token định dạng: %Y (năm), %y (năm 2 chữ số), %m (tháng), %d (ngày), %H (giờ), %M (phút), %S (giây), {zzz} (mili giây)"
   },
   "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
-    "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": ""
+    "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "Các token định dạng: {user} (tên người dùng), \\n (xuống dòng), %Y (năm), %y (năm 2 chữ số), %m (tháng), %d (ngày), %H (giờ), %M (phút), %S (giây)"
+  },
+  "Format: %1 (%2 FPS)": {
+    "Format: %1 (%2 FPS)": "Định dạng: %1 (%2 FPS)"
   },
   "Framerate": {
-    "Framerate": ""
+    "Framerate": "Tốc độ khung hình"
   },
   "Free": {
-    "Free": ""
+    "Free": "Tự do"
   },
   "From Clipboard": {
-    "From Clipboard": ""
+    "From Clipboard": "Từ clipboard"
   },
   "Fullscreen": {
     "Fullscreen": "Toàn màn hình"
   },
   "Fullscreen Target": {
-    "Fullscreen Target": ""
+    "Fullscreen Target": "Màn hình mục tiêu"
   },
   "GIF Framerate": {
-    "GIF Framerate": ""
+    "GIF Framerate": "Tốc độ khung hình GIF"
   },
   "GPU encoder failed. Retrying with %1...": {
-    "GPU encoder failed. Retrying with %1...": ""
+    "GPU encoder failed. Retrying with %1...": "Bộ mã hóa GPU thất bại. Đang thử lại với %1..."
   },
   "General Shortcuts": {
-    "General Shortcuts": ""
+    "General Shortcuts": "Phím tắt chung"
   },
   "Gradient Angle": {
-    "Gradient Angle": ""
+    "Gradient Angle": "Góc dải màu"
   },
   "Gradient End": {
-    "Gradient End": ""
+    "Gradient End": "Màu cuối dải"
   },
   "Gradient Start": {
-    "Gradient Start": ""
+    "Gradient Start": "Màu đầu dải"
   },
   "Help": {
     "Help": "Trợ giúp"
   },
   "Hide Annotations": {
-    "Hide Annotations": ""
+    "Hide Annotations": "Ẩn chú thích"
+  },
+  "Hide Control Center": {
+    "Hide Control Center": "Ẩn Trung tâm điều khiển"
+  },
+  "Hide Control Center by Default": {
+    "Hide Control Center by Default": "Mặc định ẩn Trung tâm điều khiển"
   },
   "Hide Control Center on Capture": {
-    "Hide Control Center on Capture": ""
+    "Hide Control Center on Capture": "Ẩn Trung tâm điều khiển khi chụp"
   },
   "High": {
     "High": "Cao"
@@ -483,76 +492,79 @@
     "History": "Lịch sử"
   },
   "Hold %1 for Loupe": {
-    "Hold %1 for Loupe": ""
+    "Hold %1 for Loupe": "Giữ %1 để dùng kính lúp"
   },
   "Hover Trigger Delay": {
-    "Hover Trigger Delay": ""
+    "Hover Trigger Delay": "Độ trễ kích hoạt khi rê chuột"
   },
   "IPC Commands": {
-    "IPC Commands": ""
+    "IPC Commands": "Lệnh IPC"
   },
   "Image": {
     "Image": "Hình ảnh"
   },
   "Image + Text": {
-    "Image + Text": ""
+    "Image + Text": "Ảnh + Văn bản"
   },
   "Image Background": {
-    "Image Background": ""
+    "Image Background": "Nền ảnh"
   },
   "Image Error": {
-    "Image Error": ""
+    "Image Error": "Lỗi ảnh"
   },
   "Image Folder": {
-    "Image Folder": ""
+    "Image Folder": "Thư mục ảnh"
   },
   "Image Size": {
-    "Image Size": ""
+    "Image Size": "Kích thước ảnh"
   },
   "Image is too small (%1×%2). Minimum: %3px": {
-    "Image is too small (%1×%2). Minimum: %3px": ""
+    "Image is too small (%1×%2). Minimum: %3px": "Ảnh quá nhỏ (%1×%2). Tối thiểu: %3px"
   },
   "Image selected automatically when using Image Background mode": {
-    "Image selected automatically when using Image Background mode": ""
+    "Image selected automatically when using Image Background mode": "Ảnh được chọn tự động khi dùng chế độ Nền ảnh"
   },
   "Include Cursor": {
-    "Include Cursor": ""
+    "Include Cursor": "Bao gồm con trỏ chuột"
   },
   "Initial Width": {
-    "Initial Width": ""
+    "Initial Width": "Chiều rộng ban đầu"
+  },
+  "Initial state for the Control Center toggle.": {
+    "Initial state for the Control Center toggle.": "Trạng thái ban đầu của nút bật/tắt Trung tâm điều khiển."
   },
   "Inline": {
-    "Inline": ""
+    "Inline": "Nội tuyến"
   },
   "Input Mode": {
-    "Input Mode": ""
+    "Input Mode": "Chế độ nhập"
   },
   "Insert Image": {
-    "Insert Image": ""
+    "Insert Image": "Chèn ảnh"
   },
   "Interaction / Result": {
-    "Interaction / Result": ""
+    "Interaction / Result": "Tương tác / Kết quả"
   },
   "Invalid or corrupted image file.": {
-    "Invalid or corrupted image file.": ""
+    "Invalid or corrupted image file.": "Tệp ảnh không hợp lệ hoặc bị hỏng."
   },
   "Italic": {
-    "Italic": ""
+    "Italic": "In nghiêng"
   },
   "JPEG Quality": {
-    "JPEG Quality": ""
+    "JPEG Quality": "Chất lượng JPEG"
   },
   "Key": {
     "Key": "Phím"
   },
   "Keybinding overlay size in interactive region selector.": {
-    "Keybinding overlay size in interactive region selector.": ""
+    "Keybinding overlay size in interactive region selector.": "Kích thước lớp phủ phím tắt trong bộ chọn vùng tương tác."
   },
   "Landscape": {
-    "Landscape": ""
+    "Landscape": "Ngang"
   },
   "Last Region": {
-    "Last Region": ""
+    "Last Region": "Vùng gần nhất"
   },
   "Left": {
     "Left": "Trái"
@@ -561,7 +573,7 @@
     "Left Center": "Trái giữa"
   },
   "Left Click": {
-    "Left Click": ""
+    "Left Click": "Nhấp chuột trái"
   },
   "Light": {
     "Light": "Nhẹ / Sáng"
@@ -570,91 +582,91 @@
     "Line": "Dòng"
   },
   "Linear Gradient": {
-    "Linear Gradient": ""
+    "Linear Gradient": "Dải màu tuyến tính"
   },
   "Live Preview": {
-    "Live Preview": ""
+    "Live Preview": "Xem trước trực tiếp"
   },
   "Low": {
     "Low": "Thấp"
   },
   "Magnifier Loupe": {
-    "Magnifier Loupe": ""
+    "Magnifier Loupe": "Kính lúp phóng đại"
   },
   "Max Height (%1 = no limit)": {
-    "Max Height (%1 = no limit)": ""
+    "Max Height (%1 = no limit)": "Chiều cao tối đa (%1 = không giới hạn)"
   },
   "Medium": {
     "Medium": "Trung bình"
   },
   "Menu Item Right Click": {
-    "Menu Item Right Click": ""
+    "Menu Item Right Click": "Nhấp chuột phải vào mục menu"
   },
   "Merging audio tracks...": {
-    "Merging audio tracks...": ""
+    "Merging audio tracks...": "Đang gộp các track âm thanh..."
   },
   "Microphone": {
     "Microphone": "Micro"
   },
   "Microphone Device": {
-    "Microphone Device": ""
+    "Microphone Device": "Thiết bị micro"
   },
   "Middle Click": {
-    "Middle Click": ""
+    "Middle Click": "Nhấp chuột giữa"
   },
   "Middle Click Action": {
-    "Middle Click Action": ""
+    "Middle Click Action": "Hành động khi nhấp chuột giữa"
   },
   "Minimize Delay": {
-    "Minimize Delay": ""
+    "Minimize Delay": "Độ trễ thu nhỏ"
   },
   "Modal": {
-    "Modal": ""
+    "Modal": "Modal"
   },
   "More Options": {
-    "More Options": ""
+    "More Options": "Thêm tùy chọn"
   },
   "More Tools": {
-    "More Tools": ""
+    "More Tools": "Thêm công cụ"
   },
   "Niri Binding Example": {
-    "Niri Binding Example": ""
+    "Niri Binding Example": "Ví dụ gán phím trong Niri"
   },
   "No Background": {
     "No Background": "Không có ảnh nền"
   },
   "No Image Specified": {
-    "No Image Specified": ""
+    "No Image Specified": "Chưa chỉ định ảnh"
   },
   "No QR code detected": {
-    "No QR code detected": ""
+    "No QR code detected": "Không phát hiện mã QR"
   },
   "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": {
-    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": ""
+    "No Tesseract language packs found. Ensure tesseract is installed and has language data packages.": "Không tìm thấy gói ngôn ngữ Tesseract nào. Hãy đảm bảo tesseract đã được cài đặt và có các gói dữ liệu ngôn ngữ."
   },
   "No output available": {
-    "No output available": ""
+    "No output available": "Không có đầu ra khả dụng"
   },
   "No saved images yet": {
-    "No saved images yet": ""
+    "No saved images yet": "Chưa có ảnh nào được lưu"
   },
   "No supported images found": {
-    "No supported images found": ""
+    "No supported images found": "Không tìm thấy ảnh được hỗ trợ"
   },
   "No text detected": {
-    "No text detected": ""
+    "No text detected": "Không phát hiện văn bản"
   },
   "No valid image file or URL found in drop.": {
-    "No valid image file or URL found in drop.": ""
+    "No valid image file or URL found in drop.": "Không tìm thấy tệp ảnh hoặc URL hợp lệ trong nội dung vừa thả."
   },
   "No valid image, URL, or path in clipboard.": {
-    "No valid image, URL, or path in clipboard.": ""
+    "No valid image, URL, or path in clipboard.": "Không có ảnh, URL hoặc đường dẫn hợp lệ trong clipboard."
   },
   "None": {
     "None": "Không"
   },
   "Note: Starting tool mode overrides tool thickness and color defaults if the starting tool matches it.": {
-    "Note: Starting tool mode overrides tool thickness and color defaults if the starting tool matches it.": ""
+    "Note: Starting tool mode overrides tool thickness and color defaults if the starting tool matches it.": "Lưu ý: Chế độ công cụ khởi đầu sẽ ghi đè độ dày và màu mặc định của công cụ nếu công cụ khởi đầu trùng với công cụ đó."
   },
   "Notification": {
     "Notification": "Thông báo"
@@ -663,22 +675,22 @@
     "Notifications": "Thông báo"
   },
   "OCR": {
-    "OCR": ""
+    "OCR": "OCR"
   },
   "OCR Result": {
-    "OCR Result": ""
+    "OCR Result": "Kết quả OCR"
   },
   "OCR failed": {
-    "OCR failed": ""
+    "OCR failed": "OCR thất bại"
   },
   "Off": {
     "Off": "Tắt"
   },
   "Off (Hidden)": {
-    "Off (Hidden)": ""
+    "Off (Hidden)": "Tắt (ẩn)"
   },
   "On": {
-    "On": ""
+    "On": "Bật"
   },
   "Opacity": {
     "Opacity": "Độ mờ"
@@ -687,193 +699,199 @@
     "Open": "Mở"
   },
   "Open %1 menu (Popout)": {
-    "Open %1 menu (Popout)": ""
+    "Open %1 menu (Popout)": "Mở menu %1 (cửa sổ bật ra)"
   },
   "Open Captures Folder": {
-    "Open Captures Folder": ""
+    "Open Captures Folder": "Mở thư mục ảnh đã chụp"
+  },
+  "Open Folder": {
+    "Open Folder": ""
   },
   "Open Image": {
-    "Open Image": ""
+    "Open Image": "Mở ảnh"
+  },
+  "Open folder": {
+    "Open folder": "Mở thư mục"
   },
   "Outline Variant": {
-    "Outline Variant": ""
+    "Outline Variant": "Biến thể viền"
   },
   "Output Format": {
-    "Output Format": ""
+    "Output Format": "Định dạng đầu ra"
   },
   "Output format applies only to disk saves. Clipboard copies are always PNG.": {
-    "Output format applies only to disk saves. Clipboard copies are always PNG.": ""
+    "Output format applies only to disk saves. Clipboard copies are always PNG.": "Định dạng đầu ra chỉ áp dụng khi lưu vào ổ đĩa. Sao chép vào clipboard luôn là PNG."
   },
   "Overlay Opacity": {
-    "Overlay Opacity": ""
+    "Overlay Opacity": "Độ mờ lớp phủ"
   },
   "Padding": {
     "Padding": "Lề trong"
   },
   "Palette Preset": {
-    "Palette Preset": ""
+    "Palette Preset": "Bảng màu có sẵn"
   },
   "Paste from Clipboard": {
-    "Paste from Clipboard": ""
+    "Paste from Clipboard": "Dán từ clipboard"
   },
   "Pause": {
     "Pause": "Tạm dừng"
   },
   "Pause / Resume": {
-    "Pause / Resume": ""
+    "Pause / Resume": "Tạm dừng / Tiếp tục"
   },
   "Paused": {
     "Paused": "Đã tạm dừng"
   },
   "Pausing is not supported with %1.": {
-    "Pausing is not supported with %1.": ""
+    "Pausing is not supported with %1.": "%1 không hỗ trợ tạm dừng."
   },
   "Pen": {
     "Pen": "Bút tự do"
   },
   "Pen Auto-Close": {
-    "Pen Auto-Close": ""
+    "Pen Auto-Close": "Bút tự đóng nét"
   },
   "Pick Color": {
-    "Pick Color": ""
+    "Pick Color": "Chọn màu"
   },
   "Pick a palette preset or customize individual color slots.": {
-    "Pick a palette preset or customize individual color slots.": ""
+    "Pick a palette preset or customize individual color slots.": "Chọn một bảng màu có sẵn hoặc tùy chỉnh từng ô màu."
   },
   "Pixelate": {
     "Pixelate": "Làm mờ điểm ảnh (Pixelate)"
   },
   "Pixelate Intensity": {
-    "Pixelate Intensity": ""
+    "Pixelate Intensity": "Mức độ pixel hóa"
   },
   "Popup": {
-    "Popup": ""
+    "Popup": "Popup"
   },
   "Portrait": {
-    "Portrait": ""
+    "Portrait": "Dọc"
   },
   "Position": {
     "Position": "Vị trí"
   },
   "Post-Capture Notification": {
-    "Post-Capture Notification": ""
+    "Post-Capture Notification": "Thông báo sau khi chụp"
   },
   "Preset": {
-    "Preset": ""
+    "Preset": "Thiết lập sẵn"
   },
   "Preset %1": {
-    "Preset %1": ""
+    "Preset %1": "Thiết lập sẵn %1"
   },
   "Presets": {
-    "Presets": ""
+    "Presets": "Thiết lập sẵn"
   },
   "Preview": {
     "Preview": "Xem trước"
   },
   "Preview Quality": {
-    "Preview Quality": ""
+    "Preview Quality": "Chất lượng xem trước"
   },
   "Primary": {
     "Primary": "Chính"
   },
   "Primary Screen": {
-    "Primary Screen": ""
+    "Primary Screen": "Màn hình chính"
   },
   "QR Result": {
-    "QR Result": ""
+    "QR Result": "Kết quả QR"
   },
   "QR scan failed": {
-    "QR scan failed": ""
+    "QR scan failed": "Quét QR thất bại"
   },
   "Quality": {
     "Quality": "Chất lượng"
   },
   "Quick Capture": {
-    "Quick Capture": ""
+    "Quick Capture": "Chụp nhanh"
   },
   "Quick Capture Error": {
-    "Quick Capture Error": ""
+    "Quick Capture Error": "Lỗi Chụp nhanh"
   },
   "Radial Gradient": {
-    "Radial Gradient": ""
+    "Radial Gradient": "Dải màu tỏa tròn"
   },
   "Radial Menu": {
-    "Radial Menu": ""
+    "Radial Menu": "Menu tròn"
   },
   "Radial menu and tool interaction patterns.": {
-    "Radial menu and tool interaction patterns.": ""
+    "Radial menu and tool interaction patterns.": "Menu tròn và các kiểu tương tác với công cụ."
   },
   "Ratio": {
-    "Ratio": ""
+    "Ratio": "Tỷ lệ"
   },
   "Ready": {
     "Ready": "Sẵn sàng"
   },
   "Recent Edits": {
-    "Recent Edits": ""
+    "Recent Edits": "Chỉnh sửa gần đây"
   },
   "Recent History": {
-    "Recent History": ""
+    "Recent History": "Lịch sử gần đây"
   },
   "Record Fullscreen": {
-    "Record Fullscreen": ""
+    "Record Fullscreen": "Quay toàn màn hình"
   },
   "Record Microphone": {
-    "Record Microphone": ""
+    "Record Microphone": "Ghi micro"
   },
   "Record Region": {
-    "Record Region": ""
+    "Record Region": "Quay vùng chọn"
   },
   "Record Screen": {
-    "Record Screen": ""
+    "Record Screen": "Quay màn hình"
   },
   "Record System Audio": {
-    "Record System Audio": ""
+    "Record System Audio": "Ghi âm thanh hệ thống"
   },
   "Recording": {
-    "Recording": ""
+    "Recording": "Đang ghi hình"
   },
   "Recording Backend": {
-    "Recording Backend": ""
+    "Recording Backend": "Backend ghi hình"
   },
   "Recording Folder": {
-    "Recording Folder": ""
+    "Recording Folder": "Thư mục lưu bản ghi"
   },
   "Recording Paused": {
-    "Recording Paused": ""
+    "Recording Paused": "Đã tạm dừng ghi hình"
   },
   "Recording Status Location": {
-    "Recording Status Location": ""
+    "Recording Status Location": "Vị trí hiển thị trạng thái ghi hình"
   },
   "Recording ended with error code %1.": {
-    "Recording ended with error code %1.": ""
+    "Recording ended with error code %1.": "Quá trình ghi hình kết thúc với mã lỗi %1."
   },
   "Recording...": {
-    "Recording...": ""
+    "Recording...": "Đang ghi hình..."
   },
   "Rectangle": {
     "Rectangle": "Đường viền hình chữ nhật"
   },
   "Redact": {
-    "Redact": ""
+    "Redact": "Che thông tin"
   },
   "Redo": {
-    "Redo": ""
+    "Redo": "Làm lại"
   },
   "Refresh": {
     "Refresh": "Làm mới"
   },
   "Region": {
-    "Region": ""
+    "Region": "Vùng chọn"
   },
   "Region HUD Scale": {
-    "Region HUD Scale": ""
+    "Region HUD Scale": "Tỷ lệ HUD vùng chọn"
   },
   "Reset": {
     "Reset": "Đặt lại"
   },
   "Reset Last Region": {
-    "Reset Last Region": ""
+    "Reset Last Region": "Đặt lại vùng gần nhất"
   },
   "Resume": {
     "Resume": "Tiếp tục"
@@ -885,91 +903,91 @@
     "Right Center": "Phải giữa"
   },
   "Right Click": {
-    "Right Click": ""
+    "Right Click": "Nhấp chuột phải"
   },
   "Right Click Action": {
-    "Right Click Action": ""
+    "Right Click Action": "Hành động khi nhấp chuột phải"
   },
   "Rotate Left": {
-    "Rotate Left": ""
+    "Rotate Left": "Xoay trái"
   },
   "Rotate Right": {
-    "Rotate Right": ""
+    "Rotate Right": "Xoay phải"
   },
   "Round Highlighter Tips": {
-    "Round Highlighter Tips": ""
+    "Round Highlighter Tips": "Đầu bút nhấn bo tròn"
   },
   "Round Rectangle Corners": {
-    "Round Rectangle Corners": ""
+    "Round Rectangle Corners": "Bo góc hình chữ nhật"
   },
   "Rounded Rectangle": {
-    "Rounded Rectangle": ""
+    "Rounded Rectangle": "Hình chữ nhật bo góc"
   },
   "Save": {
     "Save": "Lưu"
   },
   "Save As": {
-    "Save As": ""
+    "Save As": "Lưu thành"
   },
   "Save Screenshot As": {
-    "Save Screenshot As": ""
+    "Save Screenshot As": "Lưu ảnh chụp màn hình thành"
   },
   "Saved %1 (%2)": {
-    "Saved %1 (%2)": ""
+    "Saved %1 (%2)": "Đã lưu %1 (%2)"
   },
   "Scale Editor to Screenshot Size": {
-    "Scale Editor to Screenshot Size": ""
+    "Scale Editor to Screenshot Size": "Co giãn trình chỉnh sửa theo kích thước ảnh chụp"
   },
   "Scan QR": {
-    "Scan QR": ""
+    "Scan QR": "Quét QR"
   },
   "Screen Recording": {
-    "Screen Recording": ""
+    "Screen Recording": "Quay màn hình"
   },
   "Screen Recording Error": {
-    "Screen Recording Error": ""
+    "Screen Recording Error": "Lỗi quay màn hình"
   },
   "Screen Recording Saved": {
-    "Screen Recording Saved": ""
+    "Screen Recording Saved": "Đã lưu bản quay màn hình"
   },
   "Screen recording timed out or was cancelled.": {
-    "Screen recording timed out or was cancelled.": ""
+    "Screen recording timed out or was cancelled.": "Quay màn hình đã hết thời gian chờ hoặc bị hủy."
   },
   "Screenshot": {
-    "Screenshot": ""
+    "Screenshot": "Ảnh chụp màn hình"
   },
   "Screenshot Copied": {
-    "Screenshot Copied": ""
+    "Screenshot Copied": "Đã sao chép ảnh chụp màn hình"
   },
   "Screenshot Folder": {
     "Screenshot Folder": "Lưu thư mục"
   },
   "Screenshot Saved": {
-    "Screenshot Saved": ""
+    "Screenshot Saved": "Đã lưu ảnh chụp màn hình"
   },
   "Screenshot copied anonymously with randomized name and stripped metadata.": {
-    "Screenshot copied anonymously with randomized name and stripped metadata.": ""
+    "Screenshot copied anonymously with randomized name and stripped metadata.": "Đã sao chép ảnh chụp màn hình ẩn danh với tên ngẫu nhiên và đã xóa metadata."
   },
   "Screenshot copied to clipboard and saved to %1": {
-    "Screenshot copied to clipboard and saved to %1": ""
+    "Screenshot copied to clipboard and saved to %1": "Đã sao chép ảnh chụp màn hình vào clipboard và lưu tại %1"
   },
   "Screenshot copied to clipboard but failed to save file: %1": {
-    "Screenshot copied to clipboard but failed to save file: %1": ""
+    "Screenshot copied to clipboard but failed to save file: %1": "Đã sao chép ảnh chụp màn hình vào clipboard nhưng không thể lưu tệp: %1"
   },
   "Screenshot copied with randomized name.": {
-    "Screenshot copied with randomized name.": ""
+    "Screenshot copied with randomized name.": "Đã sao chép ảnh chụp màn hình với tên ngẫu nhiên."
   },
   "Screenshot failed (mode: %1).": {
-    "Screenshot failed (mode: %1).": ""
+    "Screenshot failed (mode: %1).": "Chụp màn hình thất bại (chế độ: %1)."
   },
   "Screenshot saved to %1": {
-    "Screenshot saved to %1": ""
+    "Screenshot saved to %1": "Đã lưu ảnh chụp màn hình tại %1"
   },
   "Scroll Interval": {
-    "Scroll Interval": ""
+    "Scroll Interval": "Khoảng cách cuộn"
   },
   "Scroll capture: select a region, scroll content, then press %1 to finish.": {
-    "Scroll capture: select a region, scroll content, then press %1 to finish.": ""
+    "Scroll capture: select a region, scroll content, then press %1 to finish.": "Chụp cuộn: chọn một vùng, cuộn nội dung, sau đó nhấn %1 để hoàn tất."
   },
   "Scrolling": {
     "Scrolling": "Cuộn"
@@ -978,169 +996,187 @@
     "Select": "Chọn"
   },
   "Select Color Slots %1": {
-    "Select Color Slots %1": ""
+    "Select Color Slots %1": "Chọn ô màu %1"
   },
   "Select Image File": {
-    "Select Image File": ""
+    "Select Image File": "Chọn tệp ảnh"
   },
   "Select Image to Annotate": {
-    "Select Image to Annotate": ""
+    "Select Image to Annotate": "Chọn ảnh để chú thích"
   },
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
-    "Select one or more installed Tesseract language packs for OCR text recognition.": ""
+    "Select one or more installed Tesseract language packs for OCR text recognition.": "Chọn một hoặc nhiều gói ngôn ngữ Tesseract đã cài để nhận dạng văn bản OCR."
+  },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Chọn backend quay màn hình. Chế độ Tự động sẽ thử GPU trước rồi chuyển sang CPU (%1) nếu thất bại."
   },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
-    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": ""
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "Chọn backend quay màn hình. Chế độ Tự động sẽ thử GPU trước rồi chuyển sang CPU (%1) nếu thất bại. Lưu ý: %1 không hỗ trợ tạm dừng."
   },
   "Selected Tool / Action": {
-    "Selected Tool / Action": ""
+    "Selected Tool / Action": "Công cụ / Hành động đã chọn"
+  },
+  "Settings": {
+    "Settings": "Cài đặt"
   },
   "Shadow Strength": {
-    "Shadow Strength": ""
+    "Shadow Strength": "Độ đậm bóng đổ"
   },
   "Shapes": {
-    "Shapes": ""
+    "Shapes": "Hình khối"
   },
   "Shortcut Action": {
-    "Shortcut Action": ""
+    "Shortcut Action": "Hành động phím tắt"
   },
   "Show Annotations": {
-    "Show Annotations": ""
+    "Show Annotations": "Hiện chú thích"
+  },
+  "Show Control Center": {
+    "Show Control Center": "Hiện Trung tâm điều khiển"
   },
   "Show Keyboard Shortcut Hints": {
-    "Show Keyboard Shortcut Hints": ""
+    "Show Keyboard Shortcut Hints": "Hiện gợi ý phím tắt"
   },
   "Show Pill Border": {
-    "Show Pill Border": ""
+    "Show Pill Border": "Hiện viền thanh pill"
+  },
+  "Show Recording Controls": {
+    "Show Recording Controls": ""
+  },
+  "Show Recording Dot": {
+    "Show Recording Dot": ""
+  },
+  "Show Recording Timer": {
+    "Show Recording Timer": ""
   },
   "Show Region Border": {
-    "Show Region Border": ""
+    "Show Region Border": "Hiện viền vùng chọn"
   },
   "Show Screenshot Border": {
-    "Show Screenshot Border": ""
+    "Show Screenshot Border": "Hiện viền ảnh chụp màn hình"
   },
   "Show Toolbar": {
-    "Show Toolbar": ""
+    "Show Toolbar": "Hiện thanh công cụ"
   },
   "Show Toolbar Border": {
-    "Show Toolbar Border": ""
+    "Show Toolbar Border": "Hiện viền thanh công cụ"
   },
   "Show only the image on a transparent background": {
-    "Show only the image on a transparent background": ""
+    "Show only the image on a transparent background": "Chỉ hiện ảnh trên nền trong suốt"
   },
   "Skip confirmation": {
     "Skip confirmation": "Bỏ qua xác nhận"
   },
   "Slot %1": {
-    "Slot %1": ""
+    "Slot %1": "Ô %1"
   },
   "Soften image details so screenshot content stands out": {
-    "Soften image details so screenshot content stands out": ""
+    "Soften image details so screenshot content stands out": "Làm mềm chi tiết ảnh để nội dung ảnh chụp nổi bật hơn"
   },
   "Solid Color": {
-    "Solid Color": ""
+    "Solid Color": "Màu đặc"
   },
   "Solid Fill": {
-    "Solid Fill": ""
+    "Solid Fill": "Tô đặc"
   },
   "Solid Line": {
-    "Solid Line": ""
+    "Solid Line": "Nét liền"
   },
   "Spawn Position": {
-    "Spawn Position": ""
+    "Spawn Position": "Vị trí xuất hiện"
   },
   "Specific Output": {
-    "Specific Output": ""
+    "Specific Output": "Màn hình cụ thể"
   },
   "Spotlight": {
     "Spotlight": "Tìm kiếm nhanh"
   },
   "Spotlight Opacity": {
-    "Spotlight Opacity": ""
+    "Spotlight Opacity": "Độ mờ vùng tiêu điểm"
   },
   "Stamp": {
     "Stamp": "Tem số"
   },
   "Stamp Contrast Ring": {
-    "Stamp Contrast Ring": ""
+    "Stamp Contrast Ring": "Vòng tương phản của dấu đánh số"
   },
   "Stamp Size": {
-    "Stamp Size": ""
+    "Stamp Size": "Kích thước dấu đánh số"
   },
   "Starting Preset": {
-    "Starting Preset": ""
+    "Starting Preset": "Thiết lập sẵn khởi đầu"
   },
   "Starting Tool": {
     "Starting Tool": "Công cụ khởi động"
   },
   "Starting Tool Mode": {
-    "Starting Tool Mode": ""
+    "Starting Tool Mode": "Chế độ công cụ khởi đầu"
   },
   "Stop & Save": {
-    "Stop & Save": ""
+    "Stop & Save": "Dừng & lưu"
   },
   "Stop Recording": {
-    "Stop Recording": ""
+    "Stop Recording": "Dừng ghi hình"
   },
   "Surface Container Highest": {
-    "Surface Container Highest": ""
+    "Surface Container Highest": "Surface Container cao nhất"
   },
   "Switch to your custom preset": {
-    "Switch to your custom preset": ""
+    "Switch to your custom preset": "Chuyển sang thiết lập sẵn tùy chỉnh của bạn"
   },
   "System Audio Device": {
-    "System Audio Device": ""
+    "System Audio Device": "Thiết bị âm thanh hệ thống"
   },
   "Target Output Name": {
-    "Target Output Name": ""
+    "Target Output Name": "Tên màn hình mục tiêu"
   },
   "Text": {
     "Text": "Văn bản"
   },
   "Text Background": {
-    "Text Background": ""
+    "Text Background": "Nền văn bản"
   },
   "Text Background Roundness": {
-    "Text Background Roundness": ""
+    "Text Background Roundness": "Độ bo góc nền văn bản"
   },
   "Text Size": {
-    "Text Size": ""
+    "Text Size": "Cỡ chữ"
   },
   "Thickness": {
     "Thickness": "Độ dày"
   },
   "This palette preset is read-only. Select one of the options below to switch to the Custom Palette and edit colors:": {
-    "This palette preset is read-only. Select one of the options below to switch to the Custom Palette and edit colors:": ""
+    "This palette preset is read-only. Select one of the options below to switch to the Custom Palette and edit colors:": "Bảng màu có sẵn này ở chế độ chỉ đọc. Hãy chọn một trong các tùy chọn bên dưới để chuyển sang Bảng màu tùy chỉnh và chỉnh sửa màu:"
   },
   "Toast": {
     "Toast": "Thông báo nhỏ"
   },
   "Toggle Annotations": {
-    "Toggle Annotations": ""
+    "Toggle Annotations": "Bật/tắt chú thích"
   },
   "Toggle Start / Stop": {
-    "Toggle Start / Stop": ""
+    "Toggle Start / Stop": "Bắt đầu / Dừng"
   },
   "Toggle between %1 latest presets": {
-    "Toggle between %1 latest presets": ""
+    "Toggle between %1 latest presets": "Chuyển đổi giữa %1 thiết lập sẵn gần nhất"
   },
   "Tool": {
-    "Tool": ""
+    "Tool": "Công cụ"
   },
   "Tool Defaults": {
-    "Tool Defaults": ""
+    "Tool Defaults": "Mặc định của công cụ"
   },
   "Toolbar": {
-    "Toolbar": ""
+    "Toolbar": "Thanh công cụ"
   },
   "Toolbar Palette": {
-    "Toolbar Palette": ""
+    "Toolbar Palette": "Bảng màu thanh công cụ"
   },
   "Toolbar Position": {
-    "Toolbar Position": ""
+    "Toolbar Position": "Vị trí thanh công cụ"
   },
   "Toolbar design and layout inspiration.": {
-    "Toolbar design and layout inspiration.": ""
+    "Toolbar design and layout inspiration.": "Cảm hứng cho thiết kế và bố cục thanh công cụ."
   },
   "Tools": {
     "Tools": "Công cụ"
@@ -1158,63 +1194,63 @@
     "Top Right": "Trên cùng bên phải"
   },
   "Transparent": {
-    "Transparent": ""
+    "Transparent": "Trong suốt"
   },
   "Transparent Background": {
-    "Transparent Background": ""
+    "Transparent Background": "Nền trong suốt"
   },
   "Trigger on Hover": {
-    "Trigger on Hover": ""
+    "Trigger on Hover": "Kích hoạt khi rê chuột"
   },
   "Type note...": {
-    "Type note...": ""
+    "Type note...": "Nhập ghi chú..."
   },
   "Underline": {
-    "Underline": ""
+    "Underline": "Gạch chân"
   },
   "Undo": {
-    "Undo": ""
+    "Undo": "Hoàn tác"
   },
   "Usage Guide": {
-    "Usage Guide": ""
+    "Usage Guide": "Hướng dẫn sử dụng"
   },
   "Use Existing Custom": {
-    "Use Existing Custom": ""
+    "Use Existing Custom": "Dùng bản tùy chỉnh hiện có"
   },
   "Use Floating Editor": {
-    "Use Floating Editor": ""
+    "Use Floating Editor": "Dùng trình chỉnh sửa nổi"
   },
   "Use Modal Editor": {
-    "Use Modal Editor": ""
+    "Use Modal Editor": "Dùng trình chỉnh sửa modal"
   },
   "Variant": {
-    "Variant": ""
+    "Variant": "Biến thể"
   },
   "Very High": {
     "Very High": "Rất cao"
   },
   "Video": {
-    "Video": ""
+    "Video": "Video"
   },
   "Video Codec": {
-    "Video Codec": ""
+    "Video Codec": "Codec video"
   },
   "Watermark": {
-    "Watermark": ""
+    "Watermark": "Hình mờ"
   },
   "Watermark Type": {
-    "Watermark Type": ""
+    "Watermark Type": "Loại hình mờ"
   },
   "WebP Quality": {
-    "WebP Quality": ""
+    "WebP Quality": "Chất lượng WebP"
   },
   "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": {
-    "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": ""
+    "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.": "Khi bật, trình chỉnh sửa sẽ thu nhỏ vừa với vùng đã chụp thay vì chiếm %1% màn hình."
   },
   "Window": {
-    "Window": ""
+    "Window": "Cửa sổ"
   },
   "Window / Portal": {
-    "Window / Portal": ""
+    "Window / Portal": "Cửa sổ / Portal"
   }
 }

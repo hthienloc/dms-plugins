@@ -162,16 +162,16 @@
     "Capture Actions": "Дії захоплення"
   },
   "Capture Fullscreen": {
-    "Capture Fullscreen": ""
+    "Capture Fullscreen": "Захопити весь екран"
   },
   "Capture Options": {
     "Capture Options": "Параметри захоплення"
   },
   "Capture Region": {
-    "Capture Region": ""
+    "Capture Region": "Захопити область"
   },
   "Capture Window": {
-    "Capture Window": ""
+    "Capture Window": "Захопити вікно"
   },
   "Capturing...": {
     "Capturing...": "Захоплення..."
@@ -431,6 +431,9 @@
   "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": {
     "Format tokens: {user} (Username), \\n (New Line), %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second)": "Токени формату: {user} (Ім'я користувача), \\n (Новий рядок), %Y (Рік), %y (рік з 2 цифр), %m (Місяць), %d (День), %H (Година), %M (Хвилина), %S (Секунда)"
   },
+  "Format: %1 (%2 FPS)": {
+    "Format: %1 (%2 FPS)": "Формат: %1 (%2 FPS)"
+  },
   "Framerate": {
     "Framerate": "Частота кадрів"
   },
@@ -438,7 +441,7 @@
     "Free": "Вільний"
   },
   "From Clipboard": {
-    "From Clipboard": ""
+    "From Clipboard": "Із буфера обміну"
   },
   "Fullscreen": {
     "Fullscreen": "Повный екран"
@@ -469,6 +472,12 @@
   },
   "Hide Annotations": {
     "Hide Annotations": "Приховати анотації"
+  },
+  "Hide Control Center": {
+    "Hide Control Center": "Приховати центр керування"
+  },
+  "Hide Control Center by Default": {
+    "Hide Control Center by Default": "Приховувати центр керування за замовчуванням"
   },
   "Hide Control Center on Capture": {
     "Hide Control Center on Capture": "Приховати Центр керування під час захоплення"
@@ -520,6 +529,9 @@
   },
   "Initial Width": {
     "Initial Width": "Початкова ширина"
+  },
+  "Initial state for the Control Center toggle.": {
+    "Initial state for the Control Center toggle.": "Початковий стан перемикача центру керування"
   },
   "Inline": {
     "Inline": "Вбудовано"
@@ -612,7 +624,7 @@
     "Modal": "Модальне"
   },
   "More Options": {
-    "More Options": ""
+    "More Options": "Більше параметрів"
   },
   "More Tools": {
     "More Tools": "Більше інструментів"
@@ -690,10 +702,16 @@
     "Open %1 menu (Popout)": "Відкрити меню %1 (спливаюче)"
   },
   "Open Captures Folder": {
-    "Open Captures Folder": ""
+    "Open Captures Folder": "Відкрити теку знімків екрану"
+  },
+  "Open Folder": {
+    "Open Folder": ""
   },
   "Open Image": {
     "Open Image": "Відкрити зображення"
+  },
+  "Open folder": {
+    "Open folder": "Відкрити папку"
   },
   "Outline Variant": {
     "Outline Variant": "Варіант контуру"
@@ -813,19 +831,19 @@
     "Recent Edits": "Останні правки"
   },
   "Recent History": {
-    "Recent History": ""
+    "Recent History": "Недавня історія"
   },
   "Record Fullscreen": {
-    "Record Fullscreen": ""
+    "Record Fullscreen": "Записати весь екран"
   },
   "Record Microphone": {
     "Record Microphone": "Записувати мікрофон"
   },
   "Record Region": {
-    "Record Region": ""
+    "Record Region": "Записати область"
   },
   "Record Screen": {
-    "Record Screen": ""
+    "Record Screen": "Записати екран"
   },
   "Record System Audio": {
     "Record System Audio": "Записувати системний звук"
@@ -981,7 +999,7 @@
     "Select Color Slots %1": "Виберіть слоти кольорів %1"
   },
   "Select Image File": {
-    "Select Image File": ""
+    "Select Image File": "Вибрати файл зображення"
   },
   "Select Image to Annotate": {
     "Select Image to Annotate": "Вибрати зображення для анотування"
@@ -989,11 +1007,17 @@
   "Select one or more installed Tesseract language packs for OCR text recognition.": {
     "Select one or more installed Tesseract language packs for OCR text recognition.": "Виберіть один або кілька встановлених мовних пакетів Tesseract для оптичного розпізнавання тексту"
   },
+  "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": {
+    "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1).": "Виберіть пристрій запису екрана. «Авто» спочатку пробує GPU, а потім перемикається на CPU (%1)"
+  },
   "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": {
     "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.": "Виберіть пристрій запису екрана. «Авто» спочатку пробує GPU, а потім перемикається на CPU (%1). Примітка: %1 не підтримує паузу"
   },
   "Selected Tool / Action": {
     "Selected Tool / Action": "Вибраний інструмент / дія"
+  },
+  "Settings": {
+    "Settings": "Налаштування"
   },
   "Shadow Strength": {
     "Shadow Strength": "Інтенсивність тіні"
@@ -1007,11 +1031,23 @@
   "Show Annotations": {
     "Show Annotations": "Показати анотації"
   },
+  "Show Control Center": {
+    "Show Control Center": "Показати центр керування"
+  },
   "Show Keyboard Shortcut Hints": {
     "Show Keyboard Shortcut Hints": "Показати підказки щодо гарячих клавіш"
   },
   "Show Pill Border": {
     "Show Pill Border": "Показати межу пігулки"
+  },
+  "Show Recording Controls": {
+    "Show Recording Controls": ""
+  },
+  "Show Recording Dot": {
+    "Show Recording Dot": ""
+  },
+  "Show Recording Timer": {
+    "Show Recording Timer": ""
   },
   "Show Region Border": {
     "Show Region Border": "Показати межу області"
@@ -1080,7 +1116,7 @@
     "Stop & Save": "Зупинити та зберегти"
   },
   "Stop Recording": {
-    "Stop Recording": ""
+    "Stop Recording": "Зупинити запис"
   },
   "Surface Container Highest": {
     "Surface Container Highest": "Найвищий поверхневий контейнер"
