@@ -71,7 +71,7 @@ const values = {
     textCornerRadius: 12,
     roundHighlighter: false,
     stampOuterRing: false,
-    penAutoClose: true,
+    penAutoClose: false,
     backgroundAutoApply: false,
     backgroundDefaultMode: "solid",
     backgroundImageFolder: "~/Pictures/Wallpaper",
