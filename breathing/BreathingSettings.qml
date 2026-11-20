@@ -65,7 +65,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("breathing", "General")
+            text: I18n.trFor("breathing", "Session Defaults")
         }
 
         SettingsGroup {

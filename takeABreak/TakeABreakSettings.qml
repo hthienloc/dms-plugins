@@ -357,7 +357,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("takeABreak", "Audio & Playback")
+            text: I18n.trFor("takeABreak", "Audio")
         }
 
         SettingsGroup {
@@ -660,7 +660,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("takeABreak", "Testing & Preview")
+            text: I18n.trFor("takeABreak", "Testing")
         }
 
         SettingsGroup {

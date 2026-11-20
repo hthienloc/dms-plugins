@@ -39,7 +39,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("niriDS", "General Settings")
+            text: I18n.trFor("niriDS", "Display Behavior")
         }
 
         SettingsGroup {

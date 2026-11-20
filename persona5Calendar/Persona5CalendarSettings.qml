@@ -103,7 +103,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("persona5Calendar", "Time & Weather")
+            text: I18n.trFor("persona5Calendar", "Schedule")
         }
 
         SettingsGroup {

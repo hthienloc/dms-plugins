@@ -91,7 +91,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("handMirror", "Camera & Layout")
+            text: I18n.trFor("handMirror", "Camera")
         }
 
         SettingsGroup {
@@ -311,7 +311,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("handMirror", "Standalone Window Configuration")
+            text: I18n.trFor("handMirror", "Standalone Window")
         }
 
         SettingsGroup {

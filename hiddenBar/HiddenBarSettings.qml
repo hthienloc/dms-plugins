@@ -123,7 +123,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("hiddenBar", "Expansion & Collapse")
+            text: I18n.trFor("hiddenBar", "Expansion")
         }
 
         SettingsGroup {

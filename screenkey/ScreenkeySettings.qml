@@ -113,7 +113,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("screenkey", "General Settings")
+            text: I18n.trFor("screenkey", "Visualizer")
         }
 
         SettingsGroup {

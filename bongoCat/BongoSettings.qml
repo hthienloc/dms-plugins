@@ -256,7 +256,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("bongoCat", "Input & Behavior")
+            text: I18n.trFor("bongoCat", "Interaction")
         }
 
         SettingsGroup {

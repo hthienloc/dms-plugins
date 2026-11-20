@@ -336,7 +336,7 @@ Column {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("quickCapture", "Audio & Overlay")
+            text: I18n.trFor("quickCapture", "Recording Overlay")
         }
 
         SettingsGroup {

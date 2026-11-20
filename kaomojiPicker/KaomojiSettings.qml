@@ -40,7 +40,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("kaomojiPicker", "General Settings")
+            text: I18n.trFor("kaomojiPicker", "Launcher")
         }
 
         SettingsGroup {

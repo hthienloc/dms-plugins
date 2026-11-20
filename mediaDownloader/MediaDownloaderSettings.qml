@@ -72,7 +72,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: "General Settings"
+            text: "Download Folders"
         }
 
         SettingsGroup {
@@ -137,7 +137,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: "Quick Video Defaults"
+            text: "Video Defaults"
         }
 
         SettingsGroup {
@@ -191,7 +191,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: "Quick Audio Defaults"
+            text: "Audio Defaults"
         }
 
         SettingsGroup {
@@ -250,7 +250,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: "Advanced Downloader Settings"
+            text: "Advanced"
         }
 
         SettingsGroup {

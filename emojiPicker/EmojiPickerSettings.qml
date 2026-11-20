@@ -53,7 +53,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("emojiPicker", "General")
+            text: I18n.trFor("emojiPicker", "Picker")
         }
 
         SettingsGroup {

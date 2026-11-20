@@ -118,7 +118,7 @@ print(json.dumps(res))
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("typingSounds", "General")
+            text: I18n.trFor("typingSounds", "Playback")
         }
 
         SettingsGroup {
