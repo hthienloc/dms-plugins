@@ -29,6 +29,7 @@ const values = {
     audioCodec: "opus",
     recordingStatusLocation: "auto",
     showPillBorder: false,
+    dimUnfocusedRecordingPill: false,
     blinkRecordDot: true,
     showRecordingDot: true,
     showRecordingTimer: true,

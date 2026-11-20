@@ -34,6 +34,7 @@ Column {
     property string audioCodec: Defaults.values.audioCodec
     property string recordingStatusLocation: Defaults.values.recordingStatusLocation
     property bool showPillBorder: Defaults.values.showPillBorder
+    property bool dimUnfocusedRecordingPill: Defaults.values.dimUnfocusedRecordingPill
     property bool showRecordingDot: Defaults.values.showRecordingDot
     property bool blinkRecordDot: Defaults.values.blinkRecordDot
     property bool showRecordingTimer: Defaults.values.showRecordingTimer
@@ -105,6 +106,7 @@ Column {
         audioCodec = settings.loadValue("audioCodec", Defaults.values.audioCodec);
         recordingStatusLocation = settings.loadValue("recordingStatusLocation", Defaults.values.recordingStatusLocation);
         showPillBorder = settings.loadValue("showPillBorder", Defaults.values.showPillBorder);
+        dimUnfocusedRecordingPill = settings.loadValue("dimUnfocusedRecordingPill", Defaults.values.dimUnfocusedRecordingPill);
         showRecordingDot = settings.loadValue("showRecordingDot", Defaults.values.showRecordingDot);
         blinkRecordDot = settings.loadValue("blinkRecordDot", Defaults.values.blinkRecordDot);
         showRecordingTimer = settings.loadValue("showRecordingTimer", Defaults.values.showRecordingTimer);
@@ -473,6 +475,23 @@ Column {
                 onToggled: isChecked => {
                     root.showPillBorder = isChecked;
                     root.save("showPillBorder", isChecked);
+                }
+            }
+
+            SettingsToggleRow {
+                visible: root.recordingStatusLocation !== "bar"
+                text: I18n.trFor("quickCapture", "Dim Pill When Unhovered")
+                description: I18n.trFor("quickCapture", "Fade the floating pill when not hovered.")
+                checked: root.dimUnfocusedRecordingPill
+                modified: root.dimUnfocusedRecordingPill !== Defaults.values.dimUnfocusedRecordingPill
+                resetByKeys: false
+                onResetRequested: {
+                    root.dimUnfocusedRecordingPill = Defaults.values.dimUnfocusedRecordingPill;
+                    root.save("dimUnfocusedRecordingPill", Defaults.values.dimUnfocusedRecordingPill);
+                }
+                onToggled: isChecked => {
+                    root.dimUnfocusedRecordingPill = isChecked;
+                    root.save("dimUnfocusedRecordingPill", isChecked);
                 }
             }
 

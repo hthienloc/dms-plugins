@@ -18,6 +18,8 @@ PanelWindow {
     readonly property string durationText: recorder ? recorder.formatDuration(recorder.recordingSeconds) : "00:00"
     readonly property string statusLocation: Defaults.get(daemon?.pluginData, "recordingStatusLocation")
     readonly property bool showPillBorder: Defaults.get(daemon?.pluginData, "showPillBorder")
+    readonly property bool dimUnfocusedPill: Defaults.get(daemon?.pluginData, "dimUnfocusedRecordingPill")
+    readonly property bool pillHovered: pillHover.hovered || (root.showExpandedControls && controlsHover.hovered) || dragArea.pressed || root.controlsExpanded
     readonly property bool showRecordingDot: Defaults.get(daemon?.pluginData, "showRecordingDot")
     readonly property bool showRecordingTimer: Defaults.get(daemon?.pluginData, "showRecordingTimer")
     readonly property bool showRecordingControls: Defaults.get(daemon?.pluginData, "showRecordingControls")
@@ -129,6 +131,17 @@ PanelWindow {
         color: Theme.withAlpha(Theme.surfaceContainer, Theme.popupTransparency)
         border.color: Theme.outlineVariant
         border.width: root.showPillBorder ? 1 : 0
+        opacity: (!root.dimUnfocusedPill || root.pillHovered) ? 1.0 : 0.35
+
+        Behavior on opacity {
+            NumberAnimation {
+                duration: Theme.shortDuration
+            }
+        }
+
+        HoverHandler {
+            id: pillHover
+        }
 
         x: root.hasCustomPosition
             ? Math.max(root.minX, Math.min(root.maxX, root.customX))
@@ -232,6 +245,10 @@ PanelWindow {
         color: Theme.withAlpha(Theme.surfaceContainer, Theme.popupTransparency)
         border.color: Theme.outlineVariant
         border.width: root.showPillBorder ? 1 : 0
+
+        HoverHandler {
+            id: controlsHover
+        }
 
         x: Math.max(root.leftInset, Math.min(root.width - width - root.rightInset, pillCard.x + (pillCard.width - width) / 2))
         y: placeAbove ? (pillCard.y - gap - height) : (pillCard.y + pillCard.height + gap)
