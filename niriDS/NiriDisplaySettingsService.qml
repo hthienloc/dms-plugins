@@ -15,6 +15,7 @@ Singleton {
     property bool modalVisible: false
     property var modal: null
     property string _displaysJsonCache: ""
+    property var _pendingToggles: ({})
 
     readonly property bool hasExternal: {
         const raw = root.rawOutputs || {};
@@ -81,6 +82,14 @@ Singleton {
             root._displaysJsonCache = newJson;
             root.displays = arr;
         }
+
+        for (const name in root._pendingToggles) {
+            const pending = root._pendingToggles[name];
+            const display = arr.find(d => d.name === name);
+            if (!display || (!pending.running && display.disabled === pending.disabled)) {
+                delete root._pendingToggles[name];
+            }
+        }
     }
 
     function setDisplays() {
@@ -103,10 +112,39 @@ Singleton {
 
     function toggleDisable(display) {
         if (!display || !display.name) return;
+        const name = display.name;
+        let pending = root._pendingToggles[name];
+        if (!pending) {
+            const current = root.displays.find(d => d.name === name);
+            if (!current) return;
+            pending = { disabled: current.disabled, appliedDisabled: current.disabled, running: false };
+            root._pendingToggles[name] = pending;
+        }
         stopMirror();
-        const action = display.disabled ? "on" : "off";
-        Proc.runCommand("niriDS:toggle", ["niri", "msg", "output", display.name, action], (out, code) => {
-            if (code === 0) setDisplays();
+        pending.disabled = !pending.disabled;
+        if (!pending.running) runToggle(name, pending);
+    }
+
+    function runToggle(name, pending) {
+        const disabled = pending.disabled;
+        pending.running = true;
+        // Serialize each output and preserve the latest intent until a fresh
+        // snapshot confirms it, including clicks after the command completes.
+        // Let Proc allocate a separate callback/debounce slot for each command.
+        Proc.runCommand(null, ["niri", "msg", "output", name, disabled ? "off" : "on"], (out, code) => {
+            if (root._pendingToggles[name] !== pending) return;
+            pending.running = false;
+            if (code !== 0) {
+                pending.disabled = pending.appliedDisabled;
+                setDisplays();
+                return;
+            }
+            pending.appliedDisabled = disabled;
+            if (pending.disabled !== disabled) {
+                runToggle(name, pending);
+            } else {
+                setDisplays();
+            }
         });
     }
 
