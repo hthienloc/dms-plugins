@@ -63,24 +63,24 @@ Column {
                 }
             }
 
-            SettingsButtonGroupRow {
+            SettingsDropdownRow {
                 visible: root.showToolbar
                 text: I18n.trFor("quickCapture", "Toolbar Position")
-                model: [
+                options: [
                     I18n.trFor("quickCapture", "Top"),
                     I18n.trFor("quickCapture", "Bottom"),
                     I18n.trFor("quickCapture", "Left"),
                     I18n.trFor("quickCapture", "Right")
                 ]
-                values: ["top", "bottom", "left", "right"]
-                value: root.toolbarPosition
+                optionValues: ["top", "bottom", "left", "right"]
+                currentValue: root.toolbarPosition
                 modified: root.toolbarPosition !== Defaults.values.toolbarPosition
                 resetByKeys: false
                 onResetRequested: {
                     root.toolbarPosition = Defaults.values.toolbarPosition;
                     root.save("toolbarPosition", Defaults.values.toolbarPosition);
                 }
-                onValueSelected: val => {
+                onValueChanged: val => {
                     root.toolbarPosition = val;
                     root.save("toolbarPosition", val);
                 }

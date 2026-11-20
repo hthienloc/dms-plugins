@@ -159,23 +159,23 @@ Column {
                 }
             }
 
-            SettingsButtonGroupRow {
+            SettingsDropdownRow {
                 text: I18n.trFor("quickCapture", "Preview Quality")
-                model: [
+                options: [
                     I18n.trFor("quickCapture", "Low"),
                     I18n.trFor("quickCapture", "Balanced"),
                     I18n.trFor("quickCapture", "High"),
                     I18n.trFor("quickCapture", "Very High")
                 ]
-                values: ["150000", "300000", "450000", "600000"]
-                value: root.editQuality
+                optionValues: ["150000", "300000", "450000", "600000"]
+                currentValue: root.editQuality
                 modified: root.editQuality !== String(Defaults.values.editQuality)
                 resetByKeys: false
                 onResetRequested: {
                     root.editQuality = String(Defaults.values.editQuality);
                     root.save("editQuality", Defaults.values.editQuality);
                 }
-                onValueSelected: val => {
+                onValueChanged: val => {
                     root.editQuality = val;
                     root.save("editQuality", val);
                 }

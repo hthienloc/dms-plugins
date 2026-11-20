@@ -132,18 +132,18 @@ Column {
                 text: I18n.trFor("quickCapture", "Format tokens: %Y (Year), %y (2-digit year), %m (Month), %d (Day), %H (Hour), %M (Minute), %S (Second), {zzz} (Ms)")
             }
 
-            SettingsButtonGroupRow {
+            SettingsDropdownRow {
                 text: I18n.trFor("quickCapture", "Output Format")
-                model: ["PNG", "JPEG", "WebP", "PDF", "PPM"]
-                values: ["png", "jpg", "webp", "pdf", "ppm"]
-                value: root.outputFormat
+                options: ["PNG", "JPEG", "WebP", "PDF", "PPM"]
+                optionValues: ["png", "jpg", "webp", "pdf", "ppm"]
+                currentValue: root.outputFormat
                 modified: root.outputFormat !== Defaults.values.outputFormat
                 resetByKeys: false
                 onResetRequested: {
                     root.outputFormat = Defaults.values.outputFormat;
                     root.save("outputFormat", Defaults.values.outputFormat);
                 }
-                onValueSelected: val => {
+                onValueChanged: val => {
                     root.outputFormat = val;
                     root.save("outputFormat", val);
                 }
@@ -211,24 +211,24 @@ Column {
             width: parent.width
             slotColor: SettingsMetrics.controlColor
 
-            SettingsButtonGroupRow {
+            SettingsDropdownRow {
                 text: I18n.trFor("quickCapture", "Post-Capture Notification")
                 description: I18n.trFor("quickCapture", "Choose notifications shown after copy or save.")
-                model: [
+                options: [
                     I18n.trFor("quickCapture", "Notification"),
                     I18n.trFor("quickCapture", "Toast"),
                     I18n.trFor("quickCapture", "Both"),
                     I18n.trFor("quickCapture", "None")
                 ]
-                values: ["notification", "toast", "both", "none"]
-                value: root.postNotification
+                optionValues: ["notification", "toast", "both", "none"]
+                currentValue: root.postNotification
                 modified: root.postNotification !== Defaults.values.postNotification
                 resetByKeys: false
                 onResetRequested: {
                     root.postNotification = Defaults.values.postNotification;
                     root.save("postNotification", Defaults.values.postNotification);
                 }
-                onValueSelected: val => {
+                onValueChanged: val => {
                     root.postNotification = val;
                     root.save("postNotification", val);
                 }

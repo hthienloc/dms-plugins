@@ -130,19 +130,19 @@ Column {
                 }
             }
 
-            SettingsButtonGroupRow {
+            SettingsDropdownRow {
                 visible: root.color_palette_preset === "catppuccin"
                 text: I18n.trFor("quickCapture", "Variant")
-                model: ["Latte", "Frappé", "Macchiato", "Mocha"]
-                values: ["latte", "frappe", "macchiato", "mocha"]
-                value: root.catppuccin_variant
+                options: ["Latte", "Frappé", "Macchiato", "Mocha"]
+                optionValues: ["latte", "frappe", "macchiato", "mocha"]
+                currentValue: root.catppuccin_variant
                 modified: root.catppuccin_variant !== Defaults.values.catppuccin_variant
                 resetByKeys: false
                 onResetRequested: {
                     root.catppuccin_variant = Defaults.values.catppuccin_variant;
                     root.save("catppuccin_variant", Defaults.values.catppuccin_variant);
                 }
-                onValueSelected: val => {
+                onValueChanged: val => {
                     root.catppuccin_variant = val;
                     root.save("catppuccin_variant", val);
                 }

@@ -200,36 +200,36 @@ Column {
                 }
             }
 
-            SettingsButtonGroupRow {
+            SettingsDropdownRow {
                 text: I18n.trFor("quickCapture", "Container Format")
-                model: ["MP4", "MKV", "WebM", "FLV", "GIF"]
-                values: ["mp4", "mkv", "webm", "flv", "gif"]
-                value: root.recordingFormat
+                options: ["MP4", "MKV", "WebM", "FLV", "GIF"]
+                optionValues: ["mp4", "mkv", "webm", "flv", "gif"]
+                currentValue: root.recordingFormat
                 modified: root.recordingFormat !== Defaults.values.recordingFormat
                 resetByKeys: false
                 onResetRequested: {
                     root.recordingFormat = Defaults.values.recordingFormat;
                     root.save("recordingFormat", Defaults.values.recordingFormat);
                 }
-                onValueSelected: val => {
+                onValueChanged: val => {
                     root.recordingFormat = val;
                     root.save("recordingFormat", val);
                 }
             }
 
-            SettingsButtonGroupRow {
+            SettingsDropdownRow {
                 visible: root.recordingFormat === "gif"
                 text: I18n.trFor("quickCapture", "GIF Framerate")
-                model: ["10 FPS", "15 FPS", "24 FPS", "30 FPS"]
-                values: ["10", "15", "24", "30"]
-                value: root.recordingGifFramerate
+                options: ["10 FPS", "15 FPS", "24 FPS", "30 FPS"]
+                optionValues: ["10", "15", "24", "30"]
+                currentValue: root.recordingGifFramerate
                 modified: root.recordingGifFramerate !== String(Defaults.values.recordingGifFramerate)
                 resetByKeys: false
                 onResetRequested: {
                     root.recordingGifFramerate = String(Defaults.values.recordingGifFramerate);
                     root.save("recordingGifFramerate", Defaults.values.recordingGifFramerate);
                 }
-                onValueSelected: val => {
+                onValueChanged: val => {
                     root.recordingGifFramerate = val;
                     root.save("recordingGifFramerate", val);
                 }
@@ -437,24 +437,24 @@ Column {
                 }
             }
 
-            SettingsButtonGroupRow {
+            SettingsDropdownRow {
                 text: I18n.trFor("quickCapture", "Recording Status Location")
                 description: I18n.trFor("quickCapture", "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.")
-                model: [
+                options: [
                     I18n.trFor("quickCapture", "Auto"),
                     I18n.trFor("quickCapture", "DankBar"),
                     I18n.trFor("quickCapture", "Floating Pill"),
                     I18n.trFor("quickCapture", "Both")
                 ]
-                values: ["auto", "bar", "floating", "both"]
-                value: root.recordingStatusLocation
+                optionValues: ["auto", "bar", "floating", "both"]
+                currentValue: root.recordingStatusLocation
                 modified: root.recordingStatusLocation !== Defaults.values.recordingStatusLocation
                 resetByKeys: false
                 onResetRequested: {
                     root.recordingStatusLocation = Defaults.values.recordingStatusLocation;
                     root.save("recordingStatusLocation", Defaults.values.recordingStatusLocation);
                 }
-                onValueSelected: val => {
+                onValueChanged: val => {
                     root.recordingStatusLocation = val;
                     root.save("recordingStatusLocation", val);
                 }
