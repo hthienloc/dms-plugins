@@ -150,6 +150,7 @@ Singleton {
 
     function apply(profile) {
         stopMirror();
+        root._pendingToggles = ({});
         const toProcess = [...displays];
         if (toProcess.length === 0) return;
 
@@ -214,6 +215,7 @@ Singleton {
     }
 
     function enableInternalDisplay() {
+        root._pendingToggles = ({});
         Proc.runCommand("niriDS:fallbackCheck", ["niri", "msg", "--json", "outputs"], (output, exitCode) => {
             if (exitCode !== 0) {
                 const pref = PluginService ? PluginService.loadPluginData("niriDS", "fallbackDisplay", "") : "";
