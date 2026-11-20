@@ -621,7 +621,6 @@ PluginComponent {
                 width: parent.width
                 headerText: "IP Indicator" + (vpnActive ? " (VPN)" : "")
                 detailsText: privacyMode ? "Hidden" : root.statusMessage
-                showCloseButton: false
 
                 Column {
                     width: parent.width

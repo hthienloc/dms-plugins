@@ -996,7 +996,6 @@ PluginComponent {
             width: root.popoutWidth
             headerText: ""
             detailsText: ""
-            showCloseButton: false
 
             Item {
                 width: parent.width

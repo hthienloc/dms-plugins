@@ -814,7 +814,6 @@ PluginComponent {
         PopoutComponent {
             id: popoutComp
             headerText: ""
-            showCloseButton: false
 
             Component.onCompleted: {
                 root.popoutOpen = true;

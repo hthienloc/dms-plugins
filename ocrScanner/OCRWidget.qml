@@ -311,7 +311,6 @@ PluginComponent {
     FileBrowserModal {
         id: fileBrowserModal
         browserTitle: "Select Image to Scan"
-        browserIcon: "image"
         fileExtensions: ["*.png", "*.jpg", "*.jpeg", "*.webp", "*.bmp"]
         onFileSelected: path => {
             pluginRoot.isScanning = true;
@@ -329,7 +328,6 @@ PluginComponent {
     FileBrowserModal {
         id: saveBrowserModal
         browserTitle: "Save OCR Result"
-        browserIcon: "save"
         saveMode: true
         defaultFileName: "ocr_result.txt"
         fileExtensions: ["*.txt"]
@@ -368,7 +366,6 @@ PluginComponent {
             id: popout
             width: root.popoutWidth
             headerText: ""
-            showCloseButton: false
             focus: true
 
             property var parentPopout: null

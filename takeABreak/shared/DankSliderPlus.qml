@@ -180,8 +180,9 @@ Item {
 
                 Behavior on scale {
                     NumberAnimation {
-                        duration: Theme.shortDuration
-                        easing.type: Theme.standardEasing
+                        duration: Theme.expressiveDurations.expressiveFastSpatial
+                        easing.type: Easing.BezierSpline
+                        easing.bezierCurve: Theme.expressiveCurves.expressiveFastSpatial
                     }
                 }
             }
@@ -362,8 +363,9 @@ Item {
 
                 Behavior on opacity {
                     NumberAnimation {
-                        duration: Theme.shortDuration
-                        easing.type: Theme.standardEasing
+                        duration: Theme.expressiveDurations.expressiveEffects
+                        easing.type: Easing.BezierSpline
+                        easing.bezierCurve: Theme.expressiveCurves.expressiveEffects
                     }
                 }
             }

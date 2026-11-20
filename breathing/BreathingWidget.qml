@@ -584,7 +584,6 @@ PluginComponent {
             width: root.popoutWidth
             headerText: "Breathing Exercises"
             detailsText: isRunning ? (exercises[currentExerciseIndex].name + " • Cycle " + currentCycle + "/" + root.calculatedCycles) : ""
-            showCloseButton: false
             focus: true
 
             property var parentPopout: null

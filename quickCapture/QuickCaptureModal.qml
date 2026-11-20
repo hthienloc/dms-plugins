@@ -2691,7 +2691,6 @@ Item {
     FileBrowserSurfaceModal {
         id: saveAsDialog
         browserTitle: I18n.trFor("quickCapture", "Save Screenshot As")
-        browserIcon: "save"
         browserType: "quick_capture_save"
         saveMode: true
         allowStacking: true
@@ -2708,7 +2707,6 @@ Item {
     FileBrowserSurfaceModal {
         id: insertImageDialog
         browserTitle: I18n.trFor("quickCapture", "Insert Image")
-        browserIcon: "add_photo_alternate"
         browserType: "quick_capture_insert_image"
         saveMode: false
         allowStacking: true

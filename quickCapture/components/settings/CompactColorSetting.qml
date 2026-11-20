@@ -118,8 +118,9 @@ Item {
                 scale: hoverHandler.hovered ? 1.08 : 1.0
                 Behavior on scale {
                     NumberAnimation {
-                        duration: Theme.shorterDuration
-                        easing.type: Theme.standardEasing
+                        duration: Theme.expressiveDurations.expressiveFastSpatial
+                        easing.type: Easing.BezierSpline
+                        easing.bezierCurve: Theme.expressiveCurves.expressiveFastSpatial
                     }
                 }
 

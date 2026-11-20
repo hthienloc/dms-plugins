@@ -446,7 +446,6 @@ PluginComponent {
                 width: parent.width
                 headerText: "Lutris Launcher"
                 detailsText: root.isLaunching ? "Launching game..." : root.statusMessage
-                showCloseButton: false
                 
                 Component.onDestruction: {
                     root.searchQuery = "";

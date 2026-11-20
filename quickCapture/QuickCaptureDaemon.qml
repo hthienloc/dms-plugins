@@ -518,7 +518,6 @@ PluginComponent {
         id: fileBrowserModal
         property string captureAction: "edit"
         browserTitle: I18n.trFor("quickCapture", "Select Image to Annotate")
-        browserIcon: "image"
         fileExtensions: ["*.png", "*.jpg", "*.jpeg", "*.webp", "*.bmp"]
         onFileSelected: path => {
             root.loadImageFromUri(path, fileBrowserModal.captureAction);

@@ -432,7 +432,6 @@ PluginComponent {
         PopoutComponent {
             id: popout
             headerText: I18n.trFor("timer", "Timer")
-            showCloseButton: true
 
             Column {
                 width: parent.width

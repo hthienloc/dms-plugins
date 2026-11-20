@@ -32,7 +32,6 @@ PluginComponent {
                 if (activeCount === 1) return I18n.trFor("desktopWidgetToggle", "1 active group");
                 return I18n.trFor("desktopWidgetToggle", "%1 active groups").arg(activeCount);
             }
-            showCloseButton: true
 
             Column {
                 width: parent.width

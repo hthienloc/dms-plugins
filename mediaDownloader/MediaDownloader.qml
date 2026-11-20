@@ -588,7 +588,6 @@ PluginComponent {
             id: popoutComp
             headerText: ""
             detailsText: ""
-            showCloseButton: false
             spacing: Theme.spacingM
 
             component ConnectedFooterButton: Rectangle {

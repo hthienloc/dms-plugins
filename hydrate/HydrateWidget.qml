@@ -243,7 +243,6 @@ PluginComponent {
             onParentPopoutChanged: root.activePopoutReference = parentPopout
             width: parent ? parent.width : 0
             headerText: "Hydration Tracker"
-            showCloseButton: true
 
             Column {
                 width: parent.width

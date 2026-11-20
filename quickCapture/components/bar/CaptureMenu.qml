@@ -68,7 +68,6 @@ PopoutComponent {
 
     width: widget.popoutWidth
     headerText: ""
-    showCloseButton: false
     spacing: Theme.spacingS
     property var parentPopout: null
     closePopout: () => widget.closePopout()

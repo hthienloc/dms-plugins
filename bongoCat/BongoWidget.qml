@@ -680,7 +680,6 @@ PluginComponent {
             id: popout
             width: root.popoutWidth
             headerText: ""
-            showCloseButton: false
 
             readonly property bool isActive: !root.isWaiting && !root.forceSleep
 

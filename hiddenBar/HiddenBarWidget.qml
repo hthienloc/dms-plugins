@@ -417,7 +417,6 @@ PluginComponent {
         id: popoutComponentDef
         PopoutComponent {
             headerText: ""
-            showCloseButton: false
             
             Component.onCompleted: pluginRoot._popoutVisible = true
             Component.onDestruction: {
