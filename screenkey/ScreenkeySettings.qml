@@ -314,7 +314,7 @@ PluginSettings {
                 text: I18n.trFor("screenkey", "Overlay Opacity")
                 minimum: 10
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.overlayOpacity
                 modified: root.overlayOpacity !== root.defaultOverlayOpacity

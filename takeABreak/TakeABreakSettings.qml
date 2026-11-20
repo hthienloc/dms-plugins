@@ -229,7 +229,7 @@ PluginSettings {
                 text: I18n.trFor("takeABreak", "Short Break Duration")
                 minimum: 5
                 maximum: 120
-                step: 1
+                step: 5
                 unit: "s"
                 value: root.shortBreakDuration
                 modified: root.shortBreakDuration !== root.defaultShortBreakDuration
@@ -400,7 +400,7 @@ PluginSettings {
                 text: I18n.trFor("takeABreak", "Alert Volume")
                 minimum: 0
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.soundVolume
                 modified: root.soundVolume !== root.defaultSoundVolume
@@ -462,7 +462,7 @@ PluginSettings {
                 description: I18n.trFor("takeABreak", "How transparent the pre-warning notification should be.")
                 minimum: 20
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.preWarningOpacity
                 modified: root.preWarningOpacity !== root.defaultPreWarningOpacity
@@ -482,7 +482,7 @@ PluginSettings {
                 description: I18n.trFor("takeABreak", "How transparent the fullscreen break background should be.")
                 minimum: 50
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.overlayOpacity
                 modified: root.overlayOpacity !== root.defaultOverlayOpacity

@@ -220,7 +220,7 @@ PluginSettings {
                 text: I18n.trFor("breathing", "Sound Volume")
                 minimum: 0
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.defaultSoundVolume
                 visible: root.enableSound

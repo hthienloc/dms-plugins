@@ -233,7 +233,7 @@ Column {
                 value: root.edgeSpacing
                 minimum: 0
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "px"
                 modified: root.edgeSpacing !== Defaults.values.edgeSpacing
                 resetByKeys: false

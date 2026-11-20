@@ -128,7 +128,7 @@ Column {
         value: root.presetThickness
         minimum: root.meta.min
         maximum: root.meta.max
-        step: 1
+        step: root.meta.step !== undefined ? root.meta.step : 1
         unit: root.meta.unit
         modified: root.presetThickness !== root.meta.defaultValue
         resetByKeys: false

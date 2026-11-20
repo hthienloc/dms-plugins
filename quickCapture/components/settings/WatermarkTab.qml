@@ -147,7 +147,7 @@ Column {
                 value: root.watermarkOpacity
                 minimum: 5
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 modified: root.watermarkOpacity !== Defaults.values.watermarkOpacity
                 resetByKeys: false
@@ -236,7 +236,7 @@ Column {
                 value: root.watermarkSize
                 minimum: 5
                 maximum: 50
-                step: 1
+                step: 5
                 unit: "%"
                 modified: root.watermarkSize !== Defaults.values.watermarkSize
                 resetByKeys: false

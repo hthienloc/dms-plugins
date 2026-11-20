@@ -174,7 +174,7 @@ PluginSettings {
                 description: I18n.trFor("hiddenBar", "Fine-tune the horizontal popout width.")
                 minimum: -150
                 maximum: 150
-                step: 1
+                step: 5
                 unit: "px"
                 value: root.popoutWidthAdjustment
                 modified: root.popoutWidthAdjustment !== root.defaultPopoutWidthAdjustment
@@ -195,7 +195,7 @@ PluginSettings {
                 description: I18n.trFor("hiddenBar", "Fine-tune the popout height.")
                 minimum: -150
                 maximum: 150
-                step: 1
+                step: 5
                 unit: "px"
                 value: root.popoutHeightAdjustment
                 modified: root.popoutHeightAdjustment !== root.defaultPopoutHeightAdjustment
@@ -247,7 +247,7 @@ PluginSettings {
                 description: I18n.trFor("hiddenBar", "Wait time before expanding on hover.")
                 minimum: 0
                 maximum: 1000
-                step: 1
+                step: 25
                 unit: "ms"
                 value: root.hoverDelay
                 modified: root.hoverDelay !== root.defaultHoverDelay
@@ -320,7 +320,7 @@ PluginSettings {
                 description: I18n.trFor("hiddenBar", "How long the slide animation takes.")
                 minimum: 80
                 maximum: 600
-                step: 1
+                step: 10
                 unit: "ms"
                 value: root.animDuration
                 modified: root.animDuration !== root.defaultAnimDuration
@@ -419,7 +419,7 @@ PluginSettings {
                 description: I18n.trFor("hiddenBar", "Fine-tune the trigger zone width along the bar axis. Positive values expand it, negative values shrink it.")
                 minimum: -150
                 maximum: 150
-                step: 1
+                step: 5
                 unit: "px"
                 value: root.triggerAdjustment
                 modified: root.triggerAdjustment !== root.defaultTriggerAdjustment
@@ -439,7 +439,7 @@ PluginSettings {
                 description: I18n.trFor("hiddenBar", "Shift the trigger zone position along the bar axis. Positive values shift right/down, negative values shift left/up.")
                 minimum: -100
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "px"
                 value: root.triggerOffset
                 modified: root.triggerOffset !== root.defaultTriggerOffset

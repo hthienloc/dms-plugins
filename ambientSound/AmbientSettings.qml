@@ -136,7 +136,7 @@ PluginSettings {
                 description: I18n.trFor("ambientSound", "Initial volume when starting.")
                 minimum: 0
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.defaultVolume
                 modified: root.defaultVolume !== root.defaultDefaultVolume

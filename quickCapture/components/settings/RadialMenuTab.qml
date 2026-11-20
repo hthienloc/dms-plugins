@@ -143,7 +143,7 @@ Column {
                 value: root.radialMenuOpacity
                 minimum: 0
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 modified: root.radialMenuOpacity !== Defaults.values.radialMenuOpacity
                 resetByKeys: false

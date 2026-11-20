@@ -315,7 +315,7 @@ Column {
                     value: toolSection.thicknessVal
                     minimum: toolSection.meta.min
                     maximum: toolSection.meta.max
-                    step: 1
+                    step: toolSection.meta.step !== undefined ? toolSection.meta.step : 1
                     unit: toolSection.meta.unit
                     modified: toolSection.thicknessVal !== toolSection.meta.defaultValue
                     resetByKeys: false
@@ -367,7 +367,7 @@ Column {
                 value: root.textFontSize
                 minimum: Constants.getToolMeta("text").min
                 maximum: Constants.getToolMeta("text").max
-                step: 1
+                step: Constants.getToolMeta("text").step
                 unit: Constants.getToolMeta("text").unit
                 modified: root.textFontSize !== Constants.getToolMeta("text").defaultValue
                 resetByKeys: false

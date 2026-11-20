@@ -205,7 +205,7 @@ Column {
                 value: root.backgroundImageDimStrength
                 minimum: 0
                 maximum: 80
-                step: 1
+                step: 5
                 unit: "%"
                 modified: root.backgroundImageDimStrength !== Defaults.values.backgroundImageDimStrength
                 resetByKeys: false
@@ -278,7 +278,7 @@ Column {
                 value: root.backgroundDefaultPadding
                 minimum: 0
                 maximum: 150
-                step: 1
+                step: 5
                 unit: "px"
                 modified: root.backgroundDefaultPadding !== Defaults.values.backgroundDefaultPadding
                 resetByKeys: false
@@ -297,7 +297,7 @@ Column {
                 value: root.backgroundDefaultRadius
                 minimum: 0
                 maximum: 60
-                step: 1
+                step: 2
                 unit: "px"
                 modified: root.backgroundDefaultRadius !== Defaults.values.backgroundDefaultRadius
                 resetByKeys: false
@@ -316,7 +316,7 @@ Column {
                 value: root.backgroundDefaultShadow
                 minimum: 0
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 modified: root.backgroundDefaultShadow !== Defaults.values.backgroundDefaultShadow
                 resetByKeys: false
@@ -335,7 +335,7 @@ Column {
                 value: root.backgroundDefaultAngle
                 minimum: 0
                 maximum: 360
-                step: 1
+                step: 15
                 unit: "°"
                 modified: root.backgroundDefaultAngle !== Defaults.values.backgroundDefaultAngle
                 resetByKeys: false

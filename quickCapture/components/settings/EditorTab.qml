@@ -130,7 +130,7 @@ Column {
                 value: root.overlayOpacity
                 minimum: 0
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 modified: root.overlayOpacity !== Defaults.values.overlayOpacity
                 resetByKeys: false

@@ -122,7 +122,7 @@ PluginSettings {
                 text: I18n.trFor("bongoCat", "Cat Size")
                 minimum: 50
                 maximum: 200
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.catSizePercent
                 modified: root.catSizePercent !== root.defaultCatSizePercent
@@ -288,7 +288,7 @@ PluginSettings {
                 description: I18n.trFor("bongoCat", "How long the paws stay down after a key press (0 for instant).")
                 minimum: 0
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "ms"
                 value: root.pawHoldTime
                 modified: root.pawHoldTime !== root.defaultPawHoldTime
@@ -374,7 +374,7 @@ PluginSettings {
                 description: I18n.trFor("bongoCat", "Time span the speed and correction rate are averaged over.")
                 minimum: 5
                 maximum: 120
-                step: 1
+                step: 5
                 unit: "s"
                 value: root.metricsWindowSec
                 modified: root.metricsWindowSec !== root.defaultMetricsWindowSec
@@ -447,7 +447,7 @@ PluginSettings {
                 text: I18n.trFor("bongoCat", "Volume")
                 minimum: 0
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.soundVolume
                 modified: root.soundVolume !== root.defaultSoundVolume
@@ -545,7 +545,7 @@ PluginSettings {
                 description: I18n.trFor("bongoCat", "Adjust transparency of the desktop widget card.")
                 minimum: 0
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.desktopBackgroundOpacity
                 modified: root.desktopBackgroundOpacity !== root.defaultDesktopBackgroundOpacity

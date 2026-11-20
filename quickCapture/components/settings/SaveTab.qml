@@ -162,7 +162,7 @@ Column {
                 value: root.jpegQuality
                 minimum: 1
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 modified: root.jpegQuality !== Defaults.values.jpegQuality
                 resetByKeys: false
@@ -182,7 +182,7 @@ Column {
                 value: root.webpQuality
                 minimum: 1
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 modified: root.webpQuality !== Defaults.values.webpQuality
                 resetByKeys: false

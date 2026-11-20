@@ -144,7 +144,7 @@ print(json.dumps(res))
                 text: I18n.trFor("typingSounds", "Sound Volume")
                 minimum: 0
                 maximum: 200
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.volume
                 modified: root.volume !== root.defaultVolume

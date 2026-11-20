@@ -80,7 +80,7 @@ PluginSettings {
                 description: I18n.trFor("persona5Calendar", "Adjust transparency of the calendar HUD.")
                 minimum: 20
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.widgetOpacity
                 modified: root.widgetOpacity !== root.defaultWidgetOpacity

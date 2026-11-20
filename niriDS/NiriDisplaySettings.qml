@@ -110,7 +110,7 @@ PluginSettings {
                 description: I18n.trFor("niriDS", "Adjust the background dimming opacity when the display settings modal is open")
                 minimum: 0
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.bgOpacity
                 modified: root.bgOpacity !== root.defaultBgOpacity

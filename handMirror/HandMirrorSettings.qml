@@ -125,7 +125,7 @@ PluginSettings {
                 text: I18n.trFor("handMirror", "Filter Strength")
                 minimum: 0
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.filterStrength
                 modified: root.filterStrength !== root.defaultFilterStrength
@@ -145,7 +145,7 @@ PluginSettings {
                 description: I18n.trFor("handMirror", "Reduces camera noise by softening the image.")
                 minimum: 0
                 maximum: 100
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.smoothingAmount
                 modified: root.smoothingAmount !== root.defaultSmoothingAmount
@@ -209,20 +209,22 @@ PluginSettings {
 
             SettingsSliderRow {
                 text: I18n.trFor("handMirror", "Digital Zoom")
-                minimum: 1.0
-                maximum: 3.0
-                step: 0.1
+                minimum: 10
+                maximum: 30
+                step: 1
+                decimals: 1
                 unit: "x"
-                value: root.zoomFactor
-                modified: root.zoomFactor !== root.defaultZoomFactor
+                value: Math.round(root.zoomFactor * 10)
+                modified: Math.abs(root.zoomFactor - root.defaultZoomFactor) > 0.01
                 resetByKeys: false
                 onResetRequested: {
                     root.zoomFactor = root.defaultZoomFactor;
                     root.saveValue("zoomFactor", root.defaultZoomFactor);
                 }
                 onSliderDragFinished: finalValue => {
-                    root.zoomFactor = finalValue;
-                    root.saveValue("zoomFactor", finalValue);
+                    const next = finalValue / 10.0;
+                    root.zoomFactor = next;
+                    root.saveValue("zoomFactor", next);
                 }
             }
 
@@ -286,7 +288,7 @@ PluginSettings {
                 text: I18n.trFor("handMirror", "Popout Scale")
                 minimum: 50
                 maximum: 250
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.popoutScale
                 modified: root.popoutScale !== root.defaultPopoutScale
@@ -320,7 +322,7 @@ PluginSettings {
                 text: I18n.trFor("handMirror", "Window Scale")
                 minimum: 50
                 maximum: 250
-                step: 1
+                step: 5
                 unit: "%"
                 value: root.windowScale
                 modified: root.windowScale !== root.defaultWindowScale
