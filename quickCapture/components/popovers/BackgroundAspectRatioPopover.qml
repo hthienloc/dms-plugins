@@ -109,6 +109,7 @@ PopoverSurface {
                     id: slider
                     minimum: popoverRoot._sliderMin
                     maximum: popoverRoot._sliderMax
+                    step: 5
                     anchors.left: ratioText.right
                     anchors.right: valueText.left
                     anchors.leftMargin: Theme.spacingS

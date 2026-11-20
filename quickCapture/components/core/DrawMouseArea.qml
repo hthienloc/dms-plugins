@@ -461,13 +461,8 @@ MouseArea {
      * @returns {number} Intensity multiplier.
      */
     function getIntensityMultiplier(tool) {
-        if (tool === "text" || tool === "pixelate")
-            return 2;
-        if (tool === "spotlight")
-            return 5;
-        if (tool === "callout")
-            return 10;
-        return 1;
+        const meta = Constants.getToolMeta(tool);
+        return meta.step !== undefined ? meta.step : 1;
     }
 
     onPositionChanged: mouse => {

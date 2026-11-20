@@ -108,7 +108,7 @@ const ToolMetadata = {
     text: {
         min: 12,
         max: 120,
-        step: 1,
+        step: 2,
         unit: "px",
         defaultValue: 36,
         label: "Font Size",
@@ -117,7 +117,7 @@ const ToolMetadata = {
     pixelate: {
         min: 2,
         max: 16,
-        step: 1,
+        step: 2,
         unit: "px",
         defaultValue: 8,
         label: "Pixel Intensity",
@@ -129,7 +129,7 @@ const ToolMetadata = {
     spotlight: {
         min: 10,
         max: 100,
-        step: 1,
+        step: 5,
         unit: "%",
         defaultValue: 50,
         label: "Dimming Opacity",
