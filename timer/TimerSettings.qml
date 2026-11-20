@@ -472,7 +472,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("timer", "Usage Guide")
+            text: I18n.trFor("timer", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {

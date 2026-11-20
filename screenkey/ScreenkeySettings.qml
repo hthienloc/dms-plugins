@@ -643,7 +643,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("screenkey", "Usage Guide")
+            text: I18n.trFor("screenkey", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {

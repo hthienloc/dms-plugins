@@ -249,7 +249,7 @@ Column {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("quickCapture", "Usage Guide")
+            text: I18n.trFor("quickCapture", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: usageSection.expanded = !usageSection.expanded

@@ -341,7 +341,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("breathing", "Usage Guide")
+            text: I18n.trFor("breathing", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {

@@ -270,7 +270,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("ocrScanner", "Usage Guide")
+            text: I18n.trFor("ocrScanner", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {

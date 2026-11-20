@@ -280,7 +280,7 @@ print(json.dumps(res))
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("typingSounds", "Usage Guide")
+            text: I18n.trFor("typingSounds", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {

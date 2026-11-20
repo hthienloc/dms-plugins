@@ -345,7 +345,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("ipIndicator", "Usage Guide")
+            text: I18n.trFor("ipIndicator", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {

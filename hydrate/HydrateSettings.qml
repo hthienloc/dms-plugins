@@ -150,7 +150,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("hydrate", "Usage Guide")
+            text: I18n.trFor("hydrate", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {

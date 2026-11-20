@@ -776,7 +776,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("desktopWidgetToggle", "Usage Guide")
+            text: I18n.trFor("desktopWidgetToggle", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {

@@ -106,7 +106,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("lutrisLauncher", "Usage Guide")
+            text: I18n.trFor("lutrisLauncher", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {

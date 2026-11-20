@@ -72,7 +72,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: "Download Folders"
+            text: I18n.trFor("mediaDownloader", "Download Folders")
         }
 
         SettingsGroup {
@@ -81,8 +81,8 @@ PluginSettings {
 
             SettingsTextFieldRow {
                 id: audioPathField
-                text: "Audio Download Folder"
-                placeholderText: "e.g. " + Quickshell.env("HOME") + "/Music"
+                text: I18n.trFor("mediaDownloader", "Audio Download Folder")
+                placeholderText: I18n.trFor("mediaDownloader", "e.g. %1").arg(Quickshell.env("HOME") + "/Music")
                 value: root.downloadPathAudio
                 modified: root.downloadPathAudio !== root.defaultDownloadPathAudio
                 resetByKeys: false
@@ -106,8 +106,8 @@ PluginSettings {
 
             SettingsTextFieldRow {
                 id: videoPathField
-                text: "Video Download Folder"
-                placeholderText: "e.g. " + Quickshell.env("HOME") + "/Videos"
+                text: I18n.trFor("mediaDownloader", "Video Download Folder")
+                placeholderText: I18n.trFor("mediaDownloader", "e.g. %1").arg(Quickshell.env("HOME") + "/Videos")
                 value: root.downloadPathVideo
                 modified: root.downloadPathVideo !== root.defaultDownloadPathVideo
                 resetByKeys: false
@@ -137,7 +137,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: "Video Defaults"
+            text: I18n.trFor("mediaDownloader", "Video Defaults")
         }
 
         SettingsGroup {
@@ -145,8 +145,11 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
 
             SettingsDropdownRow {
-                text: "Preferred Format"
-                options: ["MP4 (Compatible)", "WebM (Open Format)"]
+                text: I18n.trFor("mediaDownloader", "Preferred Format")
+                options: [
+                    I18n.trFor("mediaDownloader", "MP4 (Compatible)"),
+                    I18n.trFor("mediaDownloader", "WebM (Open Format)")
+                ]
                 optionValues: ["mp4", "webm"]
                 currentValue: root.quickVideoFormat
                 modified: root.quickVideoFormat !== root.defaultQuickVideoFormat
@@ -162,12 +165,12 @@ PluginSettings {
             }
 
             SettingsDropdownRow {
-                text: "Max Resolution"
+                text: I18n.trFor("mediaDownloader", "Max Resolution")
                 options: [
-                    "Best Available Quality",
-                    "1080p (Full HD)",
-                    "720p (HD)",
-                    "480p (SD)"
+                    I18n.trFor("mediaDownloader", "Best Available Quality"),
+                    I18n.trFor("mediaDownloader", "1080p (Full HD)"),
+                    I18n.trFor("mediaDownloader", "720p (HD)"),
+                    I18n.trFor("mediaDownloader", "480p (SD)")
                 ]
                 optionValues: ["best", "1080p", "720p", "480p"]
                 currentValue: root.quickVideoRes
@@ -191,7 +194,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: "Audio Defaults"
+            text: I18n.trFor("mediaDownloader", "Audio Defaults")
         }
 
         SettingsGroup {
@@ -199,12 +202,12 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
 
             SettingsDropdownRow {
-                text: "Preferred Audio Format"
+                text: I18n.trFor("mediaDownloader", "Preferred Audio Format")
                 options: [
-                    "MP3 (Most Compatible)",
-                    "Opus (Low Bitrate efficient)",
-                    "FLAC (Lossless)",
-                    "WAV (Uncompressed)"
+                    I18n.trFor("mediaDownloader", "MP3 (Most Compatible)"),
+                    I18n.trFor("mediaDownloader", "Opus (Low Bitrate efficient)"),
+                    I18n.trFor("mediaDownloader", "FLAC (Lossless)"),
+                    I18n.trFor("mediaDownloader", "WAV (Uncompressed)")
                 ]
                 optionValues: ["mp3", "opus", "flac", "wav"]
                 currentValue: root.quickAudioFormat
@@ -221,12 +224,12 @@ PluginSettings {
             }
 
             SettingsDropdownRow {
-                text: "Audio Quality"
+                text: I18n.trFor("mediaDownloader", "Audio Quality")
                 options: [
-                    "Best Available Quality",
-                    "320 kbps (High Quality)",
-                    "192 kbps (Medium Quality)",
-                    "128 kbps (Low Quality)"
+                    I18n.trFor("mediaDownloader", "Best Available Quality"),
+                    I18n.trFor("mediaDownloader", "320 kbps (High Quality)"),
+                    I18n.trFor("mediaDownloader", "192 kbps (Medium Quality)"),
+                    I18n.trFor("mediaDownloader", "128 kbps (Low Quality)")
                 ]
                 optionValues: ["best", "320k", "192k", "128k"]
                 currentValue: root.quickAudioQuality
@@ -250,7 +253,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: "Advanced"
+            text: I18n.trFor("mediaDownloader", "Advanced")
         }
 
         SettingsGroup {
@@ -258,8 +261,8 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
 
             SettingsToggleRow {
-                text: "Enable SponsorBlock"
-                description: "Automatically skip sponsor blocks in YouTube videos."
+                text: I18n.trFor("mediaDownloader", "Enable SponsorBlock")
+                description: I18n.trFor("mediaDownloader", "Automatically skip sponsor blocks in YouTube videos.")
                 checked: root.sponsorBlock
                 modified: root.sponsorBlock !== root.defaultSponsorBlock
                 resetByKeys: false
@@ -274,7 +277,7 @@ PluginSettings {
             }
 
             SettingsToggleRow {
-                text: "Embed Thumbnail"
+                text: I18n.trFor("mediaDownloader", "Embed Thumbnail")
                 checked: root.embedThumbnail
                 modified: root.embedThumbnail !== root.defaultEmbedThumbnail
                 resetByKeys: false
@@ -289,8 +292,8 @@ PluginSettings {
             }
 
             SettingsToggleRow {
-                text: "Crop Thumbnail (1:1)"
-                description: "Crop the thumbnail to a perfect square before embedding."
+                text: I18n.trFor("mediaDownloader", "Crop Thumbnail (1:1)")
+                description: I18n.trFor("mediaDownloader", "Crop the thumbnail to a perfect square before embedding.")
                 checked: root.cropThumbnail
                 enabled: root.embedThumbnail
                 modified: root.cropThumbnail !== root.defaultCropThumbnail
@@ -306,8 +309,8 @@ PluginSettings {
             }
 
             SettingsToggleRow {
-                text: "Embed Metadata"
-                description: "Write metadata tags (title, artist, etc.) to the output file."
+                text: I18n.trFor("mediaDownloader", "Embed Metadata")
+                description: I18n.trFor("mediaDownloader", "Write metadata tags (title, artist, etc.) to the output file.")
                 checked: root.embedMetadata
                 modified: root.embedMetadata !== root.defaultEmbedMetadata
                 resetByKeys: false
@@ -322,7 +325,7 @@ PluginSettings {
             }
 
             SettingsToggleRow {
-                text: "Embed Subtitles"
+                text: I18n.trFor("mediaDownloader", "Embed Subtitles")
                 checked: root.embedSubs
                 modified: root.embedSubs !== root.defaultEmbedSubs
                 resetByKeys: false
@@ -337,8 +340,8 @@ PluginSettings {
             }
 
             SettingsToggleRow {
-                text: "Limit Download Speed"
-                description: "Throttle downloads to prevent network congestion."
+                text: I18n.trFor("mediaDownloader", "Limit Download Speed")
+                description: I18n.trFor("mediaDownloader", "Throttle downloads to prevent network congestion.")
                 checked: root.limitRate
                 modified: root.limitRate !== root.defaultLimitRate
                 resetByKeys: false
@@ -353,11 +356,11 @@ PluginSettings {
             }
 
             SettingsSliderRow {
-                text: "Max Speed Limit"
+                text: I18n.trFor("mediaDownloader", "Max Speed Limit")
                 minimum: 500
                 maximum: 50000
                 step: 100
-                unit: " KB/s"
+                unit: I18n.trFor("mediaDownloader", " KB/s")
                 value: root.maxRate
                 enabled: root.limitRate
                 modified: root.maxRate !== root.defaultMaxRate
@@ -383,7 +386,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: "Usage Guide"
+            text: I18n.trFor("mediaDownloader", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {
@@ -404,9 +407,9 @@ PluginSettings {
 
                 Repeater {
                     model: [
-                        "<b>Left-click</b> the pill to open the downloader popout.",
-                        "<b>Right-click</b> the pill to paste a URL from your clipboard and open the popout.",
-                        "<b>Drag and drop</b> links directly onto the pill to paste and open the popout."
+                        I18n.trFor("mediaDownloader", "<b>Left-click</b> the pill to open the downloader popout."),
+                        I18n.trFor("mediaDownloader", "<b>Right-click</b> the pill to paste a URL from your clipboard and open the popout."),
+                        I18n.trFor("mediaDownloader", "<b>Drag and drop</b> links directly onto the pill to paste and open the popout.")
                     ]
 
                     delegate: Row {
@@ -438,7 +441,7 @@ PluginSettings {
 
     FileBrowserSurfaceModal {
         id: audioBrowserModal
-        browserTitle: "Audio Download Folder"
+        browserTitle: I18n.trFor("mediaDownloader", "Audio Download Folder")
         browserType: "folder_picker"
         folderMode: true
         saveMode: false
@@ -455,7 +458,7 @@ PluginSettings {
 
     FileBrowserSurfaceModal {
         id: videoBrowserModal
-        browserTitle: "Video Download Folder"
+        browserTitle: I18n.trFor("mediaDownloader", "Video Download Folder")
         browserType: "folder_picker"
         folderMode: true
         saveMode: false

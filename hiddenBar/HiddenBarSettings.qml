@@ -845,7 +845,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("hiddenBar", "Usage Guide")
+            text: I18n.trFor("hiddenBar", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {

@@ -617,7 +617,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("bongoCat", "Usage Guide")
+            text: I18n.trFor("bongoCat", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {

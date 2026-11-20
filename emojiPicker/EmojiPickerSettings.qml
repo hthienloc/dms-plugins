@@ -292,7 +292,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("emojiPicker", "Usage Guide")
+            text: I18n.trFor("emojiPicker", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {

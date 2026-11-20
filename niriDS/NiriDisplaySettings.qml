@@ -214,7 +214,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("niriDS", "Usage Guide")
+            text: I18n.trFor("niriDS", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {

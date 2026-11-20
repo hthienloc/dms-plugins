@@ -153,7 +153,7 @@ PluginSettings {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("kaomojiPicker", "Usage Guide")
+            text: I18n.trFor("kaomojiPicker", "How to Use")
             collapsible: true
             expanded: usageSection.expanded
             onToggleRequested: {
