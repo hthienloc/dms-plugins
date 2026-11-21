@@ -252,35 +252,35 @@ PluginComponent {
         saveBrowserModal.open();
     }
 
-    horizontalBarPill: Component {
-        Item {
-            implicitWidth: horizontalRow.implicitWidth
-            implicitHeight: Theme.iconSize
-            anchors.verticalCenter: parent.verticalCenter
+    Component {
+        id: barPillComponent
 
+        Item {
+            readonly property int effectiveIconSize: pluginRoot.iconSize > 0 ? pluginRoot.iconSize : Theme.iconSizeSmall
+            readonly property bool isVertical: (pluginRoot.surfaceContext && pluginRoot.surfaceContext.isVertical) ? true : false
+            readonly property bool isDock: (pluginRoot.surfaceContext && pluginRoot.surfaceContext.kind === "dock") ? true : false
             property bool draggingOver: false
 
-            Row {
-                id: horizontalRow
-                spacing: Theme.spacingXS
-                anchors.verticalCenter: parent.verticalCenter
-                scale: draggingOver ? 1.2 : 1.0
-                Behavior on scale { NumberAnimation { duration: 200; easing.type: Easing.OutBack } }
+            implicitWidth: effectiveIconSize
+            implicitHeight: (isDock || isVertical) ? effectiveIconSize : Theme.iconSize
+            anchors.verticalCenter: isVertical ? undefined : parent.verticalCenter
+            anchors.horizontalCenter: isVertical ? parent.horizontalCenter : undefined
 
-                DIcon {
-                    name: "document_scanner"
-                    size: Theme.iconSizeSmall
-                    color: draggingOver ? Theme.primary : (pluginRoot.isScanning ? Theme.primary : Theme.surfaceVariantText)
-                    anchors.verticalCenter: parent.verticalCenter
-                }
+            DIcon {
+                anchors.centerIn: parent
+                name: "document_scanner"
+                size: parent.effectiveIconSize
+                color: parent.draggingOver || pluginRoot.isScanning ? Theme.primary : Theme.surfaceText
+                scale: parent.draggingOver ? 1.2 : 1.0
+                Behavior on scale { NumberAnimation { duration: 200; easing.type: Easing.OutBack } }
             }
 
             DropArea {
                 anchors.fill: parent
-                onEntered: draggingOver = true
-                onExited: draggingOver = false
+                onEntered: parent.draggingOver = true
+                onExited: parent.draggingOver = false
                 onDropped: (drop) => {
-                    draggingOver = false;
+                    parent.draggingOver = false;
                     let urls = [];
                     if (drop.hasUrls) {
                         urls = drop.urls.map(url => url.toString());
@@ -306,6 +306,9 @@ PluginComponent {
             }
         }
     }
+
+    horizontalBarPill: barPillComponent
+    verticalBarPill: barPillComponent
 
     FileBrowserModal {
         id: fileBrowserModal
@@ -357,8 +360,6 @@ PluginComponent {
         }
         onDialogClosed: isSaving = false
     }
-
-    verticalBarPill: horizontalBarPill
 
     popoutContent: Component {
         PopoutComponent {
