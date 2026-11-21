@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Effects
 import Quickshell
 import qs.Common
 import qs.DCommon.Widgets
@@ -442,8 +443,6 @@ PluginComponent {
             PopoutComponent {
                 id: mainContent
                 width: parent.width
-                headerText: "Lutris Launcher"
-                detailsText: root.isLaunching ? "Launching game..." : root.statusMessage
                 
                 Component.onDestruction: {
                     root.searchQuery = "";
@@ -461,7 +460,7 @@ PluginComponent {
 
                         DTextField {
                             id: searchField
-                            width: parent.width - (36 + Theme.spacingS) * 5 - Theme.spacingS
+                            width: Math.max(120, parent.width - (statusBadge.visible ? statusBadge.width + Theme.spacingS : 0) - actionsRow.width - Theme.spacingS)
                             height: parent.height
                             leftIconName: "search"
                             placeholderText: "Search your library..."
@@ -492,8 +491,18 @@ PluginComponent {
                             }
                         }
 
+                        StyledText {
+                            id: statusBadge
+                            anchors.verticalCenter: parent.verticalCenter
+                            text: root.isLaunching ? "Launching..." : root.statusMessage
+                            font.pixelSize: Theme.fontSizeSmall
+                            color: Theme.surfaceVariantText
+                            visible: text.length > 0
+                        }
+
                         Row {
-                            height: parent.height
+                            id: actionsRow
+                            anchors.verticalCenter: parent.verticalCenter
                             spacing: Theme.spacingXS
 
                             DButton {
@@ -526,7 +535,7 @@ PluginComponent {
                             }
 
                             DButton {
-                                width: Theme.buttonHeightXS; height: Theme.buttonHeightXS; iconName: "refresh"
+                                width: 36; height: 36; iconName: "refresh"
                                 backgroundColor: Theme.surfaceContainerHigh
                                 textColor: root.isLoading ? Theme.surfaceVariantText : Theme.surfaceText
                                 onClicked: root.fetchGames()
@@ -669,6 +678,17 @@ PluginComponent {
                                             source: (model.coverPath && !model.isVirtual) ? "file://" + model.coverPath : ""
                                             fillMode: Image.PreserveAspectCrop
                                             visible: model.coverPath && !model.isVirtual
+                                            layer.enabled: visible
+                                            layer.effect: MultiEffect {
+                                                maskEnabled: true
+                                                maskSource: ShaderEffectSource {
+                                                    sourceItem: Rectangle {
+                                                        width: coverImage.width
+                                                        height: coverImage.height
+                                                        radius: coverContainer.radius
+                                                    }
+                                                }
+                                            }
                                         }
 
                                         // Focus Highlight Border (On top of image)
