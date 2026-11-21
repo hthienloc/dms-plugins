@@ -55,7 +55,7 @@ PluginSettings {
 
             SettingsDropdownRow {
                 text: I18n.trFor("persona5Calendar", "Theme Palette")
-                description: I18n.trFor("persona5Calendar", "Choose standard Persona 5 (Vanilla), Persona 5 Royal, or Dynamic (auto-switches to Royal in Jan & Feb).")
+                description: I18n.trFor("persona5Calendar", "Vanilla, Royal, or Dynamic (Royal in Jan–Feb).")
                 options: [
                     I18n.trFor("persona5Calendar", "Dynamic (Vanilla, Royal in Jan/Feb)"),
                     I18n.trFor("persona5Calendar", "Vanilla (Persona 5)"),
@@ -112,7 +112,7 @@ PluginSettings {
 
             SettingsDropdownRow {
                 text: I18n.trFor("persona5Calendar", "Time of Day Logic")
-                description: I18n.trFor("persona5Calendar", "Calculate time periods using Persona 5 game schedule or local solar calculations via DMS WeatherService.")
+                description: I18n.trFor("persona5Calendar", "Use Persona 5 game schedule or local solar time.")
                 options: [
                     I18n.trFor("persona5Calendar", "Persona 5 Game Schedule"),
                     I18n.trFor("persona5Calendar", "Solar Schedule (Sun Times)")

@@ -132,7 +132,7 @@ PluginSettings {
 
             SettingsToggleRow {
                 text: I18n.trFor("hiddenBar", "Use Popout Overflow")
-                description: I18n.trFor("hiddenBar", "Show hidden plugins in a separate popout menu instead of expanding the status bar.")
+                description: I18n.trFor("hiddenBar", "Show hidden widgets in a popout instead of expanding the bar.")
                 checked: root.usePopout
                 modified: root.usePopout !== root.defaultUsePopout
                 resetByKeys: false
@@ -300,7 +300,7 @@ PluginSettings {
 
             SettingsToggleRow {
                 text: I18n.trFor("hiddenBar", "Animate collapse")
-                description: I18n.trFor("hiddenBar", "Slide widgets in and out instead of switching instantly. When off, the space is reclaimed immediately.")
+                description: I18n.trFor("hiddenBar", "Animate widget hide/show transitions.")
                 checked: root.animateCollapse
                 modified: root.animateCollapse !== root.defaultAnimateCollapse
                 resetByKeys: false
@@ -416,7 +416,7 @@ PluginSettings {
 
             SettingsSliderRow {
                 text: I18n.trFor("hiddenBar", "Trigger area width adjustment")
-                description: I18n.trFor("hiddenBar", "Fine-tune the trigger zone width along the bar axis. Positive values expand it, negative values shrink it.")
+                description: I18n.trFor("hiddenBar", "Adjust trigger zone width along the bar.")
                 minimum: -150
                 maximum: 150
                 step: 5
@@ -436,7 +436,7 @@ PluginSettings {
 
             SettingsSliderRow {
                 text: I18n.trFor("hiddenBar", "Trigger area X offset")
-                description: I18n.trFor("hiddenBar", "Shift the trigger zone position along the bar axis. Positive values shift right/down, negative values shift left/up.")
+                description: I18n.trFor("hiddenBar", "Shift trigger zone along the bar (+ right/down, - left/up).")
                 minimum: -100
                 maximum: 100
                 step: 5
@@ -476,7 +476,7 @@ PluginSettings {
 
             SettingsSliderRow {
                 text: I18n.trFor("hiddenBar", "Trigger area Y offset")
-                description: I18n.trFor("hiddenBar", "Shift the trigger zone position perpendicular to the bar axis. Positive values shift down/right, negative values shift up/left.")
+                description: I18n.trFor("hiddenBar", "Shift trigger zone perpendicular to the bar (+ down/right, - up/left).")
                 minimum: -40
                 maximum: 40
                 step: 1
@@ -511,7 +511,7 @@ PluginSettings {
 
             SettingsDropdownRow {
                 text: I18n.trFor("hiddenBar", "Widget selection")
-                description: I18n.trFor("hiddenBar", "Auto hides every eligible widget. Blacklist hides all except the widgets you pick. Whitelist hides only the widgets you pick.")
+                description: I18n.trFor("hiddenBar", "Auto: all eligible. Blacklist: all except picked. Whitelist: picked only.")
                 options: [
                     I18n.trFor("hiddenBar", "Auto"),
                     I18n.trFor("hiddenBar", "Blacklist"),

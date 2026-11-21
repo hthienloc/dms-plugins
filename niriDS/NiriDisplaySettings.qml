@@ -73,7 +73,7 @@ PluginSettings {
 
             SettingsToggleRow {
                 text: I18n.trFor("niriDS", "Enable safety fallback")
-                description: I18n.trFor("niriDS", "Automatically re-enable the laptop screen if all external monitors are disconnected")
+                description: I18n.trFor("niriDS", "Re-enable laptop screen when all external monitors disconnect.")
                 checked: root.enableFallback
                 modified: root.enableFallback !== root.defaultEnableFallback
                 resetByKeys: false

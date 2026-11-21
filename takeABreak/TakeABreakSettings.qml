@@ -367,7 +367,7 @@ PluginSettings {
 
             SettingsToggleRow {
                 text: I18n.trFor("takeABreak", "Pause Music during Break")
-                description: I18n.trFor("takeABreak", "Automatically pause active music players when a break starts, and resume them when the break ends.")
+                description: I18n.trFor("takeABreak", "Pause music during breaks and resume afterward.")
                 checked: root.pauseMusic
                 modified: root.pauseMusic !== root.defaultPauseMusic
                 resetByKeys: false

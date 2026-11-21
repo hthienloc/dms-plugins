@@ -163,7 +163,7 @@ Column {
 
             SettingsDropdownRow {
                 text: I18n.trFor("quickCapture", "Recording Backend")
-                description: I18n.trFor("quickCapture", "Select screen recording backend. Auto attempts GPU first and falls back to CPU (%1). Note: %1 does not support pausing.").arg("wf-recorder")
+                description: I18n.trFor("quickCapture", "Auto prefers GPU and falls back to %1 (no pause support).").arg("wf-recorder")
                 options: [
                     I18n.trFor("quickCapture", "Auto"),
                     "GPU Screen Recorder (NVENC / VA-API)",
@@ -493,7 +493,7 @@ Column {
 
             SettingsDropdownRow {
                 text: I18n.trFor("quickCapture", "Recording Status Location")
-                description: I18n.trFor("quickCapture", "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.")
+                description: I18n.trFor("quickCapture", "Where recording status and controls appear. Auto prefers DankBar.")
                 options: [
                     I18n.trFor("quickCapture", "Auto"),
                     I18n.trFor("quickCapture", "DankBar"),

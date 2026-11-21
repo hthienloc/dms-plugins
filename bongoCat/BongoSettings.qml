@@ -184,7 +184,7 @@ PluginSettings {
             SettingsDropdownRow {
                 visible: root.catSkin !== "pixel"
                 text: I18n.trFor("bongoCat", "Cat Color")
-                description: I18n.trFor("bongoCat", "Recolor the cat. Classic keeps the theme's default black and white, Primary follows the system accent, or pick a custom color.")
+                description: I18n.trFor("bongoCat", "Choose cat color style.")
                 options: [
                     I18n.trFor("bongoCat", "Classic B/W"),
                     I18n.trFor("bongoCat", "Theme Primary"),
@@ -318,7 +318,7 @@ PluginSettings {
 
             SettingsToggleRow {
                 text: I18n.trFor("bongoCat", "Mouse Interaction")
-                description: I18n.trFor("bongoCat", "Paws react to mouse input: left and right click hold the matching paw, other buttons slam both, scrolling drums with alternating paws.")
+                description: I18n.trFor("bongoCat", "Animate paws on mouse clicks and scroll.")
                 checked: root.mouseEnabled
                 modified: root.mouseEnabled !== root.defaultMouseEnabled
                 resetByKeys: false
@@ -334,7 +334,7 @@ PluginSettings {
 
             SettingsToggleRow {
                 text: I18n.trFor("bongoCat", "Show Typing Metrics")
-                description: I18n.trFor("bongoCat", "Display live typing speed (WPM) and correction rate in the popout. Only keystroke timing is counted; no key contents are stored.")
+                description: I18n.trFor("bongoCat", "Show live WPM and correction rate in popout (counts timing only).")
                 checked: root.showMetrics
                 modified: root.showMetrics !== root.defaultShowMetrics
                 resetByKeys: false

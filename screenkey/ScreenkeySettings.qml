@@ -462,7 +462,7 @@ PluginSettings {
 
             SettingsToggleRow {
                 text: I18n.trFor("screenkey", "Use macOS Symbols")
-                description: I18n.trFor("screenkey", "Toggle to display modifiers and control keys as macOS symbols (e.g. ⌘, ⌥, ⇧, ⌃, ⏎)")
+                description: I18n.trFor("screenkey", "Show modifiers as macOS symbols (⌘, ⌥, ⇧, ⌃, ⏎).")
                 checked: root.macSymbols
                 modified: root.macSymbols !== root.defaultMacSymbols
                 resetByKeys: false

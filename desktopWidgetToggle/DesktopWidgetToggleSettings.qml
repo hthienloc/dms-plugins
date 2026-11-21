@@ -469,7 +469,7 @@ PluginSettings {
 
                             SettingsSliderRow {
                                 text: I18n.trFor("desktopWidgetToggle", "Auto-dismiss Overlay")
-                                description: I18n.trFor("desktopWidgetToggle", "Automatically turn off the active overlay group after this duration. Set to 0 to keep active.")
+                                description: I18n.trFor("desktopWidgetToggle", "Auto-hide active overlay after duration (0 = never).")
                                 minimum: 0
                                 maximum: 15
                                 step: 1

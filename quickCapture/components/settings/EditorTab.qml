@@ -85,7 +85,6 @@ Column {
 
             SettingsButtonGroupRow {
                 text: I18n.trFor("quickCapture", "Display Mode")
-                description: I18n.trFor("quickCapture", "Choose whether the editor opens as a modal overlay or a movable floating window.")
                 model: [
                     I18n.trFor("quickCapture", "Modal"),
                     I18n.trFor("quickCapture", "Floating")
@@ -190,7 +189,7 @@ Column {
 
             SettingsToggleRow {
                 text: I18n.trFor("quickCapture", "Scale Editor to Screenshot Size")
-                description: I18n.trFor("quickCapture", "When enabled, the editor shrinks to match the captured region instead of filling %1% of the screen.").arg(90)
+                description: I18n.trFor("quickCapture", "Shrink editor to match the captured region.")
                 checked: root.modalScaleToContent
                 modified: root.modalScaleToContent !== Defaults.values.modalScaleToContent
                 resetByKeys: false

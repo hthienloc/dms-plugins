@@ -203,7 +203,7 @@ Column {
 
             SettingsToggleRow {
                 text: I18n.trFor("quickCapture", "Hide Control Center on Capture")
-                description: I18n.trFor("quickCapture", "Close Control Center before capturing when triggered from the Control Center panel. Shortcuts and IPC captures are unaffected.")
+                description: I18n.trFor("quickCapture", "Close Control Center before panel-triggered captures.")
                 checked: root.defaultHideControlCenter
                 modified: root.defaultHideControlCenter !== true
                 resetByKeys: false
