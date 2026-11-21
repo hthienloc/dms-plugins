@@ -27,25 +27,25 @@ PluginComponent {
     property string sourceImage: ""
     property int imageTrigger: 0
     property int lastScanTime: 0
-    property var pendingPopoutAction: null
+    property var activePopout: null
 
     property bool isTemporaryAction: false
 
-    Timer {
-        id: popoutCloseTimer
-        interval: Math.max(50, (Theme.popoutAnimationDuration ?? 200) + 50)
-        onTriggered: {
-            const action = pluginRoot.pendingPopoutAction;
-            pluginRoot.pendingPopoutAction = null;
-            if (action) action();
+    function closePopoutImmediately() {
+        if (pluginRoot.attachedActive && pluginRoot.surfaceContext && typeof pluginRoot.surfaceContext.dismissExpansion === "function") {
+            pluginRoot.surfaceContext.dismissExpansion();
+        }
+        if (pluginRoot.activePopout && typeof pluginRoot.activePopout.instantClose === "function") {
+            pluginRoot.activePopout.instantClose();
+        } else {
+            pluginRoot.closePopout();
         }
     }
 
     function runAfterPopoutClosed(action) {
         pluginRoot.isTemporaryAction = true;
-        pluginRoot.pendingPopoutAction = action;
-        pluginRoot.closePopout();
-        popoutCloseTimer.restart();
+        closePopoutImmediately();
+        Qt.callLater(action);
     }
 
     readonly property string cacheDir: {
@@ -368,7 +368,8 @@ PluginComponent {
             headerText: ""
             focus: true
 
-            property var parentPopout: null
+            onParentPopoutChanged: pluginRoot.activePopout = parentPopout
+            Component.onCompleted: pluginRoot.activePopout = parentPopout
 
             Component.onDestruction: {
                 if (!pluginRoot.isSaving && !pluginRoot.isTemporaryAction && pluginRoot.pluginData && !(pluginRoot.pluginData.keepResults ?? true)) {
