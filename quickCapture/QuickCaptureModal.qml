@@ -2272,35 +2272,7 @@ Item {
             window.drawEditorBackground(ctx, window.canvasWidth, window.canvasHeight);
             window.drawScreenshotShadow(ctx, window.editScale);
             window.drawScreenshotImage(ctx, imgSource);
-            return;
         }
-
-        if (window.currentTool !== "colorpicker" || imgSource.status !== Image.Ready)
-            return;
-
-        ctx.save();
-        const rawW = imgSource.sourceSize.width;
-        const rawH = imgSource.sourceSize.height;
-        const isRotated90 = (window.bgRotation === 90 || window.bgRotation === 270);
-        const uncroppedW = isRotated90 ? rawH : rawW;
-        const uncroppedH = isRotated90 ? rawW : rawH;
-
-        if (window.hasSelection) {
-            ctx.translate(-window.cropRect.x, -window.cropRect.y);
-        }
-
-        ctx.translate(uncroppedW / 2, uncroppedH / 2);
-        if (window.bgRotation !== 0) {
-            ctx.rotate(window.bgRotation * Math.PI / 180);
-        }
-        const sx = window.bgFlipH ? -1 : 1;
-        const sy = window.bgFlipV ? -1 : 1;
-        if (sx !== 1 || sy !== 1) {
-            ctx.scale(sx, sy);
-        }
-
-        ctx.drawImage(imgSource, -rawW / 2, -rawH / 2, rawW, rawH);
-        ctx.restore();
     }
 
     function drawExportBackgroundLayer(ctx, imgSource, isBackgroundActive, exportDpr) {
@@ -3429,6 +3401,22 @@ Item {
             pickedColor = window.readCanvasPixel(canvases[i], x, y);
             if (pickedColor)
                 break;
+        }
+
+        if (!pickedColor && window.effectiveBackgroundMode === "none" && window.offscreenSamplerItem && window.bgImageItem) {
+            const cropX = window.hasActiveCropSelection ? window.cropRect.x : 0;
+            const cropY = window.hasActiveCropSelection ? window.cropRect.y : 0;
+            const absX = (mouseX / window.editScale) + cropX;
+            const absY = (mouseY / window.editScale) + cropY;
+            const srcPos = DrawingRenderer.getTransformedSourcePos(absX, absY, {
+                bgImageItem: window.bgImageItem,
+                bgRotation: window.bgRotation,
+                bgFlipH: window.bgFlipH,
+                bgFlipV: window.bgFlipV
+            });
+            const sx = Helpers.clamp(Math.floor(srcPos.x * window.dpr), 0, Math.floor(window.offscreenSamplerItem.width * window.dpr) - 1);
+            const sy = Helpers.clamp(Math.floor(srcPos.y * window.dpr), 0, Math.floor(window.offscreenSamplerItem.height * window.dpr) - 1);
+            pickedColor = window.readCanvasPixel(window.offscreenSamplerItem, sx, sy);
         }
 
         window._lastSampledX = x;
