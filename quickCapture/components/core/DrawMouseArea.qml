@@ -704,9 +704,11 @@ MouseArea {
                     window.backgroundColorPickingSlot = "none";
                     window.currentTool = "background";
                 } else {
-                    const hexStr = window.formatHexColor(pickedColor).toUpperCase();
+                    const hexStr = Helpers.formatHexColor(pickedColor).toUpperCase();
                     if (window.colorPickerMode === "copy") {
-                        Proc.runCommand("quickCapture.copyColor", [Proc.dmsBin, "cl", "copy", hexStr]);
+                        DMSService.sendRequest("clipboard.copy", {
+                            text: hexStr
+                        });
                         ToastService.showInfo(I18n.trFor("quickCapture", "Color %1 copied").arg(hexStr));
                     } else {
                         window.updateColorSlot(window.activeColorSlotIndex, pickedColor);
