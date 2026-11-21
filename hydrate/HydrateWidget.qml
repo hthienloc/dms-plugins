@@ -1,4 +1,3 @@
-import "./shared"
 import QtQuick
 import QtQuick.Controls
 import Quickshell
