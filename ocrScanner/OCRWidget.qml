@@ -65,11 +65,10 @@ PluginComponent {
         lastScanTime = now;
 
         const tempImage = cacheDir + "/dms_ocr_input.png";
-        const getClipCmd = "mkdir -p '" + cacheDir + "' && wl-paste -t image/png > '" + tempImage + "' 2>/dev/null";
 
         Proc.runCommand(
             "get-clipboard-image",
-            ["sh", "-c", getClipCmd],
+            ["sh", "-c", 'mkdir -p "$1" && dms cl paste > "$2" 2>/dev/null', "_", cacheDir, tempImage],
             (stdout, exitCode) => {
                 if (exitCode === 0) {
                     Proc.runCommand(

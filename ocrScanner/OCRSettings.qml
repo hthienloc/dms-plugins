@@ -227,10 +227,10 @@ PluginSettings {
 
                 Repeater {
                     model: [
-                        { cmd: "sudo dnf install tesseract tesseract-langpack-eng tesseract-langpack-vie wl-clipboard", label: "Fedora" },
-                        { cmd: "sudo pacman -S tesseract tesseract-data-eng tesseract-data-vie wl-clipboard", label: "Arch Linux" },
-                        { cmd: "sudo apt install tesseract tesseract-ocr-eng tesseract-ocr-vie wl-clipboard", label: "Debian/Ubuntu" },
-                        { cmd: "sudo zypper install tesseract tesseract-langpack-en tesseract-langpack-vi wl-clipboard", label: "openSUSE" }
+                        { cmd: "sudo dnf install tesseract tesseract-langpack-eng tesseract-langpack-vie", label: "Fedora" },
+                        { cmd: "sudo pacman -S tesseract tesseract-data-eng tesseract-data-vie", label: "Arch Linux" },
+                        { cmd: "sudo apt install tesseract tesseract-ocr-eng tesseract-ocr-vie", label: "Debian/Ubuntu" },
+                        { cmd: "sudo zypper install tesseract tesseract-langpack-en tesseract-langpack-vi", label: "openSUSE" }
                     ]
 
                     delegate: CopyBox {
