@@ -132,7 +132,7 @@ Column {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("quickCapture", "Video")
+            text: I18n.trFor("quickCapture", "General")
         }
 
         SettingsGroup {
@@ -201,6 +201,51 @@ Column {
                     root.save("recordingScreenTarget", val);
                 }
             }
+
+            SettingsToggleRow {
+                text: I18n.trFor("quickCapture", "Include Cursor")
+                checked: root.recordCursor
+                modified: root.recordCursor !== Defaults.values.recordCursor
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordCursor = Defaults.values.recordCursor;
+                    root.save("recordCursor", Defaults.values.recordCursor);
+                }
+                onToggled: isChecked => {
+                    root.recordCursor = isChecked;
+                    root.save("recordCursor", isChecked);
+                }
+            }
+
+            SettingsToggleRow {
+                text: I18n.trFor("quickCapture", "Skip confirmation")
+                checked: root.recordingSkipConfirm
+                modified: root.recordingSkipConfirm !== Defaults.values.recordingSkipConfirm
+                resetByKeys: false
+                onResetRequested: {
+                    root.recordingSkipConfirm = Defaults.values.recordingSkipConfirm;
+                    root.save("recordingSkipConfirm", Defaults.values.recordingSkipConfirm);
+                }
+                onToggled: isChecked => {
+                    root.recordingSkipConfirm = isChecked;
+                    root.save("recordingSkipConfirm", isChecked);
+                }
+            }
+        }
+    }
+
+    Column {
+        width: parent.width
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("quickCapture", "Video")
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
 
             SettingsDropdownRow {
                 text: I18n.trFor("quickCapture", "Container Format")
@@ -299,36 +344,6 @@ Column {
                     root.save("recordingCodec", val);
                 }
             }
-
-            SettingsToggleRow {
-                text: I18n.trFor("quickCapture", "Include Cursor")
-                checked: root.recordCursor
-                modified: root.recordCursor !== Defaults.values.recordCursor
-                resetByKeys: false
-                onResetRequested: {
-                    root.recordCursor = Defaults.values.recordCursor;
-                    root.save("recordCursor", Defaults.values.recordCursor);
-                }
-                onToggled: isChecked => {
-                    root.recordCursor = isChecked;
-                    root.save("recordCursor", isChecked);
-                }
-            }
-
-            SettingsToggleRow {
-                text: I18n.trFor("quickCapture", "Skip confirmation")
-                checked: root.recordingSkipConfirm
-                modified: root.recordingSkipConfirm !== Defaults.values.recordingSkipConfirm
-                resetByKeys: false
-                onResetRequested: {
-                    root.recordingSkipConfirm = Defaults.values.recordingSkipConfirm;
-                    root.save("recordingSkipConfirm", Defaults.values.recordingSkipConfirm);
-                }
-                onToggled: isChecked => {
-                    root.recordingSkipConfirm = isChecked;
-                    root.save("recordingSkipConfirm", isChecked);
-                }
-            }
         }
     }
 
@@ -338,7 +353,7 @@ Column {
 
         SettingsSectionLabel {
             width: parent.width
-            text: I18n.trFor("quickCapture", "Recording Overlay")
+            text: I18n.trFor("quickCapture", "Audio")
         }
 
         SettingsGroup {
@@ -438,6 +453,21 @@ Column {
                     root.save("audioCodec", val);
                 }
             }
+        }
+    }
+
+    Column {
+        width: parent.width
+        spacing: 0
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("quickCapture", "Recording Interface")
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
 
             SettingsDropdownRow {
                 text: I18n.trFor("quickCapture", "Recording Status Location")
