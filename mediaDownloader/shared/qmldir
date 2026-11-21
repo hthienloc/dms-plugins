@@ -1,2 +1,2 @@
-module shared
+module dms.common
 singleton M3E 1.0 M3E.qml

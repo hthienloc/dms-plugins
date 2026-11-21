@@ -1,9 +1,10 @@
 module dms.common
+BongoCatView 1.0 BongoCatView.qml
 ColorSettingPlus 1.0 ColorSettingPlus.qml
 CopyBox 1.0 CopyBox.qml
 HintItem 1.0 HintItem.qml
 HintSection 1.0 HintSection.qml
-NumericText 1.0 NumericText.qml
-singleton M3E 1.0 M3E.qml
 singleton InputDeviceScanner 1.0 InputDeviceScanner.qml
 InputEventListener 1.0 InputEventListener.qml
+singleton M3E 1.0 M3E.qml
+NumericText 1.0 NumericText.qml

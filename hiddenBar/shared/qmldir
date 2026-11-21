@@ -1,2 +1,3 @@
 module dms.common
 CopyBox 1.0 CopyBox.qml
+Separator 1.0 Separator.qml

@@ -1,4 +1,4 @@
-module shared
+module dms.common
 CopyBox 1.0 CopyBox.qml
 HintItem 1.0 HintItem.qml
 HintSection 1.0 HintSection.qml

@@ -1,4 +1,4 @@
-module shared
+module dms.common
 ActionTile 1.0 ActionTile.qml
 HintItem 1.0 HintItem.qml
 HintSection 1.0 HintSection.qml

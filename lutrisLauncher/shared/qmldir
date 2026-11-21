@@ -1,3 +1,3 @@
-module shared
+module dms.common
 HintItem 1.0 HintItem.qml
 HintSection 1.0 HintSection.qml

@@ -1,9 +1,10 @@
 module dms.common
-singleton M3E 1.0 M3E.qml
 ColorSettingPlus 1.0 ColorSettingPlus.qml
 CopyBox 1.0 CopyBox.qml
+singleton InputDeviceScanner 1.0 InputDeviceScanner.qml
+InputEventListener 1.0 InputEventListener.qml
 KeyIcon 1.0 KeyIcon.qml
 KeycapDelegate 1.0 KeycapDelegate.qml
 KeycapSurface 1.0 KeycapSurface.qml
-singleton InputDeviceScanner 1.0 InputDeviceScanner.qml
-InputEventListener 1.0 InputEventListener.qml
+singleton M3E 1.0 M3E.qml
+Separator 1.0 Separator.qml

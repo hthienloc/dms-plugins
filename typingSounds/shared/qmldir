@@ -1,6 +1,6 @@
 module dms.common
 CopyBox 1.0 CopyBox.qml
-NumericText 1.0 NumericText.qml
 singleton InputDeviceScanner 1.0 InputDeviceScanner.qml
 InputEventListener 1.0 InputEventListener.qml
 singleton M3E 1.0 M3E.qml
+NumericText 1.0 NumericText.qml
