@@ -15,8 +15,6 @@ PluginComponent {
         if (url.startsWith("file://")) url = url.replace("file://", "");
         return url.endsWith("/") ? url.substring(0, url.length - 1) : url;
     }
-    readonly property bool showHints: pluginData.showHints ?? true
-
 
     pillRightClickAction: () => root.togglePause()
 
@@ -991,23 +989,6 @@ PluginComponent {
                             tooltipText: root.isTestingSound ? I18n.trFor("breathing", "Stop Test") : I18n.trFor("breathing", "Test Sound")
                             onClicked: root.toggleTestSound()
                         }
-                    }
-                }
-                HintSection {
-                    width: parent.width
-                    showHints: root.showHints
-
-                    HintItem {
-                        icon: "mouse"
-                        text: I18n.trFor("breathing", "Right-click bar icon to quickly toggle Start/Pause.")
-                    }
-                    HintItem {
-                        icon: "mouse"
-                        text: I18n.trFor("breathing", "Double-click an exercise tile to start it immediately.")
-                    }
-                    HintItem {
-                        icon: "keyboard"
-                        text: I18n.trFor("breathing", "Press 'Space' to Pause/Resume, 'R' to Reset.")
                     }
                 }
             }

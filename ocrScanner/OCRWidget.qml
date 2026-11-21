@@ -382,21 +382,6 @@ PluginComponent {
                 width: parent.width
                 spacing: Theme.spacingM
 
-                // ── Hints Section ───────────────────────────────────────────
-                HintSection {
-                    showHints: (pluginData.showHints ?? true)
-                    width: parent.width
-
-                    HintItem {
-                        icon: "file_download"
-                        text: I18n.trFor("ocrScanner", "Drop an image or URL onto the pill icon to scan it instantly")
-                    }
-                    HintItem {
-                        icon: "mouse"
-                        text: I18n.trFor("ocrScanner", "Right-click pill to scan clipboard, Middle-click to take screenshot")
-                    }
-                }
-
                 // ── Two Columns Workspace (Image & Text) ─────────────────────
                 Row {
                     width: parent.width

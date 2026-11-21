@@ -51,7 +51,6 @@ PluginComponent {
     property var playCounts: pluginData.playCounts ?? {}
     property var blacklist: pluginData.blacklist ?? []
     property string dateFormat: pluginData.dateFormat ?? "YYYY - MM - DD"
-    readonly property bool showHints: pluginData.showHints ?? true
 
     function getFormattedDate(timestamp) {
         if (!timestamp) return "Never played"
@@ -900,24 +899,6 @@ PluginComponent {
                                     root.updateFilteredModel()
                                 }
                             }
-                        }
-                    }
-
-                    HintSection {
-                        showHints: root.showHints
-                        width: parent.width
-
-                        HintItem {
-                            icon: "mouse"
-                            text: I18n.trFor("lutrisLauncher", "Left Click to launch a game, Right Click for more options")
-                        }
-                        HintItem {
-                            icon: "star"
-                            text: I18n.trFor("lutrisLauncher", "Use the star icon to favorite games for quick access")
-                        }
-                        HintItem {
-                            icon: "visibility_off"
-                            text: I18n.trFor("lutrisLauncher", "Hide games you don't play often to keep your list clean")
                         }
                     }
                 }

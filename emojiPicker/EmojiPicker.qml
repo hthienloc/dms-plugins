@@ -34,7 +34,6 @@ PluginComponent {
     }
     readonly property bool pasteByDefault: (root.pluginData?.defaultAction ?? "copy") === "paste"
     readonly property bool showCopyToast: root.pluginData?.showCopyToast ?? true
-    readonly property bool showHints: root.pluginData?.showHints ?? true
 
     function getStoredSkinTone() {
         const stored = String(root.pluginData?.defaultSkinTone ?? "default");
@@ -734,7 +733,6 @@ PluginComponent {
             ColumnLayout {
                 anchors.fill: parent
                 anchors.margins: Theme.spacingM
-                anchors.bottomMargin: root.showHints ? (footerBar.height + Theme.spacingXS) : 0
                 spacing: Theme.spacingS
 
                 RowLayout {
@@ -1118,63 +1116,6 @@ PluginComponent {
                     sequence: root.queuedText
                     onCopyRequested: root.commitCurrent(false)
                     onPasteRequested: root.commitCurrent(true)
-                }
-            }
-
-            // Keyboard hints strip, styled after the DMS launcher footer.
-            Item {
-                id: footerBar
-                anchors.left: parent.left
-                anchors.right: parent.right
-                anchors.bottom: parent.bottom
-                height: 40
-                visible: root.showHints
-                clip: true
-
-                Rectangle {
-                    anchors.fill: parent
-                    anchors.topMargin: -Theme.cornerRadius
-                    visible: !Theme.blurLayersActive
-                    color: Theme.withAlpha(Theme.surfaceContainerHigh, Theme.popupTransparency)
-                    radius: Theme.cornerRadius
-                }
-
-                Row {
-                    anchors.right: parent.right
-                    anchors.rightMargin: Theme.spacingM
-                    anchors.verticalCenter: parent.verticalCenter
-                    layoutDirection: I18n.isRtl ? Qt.RightToLeft : Qt.LeftToRight
-                    spacing: Theme.spacingM
-
-                    Repeater {
-                        model: [
-                            { keys: "↑ ↓", label: I18n.trFor("emojiPicker", "nav"), shown: true },
-                            { keys: "↵", label: root.pasteByDefault ? I18n.trFor("emojiPicker", "Paste") : I18n.trFor("emojiPicker", "Copy"), shown: true },
-                            { keys: "Ctrl ↵", label: root.pasteByDefault ? I18n.trFor("emojiPicker", "Copy") : I18n.trFor("emojiPicker", "Paste"), shown: true },
-                            { keys: "Shift ↵", label: I18n.trFor("emojiPicker", "Queue"), shown: true },
-                            { keys: "⌫", label: I18n.trFor("emojiPicker", "Remove"), shown: root.queuedEmojis.length > 0 },
-                            { keys: "Esc", label: root.queuedEmojis.length > 0 ? I18n.trFor("emojiPicker", "Clear") : I18n.trFor("emojiPicker", "Close"), shown: true }
-                        ]
-
-                        Row {
-                            required property var modelData
-                            visible: modelData.shown
-                            anchors.verticalCenter: parent.verticalCenter
-                            spacing: Theme.spacingXS
-
-                            DKeycap {
-                                anchors.verticalCenter: parent.verticalCenter
-                                text: parent.modelData.keys
-                            }
-
-                            StyledText {
-                                anchors.verticalCenter: parent.verticalCenter
-                                text: parent.modelData.label.toLocaleLowerCase()
-                                font.pixelSize: Theme.fontSizeSmall
-                                color: Theme.surfaceVariantText
-                            }
-                        }
-                    }
                 }
             }
 

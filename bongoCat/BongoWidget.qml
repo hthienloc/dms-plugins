@@ -15,8 +15,6 @@ PluginComponent {
     pluginId: "bongoCat"
     pluginService: PluginService
 
-    readonly property bool showHints: pluginData.showHints ?? true
-
     readonly property bool isDock: root.surfaceContext?.kind === "dock"
     readonly property int effectiveIconSize: isDock ? Math.max(root.iconSize, Math.round(root.widgetThickness * 0.65)) : (root.iconSize > 0 ? Math.max(root.iconSize, 24) : 24)
     readonly property int effectiveTextSize: root.textSize > 0 ? root.textSize : Theme.fontSizeSmall
@@ -1417,17 +1415,6 @@ PluginComponent {
                                     onClicked: root.saveSetting("showMetrics", !root.showMetrics)
                                 }
                             }
-                        }
-                    }
-
-                    // Hint Item
-                    HintSection {
-                        width: parent.width
-                        showHints: root.showHints
-
-                        HintItem {
-                            icon: "mouse"
-                            text: I18n.trFor("bongoCat", "Right-click bar icon to toggle sleep mode.")
                         }
                     }
                 }

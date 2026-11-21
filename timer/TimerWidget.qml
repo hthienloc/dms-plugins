@@ -40,7 +40,6 @@ PluginComponent {
     readonly property bool _pillIsIconOnly: displayFormat === "icon"
     readonly property bool _pillIsProgress: displayFormat === "progress"
     readonly property bool _pillIsPulse: displayFormat === "pulse"
-    readonly property bool showHints: pluginData.showHints ?? true
     readonly property bool autoDND: pluginData.autoDND ?? false
     readonly property bool showTimeoutActions: pluginData.showTimeoutActions ?? true
     readonly property bool isFinished: globalRemainingMilliseconds.value === 0 && globalTotalSeconds.value > 0
@@ -419,7 +418,7 @@ PluginComponent {
 
     popoutWidth: 400
     popoutHeight: {
-        let baseHeight = root.showHints ? 385 : 335;
+        let baseHeight = 335;
         if (!root.showTimeoutActions) {
             baseHeight -= 120;
         }
@@ -602,16 +601,6 @@ PluginComponent {
                         }
                     }
 
-                }
-
-                HintSection {
-                    width: parent.width
-                    showHints: root.showHints
-
-                    HintItem {
-                        icon: "mouse"
-                        text: I18n.trFor("timer", "Left-click to Pause/Resume, Right-click to Reset (Quick Start when ready).")
-                    }
                 }
             }
         }

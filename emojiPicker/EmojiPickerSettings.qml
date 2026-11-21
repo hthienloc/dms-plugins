@@ -15,7 +15,6 @@ PluginSettings {
     readonly property int defaultRecentLimit: 30
     readonly property string defaultPickerSize: "560"
     readonly property string defaultDefaultSkinTone: "default"
-    readonly property bool defaultShowHints: true
     readonly property int defaultEmojisPerRow: 8
     readonly property bool defaultShowCopyToast: true
 
@@ -24,7 +23,6 @@ PluginSettings {
     property int recentLimit: defaultRecentLimit
     property string pickerSize: defaultPickerSize
     property string defaultSkinTone: defaultDefaultSkinTone
-    property bool showHints: defaultShowHints
     property int emojisPerRow: defaultEmojisPerRow
     property bool showCopyToast: defaultShowCopyToast
 
@@ -36,7 +34,6 @@ PluginSettings {
         recentLimit = loadValue("recentLimit", defaultRecentLimit);
         pickerSize = loadValue("pickerSize", defaultPickerSize);
         defaultSkinTone = loadValue("defaultSkinTone", defaultDefaultSkinTone);
-        showHints = loadValue("showHints", defaultShowHints);
         emojisPerRow = loadValue("emojisPerRow", defaultEmojisPerRow);
         showCopyToast = loadValue("showCopyToast", defaultShowCopyToast);
         usageSection.expanded = loadValue("usageGuideExpanded", true);
@@ -212,22 +209,6 @@ PluginSettings {
                 onValueChanged: val => {
                     root.defaultSkinTone = val;
                     root.saveValue("defaultSkinTone", val);
-                }
-            }
-
-            SettingsToggleRow {
-                text: I18n.trFor("emojiPicker", "Keyboard Hints")
-                description: I18n.trFor("emojiPicker", "Show keyboard navigation hints at the bottom of the picker.")
-                checked: root.showHints
-                modified: root.showHints !== root.defaultShowHints
-                resetByKeys: false
-                onResetRequested: {
-                    root.showHints = root.defaultShowHints;
-                    root.saveValue("showHints", root.defaultShowHints);
-                }
-                onToggled: isChecked => {
-                    root.showHints = isChecked;
-                    root.saveValue("showHints", isChecked);
                 }
             }
 

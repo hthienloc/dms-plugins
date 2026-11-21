@@ -11,12 +11,10 @@ PluginSettings {
     readonly property int defaultDailyGoal: 2000
     readonly property int defaultInterval: 60
     readonly property string defaultDisplayMode: "full"
-    readonly property bool defaultShowHints: true
 
     property int dailyGoal: defaultDailyGoal
     property int interval: defaultInterval
     property string displayMode: defaultDisplayMode
-    property bool showHints: defaultShowHints
 
     function loadSettings() {
         if (!pluginService)
@@ -24,7 +22,6 @@ PluginSettings {
         dailyGoal = loadValue("dailyGoal", defaultDailyGoal);
         interval = loadValue("interval", defaultInterval);
         displayMode = loadValue("displayMode", defaultDisplayMode);
-        showHints = loadValue("showHints", defaultShowHints);
         usageSection.expanded = loadValue("usageGuideExpanded", true);
     }
 
@@ -121,21 +118,6 @@ PluginSettings {
                 onValueChanged: val => {
                     root.displayMode = val;
                     root.saveValue("displayMode", val);
-                }
-            }
-
-            SettingsToggleRow {
-                text: I18n.trFor("hydrate", "Show Hints")
-                checked: root.showHints
-                modified: root.showHints !== root.defaultShowHints
-                resetByKeys: false
-                onResetRequested: {
-                    root.showHints = root.defaultShowHints;
-                    root.saveValue("showHints", root.defaultShowHints);
-                }
-                onToggled: isChecked => {
-                    root.showHints = isChecked;
-                    root.saveValue("showHints", isChecked);
                 }
             }
         }

@@ -19,7 +19,6 @@ PluginSettings {
     readonly property bool defaultShowLocalGateway: true
     readonly property bool defaultShowLocalInterface: true
     readonly property bool defaultShowLatency: true
-    readonly property bool defaultShowHints: true
     readonly property int defaultRefreshInterval: 30
     readonly property bool defaultNotifyOnIPChange: false
     readonly property bool defaultPrivacyDefault: false
@@ -34,7 +33,6 @@ PluginSettings {
     property bool showLocalGateway: defaultShowLocalGateway
     property bool showLocalInterface: defaultShowLocalInterface
     property bool showLatency: defaultShowLatency
-    property bool showHints: defaultShowHints
     property int refreshInterval: defaultRefreshInterval
     property bool notifyOnIPChange: defaultNotifyOnIPChange
     property bool privacyDefault: defaultPrivacyDefault
@@ -52,7 +50,6 @@ PluginSettings {
         showLocalGateway = loadValue("showLocalGateway", defaultShowLocalGateway);
         showLocalInterface = loadValue("showLocalInterface", defaultShowLocalInterface);
         showLatency = loadValue("showLatency", defaultShowLatency);
-        showHints = loadValue("showHints", defaultShowHints);
         refreshInterval = loadValue("refreshInterval", defaultRefreshInterval);
         notifyOnIPChange = loadValue("notifyOnIPChange", defaultNotifyOnIPChange);
         privacyDefault = loadValue("privacyDefault", defaultPrivacyDefault);
@@ -249,21 +246,6 @@ PluginSettings {
                 onToggled: isChecked => {
                     root.showLatency = isChecked;
                     root.saveValue("showLatency", isChecked);
-                }
-            }
-
-            SettingsToggleRow {
-                text: I18n.trFor("ipIndicator", "Show Hints")
-                checked: root.showHints
-                modified: root.showHints !== root.defaultShowHints
-                resetByKeys: false
-                onResetRequested: {
-                    root.showHints = root.defaultShowHints;
-                    root.saveValue("showHints", root.defaultShowHints);
-                }
-                onToggled: isChecked => {
-                    root.showHints = isChecked;
-                    root.saveValue("showHints", isChecked);
                 }
             }
         }

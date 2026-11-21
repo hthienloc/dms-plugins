@@ -19,7 +19,6 @@ PluginComponent {
     }
     readonly property int interval: pluginData.interval ?? 60
     readonly property string displayMode: pluginData.displayMode ?? "full"
-    readonly property bool showHints: pluginData.showHints ?? true
     // --- Core State properties ---
     property int mlLogged: 0
     property string lastLogDate: ""
@@ -122,7 +121,7 @@ PluginComponent {
     }
     // --- Popout Sizing ---
     popoutWidth: 320
-    popoutHeight: root.showHints ? 335 : 295
+    popoutHeight: 295
 
     // --- Background Timer (Alarms & Midnight Reset) ---
     Timer {
@@ -432,17 +431,6 @@ PluginComponent {
                     backgroundColor: Theme.surfaceContainerHighest
                     textColor: Theme.surfaceText
                     onClicked: resetToday()
-                }
-
-                // Hint Guide Section
-                HintSection {
-                    width: parent.width
-                    showHints: root.showHints
-
-                    HintItem {
-                        icon: "info"
-                        text: I18n.trFor("hydrate", "Right-click the bar icon to quickly log +250ml.")
-                    }
                 }
             }
         }

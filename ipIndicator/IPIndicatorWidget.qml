@@ -24,7 +24,6 @@ PluginComponent {
     property bool privacyMode: (pluginData.privacyDefault || false)
     property bool pillShowLocal: (pluginData.pillShowLocal || false)
     property bool autoRefresh: (pluginData.autoRefresh ?? true)
-    readonly property bool showHints: (pluginData.showHints ?? true)
     readonly property bool showIPv4: (pluginData.showIPv4 ?? true)
     readonly property bool showIPv6: (pluginData.showIPv6 ?? true)
     readonly property bool showISP: (pluginData.showISP ?? true)
@@ -455,8 +454,6 @@ PluginComponent {
                 h += 12 * (rows - 1);
 
         }
-        if (root.showHints)
-            h += 60;
 
         return h + 40; // margins
     }
@@ -938,22 +935,6 @@ PluginComponent {
 
                             }
 
-                        }
-
-                    }
-
-                    HintSection {
-                        showHints: root.showHints
-                        width: parent.width
-
-                        HintItem {
-                            icon: "mouse"
-                            text: I18n.trFor("ipIndicator", "Right-click the bar icon to quickly refresh network status")
-                        }
-
-                        HintItem {
-                            icon: "visibility_off"
-                            text: I18n.trFor("ipIndicator", "Middle-click the bar icon or use the eye button to toggle Privacy Mode")
                         }
 
                     }

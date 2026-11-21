@@ -1,6 +1,4 @@
 module dms.common
 ActionTile 1.0 ActionTile.qml
-HintItem 1.0 HintItem.qml
-HintSection 1.0 HintSection.qml
 PluginShortcut 1.0 PluginShortcut.qml
 StatusDisplay 1.0 StatusDisplay.qml

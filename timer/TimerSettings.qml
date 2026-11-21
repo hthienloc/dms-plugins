@@ -24,7 +24,6 @@ PluginSettings {
     readonly property string defaultSoundPath: ""
     readonly property bool defaultUseSystemNotificationSound: true
     readonly property bool defaultShowTimeoutActions: true
-    readonly property bool defaultShowHints: true
 
     property string presets: defaultPresets
     property string quickStartMinutes: defaultQuickStartMinutes
@@ -41,7 +40,6 @@ PluginSettings {
     property string soundPath: defaultSoundPath
     property bool useSystemNotificationSound: defaultUseSystemNotificationSound
     property bool showTimeoutActions: defaultShowTimeoutActions
-    property bool showHints: defaultShowHints
 
     function cleanPath(path) {
         if (!path)
@@ -67,7 +65,6 @@ PluginSettings {
         soundPath = loadValue("soundPath", defaultSoundPath);
         useSystemNotificationSound = loadValue("useSystemNotificationSound", defaultUseSystemNotificationSound);
         showTimeoutActions = loadValue("showTimeoutActions", defaultShowTimeoutActions);
-        showHints = loadValue("showHints", defaultShowHints);
         usageSection.expanded = loadValue("usageGuideExpanded", true);
     }
 
@@ -443,21 +440,6 @@ PluginSettings {
                 onToggled: isChecked => {
                     root.showTimeoutActions = isChecked;
                     root.saveValue("showTimeoutActions", isChecked);
-                }
-            }
-
-            SettingsToggleRow {
-                text: I18n.trFor("timer", "Show Hints")
-                checked: root.showHints
-                modified: root.showHints !== root.defaultShowHints
-                resetByKeys: false
-                onResetRequested: {
-                    root.showHints = root.defaultShowHints;
-                    root.saveValue("showHints", root.defaultShowHints);
-                }
-                onToggled: isChecked => {
-                    root.showHints = isChecked;
-                    root.saveValue("showHints", isChecked);
                 }
             }
         }

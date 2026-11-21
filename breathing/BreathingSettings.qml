@@ -19,7 +19,6 @@ PluginSettings {
     readonly property int defaultDefaultSoundVolume: 80
     readonly property string defaultCustomSoundPath: ""
     readonly property string defaultAnimationStyle: "pulse"
-    readonly property bool defaultShowHints: true
 
     property bool enableAutoStart: defaultEnableAutoStart
     property string autoStartExercise: defaultAutoStartExercise
@@ -31,7 +30,6 @@ PluginSettings {
     property int defaultSoundVolume: defaultDefaultSoundVolume
     property string customSoundPath: defaultCustomSoundPath
     property string animationStyle: defaultAnimationStyle
-    property bool showHints: defaultShowHints
 
     function cleanPath(path) {
         if (!path)
@@ -52,7 +50,6 @@ PluginSettings {
         defaultSoundVolume = loadValue("defaultSoundVolume", defaultDefaultSoundVolume);
         customSoundPath = loadValue("customSoundPath", defaultCustomSoundPath);
         animationStyle = loadValue("animationStyle", defaultAnimationStyle);
-        showHints = loadValue("showHints", defaultShowHints);
         usageSection.expanded = loadValue("usageGuideExpanded", true);
     }
 
@@ -297,36 +294,6 @@ PluginSettings {
                 onValueChanged: val => {
                     root.animationStyle = val;
                     root.saveValue("animationStyle", val);
-                }
-            }
-        }
-    }
-
-    Column {
-        width: parent ? parent.width : 0
-        spacing: 0
-
-        SettingsSectionLabel {
-            width: parent.width
-            text: I18n.trFor("breathing", "Behavior")
-        }
-
-        SettingsGroup {
-            width: parent.width
-            slotColor: SettingsMetrics.controlColor
-
-            SettingsToggleRow {
-                text: I18n.trFor("breathing", "Show Hints")
-                checked: root.showHints
-                modified: root.showHints !== root.defaultShowHints
-                resetByKeys: false
-                onResetRequested: {
-                    root.showHints = root.defaultShowHints;
-                    root.saveValue("showHints", root.defaultShowHints);
-                }
-                onToggled: isChecked => {
-                    root.showHints = isChecked;
-                    root.saveValue("showHints", isChecked);
                 }
             }
         }

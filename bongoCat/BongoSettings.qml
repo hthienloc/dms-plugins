@@ -29,7 +29,6 @@ PluginSettings {
     readonly property bool defaultSoundOnMouse: false
     readonly property int defaultDesktopBackgroundOpacity: 0
     readonly property bool defaultDesktopShowMetrics: false
-    readonly property bool defaultShowHints: true
 
     property string catSkin: defaultCatSkin
     property int catSizePercent: defaultCatSizePercent
@@ -51,7 +50,6 @@ PluginSettings {
     property bool soundOnMouse: defaultSoundOnMouse
     property int desktopBackgroundOpacity: defaultDesktopBackgroundOpacity
     property bool desktopShowMetrics: defaultDesktopShowMetrics
-    property bool showHints: defaultShowHints
 
     function loadSettings() {
         if (!pluginService)
@@ -76,7 +74,6 @@ PluginSettings {
         soundOnMouse = loadValue("soundOnMouse", defaultSoundOnMouse);
         desktopBackgroundOpacity = loadValue("desktopBackgroundOpacity", defaultDesktopBackgroundOpacity);
         desktopShowMetrics = loadValue("desktopShowMetrics", defaultDesktopShowMetrics);
-        showHints = loadValue("showHints", defaultShowHints);
         usageSection.expanded = loadValue("usageGuideExpanded", true);
         creditsSection.expanded = loadValue("creditsExpanded", true);
     }
@@ -573,36 +570,6 @@ PluginSettings {
                 onToggled: isChecked => {
                     root.desktopShowMetrics = isChecked;
                     root.saveValue("desktopShowMetrics", isChecked);
-                }
-            }
-        }
-    }
-
-    Column {
-        width: parent ? parent.width : 0
-        spacing: 0
-
-        SettingsSectionLabel {
-            width: parent.width
-            text: I18n.trFor("bongoCat", "Behavior")
-        }
-
-        SettingsGroup {
-            width: parent.width
-            slotColor: SettingsMetrics.controlColor
-
-            SettingsToggleRow {
-                text: I18n.trFor("bongoCat", "Show Hints")
-                checked: root.showHints
-                modified: root.showHints !== root.defaultShowHints
-                resetByKeys: false
-                onResetRequested: {
-                    root.showHints = root.defaultShowHints;
-                    root.saveValue("showHints", root.defaultShowHints);
-                }
-                onToggled: isChecked => {
-                    root.showHints = isChecked;
-                    root.saveValue("showHints", isChecked);
                 }
             }
         }

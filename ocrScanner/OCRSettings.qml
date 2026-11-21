@@ -13,14 +13,12 @@ PluginSettings {
     readonly property bool defaultAutoCopy: true
     readonly property bool defaultKeepResults: true
     readonly property bool defaultShowPopoutOnRightClick: true
-    readonly property bool defaultShowHints: true
 
     property var availableLangs: []
     property var selectedLangs: []
     property bool autoCopy: defaultAutoCopy
     property bool keepResults: defaultKeepResults
     property bool showPopoutOnRightClick: defaultShowPopoutOnRightClick
-    property bool showHints: defaultShowHints
 
     function loadSettings() {
         let val = root.defaultOcrLanguage;
@@ -29,7 +27,6 @@ PluginSettings {
             autoCopy = root.loadValue("autoCopy", defaultAutoCopy);
             keepResults = root.loadValue("keepResults", defaultKeepResults);
             showPopoutOnRightClick = root.loadValue("showPopoutOnRightClick", defaultShowPopoutOnRightClick);
-            showHints = root.loadValue("showHints", defaultShowHints);
             usageSection.expanded = root.loadValue("usageGuideExpanded", true);
         }
         if (val === undefined || val === null) {
@@ -199,21 +196,6 @@ PluginSettings {
                 onToggled: isChecked => {
                     root.showPopoutOnRightClick = isChecked;
                     root.saveValue("showPopoutOnRightClick", isChecked);
-                }
-            }
-
-            SettingsToggleRow {
-                text: I18n.trFor("ocrScanner", "Show Hints")
-                checked: root.showHints
-                modified: root.showHints !== root.defaultShowHints
-                resetByKeys: false
-                onResetRequested: {
-                    root.showHints = root.defaultShowHints;
-                    root.saveValue("showHints", root.defaultShowHints);
-                }
-                onToggled: isChecked => {
-                    root.showHints = isChecked;
-                    root.saveValue("showHints", isChecked);
                 }
             }
         }

@@ -16,7 +16,6 @@ PluginSettings {
     readonly property string defaultAutoStartMode: "preset"
     readonly property string defaultAutoStartPreset: ""
     readonly property string defaultMiddleClickAction: ""
-    readonly property bool defaultShowHints: true
 
     property int defaultVolume: defaultDefaultVolume
     property bool enableSleepTimer: defaultEnableSleepTimer
@@ -24,7 +23,6 @@ PluginSettings {
     property string autoStartMode: defaultAutoStartMode
     property string autoStartPreset: defaultAutoStartPreset
     property string middleClickAction: defaultMiddleClickAction
-    property bool showHints: defaultShowHints
 
     property var customSounds: []
     property var hiddenSounds: []
@@ -98,7 +96,6 @@ PluginSettings {
         autoStartMode = loadValue("autoStartMode", defaultAutoStartMode);
         autoStartPreset = loadValue("autoStartPreset", defaultAutoStartPreset);
         middleClickAction = loadValue("middleClickAction", defaultMiddleClickAction);
-        showHints = loadValue("showHints", defaultShowHints);
         customSounds = loadValue("customSounds", []);
         hiddenSounds = loadValue("hiddenSounds", []);
         usageSection.expanded = loadValue("usageGuideExpanded", true);
@@ -337,21 +334,6 @@ PluginSettings {
                 onValueChanged: newValue => {
                     root.middleClickAction = newValue;
                     root.saveValue("middleClickAction", newValue);
-                }
-            }
-
-            SettingsToggleRow {
-                text: I18n.trFor("ambientSound", "Show Hints")
-                checked: root.showHints
-                modified: root.showHints !== root.defaultShowHints
-                resetByKeys: false
-                onResetRequested: {
-                    root.showHints = root.defaultShowHints;
-                    root.saveValue("showHints", root.defaultShowHints);
-                }
-                onToggled: isChecked => {
-                    root.showHints = isChecked;
-                    root.saveValue("showHints", isChecked);
                 }
             }
         }

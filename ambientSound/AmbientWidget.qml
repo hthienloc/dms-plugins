@@ -11,7 +11,6 @@ import "./shared"
 
 PluginComponent {
     id: root
-    readonly property bool showHints: pluginData.showHints ?? true
 
 
     // Layout constants

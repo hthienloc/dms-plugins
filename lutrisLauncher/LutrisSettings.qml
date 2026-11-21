@@ -9,16 +9,13 @@ PluginSettings {
     pluginId: "lutrisLauncher"
 
     readonly property string defaultDateFormat: "YYYY - MM - DD"
-    readonly property bool defaultShowHints: true
 
     property string dateFormat: defaultDateFormat
-    property bool showHints: defaultShowHints
 
     function loadSettings() {
         if (!pluginService)
             return;
         dateFormat = loadValue("dateFormat", defaultDateFormat);
-        showHints = loadValue("showHints", defaultShowHints);
         usageSection.expanded = loadValue("usageGuideExpanded", true);
     }
 
@@ -68,36 +65,6 @@ PluginSettings {
     }
 
     Column {
-        width: parent ? parent.width : 0
-        spacing: 0
-
-        SettingsSectionLabel {
-            width: parent.width
-            text: I18n.trFor("lutrisLauncher", "Behavior")
-        }
-
-        SettingsGroup {
-            width: parent.width
-            slotColor: SettingsMetrics.controlColor
-
-            SettingsToggleRow {
-                text: I18n.trFor("lutrisLauncher", "Show Hints")
-                checked: root.showHints
-                modified: root.showHints !== root.defaultShowHints
-                resetByKeys: false
-                onResetRequested: {
-                    root.showHints = root.defaultShowHints;
-                    root.saveValue("showHints", root.defaultShowHints);
-                }
-                onToggled: isChecked => {
-                    root.showHints = isChecked;
-                    root.saveValue("showHints", isChecked);
-                }
-            }
-        }
-    }
-
-    Column {
         id: usageSection
         width: parent ? parent.width : 0
         spacing: 0
@@ -121,39 +88,31 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("lutrisLauncher", "<b>Left-click</b> a game tile to launch it instantly."),
-                        I18n.trFor("lutrisLauncher", "<b>Right-click</b> a tile to view stats and manage visibility."),
-                        I18n.trFor("lutrisLauncher", "Toggle <b>Blacklist</b> mode in the popout to manage hidden games.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "play_arrow",
+                        title: I18n.trFor("lutrisLauncher", "Left-click"),
+                        subtitle: I18n.trFor("lutrisLauncher", "Launch a game tile instantly.")
+                    },
+                    {
+                        icon: "tune",
+                        title: I18n.trFor("lutrisLauncher", "Right-click"),
+                        subtitle: I18n.trFor("lutrisLauncher", "View stats and manage visibility for a tile.")
+                    },
+                    {
+                        icon: "visibility_off",
+                        title: I18n.trFor("lutrisLauncher", "Blacklist Mode"),
+                        subtitle: I18n.trFor("lutrisLauncher", "Toggle in the popout to manage hidden games.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }
