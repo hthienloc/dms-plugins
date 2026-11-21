@@ -401,39 +401,31 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("mediaDownloader", "<b>Left-click</b> the pill to open the downloader popout."),
-                        I18n.trFor("mediaDownloader", "<b>Right-click</b> the pill to paste a URL from your clipboard and open the popout."),
-                        I18n.trFor("mediaDownloader", "<b>Drag and drop</b> links directly onto the pill to paste and open the popout.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "download",
+                        title: I18n.trFor("mediaDownloader", "Left-click"),
+                        subtitle: I18n.trFor("mediaDownloader", "Open the media downloader popout from the bar pill.")
+                    },
+                    {
+                        icon: "content_paste",
+                        title: I18n.trFor("mediaDownloader", "Right-click"),
+                        subtitle: I18n.trFor("mediaDownloader", "Paste a URL from the clipboard and open the popout.")
+                    },
+                    {
+                        icon: "drag_indicator",
+                        title: I18n.trFor("mediaDownloader", "Drag and Drop"),
+                        subtitle: I18n.trFor("mediaDownloader", "Drop a link directly onto the pill to paste it and open the popout.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

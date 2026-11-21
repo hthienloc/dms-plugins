@@ -168,40 +168,36 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("kaomojiPicker", "Type the <b>Trigger Key</b> (default: <code>kj</code>) in the DMS search bar."),
-                        I18n.trFor("kaomojiPicker", "Search by category or keyword (e.g., <code>kj cat</code>)."),
-                        I18n.trFor("kaomojiPicker", "<b>Left-click</b> a kaomoji to copy or paste it instantly."),
-                        I18n.trFor("kaomojiPicker", "<b>Right-click</b> an entry to <b>Pin/Unpin</b> it or remove it from <b>History</b>.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "keyboard",
+                        title: I18n.trFor("kaomojiPicker", "Trigger Key"),
+                        subtitle: I18n.trFor("kaomojiPicker", "Type the trigger key (default: kj) in the DMS search bar.")
+                    },
+                    {
+                        icon: "search",
+                        title: I18n.trFor("kaomojiPicker", "Search"),
+                        subtitle: I18n.trFor("kaomojiPicker", "Filter kaomoji by category or keyword, such as kj cat.")
+                    },
+                    {
+                        icon: "content_copy",
+                        title: I18n.trFor("kaomojiPicker", "Left-click"),
+                        subtitle: I18n.trFor("kaomojiPicker", "Copy or paste a selected kaomoji instantly.")
+                    },
+                    {
+                        icon: "push_pin",
+                        title: I18n.trFor("kaomojiPicker", "Right-click"),
+                        subtitle: I18n.trFor("kaomojiPicker", "Pin, unpin, or remove an entry from history.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

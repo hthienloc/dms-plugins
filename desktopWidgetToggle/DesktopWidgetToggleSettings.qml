@@ -791,39 +791,31 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("desktopWidgetToggle", "<b>Click</b> a group button on the status bar to show its widgets on top of all windows (overlay)."),
-                        I18n.trFor("desktopWidgetToggle", "<b>Click it again</b> to return the widgets to the desktop background layer."),
-                        I18n.trFor("desktopWidgetToggle", "Depending on the Toggle Mode setting, you can activate one or multiple groups concurrently.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "layers",
+                        title: I18n.trFor("desktopWidgetToggle", "Show Overlay"),
+                        subtitle: I18n.trFor("desktopWidgetToggle", "Click a group button on the bar to show its widgets above all windows.")
+                    },
+                    {
+                        icon: "wallpaper",
+                        title: I18n.trFor("desktopWidgetToggle", "Restore Layer"),
+                        subtitle: I18n.trFor("desktopWidgetToggle", "Click the group button again to return widgets to the desktop background.")
+                    },
+                    {
+                        icon: "widgets",
+                        title: I18n.trFor("desktopWidgetToggle", "Toggle Mode"),
+                        subtitle: I18n.trFor("desktopWidgetToggle", "Activate one or multiple widget groups concurrently depending on your setting.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

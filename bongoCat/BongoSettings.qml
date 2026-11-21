@@ -599,39 +599,31 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("bongoCat", "<b>Left-click</b> the cat to open the settings popout."),
-                        I18n.trFor("bongoCat", "<b>Right-click</b> the cat to manually toggle <b>Sleep Mode</b>."),
-                        I18n.trFor("bongoCat", "The cat will automatically tap its paws as you type.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "tune",
+                        title: I18n.trFor("bongoCat", "Left-click"),
+                        subtitle: I18n.trFor("bongoCat", "Open the settings popout.")
+                    },
+                    {
+                        icon: "bedtime",
+                        title: I18n.trFor("bongoCat", "Right-click"),
+                        subtitle: I18n.trFor("bongoCat", "Manually toggle Sleep Mode.")
+                    },
+                    {
+                        icon: "keyboard",
+                        title: I18n.trFor("bongoCat", "Typing Reaction"),
+                        subtitle: I18n.trFor("bongoCat", "The cat automatically taps its paws as you type.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

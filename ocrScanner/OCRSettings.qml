@@ -267,40 +267,36 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("ocrScanner", "<b>Left-click</b> the pill to start a new screen scan."),
-                        I18n.trFor("ocrScanner", "<b>Right-click</b> the pill to perform a quick scan or open results."),
-                        I18n.trFor("ocrScanner", "Dropping an <b>image</b> onto the pill will scan it for text."),
-                        I18n.trFor("ocrScanner", "Scanned text is automatically copied to the <b>clipboard</b>.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "crop_free",
+                        title: I18n.trFor("ocrScanner", "Left-click"),
+                        subtitle: I18n.trFor("ocrScanner", "Start a new screen scan from the pill.")
+                    },
+                    {
+                        icon: "bolt",
+                        title: I18n.trFor("ocrScanner", "Right-click"),
+                        subtitle: I18n.trFor("ocrScanner", "Perform a quick scan or open recent results.")
+                    },
+                    {
+                        icon: "image",
+                        title: I18n.trFor("ocrScanner", "Drop Image"),
+                        subtitle: I18n.trFor("ocrScanner", "Drag an image onto the pill to extract its text.")
+                    },
+                    {
+                        icon: "content_paste",
+                        title: I18n.trFor("ocrScanner", "Auto-copy"),
+                        subtitle: I18n.trFor("ocrScanner", "Scanned text is automatically copied to the clipboard.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

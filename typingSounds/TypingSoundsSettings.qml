@@ -295,39 +295,31 @@ print(json.dumps(res))
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("typingSounds", "Play mechanical keyboard sounds globally as you type."),
-                        I18n.trFor("typingSounds", "You must be in the <b>input</b> group to allow keyboard event reading without root."),
-                        I18n.trFor("typingSounds", "Select a custom sound pack in the settings to change key sounds.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "volume_up",
+                        title: I18n.trFor("typingSounds", "Global Sounds"),
+                        subtitle: I18n.trFor("typingSounds", "Plays mechanical keyboard sounds globally as you type.")
+                    },
+                    {
+                        icon: "admin_panel_settings",
+                        title: I18n.trFor("typingSounds", "Input Group"),
+                        subtitle: I18n.trFor("typingSounds", "Your user must belong to the input group to read keyboard events without root.")
+                    },
+                    {
+                        icon: "library_music",
+                        title: I18n.trFor("typingSounds", "Sound Packs"),
+                        subtitle: I18n.trFor("typingSounds", "Choose a bundled or custom sound pack above to change key sounds.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

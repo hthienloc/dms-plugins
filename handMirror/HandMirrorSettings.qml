@@ -58,6 +58,7 @@ PluginSettings {
         windowScale = loadValue("windowScale", defaultWindowScale);
         aspectRatio = loadValue("aspectRatio", defaultAspectRatio);
         saveDirectory = loadValue("saveDirectory", defaultSaveDirectory);
+        usageSection.expanded = loadValue("usageGuideExpanded", true);
     }
 
     Component.onCompleted: loadSettings()
@@ -393,6 +394,65 @@ PluginSettings {
                     iconName: "folder_open"
                     tooltipText: I18n.trFor("handMirror", "Select Directory")
                     onClicked: browserModal.open()
+                }
+            }
+        }
+    }
+
+    Column {
+        id: usageSection
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        property bool expanded: true
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("handMirror", "How to Use")
+            collapsible: true
+            expanded: usageSection.expanded
+            onToggleRequested: {
+                usageSection.expanded = !usageSection.expanded;
+                if (root.pluginService)
+                    root.saveValue("usageGuideExpanded", usageSection.expanded);
+            }
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: usageSection.expanded
+
+            Repeater {
+                model: [
+                    {
+                        icon: "photo_camera",
+                        title: I18n.trFor("handMirror", "Left-click"),
+                        subtitle: I18n.trFor("handMirror", "Open the camera mirror popout from the bar pill.")
+                    },
+                    {
+                        icon: "open_in_new",
+                        title: I18n.trFor("handMirror", "Right-click"),
+                        subtitle: I18n.trFor("handMirror", "Toggle the standalone floating mirror window.")
+                    },
+                    {
+                        icon: "zoom_in",
+                        title: I18n.trFor("handMirror", "Scroll Wheel"),
+                        subtitle: I18n.trFor("handMirror", "Scroll over the camera feed to adjust digital zoom.")
+                    },
+                    {
+                        icon: "pan_tool",
+                        title: I18n.trFor("handMirror", "Drag Window"),
+                        subtitle: I18n.trFor("handMirror", "Left-drag to move the floating window or right-drag to pan while zoomed.")
+                    }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

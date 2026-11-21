@@ -538,41 +538,41 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("ambientSound", "<b>Left-click</b> the pill to open the sound selector."),
-                        I18n.trFor("ambientSound", "<b>Middle-click</b> the pill to toggle your chosen sound preset."),
-                        I18n.trFor("ambientSound", "<b>Right-click</b> the pill to toggle mute."),
-                        I18n.trFor("ambientSound", "You can play <b>multiple sounds</b> simultaneously to create your own atmosphere."),
-                        I18n.trFor("ambientSound", "Set the <b>Sleep Timer</b> in the popout to turn off sounds after a delay.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "library_music",
+                        title: I18n.trFor("ambientSound", "Left-click"),
+                        subtitle: I18n.trFor("ambientSound", "Open the sound selector from the bar pill.")
+                    },
+                    {
+                        icon: "bookmarks",
+                        title: I18n.trFor("ambientSound", "Middle-click"),
+                        subtitle: I18n.trFor("ambientSound", "Toggle your chosen sound preset.")
+                    },
+                    {
+                        icon: "volume_off",
+                        title: I18n.trFor("ambientSound", "Right-click"),
+                        subtitle: I18n.trFor("ambientSound", "Mute or unmute all playing sounds.")
+                    },
+                    {
+                        icon: "equalizer",
+                        title: I18n.trFor("ambientSound", "Mix Sounds"),
+                        subtitle: I18n.trFor("ambientSound", "Play multiple sounds simultaneously to create your own atmosphere.")
+                    },
+                    {
+                        icon: "bedtime",
+                        title: I18n.trFor("ambientSound", "Sleep Timer"),
+                        subtitle: I18n.trFor("ambientSound", "Set a timer in the popout to stop sounds after a delay.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

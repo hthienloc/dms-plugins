@@ -288,45 +288,61 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("emojiPicker", "With an empty queue, <b>left-click</b> or <b>Enter</b> copies the selected emoji."),
-                        I18n.trFor("emojiPicker", "With an empty queue, <b>right-click</b> or <b>Ctrl+Enter</b> copies and pastes the selected emoji."),
-                        I18n.trFor("emojiPicker", "Hold <b>Shift</b> while left-clicking or pressing <b>Enter</b> to add emojis to a queue."),
-                        I18n.trFor("emojiPicker", "With emojis queued, <b>Enter</b> copies the sequence and <b>Ctrl+Enter</b> pastes it."),
-                        I18n.trFor("emojiPicker", "Press <b>Backspace</b> to remove the last queued emoji."),
-                        I18n.trFor("emojiPicker", "Press <b>Down</b> or <b>Tab</b> to move from search to the first emoji."),
-                        I18n.trFor("emojiPicker", "In the grid, use <b>Ctrl+H/J/K/L</b> for Vim-style left/down/up/right navigation."),
-                        I18n.trFor("emojiPicker", "In the grid, press <b>Backspace</b> or <b>Delete</b> with an empty queue to clear the search and return to it."),
-                        I18n.trFor("emojiPicker", "Press <b>Escape</b> to discard the queue, or close the picker when the queue is empty.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "content_copy",
+                        title: I18n.trFor("emojiPicker", "Left-click / Enter"),
+                        subtitle: I18n.trFor("emojiPicker", "Copy the selected emoji when the queue is empty.")
+                    },
+                    {
+                        icon: "content_paste",
+                        title: I18n.trFor("emojiPicker", "Right-click"),
+                        subtitle: I18n.trFor("emojiPicker", "Copy and paste the selected emoji, or press Ctrl+Enter.")
+                    },
+                    {
+                        icon: "playlist_add",
+                        title: I18n.trFor("emojiPicker", "Queue Emojis"),
+                        subtitle: I18n.trFor("emojiPicker", "Hold Shift while clicking or pressing Enter to add emojis to the queue.")
+                    },
+                    {
+                        icon: "done_all",
+                        title: I18n.trFor("emojiPicker", "Confirm Queue"),
+                        subtitle: I18n.trFor("emojiPicker", "Press Enter to copy the queued sequence or Ctrl+Enter to paste it.")
+                    },
+                    {
+                        icon: "backspace",
+                        title: I18n.trFor("emojiPicker", "Remove Queued"),
+                        subtitle: I18n.trFor("emojiPicker", "Press Backspace to remove the last queued emoji.")
+                    },
+                    {
+                        icon: "keyboard_arrow_down",
+                        title: I18n.trFor("emojiPicker", "Focus Grid"),
+                        subtitle: I18n.trFor("emojiPicker", "Press Down or Tab to move from the search box to the first emoji.")
+                    },
+                    {
+                        icon: "open_with",
+                        title: I18n.trFor("emojiPicker", "Grid Navigation"),
+                        subtitle: I18n.trFor("emojiPicker", "Use Ctrl+H/J/K/L for Vim-style navigation across the grid.")
+                    },
+                    {
+                        icon: "search_off",
+                        title: I18n.trFor("emojiPicker", "Clear Search"),
+                        subtitle: I18n.trFor("emojiPicker", "Press Backspace or Delete in the grid with an empty queue to reset search.")
+                    },
+                    {
+                        icon: "close",
+                        title: I18n.trFor("emojiPicker", "Escape"),
+                        subtitle: I18n.trFor("emojiPicker", "Discard the queue, or close the picker when the queue is empty.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

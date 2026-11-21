@@ -323,40 +323,36 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("breathing", "<b>Left-click</b> the pill to start/pause the breathing session."),
-                        I18n.trFor("breathing", "<b>Right-click</b> the pill to stop and reset the session."),
-                        I18n.trFor("breathing", "Open the <b>Popout</b> to choose different breathing techniques."),
-                        I18n.trFor("breathing", "Follow the <b>visual guide</b> and <b>sound cues</b> to sync your breath.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "play_arrow",
+                        title: I18n.trFor("breathing", "Left-click"),
+                        subtitle: I18n.trFor("breathing", "Start or pause the breathing session.")
+                    },
+                    {
+                        icon: "stop",
+                        title: I18n.trFor("breathing", "Right-click"),
+                        subtitle: I18n.trFor("breathing", "Stop and reset the current session.")
+                    },
+                    {
+                        icon: "self_improvement",
+                        title: I18n.trFor("breathing", "Popout"),
+                        subtitle: I18n.trFor("breathing", "Choose from different breathing techniques.")
+                    },
+                    {
+                        icon: "graphic_eq",
+                        title: I18n.trFor("breathing", "Guided Cues"),
+                        subtitle: I18n.trFor("breathing", "Follow the visual guide and sound cues to sync your breath.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

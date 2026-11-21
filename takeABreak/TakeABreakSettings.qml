@@ -58,6 +58,7 @@ PluginSettings {
         preWarningAlignment = loadValue("preWarningAlignment", defaultPreWarningAlignment);
         preWarningOpacity = loadValue("preWarningOpacity", defaultPreWarningOpacity);
         overlayOpacity = loadValue("overlayOpacity", defaultOverlayOpacity);
+        usageSection.expanded = loadValue("usageGuideExpanded", true);
     }
 
     Process {
@@ -704,6 +705,60 @@ PluginSettings {
                     width: parent.width
                     buttonHeight: 36
                     onClicked: previewSoundProc.running = true
+                }
+            }
+        }
+    }
+
+    Column {
+        id: usageSection
+        width: parent ? parent.width : 0
+        spacing: 0
+
+        property bool expanded: true
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("takeABreak", "How to Use")
+            collapsible: true
+            expanded: usageSection.expanded
+            onToggleRequested: {
+                usageSection.expanded = !usageSection.expanded;
+                if (root.pluginService)
+                    root.saveValue("usageGuideExpanded", usageSection.expanded);
+            }
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: usageSection.expanded
+
+            Repeater {
+                model: [
+                    {
+                        icon: "dashboard",
+                        title: I18n.trFor("takeABreak", "Control Center"),
+                        subtitle: I18n.trFor("takeABreak", "Open the Control Center widget to view break countdowns and statistics.")
+                    },
+                    {
+                        icon: "pause",
+                        title: I18n.trFor("takeABreak", "Pause & Reset"),
+                        subtitle: I18n.trFor("takeABreak", "Pause, resume, or reset the current break session from the popout.")
+                    },
+                    {
+                        icon: "snooze",
+                        title: I18n.trFor("takeABreak", "Snooze or Skip"),
+                        subtitle: I18n.trFor("takeABreak", "Snooze for five minutes or skip an active break from the detail view.")
+                    }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

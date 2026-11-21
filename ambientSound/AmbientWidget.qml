@@ -730,7 +730,7 @@ PluginComponent {
 
     Connections {
         target: dashAction
-        onValueChanged: {
+        function onValueChanged() {
             var raw = dashAction.value;
             if (!raw)
                 return;
@@ -818,11 +818,20 @@ PluginComponent {
         onTriggered: sleepTimer.remainingTime = Math.max(0, sleepTimer.remainingTime - 1000);
     }
 
+    onPluginIdChanged: {
+        if (pluginId && !sleepTimer.running) {
+            timerRemainingVar.set(0);
+            timerTargetDurationVar.set(0);
+        }
+    }
+
     Component.onCompleted: {
         // Clear stale saved playback state on fresh widget initialization if not autostarting
         persistRuntimeState();
-        timerRemainingVar.set(0);
-        timerTargetDurationVar.set(0);
+        if (root.pluginId) {
+            timerRemainingVar.set(0);
+            timerTargetDurationVar.set(0);
+        }
 
         autoStartTimer.start();
         // Initialize default preset only once

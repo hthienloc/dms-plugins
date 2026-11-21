@@ -342,41 +342,36 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("ipIndicator", "<b>Left-click</b> the pill to open the IP details popout."),
-                        I18n.trFor("ipIndicator", "<b>Right-click</b> the pill to manually force a refresh."),
-                        I18n.trFor("ipIndicator", "<b>Middle-click</b> the pill to toggle privacy mode."),
-                        I18n.trFor("ipIndicator", "Click any <b>IP address</b> in the popout to copy it to the clipboard."),
-                        I18n.trFor("ipIndicator", "Click the <b>eye icon</b> in the popout to toggle privacy mode.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "info",
+                        title: I18n.trFor("ipIndicator", "Left-click"),
+                        subtitle: I18n.trFor("ipIndicator", "Open the IP details popout from the bar pill.")
+                    },
+                    {
+                        icon: "refresh",
+                        title: I18n.trFor("ipIndicator", "Right-click"),
+                        subtitle: I18n.trFor("ipIndicator", "Manually force an IP and location refresh.")
+                    },
+                    {
+                        icon: "visibility_off",
+                        title: I18n.trFor("ipIndicator", "Privacy Mode"),
+                        subtitle: I18n.trFor("ipIndicator", "Middle-click the pill or click the eye icon in the popout to hide IP details.")
+                    },
+                    {
+                        icon: "content_copy",
+                        title: I18n.trFor("ipIndicator", "Copy Address"),
+                        subtitle: I18n.trFor("ipIndicator", "Click any IP address in the popout to copy it to the clipboard.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

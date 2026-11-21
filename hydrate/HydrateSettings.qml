@@ -147,39 +147,31 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("hydrate", "<b>Left-click</b> the pill to open the hydration dashboard."),
-                        I18n.trFor("hydrate", "<b>Right-click</b> the pill to instantly log <b>+1 cup</b>."),
-                        I18n.trFor("hydrate", "The icon will <b>pulse or shift shape</b> when it's time to drink.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "water_drop",
+                        title: I18n.trFor("hydrate", "Left-click"),
+                        subtitle: I18n.trFor("hydrate", "Open the hydration dashboard from the bar pill.")
+                    },
+                    {
+                        icon: "add_circle",
+                        title: I18n.trFor("hydrate", "Right-click"),
+                        subtitle: I18n.trFor("hydrate", "Instantly log one cup of water from the pill.")
+                    },
+                    {
+                        icon: "notifications_active",
+                        title: I18n.trFor("hydrate", "Drink Reminders"),
+                        subtitle: I18n.trFor("hydrate", "Watch for the icon to pulse or shift shape when it is time to drink.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

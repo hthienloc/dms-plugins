@@ -469,39 +469,31 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("timer", "<b>Left-click</b> the pill to <b>Pause</b> or <b>Resume</b> the timer."),
-                        I18n.trFor("timer", "<b>Right-click</b> the pill to <b>Reset</b> (or <b>Quick Start</b> if ready)."),
-                        I18n.trFor("timer", "Open the <b>Popout</b> to select presets or enter custom minutes.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "play_arrow",
+                        title: I18n.trFor("timer", "Left-click"),
+                        subtitle: I18n.trFor("timer", "Pause or resume the active timer from the pill.")
+                    },
+                    {
+                        icon: "refresh",
+                        title: I18n.trFor("timer", "Right-click"),
+                        subtitle: I18n.trFor("timer", "Reset the timer or quick-start when ready.")
+                    },
+                    {
+                        icon: "timer",
+                        title: I18n.trFor("timer", "Popout"),
+                        subtitle: I18n.trFor("timer", "Open the popout to pick presets or enter custom minutes.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

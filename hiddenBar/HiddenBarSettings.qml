@@ -860,39 +860,31 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("hiddenBar", "<b>Hover</b> the icon (or trigger zone) to temporarily expand the hidden area."),
-                        I18n.trFor("hiddenBar", "<b>Left-click</b> the icon to manually toggle the expanded state."),
-                        I18n.trFor("hiddenBar", "<b>Right-click</b> the icon while expanded to <b>PIN</b> (prevent auto-collapse).")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "unfold_more",
+                        title: I18n.trFor("hiddenBar", "Hover"),
+                        subtitle: I18n.trFor("hiddenBar", "Temporarily expand the hidden area from the icon or trigger zone.")
+                    },
+                    {
+                        icon: "touch_app",
+                        title: I18n.trFor("hiddenBar", "Left-click"),
+                        subtitle: I18n.trFor("hiddenBar", "Manually toggle the expanded state of the hidden bar.")
+                    },
+                    {
+                        icon: "push_pin",
+                        title: I18n.trFor("hiddenBar", "Right-click"),
+                        subtitle: I18n.trFor("hiddenBar", "Pin the expanded area to prevent auto-collapse.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

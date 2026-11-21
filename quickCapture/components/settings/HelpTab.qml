@@ -21,25 +21,6 @@ Column {
             settings.saveValue(key, val);
     }
 
-    readonly property var barRows: [
-        {
-            key: I18n.trFor("quickCapture", "Left Click"),
-            action: I18n.trFor("quickCapture", "Open %1 menu (Popout)").arg(I18n.trFor("quickCapture", "Quick Capture"))
-        },
-        {
-            key: I18n.trFor("quickCapture", "Middle Click"),
-            action: I18n.trFor("quickCapture", "Middle Click Action")
-        },
-        {
-            key: I18n.trFor("quickCapture", "Right Click"),
-            action: I18n.trFor("quickCapture", "Right Click Action")
-        },
-        {
-            key: I18n.trFor("quickCapture", "Drag Image"),
-            action: I18n.trFor("quickCapture", "Drop image onto bar icon to annotate it")
-        }
-    ]
-
     readonly property var toolRows: root.config ? root.config.tools.filter(t => t.shortcut !== "").map(t => ({
                 key: t.shortcut,
                 action: t.label
@@ -210,12 +191,6 @@ Column {
         }
     ]
 
-    component GuideHeading: StyledText {
-        font.pixelSize: Theme.fontSizeLarge
-        font.weight: Font.Bold
-        color: Theme.primary
-    }
-
     component ShortcutTable: Column {
         property string keyHeader: ""
         property string actionHeader: ""
@@ -260,41 +235,110 @@ Column {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
+            Repeater {
+                model: [
+                    {
+                        icon: "touch_app",
+                        title: I18n.trFor("quickCapture", "Left-click"),
+                        subtitle: I18n.trFor("quickCapture", "Open the Quick Capture menu popout.")
+                    },
+                    {
+                        icon: "mouse",
+                        title: I18n.trFor("quickCapture", "Middle-click"),
+                        subtitle: I18n.trFor("quickCapture", "Trigger the configured middle-click capture action.")
+                    },
+                    {
+                        icon: "tune",
+                        title: I18n.trFor("quickCapture", "Right-click"),
+                        subtitle: I18n.trFor("quickCapture", "Trigger the configured right-click capture action.")
+                    },
+                    {
+                        icon: "image",
+                        title: I18n.trFor("quickCapture", "Drag Image"),
+                        subtitle: I18n.trFor("quickCapture", "Drop an image onto the bar icon to annotate it.")
+                    }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
+                }
+            }
+        }
+    }
+
+    Column {
+        id: toolShortcutsSection
+        width: parent.width
+        spacing: 0
+        property bool expanded: false
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("quickCapture", "Annotation Tools")
+            collapsible: true
+            expanded: toolShortcutsSection.expanded
+            onToggleRequested: toolShortcutsSection.expanded = !toolShortcutsSection.expanded
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: toolShortcutsSection.expanded
+
             Item {
                 width: parent.width
-                height: usageCol.implicitHeight + Theme.spacingM * 2
+                height: toolShortcutsCol.implicitHeight + Theme.spacingM * 2
 
                 Column {
-                    id: usageCol
+                    id: toolShortcutsCol
                     anchors.left: parent.left
                     anchors.right: parent.right
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.margins: Theme.spacingM
-                    spacing: Theme.spacingM
-
-                    GuideHeading {
-                        text: I18n.trFor("quickCapture", "Bar Interactions")
-                    }
-
-                    ShortcutTable {
-                        keyHeader: I18n.trFor("quickCapture", "Action")
-                        actionHeader: I18n.trFor("quickCapture", "Interaction / Result")
-                        rows: root.barRows
-                    }
-
-                    GuideHeading {
-                        text: I18n.trFor("quickCapture", "Annotation Tools")
-                    }
 
                     ShortcutTable {
                         keyHeader: I18n.trFor("quickCapture", "Key")
                         actionHeader: I18n.trFor("quickCapture", "Selected Tool / Action")
                         rows: root.toolRows
                     }
+                }
+            }
+        }
+    }
 
-                    GuideHeading {
-                        text: I18n.trFor("quickCapture", "General Shortcuts")
-                    }
+    Column {
+        id: generalShortcutsSection
+        width: parent.width
+        spacing: 0
+        property bool expanded: false
+
+        SettingsSectionLabel {
+            width: parent.width
+            text: I18n.trFor("quickCapture", "General Shortcuts")
+            collapsible: true
+            expanded: generalShortcutsSection.expanded
+            onToggleRequested: generalShortcutsSection.expanded = !generalShortcutsSection.expanded
+        }
+
+        SettingsGroup {
+            width: parent.width
+            slotColor: SettingsMetrics.controlColor
+            visible: generalShortcutsSection.expanded
+
+            Item {
+                width: parent.width
+                height: generalShortcutsCol.implicitHeight + Theme.spacingM * 2
+
+                Column {
+                    id: generalShortcutsCol
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.margins: Theme.spacingM
 
                     ShortcutTable {
                         keyHeader: I18n.trFor("quickCapture", "Key")

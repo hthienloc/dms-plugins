@@ -197,39 +197,31 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("activateLinux", "This plugin displays a non-intrusive watermark on your desktop."),
-                        I18n.trFor("activateLinux", "Enable <b>Customize Text</b> to override the default message."),
-                        I18n.trFor("activateLinux", "You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "branding_watermark",
+                        title: I18n.trFor("activateLinux", "Desktop Watermark"),
+                        subtitle: I18n.trFor("activateLinux", "Displays a non-intrusive watermark on your desktop.")
+                    },
+                    {
+                        icon: "edit",
+                        title: I18n.trFor("activateLinux", "Custom Text"),
+                        subtitle: I18n.trFor("activateLinux", "Enable Customize Text to override the default message.")
+                    },
+                    {
+                        icon: "tune",
+                        title: I18n.trFor("activateLinux", "Appearance"),
+                        subtitle: I18n.trFor("activateLinux", "Adjust font sizes and opacity to match your background.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

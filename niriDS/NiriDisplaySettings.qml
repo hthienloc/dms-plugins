@@ -229,38 +229,31 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("niriDS", "Activate the display selector via the <b>Control Center</b> or configured <b>keybindings</b>."),
-                        I18n.trFor("niriDS", "Use the <b>IPC commands</b> above to automate display switching.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "monitor",
+                        title: I18n.trFor("niriDS", "Display Selector"),
+                        subtitle: I18n.trFor("niriDS", "Open the display selector from the Control Center or configured keybindings.")
+                    },
+                    {
+                        icon: "terminal",
+                        title: I18n.trFor("niriDS", "IPC Commands"),
+                        subtitle: I18n.trFor("niriDS", "Use the IPC commands above to automate display switching.")
+                    },
+                    {
+                        icon: "tune",
+                        title: I18n.trFor("niriDS", "Manual Control"),
+                        subtitle: I18n.trFor("niriDS", "Manual Control toggles are session-only; use DMS Settings → Displays for persistent settings.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }

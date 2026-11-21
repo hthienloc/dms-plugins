@@ -658,39 +658,31 @@ PluginSettings {
             slotColor: SettingsMetrics.controlColor
             visible: usageSection.expanded
 
-            Column {
-                width: parent.width
-                spacing: Theme.spacingS
-
-                Repeater {
-                    model: [
-                        I18n.trFor("screenkey", "Displays keystrokes on an always-on-top floating screen overlay."),
-                        I18n.trFor("screenkey", "Key combinations are rendered as visual keycaps, and standard typing as stream text."),
-                        I18n.trFor("screenkey", "Ensure your user belongs to the <b>input</b> group to read keyboard events without root.")
-                    ]
-
-                    delegate: Row {
-                        required property string modelData
-                        width: parent.width
-                        spacing: Theme.spacingS
-
-                        StyledText {
-                            id: bullet
-                            text: "•"
-                            color: Theme.primary
-                            font.pixelSize: Theme.fontSizeSmall
-                            font.weight: Font.Bold
-                        }
-
-                        StyledText {
-                            width: parent.width - bullet.width - parent.spacing
-                            text: modelData
-                            color: Theme.surfaceVariantText
-                            font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.WordWrap
-                            textFormat: Text.StyledText
-                        }
+            Repeater {
+                model: [
+                    {
+                        icon: "layers",
+                        title: I18n.trFor("screenkey", "Floating Overlay"),
+                        subtitle: I18n.trFor("screenkey", "Displays keystrokes on an always-on-top screen overlay.")
+                    },
+                    {
+                        icon: "keyboard",
+                        title: I18n.trFor("screenkey", "Keycaps & Text"),
+                        subtitle: I18n.trFor("screenkey", "Renders shortcuts as keycaps and normal typing as stream text.")
+                    },
+                    {
+                        icon: "admin_panel_settings",
+                        title: I18n.trFor("screenkey", "Input Group"),
+                        subtitle: I18n.trFor("screenkey", "Ensure your user belongs to the input group to read keyboard events without root.")
                     }
+                ]
+
+                delegate: SettingsRow {
+                    required property var modelData
+                    iconName: modelData.icon
+                    iconBox: true
+                    title: modelData.title
+                    subtitle: modelData.subtitle
                 }
             }
         }
