@@ -298,19 +298,9 @@ print(json.dumps(res))
             Repeater {
                 model: [
                     {
-                        icon: "volume_up",
-                        title: I18n.trFor("typingSounds", "Global Sounds"),
-                        subtitle: I18n.trFor("typingSounds", "Plays mechanical keyboard sounds globally as you type.")
-                    },
-                    {
                         icon: "admin_panel_settings",
                         title: I18n.trFor("typingSounds", "Input Group"),
                         subtitle: I18n.trFor("typingSounds", "Your user must belong to the input group to read keyboard events without root.")
-                    },
-                    {
-                        icon: "library_music",
-                        title: I18n.trFor("typingSounds", "Sound Packs"),
-                        subtitle: I18n.trFor("typingSounds", "Choose a bundled or custom sound pack above to change key sounds.")
                     }
                 ]
 

@@ -610,11 +610,6 @@ PluginSettings {
                         icon: "bedtime",
                         title: I18n.trFor("bongoCat", "Right-click"),
                         subtitle: I18n.trFor("bongoCat", "Manually toggle Sleep Mode.")
-                    },
-                    {
-                        icon: "keyboard",
-                        title: I18n.trFor("bongoCat", "Typing Reaction"),
-                        subtitle: I18n.trFor("bongoCat", "The cat automatically taps its paws as you type.")
                     }
                 ]
 

@@ -283,11 +283,6 @@ PluginSettings {
                         icon: "image",
                         title: I18n.trFor("ocrScanner", "Drop Image"),
                         subtitle: I18n.trFor("ocrScanner", "Drag an image onto the pill to extract its text.")
-                    },
-                    {
-                        icon: "content_paste",
-                        title: I18n.trFor("ocrScanner", "Auto-copy"),
-                        subtitle: I18n.trFor("ocrScanner", "Scanned text is automatically copied to the clipboard.")
                     }
                 ]
 

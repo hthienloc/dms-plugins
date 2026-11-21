@@ -556,11 +556,6 @@ PluginSettings {
                         subtitle: I18n.trFor("ambientSound", "Mute or unmute all playing sounds.")
                     },
                     {
-                        icon: "equalizer",
-                        title: I18n.trFor("ambientSound", "Mix Sounds"),
-                        subtitle: I18n.trFor("ambientSound", "Play multiple sounds simultaneously to create your own atmosphere.")
-                    },
-                    {
                         icon: "bedtime",
                         title: I18n.trFor("ambientSound", "Sleep Timer"),
                         subtitle: I18n.trFor("ambientSound", "Set a timer in the popout to stop sounds after a delay.")

@@ -237,11 +237,6 @@ PluginSettings {
                         subtitle: I18n.trFor("niriDS", "Open the display selector from the Control Center or configured keybindings.")
                     },
                     {
-                        icon: "terminal",
-                        title: I18n.trFor("niriDS", "IPC Commands"),
-                        subtitle: I18n.trFor("niriDS", "Use the IPC commands above to automate display switching.")
-                    },
-                    {
                         icon: "tune",
                         title: I18n.trFor("niriDS", "Manual Control"),
                         subtitle: I18n.trFor("niriDS", "Manual Control toggles are session-only; use DMS Settings → Displays for persistent settings.")

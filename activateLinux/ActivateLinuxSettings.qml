@@ -31,7 +31,6 @@ PluginSettings {
         customizeText = loadValue("customizeText", defaultCustomizeText);
         firstLine = loadValue("firstLine", defaultFirstLine);
         secondLine = loadValue("secondLine", defaultSecondLine);
-        usageSection.expanded = loadValue("usageGuideExpanded", true);
     }
 
     Component.onCompleted: loadSettings()
@@ -168,60 +167,6 @@ PluginSettings {
                 onValueEdited: val => {
                     root.secondLine = val;
                     root.saveValue("secondLine", val);
-                }
-            }
-        }
-    }
-
-    Column {
-        id: usageSection
-        width: parent ? parent.width : 0
-        spacing: 0
-
-        property bool expanded: true
-
-        SettingsSectionLabel {
-            width: parent.width
-            text: I18n.trFor("activateLinux", "How to Use")
-            collapsible: true
-            expanded: usageSection.expanded
-            onToggleRequested: {
-                usageSection.expanded = !usageSection.expanded;
-                if (root.pluginService)
-                    root.saveValue("usageGuideExpanded", usageSection.expanded);
-            }
-        }
-
-        SettingsGroup {
-            width: parent.width
-            slotColor: SettingsMetrics.controlColor
-            visible: usageSection.expanded
-
-            Repeater {
-                model: [
-                    {
-                        icon: "branding_watermark",
-                        title: I18n.trFor("activateLinux", "Desktop Watermark"),
-                        subtitle: I18n.trFor("activateLinux", "Displays a non-intrusive watermark on your desktop.")
-                    },
-                    {
-                        icon: "edit",
-                        title: I18n.trFor("activateLinux", "Custom Text"),
-                        subtitle: I18n.trFor("activateLinux", "Enable Customize Text to override the default message.")
-                    },
-                    {
-                        icon: "tune",
-                        title: I18n.trFor("activateLinux", "Appearance"),
-                        subtitle: I18n.trFor("activateLinux", "Adjust font sizes and opacity to match your background.")
-                    }
-                ]
-
-                delegate: SettingsRow {
-                    required property var modelData
-                    iconName: modelData.icon
-                    iconBox: true
-                    title: modelData.title
-                    subtitle: modelData.subtitle
                 }
             }
         }

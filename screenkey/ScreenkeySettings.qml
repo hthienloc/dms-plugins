@@ -661,16 +661,6 @@ PluginSettings {
             Repeater {
                 model: [
                     {
-                        icon: "layers",
-                        title: I18n.trFor("screenkey", "Floating Overlay"),
-                        subtitle: I18n.trFor("screenkey", "Displays keystrokes on an always-on-top screen overlay.")
-                    },
-                    {
-                        icon: "keyboard",
-                        title: I18n.trFor("screenkey", "Keycaps & Text"),
-                        subtitle: I18n.trFor("screenkey", "Renders shortcuts as keycaps and normal typing as stream text.")
-                    },
-                    {
                         icon: "admin_panel_settings",
                         title: I18n.trFor("screenkey", "Input Group"),
                         subtitle: I18n.trFor("screenkey", "Ensure your user belongs to the input group to read keyboard events without root.")

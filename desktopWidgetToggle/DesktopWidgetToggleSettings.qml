@@ -802,11 +802,6 @@ PluginSettings {
                         icon: "wallpaper",
                         title: I18n.trFor("desktopWidgetToggle", "Restore Layer"),
                         subtitle: I18n.trFor("desktopWidgetToggle", "Click the group button again to return widgets to the desktop background.")
-                    },
-                    {
-                        icon: "widgets",
-                        title: I18n.trFor("desktopWidgetToggle", "Toggle Mode"),
-                        subtitle: I18n.trFor("desktopWidgetToggle", "Activate one or multiple widget groups concurrently depending on your setting.")
                     }
                 ]
 

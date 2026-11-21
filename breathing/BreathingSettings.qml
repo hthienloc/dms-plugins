@@ -339,11 +339,6 @@ PluginSettings {
                         icon: "self_improvement",
                         title: I18n.trFor("breathing", "Popout"),
                         subtitle: I18n.trFor("breathing", "Choose from different breathing techniques.")
-                    },
-                    {
-                        icon: "graphic_eq",
-                        title: I18n.trFor("breathing", "Guided Cues"),
-                        subtitle: I18n.trFor("breathing", "Follow the visual guide and sound cues to sync your breath.")
                     }
                 ]
 
