@@ -9,7 +9,7 @@ Rectangle {
     width: Constants.magnifierSize
     height: Constants.magnifierSize
     radius: width / 2
-    border.color: Theme.primary
+    border.color: (window.currentTool === "colorpicker" && window.hoveredColor !== Qt.color("transparent")) ? window.hoveredColor : Theme.primary
     border.width: 2
     color: "black"
     visible: (window.enableMagnifier && window.isZoomPressed && drawMouseArea.containsMouse) || (window.currentTool === "colorpicker" && drawMouseArea.containsMouse)
@@ -159,7 +159,7 @@ Rectangle {
                 spacing: 0
 
                 StyledText {
-                    text: window.formatHexColor(window.hoveredColor).toUpperCase()
+                    text: Helpers.formatHexColor(window.hoveredColor).toUpperCase()
                     font.pixelSize: 12
                     font.bold: true
                     color: Theme.surfaceText
