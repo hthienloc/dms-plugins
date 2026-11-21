@@ -469,6 +469,28 @@ Column {
             width: parent.width
             slotColor: SettingsMetrics.controlColor
 
+            Item {
+                width: parent.width
+                height: interfacePreview.implicitHeight + Theme.spacingS * 2
+
+                RecordingInterfacePreview {
+                    id: interfacePreview
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.leftMargin: Theme.spacingS
+                    anchors.rightMargin: Theme.spacingS
+                    recordingStatusLocation: root.recordingStatusLocation
+                    showPillBorder: root.showPillBorder
+                    dimUnfocusedRecordingPill: root.dimUnfocusedRecordingPill
+                    showRecordingDot: root.showRecordingDot
+                    blinkRecordDot: root.blinkRecordDot
+                    showRecordingTimer: root.showRecordingTimer
+                    showRecordingControls: root.showRecordingControls
+                    showRegionBorder: root.showRegionBorder
+                }
+            }
+
             SettingsDropdownRow {
                 text: I18n.trFor("quickCapture", "Recording Status Location")
                 description: I18n.trFor("quickCapture", "Choose where the recording status and controls appear: Auto (DankBar if present, otherwise Floating Pill), DankBar, Floating Pill, or Both.")

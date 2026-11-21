@@ -59,6 +59,7 @@ Grid {
         iconName: "close"
         buttonSize: root.buttonSize
         iconSize: root.iconSize
+        backgroundColor: root.filled ? Theme.withAlpha(Theme.surfaceVariantText, 0.16) : "transparent"
         iconColor: Theme.surfaceVariantText
         tooltipText: I18n.trFor("quickCapture", "Cancel")
         onClicked: {
