@@ -119,6 +119,15 @@ PluginComponent {
         recorder.startRecording(mode || "screen", geometry || "");
     }
 
+    function toggleRecording(mode) {
+        if (recorder.isRecording) {
+            recorder.stopRecording();
+            return "STOPPED";
+        }
+        root.record(mode, "", false);
+        return "STARTED";
+    }
+
     function openFolder(kind) {
         const key = kind === "video" ? "recordingDirectory" : "saveDirectory";
         Proc.runCommand("quickCapture.openFolder", ["xdg-open", Paths.expandTilde(String(CapturePaths.setting(pluginData, key)))]);
@@ -420,7 +429,12 @@ PluginComponent {
             return "SUCCESS";
         }
 
-        function recordStart(mode: string, geometry: string): string {
+        function recordStart(mode: string): string {
+            root.record(mode, "", false);
+            return "SUCCESS";
+        }
+
+        function recordStartWithGeometry(mode: string, geometry: string): string {
             root.record(mode, geometry, false);
             return "SUCCESS";
         }
@@ -440,13 +454,12 @@ PluginComponent {
             return "SUCCESS";
         }
 
-        function recordToggle(mode: string): string {
-            if (recorder.isRecording) {
-                recorder.stopRecording();
-                return "STOPPED";
-            }
-            root.record(mode, "", false);
-            return "STARTED";
+        function recordToggle(): string {
+            return root.toggleRecording("screen");
+        }
+
+        function recordToggleMode(mode: string): string {
+            return root.toggleRecording(mode);
         }
 
         function recordStatus(): string {

@@ -27,10 +27,12 @@ Commands that capture or open images accept an `action` parameter (`edit`, `floa
 | `close` | *(none)* | Closes the annotator or menu modal. |
 | `showHistory` | *(none)* | Opens the Recent Edits history carousel. |
 | `recordStart` | `mode` (`screen`, `region`, `portal`) | Starts screen recording. |
+| `recordStartWithGeometry` | `mode`, `geometry` | Starts screen recording with explicit geometry (`WxH+X+Y` or `X,Y WxH`). |
 | `recordStop` | *(none)* | Stops screen recording. |
 | `recordPause` | *(none)* | Toggles pause/resume. |
 | `recordCancel` | *(none)* | Cancels screen recording. |
-| `recordToggle` | `mode` | Toggles screen recording. |
+| `recordToggle` | *(none)* | Toggles `screen` recording. |
+| `recordToggleMode` | `mode` (`screen`, `region`, `portal`) | Toggles screen recording in the given mode. |
 | `recordStatus` | *(none)* | Returns recorder status. |
 
 ```bash
