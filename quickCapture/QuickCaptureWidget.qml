@@ -203,6 +203,7 @@ PluginComponent {
     }
 
     readonly property bool isDockWidget: root.surfaceContext?.kind === "dock"
+    readonly property string leftClickAction: Defaults.get(pluginData, "leftClickAction")
     pillClickAction: isDockWidget ? function () {
         if (!root.daemon)
             return;
@@ -215,7 +216,23 @@ PluginComponent {
             return;
         }
         root.daemon.capture("region", "edit", "", false);
-    } : null
+    } : (leftClickAction === "popout" ? null : function () {
+        if (!root.daemon)
+            return;
+        if (root.leftClickAction === "compactToolbar") {
+            root.daemon.toggleCompactToolbar();
+            return;
+        }
+        if (root.isRecording) {
+            root.recorder?.stopRecording();
+            return;
+        }
+        if (root.leftClickAction === "toggle") {
+            root.daemon.toggleMenu();
+            return;
+        }
+        root.runDefaultAction("leftClickAction", false);
+    })
 
     pillRightClickAction: function (x, y, width, section, screen) {
         if (!root.daemon)

@@ -23,7 +23,9 @@ PluginComponent {
     readonly property alias actions: captureActions
     readonly property bool isRecording: recorder.isRecording
     readonly property bool isAnnotating: modal.shouldBeVisible
-    readonly property bool isMenuOpen: menuModal.shouldBeVisible
+    readonly property bool isMenuOpen: menuModal.shouldBeVisible || compactToolbar.shouldBeVisible
+    readonly property string leftClickAction: Defaults.get(pluginData, "leftClickAction")
+    readonly property bool useCompactBottomToolbar: leftClickAction === "compactToolbar"
     readonly property var allowedModes: ["region", "window", "full", "output", "all", "last", "scroll"]
     readonly property int captureTimeoutMs: 60000
     readonly property int scrollCaptureTimeoutMs: 120000
@@ -357,7 +359,29 @@ PluginComponent {
         historyModal.open();
     }
 
+    function openCompactToolbar() {
+        compactToolbar.open();
+    }
+
+    function closeCompactToolbar() {
+        if (compactToolbar.shouldBeVisible)
+            compactToolbar.dismiss();
+    }
+
+    function toggleCompactToolbar(): string {
+        if (compactToolbar.shouldBeVisible) {
+            compactToolbar.dismiss();
+            return "CLOSED";
+        }
+        compactToolbar.open();
+        return "OPENED";
+    }
+
     function openMenu() {
+        if (root.useCompactBottomToolbar) {
+            openCompactToolbar();
+            return;
+        }
         if (root.isRecording && root.widgetMode !== "video")
             root.widgetMode = "video";
         menuModal.targetScreen = CompositorService.getFocusedScreen() ?? Quickshell.screens[0] ?? null;
@@ -366,6 +390,7 @@ PluginComponent {
     }
 
     function closeMenu() {
+        closeCompactToolbar();
         if (menuModal && typeof menuModal.instantClose === "function") {
             menuModal.instantClose();
         } else {
@@ -374,6 +399,8 @@ PluginComponent {
     }
 
     function toggleMenu() {
+        if (root.useCompactBottomToolbar)
+            return toggleCompactToolbar();
         if (menuModal.shouldBeVisible) {
             closeMenu();
             return "CLOSED";
@@ -392,6 +419,10 @@ PluginComponent {
 
         function toggle(): string {
             return root.toggleMenu();
+        }
+
+        function compactToolbar(): string {
+            return root.toggleCompactToolbar();
         }
 
         function menu(): string {
@@ -421,6 +452,7 @@ PluginComponent {
         function close(): string {
             modal.close();
             menuModal.close();
+            compactToolbar.dismiss();
             return "SUCCESS";
         }
 
@@ -592,6 +624,11 @@ PluginComponent {
     }
 
     FloatingRecordingPill {
+        daemon: root
+    }
+
+    CompactCaptureToolbar {
+        id: compactToolbar
         daemon: root
     }
 }

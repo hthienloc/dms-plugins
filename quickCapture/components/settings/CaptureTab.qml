@@ -35,6 +35,20 @@ Column {
         "selectFile"
     ]
 
+    readonly property var leftClickModes: [
+        I18n.trFor("quickCapture", "Popout Menu"),
+        I18n.trFor("quickCapture", "Compact Bottom Toolbar"),
+        I18n.trFor("quickCapture", "Toggle Menu (IPC)"),
+        ...captureModes
+    ]
+    readonly property var leftClickModeValues: [
+        "popout",
+        "compactToolbar",
+        "toggle",
+        ...captureModeValues
+    ]
+
+    property string leftClickAction: "popout"
     property string middleClickAction: "region"
     property string rightClickAction: "clipboard"
     property string menuRightClickAction: "copy"
@@ -50,6 +64,7 @@ Column {
     function loadValue() {
         if (!settings)
             return;
+        leftClickAction = settings.loadValue("leftClickAction", "popout");
         middleClickAction = settings.loadValue("middleClickAction", "region");
         rightClickAction = settings.loadValue("rightClickAction", "clipboard");
         menuRightClickAction = settings.loadValue("menuRightClickAction", "copy");
@@ -82,6 +97,23 @@ Column {
         SettingsGroup {
             width: parent.width
             slotColor: SettingsMetrics.controlColor
+
+            SettingsDropdownRow {
+                text: I18n.trFor("quickCapture", "Left Click Action")
+                options: root.leftClickModes
+                optionValues: root.leftClickModeValues
+                currentValue: root.leftClickAction
+                modified: root.leftClickAction !== "popout"
+                resetByKeys: false
+                onResetRequested: {
+                    root.leftClickAction = "popout";
+                    root.save("leftClickAction", "popout");
+                }
+                onValueChanged: val => {
+                    root.leftClickAction = val;
+                    root.save("leftClickAction", val);
+                }
+            }
 
             SettingsDropdownRow {
                 text: I18n.trFor("quickCapture", "Middle Click Action")

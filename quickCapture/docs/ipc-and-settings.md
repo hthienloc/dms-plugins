@@ -18,13 +18,14 @@ Commands that capture or open images accept an `action` parameter (`edit`, `floa
 
 | Command | Arguments | Description |
 | :--- | :--- | :--- |
-| `open` | *(none)* | Opens the centered Quick Capture menu modal. |
-| `toggle` / `menu` | *(none)* | Toggles the centered Quick Capture menu modal. |
+| `open` | *(none)* | Opens the centered Quick Capture menu modal (or the Compact Bottom Toolbar when `leftClickAction` is set to `compactToolbar`). |
+| `toggle` / `menu` | *(none)* | Toggles the centered Quick Capture menu modal (or the Compact Bottom Toolbar when `leftClickAction` is set to `compactToolbar`). |
+| `compactToolbar` | *(none)* | Toggles the Compact Bottom Toolbar directly regardless of `leftClickAction`. |
 | `screenshot` | `mode` (`region`, `full`, `all`, `output`, `window`, `last`, `scroll`) | Triggers a screenshot. |
 | `selectFile` | `action` | Opens file picker. |
 | `fromClipboard` | `action` | Imports image from clipboard. |
 | `openImage` | `path`, `action` | Opens a local image file. |
-| `close` | *(none)* | Closes the annotator or menu modal. |
+| `close` | *(none)* | Closes the annotator, menu modal, or Compact Bottom Toolbar. |
 | `showHistory` | *(none)* | Opens the Recent Edits history carousel. |
 | `recordStart` | `mode` (`screen`, `region`, `portal`) | Starts screen recording. |
 | `recordStartWithGeometry` | `mode`, `geometry` | Starts screen recording with explicit geometry (`WxH+X+Y` or `X,Y WxH`). |
@@ -36,7 +37,8 @@ Commands that capture or open images accept an `action` parameter (`edit`, `floa
 | `recordStatus` | *(none)* | Returns recorder status. |
 
 ```bash
-dms ipc call quickCapture toggle                          # toggle centered menu
+dms ipc call quickCapture toggle                          # toggle menu (or compact toolbar)
+dms ipc call quickCapture compactToolbar                  # toggle compact bottom toolbar directly
 dms ipc call quickCapture screenshot region edit          # open editor
 dms ipc call quickCapture screenshot region float         # float directly
 dms ipc call quickCapture screenshot full copyAndSave     # save, copy, and notify with Edit action

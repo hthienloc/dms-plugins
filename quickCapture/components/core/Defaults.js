@@ -1,6 +1,7 @@
 .pragma library
 
 const values = {
+    leftClickAction: "popout",
     middleClickAction: "region",
     rightClickAction: "clipboard",
     menuRightClickAction: "copy",
