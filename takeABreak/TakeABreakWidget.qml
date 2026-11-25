@@ -4,6 +4,8 @@ import Quickshell
 import Quickshell.Io
 import qs.Common
 import qs.DCommon.Widgets
+import qs.Modules.ControlCenter
+import qs.Modules.ControlCenter.Widgets
 import qs.Modules.Plugins
 import qs.Services
 
@@ -165,12 +167,20 @@ PluginComponent {
         Item {
             id: detailRoot
 
+            readonly property string title: I18n.trFor("takeABreak", "Take a Break")
+            readonly property Item headerActions: DIconButton {
+                iconName: "settings"
+                buttonSize: CcMetrics.headerActionSize
+                iconSize: CcMetrics.headerActionIconSize
+                onClicked: PopoutService.openSettingsWithTab("plugins")
+            }
+
             readonly property var master: pluginRoot.masterInstance
             readonly property var statsData: detailRoot.master?._stats ?? pluginRoot._stats
             readonly property bool isBreak: !!(detailRoot.master && (detailRoot.master.isBreakActive || detailRoot.master.isPreWarning))
             readonly property bool isPaused: !!(detailRoot.master && detailRoot.master.isPaused)
 
-            implicitHeight: contentColumn.implicitHeight
+            implicitHeight: contentColumn.height
 
             function refreshStats() {
                 if (detailRoot.master && typeof detailRoot.master.getStats === "function") {
@@ -184,24 +194,26 @@ PluginComponent {
                 detailRoot.refreshStats();
             }
 
-            Column {
-                id: contentColumn
-                anchors.left: parent.left
-                anchors.right: parent.right
-                spacing: Theme.spacingM
+            DFlickable {
+                anchors.fill: parent
+                contentHeight: contentColumn.height
+                clip: true
 
-                // Hero Status & Timer Card
-                Rectangle {
+                Column {
+                    id: contentColumn
                     width: parent.width
-                    height: 116
-                    radius: Theme.cornerRadius
-                    color: detailRoot.isBreak
-                        ? Theme.withAlpha(Theme.primary, 0.12)
-                        : Theme.surfaceContainerHigh
-                    border.color: detailRoot.isBreak
-                        ? Theme.withAlpha(Theme.primary, 0.4)
-                        : Theme.withAlpha(Theme.outline, 0.12)
-                    border.width: 1
+                    spacing: CcMetrics.detailContentGap
+
+                    // Hero Status & Timer
+                    Rectangle {
+                        width: parent.width
+                        height: 112
+                        radius: Theme.cornerRadiusL
+                        color: detailRoot.isBreak
+                            ? Theme.withAlpha(Theme.primary, 0.12)
+                            : CcMetrics.rowColor
+                        border.color: Theme.withAlpha(Theme.primary, 0.4)
+                        border.width: detailRoot.isBreak ? 1 : 0
 
                     Behavior on color { ColorAnimation { duration: Theme.shortDuration } }
                     Behavior on border.color { ColorAnimation { duration: Theme.shortDuration } }
@@ -372,7 +384,7 @@ PluginComponent {
                         buttonHeight: 38
                         iconName: detailRoot.isBreak ? "snooze" : (detailRoot.isPaused ? "play_arrow" : "pause")
                         text: detailRoot.isBreak ? I18n.trFor("takeABreak", "Snooze 5m") : (detailRoot.isPaused ? I18n.trFor("takeABreak", "Resume") : I18n.trFor("takeABreak", "Pause"))
-                        backgroundColor: (!detailRoot.isBreak && detailRoot.isPaused) ? Theme.primary : Theme.surfaceContainerHigh
+                        backgroundColor: (!detailRoot.isBreak && detailRoot.isPaused) ? Theme.primary : CcMetrics.rowColor
                         textColor: (!detailRoot.isBreak && detailRoot.isPaused) ? Theme.onPrimary : Theme.surfaceText
                         onClicked: {
                             if (detailRoot.isBreak) {
@@ -388,7 +400,7 @@ PluginComponent {
                         buttonHeight: 38
                         iconName: detailRoot.isBreak ? "skip_next" : "self_improvement"
                         text: detailRoot.isBreak ? I18n.trFor("takeABreak", "Skip") : I18n.trFor("takeABreak", "Take Break")
-                        backgroundColor: detailRoot.isBreak ? Theme.primary : Theme.surfaceContainerHigh
+                        backgroundColor: detailRoot.isBreak ? Theme.primary : CcMetrics.rowColor
                         textColor: detailRoot.isBreak ? Theme.onPrimary : Theme.surfaceText
                         enabled: detailRoot.isBreak || !detailRoot.isPaused
                         onClicked: {
@@ -401,14 +413,12 @@ PluginComponent {
                     }
                 }
 
-                // Statistics & Health Metrics Card
+                // Statistics & Health Metrics
                 Rectangle {
                     width: parent.width
-                    height: 64
-                    radius: Theme.cornerRadius
-                    color: Theme.surfaceContainer
-                    border.color: Theme.withAlpha(Theme.outline, 0.12)
-                    border.width: 1
+                    height: 60
+                    radius: Theme.cornerRadiusL
+                    color: CcMetrics.rowColor
 
                     Row {
                         anchors.fill: parent
@@ -538,11 +548,11 @@ PluginComponent {
                     spacing: Theme.spacingM
 
                     DButton {
-                        width: (parent.width - parent.spacing * 2) / 3
-                        buttonHeight: 32
+                        width: (parent.width - parent.spacing) / 2
+                        buttonHeight: 34
                         iconName: "more_time"
                         text: I18n.trFor("takeABreak", "+5m")
-                        backgroundColor: Theme.surfaceContainerHigh
+                        backgroundColor: CcMetrics.rowColor
                         textColor: Theme.surfaceText
                         enabled: !detailRoot.isBreak && !detailRoot.isPaused
                         onClicked: {
@@ -552,27 +562,18 @@ PluginComponent {
                     }
 
                     DButton {
-                        width: (parent.width - parent.spacing * 2) / 3
-                        buttonHeight: 32
+                        width: (parent.width - parent.spacing) / 2
+                        buttonHeight: 34
                         iconName: "refresh"
                         text: I18n.trFor("takeABreak", "Reset")
-                        backgroundColor: Theme.surfaceContainerHigh
+                        backgroundColor: CcMetrics.rowColor
                         textColor: Theme.surfaceText
                         onClicked: {
                             if (detailRoot.master)
                                 detailRoot.master.resetSession();
                         }
                     }
-
-                    DButton {
-                        width: (parent.width - parent.spacing * 2) / 3
-                        buttonHeight: 32
-                        iconName: "settings"
-                        text: I18n.trFor("takeABreak", "Settings")
-                        backgroundColor: Theme.surfaceContainerHigh
-                        textColor: Theme.surfaceText
-                        onClicked: PopoutService.openSettingsWithTab("plugins")
-                    }
+                }
                 }
             }
         }

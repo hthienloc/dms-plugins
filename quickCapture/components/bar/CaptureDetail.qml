@@ -2,6 +2,8 @@ import QtQuick
 import qs.Common
 import qs.Services
 import qs.DCommon.Widgets
+import qs.Modules.ControlCenter
+import qs.Modules.ControlCenter.Widgets
 import "../core/Defaults.js" as Defaults
 import "../../shared"
 
@@ -35,7 +37,8 @@ Item {
         return fmt + " · " + fps + " FPS";
     }
 
-    implicitHeight: contentColumn.implicitHeight
+    readonly property string title: I18n.trFor("quickCapture", "Quick Capture")
+    implicitHeight: contentColumn.height
 
     Component.onCompleted: {
         if (root.daemon) {
@@ -72,7 +75,7 @@ Item {
 
         color: highlighted
             ? (hovered ? Theme.blend(Theme.primaryContainer, Theme.primary, M3E.activeBlendFactor) : Theme.primaryContainer)
-            : (hovered ? Theme.secondaryContainer : Theme.surfaceContainerHigh)
+            : (hovered ? Theme.secondaryContainer : CcMetrics.rowColor)
 
         border.width: highlighted || hovered ? 1 : 0
         border.color: highlighted
@@ -235,7 +238,7 @@ Item {
         scale: btnMouse.pressed ? M3E.iconBtnPressScale : 1.0
         color: active
             ? Theme.primaryContainer
-            : (btnMouse.containsMouse ? Theme.secondaryContainer : Theme.surfaceContainerHigh)
+            : (btnMouse.containsMouse ? Theme.secondaryContainer : CcMetrics.rowColor)
 
         topLeftRadius: btnMouse.pressed ? pressR : (btnMouse.containsMouse || active || isFirst ? pillR : seamR)
         bottomLeftRadius: btnMouse.pressed ? pressR : (btnMouse.containsMouse || active || isFirst ? pillR : seamR)
@@ -301,13 +304,15 @@ Item {
         }
     }
 
-    Column {
-        id: contentColumn
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.leftMargin: Theme.spacingXS
-        anchors.rightMargin: Theme.spacingXS
-        spacing: Theme.spacingS
+    DFlickable {
+        anchors.fill: parent
+        contentHeight: contentColumn.height
+        clip: true
+
+        Column {
+            id: contentColumn
+            width: parent.width
+            spacing: CcMetrics.detailContentGap
 
         // Top Bar (36px): Connected Segmented Switcher + Connected Utility Group
         Item {
@@ -370,7 +375,7 @@ Item {
                         clip: true
                         color: selected
                             ? activeBg
-                            : (segArea.containsMouse ? Theme.secondaryContainer : Theme.surfaceContainerHigh)
+                            : (segArea.containsMouse ? Theme.secondaryContainer : CcMetrics.rowColor)
 
                         topLeftRadius: segArea.pressed ? pressR : (selected || modelData.isFirst ? pillR : seamR)
                         bottomLeftRadius: segArea.pressed ? pressR : (selected || modelData.isFirst ? pillR : seamR)
@@ -545,7 +550,7 @@ Item {
                     width: parent.width
                     height: 44
                     radius: height / 2
-                    color: Theme.surfaceContainerHigh
+                    color: CcMetrics.rowColor
 
                     Row {
                         id: ccOutputLabel
@@ -724,7 +729,7 @@ Item {
                                 readonly property bool on: root.recorder?.recordMic ?? false
                                 width: parent.halfW
                                 height: parent.height
-                                color: on ? Theme.primaryContainer : (ccMicArea.containsMouse ? Theme.secondaryContainer : Theme.surfaceContainerHigh)
+                                color: on ? Theme.primaryContainer : (ccMicArea.containsMouse ? Theme.secondaryContainer : CcMetrics.rowColor)
                                 topLeftRadius: root.outerR
                                 topRightRadius: root.innerR
                                 bottomLeftRadius: root.innerR
@@ -787,7 +792,7 @@ Item {
                                 readonly property bool on: root.recorder?.recordAudio ?? false
                                 width: parent.halfW
                                 height: parent.height
-                                color: on ? Theme.primaryContainer : (ccAudioArea.containsMouse ? Theme.secondaryContainer : Theme.surfaceContainerHigh)
+                                color: on ? Theme.primaryContainer : (ccAudioArea.containsMouse ? Theme.secondaryContainer : CcMetrics.rowColor)
                                 topLeftRadius: root.innerR
                                 topRightRadius: root.outerR
                                 bottomLeftRadius: root.innerR
@@ -849,7 +854,7 @@ Item {
                         Rectangle {
                             width: parent.width
                             height: 44
-                            color: Theme.surfaceContainerHigh
+                            color: CcMetrics.rowColor
                             topLeftRadius: root.innerR
                             topRightRadius: root.innerR
                             bottomLeftRadius: root.outerR
@@ -972,6 +977,7 @@ Item {
                     }
                 }
             }
+        }
         }
     }
 }
